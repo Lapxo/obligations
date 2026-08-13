@@ -1,0 +1,82 @@
+{
+  "about": [
+    "Every outcome a scale can produce under one way of valuing levels.",
+    "",
+    "JSON cannot hold a function, so the valuation is NAMED and every",
+    "implementation defines the same three by index:",
+    "",
+    "  counting   i",
+    "  square     i * i",
+    "  log        ln(i + 1)",
+    "",
+    "A ladder produces exactly one outcome \u2014 nothing \u2014 under all three.",
+    "The other scale does NOT always spread: under `counting` it collapses",
+    "to one too. That asymmetry is the finding, and a file with only the",
+    "square case would hide it.",
+    "",
+    "Values are rounded to 9 decimals before being counted as distinct."
+  ],
+  "coverage": {
+    "size": 6,
+    "criterion": "both scales under all three named valuations",
+    "could_exclude_counterexamples": true,
+    "why": "three valuations, not all of them; the claim that a ladder produces one outcome for ANY valuation is asserted in the unit tests"
+  },
+  "scales": {
+    "chain": ["a", "b", "c", "d"],
+    "powerset": {
+      "levels": ["none", "x", "y", "both"],
+      "leq": [
+        [true, true, true, true],
+        [false, true, false, true],
+        [false, false, true, true],
+        [false, false, false, true]
+      ]
+    }
+  },
+  "places": 9,
+  "cases": [
+    {
+      "name": "ladder, counting",
+      "scale": "chain",
+      "worth": "counting",
+      "values": [0],
+      "pairs": 10
+    },
+    {
+      "name": "ladder, square",
+      "scale": "chain",
+      "worth": "square",
+      "values": [0],
+      "pairs": 10
+    },
+    {
+      "name": "ladder, log",
+      "scale": "chain",
+      "worth": "log",
+      "values": [0],
+      "pairs": 10
+    },
+    {
+      "name": "powerset, counting",
+      "scale": "powerset",
+      "worth": "counting",
+      "values": [0],
+      "pairs": 10
+    },
+    {
+      "name": "powerset, square",
+      "scale": "powerset",
+      "worth": "square",
+      "values": [-4, 0],
+      "pairs": 10
+    },
+    {
+      "name": "powerset, log",
+      "scale": "powerset",
+      "worth": "log",
+      "values": [0, 0.405465108],
+      "pairs": 10
+    }
+  ]
+}

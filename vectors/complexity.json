@@ -1,0 +1,59 @@
+{
+  "about": [
+    "How much a statement says: the steps it demands plus the steps it",
+    "limits. Nothing to do with whether it can be satisfied.",
+    "",
+    "The two halves are DIFFERENT sets \u2014 on a ladder the demand side is",
+    "every level above the bottom and the limit side every level below",
+    "the top. An implementation that counted one twice would get the same",
+    "total on a symmetric case and be wrong everywhere else, so the file",
+    "includes asymmetric ones.",
+    "",
+    "Zero exactly at (bottom, top); maximal exactly at (top, bottom)."
+  ],
+  "coverage": {
+    "size": 6,
+    "criterion": "both extremes, both one-sided cases, a pinned level, and an interior range",
+    "could_exclude_counterexamples": true,
+    "why": "one scale only; that the extremes are reached exactly once is asserted exhaustively in the unit tests"
+  },
+  "chain": ["none", "own", "team", "region", "all"],
+  "cases": [
+    {
+      "name": "(none, all)",
+      "floor": "none",
+      "ceiling": "all",
+      "complexity": 0
+    },
+    {
+      "name": "(all, none)",
+      "floor": "all",
+      "ceiling": "none",
+      "complexity": 8
+    },
+    {
+      "name": "(own, team)",
+      "floor": "own",
+      "ceiling": "team",
+      "complexity": 3
+    },
+    {
+      "name": "(none, own)",
+      "floor": "none",
+      "ceiling": "own",
+      "complexity": 3
+    },
+    {
+      "name": "(team, all)",
+      "floor": "team",
+      "ceiling": "all",
+      "complexity": 2
+    },
+    {
+      "name": "(team, team)",
+      "floor": "team",
+      "ceiling": "team",
+      "complexity": 4
+    }
+  ]
+}

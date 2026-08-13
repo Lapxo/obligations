@@ -1,0 +1,100 @@
+{
+  "about": [
+    "The inputs the other six files never send.",
+    "",
+    "Every other vector file is well-formed on purpose, and that turned out to",
+    "be a blind spot with a shape: three real divergences got in through it.",
+    "A duplicated level name made `rank` return the FIRST index in Rust and the",
+    "LAST in TypeScript — same input, two answers — and in TypeScript that broke",
+    "`pack`/`unpack` being inverse. A single NaN sailed through both closure",
+    "checks in a breakdown, because every comparison with NaN is false including",
+    "the ones meant to reject it.",
+    "",
+    "JSON has no NaN or Infinity literal, so they are written as the strings",
+    "\"NaN\" and \"Infinity\" and each runner converts. A vector that cannot",
+    "express the value it is testing is not testing it.",
+    "",
+    "WIDTH IS NOT HERE ON PURPOSE. Rust packs 64 debits and TypeScript 32,",
+    "because JavaScript's bitwise operators are 32-bit. That is a capability",
+    "difference, not a conformance failure — both refuse rather than truncate,",
+    "and a shared vector at 33 levels would fail a correct implementation."
+  ],
+  "coverage": {
+    "size": 9,
+    "criterion": "every refusal a carrier or a breakdown can produce, plus the two degenerate carriers that are still valid",
+    "could_exclude_counterexamples": true,
+    "why": "refusals are enumerated from the error type, so a failure mode nobody thought to name is not here either"
+  },
+  "cases": [
+    {
+      "name": "a level declared twice",
+      "kind": "carrier",
+      "levels": ["a", "a", "b"],
+      "expect": "DUPLICATE_LEVEL"
+    },
+    {
+      "name": "no levels at all",
+      "kind": "carrier",
+      "levels": [],
+      "expect": "EMPTY_CHAIN"
+    },
+    {
+      "name": "one level is degenerate but valid",
+      "kind": "carrier",
+      "levels": ["only"],
+      "expect": "OK",
+      "bottom": "only",
+      "top": "only",
+      "debits": [],
+      "state": "FREE"
+    },
+    {
+      "name": "two levels is the shortest carrier that says anything",
+      "kind": "carrier",
+      "levels": ["no", "yes"],
+      "expect": "OK",
+      "bottom": "no",
+      "top": "yes",
+      "debits": ["yes"],
+      "state": "FREE"
+    },
+    {
+      "name": "a mass that is not a number",
+      "kind": "breakdown",
+      "pieces": [{ "name": "x", "mass": "NaN", "coarse": 5.0, "gain": 0.0 }],
+      "total": { "coarse": 1.0, "gain": 0.0 },
+      "expect": "NOT_FINITE"
+    },
+    {
+      "name": "a price that is not finite",
+      "kind": "breakdown",
+      "pieces": [{ "name": "x", "mass": 1.0, "coarse": "Infinity", "gain": 0.0 }],
+      "total": { "coarse": "Infinity", "gain": 0.0 },
+      "expect": "NOT_FINITE"
+    },
+    {
+      "name": "a piece was dropped, so the masses do not close",
+      "kind": "breakdown",
+      "pieces": [{ "name": "x", "mass": 0.25, "coarse": 4.0, "gain": 1.0 }],
+      "total": { "coarse": 2.5, "gain": 0.25 },
+      "expect": "MASS_DOES_NOT_CLOSE"
+    },
+    {
+      "name": "the masses close but the pieces rebuild a different total",
+      "kind": "breakdown",
+      "pieces": [
+        { "name": "a", "mass": 0.5, "coarse": 1.0, "gain": 0.0 },
+        { "name": "b", "mass": 0.5, "coarse": 1.0, "gain": 0.0 }
+      ],
+      "total": { "coarse": 9.0, "gain": 0.0 },
+      "expect": "DOES_NOT_RECONCILE"
+    },
+    {
+      "name": "nothing at all is not a breakdown either",
+      "kind": "breakdown",
+      "pieces": [],
+      "total": { "coarse": 0.0, "gain": 0.0 },
+      "expect": "MASS_DOES_NOT_CLOSE"
+    }
+  ]
+}

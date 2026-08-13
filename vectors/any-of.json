@@ -1,0 +1,95 @@
+{
+  "about": [
+    "ANY of these, exactly, as a list.",
+    "",
+    "Combining says all of them must hold and lands on one range. `Any of them`",
+    "does not: two ranges with a gap between them are not one range. So the",
+    "answer is a LIST — merged where merging picks up nothing neither side",
+    "accepted, left apart where it would.",
+    "",
+    "A single range back means the alternatives really were one. More than one",
+    "means they are genuinely separate.",
+    "",
+    "The order is by floor, then by ceiling, so two implementations return the",
+    "same list rather than the same set."
+  ],
+  "coverage": {
+    "size": 8,
+    "criterion": "a gap, two gaps, touching, overlapping, nested, identical, an unsatisfiable input, and nothing at all",
+    "could_exclude_counterexamples": true,
+    "why": "one scale only; that merging never gains a level is asserted exhaustively in the unit tests"
+  },
+  "chain": ["none", "own", "team", "region", "all"],
+  "cases": [
+    {
+      "name": "a gap stays two ranges",
+      "units": [
+        { "floor": "none", "ceiling": "own" },
+        { "floor": "region", "ceiling": "all" }
+      ],
+      "anyOf": [
+        { "floor": "none", "ceiling": "own" },
+        { "floor": "region", "ceiling": "all" }
+      ]
+    },
+    {
+      "name": "two gaps stay three ranges",
+      "units": [
+        { "floor": "none", "ceiling": "none" },
+        { "floor": "team", "ceiling": "team" },
+        { "floor": "all", "ceiling": "all" }
+      ],
+      "anyOf": [
+        { "floor": "none", "ceiling": "none" },
+        { "floor": "team", "ceiling": "team" },
+        { "floor": "all", "ceiling": "all" }
+      ]
+    },
+    {
+      "name": "touching merges",
+      "units": [
+        { "floor": "none", "ceiling": "team" },
+        { "floor": "region", "ceiling": "all" }
+      ],
+      "anyOf": [{ "floor": "none", "ceiling": "all" }]
+    },
+    {
+      "name": "overlapping merges",
+      "units": [
+        { "floor": "none", "ceiling": "region" },
+        { "floor": "team", "ceiling": "all" }
+      ],
+      "anyOf": [{ "floor": "none", "ceiling": "all" }]
+    },
+    {
+      "name": "nested collapses to the outer one",
+      "units": [
+        { "floor": "none", "ceiling": "all" },
+        { "floor": "team", "ceiling": "team" }
+      ],
+      "anyOf": [{ "floor": "none", "ceiling": "all" }]
+    },
+    {
+      "name": "identical collapses to one",
+      "units": [
+        { "floor": "own", "ceiling": "team" },
+        { "floor": "own", "ceiling": "team" }
+      ],
+      "anyOf": [{ "floor": "own", "ceiling": "team" }]
+    },
+    {
+      "name": "a bridge merges both gaps at once",
+      "units": [
+        { "floor": "none", "ceiling": "own" },
+        { "floor": "region", "ceiling": "all" },
+        { "floor": "own", "ceiling": "region" }
+      ],
+      "anyOf": [{ "floor": "none", "ceiling": "all" }]
+    },
+    {
+      "name": "nothing at all",
+      "units": [],
+      "anyOf": []
+    }
+  ]
+}
