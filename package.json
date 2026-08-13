@@ -1,0 +1,44 @@
+{
+  "name": "@lapxo/obligations",
+  "version": "0.1.0",
+  "description": "The obligations protocol: a carrier, a unit, and composition. Zero runtime dependencies.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "rm -rf dist dist-examples .tsbuildinfo*",
+    "examples": "tsc -p tsconfig.examples.json && for f in $(find dist-examples/examples -name \"*.js\" | sort); do echo; echo \"\u2014 ${f#dist-examples/examples/}\"; node \"$f\"; done",
+    "watch": "tsc --watch"
+  },
+  "files": [
+    "dist/**/*",
+    "src/**/*"
+  ],
+  "keywords": [
+    "obligations",
+    "protocol",
+    "lattice",
+    "authorization",
+    "provenance",
+    "conflict-detection"
+  ],
+  "author": "Lapxo",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.0.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  }
+}

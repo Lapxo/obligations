@@ -1,0 +1,64 @@
+{
+  "family": "boolean",
+  "note": "A boolean is a unit on a two-level chain, read through a projection that drops two of the four states. Written from the enumeration of that chain, not generated.",
+  "coverage": {
+    "size": 6,
+    "criterion": "all four units on the two-level chain, exhaustive, plus two on a longer chain where the grain is what gets lost",
+    "could_exclude_counterexamples": false,
+    "per_kind": { "exactly": 3, "lossy": 2, "unsayable": 1 }
+  },
+  "cases": [
+    {
+      "name": "everything acceptable is faithfully true",
+      "chain": ["no", "yes"],
+      "unit": { "floor": "no", "ceiling": "yes" },
+      "state": "FREE",
+      "view": "exactly",
+      "value": true
+    },
+
+    {
+      "name": "only the bottom is faithfully false",
+      "chain": ["no", "yes"],
+      "unit": { "floor": "no", "ceiling": "no" },
+      "state": "FORBIDDEN",
+      "view": "exactly",
+      "value": false
+    },
+
+    {
+      "name": "a demand has no boolean — may is not must",
+      "chain": ["no", "yes"],
+      "unit": { "floor": "yes", "ceiling": "yes" },
+      "state": "REQUIRED",
+      "view": "lossy",
+      "value": true
+    },
+
+    {
+      "name": "a collision has no boolean at all",
+      "chain": ["no", "yes"],
+      "unit": { "floor": "yes", "ceiling": "no" },
+      "state": "CONFLICT",
+      "view": "unsayable"
+    },
+
+    {
+      "name": "on a longer chain a limit becomes a bare yes",
+      "chain": ["none", "month", "group", "row"],
+      "unit": { "floor": "none", "ceiling": "month" },
+      "state": "FORBIDDEN",
+      "view": "lossy",
+      "value": true
+    },
+
+    {
+      "name": "and everything acceptable is still faithful",
+      "chain": ["none", "month", "group", "row"],
+      "unit": { "floor": "none", "ceiling": "row" },
+      "state": "FREE",
+      "view": "exactly",
+      "value": true
+    }
+  ]
+}

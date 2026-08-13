@@ -1,0 +1,31 @@
+{
+  "family": "units-16",
+  "note": "Composing two states. Written from an independent enumeration, not generated from any implementation.",
+  "coverage": {
+    "size": 16,
+    "criterion": "every ordered pair of the four states, exhaustive",
+    "could_exclude_counterexamples": false,
+    "per_outcome": { "exactly": 14, "required_or_conflict": 2 }
+  },
+  "cases": [
+    { "a": "FREE", "b": "FREE", "outcome": "FREE" },
+    { "a": "FREE", "b": "REQUIRED", "outcome": "REQUIRED" },
+    { "a": "FREE", "b": "FORBIDDEN", "outcome": "FORBIDDEN" },
+    { "a": "FREE", "b": "CONFLICT", "outcome": "CONFLICT" },
+
+    { "a": "REQUIRED", "b": "FREE", "outcome": "REQUIRED" },
+    { "a": "REQUIRED", "b": "REQUIRED", "outcome": "REQUIRED_OR_CONFLICT" },
+    { "a": "REQUIRED", "b": "FORBIDDEN", "outcome": "REQUIRED_OR_CONFLICT" },
+    { "a": "REQUIRED", "b": "CONFLICT", "outcome": "CONFLICT" },
+
+    { "a": "FORBIDDEN", "b": "FREE", "outcome": "FORBIDDEN" },
+    { "a": "FORBIDDEN", "b": "REQUIRED", "outcome": "REQUIRED_OR_CONFLICT" },
+    { "a": "FORBIDDEN", "b": "FORBIDDEN", "outcome": "FORBIDDEN" },
+    { "a": "FORBIDDEN", "b": "CONFLICT", "outcome": "CONFLICT" },
+
+    { "a": "CONFLICT", "b": "FREE", "outcome": "CONFLICT" },
+    { "a": "CONFLICT", "b": "REQUIRED", "outcome": "CONFLICT" },
+    { "a": "CONFLICT", "b": "FORBIDDEN", "outcome": "CONFLICT" },
+    { "a": "CONFLICT", "b": "CONFLICT", "outcome": "CONFLICT" }
+  ]
+}

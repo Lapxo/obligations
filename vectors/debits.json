@@ -1,0 +1,48 @@
+{
+  "family": "debits",
+  "note": "How many debits a collision consumes: height(u) − height(m), which on a chain is the gap between the bounds. Without it a collision has no size, and a one-level miss reads like a three-level disagreement.",
+  "coverage": {
+    "size": 6,
+    "criterion": "no collision, every gap size on a five-chain, and both ends",
+    "could_exclude_counterexamples": false,
+    "per_result": { "zero": 2, "nonzero": 4 }
+  },
+  "cases": [
+    {
+      "name": "no collision counts zero",
+      "chain": ["a", "b", "c", "d", "e"],
+      "unit": { "floor": "a", "ceiling": "e" },
+      "debits": 0
+    },
+    {
+      "name": "bounds that meet count zero",
+      "chain": ["a", "b", "c", "d", "e"],
+      "unit": { "floor": "c", "ceiling": "c" },
+      "debits": 0
+    },
+    {
+      "name": "missed by one",
+      "chain": ["a", "b", "c", "d", "e"],
+      "unit": { "floor": "b", "ceiling": "a" },
+      "debits": 1
+    },
+    {
+      "name": "missed by two",
+      "chain": ["a", "b", "c", "d", "e"],
+      "unit": { "floor": "c", "ceiling": "a" },
+      "debits": 2
+    },
+    {
+      "name": "missed by three",
+      "chain": ["a", "b", "c", "d", "e"],
+      "unit": { "floor": "d", "ceiling": "a" },
+      "debits": 3
+    },
+    {
+      "name": "the widest collision the chain admits",
+      "chain": ["a", "b", "c", "d", "e"],
+      "unit": { "floor": "e", "ceiling": "a" },
+      "debits": 4
+    }
+  ]
+}

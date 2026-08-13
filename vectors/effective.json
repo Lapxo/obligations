@@ -1,0 +1,118 @@
+{
+  "about": [
+    "What a viewpoint effectively holds: everything it can reach, all at",
+    "once.",
+    "",
+    "Reaching means holding. A viewpoint that reaches another carries both",
+    "sets of statements, so they combine \u2014 and the result can cross when",
+    "neither side crosses alone. Checking viewpoints one at a time cannot",
+    "find that.",
+    "",
+    "`held` maps a name to the statement it carries directly; a name with",
+    "no entry carries nothing and contributes nothing. `bounds` is null",
+    "when the whole reach carries nothing at all.",
+    "",
+    "The `escalates` case is the point of the file. Both `a` and `b` are",
+    "satisfiable alone and their combination is not."
+  ],
+  "coverage": {
+    "size": 5,
+    "criterion": "alone, one hop, two hops, a cycle, and an escalation that only the composite shows",
+    "could_exclude_counterexamples": true,
+    "why": "one scale and one graph shape per case; the agreement between the walked and folded forms is asserted in the unit tests"
+  },
+  "chain": ["none", "own", "team", "region", "all"],
+  "cases": [
+    {
+      "name": "nothing held anywhere",
+      "edges": [],
+      "held": {},
+      "from": "a",
+      "via": ["a"],
+      "bounds": null
+    },
+    {
+      "name": "alone, holding one statement",
+      "edges": [],
+      "held": {
+        "a": {
+          "floor": "none",
+          "ceiling": "team"
+        }
+      },
+      "from": "a",
+      "via": ["a"],
+      "bounds": {
+        "floor": "none",
+        "ceiling": "team"
+      }
+    },
+    {
+      "name": "one hop narrows",
+      "edges": [["a", "b"]],
+      "held": {
+        "a": {
+          "floor": "none",
+          "ceiling": "region"
+        },
+        "b": {
+          "floor": "none",
+          "ceiling": "own"
+        }
+      },
+      "from": "a",
+      "via": ["a", "b"],
+      "bounds": {
+        "floor": "none",
+        "ceiling": "own"
+      }
+    },
+    {
+      "name": "two hops narrow again",
+      "edges": [
+        ["a", "b"],
+        ["b", "c"]
+      ],
+      "held": {
+        "a": {
+          "floor": "none",
+          "ceiling": "all"
+        },
+        "b": {
+          "floor": "none",
+          "ceiling": "region"
+        },
+        "c": {
+          "floor": "none",
+          "ceiling": "own"
+        }
+      },
+      "from": "a",
+      "via": ["a", "b", "c"],
+      "bounds": {
+        "floor": "none",
+        "ceiling": "own"
+      }
+    },
+    {
+      "name": "escalates \u2014 neither side crosses alone",
+      "edges": [["a", "b"]],
+      "held": {
+        "a": {
+          "floor": "team",
+          "ceiling": "all"
+        },
+        "b": {
+          "floor": "none",
+          "ceiling": "own"
+        }
+      },
+      "from": "a",
+      "via": ["a", "b"],
+      "bounds": {
+        "floor": "team",
+        "ceiling": "own"
+      }
+    }
+  ]
+}

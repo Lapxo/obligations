@@ -1,0 +1,56 @@
+{
+  "family": "decline",
+  "note": "What a thin surface must REFUSE to answer. Without these the suite only proves an implementation can compute what it can — never that it declines what it cannot. A min/max that answers here is the worst bug this system admits. The price case is not a design choice: it is a theorem that no weighting of debits can reproduce a price.",
+  "coverage": {
+    "size": 4,
+    "criterion": "one case per reason a thin surface has to defer or error",
+    "could_exclude_counterexamples": true,
+    "why": "one per reason, not exhaustive over inputs; a new reason needs a new case"
+  },
+  "cases": [
+    {
+      "name": "two independent groupings are not a chain",
+      "why": "off a chain the premium stops being zero, so min/max is no longer exact",
+      "input": {
+        "groupings": [
+          ["none", "row"],
+          ["none", "month"]
+        ]
+      },
+      "expect": "UNKNOWN"
+    },
+    {
+      "name": "a price needs the engine",
+      "why": "proven, not asserted: no weighting of debits, of (debit,state) pairs, or of pairs of debits reproduces the price. Least squares bounds every weighting at once and leaves 61.9% of the maximum unexplained on a four-element population, with 131 columns of rank 71 against 225 declarations — so it is not a shortage of parameters",
+      "input": {
+        "ask": "cost.coarse",
+        "chain": ["none", "row"]
+      },
+      "expect": "UNKNOWN"
+    },
+    {
+      "name": "a level nobody declared",
+      "why": "a guessed level produces a real verdict about the wrong thing",
+      "input": {
+        "chain": ["none", "row"],
+        "unit": {
+          "floor": "none",
+          "ceiling": "quarter"
+        }
+      },
+      "expect": "ERROR"
+    },
+    {
+      "name": "a unit impossible before anyone composed it",
+      "why": "nothing collided; one promise was written wrong, and calling that a collision hides the typo",
+      "input": {
+        "chain": ["none", "month", "row"],
+        "unit": {
+          "floor": "row",
+          "ceiling": "none"
+        }
+      },
+      "expect": "ERROR"
+    }
+  ]
+}

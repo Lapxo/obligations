@@ -1,0 +1,94 @@
+{
+  "family": "chains",
+  "note": "Composition on a declared chain: floor is the highest demand, ceiling the lowest limit. Exact, because on a chain the premium is identically zero.",
+  "coverage": {
+    "size": 10,
+    "criterion": "hand-written to cover every state of the result, both orders of the collision, the identity, and the two boolean degeneracies",
+    "could_exclude_counterexamples": true,
+    "why": "hand-written, so it can miss a case the exhaustive Rust test covers; it exists to pin the CONTRACT across languages, not to prove the algebra"
+  },
+  "chain": ["none", "month", "group", "row"],
+  "cases": [
+    {
+      "name": "empty is the identity",
+      "units": [],
+      "expect": { "floor": "none", "ceiling": "row", "state": "FREE" }
+    },
+
+    {
+      "name": "true permits everything",
+      "units": [{ "floor": "none", "ceiling": "row" }],
+      "expect": { "floor": "none", "ceiling": "row", "state": "FREE" }
+    },
+
+    {
+      "name": "false permits nothing beyond the bottom",
+      "units": [{ "floor": "none", "ceiling": "none" }],
+      "expect": { "floor": "none", "ceiling": "none", "state": "FORBIDDEN" }
+    },
+
+    {
+      "name": "highest floor wins",
+      "units": [
+        { "floor": "none", "ceiling": "row" },
+        { "floor": "group", "ceiling": "row" }
+      ],
+      "expect": { "floor": "group", "ceiling": "row", "state": "REQUIRED" }
+    },
+
+    {
+      "name": "lowest ceiling wins",
+      "units": [
+        { "floor": "none", "ceiling": "row" },
+        { "floor": "none", "ceiling": "month" }
+      ],
+      "expect": { "floor": "none", "ceiling": "month", "state": "FORBIDDEN" }
+    },
+
+    {
+      "name": "both bounds move and it still fits",
+      "units": [
+        { "floor": "none", "ceiling": "group" },
+        { "floor": "month", "ceiling": "row" }
+      ],
+      "expect": { "floor": "month", "ceiling": "group", "state": "REQUIRED" }
+    },
+
+    {
+      "name": "analyst and support collide",
+      "units": [
+        { "floor": "none", "ceiling": "month" },
+        { "floor": "group", "ceiling": "row" }
+      ],
+      "expect": { "floor": "group", "ceiling": "month", "state": "CONFLICT" }
+    },
+
+    {
+      "name": "and the collision is order-independent",
+      "units": [
+        { "floor": "group", "ceiling": "row" },
+        { "floor": "none", "ceiling": "month" }
+      ],
+      "expect": { "floor": "group", "ceiling": "month", "state": "CONFLICT" }
+    },
+
+    {
+      "name": "three compose in one pass",
+      "units": [
+        { "floor": "none", "ceiling": "row" },
+        { "floor": "month", "ceiling": "row" },
+        { "floor": "none", "ceiling": "group" }
+      ],
+      "expect": { "floor": "month", "ceiling": "group", "state": "REQUIRED" }
+    },
+
+    {
+      "name": "two demands, the higher stands",
+      "units": [
+        { "floor": "month", "ceiling": "row" },
+        { "floor": "group", "ceiling": "row" }
+      ],
+      "expect": { "floor": "group", "ceiling": "row", "state": "REQUIRED" }
+    }
+  ]
+}

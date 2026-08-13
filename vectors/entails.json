@@ -1,0 +1,70 @@
+{
+  "about": [
+    "`a` entails `b`: everything satisfying `a` satisfies `b`.",
+    "",
+    "Two comparisons and no search. `b`'s demand sits under `a`'s, and",
+    "`a`'s limit under `b`'s \u2014 the direction reverses between the two",
+    "marks, and an implementation that compares both the same way passes",
+    "the reflexive cases and fails the rest.",
+    "",
+    "A statement nothing can satisfy entails everything, which is the last",
+    "case and the one nobody thinks to write."
+  ],
+  "coverage": {
+    "size": 8,
+    "criterion": "reflexive, strictly narrower each way, incomparable, and an unsatisfiable statement on both sides",
+    "could_exclude_counterexamples": true,
+    "why": "one scale only; reflexivity and transitivity over every pair are asserted in the unit tests"
+  },
+  "chain": ["none", "own", "team", "region", "all"],
+  "cases": [
+    {
+      "name": "reflexive",
+      "a": ["own", "team"],
+      "b": ["own", "team"],
+      "entails": true
+    },
+    {
+      "name": "narrower ceiling entails wider",
+      "a": ["none", "own"],
+      "b": ["none", "team"],
+      "entails": true
+    },
+    {
+      "name": "wider ceiling does not entail narrower",
+      "a": ["none", "team"],
+      "b": ["none", "own"],
+      "entails": false
+    },
+    {
+      "name": "higher floor entails lower",
+      "a": ["team", "all"],
+      "b": ["own", "all"],
+      "entails": true
+    },
+    {
+      "name": "lower floor does not entail higher",
+      "a": ["own", "all"],
+      "b": ["team", "all"],
+      "entails": false
+    },
+    {
+      "name": "narrower on both sides",
+      "a": ["own", "team"],
+      "b": ["none", "all"],
+      "entails": true
+    },
+    {
+      "name": "unsatisfiable entails anything",
+      "a": ["all", "none"],
+      "b": ["own", "team"],
+      "entails": true
+    },
+    {
+      "name": "nothing entails an unsatisfiable one",
+      "a": ["none", "all"],
+      "b": ["all", "none"],
+      "entails": false
+    }
+  ]
+}
