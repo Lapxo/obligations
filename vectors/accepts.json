@@ -1,0 +1,80 @@
+{
+  "about": [
+    "MAY this happen at this level — a DIFFERENT question from does-this-collide,",
+    "and the one a caller actually asks on the hot path.",
+    "",
+    "It got its own file because it was the divergence nobody could see: the",
+    "TypeScript packer grew `accepts` and `maskOf` and the Rust one did not, and",
+    "no vector covered the surface, so the suite that exists to keep the two",
+    "honest had nothing to say about it.",
+    "",
+    "The trap is the last case. An opinion of `nothing above the bottom` collides",
+    "with nobody and permits nothing, so a caller checking only for collisions",
+    "reads it as allowed."
+  ],
+  "coverage": {
+    "size": 8,
+    "criterion": "every state, on a chain and on the two-element powerset, asked at the bottom, the top and a middle",
+    "could_exclude_counterexamples": true,
+    "why": "two carriers, not all carriers; the exhaustive cross-check against walking the order lives in the unit tests"
+  },
+  "chain": ["none", "month", "group", "row"],
+  "cases": [
+    {
+      "name": "free permits the top",
+      "floor": "none",
+      "ceiling": "row",
+      "at": "row",
+      "accepts": true
+    },
+    {
+      "name": "free permits the bottom",
+      "floor": "none",
+      "ceiling": "row",
+      "at": "none",
+      "accepts": true
+    },
+    {
+      "name": "a ceiling stops above itself",
+      "floor": "none",
+      "ceiling": "month",
+      "at": "group",
+      "accepts": false
+    },
+    {
+      "name": "a ceiling permits itself",
+      "floor": "none",
+      "ceiling": "month",
+      "at": "month",
+      "accepts": true
+    },
+    {
+      "name": "a floor forbids below itself",
+      "floor": "group",
+      "ceiling": "row",
+      "at": "month",
+      "accepts": false
+    },
+    {
+      "name": "a floor permits itself",
+      "floor": "group",
+      "ceiling": "row",
+      "at": "group",
+      "accepts": true
+    },
+    {
+      "name": "a collision permits nothing",
+      "floor": "row",
+      "ceiling": "none",
+      "at": "month",
+      "accepts": false
+    },
+    {
+      "name": "nothing above the bottom does not collide and permits nothing",
+      "floor": "none",
+      "ceiling": "none",
+      "at": "month",
+      "accepts": false
+    }
+  ]
+}

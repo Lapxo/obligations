@@ -1,0 +1,101 @@
+{
+  "about": [
+    "What would have to change for `have` to reach `want`.",
+    "",
+    "A LIST on each side, because there can be more than one weakest answer.",
+    "Empty means that side already holds. On a plain ladder there is always",
+    "exactly one, so every case here has at most a single entry \u2014 the",
+    "ambiguous case needs a scale where two levels sit side by side, and that",
+    "is asserted in the unit tests rather than here.",
+    "",
+    "The weakest answer is not `higher(have, want)`. That one works and is not",
+    "the smallest, which only shows up off a ladder."
+  ],
+  "coverage": {
+    "size": 6,
+    "criterion": "each side short alone, both short, neither short, and both ends of the scale",
+    "could_exclude_counterexamples": true,
+    "why": "one scale only; applying the answer and re-checking is asserted in the unit tests"
+  },
+  "chain": ["none", "own", "team", "region", "all"],
+  "cases": [
+    {
+      "name": "only the ceiling is short",
+      "have": {
+        "floor": "none",
+        "ceiling": "team"
+      },
+      "want": {
+        "floor": "none",
+        "ceiling": "all"
+      },
+      "raiseFloorTo": [],
+      "raiseCeilingTo": ["all"]
+    },
+    {
+      "name": "only the floor is short",
+      "have": {
+        "floor": "none",
+        "ceiling": "team"
+      },
+      "want": {
+        "floor": "own",
+        "ceiling": "team"
+      },
+      "raiseFloorTo": ["own"],
+      "raiseCeilingTo": []
+    },
+    {
+      "name": "both are short",
+      "have": {
+        "floor": "none",
+        "ceiling": "own"
+      },
+      "want": {
+        "floor": "team",
+        "ceiling": "all"
+      },
+      "raiseFloorTo": ["team"],
+      "raiseCeilingTo": ["all"]
+    },
+    {
+      "name": "already enough",
+      "have": {
+        "floor": "none",
+        "ceiling": "all"
+      },
+      "want": {
+        "floor": "none",
+        "ceiling": "team"
+      },
+      "raiseFloorTo": [],
+      "raiseCeilingTo": []
+    },
+    {
+      "name": "wanting nothing changes nothing",
+      "have": {
+        "floor": "own",
+        "ceiling": "team"
+      },
+      "want": {
+        "floor": "none",
+        "ceiling": "none"
+      },
+      "raiseFloorTo": [],
+      "raiseCeilingTo": []
+    },
+    {
+      "name": "wanting everything raises only the ceiling",
+      "have": {
+        "floor": "own",
+        "ceiling": "own"
+      },
+      "want": {
+        "floor": "none",
+        "ceiling": "all"
+      },
+      "raiseFloorTo": [],
+      "raiseCeilingTo": ["all"]
+    }
+  ]
+}

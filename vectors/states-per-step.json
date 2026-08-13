@@ -1,0 +1,93 @@
+{
+  "about": [
+    "The state of every step under one statement \u2014 the read-out that",
+    "composes exactly.",
+    "",
+    "A single label per statement cannot: two cells of the four-by-four",
+    "stay undecided by the labels alone. Each step carries two booleans",
+    "instead, and those combine independently.",
+    "",
+    "Only the DEMAND side carries a state, so this walks the steps a",
+    "statement can demand \u2014 not the ones it can limit. An implementation",
+    "walking every level instead would produce one entry too many on a",
+    "ladder and get the bottom wrong.",
+    "",
+    "The crossed case is the one that matters: a statement nothing can",
+    "satisfy still has a read-out, and CONFLICT appears step by step."
+  ],
+  "coverage": {
+    "size": 6,
+    "criterion": "all four states, each reachable, plus a pinned level and a crossed statement",
+    "could_exclude_counterexamples": true,
+    "why": "one scale only; that the read-out combines coordinatewise is asserted exhaustively in the unit tests"
+  },
+  "chain": ["none", "own", "team", "region", "all"],
+  "cases": [
+    {
+      "name": "free",
+      "floor": "none",
+      "ceiling": "all",
+      "steps": [
+        ["own", "FREE"],
+        ["team", "FREE"],
+        ["region", "FREE"],
+        ["all", "FREE"]
+      ]
+    },
+    {
+      "name": "a ceiling",
+      "floor": "none",
+      "ceiling": "team",
+      "steps": [
+        ["own", "FREE"],
+        ["team", "FREE"],
+        ["region", "FORBIDDEN"],
+        ["all", "FORBIDDEN"]
+      ]
+    },
+    {
+      "name": "a floor",
+      "floor": "team",
+      "ceiling": "all",
+      "steps": [
+        ["own", "REQUIRED"],
+        ["team", "REQUIRED"],
+        ["region", "FREE"],
+        ["all", "FREE"]
+      ]
+    },
+    {
+      "name": "both",
+      "floor": "own",
+      "ceiling": "region",
+      "steps": [
+        ["own", "REQUIRED"],
+        ["team", "FREE"],
+        ["region", "FREE"],
+        ["all", "FORBIDDEN"]
+      ]
+    },
+    {
+      "name": "pinned",
+      "floor": "team",
+      "ceiling": "team",
+      "steps": [
+        ["own", "REQUIRED"],
+        ["team", "REQUIRED"],
+        ["region", "FORBIDDEN"],
+        ["all", "FORBIDDEN"]
+      ]
+    },
+    {
+      "name": "crossed",
+      "floor": "region",
+      "ceiling": "own",
+      "steps": [
+        ["own", "REQUIRED"],
+        ["team", "CONFLICT"],
+        ["region", "CONFLICT"],
+        ["all", "FORBIDDEN"]
+      ]
+    }
+  ]
+}

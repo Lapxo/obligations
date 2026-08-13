@@ -1,0 +1,32 @@
+{
+  "family": "provenance",
+  "note": "A claim is only as good as its weakest input. Not a second algebra: this is the unit law on the method chain, and the implementations prove the equivalence rather than assert it.",
+  "coverage": {
+    "size": 16,
+    "criterion": "every ordered pair of the four methods, exhaustive",
+    "could_exclude_counterexamples": false,
+    "per_result": { "declared": 7, "statistics": 5, "sample": 3, "exact": 1 }
+  },
+  "chain": ["declared", "statistics", "sample", "exact"],
+  "cases": [
+    { "a": "declared", "b": "declared", "weakest": "declared" },
+    { "a": "declared", "b": "statistics", "weakest": "declared" },
+    { "a": "declared", "b": "sample", "weakest": "declared" },
+    { "a": "declared", "b": "exact", "weakest": "declared" },
+
+    { "a": "statistics", "b": "declared", "weakest": "declared" },
+    { "a": "statistics", "b": "statistics", "weakest": "statistics" },
+    { "a": "statistics", "b": "sample", "weakest": "statistics" },
+    { "a": "statistics", "b": "exact", "weakest": "statistics" },
+
+    { "a": "sample", "b": "declared", "weakest": "declared" },
+    { "a": "sample", "b": "statistics", "weakest": "statistics" },
+    { "a": "sample", "b": "sample", "weakest": "sample" },
+    { "a": "sample", "b": "exact", "weakest": "sample" },
+
+    { "a": "exact", "b": "declared", "weakest": "declared" },
+    { "a": "exact", "b": "statistics", "weakest": "statistics" },
+    { "a": "exact", "b": "sample", "weakest": "sample" },
+    { "a": "exact", "b": "exact", "weakest": "exact" }
+  ]
+}

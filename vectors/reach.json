@@ -1,0 +1,65 @@
+{
+  "family": "reach",
+  "note": "Reaching means holding. Written after noticing this law had two implementations and no vector pinning them — the exact gap the vectors exist to close.",
+  "coverage": {
+    "size": 6,
+    "criterion": "a leaf, one hop, two hops, a cycle, a self-loop, and a disconnected name",
+    "could_exclude_counterexamples": true,
+    "why": "hand-written over graph shapes; it pins the contract across languages, not the traversal's correctness on every graph"
+  },
+  "cases": [
+    {
+      "name": "a leaf reaches only itself",
+      "edges": [
+        ["c", "b"],
+        ["b", "a"]
+      ],
+      "from": "a",
+      "reaches": ["a"]
+    },
+
+    {
+      "name": "one hop",
+      "edges": [
+        ["c", "b"],
+        ["b", "a"]
+      ],
+      "from": "b",
+      "reaches": ["a", "b"]
+    },
+
+    {
+      "name": "two hops — the route a review misses",
+      "edges": [
+        ["c", "b"],
+        ["b", "a"]
+      ],
+      "from": "c",
+      "reaches": ["a", "b", "c"]
+    },
+
+    {
+      "name": "a cycle terminates",
+      "edges": [
+        ["a", "b"],
+        ["b", "a"]
+      ],
+      "from": "a",
+      "reaches": ["a", "b"]
+    },
+
+    {
+      "name": "a self-loop is not an infinite loop",
+      "edges": [["a", "a"]],
+      "from": "a",
+      "reaches": ["a"]
+    },
+
+    {
+      "name": "a name with no edges reaches itself",
+      "edges": [["x", "y"]],
+      "from": "z",
+      "reaches": ["z"]
+    }
+  ]
+}

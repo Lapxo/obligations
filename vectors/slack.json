@@ -1,0 +1,99 @@
+{
+  "about": [
+    "How far combining reaches past each side.",
+    "",
+    "These decide the sign of what is left over BEFORE anybody says what a",
+    "level is worth. Both zero means nothing is left over, for any way of",
+    "valuing levels at all.",
+    "",
+    "A ladder has no slack anywhere, which is why every `chain` case here",
+    "is (0, 0). The `powerset` cases are the point: the two levels that",
+    "sit side by side are exactly where it shows.",
+    "",
+    "`null` means the scale cannot count steps between those levels."
+  ],
+  "coverage": {
+    "size": 8,
+    "criterion": "every pair kind on a ladder, and on a scale that is not one: comparable, equal, and side by side",
+    "could_exclude_counterexamples": true,
+    "why": "two scales only; the sign law is checked against actual valuations in the unit tests"
+  },
+  "scales": {
+    "chain": ["none", "own", "team", "region", "all"],
+    "powerset": {
+      "levels": ["none", "x", "y", "both"],
+      "leq": [
+        [true, true, true, true],
+        [false, true, false, true],
+        [false, false, true, true],
+        [false, false, false, true]
+      ]
+    }
+  },
+  "cases": [
+    {
+      "name": "ladder, comparable",
+      "scale": "chain",
+      "a": "own",
+      "b": "region",
+      "up": 0,
+      "down": 0
+    },
+    {
+      "name": "ladder, equal",
+      "scale": "chain",
+      "a": "team",
+      "b": "team",
+      "up": 0,
+      "down": 0
+    },
+    {
+      "name": "ladder, the ends",
+      "scale": "chain",
+      "a": "none",
+      "b": "all",
+      "up": 0,
+      "down": 0
+    },
+    {
+      "name": "ladder, adjacent",
+      "scale": "chain",
+      "a": "own",
+      "b": "team",
+      "up": 0,
+      "down": 0
+    },
+    {
+      "name": "powerset, side by side",
+      "scale": "powerset",
+      "a": "x",
+      "b": "y",
+      "up": 1,
+      "down": 1
+    },
+    {
+      "name": "powerset, comparable",
+      "scale": "powerset",
+      "a": "none",
+      "b": "x",
+      "up": 0,
+      "down": 0
+    },
+    {
+      "name": "powerset, equal",
+      "scale": "powerset",
+      "a": "x",
+      "b": "x",
+      "up": 0,
+      "down": 0
+    },
+    {
+      "name": "powerset, the ends",
+      "scale": "powerset",
+      "a": "none",
+      "b": "both",
+      "up": 0,
+      "down": 0
+    }
+  ]
+}
