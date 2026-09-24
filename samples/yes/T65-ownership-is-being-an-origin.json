@@ -1,0 +1,53 @@
+{
+ "about": [
+  "To own a claim is to be the origin of it and nothing else: the cell holds what each origin said, and taking an origin away takes exactly what it said and no more.",
+  "Three origins on a cell; drop one and the meet widens by what that one had narrowed; drop another and it widens again."
+ ],
+ "cases": [
+  {
+   "name": "three origins, dropped one at a time",
+   "spans": [
+    [
+     0,
+     60
+    ],
+    [
+     20,
+     100
+    ],
+    [
+     30,
+     50
+    ]
+   ],
+   "meet": [
+    30,
+    50
+   ],
+   "without": [
+    {
+     "origin": 0,
+     "meet": [
+      30,
+      50
+     ]
+    },
+    {
+     "origin": 1,
+     "meet": [
+      30,
+      50
+     ]
+    },
+    {
+     "origin": 2,
+     "meet": [
+      20,
+      60
+     ]
+    }
+   ],
+   "expect": true
+  }
+ ]
+}

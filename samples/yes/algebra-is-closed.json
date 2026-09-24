@@ -1,0 +1,17 @@
+{
+ "witness": "algebra-is-closed",
+ "forms": [
+  "ladder",
+  "alphabet",
+  "continuous",
+  "lattice"
+ ],
+ "each_has": [
+  "meet",
+  "join",
+  "top",
+  "bottom"
+ ],
+ "why": "every form is a lattice with its meet and its join, and replay is the one loop over them; nothing the algebra needs lives outside it",
+ "expected.ok": true
+}

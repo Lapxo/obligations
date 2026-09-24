@@ -1,0 +1,12 @@
+{
+ "brief": "two operations compose undetermined",
+ "about": [
+  "The falsifier: a pair of the five operations whose composition the axioms do not determine. The join is already known to be absent from them: it does not travel, and naming what it is would be a second kind of arrow this conjecture does not have."
+ ],
+ "cases": [
+  {
+   "name": "two operations the axioms do not compose",
+   "expected.ok": false
+  }
+ ]
+}

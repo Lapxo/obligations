@@ -1,0 +1,229 @@
+{
+ "about": [
+  "A point is a place where origins can coincide: its state is the set of origins that touched it, with the span each",
+  "one holds. \"Has a second origin\", \"where do they disagree\" and \"what turned\" are reads of that set at the point,",
+  "never a join over a key somebody chose: the coordinate is the key (L00), and an encounter is two origins in one",
+  "place (L01).",
+  "",
+  "It got its own file because reconciliation is an industry: with relations stored and coincidence searched afterwards,",
+  "asking whether two origins saw one thing costs a pass over everything; here it costs reading one set."
+ ],
+ "cases": [
+  {
+   "name": "one origin is potential, and grey",
+   "seen": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 0,
+      "hi": 10
+     }
+    }
+   ],
+   "origins": 1,
+   "colour": "grey",
+   "meet": {
+    "lo": 0,
+    "hi": 10
+   }
+  },
+  {
+   "name": "the same origin twice is still one origin",
+   "seen": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 0,
+      "hi": 10
+     }
+    },
+    {
+     "origin": "a",
+     "span": {
+      "lo": 0,
+      "hi": 10
+     }
+    }
+   ],
+   "origins": 1,
+   "colour": "grey",
+   "meet": {
+    "lo": 0,
+    "hi": 10
+   }
+  },
+  {
+   "name": "two origins that meet are an encounter, and what stands is the meet",
+   "seen": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 0,
+      "hi": 10
+     }
+    },
+    {
+     "origin": "b",
+     "span": {
+      "lo": 5,
+      "hi": 20
+     }
+    }
+   ],
+   "origins": 2,
+   "colour": "agreed",
+   "meet": {
+    "lo": 5,
+    "hi": 10
+   }
+  },
+  {
+   "name": "two origins that do not meet split the point, and the pair is named",
+   "seen": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 0,
+      "hi": 4
+     }
+    },
+    {
+     "origin": "b",
+     "span": {
+      "lo": 6,
+      "hi": 9
+     }
+    }
+   ],
+   "origins": 2,
+   "colour": "split",
+   "disagree": [
+    "a",
+    "b"
+   ]
+  },
+  {
+   "name": "a third origin does not hide the pair that splits",
+   "seen": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 0,
+      "hi": 10
+     }
+    },
+    {
+     "origin": "b",
+     "span": {
+      "lo": 5,
+      "hi": 20
+     }
+    },
+    {
+     "origin": "c",
+     "span": {
+      "lo": 30,
+      "hi": 40
+     }
+    }
+   ],
+   "origins": 3,
+   "colour": "split",
+   "disagree": [
+    "a",
+    "c"
+   ]
+  },
+  {
+   "name": "no origin at all is grey",
+   "seen": [],
+   "origins": 0,
+   "colour": "grey"
+  }
+ ],
+ "turned": {
+  "note": "what travels between two readings is which points changed colour, never the structure (L13)",
+  "before": [
+   {
+    "at": "x",
+    "seen": [
+     {
+      "origin": "a",
+      "span": {
+       "lo": 0,
+       "hi": 10
+      }
+     }
+    ]
+   },
+   {
+    "at": "y",
+    "seen": [
+     {
+      "origin": "a",
+      "span": {
+       "lo": 0,
+       "hi": 4
+      }
+     },
+     {
+      "origin": "b",
+      "span": {
+       "lo": 6,
+       "hi": 9
+      }
+     }
+    ]
+   }
+  ],
+  "after": [
+   {
+    "at": "x",
+    "seen": [
+     {
+      "origin": "a",
+      "span": {
+       "lo": 0,
+       "hi": 10
+      }
+     },
+     {
+      "origin": "b",
+      "span": {
+       "lo": 5,
+       "hi": 20
+      }
+     }
+    ]
+   },
+   {
+    "at": "y",
+    "seen": [
+     {
+      "origin": "a",
+      "span": {
+       "lo": 0,
+       "hi": 4
+      }
+     },
+     {
+      "origin": "b",
+      "span": {
+       "lo": 6,
+       "hi": 9
+      }
+     }
+    ]
+   }
+  ],
+  "expected": [
+   "x"
+  ]
+ },
+ "coverage": {
+  "size": 6,
+  "criterion": "no origin, one origin, one origin twice, two that meet, two that split, and a third that must not hide the split",
+  "could_exclude_counterexamples": true,
+  "why": "one scale; the pair named by a split is the first pair the witness search finds, and only that order is pinned"
+ }
+}

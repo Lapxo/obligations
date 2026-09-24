@@ -1,0 +1,86 @@
+{
+ "about": [
+  "The origins of a cell are the vertices of a polygon, and what they hold together is its interior.",
+  "Two make an edge and no area; three an area; from four a vertex the others do not enclose is an outlier; from five the verdict has a centre, and taking any one origin away leaves it where it was.",
+  "As origins are added to one population the meet narrows toward consensus; two populations wearing one name never meet at any number of them."
+ ],
+ "cases": [
+  {
+   "name": "one population against two",
+   "sd": 0.4,
+   "seen": [
+    [
+     2,
+     "agreed",
+     1.92,
+     0.0,
+     0,
+     false,
+     "split",
+     0.0
+    ],
+    [
+     3,
+     "agreed",
+     1.24,
+     0.176,
+     0,
+     false,
+     "split",
+     0.0
+    ],
+    [
+     4,
+     "agreed",
+     1.24,
+     0.194,
+     4,
+     false,
+     "split",
+     0.0
+    ],
+    [
+     5,
+     "agreed",
+     1.24,
+     0.311,
+     4,
+     true,
+     "split",
+     0.0
+    ],
+    [
+     8,
+     "agreed",
+     0.92,
+     0.697,
+     3,
+     true,
+     "split",
+     0.0
+    ],
+    [
+     13,
+     "agreed",
+     0.84,
+     1.251,
+     6,
+     true,
+     "split",
+     0.0
+    ],
+    [
+     21,
+     "agreed",
+     0.76,
+     1.794,
+     9,
+     true,
+     "split",
+     0.0
+    ]
+   ],
+   "expect": true
+  }
+ ]
+}

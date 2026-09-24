@@ -1,0 +1,52 @@
+{
+ "about": [
+  "A lock is a mould. Stretch every ceiling by the same factor and what stays red was never the ceiling's doing: it is a cell whose own origins do not meet, and no ceiling can hold it at any width.",
+  "Pouring another world into a lock counts the places it bounds that the world reaches.",
+  "Under use a lock deforms: what the world touched closes toward what was seen there, and what nothing touched opens."
+ ],
+ "cases": [
+  {
+   "name": "three hundred cells, five of them in conflict",
+   "cells": 300,
+   "stretched": [
+    [
+     1,
+     180
+    ],
+    [
+     2,
+     58
+    ],
+    [
+     3,
+     17
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     8,
+     5
+    ],
+    [
+     1024,
+     5
+    ]
+   ],
+   "facts": 5,
+   "poured": {
+    "filled": 240,
+    "of": 300
+   },
+   "epochs": 20,
+   "ceilings": 50,
+   "touched": 29,
+   "deformed": {
+    "tightened": 28,
+    "loosened": 22
+   },
+   "expect": true
+  }
+ ]
+}

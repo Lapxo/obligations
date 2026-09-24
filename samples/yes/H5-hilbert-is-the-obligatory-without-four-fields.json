@@ -1,0 +1,50 @@
+{
+  "about": [
+    "Stated as a conjecture about structure and never about arithmetic: amplitudes with phase and no origin, no signed ceiling, no resolution and no epoch band are what is left of a cell when those four fields are dropped.",
+    "What can be measured is measured here. Four claims in phase against an environment spread over the period keep the coherence their share of the whole leaves them: one, then the signal over the total, down to three hundredths at a hundred and twenty-eight.",
+    "And six origins around one value are six objects read finely and one read coarsely, so how many things there are is a reading and not a fact about the things."
+  ],
+  "cases": [
+    {
+      "name": "four in phase, an environment, and six origins",
+      "signal": 4,
+      "period": 8,
+      "environment": [
+        0,
+        2,
+        8,
+        32,
+        128
+      ],
+      "coherence": [
+        1,
+        0.96,
+        0.33,
+        0.11,
+        0.03
+      ],
+      "origins": 6,
+      "spread": 3,
+      "widths": [
+        1,
+        2,
+        4,
+        8,
+        16
+      ],
+      "distinct": [
+        4,
+        4,
+        2,
+        2,
+        1
+      ],
+      "cells": 300,
+      "resolution": 12,
+      "budget": 50,
+      "expect": true
+    }
+  ],
+  "title": "Amplitudes without an origin",
+  "brief": "what is left of a cell when who, ceiling, resolution and band are dropped"
+}

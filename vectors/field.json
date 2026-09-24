@@ -1,0 +1,128 @@
+{
+ "about": [
+  "Three local operations over coordinates, and no edge anywhere: within (a point refines a region), resolution (how",
+  "finely a place is named) and passes (the coordinate goes through this step). Exclusivity is what no other side",
+  "reaches, and a region no point reaches contracts (L20) — vacuity read as geometry rather than run as a rule.",
+  "",
+  "The three came from six definitions that had drifted: one counted a dot as a step and another did not, and one was",
+  "not refinement at all. With one definition and this vector, two acts that paid an unreachable region stopped",
+  "counting as facts."
+ ],
+ "cases": [
+  {
+   "name": "a point refines a region",
+   "point": "a/b/c",
+   "region": "a/b",
+   "within": true
+  },
+  {
+   "name": "a sibling is outside",
+   "point": "a/b/c",
+   "region": "a/x",
+   "within": false
+  },
+  {
+   "name": "a region contains itself",
+   "point": "a/b",
+   "region": "a/b",
+   "within": true
+  },
+  {
+   "name": "resolution is the count of steps",
+   "coordinate": "a/b/c",
+   "resolution": 3
+  },
+  {
+   "name": "a star is no step",
+   "coordinate": "a/b/*",
+   "resolution": 2
+  },
+  {
+   "name": "exclusive keeps what no other side reaches",
+   "mine": [
+    "a/b",
+    "x"
+   ],
+   "others": [
+    [
+     "a/b"
+    ]
+   ],
+   "exclusive": [
+    "x"
+   ]
+  },
+  {
+   "name": "an untouched region contracts",
+   "regions": [
+    "x"
+   ],
+   "touched": [
+    "a/b/c"
+   ],
+   "contracts": true
+  },
+  {
+   "name": "a touched region stands",
+   "regions": [
+    "a"
+   ],
+   "touched": [
+    "a/b/c"
+   ],
+   "contracts": false
+  },
+  {
+   "name": "a side with no coordinate of its own contracts",
+   "regions": [],
+   "touched": [
+    "a"
+   ],
+   "contracts": true
+  },
+  {
+   "name": "passes through a step at any resolution",
+   "coordinate": "a/node_modules/b",
+   "step": "node_modules",
+   "passes": true
+  },
+  {
+   "name": "a step that is not there",
+   "coordinate": "a/b",
+   "step": "node_modules",
+   "passes": false
+  },
+  {
+   "name": "a star names an ending of one step",
+   "coordinate": "x/tsconfig.tsbuildinfo",
+   "step": "*.tsbuildinfo",
+   "passes": true
+  },
+  {
+   "name": "an ending is not a whole step",
+   "coordinate": "x/roles.bound",
+   "step": ".bound",
+   "passes": false
+  },
+  {
+   "name": "a scope steps on dots as well as slashes",
+   "point": "audit/bound.status",
+   "region": "audit/bound",
+   "steps": "./",
+   "within": true
+  },
+  {
+   "name": "a longer name is not a coarser one",
+   "point": "audit/bound",
+   "region": "audit/bo",
+   "steps": "./",
+   "within": false
+  }
+ ],
+ "coverage": {
+  "size": 15,
+  "criterion": "each question a coordinate answers once — within (fine, sibling, itself, dotted steps, a prefix that is not a step), resolution (plain, a star), exclusive, contracts (untouched, touched, empty side), passes (a step, a missing step, an ending, an ending that is not a step)",
+  "could_exclude_counterexamples": true,
+  "why": "hand-written over names; the wildcard runs are pinned in region.json, not here"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "cases": [
+  {
+   "coordinate": [
+    "a/b/c/d/e/f/g/h",
+    "a/b/x/d/e/f/g/h",
+    "a/y/c/d/e/f/g/h"
+   ],
+   "resolution": 8,
+   "expect": 3
+  }
+ ]
+}

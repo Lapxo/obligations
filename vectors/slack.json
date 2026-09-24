@@ -16,7 +16,7 @@
     "size": 8,
     "criterion": "every pair kind on a ladder, and on a scale that is not one: comparable, equal, and side by side",
     "could_exclude_counterexamples": true,
-    "why": "two scales only; the sign law is checked against actual valuations in the unit tests"
+    "why": "two scales for the named cases; the sign law is checked against five valuations over every pair by this file's runner, and a ladder has no slack at all"
   },
   "scales": {
     "chain": ["none", "own", "team", "region", "all"],
@@ -95,5 +95,11 @@
       "up": 0,
       "down": 0
     }
-  ]
+  ],
+  "sign": {
+    "about": "no slack either way means nothing is left over, no downward slack nothing negative, no upward slack nothing positive, over every pair of two scales and five valuations; a ladder has no slack at all",
+    "scales": [["a", "b", "c", "d"], {"levels": ["none", "x", "y", "both"], "leq": [[true, true, true, true], [false, true, false, true], [false, false, true, true], [false, false, false, true]]}],
+    "worths": ["counting", "square", "log", "doubling", "root"],
+    "tolerance": 1e-09
+  }
 }

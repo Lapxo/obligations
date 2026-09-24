@@ -1,0 +1,28 @@
+{
+ "cases": [
+  {
+   "coordinate": "law/A9-everything-is-a-bound",
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      10
+     ]
+    ],
+    [
+     "y",
+     [
+      5,
+      20
+     ]
+    ]
+   ],
+   "expect": [
+    0,
+    20
+   ],
+   "expected.ok": false
+  }
+ ]
+}

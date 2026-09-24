@@ -1,0 +1,14 @@
+{
+ "cases": [
+  {
+   "coordinate": "C",
+   "epoch": [
+    0,
+    30
+   ],
+   "origins": 8,
+   "expect": 30,
+   "expected.ok": false
+  }
+ ]
+}

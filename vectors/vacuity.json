@@ -1,0 +1,40 @@
+{
+  "about": [
+    "The vacuity checker names what a predicate does over the valuations it samples: it discriminates, with a witness on each side; it holds whatever the valuation; or it never reads one.",
+    "The predicates are code a file cannot hold; they are built beside the test, and this file names each by the verdict it must draw."
+  ],
+  "coverage": {
+    "size": 3,
+    "criterion": "one predicate for each verdict the checker can draw",
+    "could_exclude_counterexamples": true,
+    "why": "one chain of nine levels; the checker samples its valuations, so the verdicts are what it must see in any sample"
+  },
+  "chain": [
+    "0",
+    "0.5",
+    "1",
+    "1.5",
+    "2",
+    "3",
+    "4",
+    "6",
+    "8"
+  ],
+  "cases": [
+    {
+      "name": "top over bottom",
+      "predicate": "above",
+      "verdict": "DISCRIMINATES"
+    },
+    {
+      "name": "worth is non-negative",
+      "predicate": "nonNegative",
+      "verdict": "CONSTANT"
+    },
+    {
+      "name": "never looks",
+      "predicate": "blind",
+      "verdict": "INDEPENDENT"
+    }
+  ]
+}

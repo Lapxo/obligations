@@ -1,0 +1,268 @@
+{
+ "about": [
+  "Two signed values on one cell never replace each other. They relate by the cell's order:",
+  "equal values are one encounter, the narrower value stands over the wider one, and",
+  "incomparable values all stand as a fork that keeps both signers.",
+  "",
+  "It got its own file because the first render of the owner's ledger kept the last line of",
+  "each claim key and hid the rest by file order — ten keys on 2026-09-17, six of them",
+  "re-signs that moved `needs` without withdrawing the old line.",
+  "",
+  "`standing` lists the member indices of every class left standing; an encounter keeps",
+  "every member, because no signature is overwritten."
+ ],
+ "cases": [
+  {
+   "name": "equal permits are one encounter",
+   "form": "alphabet",
+   "values": [
+    {
+     "permit": [
+      "a",
+      "b"
+     ]
+    },
+    {
+     "permit": [
+      "b",
+      "a"
+     ]
+    }
+   ],
+   "standing": [
+    [
+     0,
+     1
+    ]
+   ],
+   "fork": false
+  },
+  {
+   "name": "the narrower permit stands",
+   "form": "alphabet",
+   "values": [
+    {
+     "permit": [
+      "a",
+      "b",
+      "c"
+     ]
+    },
+    {
+     "permit": [
+      "a"
+     ]
+    }
+   ],
+   "standing": [
+    [
+     1
+    ]
+   ],
+   "fork": false
+  },
+  {
+   "name": "incomparable permits are a fork that keeps both",
+   "form": "alphabet",
+   "values": [
+    {
+     "permit": [
+      "a",
+      "b"
+     ]
+    },
+    {
+     "permit": [
+      "b",
+      "c"
+     ]
+    }
+   ],
+   "standing": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "fork": true
+  },
+  {
+   "name": "a chain keeps only its narrowest value",
+   "form": "alphabet",
+   "values": [
+    {
+     "permit": [
+      "a",
+      "b",
+      "c"
+     ]
+    },
+    {
+     "permit": [
+      "a",
+      "b"
+     ]
+    },
+    {
+     "permit": [
+      "a"
+     ]
+    }
+   ],
+   "standing": [
+    [
+     2
+    ]
+   ],
+   "fork": false
+  },
+  {
+   "name": "forbidding more is narrower",
+   "form": "alphabet",
+   "values": [
+    {
+     "forbid": [
+      "x"
+     ]
+    },
+    {
+     "forbid": [
+      "x",
+      "y"
+     ]
+    }
+   ],
+   "standing": [
+    [
+     1
+    ]
+   ],
+   "fork": false
+  },
+  {
+   "name": "a permit outside the forbidden set is narrower than the forbid",
+   "form": "alphabet",
+   "values": [
+    {
+     "forbid": [
+      "x"
+     ]
+    },
+    {
+     "permit": [
+      "a"
+     ]
+    }
+   ],
+   "standing": [
+    [
+     1
+    ]
+   ],
+   "fork": false
+  },
+  {
+   "name": "a permit that touches the forbidden set is a fork",
+   "form": "alphabet",
+   "values": [
+    {
+     "forbid": [
+      "x"
+     ]
+    },
+    {
+     "permit": [
+      "x",
+      "a"
+     ]
+    }
+   ],
+   "standing": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "fork": true
+  },
+  {
+   "name": "the contained interval stands",
+   "form": "interval",
+   "values": [
+    {
+     "lo": 0,
+     "hi": 10
+    },
+    {
+     "lo": 2,
+     "hi": 5
+    }
+   ],
+   "standing": [
+    [
+     1
+    ]
+   ],
+   "fork": false
+  },
+  {
+   "name": "overlapping intervals are a fork",
+   "form": "interval",
+   "values": [
+    {
+     "lo": 0,
+     "hi": 5
+    },
+    {
+     "lo": 3,
+     "hi": 8
+    }
+   ],
+   "standing": [
+    [
+     0
+    ],
+    [
+     1
+    ]
+   ],
+   "fork": true
+  },
+  {
+   "name": "an encounter keeps every member",
+   "form": "interval",
+   "values": [
+    {
+     "lo": 1,
+     "hi": 2
+    },
+    {
+     "lo": 1,
+     "hi": 2
+    },
+    {
+     "lo": 1,
+     "hi": 2
+    }
+   ],
+   "standing": [
+    [
+     0,
+     1,
+     2
+    ]
+   ],
+   "fork": false
+  }
+ ],
+ "coverage": {
+  "size": 10,
+  "criterion": "on alphabets: equal permits, a narrower permit, incomparable permits, a chain of three, forbidding more, a permit clear of and touching the forbidden set; on intervals: contained, overlapping, and three equal",
+  "could_exclude_counterexamples": true,
+  "why": "two forms of four; the fold's order-independence is pinned by the ledger vector, not here"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "cases": [
+  {
+   "coordinate": "r6",
+   "origins": [
+    10,
+    1
+   ],
+   "expect": 0.9,
+   "expected.ok": false
+  }
+ ]
+}

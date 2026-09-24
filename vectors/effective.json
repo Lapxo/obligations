@@ -19,7 +19,7 @@
     "size": 5,
     "criterion": "alone, one hop, two hops, a cycle, and an escalation that only the composite shows",
     "could_exclude_counterexamples": true,
-    "why": "one scale and one graph shape per case; the agreement between the walked and folded forms is asserted in the unit tests"
+    "why": "one scale and one graph shape per case; the index and a walk over the edges are compared on every case by this file's runner"
   },
   "chain": ["none", "own", "team", "region", "all"],
   "cases": [
@@ -114,5 +114,6 @@
         "ceiling": "own"
       }
     }
-  ]
+  ],
+  "walked": "the reach the index computes is the reach a walk over the edges finds, for every case's graph"
 }

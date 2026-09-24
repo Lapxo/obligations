@@ -6,7 +6,7 @@
     "Empty means that side already holds. On a plain ladder there is always",
     "exactly one, so every case here has at most a single entry \u2014 the",
     "ambiguous case needs a scale where two levels sit side by side, and that",
-    "is asserted in the unit tests rather than here.",
+    "is the side-by-side case below.",
     "",
     "The weakest answer is not `higher(have, want)`. That one works and is not",
     "the smallest, which only shows up off a ladder."
@@ -15,7 +15,7 @@
     "size": 6,
     "criterion": "each side short alone, both short, neither short, and both ends of the scale",
     "could_exclude_counterexamples": true,
-    "why": "one scale only; applying the answer and re-checking is asserted in the unit tests"
+    "why": "one scale for the named cases; applying the answer and re-checking is done by this file's runner on every case, and the side-by-side case is checked for the weakest answer"
   },
   "chain": ["none", "own", "team", "region", "all"],
   "cases": [
@@ -97,5 +97,22 @@
       "raiseFloorTo": [],
       "raiseCeilingTo": ["all"]
     }
-  ]
+  ],
+  "sideBySide": {
+    "about": "off a ladder the weakest answer is not the higher of the two: where two levels sit side by side, missing names the one that reaches and no weaker level that also would",
+    "scale": {
+      "levels": ["none", "x", "y", "both"],
+      "leq": [[true, true, true, true], [false, true, false, true], [false, false, true, true], [false, false, false, true]]
+    },
+    "have": {
+      "floor": "x",
+      "ceiling": "both"
+    },
+    "want": {
+      "floor": "y",
+      "ceiling": "both"
+    },
+    "raiseFloorTo": ["y"],
+    "raiseCeilingTo": []
+  }
 }

@@ -1,0 +1,16 @@
+{
+ "about": [
+  "A tree is not read leaf by leaf. What the lock names are regions, and the leaves are what a region happens to hold today: on this tree the reading lines name a few hundred regions while the readers observed thousands of leaves, about eight leaves to a region.",
+  "So the unit of observation is the region and the number of leaves is a consequence, which is why a tree that grows a thousand files does not grow a thousand questions."
+ ],
+ "cases": [
+  {
+   "name": "this tree, at the epoch it was read",
+   "leaves": 2453,
+   "readingLines": 255,
+   "regions": 309,
+   "leavesPerRegion": 7.9,
+   "expect": true
+  }
+ ]
+}

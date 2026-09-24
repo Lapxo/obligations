@@ -1,0 +1,12 @@
+{
+  "about": [
+    "The falsifier: one act that is both local and non-local — a change that travels a distance and also reaches a cell that does not rest on its bound. The two poles would then be one, and this would be a claim about the world rather than a hint."
+  ],
+  "cases": [
+    {
+      "name": "a phenomenon both local-metric and non-local-bound in one act",
+      "expected.ok": false
+    }
+  ],
+  "brief": "one act is both local and non-local"
+}

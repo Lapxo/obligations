@@ -1,0 +1,90 @@
+{
+ "about": [
+  "A lock and a target are one object: a span. What may be and what must be fold by the same meet, split by the same",
+  "disagreement, and a value stands against both exactly when it stands in their meet. The algebra has no roles."
+ ],
+ "cases": [
+  {
+   "name": "a lock and a target meet like two targets",
+   "seen": [
+    {
+     "origin": "lock",
+     "span": {
+      "lo": 0,
+      "hi": 10
+     }
+    },
+    {
+     "origin": "target",
+     "span": {
+      "lo": 5,
+      "hi": 20
+     }
+    }
+   ],
+   "as_two": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 0,
+      "hi": 10
+     }
+    },
+    {
+     "origin": "b",
+     "span": {
+      "lo": 5,
+      "hi": 20
+     }
+    }
+   ],
+   "meet": {
+    "lo": 5,
+    "hi": 10
+   },
+   "colour": "agreed"
+  },
+  {
+   "name": "a lock and a target that do not meet split like two targets",
+   "seen": [
+    {
+     "origin": "lock",
+     "span": {
+      "lo": 0,
+      "hi": 4
+     }
+    },
+    {
+     "origin": "target",
+     "span": {
+      "lo": 6,
+      "hi": 9
+     }
+    }
+   ],
+   "as_two": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 0,
+      "hi": 4
+     }
+    },
+    {
+     "origin": "b",
+     "span": {
+      "lo": 6,
+      "hi": 9
+     }
+    }
+   ],
+   "colour": "split"
+  }
+ ],
+ "coverage": {
+  "size": 2,
+  "criterion": "a lock and a target that meet, and a lock and a target that split",
+  "could_exclude_counterexamples": true,
+  "why": "one pair of spans each"
+ }
+}

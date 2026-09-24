@@ -1,0 +1,35 @@
+{
+  "about": [
+    "A valuation is supermodular when RI ≤ 0 on every pair. Monotone and",
+    "supermodular gives g ≡ 0: planning is worth nothing. Height on a modular lattice",
+    "is modular, hence supermodular. A cheap join on B2 is not.",
+    "",
+    "The trap: checking only chains, where every monotone function of",
+    "rank is supermodular because there are no incomparable pairs."
+  ],
+  "coverage": {
+    "size": 3,
+    "criterion": "a chain (yes), B2 under height (yes), B2 under a cheap join (no)",
+    "could_exclude_counterexamples": false
+  },
+  "cases": [
+    {
+      "name": "a chain, counting",
+      "chain": ["a", "b", "c", "d"],
+      "worth": "counting",
+      "supermodular": true
+    },
+    {
+      "name": "B2, height",
+      "kind": "b2",
+      "worth": "height",
+      "supermodular": true
+    },
+    {
+      "name": "B2, cheap join",
+      "kind": "b2",
+      "worth": "cheap",
+      "supermodular": false
+    }
+  ]
+}

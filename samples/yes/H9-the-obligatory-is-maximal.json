@@ -1,0 +1,37 @@
+{
+ "title": "Maximal",
+ "brief": "remove a part and a known object remains; add one and the four states break",
+ "about": [
+  "Seven parts make the obligatory, and taking any one away leaves an object already known: without origins a meet of the lattice, without rests a cell nothing reaches, without a ceiling the lattice itself, without an epoch a timeless set of claims, without resolution a flat map, without ids a log that cannot take back, without join a ceiling that only narrows."
+ ],
+ "cases": [
+  {
+   "name": "seven removals, seven known objects",
+   "spans": [
+    [
+     2,
+     9
+    ],
+    [
+     5,
+     12
+    ]
+   ],
+   "signed": [
+    [
+     0,
+     60
+    ],
+    [
+     0,
+     45
+    ]
+   ],
+   "epoch": 3,
+   "deep": "a",
+   "removals": 7,
+   "expect": true,
+   "want": {"ids": 2}
+  }
+ ]
+}

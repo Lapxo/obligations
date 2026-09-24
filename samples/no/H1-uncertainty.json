@@ -1,0 +1,24 @@
+{
+ "brief": "the product rises as reading sharpens",
+ "about": [
+  "The falsifier: a cell read at four resolutions whose product of resolution and independent encounters comes out above the floor while the encounters fall away with the sharpening. A product that rises as the reading sharpens would say the floor is not a floor but an accident of how coarsely the cell was read."
+ ],
+ "cases": [
+  {
+   "resolution": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "origins": [
+    4,
+    1,
+    1,
+    1
+   ],
+   "expect": 4.8,
+   "expected.ok": false
+  }
+ ]
+}

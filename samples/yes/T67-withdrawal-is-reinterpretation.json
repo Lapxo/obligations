@@ -1,0 +1,31 @@
+{
+ "about": [
+  "A withdrawal takes back a write and leaves everything else standing: the claim is still on the cell, the origin still spoke, and what changed is what the cell now means.",
+  "Two origins meet at five to nine; withdraw one and the cell has one origin and is grey again; the withdrawn claim is still there to read."
+ ],
+ "cases": [
+  {
+   "name": "one cell, two claims, one withdrawal",
+   "spans": [
+    [
+     2,
+     9
+    ],
+    [
+     5,
+     12
+    ]
+   ],
+   "meet": [
+    5,
+    9
+   ],
+   "origins": 2,
+   "verdict": "agreed",
+   "afterOrigins": 1,
+   "afterVerdict": "grey",
+   "claimsKept": 3,
+   "expect": true
+  }
+ ]
+}

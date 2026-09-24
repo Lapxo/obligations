@@ -1,0 +1,31 @@
+{
+ "witness": "replay-is-the-proof",
+ "landed": [
+  {
+   "at": "a/x",
+   "epoch": 1
+  },
+  {
+   "at": "a/x",
+   "epoch": 2
+  },
+  {
+   "at": "a/y",
+   "epoch": 1
+  }
+ ],
+ "region": "a",
+ "verdict": "count",
+ "folds": [
+  {
+   "at": "a/x",
+   "value": 2
+  },
+  {
+   "at": "a/y",
+   "value": 1
+  }
+ ],
+ "why": "what landed, folded again over its region, gives the same verdicts in any order \u2014 replay is the loop of the field with a verdict as its reading",
+ "expected.ok": true
+}

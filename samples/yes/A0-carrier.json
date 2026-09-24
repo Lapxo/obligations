@@ -1,0 +1,41 @@
+{
+ "cases": [
+  {
+   "form": "interval",
+   "interval": [
+    [
+     3,
+     5
+    ],
+    [
+     0,
+     10
+    ]
+   ],
+   "expect": true
+  },
+  {
+   "form": "interval",
+   "interval": [
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     10
+    ]
+   ],
+   "expect": true
+  },
+  {
+   "form": "chain",
+   "resolution": 5,
+   "interval": [
+    1,
+    3
+   ],
+   "expect": true
+  }
+ ]
+}

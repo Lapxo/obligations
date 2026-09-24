@@ -1,0 +1,51 @@
+{
+ "title": "Measurement",
+ "brief": "a thermometer, a survey, an interferometer and a headcount fill the same five fields",
+ "about": [
+  "Stated as a conjecture: four instruments that share no physics fold the same way, because a measurement is a cell.",
+  "For each of them the five fields are named without strain, and the same five operations answer for all four.",
+  "No numbers are claimed here. What is claimed is that the table can be filled in every row, and a row that cannot be filled would end it."
+ ],
+ "cases": [
+  {
+   "name": "four instruments, five properties",
+   "table": [
+    {
+     "instrument": "a thermometer",
+     "floor": "the lowest it reads",
+     "ceiling": "the highest",
+     "origin": "the instrument and whoever read it",
+     "epoch": "when it was read",
+     "resolution": "the smallest step it marks"
+    },
+    {
+     "instrument": "a survey",
+     "floor": "what every answer agrees to",
+     "ceiling": "what any answer allows",
+     "origin": "each respondent",
+     "epoch": "the round",
+     "resolution": "the wording of the question"
+    },
+    {
+     "instrument": "an interferometer",
+     "floor": "where the fringe is dark",
+     "ceiling": "where it is bright",
+     "origin": "each arm",
+     "epoch": "the phase",
+     "resolution": "the fringe spacing"
+    },
+    {
+     "instrument": "a headcount",
+     "floor": "those certainly present",
+     "ceiling": "those possibly present",
+     "origin": "each counter",
+     "epoch": "the count",
+     "resolution": "who counts as present"
+    }
+   ],
+   "properties": 5,
+   "expect": true,
+   "want": {"meet": [4, 10], "verdict": "agreed", "instruments": 4, "fields": 5}
+  }
+ ]
+}

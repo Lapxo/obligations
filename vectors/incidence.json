@@ -1,0 +1,48 @@
+{
+  "about": [
+    "The context of Birkhoff: for each join-irreducible j, the",
+    "meet-irreducibles m with j ≤ m. Both cards of a debit are derived",
+    "from this table. A file that only checked a chain would hide that",
+    "the two faces are different sets — on a chain they look like shifts",
+    "of each other.",
+    "",
+    "The trap: treating joins() as the old debits() (JI only) and never",
+    "looking at limits()."
+  ],
+  "coverage": {
+    "size": 2,
+    "criterion": "a chain (faces look like shifts) and M3 (faces coincide as sets, incidence is the identity)",
+    "could_exclude_counterexamples": false
+  },
+  "cases": [
+    {
+      "name": "four-chain",
+      "chain": ["a", "b", "c", "d"],
+      "joins": ["b", "c", "d"],
+      "limits": ["a", "b", "c"],
+      "above": {
+        "b": ["b", "c"],
+        "c": ["c"],
+        "d": []
+      }
+    },
+    {
+      "name": "M3, the diamond",
+      "levels": ["bot", "a", "b", "c", "top"],
+      "leq": [
+        [true, true, true, true, true],
+        [false, true, false, false, true],
+        [false, false, true, false, true],
+        [false, false, false, true, true],
+        [false, false, false, false, true]
+      ],
+      "joins": ["a", "b", "c"],
+      "limits": ["a", "b", "c"],
+      "above": {
+        "a": ["a"],
+        "b": ["b"],
+        "c": ["c"]
+      }
+    }
+  ]
+}

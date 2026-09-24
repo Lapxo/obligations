@@ -1,0 +1,87 @@
+{
+ "witness": "formulas-and-views-are-locks",
+ "about": [
+  "A formula is a lock: the form, its operation and its inputs fix the value, and no code holds it. Two",
+  "declarations of one formula are one value wherever they are folded."
+ ],
+ "cases": [
+  {
+   "name": "a meet declared by its form",
+   "form": "continuous",
+   "params": {
+    "lo": 0,
+    "hi": 100
+   },
+   "op": "meet",
+   "inputs": [
+    {
+     "lo": 0,
+     "hi": 10
+    },
+    {
+     "lo": 5,
+     "hi": 20
+    }
+   ],
+   "value": {
+    "lo": 5,
+    "hi": 10
+   }
+  },
+  {
+   "name": "a join declared by its form",
+   "form": "continuous",
+   "params": {
+    "lo": 0,
+    "hi": 100
+   },
+   "op": "join",
+   "inputs": [
+    {
+     "lo": 0,
+     "hi": 4
+    },
+    {
+     "lo": 6,
+     "hi": 9
+    }
+   ],
+   "value": {
+    "lo": 0,
+    "hi": 9
+   }
+  },
+  {
+   "name": "the same formula on a ladder",
+   "form": "ladder",
+   "params": {
+    "levels": [
+     "low",
+     "mid",
+     "high"
+    ]
+   },
+   "op": "meet",
+   "inputs": [
+    {
+     "floor": "low",
+     "ceiling": "high"
+    },
+    {
+     "floor": "mid",
+     "ceiling": "high"
+    }
+   ],
+   "value": {
+    "floor": "mid",
+    "ceiling": "high"
+   }
+  }
+ ],
+ "coverage": {
+  "size": 3,
+  "criterion": "a meet and a join on a continuous form, and the same meet on a ladder",
+  "could_exclude_counterexamples": true,
+  "why": "two forms of four"
+ }
+}

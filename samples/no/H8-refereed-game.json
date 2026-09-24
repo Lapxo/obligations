@@ -1,0 +1,12 @@
+{
+  "about": [
+    "The falsifier: a reading of the field where a player can suspend the rule that two origins are needed, or where one claim is information. Then the referee would be outside the game."
+  ],
+  "cases": [
+    {
+      "name": "a player who is its own referee",
+      "expected.ok": false
+    }
+  ],
+  "brief": "a player can suspend the rule that two origins are needed"
+}

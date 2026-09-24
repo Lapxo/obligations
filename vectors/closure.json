@@ -1,0 +1,107 @@
+{
+  "about": [
+    "Combining must accept its own output.",
+    "",
+    "`compose` rejects a statement that was already impossible on its own — a",
+    "floor above its own ceiling is a typo, and calling it a collision hides",
+    "it. That check is right at the front door and wrong everywhere else: it",
+    "made `compose` REFUSE ITS OWN RESULT the moment two statements collided.",
+    "",
+    "An operation that cannot take its own output back is not closed, and",
+    "without closure there is exactly one legal way to evaluate: a single pass",
+    "over the original statements. No folding in a tree, no combining partial",
+    "results from shards, no merging replicas that were partitioned. The whole",
+    "reason this arithmetic is worth having is that order does not matter, and",
+    "an operation you can only apply left to right does not deliver that.",
+    "",
+    "So `fuse` carries the law and `compose` is `fuse` plus an entry check.",
+    "The five properties below are the merge law of a conflict-free replicated",
+    "type, which is why a crossed result must survive rather than be resolved",
+    "away: both sides were load-bearing, and a winner is not an answer."
+  ],
+  "coverage": {
+    "size": 8,
+    "criterion": "each property once, plus both directions of the compose/fuse split on the same input",
+    "could_exclude_counterexamples": true,
+    "why": "the properties are checked exhaustively over a small scale in the runner; these cases pin the intent and the split, not the whole space"
+  },
+  "scale": ["none", "own", "team", "region", "all"],
+  "cases": [
+    {
+      "name": "crossed result is returned, not refused",
+      "law": "total",
+      "input": [
+        { "floor": "region", "ceiling": "all" },
+        { "floor": "none", "ceiling": "own" }
+      ],
+      "fuse": { "floor": "region", "ceiling": "own" },
+      "compose": { "floor": "region", "ceiling": "own" }
+    },
+    {
+      "name": "and that result may be combined again",
+      "law": "closed",
+      "input": [
+        { "floor": "region", "ceiling": "own" },
+        { "floor": "none", "ceiling": "all" }
+      ],
+      "fuse": { "floor": "region", "ceiling": "own" },
+      "compose": "MALFORMED"
+    },
+    {
+      "name": "a malformed statement from a caller is still an error",
+      "law": "entry check",
+      "input": [{ "floor": "team", "ceiling": "own" }],
+      "fuse": { "floor": "team", "ceiling": "own" },
+      "compose": "MALFORMED"
+    },
+    {
+      "name": "nothing to combine is the neutral element",
+      "law": "neutral",
+      "input": [],
+      "fuse": { "floor": "none", "ceiling": "all" },
+      "compose": { "floor": "none", "ceiling": "all" }
+    },
+    {
+      "name": "silence contributes nothing",
+      "law": "neutral",
+      "input": [
+        { "floor": "own", "ceiling": "team" },
+        { "floor": "none", "ceiling": "all" }
+      ],
+      "fuse": { "floor": "own", "ceiling": "team" },
+      "compose": { "floor": "own", "ceiling": "team" }
+    },
+    {
+      "name": "the same statement twice changes nothing",
+      "law": "idempotent",
+      "input": [
+        { "floor": "own", "ceiling": "team" },
+        { "floor": "own", "ceiling": "team" }
+      ],
+      "fuse": { "floor": "own", "ceiling": "team" },
+      "compose": { "floor": "own", "ceiling": "team" }
+    },
+    {
+      "name": "order does not matter",
+      "law": "commutative",
+      "input": [
+        { "floor": "none", "ceiling": "team" },
+        { "floor": "own", "ceiling": "region" }
+      ],
+      "fuse": { "floor": "own", "ceiling": "team" },
+      "compose": { "floor": "own", "ceiling": "team" }
+    },
+    {
+      "name": "grouping does not matter",
+      "law": "associative",
+      "input": [
+        { "floor": "none", "ceiling": "region" },
+        { "floor": "own", "ceiling": "all" },
+        { "floor": "none", "ceiling": "team" }
+      ],
+      "fuse": { "floor": "own", "ceiling": "team" },
+      "compose": { "floor": "own", "ceiling": "team" }
+    }
+  ],
+  "properties": 7
+}

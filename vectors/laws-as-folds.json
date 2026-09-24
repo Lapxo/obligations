@@ -1,0 +1,286 @@
+{
+ "about": [
+  "Fourteen laws, one loop: fold(region, f) — the points that refine a region, gathered at the coordinate where they",
+  "lie, and one local reading of the origins met there. Nine were written by the simulation (encounter, disagreement,",
+  "independence, refinement, history, vacuity, cone, transmission, and the group-by itself); these five are the ones",
+  "that lived as separate code — authority, roles, payment, verification and retraction.",
+  "",
+  "The falsifier is a law that needs an edge table to compute. None of the five does: the prefix is the edge."
+ ],
+ "cases": [
+  {
+   "law": "group-by",
+   "region": "a",
+   "points": [
+    {
+     "at": "a/x",
+     "epoch": 1
+    },
+    {
+     "at": "a/x",
+     "epoch": 2
+    },
+    {
+     "at": "b/y",
+     "epoch": 1
+    }
+   ],
+   "folds": [
+    {
+     "at": "a/x",
+     "value": 2
+    }
+   ]
+  },
+  {
+   "law": "covers",
+   "points": [
+    {
+     "at": "a/b/x",
+     "epoch": 3
+    }
+   ],
+   "where": [
+    "a/b"
+   ],
+   "steps": {
+    "lo": 1,
+    "hi": 16
+   },
+   "when": {
+    "lo": 0,
+    "hi": 5
+   },
+   "value": true
+  },
+  {
+   "law": "covers",
+   "points": [
+    {
+     "at": "a/b/x",
+     "epoch": 9
+    }
+   ],
+   "where": [
+    "a/b"
+   ],
+   "steps": {
+    "lo": 1,
+    "hi": 16
+   },
+   "when": {
+    "lo": 0,
+    "hi": 5
+   },
+   "value": false
+  },
+  {
+   "law": "covers",
+   "points": [
+    {
+     "at": "a/b/x",
+     "epoch": 1
+    }
+   ],
+   "where": [
+    "a/b"
+   ],
+   "steps": {
+    "lo": 1,
+    "hi": 2
+   },
+   "when": {
+    "lo": 0,
+    "hi": 5
+   },
+   "value": false
+  },
+  {
+   "law": "covers",
+   "points": [
+    {
+     "at": "other/x",
+     "epoch": 1
+    }
+   ],
+   "where": [
+    "a/b"
+   ],
+   "steps": {
+    "lo": 1,
+    "hi": 16
+   },
+   "when": {
+    "lo": 0,
+    "hi": 5
+   },
+   "value": false
+  },
+  {
+   "law": "outranks",
+   "points": [
+    {
+     "at": "a/node_modules/dist/x",
+     "epoch": 0
+    }
+   ],
+   "named": [
+    [
+     "node_modules",
+     "foreign"
+    ],
+    [
+     "dist",
+     "derived"
+    ]
+   ],
+   "order": [
+    "foreign",
+    "derived",
+    "observed"
+   ],
+   "value": "foreign"
+  },
+  {
+   "law": "outranks",
+   "points": [
+    {
+     "at": "a/dist/x",
+     "epoch": 0
+    }
+   ],
+   "named": [
+    [
+     "node_modules",
+     "foreign"
+    ],
+    [
+     "dist",
+     "derived"
+    ]
+   ],
+   "order": [
+    "foreign",
+    "derived",
+    "observed"
+   ],
+   "value": "derived"
+  },
+  {
+   "law": "outranks",
+   "points": [
+    {
+     "at": "a/src/x.ts",
+     "epoch": 0
+    }
+   ],
+   "named": [
+    [
+     "node_modules",
+     "foreign"
+    ],
+    [
+     "dist",
+     "derived"
+    ]
+   ],
+   "order": [
+    "foreign",
+    "derived",
+    "observed"
+   ],
+   "value": null
+  },
+  {
+   "law": "answers",
+   "points": [
+    {
+     "at": "p/q/r/s.ts",
+     "epoch": 0
+    }
+   ],
+   "where": [
+    "p/q/r"
+   ],
+   "value": true
+  },
+  {
+   "law": "answers",
+   "points": [
+    {
+     "at": "p/q/r/s.ts",
+     "epoch": 0
+    },
+    {
+     "at": "p/q/t/u/v/w.ts",
+     "epoch": 0
+    }
+   ],
+   "where": [
+    "p/q/r"
+   ],
+   "value": false
+  },
+  {
+   "law": "answers",
+   "points": [],
+   "where": [
+    "p/q/r"
+   ],
+   "value": false
+  },
+  {
+   "law": "verified",
+   "points": [
+    {
+     "at": "build/x",
+     "epoch": 1
+    },
+    {
+     "at": "build/x",
+     "epoch": 2
+    }
+   ],
+   "green": [
+    2
+   ],
+   "value": true
+  },
+  {
+   "law": "verified",
+   "points": [
+    {
+     "at": "check/x",
+     "epoch": 1
+    }
+   ],
+   "green": [],
+   "value": false
+  },
+  {
+   "law": "retracted",
+   "points": [
+    {
+     "at": "a/b/x",
+     "epoch": 1
+    },
+    {
+     "at": "a/c/y",
+     "epoch": 1
+    }
+   ],
+   "by": [
+    "a/b"
+   ],
+   "value": [
+    "a/b/x"
+   ]
+  }
+ ],
+ "coverage": {
+  "size": 14,
+  "criterion": "each of the six laws at least once: group-by, covers inside and outside its steps and epochs, outranks under three orders, answers inside, outside and empty, verified and not, retracted",
+  "could_exclude_counterexamples": true,
+  "why": "hand-written, a few points per law"
+ }
+}

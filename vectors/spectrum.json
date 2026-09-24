@@ -20,7 +20,7 @@
     "size": 6,
     "criterion": "both scales under all three named valuations",
     "could_exclude_counterexamples": true,
-    "why": "three valuations, not all of them; the claim that a ladder produces one outcome for ANY valuation is asserted in the unit tests"
+    "why": "three valuations for the named cases; that a ladder produces one outcome for every valuation it is given is checked by this file's runner"
   },
   "scales": {
     "chain": ["a", "b", "c", "d"],
@@ -78,5 +78,14 @@
       "values": [0, 0.405465108],
       "pairs": 10
     }
-  ]
+  ],
+  "ladder": {
+    "about": "a ladder produces exactly one outcome whatever a level is worth, while some valuation spreads the powerset and not every one does",
+    "levels": ["a", "b", "c", "d"],
+    "worths": ["counting", "square", "log", "doubling"],
+    "spread": {
+      "levels": ["none", "x", "y", "both"],
+      "leq": [[true, true, true, true], [false, true, false, true], [false, false, true, true], [false, false, false, true]]
+    }
+  }
 }

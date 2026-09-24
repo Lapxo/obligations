@@ -1,0 +1,219 @@
+{
+ "about": [
+  "The object, with the cases it has to pass before any code is written for it.",
+  "A cell is two poles on a lattice it is given, never a lattice it assumes: the same cell folds over an interval, an alphabet and a ladder, and the state it is in is the one that lattice names.",
+  "A signature narrows a bound and every cell resting on that bound reads the narrower one; no origin's claim is edited by it, and the order signatures arrive in never shows.",
+  "A withdrawal names the claim it takes back, not a value that looks like it, and fold by phase adds claims at one turn of the period as the square of their number.",
+  "All four corners are reached: one origin that pins a level is REQUIRED, two that leave the scale open are FREE, two that touch under a ceiling below the top are FORBIDDEN, and two that cannot both hold are CONFLICT.",
+  "The object, written down once: two poles read at a resolution, origins that carry the epoch they spoke at and a sign, and an order of rest against other cells.",
+  "Five operations answer for it and there are no others. Meet is what the origins hold together, encounter is how many met and what that makes, observe is one more origin at a cost, sign is a bound narrowed wherever it is rested on, refine is the same cell read at another resolution.",
+  "A withdrawal takes back its own write and nothing else, so a cell that was written and withdrawn at one epoch is a cell nobody claimed."
+ ],
+ "cases": [
+  {
+   "name": "two poles on three lattices",
+   "interval": {
+    "claims": [
+     [
+      2,
+      9
+     ],
+     [
+      5,
+      12
+     ]
+    ],
+    "meet": [
+     5,
+     9
+    ]
+   },
+   "alphabet": {
+    "levels": [
+     "none",
+     "own",
+     "team",
+     "all"
+    ],
+    "floor": "own",
+    "ceiling": "team",
+    "between": 2
+   },
+   "ladder": {
+    "levels": [
+     "l0",
+     "l1",
+     "l2",
+     "l3",
+     "l4"
+    ],
+    "floor": "l1",
+    "ceiling": "l3",
+    "between": 3
+   }
+  },
+  {
+   "name": "four states from the lattice",
+   "levels": [
+    "none",
+    "own",
+    "team",
+    "all"
+   ],
+   "oneOrigin": {
+    "floor": "own",
+    "ceiling": "own",
+    "state": "REQUIRED"
+   },
+   "twoThatFit": {
+    "floor": "none",
+    "ceiling": "all",
+    "state": "FREE"
+   },
+   "twoOutside": {
+    "floor": "all",
+    "ceiling": "none",
+    "state": "CONFLICT"
+   },
+   "twoTouchingUnderTheCeiling": {
+    "floor": "none",
+    "ceiling": "team",
+    "state": "FORBIDDEN"
+   },
+   "corners": 4
+  },
+  {
+   "name": "a signature travels by rest and never edits a claim",
+   "cells": 4,
+   "bound": "ceiling",
+   "was": [
+    0,
+    100
+   ],
+   "now": [
+    0,
+    45
+   ],
+   "resting": 3,
+   "changed": 3,
+   "claimsEdited": 0,
+   "orderings": 6,
+   "results": 1
+  },
+  {
+   "name": "a withdrawal names the claim it takes back",
+   "claims": 3,
+   "withdrawn": "c2",
+   "originsAfter": 1,
+   "keptAfter": 3,
+   "sameValueElsewhere": true
+  },
+  {
+   "name": "refine splits",
+   "deep": "a/b/c",
+   "at": 2,
+   "reads": "a/b"
+  },
+  {
+   "name": "fold by phase",
+   "period": 8,
+   "inPhase": 1024,
+   "n": 32,
+   "strewn": 50,
+   "writeAndWithdrawal": 0
+  },
+  {
+   "name": "one cell, six operations",
+   "at": "price",
+   "spans": [
+    [
+     2,
+     9
+    ],
+    [
+     5,
+     12
+    ]
+   ],
+   "meet": [
+    5,
+    9
+   ],
+   "origins": 2,
+   "verdict": "agreed",
+   "observed": [
+    0,
+    4
+   ],
+   "meetAfter": [
+    5,
+    4
+   ],
+   "verdictAfter": "split",
+   "signed": [
+    0,
+    7
+   ],
+   "meetSigned": [
+    5,
+    7
+   ],
+   "withdrawn": {
+    "origins": 1,
+    "verdict": "grey"
+   },
+   "deep": "a/b/c",
+   "refined": "a/b",
+   "expect": true,
+   "joined": [
+    0,
+    12
+   ],
+   "meetJoined": [
+    5,
+    9
+   ]
+  },
+  {
+   "name": "a join widens one cell and a signature still reaches it",
+   "cells": 4,
+   "resting": 3,
+   "bound": "ceiling",
+   "was": [
+    0,
+    100
+   ],
+   "signs": [
+    [
+     0,
+     60
+    ],
+    [
+     0,
+     45
+    ]
+   ],
+   "join": [
+    0,
+    80
+   ],
+   "orderings": 6,
+   "restingResults": 1,
+   "joinedResults": 3,
+   "joinLast": [
+    0,
+    80
+   ],
+   "joinFirst": [
+    0,
+    45
+   ],
+   "bitsWas": 6.658,
+   "bitsAfterSign": 5.524,
+   "bitsAfterJoin": 6.34,
+   "signLowers": 3,
+   "joinRaises": 1,
+   "expect": true
+  }
+ ]
+}

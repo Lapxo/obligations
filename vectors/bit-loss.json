@@ -1,0 +1,34 @@
+{
+  "about": [
+    "A boolean is exact in two places on a five-level chain and nowhere",
+    "else. That is the figure that earns the debit its place: two poles,",
+    "not one bit. `asBoolean` is the control, not a conversion utility.",
+    "",
+    "The trap: an implementation that only counted well-formed units",
+    "(floor ≤ ceiling) would report 15 possibles and hide the ten",
+    "contradictions a boolean cannot speak. The sweep is every pair."
+  ],
+  "coverage": {
+    "size": 2,
+    "criterion": "the five-chain (25 pairs) and the two-level chain (4 pairs), both exhaustive",
+    "could_exclude_counterexamples": false
+  },
+  "cases": [
+    {
+      "name": "five-level chain, every pair",
+      "chain": ["none", "own", "team", "region", "all"],
+      "possible": 25,
+      "exactly": 2,
+      "lossy": 13,
+      "unsayable": 10
+    },
+    {
+      "name": "the two-level chain a boolean pretends to be",
+      "chain": ["no", "yes"],
+      "possible": 4,
+      "exactly": 2,
+      "lossy": 1,
+      "unsayable": 1
+    }
+  ]
+}

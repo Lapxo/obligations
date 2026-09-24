@@ -1,0 +1,103 @@
+{
+ "about": [
+  "A region is identified by its coordinates, structurally and in one order, so two folds of one region are one value",
+  "wherever they are computed; a change folds again only the regions that contain it, one per resolution.",
+  "Inside a region one step may be any step and a run of steps any run; a region ending in either is the region before it."
+ ],
+ "cases": [
+  {
+   "name": "a region's identity does not depend on order",
+   "a": [
+    "x/y",
+    "x/z",
+    "w"
+   ],
+   "b": [
+    "w",
+    "x/z",
+    "x/y"
+   ],
+   "same": true
+  },
+  {
+   "name": "different coordinates are different regions",
+   "a": [
+    "x/y"
+   ],
+   "b": [
+    "x/z"
+   ],
+   "same": false
+  },
+  {
+   "name": "a change touches the regions that contain it",
+   "change": "a/b/c",
+   "regions": [
+    "a",
+    "a/b",
+    "a/b/c",
+    "a/x",
+    "z"
+   ],
+   "touched": [
+    "a",
+    "a/b",
+    "a/b/c"
+   ]
+  },
+  {
+   "name": "any one step meets one step",
+   "point": "a/x/b",
+   "region": "a/*/b",
+   "within": true
+  },
+  {
+   "name": "any one step is not zero steps",
+   "point": "a/b",
+   "region": "a/*/b",
+   "within": false
+  },
+  {
+   "name": "any one step fixes the steps after it",
+   "point": "a/x/c",
+   "region": "a/*/b",
+   "within": false
+  },
+  {
+   "name": "a run of steps may be empty",
+   "point": "a/b",
+   "region": "a/**/b",
+   "within": true
+  },
+  {
+   "name": "a run of steps may be long",
+   "point": "a/x/y/b/c",
+   "region": "a/**/b",
+   "within": true
+  },
+  {
+   "name": "one step then a run",
+   "point": "a/x/b/c/d",
+   "region": "a/*/b/**",
+   "within": true
+  },
+  {
+   "name": "a trailing run is the region before it",
+   "point": "a",
+   "region": "a/**",
+   "within": true
+  },
+  {
+   "name": "a trailing step is the region before it",
+   "point": "a/b",
+   "region": "a/*",
+   "within": true
+  }
+ ],
+ "coverage": {
+  "size": 11,
+  "criterion": "identity under reordering and under a different coordinate, the regions one change touches, and each wildcard: one step against one, zero and a wrong tail; a run empty, long, after a step, and trailing",
+  "could_exclude_counterexamples": true,
+  "why": "hand-written over names; a wildcard pattern not listed here can still mismatch"
+ }
+}

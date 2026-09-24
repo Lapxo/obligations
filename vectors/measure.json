@@ -1,0 +1,184 @@
+{
+  "about": [
+    "What conserves, and where.",
+    "",
+    "`complexity` counts how much a statement says, and that count is preserved",
+    "when two statements are put together: what BOTH require plus what EITHER",
+    "accepts equals the sum of the parts. It is inclusion-exclusion, and it is",
+    "what makes the count a measure rather than an index.",
+    "",
+    "On ideals the count conserves on every finite poset: the up-sets of any",
+    "poset form a distributive lattice. `isDistributive` still reports whether",
+    "the LEVEL view is faithful (a ladder). The falsifier that used to live",
+    "here is L0 — a non-closed pair is refused — and lives in ideals.json.",
+    "",
+    "ON A LADDER THIS LAW IS TRIVIAL. For a total order the highest and lowest",
+    "of two levels are just those two levels again, so ANY weighting satisfies",
+    "it and nothing is being tested. The cases below that carry weight are the",
+    "ones off a ladder. M3 now conserves because the valuation counts excluded",
+    "levels of a declared Ω, not irreducibles."
+  ],
+  "coverage": {
+    "size": 3,
+    "criterion": "a ladder (trivial), a distributive non-ladder (the real claim), and a non-distributive lattice on both measures (the falsifier)",
+    "could_exclude_counterexamples": true,
+    "why": "three scales only; exhaustive checks over all pairs are asserted in the unit tests",
+    "_note": "size said 5 against three cases. The criterion names three and there are three, so the number was the typo — and it went unseen because the adequacy check iterated a hand-kept list of seventeen names while the directory held nineteen, and this file was one of the two it never read."
+  },
+  "cases": [
+    {
+      "name": "a ladder is distributive, and the law holds trivially",
+      "levels": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "leq": null,
+      "distributive": true,
+      "conserves": {
+        "complexity": true,
+        "height": true
+      }
+    },
+    {
+      "name": "the 2x2 powerset — distributive, and the claim is real here",
+      "levels": [
+        "none",
+        "x",
+        "y",
+        "both"
+      ],
+      "leq": [
+        [
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          true
+        ]
+      ],
+      "distributive": true,
+      "conserves": {
+        "complexity": true,
+        "height": true
+      }
+    },
+    {
+      "name": "the diamond M3 — a lattice, not distributive",
+      "levels": [
+        "bot",
+        "a",
+        "b",
+        "c",
+        "top"
+      ],
+      "leq": [
+        [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      ],
+      "distributive": false,
+      "conserves": {
+        "complexity": true,
+        "height": true
+      }
+    }
+  ],
+  "widen": [
+    {
+      "name": "the dual takes the lowest floor and the highest ceiling",
+      "chain": [
+        "none",
+        "own",
+        "team",
+        "all"
+      ],
+      "input": [
+        {
+          "floor": "own",
+          "ceiling": "team"
+        },
+        {
+          "floor": "none",
+          "ceiling": "all"
+        }
+      ],
+      "fuse": {
+        "floor": "own",
+        "ceiling": "team"
+      },
+      "widen": {
+        "floor": "none",
+        "ceiling": "all"
+      }
+    },
+    {
+      "name": "nothing to widen is the statement nothing satisfies",
+      "chain": [
+        "none",
+        "own",
+        "team",
+        "all"
+      ],
+      "input": [],
+      "fuse": {
+        "floor": "none",
+        "ceiling": "all"
+      },
+      "widen": {
+        "floor": "all",
+        "ceiling": "none"
+      }
+    }
+  ]
+}

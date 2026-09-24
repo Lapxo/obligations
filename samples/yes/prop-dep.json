@@ -1,0 +1,135 @@
+{
+ "about": [
+  "prop-dep on a product of two subsystems: both costs decompose into the factors plus what the joint says over them.",
+  "The conflict carries the dependence of the demand less that of the meet; the premium carries the residual information of the dependence itself.",
+  "Pinned at the crossed declaration and at (everything demanded, nothing permitted); the identities are checked at all sixteen."
+ ],
+ "cases": [
+  {
+   "name": "independent",
+   "joint": [
+    [
+     0.25,
+     0.25
+    ],
+    [
+     0.25,
+     0.25
+    ]
+   ],
+   "crossed": {
+    "viol": 1.0,
+    "viol_1": 1.0,
+    "viol_2": 0,
+    "dependence": 0,
+    "g": 0.0,
+    "ri_dependence": 0.0
+   },
+   "top": {
+    "viol": 2.0,
+    "viol_1": 1.0,
+    "viol_2": 1.0,
+    "dependence": -0.0,
+    "g": 0,
+    "ri_dependence": 0
+   },
+   "declarations": 16,
+   "expect": true
+  },
+  {
+   "name": "a copy",
+   "joint": [
+    [
+     0.5,
+     0
+    ],
+    [
+     0,
+     0.5
+    ]
+   ],
+   "crossed": {
+    "viol": 1.0,
+    "viol_1": 1.0,
+    "viol_2": 0,
+    "dependence": 0,
+    "g": 1.0,
+    "ri_dependence": 1.0
+   },
+   "top": {
+    "viol": 1.0,
+    "viol_1": 1.0,
+    "viol_2": 1.0,
+    "dependence": -1.0,
+    "g": 0,
+    "ri_dependence": 0
+   },
+   "declarations": 16,
+   "expect": true
+  },
+  {
+   "name": "noisy",
+   "joint": [
+    [
+     0.4,
+     0.1
+    ],
+    [
+     0.1,
+     0.4
+    ]
+   ],
+   "crossed": {
+    "viol": 1.0,
+    "viol_1": 1.0,
+    "viol_2": 0,
+    "dependence": 0,
+    "g": 0.278071905,
+    "ri_dependence": 0.278071905
+   },
+   "top": {
+    "viol": 1.721928095,
+    "viol_1": 1.0,
+    "viol_2": 1.0,
+    "dependence": -0.278071905,
+    "g": 0,
+    "ri_dependence": 0
+   },
+   "declarations": 16,
+   "expect": true
+  },
+  {
+   "name": "skewed, three answers for Y",
+   "joint": [
+    [
+     0.3,
+     0.1,
+     0.1
+    ],
+    [
+     0.05,
+     0.15,
+     0.3
+    ]
+   ],
+   "crossed": {
+    "viol": 1.0,
+    "viol_1": 1.0,
+    "viol_2": 0,
+    "dependence": 0,
+    "g": 0.225665629,
+    "ri_dependence": 0.225665629
+   },
+   "top": {
+    "viol": 2.333206219,
+    "viol_1": 1.0,
+    "viol_2": 1.558871848,
+    "dependence": -0.225665629,
+    "g": 0,
+    "ri_dependence": 0
+   },
+   "declarations": 16,
+   "expect": true
+  }
+ ]
+}

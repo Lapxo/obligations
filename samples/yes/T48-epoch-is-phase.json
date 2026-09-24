@@ -1,0 +1,28 @@
+{
+ "about": [
+  "An epoch is a phase: claims that arrive at the same turn of a period reinforce and claims half a period apart cancel.",
+  "Sweeping the delay of one half of the claims draws the fringe, and the pattern is the period's own shape, not the claims'.",
+  "Observing one route \u2014 fixing when those claims arrived \u2014 moves the pattern to its complement."
+ ],
+ "cases": [
+  {
+   "name": "twenty claims alternating at zero and half a period",
+   "claims": 20,
+   "periods": [
+    {
+     "period": 8,
+     "pattern": "..#####.",
+     "high": 100,
+     "observed": "###...##"
+    },
+    {
+     "period": 16,
+     "pattern": "....#########...",
+     "high": 100,
+     "observed": "#####.......####"
+    }
+   ],
+   "expect": true
+  }
+ ]
+}

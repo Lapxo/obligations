@@ -1,0 +1,47 @@
+{
+ "about": [
+  "Information and distance are two readings of one thing: with no origin there is neither a fact nor a finite distance, and each origin that lands gives exactly one of each.",
+  "The scan runs the origins up from zero and the two counts move together at every step.",
+  "So the geometry is not a stage the knowing happens on; it is the shape the knowing takes."
+ ],
+ "cases": [
+  {
+   "name": "origins from zero to thirty-one",
+   "scan": [
+    {
+     "origins": 0,
+     "facts": 0,
+     "finite": 0
+    },
+    {
+     "origins": 1,
+     "facts": 0,
+     "finite": 0
+    },
+    {
+     "origins": 3,
+     "facts": 1,
+     "finite": 1
+    },
+    {
+     "origins": 7,
+     "facts": 3,
+     "finite": 3
+    },
+    {
+     "origins": 15,
+     "facts": 7,
+     "finite": 7
+    },
+    {
+     "origins": 31,
+     "facts": 15,
+     "finite": 15
+    }
+   ],
+   "bothSilentAtZero": true,
+   "riseTogether": true,
+   "expect": true
+  }
+ ]
+}

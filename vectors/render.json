@@ -1,0 +1,51 @@
+{
+ "about": [
+  "A render is a region read at a resolution: each point named with fewer steps, and what lands on one coarse coordinate",
+  "folded together. A reader asks for the resolution it needs, and nothing finer is carried."
+ ],
+ "cases": [
+  {
+   "name": "two steps",
+   "at": [
+    "a/b/c",
+    "a/b/d",
+    "a/x/y"
+   ],
+   "steps": 2,
+   "render": {
+    "a/b": 2,
+    "a/x": 1
+   }
+  },
+  {
+   "name": "one step",
+   "at": [
+    "a/b/c",
+    "a/b/d",
+    "a/x/y"
+   ],
+   "steps": 1,
+   "render": {
+    "a": 3
+   }
+  },
+  {
+   "name": "as fine as the points is the points",
+   "at": [
+    "a/b/c",
+    "a/b/d"
+   ],
+   "steps": 3,
+   "render": {
+    "a/b/c": 1,
+    "a/b/d": 1
+   }
+  }
+ ],
+ "coverage": {
+  "size": 3,
+  "criterion": "two steps, one step, and a resolution as fine as the points",
+  "could_exclude_counterexamples": true,
+  "why": "one set of three points; the fold's count is the only value read"
+ }
+}

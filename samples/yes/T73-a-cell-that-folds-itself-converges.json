@@ -1,0 +1,30 @@
+{
+ "about": [
+  "A cell that folds itself observes each epoch a claim of width ten centred on its own meet, off by at most the spread. It narrows only when the offset cuts inside what it holds, so its freedom falls and settles toward log2(11 − 2s) from above, and it never conflicts because each claim is centred on what it already holds."
+ ],
+ "cases": [
+  {
+   "name": "a cell folding itself for sixty epochs",
+   "start": [
+    0,
+    100
+   ],
+   "width": 10,
+   "spread": 3,
+   "epochs": 60,
+   "seeds": [
+    1,
+    7,
+    42
+   ],
+   "last": 20,
+   "settled": [
+    2.38,
+    2.43
+   ],
+   "conflicts": 0,
+   "limit": 2.32,
+   "expect": true
+  }
+ ]
+}

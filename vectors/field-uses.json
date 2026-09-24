@@ -1,0 +1,330 @@
+{
+ "about": [
+  "The field is the lattice and the debit in motion. Each origin at a point holds a band on a scale — the floor it demands, the ceiling it allows — and the point's declaration is their fold: the demand is the join of the floors, the limit the meet of the ceilings.",
+  "A point's state is one of the debit's four, and green, grey, red and fork are its renders (FREE, REQUIRED, FORBIDDEN, CONFLICT). The register read at the point gives every debit's state; a declaration is in conflict exactly when some debit is (the debit).",
+  "The premium of the point's declaration is the gap; under a supermodular valuation it vanishes on every declaration. A region withdraws exactly when its scale is distributive. What moved between two readings is counted debit by debit.",
+  "Nothing here is new algebra: every reading is an operation of lattice/ or debit/ applied to a point of field/."
+ ],
+ "cases": [
+  {
+   "name": "two origins that agree declare their join and their meet",
+   "scale": {
+    "levels": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "kind": "chain"
+   },
+   "spans": [
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "declaration": {
+    "demand": 2,
+    "limit": 3
+   },
+   "state": "REQUIRED",
+   "render": "grey",
+   "register": [
+    [
+     "1",
+     "REQUIRED"
+    ],
+    [
+     "2",
+     "REQUIRED"
+    ],
+    [
+     "3",
+     "FREE"
+    ],
+    [
+     "4",
+     "FORBIDDEN"
+    ]
+   ]
+  },
+  {
+   "name": "two origins that cross are in conflict, and the conflict shows debit by debit",
+   "scale": {
+    "levels": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "kind": "chain"
+   },
+   "spans": [
+    [
+     3,
+     4
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "declaration": {
+    "demand": 3,
+    "limit": 1
+   },
+   "state": "CONFLICT",
+   "render": "fork",
+   "register": [
+    [
+     "1",
+     "REQUIRED"
+    ],
+    [
+     "2",
+     "CONFLICT"
+    ],
+    [
+     "3",
+     "CONFLICT"
+    ],
+    [
+     "4",
+     "FORBIDDEN"
+    ]
+   ]
+  },
+  {
+   "name": "a third origin moves two debits, one of them into conflict",
+   "scale": {
+    "levels": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "kind": "chain"
+   },
+   "before": [
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     4
+    ]
+   ],
+   "after": [
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "moves": {
+    "REQUIRED→REQUIRED": 1,
+    "REQUIRED→CONFLICT": 1,
+    "FREE→FORBIDDEN": 1,
+    "FORBIDDEN→FORBIDDEN": 1
+   }
+  },
+  {
+   "name": "height on a chain is modular: the premium vanishes",
+   "scale": {
+    "levels": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "kind": "chain"
+   },
+   "valuation": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "spans": [
+    [
+     3,
+     4
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "degenerate": true,
+   "premium": 0
+  },
+  {
+   "name": "on the pentagon a submodular valuation prices the crossing",
+   "scale": {
+    "levels": [
+     "0",
+     "a",
+     "b",
+     "c",
+     "1"
+    ],
+    "leq": "0 below all; 1 above all; a below b; c incomparable with a and b",
+    "below": [
+     [
+      "a",
+      "b"
+     ]
+    ]
+   },
+   "valuation": [
+    0,
+    1,
+    2,
+    2,
+    3
+   ],
+   "spans": [
+    [
+     2,
+     4
+    ],
+    [
+     0,
+     3
+    ]
+   ],
+   "degenerate": false,
+   "premium": 1,
+   "why": "max f(p)+f(q)-f(p∨q) over p≤b, q≤c is 2+2-3 = 1, and f(b∧c) = f(0) = 0"
+  },
+  {
+   "name": "a chain withdraws exactly",
+   "scale": {
+    "levels": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "kind": "chain"
+   },
+   "withdrawsExactly": true
+  },
+  {
+   "name": "the pentagon does not",
+   "scale": {
+    "levels": [
+     "0",
+     "a",
+     "b",
+     "c",
+     "1"
+    ],
+    "leq": "0 below all; 1 above all; a below b; c incomparable with a and b",
+    "below": [
+     [
+      "a",
+      "b"
+     ]
+    ]
+   },
+   "withdrawsExactly": false
+  },
+  {
+   "name": "nor does the diamond",
+   "scale": {
+    "levels": [
+     "0",
+     "a",
+     "b",
+     "c",
+     "1"
+    ],
+    "leq": "0 below all; 1 above all; a, b, c pairwise incomparable",
+    "below": []
+   },
+   "withdrawsExactly": false
+  },
+  {
+   "name": "falsifier: origins that cross rendered green",
+   "scale": {
+    "levels": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "kind": "chain"
+   },
+   "spans": [
+    [
+     3,
+     4
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "render": "green",
+   "expected.ok": false
+  },
+  {
+   "name": "falsifier: a modular valuation that prices a crossing",
+   "scale": {
+    "levels": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "kind": "chain"
+   },
+   "valuation": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "spans": [
+    [
+     3,
+     4
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "premium": 1,
+   "expected.ok": false
+  }
+ ],
+ "coverage": {
+  "size": 10,
+  "criterion": "the chain C5, the pentagon N5 and the diamond M3: a declaration that agrees and one that crosses, a third origin's moves, a modular and a submodular valuation, exact withdrawal on each lattice, and two falsifiers",
+  "could_exclude_counterexamples": true,
+  "why": "three small lattices; the gap theorem and the debit's table of states are checked on them only"
+ }
+}

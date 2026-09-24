@@ -1,0 +1,63 @@
+{
+ "cases": [
+  {
+   "coordinate": "a/b",
+   "resolution": 2,
+   "epoch": 1,
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      10
+     ]
+    ]
+   ],
+   "expect": "potential"
+  },
+  {
+   "coordinate": "a/b",
+   "resolution": 2,
+   "epoch": 1,
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      10
+     ]
+    ],
+    [
+     "y",
+     [
+      5,
+      20
+     ]
+    ]
+   ],
+   "expect": "fact"
+  },
+  {
+   "coordinate": "a/b",
+   "resolution": 2,
+   "epoch": 1,
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      4
+     ]
+    ],
+    [
+     "y",
+     [
+      5,
+      20
+     ]
+    ]
+   ],
+   "expect": "fork"
+  }
+ ]
+}

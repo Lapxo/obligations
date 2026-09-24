@@ -28,5 +28,6 @@
     { "a": "exact", "b": "statistics", "weakest": "statistics" },
     { "a": "exact", "b": "sample", "weakest": "sample" },
     { "a": "exact", "b": "exact", "weakest": "exact" }
-  ]
+  ],
+  "empty": "exact"
 }

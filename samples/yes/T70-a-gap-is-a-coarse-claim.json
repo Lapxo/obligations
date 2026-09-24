@@ -1,0 +1,22 @@
+{
+ "about": [
+  "A gap is not the absence of a claim but a claim at the coarsest resolution: a cell nobody has narrowed holds the whole scale, which is exactly what saying nothing says.",
+  "So a reading that is missing and a reading that says everything are the same line, and a tree with gaps is a tree read coarsely rather than a tree unread.",
+  "The cell that holds the whole scale is the lattice top, which is what a gap is."
+ ],
+ "cases": [
+  {
+   "name": "a cell with nothing said at it",
+   "empty": {
+    "origins": 0,
+    "verdict": "grey"
+   },
+   "widest": true,
+   "narrowed": [
+    10,
+    90
+   ],
+   "expect": true
+  }
+ ]
+}

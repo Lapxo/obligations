@@ -1,0 +1,96 @@
+{
+ "cases": [
+  {
+   "coordinate": "cell/a",
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      10
+     ]
+    ],
+    [
+     "y",
+     [
+      5,
+      20
+     ]
+    ]
+   ],
+   "expect": [
+    5,
+    10
+   ]
+  },
+  {
+   "coordinate": "keys/owner",
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      10
+     ]
+    ],
+    [
+     "y",
+     [
+      5,
+      20
+     ]
+    ]
+   ],
+   "expect": [
+    5,
+    10
+   ]
+  },
+  {
+   "coordinate": "lock/TARGET.bound",
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      10
+     ]
+    ],
+    [
+     "y",
+     [
+      5,
+      20
+     ]
+    ]
+   ],
+   "expect": [
+    5,
+    10
+   ]
+  },
+  {
+   "coordinate": "law/A9-everything-is-a-bound",
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      10
+     ]
+    ],
+    [
+     "y",
+     [
+      5,
+      20
+     ]
+    ]
+   ],
+   "expect": [
+    5,
+    10
+   ]
+  }
+ ]
+}

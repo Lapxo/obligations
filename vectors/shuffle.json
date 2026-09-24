@@ -1,0 +1,74 @@
+{
+  "about": [
+    "A deterministic shuffle, and the two ways one stops being a control.",
+    "",
+    "THE FIRST is the closed form that cancels the salt:",
+    "  j = (salt + i*17 + salt*i) % (i + 1)",
+    "looks salted, but salt + salt*i is salt*(i+1), which is zero modulo i+1.",
+    "The salt cancels identically, so sixty-four draws are ONE permutation drawn",
+    "sixty-four times. `varies` is the case that catches it.",
+    "",
+    "THE SECOND is the position-only rule, live until this vector existed:",
+    "  j = (salt + i*17) % (i + 1)",
+    "does not cancel, but j depends only on the position and the salt — never on",
+    "the data, never on a stream. Both call sites passed salt = 3, so there was",
+    "exactly one null corpus, ever. And j collapses to 0 whenever i+1 divides 14.",
+    "`degenerate` is that case, stated as the thing a shuffle must not be.",
+    "",
+    "AND THE LIMIT, which is not a bug in the shuffle but in what it is asked to",
+    "falsify: a permutation preserves the multiset exactly, so it cannot falsify",
+    "any claim that is a function of the multiset alone — a floor, a ceiling, a",
+    "congruence, a concentration. Finding the law again on shuffled values is",
+    "evidence the null was wrong, not that the law is false. `blind` pins the",
+    "three quantities that survive, so a miner can refuse to build a control that",
+    "would fire on the truth."
+  ],
+  "coverage": {
+    "size": 6,
+    "criterion": "identity on a one-element input; distinct salts give distinct draws; the salt is not cancelled; a position-only rule is refused; the multiset is preserved; and the three claim shapes a permutation cannot falsify",
+    "could_exclude_counterexamples": false
+  },
+  "cases": [
+    {
+      "name": "one element has one arrangement",
+      "kind": "identity",
+      "values": ["a"],
+      "salts": [1, 2, 3]
+    },
+    {
+      "name": "distinct salts give distinct permutations",
+      "kind": "varies",
+      "values": ["a", "b", "c", "d", "e", "f", "g", "h"],
+      "salts": 64,
+      "distinct_at_least": 40
+    },
+    {
+      "name": "the cancelled-salt closed form is NOT what this does",
+      "kind": "not-cancelled",
+      "values": ["a", "b", "c", "d", "e", "f", "g", "h"],
+      "salts": 64,
+      "cancelled_form_distinct": 1
+    },
+    {
+      "name": "a position-only rule is a control with a sample of one",
+      "kind": "degenerate",
+      "values": ["a", "b", "c", "d", "e", "f", "g", "h"],
+      "salt": 3,
+      "collapses_to_zero_at": [1, 6, 13],
+      "why": "j = (3 + i*17) mod (i+1) is (-14) mod (i+1), which is 0 whenever i+1 divides 14"
+    },
+    {
+      "name": "the multiset is preserved, which is the whole limitation",
+      "kind": "preserves-multiset",
+      "values": ["2", "4", "4", "8", "8", "8"],
+      "salts": [1, 2, 3, 4, 5]
+    },
+    {
+      "name": "what a permutation cannot falsify",
+      "kind": "blind",
+      "values": ["2", "4", "6", "8", "10"],
+      "blind_to": ["min", "max", "mod2"],
+      "not_blind_to": ["first"]
+    }
+  ]
+}

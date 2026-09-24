@@ -1,0 +1,76 @@
+{
+ "cases": [
+  {
+   "expect": "scarce",
+   "coordinate": 40,
+   "origins": 10,
+   "epoch": 6,
+   "form": "chain",
+   "interval": [
+    0,
+    15
+   ]
+  },
+  {
+   "expect": "unforgeable",
+   "form": "chain",
+   "resolution": 16,
+   "origins": [
+    [
+     "x",
+     1,
+     [
+      0,
+      15
+     ],
+     [
+      0,
+      7
+     ]
+    ]
+   ],
+   "interval": [
+    0,
+    15
+   ]
+  },
+  {
+   "expect": "measurable",
+   "form": "chain",
+   "interval": [
+    0,
+    15
+   ],
+   "resolution": 16
+  },
+  {
+   "expect": "transferable",
+   "form": "interval",
+   "interval": [
+    [
+     0,
+     10
+    ],
+    [
+     3,
+     8
+    ]
+   ]
+  },
+  {
+   "expect": "verifiable",
+   "form": "interval",
+   "interval": [
+    [
+     0,
+     10
+    ],
+    [
+     5,
+     20
+    ]
+   ],
+   "coordinate": "q"
+  }
+ ]
+}

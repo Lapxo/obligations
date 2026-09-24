@@ -1,44 +1,91 @@
 {
   "name": "@lapxo/obligations",
-  "version": "0.1.0",
-  "description": "The obligations protocol: a carrier, a unit, and composition. Zero runtime dependencies.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "prepublishOnly": "npm run build",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "clean": "rm -rf dist dist-examples .tsbuildinfo*",
-    "examples": "tsc -p tsconfig.examples.json && for f in $(find dist-examples/examples -name \"*.js\" | sort); do echo; echo \"\u2014 ${f#dist-examples/examples/}\"; node \"$f\"; done",
-    "watch": "tsc --watch"
+  "version": "0.2.0",
+  "description": "The algebra of a cell: two poles, origins with phase, six operations.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Lapxo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lapxo/obligations.git"
   },
-  "files": [
-    "dist/**/*",
-    "src/**/*"
-  ],
   "keywords": [
     "obligations",
-    "protocol",
     "lattice",
-    "authorization",
-    "provenance",
-    "conflict-detection"
+    "provenance"
   ],
-  "author": "Lapxo",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/jest": "^29.0.0",
-    "@types/node": "^20.0.0",
-    "jest": "^29.0.0",
-    "prettier": "^3.0.0",
-    "ts-jest": "^29.0.0",
-    "typescript": "^5.0.0"
-  },
   "sideEffects": false,
   "engines": {
-    "node": ">=18"
+    "node": ">=22.12"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/lattice/index.d.ts",
+      "default": "./dist/lattice/index.js"
+    },
+    "./debit": {
+      "types": "./dist/debit/debit.d.ts",
+      "default": "./dist/debit/debit.js"
+    },
+    "./encounter": {
+      "types": "./dist/field/encounter.d.ts",
+      "default": "./dist/field/encounter.js"
+    },
+    "./field": {
+      "types": "./dist/field/field.d.ts",
+      "default": "./dist/field/field.js"
+    },
+    "./forms": {
+      "types": "./dist/lattice/forms.d.ts",
+      "default": "./dist/lattice/forms.js"
+    },
+    "./lattice": {
+      "types": "./dist/lattice/lattice.d.ts",
+      "default": "./dist/lattice/lattice.js"
+    },
+    "./packed": {
+      "types": "./dist/debit/packed.d.ts",
+      "default": "./dist/debit/packed.js"
+    },
+    "./present": {
+      "types": "./dist/field/present.d.ts",
+      "default": "./dist/field/present.js"
+    },
+    "./price": {
+      "types": "./dist/lattice/price/index.d.ts",
+      "default": "./dist/lattice/price/index.js"
+    },
+    "./replay": {
+      "types": "./dist/replay.d.ts",
+      "default": "./dist/replay.js"
+    },
+    "./shuffle": {
+      "types": "./dist/debit/shuffle.d.ts",
+      "default": "./dist/debit/shuffle.js"
+    },
+    "./signatures": {
+      "types": "./dist/field/signatures.d.ts",
+      "default": "./dist/field/signatures.js"
+    },
+    "./views/field": {
+      "types": "./dist/views/field.d.ts",
+      "default": "./dist/views/field.js"
+    },
+    "./views/product": {
+      "types": "./dist/views/product.d.ts",
+      "default": "./dist/views/product.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "receipts.bound"
+  ],
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "^5.9.3"
   }
 }

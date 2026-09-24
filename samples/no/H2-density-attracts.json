@@ -1,0 +1,12 @@
+{
+ "brief": "encounters land blind to density",
+ "about": [
+  "The falsifier: encounters that land independently of the density already there. Then the ratio does not rise with the epochs and the cells touched grow with the budget, which is what the blind placement in the yes sample shows."
+ ],
+ "cases": [
+  {
+   "name": "placement blind to density, with the ratio rising anyway",
+   "expected.ok": false
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "witness": "field-uses-price-and-debit",
+ "about": "obligations/src/field/motion.ts reads a point's sightings as a declaration on a scale and asks the other two theories the rest: its state and register (debit/unit, debit/unit-span), its render (FREE green, REQUIRED grey, FORBIDDEN red, CONFLICT fork), its premium (lattice/price/premium), degeneration (isSupermodular), exact withdrawal (isDistributive) and the moves between two readings. vectors/field-uses.json holds 10 cases on the chain C5, the pentagon N5 and the diamond M3, two of them falsifiers; every case was checked by hand against the gap theorem and the debit's table of states. Not done: c_n as a bound on encounters — the price proves c_n bounds the premium on partitions, and the debit uses it as the unit of price; it bounds no count of encounters.",
+ "then": {
+  "cases": 10,
+  "hold": 10,
+  "falsifiers": 2
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "about": [
+  "One origin of one width is worth what it connects: nothing inside a city where every pair already had a walk, one pair between two lone cells, and the product of two components when it lands across a desert.",
+  "The same claim, the same cost, four placements and four prices, so where to look is a question with an answer.",
+  "What it crosses is named before it lands."
+ ],
+ "cases": [
+  {
+   "name": "one origin placed four ways in the two-city world",
+   "city": 160,
+   "desert": 160,
+   "other": 80,
+   "placements": [
+    {
+     "name": "inside one city",
+     "at": [
+      4,
+      40
+     ],
+     "opened": 0,
+     "crosses": 0
+    },
+    {
+     "name": "city to its desert edge",
+     "at": [
+      159,
+      160
+     ],
+     "opened": 160,
+     "crosses": 1
+    },
+    {
+     "name": "two lone desert cells",
+     "at": [
+      200,
+      201
+     ],
+     "opened": 1,
+     "crosses": 1
+    },
+    {
+     "name": "city to city",
+     "at": [
+      100,
+      350
+     ],
+     "opened": 12800,
+     "crosses": 1
+    }
+   ],
+   "expect": true
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "about": [
+  "How knowing moves through a field is one number: the forks it opens against the closes it makes.",
+  "The same policy over the same field, with claims drawn near the meet, across it, or from two origins alone, separates into three regimes by that ratio: nothing, sixty to one, and a quarter.",
+  "So a field is not described by how much was looked at but by what the looking did, and the ratio tells the regimes apart by two orders of magnitude."
+ ],
+ "cases": [
+  {
+   "name": "one policy, three regimes",
+   "cells": 60,
+   "looks": 120,
+   "seed": 5,
+   "draw": 3,
+   "regimes": [
+    {
+     "name": "coherent",
+     "spread": 6,
+     "forks": 0,
+     "closed": 60,
+     "ratio": 0
+    },
+    {
+     "name": "incoherent",
+     "spread": 40,
+     "forks": 59,
+     "closed": 1,
+     "ratio": 59
+    },
+    {
+     "name": "two origins",
+     "spread": 12,
+     "forks": 13,
+     "closed": 47,
+     "ratio": 0.28
+    }
+   ],
+   "expect": true
+  }
+ ]
+}

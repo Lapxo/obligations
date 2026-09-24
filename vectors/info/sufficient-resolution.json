@@ -1,0 +1,42 @@
+{
+ "witness": "L33-sufficient-resolution-exists",
+ "law": "L33",
+ "about": [
+  "The sufficient resolution is the coarsest at which the verdict already equals the finest one; it is strictly coarser than the finest where the verdict saturates."
+ ],
+ "cases": [
+  {
+   "name": "a verdict that saturates at three steps",
+   "points": [
+    "a/b/c/d/e/f/g/h",
+    "a/b/x/d/e/f/g/h",
+    "a/y/c/d/e/f/g/h"
+   ],
+   "finest": 8,
+   "sufficient": 3,
+   "expected.ok": true
+  },
+  {
+   "name": "falsifier: a verdict that changes at every resolution",
+   "verdicts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "finest": 8,
+   "sufficient_coarser": true,
+   "expected.ok": false
+  }
+ ],
+ "coverage": {
+  "size": 2,
+  "criterion": "a verdict that saturates below the finest resolution, and a falsifier that changes at every one",
+  "could_exclude_counterexamples": true,
+  "why": "two verdicts; saturation is read at eight steps only"
+ }
+}

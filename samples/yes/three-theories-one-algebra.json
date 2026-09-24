@@ -1,0 +1,5 @@
+{
+ "witness": "three-theories-one-algebra",
+ "about": "obligations/src holds lattice/ (the price: declaration, cost, premium, degeneration, blocks, axioms, forms), debit/ (the debit: four states, ideals, register, vectors, standing, the packed two-mask carrier) and field/ (the field: point, region, within, resolution, passes, coarsen, vacuity, encounter, present, drift, size, sufficient resolution, replay, signatures-as-meet), laws/laws.bound and replay.ts. laws.bound states 75 laws, each with its vector. offers.bound names 134 operations with their extension; every operation of field/ names at least one vector. The field vectors run against field/: questions 3/3, sufficient-resolution 2/2, present-meet 4/4, present-convergence 4/4. Nothing in field/ names an instrument, a file or a landing.",
+ "then": { "folders": ["lattice", "debit", "field"], "laws": 62, "operations": 168, "fieldOperationsWithoutExtension": 0 }
+}

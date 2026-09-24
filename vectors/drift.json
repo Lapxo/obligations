@@ -1,0 +1,88 @@
+{
+ "about": [
+  "Drift is not an error: one question with several homes is a point with several origins. It becomes an error only",
+  "where the homes stop agreeing, and then the point splits and names the pair — the place where a copy went wrong."
+ ],
+ "cases": [
+  {
+   "name": "one home is no drift",
+   "seen": [
+    {
+     "origin": "home-1",
+     "span": {
+      "lo": 1,
+      "hi": 1
+     }
+    }
+   ],
+   "homes": 1,
+   "colour": "grey"
+  },
+  {
+   "name": "four homes that agree are drift without error",
+   "seen": [
+    {
+     "origin": "h1",
+     "span": {
+      "lo": 1,
+      "hi": 1
+     }
+    },
+    {
+     "origin": "h2",
+     "span": {
+      "lo": 1,
+      "hi": 1
+     }
+    },
+    {
+     "origin": "h3",
+     "span": {
+      "lo": 1,
+      "hi": 1
+     }
+    },
+    {
+     "origin": "h4",
+     "span": {
+      "lo": 1,
+      "hi": 1
+     }
+    }
+   ],
+   "homes": 4,
+   "colour": "agreed"
+  },
+  {
+   "name": "two homes that disagree split and are named",
+   "seen": [
+    {
+     "origin": "some",
+     "span": {
+      "lo": 1,
+      "hi": 1
+     }
+    },
+    {
+     "origin": "every",
+     "span": {
+      "lo": 0,
+      "hi": 0
+     }
+    }
+   ],
+   "homes": 2,
+   "colour": "split",
+   "disagree": [
+    "some",
+    "every"
+   ]
+  }
+ ],
+ "coverage": {
+  "size": 3,
+  "criterion": "one home, four that agree, two that disagree",
+  "could_exclude_counterexamples": true,
+  "why": "one question; four agreeing homes stand for any number"
+ }
+}

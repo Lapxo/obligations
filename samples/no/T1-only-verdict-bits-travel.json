@@ -1,0 +1,19 @@
+{
+ "cases": [
+  {
+   "form": "chain",
+   "interval": [
+    [
+     0,
+     1440
+    ],
+    [
+     0,
+     360
+    ]
+   ],
+   "expect": 3.49,
+   "expected.ok": false
+  }
+ ]
+}

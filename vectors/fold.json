@@ -1,0 +1,113 @@
+{
+ "about": [
+  "A fold is derivable from the algebra alone: what a point holds is the meet of what its origins hold, in any order,",
+  "and a point nobody touched holds everything. No step of the fold is anything but a meet."
+ ],
+ "cases": [
+  {
+   "name": "three spans meet",
+   "seen": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 0,
+      "hi": 10
+     }
+    },
+    {
+     "origin": "b",
+     "span": {
+      "lo": 5,
+      "hi": 20
+     }
+    },
+    {
+     "origin": "c",
+     "span": {
+      "lo": 2,
+      "hi": 12
+     }
+    }
+   ],
+   "meet": {
+    "lo": 5,
+    "hi": 10
+   }
+  },
+  {
+   "name": "the same spans in another order",
+   "seen": [
+    {
+     "origin": "c",
+     "span": {
+      "lo": 2,
+      "hi": 12
+     }
+    },
+    {
+     "origin": "a",
+     "span": {
+      "lo": 0,
+      "hi": 10
+     }
+    },
+    {
+     "origin": "b",
+     "span": {
+      "lo": 5,
+      "hi": 20
+     }
+    }
+   ],
+   "meet": {
+    "lo": 5,
+    "hi": 10
+   }
+  },
+  {
+   "name": "one span holds itself",
+   "seen": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 3,
+      "hi": 4
+     }
+    }
+   ],
+   "meet": {
+    "lo": 3,
+    "hi": 4
+   }
+  },
+  {
+   "name": "spans that do not meet hold nothing",
+   "seen": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 0,
+      "hi": 4
+     }
+    },
+    {
+     "origin": "b",
+     "span": {
+      "lo": 6,
+      "hi": 9
+     }
+    }
+   ],
+   "meet": {
+    "lo": 6,
+    "hi": 4
+   }
+  }
+ ],
+ "coverage": {
+  "size": 4,
+  "criterion": "three spans in two orders, one span alone, and spans that do not meet",
+  "could_exclude_counterexamples": true,
+  "why": "one scale, the integer line; commutativity is pinned for one permutation, not all"
+ }
+}

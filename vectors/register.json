@@ -1,0 +1,29 @@
+{
+  "about": [
+    "The register of one declaration: demanded JI and limiting MI.",
+    "rebuild ∘ register is the identity. complexity is the sum of the",
+    "two lengths — the six cases of complexity.json, recovered as",
+    "popcounts.",
+    "",
+    "The trap: only testing chains, where the two coordinate systems",
+    "agree on the side that is measured. N5 and M3 are here because",
+    "that is where a wrong rebuild would pass on a chain and fail."
+  ],
+  "coverage": {
+    "size": 8,
+    "criterion": "the six complexity.json cases on the five-chain, plus injectivity on N5 and on M3",
+    "could_exclude_counterexamples": true,
+    "why": "injectivity is asserted exhaustively in the unit tests over every pair on three lattices; the file pins the named cases"
+  },
+  "chain": ["none", "own", "team", "region", "all"],
+  "cases": [
+    { "name": "(none, all)", "floor": "none", "ceiling": "all", "demanded": [], "limiting": [], "complexity": 0 },
+    { "name": "(all, none)", "floor": "all", "ceiling": "none", "demanded": ["own", "team", "region", "all"], "limiting": ["none", "own", "team", "region"], "complexity": 8 },
+    { "name": "(own, team)", "floor": "own", "ceiling": "team", "demanded": ["own"], "limiting": ["team", "region"], "complexity": 3 },
+    { "name": "(none, own)", "floor": "none", "ceiling": "own", "demanded": [], "limiting": ["own", "team", "region"], "complexity": 3 },
+    { "name": "(team, all)", "floor": "team", "ceiling": "all", "demanded": ["own", "team"], "limiting": [], "complexity": 2 },
+    { "name": "(team, team)", "floor": "team", "ceiling": "team", "demanded": ["own", "team"], "limiting": ["team", "region"], "complexity": 4 },
+    { "name": "N5 injectivity of (all, none)", "kind": "n5", "floor": "all", "ceiling": "none" },
+    { "name": "M3 injectivity of (a, top)", "kind": "m3", "floor": "a", "ceiling": "top" }
+  ]
+}

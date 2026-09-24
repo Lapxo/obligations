@@ -1,0 +1,109 @@
+{
+ "about": [
+  "The state at a coordinate is derivable from what landed there: equal values are one encounter shown by the latest",
+  "landing, a narrower value stands over a wider one, and values neither narrower nor wider stand together as a fork.",
+  "The order of landing changes which equal value is shown, never what stands."
+ ],
+ "cases": [
+  {
+   "name": "equal values are one encounter, shown by the latest",
+   "landed": [
+    {
+     "permit": [
+      "a"
+     ],
+     "epoch": 1
+    },
+    {
+     "permit": [
+      "a"
+     ],
+     "epoch": 2
+    }
+   ],
+   "standing": [
+    [
+     "a"
+    ]
+   ],
+   "shown_epoch": 2
+  },
+  {
+   "name": "the narrower stands",
+   "landed": [
+    {
+     "permit": [
+      "a",
+      "b"
+     ],
+     "epoch": 1
+    },
+    {
+     "permit": [
+      "a"
+     ],
+     "epoch": 2
+    }
+   ],
+   "standing": [
+    [
+     "a"
+    ]
+   ]
+  },
+  {
+   "name": "the narrower stands whatever landed last",
+   "landed": [
+    {
+     "permit": [
+      "a"
+     ],
+     "epoch": 1
+    },
+    {
+     "permit": [
+      "a",
+      "b"
+     ],
+     "epoch": 2
+    }
+   ],
+   "standing": [
+    [
+     "a"
+    ]
+   ]
+  },
+  {
+   "name": "neither narrower nor wider is a fork",
+   "landed": [
+    {
+     "permit": [
+      "a"
+     ],
+     "epoch": 1
+    },
+    {
+     "permit": [
+      "b"
+     ],
+     "epoch": 2
+    }
+   ],
+   "standing": [
+    [
+     "a"
+    ],
+    [
+     "b"
+    ]
+   ]
+  }
+ ],
+ "coverage": {
+  "size": 4,
+  "criterion": "equal values, the narrower landing second and first, and two values neither narrower nor wider",
+  "could_exclude_counterexamples": true,
+  "why": "one alphabet of two tokens"
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "about": [
+  "A field left to itself concentrates where it already is and keeps its deserts: under attachment the horizon falls slowly and does not close, in sixty epochs and in either draw.",
+  "The same budget spent each epoch where reach is greatest drives the horizon to zero in four epochs.",
+  "The machine that does it holds nothing and asserts nothing: it reads the field as it stands, answers which two islands to bridge, and is a cell of the field it weaves."
+ ],
+ "cases": [
+  {
+   "name": "twenty-four cells, three origins an epoch, sixty epochs",
+   "city": 12,
+   "lone": 12,
+   "horizon": 210,
+   "budget": 3,
+   "epochs": 60,
+   "directed": [
+    210,
+    171,
+    123,
+    66,
+    0
+   ],
+   "zeroAt": 4,
+   "undirected": [
+    {
+     "seed": 20260922,
+     "atSixty": 23
+    },
+    {
+     "seed": 5,
+     "atSixty": 23
+    }
+   ],
+   "expect": true
+  }
+ ]
+}

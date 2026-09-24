@@ -1,0 +1,17 @@
+{
+ "cases": [
+  {
+   "interval": [
+    0,
+    1
+   ],
+   "origins": [
+    0.3,
+    0.1
+   ],
+   "epoch": 5,
+   "expect": "narrows",
+   "expected.ok": false
+  }
+ ]
+}
