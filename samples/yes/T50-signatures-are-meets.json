@@ -1,0 +1,33 @@
+{
+ "about": [
+  "A signature narrows a ceiling and travels to every cell that rests on it as a meet, and meets commute, so the order of any number of signatures never shows in the field they leave.",
+  "Widening is not a meet and does not travel: asking for a wider ceiling leaves the cell where the narrower one put it, which is why an error costs a signature at every cell and a narrowing costs one.",
+  "Folding the field and signing it commute, with a withdrawal present."
+ ],
+ "cases": [
+  {
+   "name": "a chain of four and a fork of two",
+   "chain": 4,
+   "signatures": 3,
+   "orderings": 6,
+   "results": 1,
+   "dag": 3,
+   "dagOrderings": 2,
+   "dagResults": 1,
+   "narrowed": [
+    0,
+    60
+   ],
+   "askedWider": [
+    0,
+    100
+   ],
+   "left": [
+    0,
+    60
+   ],
+   "commutes": true,
+   "expect": true
+  }
+ ]
+}

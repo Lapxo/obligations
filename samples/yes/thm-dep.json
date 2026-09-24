@@ -1,0 +1,111 @@
+{
+ "about": [
+  "thm-dep: the conflict on a product is discounted by dependence and never inflated; the premium is inflated and never by more.",
+  "The lower end is reached with everything demanded and nothing permitted, the upper premium end at the crossed declaration.",
+  "Both bounds are checked at all sixteen declarations."
+ ],
+ "cases": [
+  {
+   "name": "independent",
+   "joint": [
+    [
+     0.25,
+     0.25
+    ],
+    [
+     0.25,
+     0.25
+    ]
+   ],
+   "i": 0.0,
+   "floor": {
+    "viol": 2.0,
+    "sum": 2.0
+   },
+   "crossed": {
+    "g": 0.0,
+    "g_1": 0,
+    "g_2": 0
+   },
+   "declarations": 16,
+   "expect": true
+  },
+  {
+   "name": "a copy",
+   "joint": [
+    [
+     0.5,
+     0
+    ],
+    [
+     0,
+     0.5
+    ]
+   ],
+   "i": 1.0,
+   "floor": {
+    "viol": 1.0,
+    "sum": 2.0
+   },
+   "crossed": {
+    "g": 1.0,
+    "g_1": 0,
+    "g_2": 0
+   },
+   "declarations": 16,
+   "expect": true
+  },
+  {
+   "name": "noisy",
+   "joint": [
+    [
+     0.4,
+     0.1
+    ],
+    [
+     0.1,
+     0.4
+    ]
+   ],
+   "i": 0.278071905,
+   "floor": {
+    "viol": 1.721928095,
+    "sum": 2.0
+   },
+   "crossed": {
+    "g": 0.278071905,
+    "g_1": 0,
+    "g_2": 0
+   },
+   "declarations": 16,
+   "expect": true
+  },
+  {
+   "name": "skewed, three answers for Y",
+   "joint": [
+    [
+     0.3,
+     0.1,
+     0.1
+    ],
+    [
+     0.05,
+     0.15,
+     0.3
+    ]
+   ],
+   "i": 0.225665629,
+   "floor": {
+    "viol": 2.333206219,
+    "sum": 2.558871848
+   },
+   "crossed": {
+    "g": 0.225665629,
+    "g_1": 0,
+    "g_2": 0
+   },
+   "declarations": 16,
+   "expect": true
+  }
+ ]
+}

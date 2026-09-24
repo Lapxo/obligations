@@ -1,0 +1,66 @@
+{
+ "cases": [
+  {
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      10
+     ]
+    ],
+    [
+     "y",
+     [
+      5,
+      20
+     ]
+    ]
+   ],
+   "expect": "FREE"
+  },
+  {
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      10
+     ]
+    ]
+   ],
+   "expect": "REQUIRED"
+  },
+  {
+   "origins": [
+    [
+     "x",
+     [
+      10,
+      5
+     ]
+    ]
+   ],
+   "expect": "FORBIDDEN"
+  },
+  {
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      4
+     ]
+    ],
+    [
+     "y",
+     [
+      6,
+      9
+     ]
+    ]
+   ],
+   "expect": "CONFLICT"
+  }
+ ]
+}

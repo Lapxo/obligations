@@ -1,0 +1,52 @@
+{
+ "cases": [
+  {
+   "coordinate": "r0",
+   "origins": [
+    10,
+    0
+   ],
+   "expect": 0
+  },
+  {
+   "coordinate": "r1",
+   "origins": [
+    10,
+    2
+   ],
+   "expect": 0.2
+  },
+  {
+   "coordinate": "r2",
+   "origins": [
+    10,
+    4
+   ],
+   "expect": 0.4
+  },
+  {
+   "coordinate": "r3",
+   "origins": [
+    10,
+    5
+   ],
+   "expect": 0.5
+  },
+  {
+   "coordinate": "r4",
+   "origins": [
+    10,
+    8
+   ],
+   "expect": 0.8
+  },
+  {
+   "coordinate": "r5",
+   "origins": [
+    10,
+    10
+   ],
+   "expect": 1
+  }
+ ]
+}

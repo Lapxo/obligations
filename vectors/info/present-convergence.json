@@ -1,0 +1,55 @@
+{
+ "witness": "L22c-convergence-to-present",
+ "law": "L22c",
+ "about": [
+  "The present's width moves by maturation minus forgetting each epoch and never below zero; with no leading claims it ends before now."
+ ],
+ "cases": [
+  {
+   "name": "maturation over forgetting widens",
+   "width": 1.0,
+   "maturation": 0.3,
+   "forgetting": 0.1,
+   "epochs": 5,
+   "trend": "widens",
+   "expected.ok": true
+  },
+  {
+   "name": "forgetting over maturation narrows to zero",
+   "width": 1.0,
+   "maturation": 0.05,
+   "forgetting": 0.2,
+   "epochs": 10,
+   "trend": "zero",
+   "expected.ok": true
+  },
+  {
+   "name": "no leading claims end before now",
+   "now": 10,
+   "leading": [],
+   "lagging": [
+    [
+     3,
+     8
+    ]
+   ],
+   "ends_before_now": true,
+   "expected.ok": true
+  },
+  {
+   "name": "falsifier: maturation over forgetting yet narrowing",
+   "width": 1.0,
+   "maturation": 0.3,
+   "forgetting": 0.1,
+   "epochs": 5,
+   "trend": "narrows",
+   "expected.ok": false
+  }
+ ],
+ "coverage": {
+  "size": 4,
+  "criterion": "maturation over forgetting, forgetting over maturation, no leading claim, and a falsifier",
+  "could_exclude_counterexamples": true,
+  "why": "one width and one rate pair per trend"
+ }
+}

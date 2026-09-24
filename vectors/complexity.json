@@ -12,10 +12,10 @@
     "Zero exactly at (bottom, top); maximal exactly at (top, bottom)."
   ],
   "coverage": {
-    "size": 6,
+    "size": 8,
     "criterion": "both extremes, both one-sided cases, a pinned level, and an interior range",
     "could_exclude_counterexamples": true,
-    "why": "one scale only; that the extremes are reached exactly once is asserted exhaustively in the unit tests"
+    "why": "one scale for the named cases; that the extremes are reached exactly once is checked by this file's runner over every statement of three scales"
   },
   "chain": ["none", "own", "team", "region", "all"],
   "cases": [
@@ -54,6 +54,22 @@
       "floor": "team",
       "ceiling": "team",
       "complexity": 4
+    },
+    {
+      "name": "(all, own)",
+      "floor": "all",
+      "ceiling": "own",
+      "complexity": 7
+    },
+    {
+      "name": "(region, none)",
+      "floor": "region",
+      "ceiling": "none",
+      "complexity": 7
     }
-  ]
+  ],
+  "extremes": {
+    "about": "saying nothing and saying everything are each reached exactly one way: over every floor and ceiling of each scale the count stays within zero and twice the height, and each end is reached once",
+    "scales": [["a", "b", "c", "d"], ["x", "y"], {"levels": ["none", "x", "y", "both"], "leq": [[true, true, true, true], [false, true, false, true], [false, false, true, true], [false, false, false, true]]}]
+  }
 }

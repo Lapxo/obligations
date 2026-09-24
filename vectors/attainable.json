@@ -1,0 +1,21 @@
+{
+  "coverage": {
+    "size": 1,
+    "criterion": "a spacing scale with two numeric holes and two unknown names",
+    "could_exclude_counterexamples": true,
+    "why": "holes are derived from trailing digits; the file pins the named spacing case"
+  },
+  "about": [
+    "A declared level is attainable. A name in a numeric gap is a hole.",
+    "Asking for space-4 where the scale jumps 3 → 5 is not the same as asking out of range."
+  ],
+  "cases": [
+    {
+      "name": "spacing scale with two holes",
+      "levels": ["space-1", "space-3", "space-5"],
+      "holes": ["space-2", "space-4"],
+      "unknown": ["space-9", "gap"],
+      "kinds": {"levels": "attainable", "holes": "hole", "unknown": "unknown"}
+    }
+  ]
+}

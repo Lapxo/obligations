@@ -1,0 +1,12 @@
+{
+ "brief": "one instrument cannot",
+ "about": [
+  "The falsifier: an instrument whose reading cannot be written as a floor and a ceiling held by an origin at an epoch and a resolution, without straining any of the five."
+ ],
+ "cases": [
+  {
+   "name": "a measurement the five fields cannot hold",
+   "expected.ok": false
+  }
+ ]
+}

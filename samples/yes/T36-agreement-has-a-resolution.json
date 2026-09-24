@@ -1,0 +1,49 @@
+{
+ "about": [
+  "Origins agree at a resolution. Read coarsely a claim is wide and three of them meet; read finely each is sharp and the meeting opens into a fork, at the coordinate the coarser scale held together.",
+  "One hundred cells, three origins apiece, their centres drawn a fifth of a scale apart, each speaking as sharply as the scale it is read at.",
+  "The residual figure stops changing where the reading is sufficient."
+ ],
+ "cases": [
+  {
+   "name": "one hundred cells at six resolutions",
+   "cells": 100,
+   "origins": 3,
+   "sd": 0.4,
+   "deep": 32,
+   "seen": [
+    [
+     1,
+     70,
+     30
+    ],
+    [
+     2,
+     30,
+     70
+    ],
+    [
+     4,
+     10,
+     90
+    ],
+    [
+     8,
+     2,
+     98
+    ],
+    [
+     16,
+     1,
+     99
+    ],
+    [
+     32,
+     0,
+     100
+    ]
+   ],
+   "expect": true
+  }
+ ]
+}

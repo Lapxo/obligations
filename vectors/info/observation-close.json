@@ -1,0 +1,70 @@
+{
+ "about": [
+  "An observation has a close: what was read before the close is partial and stands for nothing; the readings at or",
+  "after it are the observation, and the latest of them is what stands at that coordinate."
+ ],
+ "cases": [
+  {
+   "name": "everything read before the close stands for nothing",
+   "readings": [
+    {
+     "epoch": 1,
+     "span": [
+      0,
+      10
+     ]
+    },
+    {
+     "epoch": 2,
+     "span": [
+      0,
+      10
+     ]
+    }
+   ],
+   "close": 3,
+   "stands": null
+  },
+  {
+   "name": "the latest reading after the close stands",
+   "readings": [
+    {
+     "epoch": 2,
+     "span": [
+      0,
+      10
+     ]
+    },
+    {
+     "epoch": 4,
+     "span": [
+      5,
+      6
+     ]
+    }
+   ],
+   "close": 3,
+   "stands": 4
+  },
+  {
+   "name": "a reading at the close is inside it",
+   "readings": [
+    {
+     "epoch": 3,
+     "span": [
+      1,
+      2
+     ]
+    }
+   ],
+   "close": 3,
+   "stands": 3
+  }
+ ],
+ "coverage": {
+  "size": 3,
+  "criterion": "everything before the close, the latest after it, and a reading exactly at it",
+  "could_exclude_counterexamples": true,
+  "why": "one coordinate; three readings at most"
+ }
+}

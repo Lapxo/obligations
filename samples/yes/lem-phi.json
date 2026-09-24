@@ -1,0 +1,26 @@
+{
+ "about": [
+  "What a block of t places costs: t times the scale it hides.",
+  "It is never less than two for each place past the first, and it is exactly that only for one place and for two.",
+  "Read off the partition lattice of t places, up to six."
+ ],
+ "cases": [
+  {
+   "name": "blocks up to six",
+   "upTo": 6,
+   "phi": [
+    0.0,
+    2.0,
+    4.754887502,
+    8.0,
+    11.609640474,
+    15.509775004
+   ],
+   "equality": [
+    1,
+    2
+   ],
+   "expect": true
+  }
+ ]
+}

@@ -1,0 +1,102 @@
+{
+ "witness": "L22b-present-is-a-meet",
+ "law": "L22b",
+ "about": [
+  "Each origin holds a band of epochs; the present is the meet of the bands where origins agree, and a forward claim one origin makes is potential."
+ ],
+ "cases": [
+  {
+   "name": "overlapping bands meet in the present",
+   "t": 10,
+   "bands": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 7,
+      "hi": 11
+     }
+    },
+    {
+     "origin": "b",
+     "span": {
+      "lo": 9,
+      "hi": 14
+     }
+    }
+   ],
+   "present": {
+    "lo": 9,
+    "hi": 11
+   },
+   "expected.ok": true
+  },
+  {
+   "name": "disjoint bands have no present",
+   "t": 10,
+   "bands": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 0,
+      "hi": 3
+     }
+    },
+    {
+     "origin": "b",
+     "span": {
+      "lo": 5,
+      "hi": 8
+     }
+    }
+   ],
+   "present": null,
+   "expected.ok": true
+  },
+  {
+   "name": "a forward claim with one origin is potential",
+   "t": 10,
+   "bands": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 15,
+      "hi": 15
+     }
+    }
+   ],
+   "present": "potential",
+   "expected.ok": true
+  },
+  {
+   "name": "falsifier: a point certified outside every band",
+   "t": 10,
+   "bands": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 7,
+      "hi": 11
+     }
+    },
+    {
+     "origin": "b",
+     "span": {
+      "lo": 9,
+      "hi": 14
+     }
+    }
+   ],
+   "present": {
+    "lo": 12,
+    "hi": 12
+   },
+   "expected.ok": false
+  }
+ ],
+ "coverage": {
+  "size": 4,
+  "criterion": "bands that overlap, bands that do not, one origin, and a falsifier outside every band",
+  "could_exclude_counterexamples": true,
+  "why": "one pair of bands per case"
+ }
+}

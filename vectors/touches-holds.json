@@ -1,0 +1,35 @@
+{
+  "coverage": {
+    "size": 2,
+    "criterion": "a twin pair where both touch and neither holds, and a unique floor that holds",
+    "could_exclude_counterexamples": true,
+    "why": "the disagreement is the named case; exhaustive leave-one-out lives in the unit test"
+  },
+  "about": [
+    "touches is rank equality. holds is the counterfactual.",
+    "A twin of a binding claim touches and does not hold.",
+    "That is the disagreement; both answers are named."
+  ],
+  "cases": [
+    {
+      "name": "twin touches and does not hold",
+      "levels": ["none", "own", "team", "all"],
+      "units": [
+        { "floor": "team", "ceiling": "all" },
+        { "floor": "team", "ceiling": "all" }
+      ],
+      "touches": [true, true],
+      "holds": [false, false]
+    },
+    {
+      "name": "a unique floor holds and touches",
+      "levels": ["none", "own", "team", "all"],
+      "units": [
+        { "floor": "team", "ceiling": "all" },
+        { "floor": "none", "ceiling": "all" }
+      ],
+      "touches": [true, true],
+      "holds": [true, false]
+    }
+  ]
+}

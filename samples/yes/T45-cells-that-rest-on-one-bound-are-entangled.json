@@ -1,0 +1,64 @@
+{
+ "about": [
+  "Cells that rest on one bound move together when it moves: narrowing a ceiling from a hundred to sixty turned cells red with nobody looking at them, some of them past the horizon of whoever signed it.",
+  "The effect is the bound's, not the order's: the same narrowing in two steps names exactly the same cells as in one.",
+  "No cell that does not rest on it moves, and no cell that rests on it and should move stays.",
+  "What a signature reaches is its rank: the cells that rest on the bound it moves, counted before it is moved.",
+  "One ceiling ranks sixty-six of a hundred cells; an origin that looked at one cell ranks one. A signature is worth what rests on it and nothing else."
+ ],
+ "cases": [
+  {
+   "name": "a hundred cells in three clusters, sixty-six of them resting on one ceiling",
+   "sizes": [
+    74,
+    16,
+    10
+   ],
+   "seed": 20260922,
+   "lowest": 40,
+   "share": 0.6,
+   "bound": "ceiling",
+   "was": [
+    0,
+    100
+   ],
+   "now": [
+    0,
+    60
+   ],
+   "rest": 66,
+   "changed": 32,
+   "past": 7,
+   "steps": [
+    [
+     0,
+     80
+    ],
+    [
+     0,
+     60
+    ]
+   ],
+   "sameByTwoSteps": true,
+   "restingAndUnmoved": 0,
+   "changedNotResting": 0,
+   "expect": true
+  },
+  {
+   "name": "a hundred cells, one ceiling",
+   "sizes": [
+    74,
+    16,
+    10
+   ],
+   "seed": 20260922,
+   "lowest": 40,
+   "share": 0.6,
+   "bound": "ceiling",
+   "rank": 66,
+   "local": "own7",
+   "localRank": 1,
+   "expect": true
+  }
+ ]
+}

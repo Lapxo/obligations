@@ -1,0 +1,62 @@
+{
+ "cases": [
+  {
+   "coordinate": [
+    "a"
+   ],
+   "origins": [
+    [
+     "x",
+     "a/b",
+     1
+    ],
+    [
+     "y",
+     "a/c",
+     2
+    ]
+   ],
+   "epoch": [
+    10,
+    5
+   ],
+   "expect": true
+  },
+  {
+   "coordinate": [
+    "a"
+   ],
+   "origins": [
+    [
+     "x",
+     "a/b",
+     1
+    ],
+    [
+     "y",
+     "a/c",
+     7
+    ]
+   ],
+   "epoch": [
+    10,
+    5
+   ],
+   "expect": false
+  },
+  {
+   "coordinate": "a",
+   "origins": [
+    [
+     "x",
+     1
+    ],
+    [
+     "x",
+     5
+    ]
+   ],
+   "expect": 1
+  }
+ ]
+}

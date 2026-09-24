@@ -1,0 +1,12 @@
+{
+  "about": [
+    "The falsifier: an encounter between two origins with nothing they both reach. Then information would appear where nothing was shared."
+  ],
+  "cases": [
+    {
+      "name": "an encounter with no medium",
+      "expected.ok": false
+    }
+  ],
+  "brief": "two origins meet with nothing they both reach"
+}

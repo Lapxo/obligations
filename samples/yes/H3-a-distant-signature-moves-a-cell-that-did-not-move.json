@@ -1,0 +1,22 @@
+{
+  "about": [
+    "Stated as a hint and never as a claim about the world: if what is is a field of floors and ceilings, then a distant signature changes a cell whose own record never moved.",
+    "The cell holds one state in every one of two hundred trials and the verdict comes out both ways, so nothing stored at the cell explains the difference.",
+    "What explains it is elsewhere, in the bound the cell rests on."
+  ],
+  "cases": [
+    {
+      "name": "two hundred trials, one cell, one value",
+      "trials": 200,
+      "changed": 108,
+      "states": 1,
+      "outcomes": 2,
+      "seed": 99,
+      "span": 140,
+      "value": 70,
+      "expect": true
+    }
+  ],
+  "title": "A distant signature moves a cell that did not move",
+  "brief": "a hint, never a claim"
+}

@@ -1,0 +1,47 @@
+{
+ "about": [
+  "One coordinate on a scale of a hundred and five levels carries the whole quantum story in four fields of a line.",
+  "Superposed it holds six point seven bits; two claims that meet at one level make it definite; a ceiling under that floor makes it forbidden, not narrow.",
+  "And a second coordinate resting on the bound that moved narrows to five point four bits without anyone measuring it.",
+  "Preparation and measurement on one coordinate of two hundred and fifty-six levels: free at eight bits, and five bits once two claims in phase leave it between a hundred and a hundred and thirty-one.",
+  "Asking for the wide ceiling again leaves it where the narrow one put it. That is what irreversible means here, and it is the same fact as a signature being a meet."
+ ],
+ "cases": [
+  {
+   "name": "one hundred and five levels",
+   "levels": 105,
+   "superposed": 6.7,
+   "superposedState": "FREE",
+   "definiteAt": 60,
+   "definite": 0,
+   "definiteState": "REQUIRED",
+   "ceiling": 40,
+   "forbidden": "CONFLICT",
+   "unmeasuredTo": 41,
+   "unmeasured": 5.4,
+   "expect": true
+  },
+  {
+   "name": "two hundred and fifty-six levels",
+   "levels": 256,
+   "superposed": 8,
+   "superposedState": "FREE",
+   "prepared": [
+    100,
+    131
+   ],
+   "bits": 5,
+   "preparedState": "REQUIRED",
+   "askedWider": [
+    0,
+    255
+   ],
+   "left": [
+    100,
+    131
+   ],
+   "cost": 224,
+   "expect": true
+  }
+ ]
+}

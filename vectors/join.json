@@ -1,0 +1,150 @@
+{
+ "about": [
+  "Every form is a lattice, and its join is the smallest value that holds both demands: the band that spans two bands,",
+  "the tokens either alphabet allows, the hull of two intervals. The bottom is the value no demand can stand in, and",
+  "joining it changes nothing."
+ ],
+ "cases": [
+  {
+   "form": "ladder",
+   "params": {
+    "levels": [
+     "low",
+     "mid",
+     "high"
+    ]
+   },
+   "a": {
+    "floor": "low",
+    "ceiling": "low"
+   },
+   "b": {
+    "floor": "high",
+    "ceiling": "high"
+   },
+   "join": {
+    "floor": "low",
+    "ceiling": "high"
+   }
+  },
+  {
+   "form": "ladder",
+   "params": {
+    "levels": [
+     "low",
+     "mid",
+     "high"
+    ]
+   },
+   "a": {
+    "floor": "mid",
+    "ceiling": "mid"
+   },
+   "b": "bottom",
+   "join": {
+    "floor": "mid",
+    "ceiling": "mid"
+   }
+  },
+  {
+   "form": "lattice",
+   "params": {
+    "levels": [
+     "bottom",
+     "left",
+     "right",
+     "top"
+    ],
+    "leq": [
+     [
+      true,
+      true,
+      true,
+      true
+     ],
+     [
+      false,
+      true,
+      false,
+      true
+     ],
+     [
+      false,
+      false,
+      true,
+      true
+     ],
+     [
+      false,
+      false,
+      false,
+      true
+     ]
+    ]
+   },
+   "a": {
+    "floor": "left",
+    "ceiling": "left"
+   },
+   "b": {
+    "floor": "right",
+    "ceiling": "right"
+   },
+   "join": {
+    "floor": "bottom",
+    "ceiling": "top"
+   }
+  },
+  {
+   "form": "alphabet",
+   "params": {
+    "tokens": [
+     "a",
+     "b",
+     "c"
+    ]
+   },
+   "a": {
+    "want": [
+     "a"
+    ]
+   },
+   "b": {
+    "want": [
+     "c"
+    ]
+   },
+   "join": {
+    "want": [
+     "a",
+     "c"
+    ]
+   }
+  },
+  {
+   "form": "continuous",
+   "params": {
+    "lo": 0,
+    "hi": 100
+   },
+   "a": {
+    "lo": 0,
+    "hi": 4
+   },
+   "b": {
+    "lo": 6,
+    "hi": 9
+   },
+   "join": {
+    "lo": 0,
+    "hi": 9
+   }
+  }
+ ],
+ "coverage": {
+  "size": 5,
+  "criterion": "each form joins two bounds once, the bottom included",
+  "could_exclude_counterexamples": true,
+  "why": "one pair per form; the lattice laws themselves are checked at every offered form's points by the reading over forms, from forms.json"
+ }
+}

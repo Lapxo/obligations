@@ -1,0 +1,26 @@
+{
+ "cases": [
+  {
+   "coordinate": [
+    "a/b",
+    "a"
+   ],
+   "expect": true
+  },
+  {
+   "coordinate": [
+    "a",
+    "a/b"
+   ],
+   "expect": false
+  },
+  {
+   "coordinate": [
+    "a/b/c/d",
+    "a/b/e/f"
+   ],
+   "resolution": 4,
+   "expect": 3
+  }
+ ]
+}

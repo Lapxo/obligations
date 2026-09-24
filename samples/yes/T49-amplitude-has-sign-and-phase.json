@@ -1,0 +1,49 @@
+{
+ "about": [
+  "A claim carries a size and a direction: how much it narrows, and the turn of the period it landed on. A withdrawal is the same size pointing the other way.",
+  "Two hundred claims in phase make ten thousand — the square of their number — and the same two hundred strewn across the period make sixty-four, of the order of their number.",
+  "A write and its withdrawal at one epoch leave nothing; at different epochs they do not cancel.",
+  "Thirty-two claims of no width, so each carries an amplitude of one: in phase they make a thousand and twenty-four, which is their number squared, and strewn across the period they make fifty, of the order of their number.",
+  "The fringe of four claims half a period apart runs from nothing at no delay to four at half the period and back."
+ ],
+ "cases": [
+  {
+   "name": "two hundred claims, period of eight",
+   "n": 200,
+   "period": 8,
+   "draws": 40,
+   "inPhase": 10000,
+   "coherenceInPhase": 1,
+   "meanStrewn": 64,
+   "meanCoherenceStrewn": 0.07,
+   "amplitude": 0.5,
+   "withdrawal": -0.5,
+   "writeAndWithdrawal": 0,
+   "apart": 0.5,
+   "expect": true
+  },
+  {
+   "name": "thirty-two claims, period of eight",
+   "n": 32,
+   "period": 8,
+   "inPhase": 1024,
+   "square": 1024,
+   "coherenceInPhase": 1,
+   "seed": 11,
+   "strewn": 50,
+   "coherenceStrewn": 0.22,
+   "writeAndWithdrawal": 0,
+   "fringes": [
+    0,
+    0.6,
+    2,
+    3.4,
+    4,
+    3.4,
+    2,
+    0.6
+   ],
+   "expect": true
+  }
+ ]
+}

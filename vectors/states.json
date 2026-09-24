@@ -1,0 +1,656 @@
+{
+  "about": [
+    "The debit as a vector: four states per irreducible, and the counter is the",
+    "popcount of one of them. Two bits compose; four labels do not, which is why",
+    "the state is derived and never stored.",
+    "",
+    "The alphabet cases enumerate a five-token palette against every interesting",
+    "pair of (demanded, permitted). The interval cases are runs: the answer only",
+    "changes where a boundary is, so a million values cost the same as five."
+  ],
+  "coverage": {
+    "size": 22,
+    "criterion": "every quadrant reachable, every degenerate extent, and the disjoint-writers case the convex hull gets wrong",
+    "could_exclude_counterexamples": true,
+    "why": "the four quadrants are a partition of the extent, so a case that lands a value in two of them, or in none, fails the partition assertion regardless of which quadrant is wrong"
+  },
+  "cases": [
+    {
+      "kind": "alphabet",
+      "case": "all four states at once, on one palette",
+      "tokens": [
+        "draft",
+        "sent",
+        "paid",
+        "void",
+        "cancelled"
+      ],
+      "demanded": [
+        "draft",
+        "sent",
+        "paid"
+      ],
+      "permitted": [
+        "draft",
+        "sent",
+        "void"
+      ],
+      "expect": {
+        "REQUIRED": [
+          "draft",
+          "sent"
+        ],
+        "FREE": [
+          "void"
+        ],
+        "FORBIDDEN": [
+          "cancelled"
+        ],
+        "CONFLICT": [
+          "paid"
+        ]
+      }
+    },
+    {
+      "kind": "alphabet",
+      "case": "no writer: nothing is REQUIRED and nothing CONFLICTS",
+      "tokens": [
+        "draft",
+        "sent",
+        "paid"
+      ],
+      "demanded": [],
+      "permitted": [
+        "draft",
+        "sent"
+      ],
+      "expect": {
+        "REQUIRED": [],
+        "FREE": [
+          "draft",
+          "sent"
+        ],
+        "FORBIDDEN": [
+          "paid"
+        ],
+        "CONFLICT": []
+      }
+    },
+    {
+      "kind": "alphabet",
+      "case": "no reader admits anything: everything written is a conflict",
+      "tokens": [
+        "draft",
+        "sent"
+      ],
+      "demanded": [
+        "draft"
+      ],
+      "permitted": [],
+      "expect": {
+        "REQUIRED": [],
+        "FREE": [],
+        "FORBIDDEN": [
+          "sent"
+        ],
+        "CONFLICT": [
+          "draft"
+        ]
+      }
+    },
+    {
+      "kind": "alphabet",
+      "case": "everything admitted and everything written",
+      "tokens": [
+        "a",
+        "b"
+      ],
+      "demanded": [
+        "a",
+        "b"
+      ],
+      "permitted": [
+        "a",
+        "b"
+      ],
+      "expect": {
+        "REQUIRED": [
+          "a",
+          "b"
+        ],
+        "FREE": [],
+        "FORBIDDEN": [],
+        "CONFLICT": []
+      }
+    },
+    {
+      "kind": "alphabet",
+      "case": "an empty extent has no states at all",
+      "tokens": [],
+      "demanded": [],
+      "permitted": [],
+      "expect": {
+        "REQUIRED": [],
+        "FREE": [],
+        "FORBIDDEN": [],
+        "CONFLICT": []
+      }
+    },
+    {
+      "kind": "alphabet",
+      "case": "the dead value nothing else reports: admitted by both, written by nobody",
+      "tokens": [
+        "draft",
+        "sent",
+        "void"
+      ],
+      "demanded": [
+        "draft"
+      ],
+      "permitted": [
+        "draft",
+        "sent",
+        "void"
+      ],
+      "expect": {
+        "REQUIRED": [
+          "draft"
+        ],
+        "FREE": [
+          "sent",
+          "void"
+        ],
+        "FORBIDDEN": [],
+        "CONFLICT": []
+      }
+    },
+    {
+      "kind": "alphabet",
+      "case": "the system's negative: two values nobody admits and nobody writes",
+      "tokens": [
+        "draft",
+        "cancelled",
+        "archived"
+      ],
+      "demanded": [
+        "draft"
+      ],
+      "permitted": [
+        "draft"
+      ],
+      "expect": {
+        "REQUIRED": [
+          "draft"
+        ],
+        "FREE": [],
+        "FORBIDDEN": [
+          "cancelled",
+          "archived"
+        ],
+        "CONFLICT": []
+      }
+    },
+    {
+      "kind": "alphabet",
+      "case": "a writer outside the extent is not a value — the extent is the universe",
+      "tokens": [
+        "a",
+        "b"
+      ],
+      "demanded": [
+        "a",
+        "b"
+      ],
+      "permitted": [
+        "a"
+      ],
+      "extent": [
+        "a"
+      ],
+      "expect": {
+        "REQUIRED": [
+          "a"
+        ],
+        "FREE": [],
+        "FORBIDDEN": [],
+        "CONFLICT": []
+      }
+    },
+    {
+      "kind": "alphabet",
+      "case": "wider than one chunk: 33 tokens crosses the 32-bit word boundary",
+      "tokens": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7",
+        "t8",
+        "t9",
+        "t10",
+        "t11",
+        "t12",
+        "t13",
+        "t14",
+        "t15",
+        "t16",
+        "t17",
+        "t18",
+        "t19",
+        "t20",
+        "t21",
+        "t22",
+        "t23",
+        "t24",
+        "t25",
+        "t26",
+        "t27",
+        "t28",
+        "t29",
+        "t30",
+        "t31",
+        "t32"
+      ],
+      "demanded": [
+        "t0",
+        "t32"
+      ],
+      "permitted": [
+        "t0",
+        "t31"
+      ],
+      "expect": {
+        "REQUIRED": [
+          "t0"
+        ],
+        "FREE": [
+          "t31"
+        ],
+        "CONFLICT": [
+          "t32"
+        ]
+      },
+      "forbidden_count": 30
+    },
+    {
+      "kind": "interval",
+      "case": "the slack nobody uses, with a number",
+      "extent": {
+        "lo": 0,
+        "hi": 400
+      },
+      "demanded": [
+        {
+          "lo": 0,
+          "hi": 255
+        }
+      ],
+      "permitted": {
+        "lo": 0,
+        "hi": 320
+      },
+      "expect": [
+        {
+          "lo": 0,
+          "hi": 255,
+          "state": "REQUIRED"
+        },
+        {
+          "lo": 256,
+          "hi": 320,
+          "state": "FREE"
+        },
+        {
+          "lo": 321,
+          "hi": 400,
+          "state": "FORBIDDEN"
+        }
+      ]
+    },
+    {
+      "kind": "interval",
+      "case": "a writer past the reader is a conflict run",
+      "extent": {
+        "lo": 0,
+        "hi": 100
+      },
+      "demanded": [
+        {
+          "lo": 0,
+          "hi": 80
+        }
+      ],
+      "permitted": {
+        "lo": 0,
+        "hi": 50
+      },
+      "expect": [
+        {
+          "lo": 0,
+          "hi": 50,
+          "state": "REQUIRED"
+        },
+        {
+          "lo": 51,
+          "hi": 80,
+          "state": "CONFLICT"
+        },
+        {
+          "lo": 81,
+          "hi": 100,
+          "state": "FORBIDDEN"
+        }
+      ]
+    },
+    {
+      "kind": "interval",
+      "case": "DISJOINT WRITERS: the gap is FREE, and the convex hull would call it REQUIRED",
+      "extent": {
+        "lo": 0,
+        "hi": 100
+      },
+      "demanded": [
+        {
+          "lo": 0,
+          "hi": 10
+        },
+        {
+          "lo": 90,
+          "hi": 100
+        }
+      ],
+      "permitted": {
+        "lo": 0,
+        "hi": 100
+      },
+      "expect": [
+        {
+          "lo": 0,
+          "hi": 10,
+          "state": "REQUIRED"
+        },
+        {
+          "lo": 11,
+          "hi": 89,
+          "state": "FREE"
+        },
+        {
+          "lo": 90,
+          "hi": 100,
+          "state": "REQUIRED"
+        }
+      ]
+    },
+    {
+      "kind": "interval",
+      "case": "no writer: one FREE run and one FORBIDDEN run",
+      "extent": {
+        "lo": 0,
+        "hi": 100
+      },
+      "demanded": [],
+      "permitted": {
+        "lo": 0,
+        "hi": 60
+      },
+      "expect": [
+        {
+          "lo": 0,
+          "hi": 60,
+          "state": "FREE"
+        },
+        {
+          "lo": 61,
+          "hi": 100,
+          "state": "FORBIDDEN"
+        }
+      ]
+    },
+    {
+      "kind": "interval",
+      "case": "no reader: everything written conflicts, the rest is forbidden",
+      "extent": {
+        "lo": 0,
+        "hi": 10
+      },
+      "demanded": [
+        {
+          "lo": 2,
+          "hi": 4
+        }
+      ],
+      "permitted": null,
+      "expect": [
+        {
+          "lo": 0,
+          "hi": 1,
+          "state": "FORBIDDEN"
+        },
+        {
+          "lo": 2,
+          "hi": 4,
+          "state": "CONFLICT"
+        },
+        {
+          "lo": 5,
+          "hi": 10,
+          "state": "FORBIDDEN"
+        }
+      ]
+    },
+    {
+      "kind": "interval",
+      "case": "the whole extent is one run when nothing changes state",
+      "extent": {
+        "lo": 0,
+        "hi": 1000000
+      },
+      "demanded": [
+        {
+          "lo": 0,
+          "hi": 1000000
+        }
+      ],
+      "permitted": {
+        "lo": 0,
+        "hi": 1000000
+      },
+      "expect": [
+        {
+          "lo": 0,
+          "hi": 1000000,
+          "state": "REQUIRED"
+        }
+      ]
+    },
+    {
+      "kind": "interval",
+      "case": "a single point",
+      "extent": {
+        "lo": 5,
+        "hi": 5
+      },
+      "demanded": [
+        {
+          "lo": 5,
+          "hi": 5
+        }
+      ],
+      "permitted": {
+        "lo": 5,
+        "hi": 5
+      },
+      "expect": [
+        {
+          "lo": 5,
+          "hi": 5,
+          "state": "REQUIRED"
+        }
+      ]
+    },
+    {
+      "kind": "interval",
+      "case": "an inverted extent has no runs",
+      "extent": {
+        "lo": 10,
+        "hi": 0
+      },
+      "demanded": [],
+      "permitted": null,
+      "expect": []
+    },
+    {
+      "kind": "interval",
+      "case": "adjacent writers merge into one run — a boundary that is not one",
+      "extent": {
+        "lo": 0,
+        "hi": 20
+      },
+      "demanded": [
+        {
+          "lo": 0,
+          "hi": 5
+        },
+        {
+          "lo": 6,
+          "hi": 10
+        }
+      ],
+      "permitted": {
+        "lo": 0,
+        "hi": 20
+      },
+      "expect": [
+        {
+          "lo": 0,
+          "hi": 10,
+          "state": "REQUIRED"
+        },
+        {
+          "lo": 11,
+          "hi": 20,
+          "state": "FREE"
+        }
+      ]
+    },
+    {
+      "kind": "interval",
+      "case": "a writer entirely outside what the reader admits, and outside the extent's start",
+      "extent": {
+        "lo": 0,
+        "hi": 50
+      },
+      "demanded": [
+        {
+          "lo": 40,
+          "hi": 50
+        }
+      ],
+      "permitted": {
+        "lo": 0,
+        "hi": 20
+      },
+      "expect": [
+        {
+          "lo": 0,
+          "hi": 20,
+          "state": "FREE"
+        },
+        {
+          "lo": 21,
+          "hi": 39,
+          "state": "FORBIDDEN"
+        },
+        {
+          "lo": 40,
+          "hi": 50,
+          "state": "CONFLICT"
+        }
+      ]
+    },
+    {
+      "kind": "interval",
+      "case": "overlapping writers are still one REQUIRED run",
+      "extent": {
+        "lo": 0,
+        "hi": 30
+      },
+      "demanded": [
+        {
+          "lo": 0,
+          "hi": 15
+        },
+        {
+          "lo": 10,
+          "hi": 20
+        }
+      ],
+      "permitted": {
+        "lo": 0,
+        "hi": 30
+      },
+      "expect": [
+        {
+          "lo": 0,
+          "hi": 20,
+          "state": "REQUIRED"
+        },
+        {
+          "lo": 21,
+          "hi": 30,
+          "state": "FREE"
+        }
+      ]
+    },
+    {
+      "kind": "interval",
+      "case": "a permitted band that starts above the extent's floor",
+      "extent": {
+        "lo": 0,
+        "hi": 10
+      },
+      "demanded": [],
+      "permitted": {
+        "lo": 4,
+        "hi": 6
+      },
+      "expect": [
+        {
+          "lo": 0,
+          "hi": 3,
+          "state": "FORBIDDEN"
+        },
+        {
+          "lo": 4,
+          "hi": 6,
+          "state": "FREE"
+        },
+        {
+          "lo": 7,
+          "hi": 10,
+          "state": "FORBIDDEN"
+        }
+      ]
+    },
+    {
+      "kind": "interval",
+      "case": "everything forbidden: no writer, no reader",
+      "extent": {
+        "lo": 0,
+        "hi": 3
+      },
+      "demanded": [],
+      "permitted": null,
+      "expect": [
+        {
+          "lo": 0,
+          "hi": 3,
+          "state": "FORBIDDEN"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+ "cases": [
+  {
+   "coordinate": "a",
+   "origins": [
+    [
+     "x",
+     1
+    ],
+    [
+     "x",
+     5
+    ]
+   ],
+   "expect": 2,
+   "expected.ok": false
+  }
+ ]
+}

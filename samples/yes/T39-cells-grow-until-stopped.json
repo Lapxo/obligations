@@ -1,0 +1,47 @@
+{
+ "about": [
+  "A cell grows until something stops it: a wall the lock names, or the place where the next origin's claim is nearer than its own.",
+  "What stops it is never its own doing, so a cell alone between two walls is as wide as they leave it, and one that lands beside another takes the midpoint between them.",
+  "An origin landing beside a cell narrows that cell and never widens any."
+ ],
+ "cases": [
+  {
+   "name": "walls at 0, 30, 70 and 100 with origins at 12, 45, 48 and 90",
+   "walls": [
+    0,
+    30,
+    70,
+    100
+   ],
+   "placed": [
+    12,
+    45,
+    48,
+    90
+   ],
+   "widths": [
+    30,
+    16.5,
+    23.5,
+    30
+   ],
+   "beside": {
+    "placed": [
+     12,
+     45,
+     48,
+     50,
+     90
+    ],
+    "widths": [
+     30,
+     16.5,
+     2.5,
+     21,
+     30
+    ]
+   },
+   "expect": true
+  }
+ ]
+}

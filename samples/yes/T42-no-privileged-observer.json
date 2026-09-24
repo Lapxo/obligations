@@ -1,0 +1,19 @@
+{
+ "about": [
+  "Two observers of one world hold their own origins, and their verdicts differ on the cells where one has looked and the other has not.",
+  "That is not a contradiction: wherever they hold the same origins at a cell they agree, every time.",
+  "What a cell is depends on who is reading, and the disagreement is the difference of their horizons, never of the world."
+ ],
+ "cases": [
+  {
+   "name": "a shared core of a hundred cells and two private sets of origins",
+   "cells": 100,
+   "seed": 7,
+   "share": 0.4,
+   "differ": 49,
+   "sameOrigins": 38,
+   "disagreeingWhereSame": 0,
+   "expect": true
+  }
+ ]
+}

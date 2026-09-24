@@ -1,0 +1,34 @@
+{
+ "about": [
+  "Who said it, when they said it and what is remembered are three coordinates of one claim, and none of them is the claim: two origins saying the same span at the same epoch are two claims, and one origin saying it twice is one.",
+  "What the cell holds together depends on the spans alone; what it is depends on all three."
+ ],
+ "cases": [
+  {
+   "name": "one span, two origins, two epochs",
+   "span": [
+    20,
+    80
+   ],
+   "twoOrigins": {
+    "origins": 2,
+    "meet": [
+     20,
+     80
+    ]
+   },
+   "oneOriginTwice": {
+    "origins": 1,
+    "meet": [
+     20,
+     80
+    ]
+   },
+   "differentEpochs": {
+    "origins": 2,
+    "latest": 3
+   },
+   "expect": true
+  }
+ ]
+}

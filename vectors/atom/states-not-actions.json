@@ -1,0 +1,80 @@
+{
+ "about": [
+  "A claim states a state, never an action: folding the same state twice is folding it once, and an origin that",
+  "says the same thing again is still one origin. Anything whose second application differs from its first is not a state."
+ ],
+ "cases": [
+  {
+   "name": "a state folded twice is folded once",
+   "spans": [
+    [
+     0,
+     10
+    ],
+    [
+     0,
+     10
+    ]
+   ],
+   "once": [
+    [
+     0,
+     10
+    ]
+   ]
+  },
+  {
+   "name": "repeating a state inside a fold changes nothing",
+   "spans": [
+    [
+     0,
+     10
+    ],
+    [
+     5,
+     20
+    ],
+    [
+     0,
+     10
+    ]
+   ],
+   "once": [
+    [
+     0,
+     10
+    ],
+    [
+     5,
+     20
+    ]
+   ]
+  },
+  {
+   "name": "the same origin saying it again is one origin",
+   "seen": [
+    {
+     "origin": "a",
+     "span": {
+      "lo": 0,
+      "hi": 10
+     }
+    },
+    {
+     "origin": "a",
+     "span": {
+      "lo": 0,
+      "hi": 10
+     }
+    }
+   ],
+   "origins": 1
+  }
+ ],
+ "coverage": {
+  "size": 3,
+  "criterion": "a state folded twice, a state repeated inside a fold, and one origin repeating itself",
+  "could_exclude_counterexamples": true,
+  "why": "one scale, the integer line"
+ }
+}

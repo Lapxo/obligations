@@ -1,0 +1,20 @@
+{
+ "cases": [
+  {
+   "coordinate": "a/b",
+   "resolution": 2,
+   "epoch": 1,
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      10
+     ]
+    ]
+   ],
+   "expect": "fact",
+   "expected.ok": false
+  }
+ ]
+}

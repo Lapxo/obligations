@@ -1,0 +1,27 @@
+{
+ "about": [
+  "A declaration is a family of demands and a family of limits; the audit examines one against one.",
+  "It reports the whole conflict for every monotone valuation exactly when the demand is itself demanded and one limit already meets it.",
+  "Where that fails, an up-set indicator perturbed by height under-reports."
+ ],
+ "cases": [
+  {
+   "name": "b2",
+   "lattice": "b2",
+   "families": 225,
+   "conflict": 188,
+   "witness": 144,
+   "soundUnderHeight": 8,
+   "expect": true
+  },
+  {
+   "name": "n5",
+   "lattice": "n5",
+   "families": 961,
+   "conflict": 876,
+   "witness": 600,
+   "soundUnderHeight": 20,
+   "expect": true
+  }
+ ]
+}

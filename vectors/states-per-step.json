@@ -19,7 +19,7 @@
     "size": 6,
     "criterion": "all four states, each reachable, plus a pinned level and a crossed statement",
     "could_exclude_counterexamples": true,
-    "why": "one scale only; that the read-out combines coordinatewise is asserted exhaustively in the unit tests"
+    "why": "one scale for the named cases; that the read-out combines coordinatewise is checked by this file's runner over every pair of statements"
   },
   "chain": ["none", "own", "team", "region", "all"],
   "cases": [
@@ -89,5 +89,7 @@
         ["all", "FORBIDDEN"]
       ]
     }
-  ]
+  ],
+  "coordinatewise": "over every pair of inhabited statements on the chain, a composition demands where either part demands and limits where both parts limit",
+  "states": 4
 }

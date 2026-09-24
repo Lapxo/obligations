@@ -1,0 +1,22 @@
+{
+  "coverage": {
+    "size": 1,
+    "criterion": "conjunction and disjunction on a three-chain recover the lattice identities",
+    "could_exclude_counterexamples": true,
+    "why": "the identities are lattice-theoretic; the file pins the named chain case"
+  },
+  "about": [
+    "(u1,w1) ∧ (u2,w2) = (u1∨u2, w1∧w2).",
+    "Disjunction is the dual."
+  ],
+  "cases": [
+    {
+      "name": "conj on a chain",
+      "levels": ["a", "b", "c"],
+      "a": { "floor": "a", "ceiling": "c" },
+      "b": { "floor": "b", "ceiling": "b" },
+      "conj": { "floor": "b", "ceiling": "b" },
+      "disj": { "floor": "a", "ceiling": "c" }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "about": [
+    "The ideal carrier. Vectors whose expected values are written by hand,",
+    "not taken from either head. The entry condition of BEP-0005.",
+    "",
+    "L0 is the law the set-algebra bank does not state: U is an up-set, D is",
+    "a down-set. Without it, L1–L9 pass on arbitrary subsets of Omega."
+  ],
+  "coverage": {
+    "size": 2,
+    "criterion": "a non-closed set is refused, and a closed pair is kept",
+    "could_exclude_counterexamples": false,
+    "why": "the falsifier that replaces M3 once conservation is unconditional"
+  },
+  "scale": {
+    "levels": ["none", "x", "y", "both"],
+    "leq": [
+      [true, true, true, true],
+      [false, true, false, true],
+      [false, false, true, true],
+      [false, false, false, true]
+    ]
+  },
+  "cases": [
+    {
+      "name": "closure-rejects-a-non-ideal",
+      "demand": ["x"],
+      "permit": ["y"],
+      "closed": false,
+      "why": "demand {x} is not an up-set (both is above x); permit {y} is not a down-set (none is below y)"
+    },
+    {
+      "name": "closure-keeps-a-generated-pair",
+      "demand": ["x", "both"],
+      "permit": ["none", "y"],
+      "closed": true,
+      "why": "↑x = {x, both}, ↓y = {none, y}"
+    }
+  ]
+}

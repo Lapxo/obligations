@@ -1,0 +1,12 @@
+{
+  "about": [
+    "The falsifier: a result of the usual formalism that cannot be stated with the four fields, or a prediction the restored fields make that the arithmetic forbids. This conjecture is about which structure is missing, not about numbers the arithmetic already gives."
+  ],
+  "cases": [
+    {
+      "name": "a result the four fields cannot state",
+      "expected.ok": false
+    }
+  ],
+  "brief": "the arithmetic forbids what the restored fields predict"
+}

@@ -1,0 +1,105 @@
+{
+ "about": [
+  "A pair splits over the blocks of its meet: each block carries its own residual information, weighted by its share of the places.",
+  "Inside a block the restricted pair has a trivial meet, so the sum is bounded by the largest a trivial meet can reach.",
+  "Checked at every pair of the partition lattice on four places."
+ ],
+ "cases": [
+  {
+   "name": "places 4",
+   "places": 4,
+   "pairs": 225,
+   "tau": [
+    0.0,
+    0.0,
+    0.251629167,
+    0.5
+   ],
+   "pins": [
+    {
+     "x": [
+      [
+       0,
+       1
+      ],
+      [
+       2
+      ],
+      [
+       3
+      ]
+     ],
+     "y": [
+      [
+       0,
+       2
+      ],
+      [
+       1
+      ],
+      [
+       3
+      ]
+     ],
+     "meet": [
+      [
+       0,
+       1,
+       2
+      ],
+      [
+       3
+      ]
+     ],
+     "terms": [
+      0.0,
+      0.0
+     ],
+     "ri": 0.188721876,
+     "bound": 0.188721876
+    },
+    {
+     "x": [
+      [
+       0,
+       1
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "y": [
+      [
+       0,
+       1
+      ],
+      [
+       2
+      ],
+      [
+       3
+      ]
+     ],
+     "meet": [
+      [
+       0,
+       1
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "terms": [
+      0.0,
+      0.0
+     ],
+     "ri": 0.0,
+     "bound": 0.0
+    }
+   ],
+   "expect": true
+  }
+ ]
+}

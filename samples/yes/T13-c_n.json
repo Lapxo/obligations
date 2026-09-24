@@ -1,0 +1,32 @@
+{
+ "cases": [
+  {
+   "resolution": 3,
+   "interval": [
+    0.2516,
+    0.2517
+   ]
+  },
+  {
+   "resolution": 5,
+   "interval": [
+    0.7219,
+    0.722
+   ]
+  },
+  {
+   "resolution": 6,
+   "interval": [
+    0.9182,
+    0.9183
+   ]
+  },
+  {
+   "resolution": 8,
+   "interval": [
+    1.25,
+    1.25
+   ]
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "about": [
+  "How much worse a plain retreat can be than the cheapest one, over every declaration in conflict on the partition lattice.",
+  "The worst is a demand of two balanced blocks, and it is exactly what the block sizes predict.",
+  "It is half the places for an even number of them, and a little under for an odd one."
+ ],
+ "cases": [
+  {
+   "name": "places 2",
+   "places": 2,
+   "levels": 2,
+   "rho": 1.0,
+   "ratio": 1.0,
+   "at": {
+    "u": [
+     [
+      0
+     ],
+     [
+      1
+     ]
+    ],
+    "w": [
+     [
+      0,
+      1
+     ]
+    ]
+   },
+   "balanced": true,
+   "expect": true
+  },
+  {
+   "name": "places 3",
+   "places": 3,
+   "levels": 5,
+   "rho": 1.377443751,
+   "ratio": 1.377443751,
+   "at": {
+    "u": [
+     [
+      0,
+      1
+     ],
+     [
+      2
+     ]
+    ],
+    "w": [
+     [
+      0,
+      2
+     ],
+     [
+      1
+     ]
+    ]
+   },
+   "balanced": true,
+   "expect": true
+  },
+  {
+   "name": "places 4",
+   "places": 4,
+   "levels": 15,
+   "rho": 2.0,
+   "ratio": 2.0,
+   "at": {
+    "u": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "w": [
+     [
+      0,
+      2
+     ],
+     [
+      1
+     ],
+     [
+      3
+     ]
+    ]
+   },
+   "balanced": true,
+   "expect": true
+  },
+  {
+   "name": "places 5",
+   "places": 5,
+   "levels": 52,
+   "rho": 2.427376486,
+   "ratio": 2.427376486,
+   "at": {
+    "u": [
+     [
+      0,
+      1,
+      2
+     ],
+     [
+      3,
+      4
+     ]
+    ],
+    "w": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4
+     ]
+    ]
+   },
+   "balanced": true,
+   "expect": true
+  }
+ ]
+}

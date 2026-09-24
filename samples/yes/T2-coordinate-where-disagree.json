@@ -1,0 +1,49 @@
+{
+ "cases": [
+  {
+   "coordinate": "a/b",
+   "resolution": 2,
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      4
+     ]
+    ],
+    [
+     "y",
+     [
+      6,
+      9
+     ]
+    ]
+   ],
+   "expect": [
+    "x",
+    "y"
+   ]
+  },
+  {
+   "coordinate": "a/b",
+   "resolution": 2,
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      6
+     ]
+    ],
+    [
+     "y",
+     [
+      4,
+      9
+     ]
+    ]
+   ],
+   "expect": null
+  }
+ ]
+}

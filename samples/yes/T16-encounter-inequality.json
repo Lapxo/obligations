@@ -1,0 +1,72 @@
+{
+ "about": [
+  "The drop is log2 of the ratio of states a second origin leaves standing.",
+  "It is a full bit exactly when that origin admits at most half of them, and nothing exactly when it narrows nothing.",
+  "Between the two there is a drop that is neither: fifteen of sixteen states costs 0.0931 of a bit."
+ ],
+ "cases": [
+  {
+   "form": "chain",
+   "resolution": 16,
+   "interval": [
+    [
+     0,
+     15
+    ],
+    [
+     0,
+     7
+    ]
+   ],
+   "states": [
+    16,
+    8
+   ],
+   "expect": 1.0,
+   "halves": true,
+   "narrows": true
+  },
+  {
+   "form": "chain",
+   "resolution": 16,
+   "interval": [
+    [
+     0,
+     15
+    ],
+    [
+     0,
+     15
+    ]
+   ],
+   "states": [
+    16,
+    16
+   ],
+   "expect": 0.0,
+   "halves": false,
+   "narrows": false
+  },
+  {
+   "form": "chain",
+   "resolution": 16,
+   "interval": [
+    [
+     0,
+     15
+    ],
+    [
+     0,
+     14
+    ]
+   ],
+   "states": [
+    16,
+    15
+   ],
+   "expect": 0.093109404,
+   "halves": false,
+   "narrows": true
+  }
+ ]
+}

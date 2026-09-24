@@ -5,7 +5,7 @@
     "size": 10,
     "criterion": "hand-written to cover every state of the result, both orders of the collision, the identity, and the two boolean degeneracies",
     "could_exclude_counterexamples": true,
-    "why": "hand-written, so it can miss a case the exhaustive Rust test covers; it exists to pin the CONTRACT across languages, not to prove the algebra"
+    "why": "hand-written, so it can miss a case an exhaustive walk covers; it exists to pin the CONTRACT, not to prove the algebra"
   },
   "chain": ["none", "month", "group", "row"],
   "cases": [

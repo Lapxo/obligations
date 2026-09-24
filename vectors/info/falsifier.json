@@ -1,0 +1,88 @@
+{
+ "witness": "falsifier-of-the-theory",
+ "law": "L00",
+ "about": [
+  "A coordinate exists only where two origins emitted a point at the same coordinate, resolution and epoch; one origin makes it potential, none leaves it empty."
+ ],
+ "cases": [
+  {
+   "name": "two origins at one coordinate and epoch: it exists",
+   "points": [
+    {
+     "at": "a/b",
+     "epoch": 1,
+     "origin": "x"
+    },
+    {
+     "at": "a/b",
+     "epoch": 1,
+     "origin": "y"
+    }
+   ],
+   "at": "a/b",
+   "epoch": 1,
+   "state": "exists",
+   "expected.ok": true
+  },
+  {
+   "name": "one origin: potential",
+   "points": [
+    {
+     "at": "a/c",
+     "epoch": 1,
+     "origin": "x"
+    }
+   ],
+   "at": "a/c",
+   "epoch": 1,
+   "state": "potential",
+   "expected.ok": true
+  },
+  {
+   "name": "two origins at different epochs: no encounter fixed it",
+   "points": [
+    {
+     "at": "a/b",
+     "epoch": 1,
+     "origin": "x"
+    },
+    {
+     "at": "a/b",
+     "epoch": 2,
+     "origin": "y"
+    }
+   ],
+   "at": "a/b",
+   "epoch": 1,
+   "state": "potential",
+   "expected.ok": true
+  },
+  {
+   "name": "no points: empty",
+   "points": [],
+   "at": "a/d",
+   "epoch": 1,
+   "state": "empty",
+   "expected.ok": true
+  },
+  {
+   "name": "falsifier: a coordinate one origin uses counted as existing",
+   "points": [
+    {
+     "at": "a/c",
+     "epoch": 1,
+     "origin": "x"
+    }
+   ],
+   "at": "a/c",
+   "epoch": 1,
+   "state": "exists",
+   "expected.ok": false
+  }
+ ],
+ "coverage": {
+  "size": 5,
+  "criterion": "two origins at one coordinate and epoch, one origin, two at different epochs, none, and a falsifier",
+  "could_exclude_counterexamples": false
+ }
+}

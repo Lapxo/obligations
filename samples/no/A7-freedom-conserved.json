@@ -1,0 +1,16 @@
+{
+ "cases": [
+  {
+   "coordinate": 400,
+   "origins": 30,
+   "epoch": 12,
+   "form": "chain",
+   "interval": [
+    0,
+    15
+   ],
+   "expect": "rises",
+   "expected.ok": false
+  }
+ ]
+}

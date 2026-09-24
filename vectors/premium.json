@@ -1,0 +1,59 @@
+{
+  "about": [
+    "viol* and the premium g = viol − viol*. On a chain, g is identically",
+    "zero for any monotone valuation — planning is worth nothing, the",
+    "retreat is already optimal. Off a chain it need not be.",
+    "",
+    "The trap: reporting gated = coarse − gain as the optimum. That equals",
+    "viol* only under collapse (g = RI). The square-by-index valuation on",
+    "B2 has g = 0 and RI = −4 at (x, y), so gated is not best."
+  ],
+  "coverage": {
+    "size": 3,
+    "criterion": "a chain (g = 0), B2 under height (modular, g = 0), B2 under square-by-index at (x, y) where gated is not licensed",
+    "could_exclude_counterexamples": true,
+    "why": "the structural form and the closed gap are crossed against the sweep by this file's runner, over every pair of four scales"
+  },
+  "cases": [
+    {
+      "name": "five-chain, counting, (all, none)",
+      "chain": ["none", "own", "team", "region", "all"],
+      "worth": "counting",
+      "u": "all",
+      "w": "none",
+      "coarse": 4,
+      "best": 4,
+      "premium": 0,
+      "gain": 0,
+      "licensed": true
+    },
+    {
+      "name": "B2, height, (x, y)",
+      "kind": "b2",
+      "worth": "height",
+      "u": "x",
+      "w": "y",
+      "coarse": 1,
+      "best": 1,
+      "premium": 0,
+      "gain": 0,
+      "licensed": true
+    },
+    {
+      "name": "B2, square-by-index, (x, y) — gated is not the optimum",
+      "kind": "b2",
+      "worth": "square",
+      "u": "x",
+      "w": "y",
+      "coarse": 1,
+      "best": 1,
+      "premium": 0,
+      "gain": -4,
+      "licensed": false
+    }
+  ],
+  "crossed": {
+    "about": "the sweep, the structural form and the closed gap agree on every pair of a ladder, the powerset, N5 and M3, each valued by its height",
+    "scales": [["a", "b", "c", "d"], {"levels": ["none", "x", "y", "both"], "leq": [[true, true, true, true], [false, true, false, true], [false, false, true, true], [false, false, false, true]]}, {"levels": ["none", "a", "b", "c", "all"], "leq": [[true, true, true, true, true], [false, true, true, false, true], [false, false, true, false, true], [false, false, false, true, true], [false, false, false, false, true]]}, {"levels": ["bot", "a", "b", "c", "top"], "leq": [[true, true, true, true, true], [false, true, false, false, true], [false, false, true, false, true], [false, false, false, true, true], [false, false, false, false, true]]}]
+  }
+}

@@ -1,0 +1,45 @@
+{
+ "about": [
+  "A world has two physics at once. Looking travels: it reaches what a walk of shared lookings reaches and stops at the horizon.",
+  "A bound does not travel: it carries no step and no distance, and moving it changes cells past that horizon in one act.",
+  "Counting the bound as if it were a looking would make the whole world one neighbourhood, which is how the two are told apart.",
+  "The two physics side by side, in one world of a hundred cells. Looking is local: it reaches seventy-three cells, one step at a time, stops at the horizon, and moves a floor.",
+  "Signing is not: it reaches the sixty-six cells that rest on the bound, at no distance, past any horizon, and moves a ceiling. Seven of the cells it turned are cells no looking from the observer could have reached."
+ ],
+ "cases": [
+  {
+   "name": "seventy-three cells reached by looking, thirty-two changed by one signature",
+   "sizes": [
+    74,
+    16,
+    10
+   ],
+   "seed": 20260922,
+   "lowest": 40,
+   "share": 0.6,
+   "bound": "ceiling",
+   "reach": 73,
+   "changed": 32,
+   "past": 7,
+   "asIfLooking": 99,
+   "expect": true
+  },
+  {
+   "name": "one world, two ways to change it",
+   "sizes": [
+    74,
+    16,
+    10
+   ],
+   "seed": 20260922,
+   "lowest": 40,
+   "share": 0.6,
+   "bound": "ceiling",
+   "reach": 73,
+   "rank": 66,
+   "changed": 32,
+   "past": 7,
+   "expect": true
+  }
+ ]
+}

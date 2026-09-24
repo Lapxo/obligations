@@ -1,0 +1,173 @@
+{
+ "about": "The nine ways the object can be got wrong: six this library got wrong at least once, and three a join gets wrong when it travels, narrows, or lands with nobody standing for it. A cell with no ceiling is not a cell; a meet that assumes the reals is a meet of one lattice pretending to be the meet; a state written as a word in the code is a state the lattice did not give. A signature that edits an origin's claim has forged a reading; one that leaves a resting cell where it was has not travelled; and a withdrawal matched by value takes back a claim nobody made.",
+ "cases": [
+  {
+   "name": "a cell with no ceiling",
+   "input": {
+    "rests": "ceiling"
+   },
+   "call": "meet",
+   "refusal": "the meet is the lattice top: no ceiling is invented",
+   "expected.ok": false
+  },
+  {
+   "name": "a meet that assumes the reals",
+   "input": {
+    "levels": [
+     "none",
+     "read",
+     "write",
+     "all"
+    ],
+    "claims": [
+     [
+      "read",
+      "all"
+     ],
+     [
+      "none",
+      "write"
+     ]
+    ]
+   },
+   "call": "meet",
+   "want": [
+    "read",
+    "write"
+   ],
+   "expected.ok": false
+  },
+  {
+   "name": "a state as a word in the code",
+   "input": {
+    "levels": [
+     "low",
+     "mid",
+     "high"
+    ],
+    "floor": "high",
+    "ceiling": "low"
+   },
+   "call": "state",
+   "want": "CONFLICT",
+   "expected.ok": false
+  },
+  {
+   "name": "a signature that edits an origin's span",
+   "input": {
+    "claim": [
+     10,
+     90
+    ],
+    "signed": [
+     0,
+     45
+    ]
+   },
+   "call": "sign",
+   "want": [
+    10,
+    90
+   ],
+   "expected.ok": false
+  },
+  {
+   "name": "a signature that leaves a resting cell unchanged",
+   "input": {
+    "claim": [
+     0,
+     100
+    ],
+    "signed": [
+     0,
+     45
+    ]
+   },
+   "call": "sign",
+   "want": [
+    0,
+    45
+   ],
+   "expected.ok": false
+  },
+  {
+   "name": "a withdrawal matched by value",
+   "input": {
+    "claims": [
+     [
+      "c1",
+      "a",
+      5,
+      12
+     ],
+     [
+      "c2",
+      "b",
+      5,
+      12
+     ]
+    ],
+    "takes": "c2"
+   },
+   "call": "observe",
+   "wantOrigins": 1,
+   "expected.ok": false
+  },
+  {
+   "name": "a join that reaches a resting cell",
+   "input": {
+    "resting": 3,
+    "signed": [
+     0,
+     45
+    ],
+    "join": [
+     0,
+     80
+    ]
+   },
+   "call": "join",
+   "wantOthers": [
+    0,
+    45
+   ],
+   "expected.ok": false
+  },
+  {
+   "name": "a join that narrows",
+   "input": {
+    "signed": [
+     0,
+     45
+    ],
+    "join": [
+     10,
+     20
+    ]
+   },
+   "call": "join",
+   "want": [
+    0,
+    45
+   ],
+   "expected.ok": false
+  },
+  {
+   "name": "a join with no witness",
+   "input": {
+    "signed": [
+     0,
+     45
+    ],
+    "join": [
+     0,
+     80
+    ],
+    "witness": ""
+   },
+   "call": "join",
+   "throws": "REFUSE·join",
+   "expected.ok": false
+  }
+ ]
+}

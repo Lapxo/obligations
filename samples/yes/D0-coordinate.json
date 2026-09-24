@@ -1,0 +1,69 @@
+{
+ "cases": [
+  {
+   "coordinate": "a/b",
+   "epoch": 1,
+   "origins": [
+    [
+     "x",
+     "a/b",
+     1
+    ],
+    [
+     "y",
+     "a/b",
+     1
+    ]
+   ],
+   "expect": "exists"
+  },
+  {
+   "coordinate": "a/c",
+   "epoch": 1,
+   "origins": [
+    [
+     "x",
+     "a/c",
+     1
+    ]
+   ],
+   "expect": "potential"
+  },
+  {
+   "coordinate": "a/b",
+   "epoch": 1,
+   "origins": [
+    [
+     "x",
+     "a/b",
+     1
+    ],
+    [
+     "y",
+     "a/b",
+     2
+    ]
+   ],
+   "expect": "potential"
+  },
+  {
+   "coordinate": "a/d",
+   "epoch": 1,
+   "origins": [],
+   "expect": "empty"
+  },
+  {
+   "coordinate": "a/c",
+   "epoch": 1,
+   "origins": [
+    [
+     "x",
+     "a/c",
+     1
+    ]
+   ],
+   "expect": "exists",
+   "expected.ok": false
+  }
+ ]
+}

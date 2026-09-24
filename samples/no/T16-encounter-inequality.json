@@ -1,0 +1,29 @@
+{
+ "about": [
+  "The falsifier: a drop of a full bit where the second origin left fifteen of the sixteen states standing."
+ ],
+ "cases": [
+  {
+   "form": "chain",
+   "resolution": 16,
+   "interval": [
+    [
+     0,
+     15
+    ],
+    [
+     0,
+     14
+    ]
+   ],
+   "states": [
+    16,
+    15
+   ],
+   "expect": 1.0,
+   "halves": false,
+   "narrows": true,
+   "expected.ok": false
+  }
+ ]
+}

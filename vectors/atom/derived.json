@@ -1,0 +1,61 @@
+{
+ "witness": "derived-is-not-an-origin",
+ "about": [
+  "What is derived from points is not a new origin: a coarser reading of a point keeps exactly the origins",
+  "it was read from, and what a region holds is the meet of its origins — never one more of them (L01)."
+ ],
+ "cases": [
+  {
+   "name": "a coarser reading keeps its origins",
+   "at": "a/b/c",
+   "seen": [
+    {
+     "origin": "x",
+     "span": {
+      "lo": 0,
+      "hi": 10
+     }
+    },
+    {
+     "origin": "y",
+     "span": {
+      "lo": 5,
+      "hi": 20
+     }
+    }
+   ],
+   "steps": 1,
+   "origins": 2
+  },
+  {
+   "name": "what a point holds is not among its origins",
+   "seen": [
+    {
+     "origin": "x",
+     "span": {
+      "lo": 0,
+      "hi": 10
+     }
+    },
+    {
+     "origin": "y",
+     "span": {
+      "lo": 5,
+      "hi": 20
+     }
+    }
+   ],
+   "holds": {
+    "lo": 5,
+    "hi": 10
+   },
+   "origins": 2
+  }
+ ],
+ "coverage": {
+  "size": 2,
+  "criterion": "a coarser reading keeps its origins, and the meet adds none",
+  "could_exclude_counterexamples": true,
+  "why": "two origins only"
+ }
+}

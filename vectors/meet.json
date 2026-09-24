@@ -1,0 +1,195 @@
+{
+ "about": [
+  "Every form is a lattice, and its meet is where two demands agree: the tighter band on a scale, the shared tokens of",
+  "an alphabet, the overlap of two intervals. A meet with no value left in it is not inhabited: the demands conflict.",
+  "It got its own file because three vocabularies of form had grown with a meet each and only two had a join."
+ ],
+ "cases": [
+  {
+   "form": "ladder",
+   "params": {
+    "levels": [
+     "low",
+     "mid",
+     "high"
+    ]
+   },
+   "a": {
+    "floor": "low",
+    "ceiling": "high"
+   },
+   "b": {
+    "floor": "mid",
+    "ceiling": "high"
+   },
+   "meet": {
+    "floor": "mid",
+    "ceiling": "high"
+   },
+   "inhabited": true
+  },
+  {
+   "form": "ladder",
+   "params": {
+    "levels": [
+     "low",
+     "mid",
+     "high"
+    ]
+   },
+   "a": {
+    "floor": "low",
+    "ceiling": "low"
+   },
+   "b": {
+    "floor": "high",
+    "ceiling": "high"
+   },
+   "inhabited": false
+  },
+  {
+   "form": "lattice",
+   "params": {
+    "levels": [
+     "bottom",
+     "left",
+     "right",
+     "top"
+    ],
+    "leq": [
+     [
+      true,
+      true,
+      true,
+      true
+     ],
+     [
+      false,
+      true,
+      false,
+      true
+     ],
+     [
+      false,
+      false,
+      true,
+      true
+     ],
+     [
+      false,
+      false,
+      false,
+      true
+     ]
+    ]
+   },
+   "a": {
+    "floor": "left",
+    "ceiling": "top"
+   },
+   "b": {
+    "floor": "right",
+    "ceiling": "top"
+   },
+   "meet": {
+    "floor": "top",
+    "ceiling": "top"
+   },
+   "inhabited": true
+  },
+  {
+   "form": "alphabet",
+   "params": {
+    "tokens": [
+     "a",
+     "b",
+     "c"
+    ]
+   },
+   "a": {
+    "want": [
+     "a",
+     "b"
+    ]
+   },
+   "b": {
+    "want": [
+     "b",
+     "c"
+    ]
+   },
+   "meet": {
+    "want": [
+     "b"
+    ]
+   },
+   "inhabited": true
+  },
+  {
+   "form": "alphabet",
+   "params": {
+    "tokens": [
+     "a",
+     "b",
+     "c"
+    ]
+   },
+   "a": {
+    "want": [
+     "a"
+    ]
+   },
+   "b": {
+    "want": [
+     "c"
+    ]
+   },
+   "meet": {
+    "want": []
+   },
+   "inhabited": false
+  },
+  {
+   "form": "continuous",
+   "params": {
+    "lo": 0,
+    "hi": 100
+   },
+   "a": {
+    "lo": 0,
+    "hi": 10
+   },
+   "b": {
+    "lo": 5,
+    "hi": 20
+   },
+   "meet": {
+    "lo": 5,
+    "hi": 10
+   },
+   "inhabited": true
+  },
+  {
+   "form": "continuous",
+   "params": {
+    "lo": 0,
+    "hi": 100
+   },
+   "a": {
+    "lo": 0,
+    "hi": 4
+   },
+   "b": {
+    "lo": 6,
+    "hi": 9
+   },
+   "inhabited": false
+  }
+ ],
+ "coverage": {
+  "size": 7,
+  "criterion": "each form once where the meet is inhabited, and the ladder and a lattice where it is empty",
+  "could_exclude_counterexamples": true,
+  "why": "one pair of bounds per form; the lattice laws themselves are checked at every offered form's points by the reading over forms, from forms.json"
+ }
+}

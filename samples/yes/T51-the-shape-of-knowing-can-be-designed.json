@@ -1,0 +1,40 @@
+{
+ "about": [
+  "For a budget of origins there is a siting that minimises what the field cannot reach, and it is found by asking which two islands are largest, because what an origin is worth is the product of the two sides it bridges.",
+  "Three hundred cells, three cities bridged into one mass and two deserts of lone cells, leave four thousand three hundred and eighty pairs with no walk between them.",
+  "Twelve origins dropped blindly close between none and a fifth of that. The same twelve, chosen by reach, close four fifths."
+ ],
+ "cases": [
+  {
+   "name": "three hundred cells, twelve origins",
+   "cities": [
+    95,
+    95,
+    95
+   ],
+   "deserts": [
+    8,
+    7
+   ],
+   "budget": 12,
+   "horizon": 4380,
+   "blind": [
+    {
+     "seed": 20260922,
+     "horizon": 4380
+    },
+    {
+     "seed": 7,
+     "horizon": 3522
+    },
+    {
+     "seed": 99,
+     "horizon": 3809
+    }
+   ],
+   "designed": 894,
+   "closed": 80,
+   "expect": true
+  }
+ ]
+}

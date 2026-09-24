@@ -1,0 +1,28 @@
+{
+ "about": [
+  "Stated as a conjecture: a field of cells with origins and signatures is a game with a referee inside it, and five properties hold in each of five readings of it.",
+  "The properties: a move is a claim; a claim alone is potential; two that meet are information; a signature moves every cell that rests on it; and no player may suspend the rule that makes the first four.",
+  "No numbers. What is claimed is that each of the five readings matches all five properties."
+ ],
+ "cases": [
+  {
+   "name": "five properties, five readings",
+   "properties": [
+    "a move is a claim",
+    "a claim alone is potential",
+    "two that meet are information",
+    "a signature moves what rests on it",
+    "no player suspends the rule"
+   ],
+   "readings": [
+    "a survey",
+    "a market",
+    "a court",
+    "a census",
+    "this lock"
+   ],
+   "expect": true,
+   "want": {"properties": 5, "readings": 5, "alone": "grey", "met": "agreed", "signed": [0, 4], "closed": "grey"}
+  }
+ ]
+}

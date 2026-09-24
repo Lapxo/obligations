@@ -1,0 +1,14 @@
+{
+ "cases": [
+  {
+   "epoch": 300,
+   "coordinate": 20,
+   "resolution": 2,
+   "expect": [
+    170,
+    150,
+    2
+   ]
+  }
+ ]
+}

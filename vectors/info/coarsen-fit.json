@@ -1,0 +1,52 @@
+{
+ "witness": "L20b-coarsening-widens-fit",
+ "law": "L20b",
+ "about": [
+  "Read at a coarser resolution a claim reaches every region it reached before and possibly more; it never reaches fewer."
+ ],
+ "cases": [
+  {
+   "name": "coarser reaches more",
+   "claim": "a/b/c",
+   "regions": [
+    "a/b/c/x",
+    "a/b/d",
+    "a/e"
+   ],
+   "steps": 2,
+   "fits": 1,
+   "fits_coarse": 2,
+   "expected.ok": true
+  },
+  {
+   "name": "equal when no finer region existed",
+   "claim": "a/b/c",
+   "regions": [
+    "a/b/c/x",
+    "a/e"
+   ],
+   "steps": 2,
+   "fits": 1,
+   "fits_coarse": 1,
+   "expected.ok": true
+  },
+  {
+   "name": "falsifier: a finer reading called coarser reaches fewer",
+   "claim": "a/b/c",
+   "regions": [
+    "a/b/c/x",
+    "a/b/c/y"
+   ],
+   "finer": "a/b/c/x",
+   "fits": 2,
+   "fits_coarse": 1,
+   "expected.ok": false
+  }
+ ],
+ "coverage": {
+  "size": 3,
+  "criterion": "coarser reaching more, equal when no finer region existed, and a falsifier that calls a finer reading coarser",
+  "could_exclude_counterexamples": true,
+  "why": "one claim; three sets of regions"
+ }
+}

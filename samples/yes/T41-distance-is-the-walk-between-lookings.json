@@ -1,0 +1,31 @@
+{
+ "about": [
+  "Two cells are one step apart when an origin looked at both, so a world is a graph of its lookings and distance is the walk between them.",
+  "It is a metric: zero on a cell against itself, symmetric, and never broken by a third cell.",
+  "Across a desert of cells no looking crosses there is no number at all \u2014 that is the horizon, and one claim that speaks at both sides collapses it."
+ ],
+ "cases": [
+  {
+   "name": "two cities of a hundred and sixty and eighty across a desert of a hundred and sixty lone cells",
+   "city": 160,
+   "desert": 160,
+   "other": 80,
+   "from": "c0",
+   "to": "c399",
+   "apart": "unreachable",
+   "horizon": 240,
+   "reach": 159,
+   "crosses": 1,
+   "after": {
+    "distance": 1,
+    "horizon": 160
+   },
+   "meanFar": 115.5,
+   "meanNear": 55.5,
+   "triples": 200,
+   "broken": 0,
+   "asymmetric": 0,
+   "expect": true
+  }
+ ]
+}

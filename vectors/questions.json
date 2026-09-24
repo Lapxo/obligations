@@ -1,0 +1,56 @@
+{
+ "about": [
+  "The size of a body of claims is how many questions it asks: distinct coordinates, never lines. Many lines at one",
+  "coordinate are one question, and read at a coarser resolution questions merge."
+ ],
+ "cases": [
+  {
+   "name": "ten lines over three coordinates are three questions",
+   "at": [
+    "a/x",
+    "a/x",
+    "a/x",
+    "a/y",
+    "a/y",
+    "b/z",
+    "b/z",
+    "b/z",
+    "b/z",
+    "b/z"
+   ],
+   "size": 3
+  },
+  {
+   "name": "read at one step, they are two",
+   "at": [
+    "a/x",
+    "a/x",
+    "a/x",
+    "a/y",
+    "a/y",
+    "b/z",
+    "b/z",
+    "b/z",
+    "b/z",
+    "b/z"
+   ],
+   "steps": 1,
+   "size": 2
+  },
+  {
+   "name": "one coordinate repeated is one question",
+   "at": [
+    "a",
+    "a",
+    "a"
+   ],
+   "size": 1
+  }
+ ],
+ "coverage": {
+  "size": 3,
+  "criterion": "lines over three coordinates, the same lines one step coarser, and one coordinate repeated",
+  "could_exclude_counterexamples": true,
+  "why": "one body of lines; the count is of distinct coordinates only"
+ }
+}

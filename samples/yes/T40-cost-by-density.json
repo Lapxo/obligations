@@ -1,0 +1,28 @@
+{
+ "about": [
+  "Curvature is not bought with origins: the same two hundred origins give a ratio near two when they land blind and above twenty when they land where reading already is.",
+  "So the shape of what is known is a fact about placement, not about budget, and it leaves cities and deserts in one field.",
+  "No cell ever carries an origin that was not placed in it."
+ ],
+ "cases": [
+  {
+   "name": "one budget, two placements",
+   "cells": 400,
+   "epochs": 8,
+   "each": 25,
+   "seed": 20260922,
+   "attached": {
+    "pull": 30,
+    "ratio": 21.8,
+    "cities": 45,
+    "deserts": 355
+   },
+   "blind": {
+    "pull": 0,
+    "ratio": 2.5,
+    "cities": 157
+   },
+   "expect": true
+  }
+ ]
+}

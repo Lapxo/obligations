@@ -1,0 +1,104 @@
+{
+ "about": [
+  "Nothing is lost by pushing a trivial-meet pair to a discrete join: the most two such readings can share is already reached there.",
+  "Checked over every trivial-meet pair of the partition lattice on three, four and five places."
+ ],
+ "cases": [
+  {
+   "name": "places 3",
+   "places": 3,
+   "trivial": 15,
+   "discrete": 8,
+   "tau": 0.251629167,
+   "at": {
+    "x": [
+     [
+      0,
+      1
+     ],
+     [
+      2
+     ]
+    ],
+    "y": [
+     [
+      0,
+      2
+     ],
+     [
+      1
+     ]
+    ]
+   },
+   "expect": true
+  },
+  {
+   "name": "places 4",
+   "places": 4,
+   "trivial": 119,
+   "discrete": 56,
+   "tau": 0.5,
+   "at": {
+    "x": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ]
+    ],
+    "y": [
+     [
+      0,
+      2
+     ],
+     [
+      1
+     ],
+     [
+      3
+     ]
+    ]
+   },
+   "expect": true
+  },
+  {
+   "name": "places 5",
+   "places": 5,
+   "trivial": 1343,
+   "discrete": 552,
+   "tau": 0.721928095,
+   "at": {
+    "x": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      3
+     ],
+     [
+      4
+     ]
+    ],
+    "y": [
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      4
+     ],
+     [
+      3
+     ]
+    ]
+   },
+   "expect": true
+  }
+ ]
+}

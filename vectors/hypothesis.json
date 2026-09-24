@@ -1,0 +1,98 @@
+{
+  "about": [
+    "isSupermodular is half of the hypothesis that makes g vanish, and the",
+    "implication as it was written is false.",
+    "",
+    "The comment read: \"RI <= 0 on every pair: then g == 0.\" On a total order",
+    "{x OR y, x AND y} is {x, y}, so RI is identically zero for every valuation.",
+    "The predicate cannot say no where it is used.",
+    "",
+    "A vacuous predicate has no symptom. The only way to find one is to ask",
+    "whether it CAN disagree - which is what `vacuity.ts` does.",
+    "",
+    "The missing half is monotonicity:",
+    "",
+    "  monotone AND supermodular  =>  g == 0",
+    "",
+    "Neither half suffices alone. Among monotone valuations the converse holds:",
+    "g != 0 iff not supermodular.",
+    "",
+    "`pricesAnything` carries both halves. `isSupermodular` stays: it tests the",
+    "raw RI condition, and on a total order RI really is identically zero."
+  ],
+  "coverage": {
+    "size": 6,
+    "criterion": "the vacuity itself, on the structure production builds; a decreasing and a sawtooth valuation that are supermodular AND have a non-zero gap, which is the pair the old doc comment forbade; the increasing case, unchanged, so the repair is not an inversion; and both halves of the hypothesis failing alone on a non-chain",
+    "could_exclude_counterexamples": false
+  },
+  "cases": [
+    {
+      "name": "the vacuity: on a chain, every valuation is supermodular",
+      "kind": "vacuous",
+      "levels": ["0", "0.5", "1", "1.5", "2", "3", "4", "6", "8"],
+      "structure": "chain",
+      "samples": 2000,
+      "supermodular_count": 2000,
+      "why": "on a total order {x|y, x&y} = {x, y}, so RI is identically 0",
+      "verdict": "CONSTANT"
+    },
+    {
+      "name": "THE COUNTEREXAMPLE: decreasing is supermodular and has a non-zero gap",
+      "kind": "counterexample",
+      "levels": ["0", "0.5", "1", "1.5", "2", "3", "4", "6", "8"],
+      "structure": "chain",
+      "worth": [0, -1, -2, -3, -4, -5, -6, -7, -8],
+      "supermodular": true,
+      "monotone": false,
+      "worthless_to_plan": false,
+      "gap_nonzero_pairs": 64,
+      "total_pairs": 81,
+      "closed_form": "g = min(u,w), which is exactly the 64 observed"
+    },
+    {
+      "name": "a second counterexample, non-monotone rather than reversed",
+      "kind": "counterexample",
+      "levels": ["0", "0.5", "1", "1.5", "2", "3", "4", "6", "8"],
+      "structure": "chain",
+      "worth": [0, 7, 2, 9, 1, 8, 3, 6, 4],
+      "supermodular": true,
+      "monotone": false,
+      "worthless_to_plan": false,
+      "gap_nonzero_pairs": 38,
+      "total_pairs": 81
+    },
+    {
+      "name": "the increasing case is unchanged: the repair is not an inversion",
+      "kind": "unchanged",
+      "levels": ["0", "0.5", "1", "1.5", "2", "3", "4", "6", "8"],
+      "structure": "chain",
+      "worth": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      "supermodular": true,
+      "monotone": true,
+      "worthless_to_plan": true,
+      "gap_nonzero_pairs": 0,
+      "total_pairs": 81
+    },
+    {
+      "name": "off the chain, supermodular ALONE licenses nothing",
+      "kind": "half-fails",
+      "structure": "B2",
+      "covers": [[0, 1], [0, 2], [1, 3], [2, 3]],
+      "half": "supermodular",
+      "samples_with_half": 20654,
+      "of_those_gap_nonzero": 18431
+    },
+    {
+      "name": "and monotone ALONE licenses nothing either — and the two agree exactly",
+      "kind": "half-fails",
+      "structure": "B2",
+      "covers": [[0, 1], [0, 2], [1, 3], [2, 3]],
+      "half": "monotone",
+      "samples_with_half": 20276,
+      "of_those_gap_nonzero": 9199,
+      "and_those_are_exactly_the_non_supermodular": true
+    }
+  ],
+  "counterexamples": 2,
+  "halves": 2
+}

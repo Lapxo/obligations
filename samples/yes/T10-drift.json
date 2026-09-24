@@ -1,0 +1,46 @@
+{
+ "cases": [
+  {
+   "coordinate": "q",
+   "epoch": 0,
+   "origins": [
+    [
+     "one",
+     [
+      0,
+      10
+     ]
+    ],
+    [
+     "two",
+     [
+      0,
+      10
+     ]
+    ]
+   ],
+   "expect": "fact"
+  },
+  {
+   "coordinate": "q",
+   "epoch": 5,
+   "origins": [
+    [
+     "one",
+     [
+      0,
+      4
+     ]
+    ],
+    [
+     "two",
+     [
+      6,
+      10
+     ]
+    ]
+   ],
+   "expect": "fork"
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "title": "Density attracts",
+ "brief": "reading lands where reading already is",
+ "about": [
+  "Where reading already is, the next reading lands: origins placed in proportion to the origins a cell already carries.",
+  "Over eight epochs the ratio between the densest tenth and the sparsest tenth rises at every epoch and the deserts stay empty.",
+  "The same budget of origins placed without regard to density holds that ratio near two and touches three times as many cells."
+ ],
+ "cases": [
+  {
+   "name": "two hundred origins over four hundred cells, eight epochs",
+   "cells": 400,
+   "epochs": 8,
+   "each": 25,
+   "seed": 20260922,
+   "pull": 30,
+   "ratios": [
+    6,
+    8.5,
+    11.5,
+    13,
+    16,
+    17,
+    19.3,
+    21.8
+   ],
+   "cities": 45,
+   "deserts": 355,
+   "densest": 27,
+   "blind": {
+    "pull": 0,
+    "ratios": [
+     2,
+     2,
+     2,
+     2,
+     2.2,
+     2.3,
+     2.3,
+     2.5
+    ],
+    "cities": 157,
+    "densest": 4
+   },
+   "expect": true
+  }
+ ]
+}

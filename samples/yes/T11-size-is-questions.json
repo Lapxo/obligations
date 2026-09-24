@@ -1,0 +1,9 @@
+{
+ "cases": [
+  {
+   "coordinate": 427,
+   "origins": 3000,
+   "expect": 427
+  }
+ ]
+}

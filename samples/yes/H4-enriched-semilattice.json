@@ -1,0 +1,24 @@
+{
+ "title": "Enriched semilattice",
+ "brief": "cells under rest, signatures as meets, phase as enrichment",
+ "about": [
+  "Stated as a conjecture: the cells under the order of rest, with signatures as meets and phase as what each origin carries, look like an enriched meet-semilattice, and what the library proves would be its representation theory.",
+  "What can be checked is checked here: identity, composition, associativity, commuting and naturality hold for the operations as vectors.",
+  "Observation is not one of them. It moves the metric — a cell two steps away becomes one — and it can split a cell that no signature could, which is why it is a functor out of the category and not an arrow inside it."
+ ],
+ "cases": [
+  {
+   "name": "three cells, two bounds",
+   "identity": true,
+   "refineIdentity": true,
+   "composition": true,
+   "associativity": true,
+   "commuting": true,
+   "naturality": true,
+   "distanceBefore": 2,
+   "distanceAfter": 1,
+   "splitByObserving": true,
+   "expect": true
+  }
+ ]
+}

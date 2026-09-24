@@ -17,7 +17,7 @@
     "size": 8,
     "criterion": "a gap, two gaps, touching, overlapping, nested, identical, an unsatisfiable input, and nothing at all",
     "could_exclude_counterexamples": true,
-    "why": "one scale only; that merging never gains a level is asserted exhaustively in the unit tests"
+    "why": "one scale for the named cases; that merging never gains a level is checked by this file's runner over subsets of every statement on a four-level chain"
   },
   "chain": ["none", "own", "team", "region", "all"],
   "cases": [
@@ -91,5 +91,10 @@
       "units": [],
       "anyOf": []
     }
-  ]
+  ],
+  "preserves": {
+    "about": "merging never gains a level and never loses one: over subsets of every statement on this chain, taken every step-th, the levels anyOf accepts are the levels its inputs accepted",
+    "chain": ["a", "b", "c", "d"],
+    "step": 37
+  }
 }

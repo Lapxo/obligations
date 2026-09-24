@@ -1,0 +1,173 @@
+{
+ "about": [
+  "Bits of freedom are what is left to decide in a cell: log2 of the states between the floor it requires and the ceiling it permits — the states in the upset of the floor that are also in the downset of the ceiling. A decided cell has none, and a cell in conflict has none either: no state satisfies it.",
+  "Resolution is chain length: on a chain the states between are an interval of it; on any lattice they are the interval [floor, ceiling] of its order."
+ ],
+ "cases": [
+  {
+   "name": "three states between on a chain",
+   "scale": {
+    "levels": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "kind": "chain"
+   },
+   "floor": "1",
+   "ceiling": "3",
+   "bits": 1.584962500721156
+  },
+  {
+   "name": "a decided cell has no freedom",
+   "scale": {
+    "levels": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "kind": "chain"
+   },
+   "floor": "2",
+   "ceiling": "2",
+   "bits": 0
+  },
+  {
+   "name": "nothing required and everything permitted is the whole chain",
+   "scale": {
+    "levels": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "kind": "chain"
+   },
+   "floor": "0",
+   "ceiling": "4",
+   "bits": 2.321928094887362
+  },
+  {
+   "name": "a cell in conflict has no freedom",
+   "scale": {
+    "levels": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "kind": "chain"
+   },
+   "floor": "3",
+   "ceiling": "1",
+   "bits": 0
+  },
+  {
+   "name": "on the pentagon the states above a are a, b and the top",
+   "scale": {
+    "levels": [
+     "0",
+     "a",
+     "b",
+     "c",
+     "1"
+    ],
+    "leq": "0 below all; 1 above all; a below b; c incomparable with a and b",
+    "below": [
+     [
+      "a",
+      "b"
+     ]
+    ]
+   },
+   "floor": "a",
+   "ceiling": "1",
+   "bits": 1.584962500721156
+  },
+  {
+   "name": "on the pentagon the states below b are the bottom, a and b",
+   "scale": {
+    "levels": [
+     "0",
+     "a",
+     "b",
+     "c",
+     "1"
+    ],
+    "leq": "0 below all; 1 above all; a below b; c incomparable with a and b",
+    "below": [
+     [
+      "a",
+      "b"
+     ]
+    ]
+   },
+   "floor": "0",
+   "ceiling": "b",
+   "bits": 1.584962500721156
+  },
+  {
+   "name": "the whole diamond",
+   "scale": {
+    "levels": [
+     "0",
+     "a",
+     "b",
+     "c",
+     "1"
+    ],
+    "leq": "0 below all; 1 above all; a, b, c pairwise incomparable",
+    "below": []
+   },
+   "floor": "0",
+   "ceiling": "1",
+   "bits": 2.321928094887362
+  },
+  {
+   "name": "two incomparable atoms leave nothing between",
+   "scale": {
+    "levels": [
+     "0",
+     "a",
+     "b",
+     "c",
+     "1"
+    ],
+    "leq": "0 below all; 1 above all; a, b, c pairwise incomparable",
+    "below": []
+   },
+   "floor": "a",
+   "ceiling": "b",
+   "bits": 0
+  },
+  {
+   "name": "falsifier: freedom counted in states, not in bits",
+   "scale": {
+    "levels": [
+     "0",
+     "1",
+     "2",
+     "3",
+     "4"
+    ],
+    "kind": "chain"
+   },
+   "floor": "1",
+   "ceiling": "3",
+   "bits": 3,
+   "expected.ok": false
+  }
+ ],
+ "coverage": {
+  "size": 9,
+  "criterion": "a chain (three states, one, all, a conflict), the pentagon from above and from below, the diamond whole and between two atoms, and a falsifier that counts states instead of bits",
+  "could_exclude_counterexamples": true,
+  "why": "three small lattices; the intersection of an upset and a downset is checked on them only"
+ }
+}

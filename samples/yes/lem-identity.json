@@ -1,0 +1,65 @@
+{
+ "about": [
+  "With a trivial meet the residual information is the whole scale less the cost of the block graph, per place.",
+  "Each edge of that graph carries the overlap of two blocks and what their sizes say over it.",
+  "Checked at every trivial-meet pair on four places."
+ ],
+ "cases": [
+  {
+   "name": "places 4",
+   "places": 4,
+   "pairs": 119,
+   "pins": [
+    {
+     "x": [
+      [
+       0,
+       1
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "y": [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       3
+      ]
+     ],
+     "phi": 8.0,
+     "ri": 0.0
+    },
+    {
+     "x": [
+      [
+       0,
+       1,
+       2
+      ],
+      [
+       3
+      ]
+     ],
+     "y": [
+      [
+       0,
+       1
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "phi": 6.754887502,
+     "ri": 0.311278124
+    }
+   ],
+   "expect": true
+  }
+ ]
+}

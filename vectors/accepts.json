@@ -1,12 +1,10 @@
 {
   "about": [
     "MAY this happen at this level — a DIFFERENT question from does-this-collide,",
-    "and the one a caller actually asks on the hot path.",
+    "and the one a caller actually asks on every call.",
     "",
-    "It got its own file because it was the divergence nobody could see: the",
-    "TypeScript packer grew `accepts` and `maskOf` and the Rust one did not, and",
-    "no vector covered the surface, so the suite that exists to keep the two",
-    "honest had nothing to say about it.",
+    "It got its own file because the question asked on every call — may this happen at",
+    "this level — had no vector, so a surface nobody pinned could drift.",
     "",
     "The trap is the last case. An opinion of `nothing above the bottom` collides",
     "with nobody and permits nothing, so a caller checking only for collisions",
@@ -16,7 +14,7 @@
     "size": 8,
     "criterion": "every state, on a chain and on the two-element powerset, asked at the bottom, the top and a middle",
     "could_exclude_counterexamples": true,
-    "why": "two carriers, not all carriers; the exhaustive cross-check against walking the order lives in the unit tests"
+    "why": "two carriers for the named cases; the cross-check against walking the order is done by this file's runner on every statement and level of the chain"
   },
   "chain": ["none", "month", "group", "row"],
   "cases": [
@@ -76,5 +74,6 @@
       "at": "month",
       "accepts": false
     }
-  ]
+  ],
+  "walked": "the packed answer is the walked one: for every statement on the chain and every level, accepts holds exactly when the floor sits at or under the level and the level at or under the ceiling"
 }

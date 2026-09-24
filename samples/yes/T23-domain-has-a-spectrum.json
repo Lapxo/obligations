@@ -1,0 +1,26 @@
+{
+ "cases": [
+  {
+   "epoch": [
+    1,
+    24
+   ],
+   "resolution": 1000,
+   "expect": 42
+  },
+  {
+   "epoch": [
+    7,
+    24
+   ],
+   "resolution": 1000,
+   "expect": 6
+  },
+  {
+   "coordinate": 40,
+   "resolution": 20,
+   "origins": 10,
+   "expect": 30
+  }
+ ]
+}

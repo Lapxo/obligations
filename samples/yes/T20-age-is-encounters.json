@@ -1,0 +1,30 @@
+{
+ "cases": [
+  {
+   "coordinate": "A",
+   "epoch": [
+    0,
+    30
+   ],
+   "origins": 240,
+   "expect": 240,
+   "interval": [
+    0,
+    0.125
+   ]
+  },
+  {
+   "coordinate": "B",
+   "epoch": [
+    0,
+    30
+   ],
+   "origins": 8,
+   "expect": 8,
+   "interval": [
+    0,
+    3.75
+   ]
+  }
+ ]
+}

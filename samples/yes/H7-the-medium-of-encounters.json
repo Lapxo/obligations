@@ -1,0 +1,20 @@
+{
+ "about": [
+  "Stated as a conjecture: what carries an encounter is a medium, and a medium is what two origins can both reach.",
+  "In each of the four instruments the medium is named, and in each the encounter happens where two origins touch that medium and not elsewhere.",
+  "No numbers. What is claimed is that naming the medium is always possible and always the same move."
+ ],
+ "cases": [
+  {
+   "name": "four instruments, one medium each",
+   "media": [
+    "the column of mercury",
+    "the wording both answered",
+    "the beam both arms share",
+    "the room both counters stood in"
+   ],
+   "expect": true,
+   "want": {"media": 4, "shared": "agreed", "apart": "grey"}
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "cases": [
+  {
+   "coordinate": [
+    "a/b",
+    "c",
+    "d"
+   ],
+   "form": [
+    "pentagon",
+    "count"
+   ],
+   "interval": [
+    "b",
+    "c"
+   ],
+   "origins": [
+    [
+     "x",
+     3
+    ],
+    [
+     "y",
+     1
+    ]
+   ],
+   "expect": [
+    "a/b",
+    2,
+    1,
+    2,
+    "y",
+    1
+   ]
+  },
+  {
+   "coordinate": [
+    "a/e"
+   ],
+   "form": [
+    "pentagon",
+    "count"
+   ],
+   "interval": [
+    "none",
+    "all"
+   ],
+   "origins": [
+    [
+     "z",
+     5
+    ]
+   ],
+   "expect": [
+    "a/e",
+    2,
+    0,
+    0,
+    "z",
+    5
+   ]
+  },
+  {
+   "coordinate": [
+    "a/f"
+   ],
+   "form": [
+    "pentagon",
+    "count"
+   ],
+   "interval": [
+    "b",
+    "c"
+   ],
+   "origins": [
+    [
+     "z",
+     5
+    ]
+   ],
+   "epoch": 1,
+   "expect": null
+  }
+ ]
+}

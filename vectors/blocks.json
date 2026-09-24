@@ -1,0 +1,459 @@
+{
+  "about": [
+    "meetBlocks groups the join-irreducibles of [u ^ w, u v w] by COMPARABILITY,",
+    "and priceByBlocks prices each group. This is the localisation pair.",
+    "",
+    "On a chain every irreducible is comparable to every other, so there is always",
+    "exactly ONE block: a case built only on a chain cannot tell a correct",
+    "partition from any other.",
+    "",
+    "And every obvious valuation — index, index squared — is SUPERMODULAR, and",
+    "monotone with supermodular gives g = 0. A file built from those alone reports",
+    "zero premiums everywhere while looking thorough. `pricesAnything` exists to",
+    "say so: the runner calls it, and a case claiming a premium on a valuation",
+    "that prices nothing is refused.",
+    "",
+    "Which lattices have anything to localise:",
+    "",
+    "  A BLOCK CONTRIBUTES A NON-ZERO PREMIUM ONLY IF THE SUBLATTICE IT GENERATES",
+    "  CONTAINS AN INCOMPARABLE PAIR — for a MONOTONE INCREASING valuation, which",
+    "  is the shape a design scale has, since worth rises with level. There",
+    "  `priceByBlocks` returns 0 on all 81 pairs of a 9-rung chain, and the",
+    "  spectrum collapses to {0}.",
+    "",
+    "The condition is monotone, not every. A DECREASING valuation gives a non-zero",
+    "premium in 79 of those 81 pairs and a sawtooth one in 62. And `premium` and",
+    "`gap` are two quantities rather than one: on the same chain `gap` is 0 in",
+    "81/81 for an increasing valuation and non-zero in 64/81 for a decreasing one.",
+    "",
+    "RI <= 0 does not license `g == 0` on its own. Monotone AND supermodular gives",
+    "zero counterexamples while either half alone leaves many, and among MONOTONE",
+    "valuations `g != 0` iff not supermodular, exactly. `pricesAnything` carries",
+    "both halves; `!isSupermodular` is IDENTICALLY FALSE on a chain, so a runner",
+    "that checks only that half passes vacuously.",
+    "",
+    "B2 and M3 fall there for the plainest reason available: all their",
+    "join-irreducibles are atoms, so every pair meets at bottom, so every block is",
+    "a singleton, so every block generates the 2-chain {bottom, x}. Add a STEM —",
+    "one level between bottom and the atoms — and the atoms meet above bottom, the",
+    "block has something to price, and the localised total reconciles exactly.",
+    "That pair of cases is below, and it is what makes this a theorem rather than",
+    "a shrug.",
+    "",
+    "A board that is a PRODUCT OF SCALES has its irreducibles only on the axes, so",
+    "two from different axes meet at bottom, so the blocks ARE the axes and each",
+    "axis is a chain. `priceByBlocks` is therefore identically zero on a product",
+    "of chains. B2 and M3 are not pathological corners; they are the smallest",
+    "members of that family."
+  ],
+  "coverage": {
+    "size": 7,
+    "criterion": "a chain (one block, degenerate); B2 and M3 under a cheap join (blocks are singletons, so the localised total is zero while the whole prices 2); the SAME lattices with a stem, where the atoms meet above bottom and the total reconciles exactly; a product of two chains, which is the shape every real board has; and an interval holding no irreducible",
+    "could_exclude_counterexamples": false
+  },
+  "cases": [
+    {
+      "name": "a chain has exactly one block, so it pins no partition",
+      "levels": [
+        "none",
+        "own",
+        "team",
+        "all"
+      ],
+      "worth": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "u": "all",
+      "w": "own",
+      "pricesAnything": false,
+      "blocks": [
+        [
+          "own",
+          "team",
+          "all"
+        ]
+      ],
+      "premiums": [
+        0
+      ],
+      "total": 0,
+      "whole": 0,
+      "blocksAreChains": [
+        true
+      ]
+    },
+    {
+      "name": "B2 under a cheap join: two incomparable atoms, two blocks",
+      "levels": [
+        "none",
+        "x",
+        "y",
+        "both"
+      ],
+      "leq": [
+        [
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          true
+        ]
+      ],
+      "worth": [
+        0,
+        3,
+        3,
+        4
+      ],
+      "u": "x",
+      "w": "y",
+      "pricesAnything": true,
+      "blocks": [
+        [
+          "x"
+        ],
+        [
+          "y"
+        ]
+      ],
+      "premiums": [
+        0,
+        0
+      ],
+      "total": 0,
+      "whole": 2,
+      "blocksAreChains": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "M3 under a cheap join: three incomparable atoms, three blocks",
+      "levels": [
+        "none",
+        "a",
+        "b",
+        "c",
+        "top"
+      ],
+      "leq": [
+        [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      ],
+      "worth": [
+        0,
+        3,
+        3,
+        3,
+        4
+      ],
+      "u": "a",
+      "w": "b",
+      "pricesAnything": true,
+      "blocks": [
+        [
+          "a"
+        ],
+        [
+          "b"
+        ],
+        [
+          "c"
+        ]
+      ],
+      "premiums": [
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "whole": 2,
+      "blocksAreChains": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "M3 from top to bottom takes in every irreducible and still splits three ways",
+      "levels": [
+        "none",
+        "a",
+        "b",
+        "c",
+        "top"
+      ],
+      "leq": [
+        [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      ],
+      "worth": [
+        0,
+        3,
+        3,
+        3,
+        4
+      ],
+      "u": "top",
+      "w": "none",
+      "pricesAnything": true,
+      "blocks": [
+        [
+          "a"
+        ],
+        [
+          "b"
+        ],
+        [
+          "c"
+        ]
+      ],
+      "premiums": [
+        0,
+        0,
+        0
+      ],
+      "total": 0,
+      "whole": 0,
+      "blocksAreChains": [
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "name": "B2 with a stem: the atoms meet ABOVE bottom, so the block prices and reconciles",
+      "levels": [
+        "n",
+        "s",
+        "x",
+        "y",
+        "b"
+      ],
+      "leq": [
+        [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      ],
+      "worth": [
+        0,
+        1,
+        3,
+        3,
+        4
+      ],
+      "u": "x",
+      "w": "y",
+      "pricesAnything": true,
+      "blocks": [
+        [
+          "s",
+          "x",
+          "y"
+        ]
+      ],
+      "blocksAreChains": [
+        false
+      ],
+      "premiums": [
+        1
+      ],
+      "total": 1,
+      "whole": 1
+    },
+    {
+      "name": "a product of two chains: the blocks ARE the axes, and every axis is a chain",
+      "levels": [
+        "0,0",
+        "0,1",
+        "0,2",
+        "1,0",
+        "1,1",
+        "1,2",
+        "2,0",
+        "2,1",
+        "2,2"
+      ],
+      "product": [
+        3,
+        3
+      ],
+      "worth": [
+        0,
+        3,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "u": "2,0",
+      "w": "0,2",
+      "pricesAnything": true,
+      "blocks": [
+        [
+          "0,1",
+          "0,2"
+        ],
+        [
+          "1,0",
+          "2,0"
+        ]
+      ],
+      "blocksAreChains": [
+        true,
+        true
+      ],
+      "premiums": [
+        0,
+        0
+      ],
+      "total": 0,
+      "whole": 2
+    },
+    {
+      "name": "an interval holding no irreducible is empty, not one empty block",
+      "levels": [
+        "none",
+        "own",
+        "team",
+        "all"
+      ],
+      "worth": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "u": "none",
+      "w": "none",
+      "pricesAnything": false,
+      "blocks": [],
+      "premiums": [],
+      "total": 0,
+      "whole": 0,
+      "blocksAreChains": []
+    }
+  ],
+  "powerset": {"levels": ["none", "x", "y", "both"], "leq": [[true, true, true, true], [false, true, false, true], [false, false, true, true], [false, false, false, true]], "blocks": 2}
+}

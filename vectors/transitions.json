@@ -1,0 +1,402 @@
+{
+  "about": [
+    "A change is not 'widened' or 'narrowed': it is how many irreducibles moved",
+    "and in which direction. Sixteen cells, and three of them are dangerous.",
+    "",
+    "DANGEROUS is derived from the law in `vector.ts`, not read off this file:",
+    "dangerous is every transition whose destination is CONFLICT, and only those.",
+    "A first version of the list had five, from memory — and a fixture cannot tell",
+    "a law from a typo, so it would have frozen the mistake. These cases are the",
+    "CONTROL of the law, which is a different job."
+  ],
+  "coverage": {
+    "size": 9,
+    "criterion": "every dangerous transition, the three near-misses that look dangerous and are not, and the full biography of one value",
+    "could_exclude_counterexamples": true,
+    "why": "a matrix that miscounts any cell fails its case, and the near-misses fail specifically if DANGEROUS is widened past the law"
+  },
+  "law": {
+    "dangerous": [
+      [
+        "REQUIRED",
+        "CONFLICT"
+      ],
+      [
+        "FREE",
+        "CONFLICT"
+      ],
+      [
+        "FORBIDDEN",
+        "CONFLICT"
+      ]
+    ],
+    "why_the_others_are_not": {
+      "REQUIRED→FORBIDDEN": "the writer and the reader left together — nothing breaks",
+      "REQUIRED→FREE": "retiring a writer",
+      "FORBIDDEN→FREE": "opening",
+      "CONFLICT→anything": "fixing"
+    }
+  },
+  "cases": [
+    {
+      "kind": "matrix",
+      "case": "FREE → CONFLICT: the front stops admitting `void` as api-7 starts writing it",
+      "tokens": [
+        "draft",
+        "void"
+      ],
+      "before": {
+        "demanded": [
+          "draft"
+        ],
+        "permitted": [
+          "draft",
+          "void"
+        ]
+      },
+      "after": {
+        "demanded": [
+          "draft",
+          "void"
+        ],
+        "permitted": [
+          "draft"
+        ]
+      },
+      "expect": {
+        "REQUIRED→REQUIRED": 1,
+        "FREE→CONFLICT": 1
+      },
+      "dangerous": [
+        {
+          "from": "FREE",
+          "to": "CONFLICT",
+          "n": 1
+        }
+      ],
+      "moved": 1
+    },
+    {
+      "kind": "matrix",
+      "case": "REQUIRED → CONFLICT: a reader narrows under a value already written",
+      "tokens": [
+        "draft",
+        "sent"
+      ],
+      "before": {
+        "demanded": [
+          "draft",
+          "sent"
+        ],
+        "permitted": [
+          "draft",
+          "sent"
+        ]
+      },
+      "after": {
+        "demanded": [
+          "draft",
+          "sent"
+        ],
+        "permitted": [
+          "draft"
+        ]
+      },
+      "expect": {
+        "REQUIRED→REQUIRED": 1,
+        "REQUIRED→CONFLICT": 1
+      },
+      "dangerous": [
+        {
+          "from": "REQUIRED",
+          "to": "CONFLICT",
+          "n": 1
+        }
+      ],
+      "moved": 1
+    },
+    {
+      "kind": "matrix",
+      "case": "FORBIDDEN → CONFLICT: somebody starts writing a value nobody admits",
+      "tokens": [
+        "draft",
+        "paid"
+      ],
+      "before": {
+        "demanded": [
+          "draft"
+        ],
+        "permitted": [
+          "draft"
+        ]
+      },
+      "after": {
+        "demanded": [
+          "draft",
+          "paid"
+        ],
+        "permitted": [
+          "draft"
+        ]
+      },
+      "expect": {
+        "REQUIRED→REQUIRED": 1,
+        "FORBIDDEN→CONFLICT": 1
+      },
+      "dangerous": [
+        {
+          "from": "FORBIDDEN",
+          "to": "CONFLICT",
+          "n": 1
+        }
+      ],
+      "moved": 1
+    },
+    {
+      "kind": "matrix",
+      "case": "NEAR MISS — REQUIRED → FORBIDDEN is not dangerous: both sides left together",
+      "tokens": [
+        "draft",
+        "sent"
+      ],
+      "before": {
+        "demanded": [
+          "draft",
+          "sent"
+        ],
+        "permitted": [
+          "draft",
+          "sent"
+        ]
+      },
+      "after": {
+        "demanded": [
+          "draft"
+        ],
+        "permitted": [
+          "draft"
+        ]
+      },
+      "expect": {
+        "REQUIRED→REQUIRED": 1,
+        "REQUIRED→FORBIDDEN": 1
+      },
+      "dangerous": [],
+      "moved": 1
+    },
+    {
+      "kind": "matrix",
+      "case": "NEAR MISS — REQUIRED → FREE is retiring a writer",
+      "tokens": [
+        "draft",
+        "sent"
+      ],
+      "before": {
+        "demanded": [
+          "draft",
+          "sent"
+        ],
+        "permitted": [
+          "draft",
+          "sent"
+        ]
+      },
+      "after": {
+        "demanded": [
+          "draft"
+        ],
+        "permitted": [
+          "draft",
+          "sent"
+        ]
+      },
+      "expect": {
+        "REQUIRED→REQUIRED": 1,
+        "REQUIRED→FREE": 1
+      },
+      "dangerous": [],
+      "moved": 1
+    },
+    {
+      "kind": "matrix",
+      "case": "NEAR MISS — CONFLICT → REQUIRED is fixing, and must never be flagged",
+      "tokens": [
+        "draft",
+        "paid"
+      ],
+      "before": {
+        "demanded": [
+          "draft",
+          "paid"
+        ],
+        "permitted": [
+          "draft"
+        ]
+      },
+      "after": {
+        "demanded": [
+          "draft",
+          "paid"
+        ],
+        "permitted": [
+          "draft",
+          "paid"
+        ]
+      },
+      "expect": {
+        "REQUIRED→REQUIRED": 1,
+        "CONFLICT→REQUIRED": 1
+      },
+      "dangerous": [],
+      "moved": 1
+    },
+    {
+      "kind": "matrix",
+      "case": "FORBIDDEN → FREE is opening",
+      "tokens": [
+        "draft",
+        "void"
+      ],
+      "before": {
+        "demanded": [
+          "draft"
+        ],
+        "permitted": [
+          "draft"
+        ]
+      },
+      "after": {
+        "demanded": [
+          "draft"
+        ],
+        "permitted": [
+          "draft",
+          "void"
+        ]
+      },
+      "expect": {
+        "REQUIRED→REQUIRED": 1,
+        "FORBIDDEN→FREE": 1
+      },
+      "dangerous": [],
+      "moved": 1
+    },
+    {
+      "kind": "matrix",
+      "case": "nothing moved: the matrix is diagonal and `moved` is zero",
+      "tokens": [
+        "draft",
+        "sent",
+        "paid"
+      ],
+      "before": {
+        "demanded": [
+          "draft"
+        ],
+        "permitted": [
+          "draft",
+          "sent"
+        ]
+      },
+      "after": {
+        "demanded": [
+          "draft"
+        ],
+        "permitted": [
+          "draft",
+          "sent"
+        ]
+      },
+      "expect": {
+        "REQUIRED→REQUIRED": 1,
+        "FREE→FREE": 1,
+        "FORBIDDEN→FORBIDDEN": 1
+      },
+      "dangerous": [],
+      "moved": 0
+    },
+    {
+      "kind": "biography",
+      "case": "the life of one value, as transitions chained over epochs",
+      "about": [
+        "The life of one value, as transitions chained over epochs. Six states, five",
+        "moves, and exactly one of them dangerous — which is the whole point: a",
+        "value that is opened, written, dropped, retired and closed has one moment",
+        "worth a person's attention, and it is not the one a version number marks."
+      ],
+      "token": "void",
+      "tokens": [
+        "draft",
+        "void"
+      ],
+      "epochs": [
+        {
+          "epoch": "T#1",
+          "demanded": [
+            "draft"
+          ],
+          "permitted": [
+            "draft"
+          ],
+          "state": "FORBIDDEN"
+        },
+        {
+          "epoch": "T#2",
+          "demanded": [
+            "draft"
+          ],
+          "permitted": [
+            "draft",
+            "void"
+          ],
+          "state": "FREE"
+        },
+        {
+          "epoch": "T#3",
+          "demanded": [
+            "draft",
+            "void"
+          ],
+          "permitted": [
+            "draft",
+            "void"
+          ],
+          "state": "REQUIRED"
+        },
+        {
+          "epoch": "T#4",
+          "demanded": [
+            "draft",
+            "void"
+          ],
+          "permitted": [
+            "draft"
+          ],
+          "state": "CONFLICT"
+        },
+        {
+          "epoch": "T#5",
+          "demanded": [
+            "draft"
+          ],
+          "permitted": [
+            "draft",
+            "void"
+          ],
+          "state": "FREE"
+        },
+        {
+          "epoch": "T#6",
+          "demanded": [
+            "draft"
+          ],
+          "permitted": [
+            "draft"
+          ],
+          "state": "FORBIDDEN"
+        }
+      ],
+      "expect_dangerous_steps": 1
+    }
+  ]
+}

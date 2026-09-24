@@ -1,0 +1,73 @@
+{
+ "about": [
+  "A verdict is a fold of what already exists, never code an instrument runs: a region is answered when everything",
+  "that moved lies inside it and no verified origin answers red. An origin never seen green is grey and binds nobody."
+ ],
+ "cases": [
+  {
+   "name": "moved inside, verified green",
+   "region": [
+    "a/b"
+   ],
+   "moved": [
+    "a/b/x"
+   ],
+   "origins": [
+    {
+     "red": false,
+     "verified": true
+    }
+   ],
+   "verdict": "fact"
+  },
+  {
+   "name": "moved outside the region",
+   "region": [
+    "a/b"
+   ],
+   "moved": [
+    "a/b/x",
+    "a/c/y"
+   ],
+   "origins": [],
+   "verdict": "refuse"
+  },
+  {
+   "name": "a verified origin answers red",
+   "region": [
+    "a/b"
+   ],
+   "moved": [
+    "a/b/x"
+   ],
+   "origins": [
+    {
+     "red": true,
+     "verified": true
+    }
+   ],
+   "verdict": "refuse"
+  },
+  {
+   "name": "an origin never seen green answers red",
+   "region": [
+    "a/b"
+   ],
+   "moved": [
+    "a/b/x"
+   ],
+   "origins": [
+    {
+     "red": true,
+     "verified": false
+    }
+   ],
+   "verdict": "fact"
+  }
+ ],
+ "coverage": {
+  "size": 4,
+  "criterion": "moved inside and verified green, moved outside, a verified red, and a red never seen green",
+  "could_exclude_counterexamples": false
+ }
+}

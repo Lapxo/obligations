@@ -1,0 +1,28 @@
+{
+ "about": [
+  "The rule that makes the game is in the field and not above it: a cell one origin has claimed is grey, and nothing that origin does alone will close it.",
+  "Twenty cells each with one origin, and no look at all, close nothing and cover nothing. Forty looks by another origin close fifteen and cover every cell.",
+  "So what an origin is worth is asymmetric \u2014 nothing over its own claims, everything over another's \u2014 and the referee is the rule itself, which no player can suspend."
+ ],
+ "cases": [
+  {
+   "name": "twenty cells, one origin each",
+   "cells": 20,
+   "seed": 11,
+   "draw": 1,
+   "spread": 12,
+   "alone": {
+    "looks": 0,
+    "closed": 0,
+    "coverage": 0
+   },
+   "another": {
+    "looks": 40,
+    "closed": 15,
+    "coverage": 100
+   },
+   "verdictAlone": "grey",
+   "expect": true
+  }
+ ]
+}

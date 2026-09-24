@@ -1,0 +1,54 @@
+{
+ "cases": [
+  {
+   "form": [
+    "chain5",
+    "height"
+   ],
+   "interval": [
+    "l4",
+    "l1"
+   ]
+  },
+  {
+   "form": [
+    "diamond",
+    "height"
+   ],
+   "interval": [
+    "x",
+    "y"
+   ]
+  },
+  {
+   "form": [
+    "diamond",
+    "square"
+   ],
+   "interval": [
+    "both",
+    "x"
+   ]
+  },
+  {
+   "form": [
+    "pentagon",
+    "height"
+   ],
+   "interval": [
+    "c",
+    "b"
+   ]
+  },
+  {
+   "form": [
+    "pentagon",
+    "square"
+   ],
+   "interval": [
+    "all",
+    "a"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "cases": [
+  {
+   "form": "chain",
+   "resolution": 5,
+   "interval": [
+    0,
+    4
+   ],
+   "expect": "FREE"
+  },
+  {
+   "form": "chain",
+   "resolution": 5,
+   "interval": [
+    2,
+    4
+   ],
+   "expect": "REQUIRED"
+  },
+  {
+   "form": "chain",
+   "resolution": 5,
+   "interval": [
+    0,
+    2
+   ],
+   "expect": "FORBIDDEN"
+  },
+  {
+   "form": "chain",
+   "resolution": 5,
+   "interval": [
+    3,
+    1
+   ],
+   "expect": "CONFLICT"
+  },
+  {
+   "form": "diamond",
+   "interval": [
+    "x",
+    "y"
+   ],
+   "expect": "CONFLICT"
+  }
+ ]
+}

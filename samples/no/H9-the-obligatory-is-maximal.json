@@ -1,0 +1,12 @@
+{
+ "brief": "a part keeps both",
+ "about": [
+  "The falsifier: a part the obligatory lacks that keeps the four states and the six operations and is not a reading of one of them."
+ ],
+ "cases": [
+  {
+   "name": "a part that keeps four states and six operations and is not a reading of one",
+   "expected.ok": false
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "cases": [
+  {
+   "interval": [
+    0,
+    1
+   ],
+   "origins": [
+    0.3,
+    0.1
+   ],
+   "epoch": 5,
+   "expect": "widens"
+  },
+  {
+   "interval": [
+    0,
+    1
+   ],
+   "origins": [
+    0.05,
+    0.2
+   ],
+   "epoch": 10,
+   "expect": "zero"
+  },
+  {
+   "epoch": 10,
+   "interval": [
+    [],
+    [
+     [
+      3,
+      8
+     ]
+    ]
+   ],
+   "expect": true
+  }
+ ]
+}

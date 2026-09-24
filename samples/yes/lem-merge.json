@@ -1,0 +1,95 @@
+{
+ "about": [
+  "Merging two blocks costs at least two, and exactly two only when both are single places.",
+  "So coarsening a reading by one block costs at least two, every time.",
+  "Checked on every pair of block sizes that fits in six places, and on every coarsening in the partition lattice on four."
+ ],
+ "cases": [
+  {
+   "name": "block sizes within six",
+   "sizes": [
+    [
+     1,
+     1,
+     2.0
+    ],
+    [
+     1,
+     2,
+     2.754887502
+    ],
+    [
+     1,
+     3,
+     3.245112498
+    ],
+    [
+     1,
+     4,
+     3.609640474
+    ],
+    [
+     1,
+     5,
+     3.90013453
+    ],
+    [
+     2,
+     1,
+     2.754887502
+    ],
+    [
+     2,
+     2,
+     4.0
+    ],
+    [
+     2,
+     3,
+     4.854752972
+    ],
+    [
+     2,
+     4,
+     5.509775004
+    ],
+    [
+     3,
+     1,
+     3.245112498
+    ],
+    [
+     3,
+     2,
+     4.854752972
+    ],
+    [
+     3,
+     3,
+     6.0
+    ],
+    [
+     4,
+     1,
+     3.609640474
+    ],
+    [
+     4,
+     2,
+     5.509775004
+    ],
+    [
+     5,
+     1,
+     3.90013453
+    ]
+   ],
+   "equality": [
+    1,
+    1
+   ],
+   "places": 4,
+   "expect": true
+  }
+ ]
+}

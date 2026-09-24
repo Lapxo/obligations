@@ -1,0 +1,24 @@
+{
+ "about": [
+  "A lock is mostly settled. Of the claims standing on this tree, the form of most leaves them one legal state: they are applied, and nothing about them is open.",
+  "What the form leaves with more than one state splits again: a reading closes some, some stand in force with nothing yet read against them, and a few say of themselves that they are decisions and are the only ones open.",
+  "The four classes are a partition: every claim is in exactly one, and their sizes fall in that order, most settled first."
+ ],
+ "cases": [
+  {
+   "name": "this tree, at the epoch it was read",
+   "claims": 513,
+   "formLeavesOpen": 51,
+   "oneLegalState": 459,
+   "inForceUnread": 46,
+   "open": 3,
+   "obligations": {
+    "claims": 91,
+    "formLeavesOpen": 5,
+    "oneLegalState": 86,
+    "open": 0
+   },
+   "expect": true
+  }
+ ]
+}

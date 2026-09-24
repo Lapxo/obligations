@@ -1,0 +1,15 @@
+{
+ "cases": [
+  {
+   "epoch": 50,
+   "coordinate": 200,
+   "origins": 3,
+   "resolution": 10,
+   "expect": [
+    43,
+    190,
+    60
+   ]
+  }
+ ]
+}

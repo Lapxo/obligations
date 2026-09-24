@@ -7,14 +7,15 @@
     "marks, and an implementation that compares both the same way passes",
     "the reflexive cases and fails the rest.",
     "",
-    "A statement nothing can satisfy entails everything, which is the last",
-    "case and the one nobody thinks to write."
+    "The product order: a non-maximal cross does not explode. Only the",
+    "strongest cross (top floor, bottom ceiling) still entails every",
+    "other generated-by-one pair."
   ],
   "coverage": {
-    "size": 8,
+    "size": 9,
     "criterion": "reflexive, strictly narrower each way, incomparable, and an unsatisfiable statement on both sides",
     "could_exclude_counterexamples": true,
-    "why": "one scale only; reflexivity and transitivity over every pair are asserted in the unit tests"
+    "why": "one scale for the named cases; over every pair of the chain's twenty-five statements entails is checked against the product order, and a conjunction against each of its parts"
   },
   "chain": ["none", "own", "team", "region", "all"],
   "cases": [
@@ -65,6 +66,52 @@
       "a": ["none", "all"],
       "b": ["all", "none"],
       "entails": false
+    },
+    {
+      "name": "a cross below the strongest does not entail another: crosses are ordered, not one bottom",
+      "a": ["all", "own"],
+      "b": ["region", "none"],
+      "entails": false
     }
-  ]
+  ],
+  "orders": [
+    {
+      "name": "M2 — a non-canonical cross, the case the chain never asked",
+      "levels": ["none", "x", "y", "both"],
+      "leq": [
+        [true, true, true, true],
+        [false, true, false, true],
+        [false, false, true, true],
+        [false, false, false, true]
+      ],
+      "cases": [
+        {
+          "name": "the strongest cross still entails an inhabited pair",
+          "a": ["both", "none"],
+          "b": ["y", "y"],
+          "entails": true
+        },
+        {
+          "name": "non-canonical cross does not entail an inhabited incomparable pair",
+          "a": ["x", "none"],
+          "b": ["y", "y"],
+          "entails": false
+        },
+        {
+          "name": "an inhabited one does not entail a non-canonical cross",
+          "a": ["y", "y"],
+          "b": ["x", "none"],
+          "entails": false
+        },
+        {
+          "name": "two non-canonical crosses do not entail each other",
+          "a": ["x", "none"],
+          "b": ["y", "none"],
+          "entails": false
+        }
+      ]
+    }
+  ],
+  "product": "entails is the product order: over the chain's twenty-five pairs of a floor and a ceiling, a entails b exactly when b's floor sits under a's and a's ceiling under b's",
+  "composition": "a conjunction entails each of its parts, over every pair of inhabited statements on the chain"
 }

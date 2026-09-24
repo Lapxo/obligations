@@ -1,0 +1,45 @@
+{
+ "about": [
+  "A policy is four weights and nothing else: what a cell is worth to look at next is its reach, how together its claims arrived, what stands beside it and what it still leaves free.",
+  "Over one field, four specialists and one mixed policy: the two that weigh only reach or only what stands beside a cell pile on a single cell and close nothing; the two that weigh width or coherence close almost everything.",
+  "The mixed policy closes more than any specialist and forks fewer times than either of the ones that close, which is the whole claim: four weights beat one, and the relation is the law while the counts belong to whoever reproduces them."
+ ],
+ "cases": [
+  {
+   "name": "sixty cells, a hundred and twenty looks",
+   "cells": 60,
+   "looks": 120,
+   "seed": 20260922,
+   "draw": 7,
+   "spread": 12,
+   "policies": {
+    "closer": {
+     "closed": 51,
+     "forks": 9,
+     "coverage": 100
+    },
+    "connector": {
+     "closed": 0,
+     "forks": 1,
+     "coverage": 2
+    },
+    "prudent": {
+     "closed": 48,
+     "forks": 12,
+     "coverage": 100
+    },
+    "explorer": {
+     "closed": 0,
+     "forks": 1,
+     "coverage": 2
+    },
+    "mixed": {
+     "closed": 52,
+     "forks": 8,
+     "coverage": 100
+    }
+   },
+   "expect": true
+  }
+ ]
+}

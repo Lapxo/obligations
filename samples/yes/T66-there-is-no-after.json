@@ -1,0 +1,20 @@
+{
+ "about": [
+  "There is no after: what stands at a cell is what the latest epoch says, and the order the claims arrived in never decides.",
+  "Three claims at three epochs, in every order they could have arrived, leave one reading."
+ ],
+ "cases": [
+  {
+   "name": "three claims, six arrivals",
+   "epochs": [
+    0,
+    1,
+    2
+   ],
+   "orders": 6,
+   "results": 1,
+   "latest": 2,
+   "expect": true
+  }
+ ]
+}

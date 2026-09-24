@@ -1,0 +1,17 @@
+{
+ "cases": [
+  {
+   "origins": [
+    [
+     "x",
+     [
+      0,
+      10
+     ]
+    ]
+   ],
+   "expect": "FREE",
+   "expected.ok": false
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+  "about": [
+    "pack ∘ unpack = id on the image of pack iff the scale is distributive.",
+    "unpack ∘ pack = id on every finite lattice. coherent is the four masks",
+    "agreeing under incidence.",
+    "",
+    "The trap: asserting pack and unpack are exact inverses without",
+    "distinguishing direction. On M3, and(pack(a), pack(b)) unpacks to top",
+    "and packing top adds the third atom. The mask {a,b} is not in the",
+    "image of pack."
+  ],
+  "coverage": {
+    "size": 3,
+    "criterion": "a chain (always coherent), B2 (distributive, not a chain), and the M3 witness that is not canonical",
+    "could_exclude_counterexamples": false
+  },
+  "cases": [
+    {
+      "name": "every packed unit on a chain is coherent",
+      "kind": "all-packed-coherent",
+      "chain": ["none", "own", "team", "region", "all"]
+    },
+    {
+      "name": "every packed unit on B2 is coherent",
+      "kind": "all-packed-coherent",
+      "levels": ["none", "x", "y", "both"],
+      "leq": [
+        [true, true, true, true],
+        [false, true, false, true],
+        [false, false, true, true],
+        [false, false, false, true]
+      ]
+    },
+    {
+      "name": "M3: fuse of a and b is not canonical",
+      "kind": "m3-fuse-not-canonical",
+      "levels": ["bot", "a", "b", "c", "top"],
+      "leq": [
+        [true, true, true, true, true],
+        [false, true, false, false, true],
+        [false, false, true, false, true],
+        [false, false, false, true, true],
+        [false, false, false, false, true]
+      ],
+      "left": { "floor": "a", "ceiling": "top" },
+      "right": { "floor": "b", "ceiling": "top" },
+      "unpacked_floor": "top",
+      "canonical_adds": "c"
+    }
+  ]
+}
