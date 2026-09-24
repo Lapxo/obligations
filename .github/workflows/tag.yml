@@ -1,0 +1,19 @@
+name: tag
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: tag the version the manifest names, once
+        run: |
+          version="v$(node -p "require('./package.json').version")"
+          if git rev-parse -q --verify "refs/tags/$version" >/dev/null; then echo "$version is tagged"; exit 0; fi
+          git tag "$version"
+          git push origin "$version"

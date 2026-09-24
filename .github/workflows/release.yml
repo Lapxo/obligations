@@ -1,0 +1,54 @@
+name: release
+on:
+  workflow_run:
+    workflows: [tag]
+    types: [completed]
+  push:
+    tags: ['v*']
+jobs:
+  release:
+    if: github.event_name == 'push' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm ci
+      - run: npm run build
+      - name: release the version with its tarball, once
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="v$(node -p "require('./package.json').version")"
+          if gh release view "$version" >/dev/null 2>&1; then echo "$version is released"; exit 0; fi
+          tarball=$(npm pack --silent)
+          gh release create "$version" "$tarball" --title "$version" --notes "$version, as its lock holds it"
+  publish:
+    needs: release
+    runs-on: ubuntu-latest
+    environment: release
+    continue-on-error: true
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+      - run: npm ci
+      - run: npm run build
+      - name: publish the version once, by the trusted publisher
+        run: |
+          name=$(node -p "require('./package.json').name")
+          version=$(node -p "require('./package.json').version")
+          if npm view "$name@$version" version >/dev/null 2>&1; then echo "$name@$version is published"; exit 0; fi
+          npm publish --access public
