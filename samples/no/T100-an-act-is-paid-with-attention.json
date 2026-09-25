@@ -1,0 +1,15 @@
+{
+ "about": [
+  "What would break T100, run against the object."
+ ],
+ "cases": [
+  {
+   "name": "falsifier: an attention that holds more than its looks over its forgetting",
+   "input": {
+    "looks": 20
+   },
+   "want": true,
+   "expected.ok": false
+  }
+ ]
+}

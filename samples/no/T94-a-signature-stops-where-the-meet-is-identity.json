@@ -1,0 +1,15 @@
+{
+ "about": [
+  "What would break T94, run against the object."
+ ],
+ "cases": [
+  {
+   "name": "falsifier: a signature that visits every cell beneath its bound",
+   "input": {
+    "hi": 97
+   },
+   "want": "all",
+   "expected.ok": false
+  }
+ ]
+}

@@ -157,12 +157,67 @@ bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=sr
 bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/views/field/wave.ts|samples/yes/T48-epoch-is-phase.json restsOn=law/T48-epoch-is-phase role=writes scope=offers/field/fringes shape=value value=T48-epoch-is-phase view=field
 bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/views/field/wave.ts|samples/yes/T49-amplitude-has-sign-and-phase.json restsOn=law/T49-amplitude-has-sign-and-phase role=writes scope=offers/field/seenAs shape=value value=T49-amplitude-has-sign-and-phase view=field
 bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/lattice/obligatory.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory role=writes scope=offers/field/cell shape=value value=D11-the-obligatory view=field
-bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/lattice/obligatory.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory role=writes scope=offers/field/meet shape=value value=D11-the-obligatory view=field
-bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/lattice/obligatory.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory role=writes scope=offers/field/encounter shape=value value=D11-the-obligatory view=field
-bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/lattice/obligatory.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory role=writes scope=offers/field/observe shape=value value=D11-the-obligatory view=field
-bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/lattice/obligatory.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory role=writes scope=offers/field/sign shape=value value=D11-the-obligatory view=field
-bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/lattice/obligatory.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory|law/A7-freedom-conserved role=writes scope=offers/field/join shape=value value=D11-the-obligatory view=field
-bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/lattice/obligatory.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory role=writes scope=offers/field/refine shape=value value=D11-the-obligatory view=field
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/lattice/obligatory.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory role=writes scope=offers/field/parts shape=value value=D11-the-obligatory view=field
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/lattice/obligatory.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory|law/A8-four-states role=writes scope=offers/field/state shape=value value=D11-the-obligatory view=field
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/lattice/obligatory.ts|samples/yes/T99-the-fold-is-total.json restsOn=law/T99-the-fold-is-total role=writes scope=offers/field/restOf shape=value value=T99-the-fold-is-total view=field
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/lattice/obligatory.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory|law/A7-freedom-conserved role=writes scope=offers/field/mark shape=value value=D11-the-obligatory view=field
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/field/meet.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory role=writes scope=offers/field/meet shape=value value=D11-the-obligatory view=field
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/meet/pole value=ceiling
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/meet/sense value=narrow
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/meet/reach value=local
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/meet/pays value=origin
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/meet/needs value=none
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/meet/sign value=+1
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/field/join.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory|law/A7-freedom-conserved role=writes scope=offers/field/join shape=value value=D11-the-obligatory view=field
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/join/pole value=ceiling
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/join/sense value=widen
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/join/reach value=local
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/join/pays value=origin
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/join/needs value=witness
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/join/sign value=+1
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/field/observe.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory role=writes scope=offers/field/observe shape=value value=D11-the-obligatory view=field
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/observe/pole value=floor
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/observe/sense value=raise
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/observe/reach value=local
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/observe/pays value=origin
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/observe/needs value=none
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/observe/sign value=+1|-1
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/field/sign.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory role=writes scope=offers/field/sign shape=value value=D11-the-obligatory view=field
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/sign/pole value=ceiling
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/sign/sense value=narrow
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/sign/reach value=travels
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/sign/pays value=origin
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/sign/needs value=coverage
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/sign/sign value=+1
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/field/require.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory role=writes scope=offers/field/require shape=value value=D11-the-obligatory view=field
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/require/pole value=floor
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/require/sense value=raise
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/require/reach value=travels
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/require/pays value=origin
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/require/needs value=coverage
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/require/sign value=+1
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/field/encounter.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory role=writes scope=offers/field/encounter shape=value value=D11-the-obligatory view=field
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/encounter/pole value=none
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/encounter/sense value=count
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/encounter/reach value=local
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/encounter/pays value=origin
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/encounter/needs value=none
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/encounter/sign value=+1
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/field/refine.ts|samples/yes/obligatory.json restsOn=law/D11-the-obligatory role=writes scope=offers/field/refine shape=value value=D11-the-obligatory view=field
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/refine/pole value=none
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/refine/sense value=rescale
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/refine/reach value=local
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/refine/pays value=origin
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/refine/needs value=none
+bound-lock/1 at=policy:acts by=target form=alphabet measure=id role=writes scope=offers/field/refine/sign value=+1
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/field/sign.ts|samples/yes/T94-a-signature-stops-where-the-meet-is-identity.json restsOn=law/T94-a-signature-stops-where-the-meet-is-identity role=writes scope=offers/field/bites shape=value value=T94-a-signature-stops-where-the-meet-is-identity view=field
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/field/sign.ts|samples/yes/T94-a-signature-stops-where-the-meet-is-identity.json restsOn=law/T94-a-signature-stops-where-the-meet-is-identity role=writes scope=offers/field/restingOn shape=value value=T94-a-signature-stops-where-the-meet-is-identity view=field
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/field/encounter.ts|samples/yes/T87-the-quarter-turn.json restsOn=law/T87-the-quarter-turn role=writes scope=offers/field/cancels shape=value value=T87-the-quarter-turn view=field
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/field/encounter.ts|samples/yes/T87-the-quarter-turn.json restsOn=law/T87-the-quarter-turn role=writes scope=offers/field/pairs shape=value value=T87-the-quarter-turn view=field
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/field/encounter.ts|samples/yes/T89-disagreement-is-where-to-look.json restsOn=law/T89-disagreement-is-where-to-look role=writes scope=offers/field/laminar shape=value value=T89-disagreement-is-where-to-look view=field
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/debit/observer.ts|samples/yes/T100-an-act-is-paid-with-attention.json restsOn=law/T100-an-act-is-paid-with-attention role=writes scope=offers/field/price shape=value value=T100-an-act-is-paid-with-attention view=field
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/debit/observer.ts|samples/yes/T93-every-act-is-paid-by-its-origin.json restsOn=law/T93-every-act-is-paid-by-its-origin role=writes scope=offers/field/looksLeft shape=value value=T93-every-act-is-paid-by-its-origin view=field
+bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/debit/observer.ts|samples/yes/T93-every-act-is-paid-by-its-origin.json restsOn=law/T93-every-act-is-paid-by-its-origin|law/T100-an-act-is-paid-with-attention role=writes scope=offers/field/pay shape=value value=T93-every-act-is-paid-by-its-origin view=field
 bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/views/product/design.ts|samples/yes/T51-the-shape-of-knowing-can-be-designed.json restsOn=law/T51-the-shape-of-knowing-can-be-designed role=writes scope=offers/product/horizonTotal shape=value value=T51-the-shape-of-knowing-can-be-designed view=product
 bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/views/product/design.ts|samples/yes/T51-the-shape-of-knowing-can-be-designed.json restsOn=law/T51-the-shape-of-knowing-can-be-designed role=writes scope=offers/product/design shape=value value=T51-the-shape-of-knowing-can-be-designed view=product
 bound-lock/1 at=policy:offers by=target form=alphabet measure=extension needs=src/views/product/design.ts|samples/yes/T51-the-shape-of-knowing-can-be-designed.json restsOn=law/T51-the-shape-of-knowing-can-be-designed role=writes scope=offers/product/sited shape=value value=T51-the-shape-of-knowing-can-be-designed view=product

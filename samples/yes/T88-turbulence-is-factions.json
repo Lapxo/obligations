@@ -1,0 +1,18 @@
+{
+ "about": [
+  "Forks over closes for phases spread evenly, pooled over three thousand draws; for two equal camps facing each other; and with a third camp in quadrature."
+ ],
+ "cases": [
+  {
+   "name": "even phases, two camps, a third",
+   "seed": 88,
+   "trials": 3000,
+   "origins": 12,
+   "camp": 100,
+   "noise": 0.4,
+   "uniform": 0.994,
+   "twoCamps": 1.01,
+   "thirdCamp": 0.8
+  }
+ ]
+}

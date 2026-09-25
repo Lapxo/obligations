@@ -1,0 +1,16 @@
+{
+ "about": [
+  "What would break T87, run against the object."
+ ],
+ "cases": [
+  {
+   "name": "falsifier: a pair within a quarter turn that cancels",
+   "input": {
+    "a": 0,
+    "b": 1.2
+   },
+   "want": true,
+   "expected.ok": false
+  }
+ ]
+}

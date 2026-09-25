@@ -7,7 +7,8 @@
   "All four corners are reached: one origin that pins a level is REQUIRED, two that leave the scale open are FREE, two that touch under a ceiling below the top are FORBIDDEN, and two that cannot both hold are CONFLICT.",
   "The object, written down once: two poles read at a resolution, origins that carry the epoch they spoke at and a sign, and an order of rest against other cells.",
   "Five operations answer for it and there are no others. Meet is what the origins hold together, encounter is how many met and what that makes, observe is one more origin at a cost, sign is a bound narrowed wherever it is rested on, refine is the same cell read at another resolution.",
-  "A withdrawal takes back its own write and nothing else, so a cell that was written and withdrawn at one epoch is a cell nobody claimed."
+  "A withdrawal takes back its own write and nothing else, so a cell that was written and withdrawn at one epoch is a cell nobody claimed.",
+  "Eight acts in four pairs answer for it under seven names, each an offer with a descriptor, and what a descriptor forces is derived from it and refused: a widening that travels, a floor required past a signed ceiling, a withdrawal that leaves its pole where the claim put it, and an order of rest that returns to itself."
  ],
  "cases": [
   {
@@ -214,6 +215,29 @@
    "signLowers": 3,
    "joinRaises": 1,
    "expect": true
+  },
+  {
+   "name": "what each act's descriptor derives is refused",
+   "acts": [
+    "encounter",
+    "join",
+    "meet",
+    "observe",
+    "refine",
+    "require",
+    "sign"
+   ],
+   "derived": [
+    "join: a widen that travels",
+    "observe: a withdrawal that leaves the pole where the claim put it",
+    "sign: a rest cycle",
+    "require: a floor required past a signed ceiling",
+    "require: a rest cycle"
+   ],
+   "control": [
+    false,
+    false
+   ]
   }
  ]
 }

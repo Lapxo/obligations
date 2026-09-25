@@ -1,0 +1,16 @@
+{
+ "about": [
+  "What would break T88, run against the object."
+ ],
+ "cases": [
+  {
+   "name": "falsifier: phases gathered at random give forks over closes near one",
+   "input": {
+    "origins": 60,
+    "sigma": 0.5
+   },
+   "want": 1,
+   "expected.ok": false
+  }
+ ]
+}

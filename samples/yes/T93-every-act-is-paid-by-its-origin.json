@@ -1,0 +1,33 @@
+{
+ "about": [
+  "The observer is a cell: its floor no look, its ceiling thirty; five looks later its ceiling is twenty-five.",
+  "Its reach over fifteen cells is where its region meets theirs."
+ ],
+ "cases": [
+  {
+   "name": "an observer of thirty looks",
+   "looks": 30,
+   "taken": 5,
+   "left": 25,
+   "cells": [
+    "a/1",
+    "a/2",
+    "a/3",
+    "a/4",
+    "a/5",
+    "a/6",
+    "a/7",
+    "a/8",
+    "a/9",
+    "a/10",
+    "b/1",
+    "b/2",
+    "b/3",
+    "b/4",
+    "b/5"
+   ],
+   "region": "a",
+   "reach": 10
+  }
+ ]
+}

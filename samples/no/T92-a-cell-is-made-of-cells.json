@@ -1,0 +1,15 @@
+{
+ "about": [
+  "What would break T92, run against the object."
+ ],
+ "cases": [
+  {
+   "name": "falsifier: a cell read at two that is not the meet of its parts",
+   "input": {
+    "depth": 2
+   },
+   "want": true,
+   "expected.ok": false
+  }
+ ]
+}

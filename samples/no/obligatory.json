@@ -1,5 +1,5 @@
 {
- "about": "The nine ways the object can be got wrong: six this library got wrong at least once, and three a join gets wrong when it travels, narrows, or lands with nobody standing for it. A cell with no ceiling is not a cell; a meet that assumes the reals is a meet of one lattice pretending to be the meet; a state written as a word in the code is a state the lattice did not give. A signature that edits an origin's claim has forged a reading; one that leaves a resting cell where it was has not travelled; and a withdrawal matched by value takes back a claim nobody made.",
+ "about": "The ways the object can be got wrong that no act's descriptor derives. A cell with no ceiling is not a cell; a meet that assumes the reals is a meet of one lattice pretending to be the meet; a state written as a word in the code is a state the lattice did not give. A signature that edits an origin's claim has forged a reading, and a withdrawal matched by value takes back a claim nobody made. And a floor raised by some composition of the other acts, taken in every order, would make require a second name for what was already there. What a descriptor forces is derived from the descriptors and run over every act, never written here: a widening that travels, narrows or lands with nobody standing for it, a travelling act that misses a cell resting on its bound, a narrowing that opens freedom, a pole stored, a withdrawal that does not restore.",
  "cases": [
   {
    "name": "a cell with no ceiling",
@@ -72,25 +72,6 @@
    "expected.ok": false
   },
   {
-   "name": "a signature that leaves a resting cell unchanged",
-   "input": {
-    "claim": [
-     0,
-     100
-    ],
-    "signed": [
-     0,
-     45
-    ]
-   },
-   "call": "sign",
-   "want": [
-    0,
-    45
-   ],
-   "expected.ok": false
-  },
-  {
    "name": "a withdrawal matched by value",
    "input": {
     "claims": [
@@ -114,59 +95,23 @@
    "expected.ok": false
   },
   {
-   "name": "a join that reaches a resting cell",
+   "name": "a floor raised by a composition of the other acts",
    "input": {
-    "resting": 3,
-    "signed": [
-     0,
-     45
-    ],
-    "join": [
-     0,
-     80
-    ]
-   },
-   "call": "join",
-   "wantOthers": [
-    0,
-    45
-   ],
-   "expected.ok": false
-  },
-  {
-   "name": "a join that narrows",
-   "input": {
-    "signed": [
-     0,
-     45
-    ],
-    "join": [
+    "claim": [
      10,
-     20
-    ]
-   },
-   "call": "join",
-   "want": [
-    0,
-    45
-   ],
-   "expected.ok": false
-  },
-  {
-   "name": "a join with no witness",
-   "input": {
+     90
+    ],
     "signed": [
-     0,
+     -1000,
      45
     ],
     "join": [
-     0,
+     -1000,
      80
-    ],
-    "witness": ""
+    ]
    },
-   "call": "join",
-   "throws": "REFUSE·join",
+   "call": "require",
+   "want": false,
    "expected.ok": false
   }
  ]

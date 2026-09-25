@@ -54,3 +54,29 @@ origins makes of it.
 Stated once, in `src/laws/laws.bound`, each law carries its statement, what it rests on, the view it is read in, its
 case and, where it can be falsified, its falsifier. This page argues why the laws belong together; it counts nothing
 that the render of the lock already counts.
+
+## What one origin measured
+
+Each reading below was measured once, by one origin, on the object of this package; none is a law, since a claim from
+one origin is potential until a second meets it. Each names the measurement it rests on and the number it gave.
+
+- **The encounter is the quantum.** An encounter is a whole event with a phase, and bits are what it moves: a second
+  origin landing a claim of forty-one states on a cell of a hundred and one closed 1.301 bits, and its withdrawal in
+  phase gave all 1.301 back and left the two with nothing between them.
+- **A crossover, not a transition.** Forks over closes crosses one only where the phases stop being one coherence:
+  spread evenly they gave 0.994 over three thousand draws, and two camps facing each other 1.01. One coherence never
+  reaches it: at the spread where half the differences exceed a quarter turn on the line, the quarter turn, which
+  wraps, forked 0.453 of the pairs, forks over closes 0.83, and the fork share of one coherence stays below a half at
+  every spread, approaching it only as the phases become even.
+- **Interaction is encounter.** Thirty cells in two clusters met in 166 of their 435 pairs and forked in 269; the meets
+  joined them in two components, and nothing interacted across the forks.
+- **Geodesics.** Distance is the walk between lookings: among two thousand cells linked by the origins they share, the
+  whole map of distances visited 1997, the cells within three steps 158, and the nearest cell nobody had looked at 2.
+- **The field.** Many objects make one: the thirty cells above hold no meet together though 166 pairs meet, and five
+  thousand cells read one part deeper changed state 683 times, while a third step changed none.
+- **Flux.** Attention flows through a field like a current: twenty looks an epoch, each closing six bits, and a look
+  forgotten ten epochs after it was taken settle at 1200 bits held, what twenty looks over ten epochs can hold.
+- **The thermodynamics.** Temperature is phase dispersion: at half the median spread one coherence is laminar, and
+  gathered at a spread of a half radian sixty origins fork almost never. The vacuum holds maximal freedom: a cell no
+  origin has looked at keeps all six of its bits. Acts conserve by signature: over two hundred epochs freedom left and
+  what the looks closed summed to 1800 bits at every one.

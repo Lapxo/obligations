@@ -1,0 +1,15 @@
+{
+ "about": [
+  "What would break T89, run against the object."
+ ],
+ "cases": [
+  {
+   "name": "falsifier: looks blind to disagreement close as many or more",
+   "input": {
+    "alpha": 0
+   },
+   "want": true,
+   "expected.ok": false
+  }
+ ]
+}

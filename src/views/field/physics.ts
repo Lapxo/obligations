@@ -1,4 +1,4 @@
-import { meet } from '../../lattice/obligatory.ts';
+import { meet } from '../../field/meet.ts';
 import type { Lattice } from '../../lattice/lattice.ts';
 import { coherence } from './wave.ts';
 import type { Claim, Obligatory } from '../../lattice/obligatory.ts';

@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Cite it by the paper it rests on, Two-Sided Constraints on a Valued Lattice."
 type: software
 title: "@lapxo/obligations"
-version: "0.2.0"
+version: "0.3.0"
 authors:
   - name: "Lapxo"
 repository-code: "https://github.com/lapxo/obligations"

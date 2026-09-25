@@ -53,6 +53,17 @@ export const sample = (side: 'yes' | 'no', name: string): Vector => {
   return { ...held, cases };
 };
 
+/** What each act's offer says of it, one suffix line per field of its descriptor, read from the offers of this package. */
+export const descriptors = (): ReadonlyMap<string, Readonly<Record<string, string>>> => {
+  const out = new Map<string, Record<string, string>>();
+  for (const line of observeFile(join(import.meta.dirname, '..', 'offers.bound'), 'utf8').split('\n')) {
+    const field = /\sscope=offers\/[^/\s]+\/([^/\s]+)\/(pole|sense|reach|pays|needs|sign)\s/.exec(line);
+    const value = /\svalue=(\S+)/.exec(line)?.[1];
+    if (field !== null && value !== undefined) out.set(field[1]!, { ...(out.get(field[1]!) ?? {}), [field[2]!]: value });
+  }
+  return out;
+};
+
 export const FILES = readdirSync(VECTORS)
   .filter((f) => f.endsWith('.json'))
   .map((f) => f.slice(0, -'.json'.length))

@@ -1,0 +1,17 @@
+{
+ "about": [
+  "Three hundred cells of sixty-four states each, one observer of twenty looks an epoch paying each look from its own ceiling, and a look forgotten ten epochs after it was taken, over two hundred epochs."
+ ],
+ "cases": [
+  {
+   "name": "three hundred cells, twenty looks",
+   "cells": 300,
+   "width": 64,
+   "looks": 20,
+   "epochs": 200,
+   "forget": 10,
+   "steady": 1200,
+   "bound": 1200
+  }
+ ]
+}

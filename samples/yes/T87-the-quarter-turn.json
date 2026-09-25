@@ -1,0 +1,25 @@
+{
+ "about": [
+  "The quarter turn read three ways over a grid of phase pairs: the cancel test, the summed intensity below two, and the angle beyond π/2.",
+  "Phases drawn at σ = π/(2·0.6745·√2), where half the differences on the line exceed a quarter turn since 0.6745 is the median of a unit normal's size; counted by the quarter turn, which wraps, fewer pairs cancel, and one coherence stays laminar at that spread and below it."
+ ],
+ "cases": [
+  {
+   "name": "the quarter turn and its median spread",
+   "grid": 63,
+   "median": 0.6745,
+   "seed": 87,
+   "trials": 20000,
+   "field": 200,
+   "fork": [
+    0.453,
+    0.83
+   ],
+   "laminar": [
+    true,
+    true
+   ],
+   "linear": 0.498
+  }
+ ]
+}

@@ -1,0 +1,298 @@
+{
+ "about": [
+  "The object's moves between its four states, one act at a time, on a cell resting on one bound.",
+  "CONFLICT is reached two ways: locally, by claims that do not meet, and by signature, by a floor required past a signed ceiling or a ceiling signed under a required floor, whatever the claims hold.",
+  "Every move into CONFLICT is dangerous; every other is a cell becoming information, being taken back, closed or reopened."
+ ],
+ "coverage": {
+  "size": 9,
+  "criterion": "each act once, every move into CONFLICT from each state it is reached from, both ways CONFLICT is reached, and one act that moves nothing",
+  "could_exclude_counterexamples": true,
+  "why": "a state read wrong by any act fails its case, and a CONFLICT by signature read as FORBIDDEN fails the three that reach it"
+ },
+ "law": {
+  "dangerous": [
+   [
+    "REQUIRED",
+    "CONFLICT"
+   ],
+   [
+    "FREE",
+    "CONFLICT"
+   ],
+   [
+    "FORBIDDEN",
+    "CONFLICT"
+   ]
+  ],
+  "why_the_others_are_not": {
+   "REQUIRED→FREE": "a second origin met the first",
+   "FREE→REQUIRED": "a withdrawal took one back",
+   "FREE→FORBIDDEN": "a signature closed below what they hold",
+   "FORBIDDEN→FREE": "a witnessed join reopened it"
+  }
+ },
+ "cases": [
+  {
+   "case": "a second origin that meets the first: REQUIRED → FREE",
+   "claims": [
+    [
+     0,
+     100
+    ]
+   ],
+   "act": "observe",
+   "span": [
+    20,
+    80
+   ],
+   "epochs": [
+    {
+     "state": "REQUIRED"
+    },
+    {
+     "state": "FREE"
+    }
+   ],
+   "expect": {
+    "REQUIRED→FREE": 1
+   }
+  },
+  {
+   "case": "a second origin that does not meet the first: REQUIRED → CONFLICT, locally",
+   "claims": [
+    [
+     0,
+     40
+    ]
+   ],
+   "act": "observe",
+   "span": [
+    60,
+    100
+   ],
+   "epochs": [
+    {
+     "state": "REQUIRED"
+    },
+    {
+     "state": "CONFLICT"
+    }
+   ],
+   "expect": {
+    "REQUIRED→CONFLICT": 1
+   }
+  },
+  {
+   "case": "a withdrawal of the second: FREE → REQUIRED",
+   "claims": [
+    [
+     0,
+     100
+    ],
+    [
+     20,
+     80
+    ]
+   ],
+   "act": "withdraw",
+   "epochs": [
+    {
+     "state": "FREE"
+    },
+    {
+     "state": "REQUIRED"
+    }
+   ],
+   "expect": {
+    "FREE→REQUIRED": 1
+   }
+  },
+  {
+   "case": "a signature below what they hold: FREE → FORBIDDEN",
+   "claims": [
+    [
+     0,
+     100
+    ],
+    [
+     20,
+     80
+    ]
+   ],
+   "act": "sign",
+   "span": [
+    -1000,
+    10
+   ],
+   "epochs": [
+    {
+     "state": "FREE"
+    },
+    {
+     "state": "FORBIDDEN"
+    }
+   ],
+   "expect": {
+    "FREE→FORBIDDEN": 1
+   }
+  },
+  {
+   "case": "a floor required past the signed ceiling: FREE → CONFLICT, by signature",
+   "claims": [
+    [
+     0,
+     100
+    ],
+    [
+     20,
+     80
+    ]
+   ],
+   "signed": [
+    -1000,
+    70
+   ],
+   "act": "require",
+   "span": [
+    75,
+    1000
+   ],
+   "epochs": [
+    {
+     "state": "FREE"
+    },
+    {
+     "state": "CONFLICT"
+    }
+   ],
+   "expect": {
+    "FREE→CONFLICT": 1
+   }
+  },
+  {
+   "case": "a ceiling signed under a required floor, one origin: REQUIRED → CONFLICT, by signature",
+   "claims": [
+    [
+     0,
+     100
+    ]
+   ],
+   "required": [
+    60,
+    1000
+   ],
+   "act": "sign",
+   "span": [
+    -1000,
+    50
+   ],
+   "epochs": [
+    {
+     "state": "REQUIRED"
+    },
+    {
+     "state": "CONFLICT"
+    }
+   ],
+   "expect": {
+    "REQUIRED→CONFLICT": 1
+   }
+  },
+  {
+   "case": "a witnessed join over a signature: FORBIDDEN → FREE",
+   "claims": [
+    [
+     0,
+     100
+    ],
+    [
+     20,
+     80
+    ]
+   ],
+   "signed": [
+    -1000,
+    10
+   ],
+   "act": "join",
+   "span": [
+    -1000,
+    90
+   ],
+   "epochs": [
+    {
+     "state": "FORBIDDEN"
+    },
+    {
+     "state": "FREE"
+    }
+   ],
+   "expect": {
+    "FORBIDDEN→FREE": 1
+   }
+  },
+  {
+   "case": "a floor the claims already hold: FREE stays FREE",
+   "claims": [
+    [
+     0,
+     100
+    ],
+    [
+     20,
+     80
+    ]
+   ],
+   "act": "require",
+   "span": [
+    10,
+    1000
+   ],
+   "epochs": [
+    {
+     "state": "FREE"
+    },
+    {
+     "state": "FREE"
+    }
+   ],
+   "expect": {
+    "FREE→FREE": 1
+   }
+  },
+  {
+   "case": "a signature past a floor two origins require, from FORBIDDEN: FORBIDDEN → CONFLICT, by signature",
+   "claims": [
+    [
+     0,
+     100
+    ],
+    [
+     20,
+     80
+    ]
+   ],
+   "signed": [
+    -1000,
+    10
+   ],
+   "act": "require",
+   "span": [
+    15,
+    1000
+   ],
+   "epochs": [
+    {
+     "state": "FORBIDDEN"
+    },
+    {
+     "state": "CONFLICT"
+    }
+   ],
+   "expect": {
+    "FORBIDDEN→CONFLICT": 1
+   }
+  }
+ ]
+}

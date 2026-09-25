@@ -1,0 +1,17 @@
+{
+ "about": [
+  "What would break T95, run against the object."
+ ],
+ "cases": [
+  {
+   "name": "falsifier: a replay in another order that reads another pole",
+   "input": {
+    "order": "reversed"
+   },
+   "want": [
+    60
+   ],
+   "expected.ok": false
+  }
+ ]
+}

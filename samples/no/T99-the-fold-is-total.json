@@ -1,0 +1,15 @@
+{
+ "about": [
+  "What would break T99, run against the object."
+ ],
+ "cases": [
+  {
+   "name": "falsifier: an order of rest with a cycle that folds",
+   "input": {
+    "from": "a"
+   },
+   "want": true,
+   "expected.ok": false
+  }
+ ]
+}
