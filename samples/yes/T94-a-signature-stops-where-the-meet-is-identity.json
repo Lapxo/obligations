@@ -1,0 +1,29 @@
+{
+ "about": [
+  "A rest tree of a hundred thousand cells, some signed below their bound; the root signed at a hundred.",
+  "Signed again at a hundred it is absorbed; lighter it bites what it lowers and stops where it is absorbed; heavy it bites most of the tree."
+ ],
+ "cases": [
+  {
+   "name": "a hundred thousand cells",
+   "cells": 100000,
+   "seed": 94,
+   "share": 0.3,
+   "root": 100,
+   "absorbed": 100,
+   "light": 97,
+   "heavy": 20,
+   "visits": [
+    1,
+    9444,
+    54208
+   ],
+   "bitten": [
+    0,
+    6525,
+    50741
+   ],
+   "exact": true
+  }
+ ]
+}

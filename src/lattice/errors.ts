@@ -4,7 +4,13 @@ export type UnitErrorCode =
   | 'EMPTY_CHAIN'
   | 'DUPLICATE_LEVEL'
   | 'NOT_FINITE'
-  | 'UNKNOWN_ROW';
+  | 'UNKNOWN_ROW'
+  | 'rest-cycle'
+  | 'widening-travels'
+  | 'withdrawal-unnamed'
+  | 'sign-mismatch'
+  | 'join-unwitnessed'
+  | 'attention-spent';
 
 export class UnitError extends Error {
   readonly code: UnitErrorCode;

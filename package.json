@@ -1,7 +1,7 @@
 {
   "name": "@lapxo/obligations",
-  "version": "0.2.0",
-  "description": "The algebra of a cell: two poles, origins with phase, six operations.",
+  "version": "0.3.0",
+  "description": "The algebra of a cell: two poles, origins with phase, eight acts.",
   "type": "module",
   "license": "MIT",
   "author": "Lapxo",

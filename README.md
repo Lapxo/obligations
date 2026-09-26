@@ -2,9 +2,9 @@
 
 # @lapxo/obligations
 
-![version 0.2.0](https://img.shields.io/badge/version-0.2.0-8c959f) ![license MIT](https://img.shields.io/badge/license-MIT-8c959f) ![node >=22.12](https://img.shields.io/badge/node-%3E%3D22.12-8c959f) ![dependencies 0](https://img.shields.io/badge/dependencies-0-2da44e) ![cases 178 hold](https://img.shields.io/badge/cases-178_hold-2da44e) ![verify agrees](https://img.shields.io/badge/verify-agrees-8c959f) [![DOI 10.5281/zenodo.21858428](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-8c959f)](https://doi.org/10.5281/zenodo.21858428)
+![version 0.3.0](https://img.shields.io/badge/version-0.3.0-8c959f) ![license MIT](https://img.shields.io/badge/license-MIT-8c959f) ![node >=22.12](https://img.shields.io/badge/node-%3E%3D22.12-8c959f) ![dependencies 0](https://img.shields.io/badge/dependencies-0-2da44e) ![cases 203 hold](https://img.shields.io/badge/cases-203_hold-2da44e) ![verify agrees](https://img.shields.io/badge/verify-agrees-8c959f) [![DOI 10.5281/zenodo.21858428](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-8c959f)](https://doi.org/10.5281/zenodo.21858428)
 
-The algebra of a cell: two poles, origins with phase, six operations.
+The algebra of a cell: two poles, origins with phase, eight acts.
 
 ## The idea
 
@@ -19,20 +19,23 @@ A cell is drawn as bars on one scale: a grey bar is what one origin claims, pote
 ## The object
 
 ```text
-c = ⟨⊥, ⊤, O, r, ⊑⟩        ⊥, ⊤ ∈ L with ≤     O = {(o, φ, s)}     r ∈ ℕ     ⊑ the order of rest
-meet(c)  = ⊤ ∧ ⋀_{o∈O} span_o
-info(c)  ⟺ |ext(O)| ≥ 2 ∧ meet(c) ≠ ∅
-F(c)     = log₂ |{x ∈ L : ⊥ ≤ x ≤ ⊤}|
-sign     : ⊤(c′) ← ⊤(c′) ∧ s   ∀ c′ ⊒ c
-join     : ⊤(c)  ← ⊤(c)  ∨ s   for c alone, witnessed
-state(c) ∈ {FREE, REQUIRED, FORBIDDEN, CONFLICT}
+c = ⟨⊥, ⊤, O, ⊑⟩        over L at r
+⊥(c)                   = ⋁ required ∨ ⋁_{o∈O} lo_o
+⊤(c)                   = ⋀ signed ∧ ⋀_{o∈O} hi_o
+info(c)                ⟺ |ext(O)| ≥ 2 ∧ meet(c) ≠ ∅
+F(C)                   = Σ_{c∈C} F(c),   F(a(c)) ≤ F(c) for every act a that narrows
+A(c)                   = |Σ_{o∈O} s_o w_o e^{iφ_o}|²
+⊤(c)                   = ⋀_{b ⊑ c} signed(b) ∧ ⋀_{o∈O} hi_o,   one line per act
+|e^{ia} + e^{ib}|² < 2 ⟺ |a − b| > π/2
+state(c)               ∈ {FREE, REQUIRED, FORBIDDEN, CONFLICT}
 ```
 
 ```text
-one origin                                       REQUIRED   ○
-two or more, they meet, within the ceiling       FREE       ●
-two or more, they meet, outside the ceiling      FORBIDDEN  ✕
-two or more, they do not meet                    CONFLICT   ⋔
+bounds that cross                        CONFLICT   ⋔
+one origin                               REQUIRED   ○
+claims that do not meet                  CONFLICT   ⋔
+claims that meet and fit the bounds      FREE       ●
+claims that meet outside the bounds      FORBIDDEN  ✕
 ```
 
 ## What holds
@@ -41,9 +44,9 @@ The theory of this package is ten axioms and what follows from them. Three of th
 
 A claim from one origin is potential; a cell is information only where two independent origins touch it and their intervals meet. That is encounter, and 28 lines of the lock rest on it.
 
-Every quantity has two poles, a floor that is required and a ceiling that is permitted, and a cell is the pair. That is carrier, and 17 lines of the lock rest on it.
+Two bounds on one cell fold by the meet of their form; the order they arrive in never decides. That is meet, and 19 lines of the lock rest on it.
 
-Two bounds on one cell fold by the meet of their form; the order they arrive in never decides. That is meet, and 13 lines of the lock rest on it.
+Every quantity has two poles, a floor that is required and a ceiling that is permitted, and a cell is the pair. That is carrier, and 17 lines of the lock rest on it.
 
 <details><summary>The other seven, each one line of the lock with a sample that shows it and one that would break it</summary>
 
@@ -134,36 +137,31 @@ Five readings:
 - **A distant signature moves a cell that did not move** — a hint, never a claim. *Breaks if one act is both local and non-local.*
 - **Amplitudes without an origin** — what is left of a cell when who, ceiling, resolution and band are dropped. *Breaks if the arithmetic forbids what the restored fields predict.*
 - **Measurement** — a thermometer, a survey, an interferometer and a headcount fill the same five fields. *Breaks if one instrument cannot.*
-- **The medium of encounters** — what carries an encounter is a medium, and a medium is what two origins can both reach. *Breaks if two origins meet with nothing they both reach.*
-- **Refereed game** — a field of cells with origins and signatures is a game whose referee is inside it. *Breaks if a player can suspend the rule that two origins are needed.*
+- **The medium of encounters** — what carries an encounter is a medium, and a medium is what two origins can both reach: in each instrument the medium can be named and the encounter happens where two origins touch it and nowhere else, so two origins at one cell make information and the same two at two cells make none; structural resemblance, one origin, not a claim about the world. *Breaks if two origins meet with nothing they both reach.*
+- **Refereed game** — a field of cells with origins and signatures is a game whose referee is inside it: a move is a claim, a claim alone is potential, two that meet are information, a signature moves every cell that rests on it, and no player may suspend the rule that makes the first four; the claim is that each of five readings of the field matches all five properties; structural resemblance, one origin, not a claim about the world. *Breaks if a player can suspend the rule that two origins are needed.*
 
 <details><summary>Every conjecture in full</summary>
 
-Resolution times independent encounters per cell stays above a floor c; the sufficient resolution is where the product saturates. It is falsified by a cell read at four resolutions whose product of resolution and independent encounters comes out above the floor while the encounters fall away with the sharpening. A product that rises as the reading sharpens would say the floor is not a floor but an accident of how coarsely the cell was read.
+Resolution times independent encounters per cell stays above a floor c; the sufficient resolution is where the product saturates. The falsifier: a cell read at four resolutions whose product of resolution and independent encounters comes out above the floor while the encounters fall away with the sharpening. A product that rises as the reading sharpens would say the floor is not a floor but an accident of how coarsely the cell was read.
 
-Where reading already is, the next reading lands: over eight epochs of placement in proportion to the origins a cell already carries, the ratio between the densest tenth and the sparsest rises at every epoch and the deserts stay empty, while the same budget placed blind to density holds that ratio near two and touches three times as many cells. It is falsified by encounters that land independently of the density already there. Then the ratio does not rise with the epochs and the cells touched grow with the budget, which is what the blind placement in the yes sample shows.
+Where reading already is, the next reading lands: over eight epochs of placement in proportion to the origins a cell already carries, the ratio between the densest tenth and the sparsest rises at every epoch and the deserts stay empty, while the same budget placed blind to density holds that ratio near two and touches three times as many cells. The falsifier: encounters that land independently of the density already there. Then the ratio does not rise with the epochs and the cells touched grow with the budget, which is what the blind placement in the yes sample shows.
 
-Stated as a hint and never as a claim about the world: if what is is a field of floors and ceilings, a distant signature changes a cell whose own record never moved, and in two hundred trials of one cell holding one value the verdict came out both ways, so nothing stored at the cell explains the difference and what explains it is the bound the cell rests on; the resemblance is structural and never arithmetic, with no continuous amplitudes and no inequality violated by number; structural resemblance, one origin, not a claim about the world. It is falsified by one act that is both local and non-local — a change that travels a distance and also reaches a cell that does not rest on its bound. The two poles would then be one, and this would be a claim about the world rather than a hint.
+Stated as a hint and never as a claim about the world: if what is is a field of floors and ceilings, a distant signature changes a cell whose own record never moved, and in two hundred trials of one cell holding one value the verdict came out both ways, so nothing stored at the cell explains the difference and what explains it is the bound the cell rests on; the resemblance is structural and never arithmetic, with no continuous amplitudes and no inequality violated by number; structural resemblance, one origin, not a claim about the world. The falsifier: one act that is both local and non-local — a change that travels a distance and also reaches a cell that does not rest on its bound. The two poles would then be one, and this would be a claim about the world rather than a hint.
 
-The cells under the order of rest, with signatures as meets and the phase each origin carries as what they are enriched over, look like an enriched meet-semilattice, and what this library proves would be its representation theory; identity, composition, associativity, commuting and naturality hold for the operations as vectors, while observation is not one of them — it moves the metric and can split a cell no signature could, so it is a functor out of the category and not an arrow inside it, and the join, which does not travel, is a second kind of arrow this conjecture does not name. It is falsified by a pair of the five operations whose composition the axioms do not determine. The join is already known to be absent from them: it does not travel, and naming what it is would be a second kind of arrow this conjecture does not have.
+The cells under the order of rest, with signatures as meets and the phase each origin carries as what they are enriched over, look like an enriched meet-semilattice, and what this library proves would be its representation theory; identity, composition, associativity, commuting and naturality hold for the operations as vectors, while observation is not one of them — it moves the metric and can split a cell no signature could, so it is a functor out of the category and not an arrow inside it, and the join, which does not travel, is a second kind of arrow this conjecture does not name. The falsifier: a pair of the five operations whose composition the axioms do not determine. The join is already known to be absent from them: it does not travel, and naming what it is would be a second kind of arrow this conjecture does not have.
 
-Amplitudes with a phase and no origin, no signed ceiling, no resolution and no epoch band are what is left of a cell when those four fields are dropped, so the measurement problem is the absence of who, imposed symmetries the absence of a signed ceiling, the classical limit the absence of resolution and universal interference the absence of bands; restored, four claims in phase keep exactly the share of the whole their number leaves them against an environment spread over the period, and six origins around one value are six objects read finely and one read coarsely, so how many things there are is a reading; structural resemblance, one origin, not a claim about the world. It is falsified by a result of the usual formalism that cannot be stated with the four fields, or a prediction the restored fields make that the arithmetic forbids. This conjecture is about which structure is missing, not about numbers the arithmetic already gives.
+Amplitudes with a phase and no origin, no signed ceiling, no resolution and no epoch band are what is left of a cell when those four fields are dropped, so the measurement problem is the absence of who, imposed symmetries the absence of a signed ceiling, the classical limit the absence of resolution and universal interference the absence of bands; restored, four claims in phase keep exactly the share of the whole their number leaves them against an environment spread over the period, and six origins around one value are six objects read finely and one read coarsely, so how many things there are is a reading; structural resemblance, one origin, not a claim about the world. The falsifier: a result of the usual formalism that cannot be stated with the four fields, or a prediction the restored fields make that the arithmetic forbids. This conjecture is about which structure is missing, not about numbers the arithmetic already gives.
 
-Four instruments that share no mechanism fold the same way because a measurement is a cell: for a thermometer, a survey, an interferometer and a headcount the five fields are named without strain and the same five operations answer for all four; no number is claimed, only that the table can be filled in every row. It is falsified by an instrument whose reading cannot be written as a floor and a ceiling held by an origin at an epoch and a resolution, without straining any of the five.
+Four instruments that share no mechanism fold the same way because a measurement is a cell: for a thermometer, a survey, an interferometer and a headcount the five fields are named without strain and the same five operations answer for all four; no number is claimed, only that the table can be filled in every row. The falsifier: an instrument whose reading cannot be written as a floor and a ceiling held by an origin at an epoch and a resolution, without straining any of the five.
 
-What carries an encounter is a medium, and a medium is what two origins can both reach: in each instrument the medium can be named and the encounter happens where two origins touch it and nowhere else, so two origins at one cell make information and the same two at two cells make none; structural resemblance, one origin, not a claim about the world. It is falsified by an encounter between two origins with nothing they both reach. Then information would appear where nothing was shared.
+What carries an encounter is a medium, and a medium is what two origins can both reach: in each instrument the medium can be named and the encounter happens where two origins touch it and nowhere else, so two origins at one cell make information and the same two at two cells make none; structural resemblance, one origin, not a claim about the world. The falsifier: an encounter between two origins with nothing they both reach. Then information would appear where nothing was shared.
 
-A field of cells with origins and signatures is a game whose referee is inside it: a move is a claim, a claim alone is potential, two that meet are information, a signature moves every cell that rests on it, and no player may suspend the rule that makes the first four; the claim is that each of five readings of the field matches all five properties; structural resemblance, one origin, not a claim about the world. It is falsified by a reading of the field where a player can suspend the rule that two origins are needed, or where one claim is information. Then the referee would be outside the game.
+A field of cells with origins and signatures is a game whose referee is inside it: a move is a claim, a claim alone is potential, two that meet are information, a signature moves every cell that rests on it, and no player may suspend the rule that makes the first four; the claim is that each of five readings of the field matches all five properties; structural resemblance, one origin, not a claim about the world. The falsifier: a reading of the field where a player can suspend the rule that two origins are needed, or where one claim is information. Then the referee would be outside the game.
 
-The obligatory is maximal: take away any one of its seven parts and what is left is an object already known, and anything added to it is either already inside it or breaks the four states. It is falsified by a part the obligatory lacks that keeps the four states and the six operations and is not a reading of one of them.
+The obligatory is maximal: take away any one of its seven parts and what is left is an object already known, and anything added to it is either already inside it or breaks the four states. The falsifier: a part the obligatory lacks that keeps the four states and the six operations and is not a reading of one of them.
 
 </details>
 
 ## Check
 
-● 178 cases hold
-
-## Pointers
-
-- [Reference](docs/reference.md)
-- Learn from an example: [in phase](docs/learn/in-phase.md), [price](docs/learn/price.md), [signature](docs/learn/signature.md), [thermometer](docs/learn/thermometer.md), [withdrawal](docs/learn/withdrawal.md)
+● 203 cases hold

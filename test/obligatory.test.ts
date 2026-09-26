@@ -1,11 +1,11 @@
 import { chain, freedom, fromScale, state, unit } from '@lapxo/obligations';
 import { intervals } from '@lapxo/obligations/forms';
-import { amplitude, budget, cell, coherence, decohere, distinct, disturbance, encounter, evolve, fringes, interfere, join as widen, meet, observe, play, refine, sameObject, selfFold, sign } from '@lapxo/obligations/views/field';
-import type { Obligatory } from '@lapxo/obligations/views/field';
+import { amplitude, budget, cell, coherence, decohere, distinct, disturbance, encounter, evolve, fringes, interfere, join as widen, meet, observe, parts, play, refine, sameObject, selfFold, sign } from '@lapxo/obligations/views/field';
+import type { Obligatory, World } from '@lapxo/obligations/views/field';
 import { apart, design, distance, horizon, horizonTotal, lone, loom, rank, reach, resting as turnedBy, sited } from '@lapxo/obligations/views/product';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { sample, throws } from './vectors-harness.ts';
+import { sample } from './vectors-harness.ts';
 import type { Vector } from './vectors-harness.ts';
 
 const SPAN = intervals(-1000, 1000);
@@ -134,22 +134,22 @@ test('T52-directing-where-origins-land-closes-the-horizon — left to itself a f
 test('H4-enriched-semilattice — identity, composition, associativity and naturality hold; observation is outside them', () => {
   const c = one(sample('yes', 'H4-enriched-semilattice'));
   const world = [
-    cell('a', 0, [{ origin: 'own-a', span: { lo: 10, hi: 90 } }, { origin: 'ab', span: BAND }], ['b']),
-    cell('b', 0, [{ origin: 'own-b', span: { lo: 0, hi: 70 } }, { origin: 'ab', span: BAND }, { origin: 'bc', span: BAND }], ['b', 'c']),
-    cell('c', 0, [{ origin: 'own-c', span: { lo: 30, hi: 99 } }, { origin: 'bc', span: BAND }], ['c']),
+    cell('a', 0, [{ origin: 'own-a', span: { lo: 10, hi: 90 } }, { origin: 'ab', span: BAND }], ['B']),
+    cell('b', 0, [{ origin: 'own-b', span: { lo: 0, hi: 70 } }, { origin: 'ab', span: BAND }, { origin: 'bc', span: BAND }], ['B', 'C']),
+    cell('c', 0, [{ origin: 'own-c', span: { lo: 30, hi: 99 } }, { origin: 'bc', span: BAND }], ['C']),
   ];
   const x = { lo: 0, hi: 60 };
   const y = { lo: 20, hi: 100 };
   const z = { lo: 10, hi: 80 };
-  const none = new Map<string, { lo: number; hi: number }>();
-  const shows = (bounds: ReadonlyMap<string, { lo: number; hi: number }>): string => JSON.stringify(world.map((each) => meet(SPAN, each, bounds)));
-  compare(shows(sign(SPAN, none, 'b', SPAN.top)) === shows(none), c['identity'], 'signing the top changes nothing');
+  const none: World<{ lo: number; hi: number }> = new Map();
+  const shows = (bounds: World<{ lo: number; hi: number }>): string => JSON.stringify(world.map((each) => meet(SPAN, each, bounds)));
+  compare(shows(sign(SPAN, none, 'B', SPAN.top)) === shows(none), c['identity'], 'signing the top changes nothing');
   compare(refine(world[0]!, world[0]!.at.length).at.join('/') === world[0]!.at.join('/'), c['refineIdentity'], 'refining to its own depth changes nothing');
-  compare(shows(sign(SPAN, sign(SPAN, none, 'b', x), 'b', y)) === shows(sign(SPAN, none, 'b', SPAN.meet(x, y))), c['composition'], 'two signatures are the signature of their meet');
-  compare(shows(sign(SPAN, sign(SPAN, sign(SPAN, none, 'b', x), 'b', y), 'b', z)) === shows(sign(SPAN, none, 'b', SPAN.meet(SPAN.meet(x, y), z))), c['associativity'], 'and it does not matter how they are grouped');
-  compare(shows(sign(SPAN, sign(SPAN, none, 'b', x), 'c', y)) === shows(sign(SPAN, sign(SPAN, none, 'c', y), 'b', x)), c['commuting'], 'nor in what order they are taken');
+  compare(shows(sign(SPAN, sign(SPAN, none, 'B', x), 'B', y)) === shows(sign(SPAN, none, 'B', SPAN.meet(x, y))), c['composition'], 'two signatures are the signature of their meet');
+  compare(shows(sign(SPAN, sign(SPAN, sign(SPAN, none, 'B', x), 'B', y), 'B', z)) === shows(sign(SPAN, none, 'B', SPAN.meet(SPAN.meet(x, y), z))), c['associativity'], 'and it does not matter how they are grouped');
+  compare(shows(sign(SPAN, sign(SPAN, none, 'B', x), 'C', y)) === shows(sign(SPAN, sign(SPAN, none, 'C', y), 'B', x)), c['commuting'], 'nor in what order they are taken');
   const folded = (held: readonly Obligatory[]): string => JSON.stringify(held.map((each) => meet(SPAN, each)));
-  compare(shows(sign(SPAN, none, 'b', x)) === shows(sign(SPAN, none, 'b', x)), c['naturality'], 'folding after signing is signing after folding');
+  compare(shows(sign(SPAN, none, 'B', x)) === shows(sign(SPAN, none, 'B', x)), c['naturality'], 'folding after signing is signing after folding');
   compare(distance(world, 'a', 'c'), c['distanceBefore'], 'two cells at a distance');
   compare(distance([...world.slice(0, 2), observe(world[2]!, { origin: 'ab', span: BAND })], 'a', 'c'), c['distanceAfter'], 'that observing moves');
   compare(verdict(observe(world[2]!, { origin: 'far', span: { lo: 0, hi: 20 } })) === 'split', c['splitByObserving'], 'and observing can split what no signature could');
@@ -450,9 +450,10 @@ test('D11-the-obligatory — obligatory — the object against the cases that we
   const corners = new Set(['oneOrigin', 'twoThatFit', 'twoOutside', 'twoTouchingUnderTheCeiling']
     .map((name) => (states![name] as Vector)['state']));
   compare(corners.size, states!['corners'], 'and all four corners are reached');
-  const world = [0, 1, 2, 3].map((i) => cell(`c${i}`, 0, [claim(`o${i}`, `own${i}`, 20 * i, 100)], i < (travels!['resting'] as number) ? [travels!['bound'] as string] : []));
-  const was = new Map([[travels!['bound'] as string, band(travels!['was'] as number[])]]);
-  const now = sign(SPAN, was, travels!['bound'] as string, band(travels!['now'] as number[]));
+  const bound = travels!['bound'] as string;
+  const world = [0, 1, 2, 3].map((i) => cell(`c${i}`, 0, [claim(`o${i}`, `own${i}`, 20 * i, 100)], i < (travels!['resting'] as number) ? [bound] : []));
+  const was = sign(SPAN, new Map(), bound, band(travels!['was'] as number[]));
+  const now = sign(SPAN, was, bound, band(travels!['now'] as number[]));
   const moved = world.filter((one) => JSON.stringify(meet(SPAN, one, was)) !== JSON.stringify(meet(SPAN, one, now)));
   compare(world.filter((one) => one.restsOn.length).length, travels!['resting'], 'the cells that rest on the bound');
   compare(moved.length, travels!['changed'], 'are the cells a signature moves');
@@ -466,44 +467,49 @@ test('D11-the-obligatory — obligatory — the object against the cases that we
   compare(interfere(Array.from({ length: phase!['n'] as number }, (_, i) => ({ origin: `o${i}`, epoch: 8, span: flat })), phase!['period'] as number), phase!['inPhase'], 'and claims at one turn add as the square of their number');
   const nos = sample('no', 'obligatory').cases as Vector[];
   const input = (one: Vector): Vector => one['input'] as Vector;
-  const [bare, reals, word, edits, still, byValue, reaches, narrows, nobody] = nos;
+  const [bare, reals, word, edits, byValue, raised] = nos;
   compare(meet(SPAN, cell('bare', 0, [], [input(bare!)['rests'] as string])), SPAN.top, bare!['name'] as string);
   const levels = chain(input(reals!)['levels'] as string[]);
   const two = cell('role', 0, (input(reals!)['claims'] as string[][]).map(([floor, ceiling], i) => ({ origin: `r${i}`, span: unit('role', { floor: floor!, ceiling: ceiling! }) })));
   const alphabetMeet = meet(fromScale(levels), two);
   compare([alphabetMeet.floor, alphabetMeet.ceiling], reals!['want'], reals!['name'] as string);
   compare(state(chain(input(word!)['levels'] as string[]), unit('w', { floor: input(word!)['floor'] as string, ceiling: input(word!)['ceiling'] as string })), word!['want'], word!['name'] as string);
-  const leaning = (claimed: number[]) => [cell('lean', 0, [{ origin: 'own', span: band(claimed) }], ['ceiling'])];
-  compare(pair(sign(SPAN, leaning(input(edits!)['claim'] as number[]), 'ceiling', band(input(edits!)['signed'] as number[]))[0]!.seen[0]!.span), edits!['want'], edits!['name'] as string);
-  compare(pair(meet(SPAN, sign(SPAN, leaning(input(still!)['claim'] as number[]), 'ceiling', band(input(still!)['signed'] as number[]))[0]!)), still!['want'], still!['name'] as string);
+  const lean = cell('lean', 0, [{ origin: 'own', span: band(input(edits!)['claim'] as number[]) }], ['ceiling']);
+  const signedLean = sign(SPAN, new Map(), 'ceiling', band(input(edits!)['signed'] as number[]));
+  compare(pair(parts(SPAN, lean, signedLean).origins[0]!.span), edits!['want'], edits!['name'] as string);
   const twins = cell('x', 0, (input(byValue!)['claims'] as (string | number)[][]).map(([id, origin, lo, hi]) => ({ id: id as string, origin: origin as string, span: { lo: lo as number, hi: hi as number } })));
   compare(encounter(SPAN, observe(twins, { origin: 'b', span: { lo: 5, hi: 12 }, takes: input(byValue!)['takes'] as string })).origins, byValue!['wantOrigins'], byValue!['name'] as string);
-  const signedFour = sign(SPAN, [0, 1, 2, 3].map((i) => cell(`t${i}`, 0, [{ origin: `own${i}`, span: { lo: 0, hi: 100 } }], i < (input(reaches!)['resting'] as number) ? ['ceiling'] : [])), 'ceiling', band(input(reaches!)['signed'] as number[]));
-  const opened = signedFour.map((one, i) => (i === 0 ? widen(SPAN, one, band(input(reaches!)['join'] as number[]), 'the owner of t0') : one));
-  compare([1, 2].map((i) => pair(meet(SPAN, opened[i]!))), [reaches!['wantOthers'], reaches!['wantOthers']], reaches!['name'] as string);
-  const [kept] = sign(SPAN, leaning([0, 100]), 'ceiling', band(input(narrows!)['signed'] as number[]));
-  compare(pair(meet(SPAN, widen(SPAN, kept!, band(input(narrows!)['join'] as number[]), 'someone'))), narrows!['want'], narrows!['name'] as string);
-  compare(throws(() => widen(SPAN, kept!, band(input(nobody!)['join'] as number[]), input(nobody!)['witness'] as string), new RegExp(nobody!['throws'] as string)), true, nobody!['name'] as string);
+  const first = cell('f', 0, [{ id: 'k', origin: 'own', span: band(input(raised!)['claim'] as number[]) }], ['ceiling']);
+  const others = [
+    (c: Obligatory, w: World<{ lo: number; hi: number }>) => ({ c, w: sign(SPAN, w, 'ceiling', band(input(raised!)['signed'] as number[])) }),
+    (c: Obligatory, w: World<{ lo: number; hi: number }>) => ({ c: widen(SPAN, c, band(input(raised!)['join'] as number[]), 'the owner of f', 1), w }),
+    (c: Obligatory, w: World<{ lo: number; hi: number }>) => ({ c: refine(c, 1), w }),
+    (c: Obligatory, w: World<{ lo: number; hi: number }>) => ({ c: observe(c, { origin: 'own', span: c.seen[0]!.span, id: 'k' }, -1), w }),
+  ];
+  const floors = orders([0, 1, 2, 3]).map((order) => order.reduce((held, k) => others[k]!(held.c, held.w), { c: first, w: new Map() as World<{ lo: number; hi: number }> }))
+    .map((end) => meet(SPAN, end.c, end.w).lo);
+  compare(Math.max(...floors) > (input(raised!)['claim'] as number[])[0]!, raised!['want'], raised!['name'] as string);
   const board = (v.cases as Vector[])[7]!;
   const bits = (span: { readonly lo: number; readonly hi: number }): number => Math.round(Math.log2(span.hi - span.lo + 1) * 1000) / 1000;
-  const bound = board['bound'] as string;
-  const start = sign(SPAN, [0, 1, 2, 3].map((i) => cell(`b${i}`, 0, [{ origin: `own${i}`, span: { lo: 0, hi: 100 } }], i < (board['resting'] as number) ? [bound] : [])), bound, band(board['was'] as number[]));
-  const steps = [...(board['signs'] as number[][]).map((span) => (w: typeof start) => sign(SPAN, w, bound, band(span))),
-    (w: typeof start) => w.map((one, i) => (i === 0 ? widen(SPAN, one, band(board['join'] as number[]), 'the owner of b0') : one))];
-  const orders = [[0, 1, 2], [0, 2, 1], [1, 0, 2], [1, 2, 0], [2, 0, 1], [2, 1, 0]];
-  const ends = orders.map((order) => order.reduce((w, k) => steps[k]!(w), start));
+  const at = board['bound'] as string;
+  type Board = { readonly cells: readonly Obligatory[]; readonly w: World<{ lo: number; hi: number }> };
+  const start: Board = { cells: [0, 1, 2, 3].map((i) => cell(`b${i}`, 0, [{ origin: `own${i}`, span: { lo: 0, hi: 100 } }], i < (board['resting'] as number) ? [at] : [])), w: sign(SPAN, new Map(), at, band(board['was'] as number[])) };
+  const steps = [...(board['signs'] as number[][]).map((span) => (b: Board, when: number): Board => ({ ...b, w: sign(SPAN, b.w, at, band(span), { at: when }) })),
+    (b: Board, when: number): Board => ({ ...b, cells: b.cells.map((one, i) => (i === 0 ? widen(SPAN, one, band(board['join'] as number[]), 'the owner of b0', when) : one)) })];
+  const ends = orders([0, 1, 2]).map((order) => order.reduce((b, k, i) => steps[k]!(b, i + 1), start));
+  const read = (b: Board, i: number) => meet(SPAN, b.cells[i]!, b.w);
   compare(ends.length, board['orderings'], 'six orderings of two signatures and a join');
-  compare(new Set(ends.map((w) => JSON.stringify([1, 2].map((i) => meet(SPAN, w[i]!))))).size, board['restingResults'], 'signatures commute: what only rests reads one field');
-  compare(new Set(ends.map((w) => JSON.stringify(meet(SPAN, w[0]!)))).size, board['joinedResults'], 'a signature and a join on one cell do not');
-  compare(pair(meet(SPAN, ends[0]![0]!)), board['joinLast'], 'a join after the signatures widens');
-  compare(pair(meet(SPAN, ends[4]![0]!)), board['joinFirst'], 'a join before them is narrowed by what comes after');
-  const narrowedAll = steps[1]!(start);
-  const openedOne = steps[2]!(narrowedAll);
-  compare(bits(meet(SPAN, start[0]!)), board['bitsWas'], 'freedom before');
-  compare(bits(meet(SPAN, narrowedAll[0]!)), board['bitsAfterSign'], 'a signature closes it');
-  compare(bits(meet(SPAN, openedOne[0]!)), board['bitsAfterJoin'], 'a join opens it');
-  compare([0, 1, 2, 3].filter((i) => bits(meet(SPAN, narrowedAll[i]!)) < bits(meet(SPAN, start[i]!))).length, board['signLowers'], 'where a signature reaches');
-  compare([0, 1, 2, 3].filter((i) => bits(meet(SPAN, openedOne[i]!)) > bits(meet(SPAN, narrowedAll[i]!))).length, board['joinRaises'], 'and only where a join stands');
+  compare(new Set(ends.map((b) => JSON.stringify([1, 2].map((i) => read(b, i))))).size, board['restingResults'], 'signatures commute: what only rests reads one field');
+  compare(new Set(ends.map((b) => JSON.stringify(read(b, 0)))).size, board['joinedResults'], 'a signature and a join on one cell do not');
+  compare(pair(read(ends[0]!, 0)), board['joinLast'], 'a join after the signatures widens');
+  compare(pair(read(ends[4]!, 0)), board['joinFirst'], 'a join before them is narrowed by what comes after');
+  const narrowedAll = steps[1]!(start, 1);
+  const openedOne = steps[2]!(narrowedAll, 2);
+  compare(bits(read(start, 0)), board['bitsWas'], 'freedom before');
+  compare(bits(read(narrowedAll, 0)), board['bitsAfterSign'], 'a signature closes it');
+  compare(bits(read(openedOne, 0)), board['bitsAfterJoin'], 'a join opens it');
+  compare([0, 1, 2, 3].filter((i) => bits(read(narrowedAll, i)) < bits(read(start, i))).length, board['signLowers'], 'where a signature reaches');
+  compare([0, 1, 2, 3].filter((i) => bits(read(openedOne, i)) > bits(read(narrowedAll, i))).length, board['joinRaises'], 'and only where a join stands');
 });
 
 test('T73-a-cell-that-folds-itself-converges — its freedom settles, and it never conflicts', () => {
@@ -528,7 +534,7 @@ test('H9-the-obligatory-is-maximal — seven removals leave seven objects alread
   compare(meet(SPAN, withOrigins), spans.reduce((held, span) => SPAN.meet(held, span), SPAN.top), 'without origins: the lattice meet');
   seen.push('origins');
   const [signs] = [c['signed'] as number[][]];
-  compare(sign(SPAN, [cell('free')], 'b', band(signs![0]!))[0]!.ceiling, undefined, 'without rests: a cell nothing reaches');
+  compare(parts(SPAN, cell('free'), sign(SPAN, new Map(), 'b', band(signs![0]!))).ceiling, SPAN.top, 'without rests: a cell nothing reaches');
   seen.push('rests');
   compare(meet(SPAN, cell('bare')), SPAN.top, 'without a ceiling: the lattice itself');
   seen.push('ceiling');
@@ -539,8 +545,8 @@ test('H9-the-obligatory-is-maximal — seven removals leave seven objects alread
   const log = cell('x', 0, spans.map((span, i) => ({ origin: `o${i}`, span })));
   compare(encounter(SPAN, observe(log, { origin: 'o1', span: spans[1]!, takes: 'nobody' })).origins, want['ids'], 'without ids: a log that cannot take back');
   seen.push('ids');
-  const narrowed = signs!.reduce((w, span) => sign(SPAN, w, 'b', band(span)), [cell('r', 0, [], ['b'])]);
-  compare(pair(narrowed[0]!.ceiling!), signs!.reduce((held, span) => [Math.max(held[0]!, span[0]!), Math.min(held[1]!, span[1]!)], [-1000, 1000]), 'without join: a ceiling that only narrows');
+  const narrowed = signs!.reduce((w, span) => sign(SPAN, w, 'b', band(span)), new Map() as World<{ lo: number; hi: number }>);
+  compare(pair(meet(SPAN, cell('r', 0, [], ['b']), narrowed)), signs!.reduce((held, span) => [Math.max(held[0]!, span[0]!), Math.min(held[1]!, span[1]!)], [-1000, 1000]), 'without join: a ceiling that only narrows');
   seen.push('join');
   compare(seen.length, c['removals'], 'seven parts, seven known objects');
 });

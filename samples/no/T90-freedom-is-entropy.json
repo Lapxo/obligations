@@ -1,0 +1,22 @@
+{
+ "about": [
+  "What would break T90, run against the object."
+ ],
+ "cases": [
+  {
+   "name": "falsifier: an encounter that raises the freedom",
+   "input": {
+    "held": [
+     20,
+     60
+    ],
+    "wider": [
+     0,
+     100
+    ]
+   },
+   "want": true,
+   "expected.ok": false
+  }
+ ]
+}

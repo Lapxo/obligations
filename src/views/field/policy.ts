@@ -1,4 +1,5 @@
-import { encounter, meet } from '../../lattice/obligatory.ts';
+import { encounter } from '../../field/encounter.ts';
+import { meet } from '../../field/meet.ts';
 import type { Lattice } from '../../lattice/lattice.ts';
 import { coherence } from './wave.ts';
 import { neighbours, reach } from '../product/reach.ts';

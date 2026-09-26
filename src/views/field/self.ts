@@ -1,4 +1,5 @@
-import { meet, observe } from '../../lattice/obligatory.ts';
+import { meet } from '../../field/meet.ts';
+import { observe } from '../../field/observe.ts';
 import type { Obligatory } from '../../lattice/obligatory.ts';
 import type { Lattice } from '../../lattice/lattice.ts';
 

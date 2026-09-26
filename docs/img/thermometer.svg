@@ -3,7 +3,7 @@
 <desc id="desc">Four origins on one scale: a claims 19.8 to 20.2, b claims 19.9 to 20.3, c claims 19.7 to 20.1 and d claims 24 to 24.4; their claims do not meet.</desc>
 <style>
 text{font:14px ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#59636e}
-.claim{fill:#8c959f}.held{fill:#2da44e}.pole{fill:#2da44e;font-weight:600}.axis,.tick{stroke:#8c959f;stroke-width:1}.meet{stroke:#2da44e;stroke-width:1;stroke-dasharray:3 3}
+.claim{fill:#8c959f}.held{fill:#2da44e}.pole{fill:#2da44e;font-weight:600}.axis,.tick{stroke:#8c959f;stroke-width:1}.touch{stroke:#2da44e;stroke-width:1;stroke-dasharray:3 3}
 @media (prefers-color-scheme:dark){text{fill:#9198a1}}
 </style>
 <text x="82" y="32" text-anchor="end">a</text>
@@ -15,7 +15,7 @@ text{font:14px ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif
 <text x="82" y="134" text-anchor="end">d</text>
 <rect class="claim" x="507.3" y="120" width="31.1" height="18" rx="4"/>
 <text x="82" y="168" text-anchor="end">held</text>
-<text x="96" y="168">nothing: the claims do not meet</text>
+<text x="96" y="168">their claims do not meet</text>
 <line class="axis" x1="96" y1="194" x2="616" y2="194"/>
 <line class="tick" x1="173.6" y1="194" x2="173.6" y2="199"/>
 <text x="173.6" y="216" text-anchor="middle">19.7</text>

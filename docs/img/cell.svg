@@ -3,11 +3,11 @@
 <desc id="desc">Two origins on one scale: a claims 2 to 9 and b claims 5 to 12; what they hold together runs from a floor of 5 to a ceiling of 9.</desc>
 <style>
 text{font:14px ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#59636e}
-.claim{fill:#8c959f}.held{fill:#2da44e}.pole{fill:#2da44e;font-weight:600}.axis,.tick{stroke:#8c959f;stroke-width:1}.meet{stroke:#2da44e;stroke-width:1;stroke-dasharray:3 3}
+.claim{fill:#8c959f}.held{fill:#2da44e}.pole{fill:#2da44e;font-weight:600}.axis,.tick{stroke:#8c959f;stroke-width:1}.touch{stroke:#2da44e;stroke-width:1;stroke-dasharray:3 3}
 @media (prefers-color-scheme:dark){text{fill:#9198a1}}
 </style>
-<line class="meet" x1="269.3" y1="12" x2="269.3" y2="126"/>
-<line class="meet" x1="442.7" y1="12" x2="442.7" y2="126"/>
+<line class="touch" x1="269.3" y1="12" x2="269.3" y2="126"/>
+<line class="touch" x1="442.7" y1="12" x2="442.7" y2="126"/>
 <text x="82" y="32" text-anchor="end">a</text>
 <rect class="claim" x="139.3" y="18" width="303.4" height="18" rx="4"/>
 <text x="82" y="66" text-anchor="end">b</text>

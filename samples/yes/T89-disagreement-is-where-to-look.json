@@ -1,0 +1,20 @@
+{
+ "about": [
+  "Two hundred cells, two origins each at random phases; a budget of looks, each adding one origin along the cell's resultant.",
+  "Weight one on the share of pairs that cancel against a choice blind to it: the cells that close, laminar where they were not."
+ ],
+ "cases": [
+  {
+   "name": "weight one against indifference",
+   "seed": 89,
+   "draw": 7,
+   "cells": 200,
+   "looks": 150,
+   "closed": [
+    82,
+    38
+   ],
+   "more": true
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "about": [
+  "What would break T91, run against the object."
+ ],
+ "cases": [
+  {
+   "name": "falsifier: pairs that all meet with nothing held by the whole",
+   "input": {
+    "spans": [
+     [
+      0,
+      10
+     ],
+     [
+      5,
+      15
+     ],
+     [
+      8,
+      20
+     ]
+    ]
+   },
+   "want": true,
+   "expected.ok": false
+  }
+ ]
+}

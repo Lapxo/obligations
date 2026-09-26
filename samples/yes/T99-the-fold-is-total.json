@@ -1,0 +1,14 @@
+{
+ "about": [
+  "A thousand worlds of up to thirty cells resting down a tree and signed at the root: every cell read, every fold answered; the same worlds with the root resting on a leaf, every one refused."
+ ],
+ "cases": [
+  {
+   "name": "a thousand worlds",
+   "seed": 99,
+   "worlds": 1000,
+   "size": 30,
+   "finite": true
+  }
+ ]
+}

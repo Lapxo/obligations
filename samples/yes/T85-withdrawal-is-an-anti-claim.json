@@ -1,0 +1,33 @@
+{
+ "about": [
+  "A claim and its withdrawal landed at one epoch: two origins while it stands, one again after, and the bits it closed open again.",
+  "In phase, the two leave nothing between them; out of phase they would not."
+ ],
+ "cases": [
+  {
+   "name": "one claim taken back in phase",
+   "held": [
+    0,
+    100
+   ],
+   "claim": [
+    20,
+    60
+   ],
+   "epoch": 8,
+   "period": 8,
+   "states": [
+    "REQUIRED",
+    "FREE",
+    "REQUIRED"
+   ],
+   "bits": [
+    6.658,
+    5.358,
+    6.658
+   ],
+   "price": 1.301,
+   "left": 0
+  }
+ ]
+}

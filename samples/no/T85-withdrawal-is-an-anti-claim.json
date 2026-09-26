@@ -1,0 +1,19 @@
+{
+ "about": [
+  "What would break T85, run against the object."
+ ],
+ "cases": [
+  {
+   "name": "falsifier: a claim and its withdrawal out of phase still cancel",
+   "input": {
+    "epochs": [
+     8,
+     11
+    ],
+    "period": 8
+   },
+   "want": 0,
+   "expected.ok": false
+  }
+ ]
+}

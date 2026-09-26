@@ -1,0 +1,21 @@
+{
+ "about": [
+  "Two hundred thousand cells resting on one root: a wide signature, a tighter one, and the tighter taken back, each one line at the root; a thousand cells probed."
+ ],
+ "cases": [
+  {
+   "name": "two hundred thousand cells, three lines",
+   "cells": 200000,
+   "seed": 95,
+   "wide": 80,
+   "tight": 60,
+   "probes": 1000,
+   "lines": [
+    1,
+    1,
+    1
+   ],
+   "replay": true
+  }
+ ]
+}

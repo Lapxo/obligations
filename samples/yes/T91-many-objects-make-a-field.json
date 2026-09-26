@@ -1,0 +1,22 @@
+{
+ "about": [
+  "Thirty cells in two clusters, each an interval as wide as the next; pairs meet or fork, the meets join cells into components, and the whole field is met to nothing."
+ ],
+ "cases": [
+  {
+   "name": "thirty places",
+   "seed": 91,
+   "places": 30,
+   "split": 15,
+   "left": 0,
+   "right": 500,
+   "width": 40,
+   "field": [
+    166,
+    269,
+    2,
+    false
+   ]
+  }
+ ]
+}

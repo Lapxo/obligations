@@ -1,0 +1,15 @@
+{
+ "about": [
+  "What would break T93, run against the object."
+ ],
+ "cases": [
+  {
+   "name": "falsifier: an act that costs its origin nothing",
+   "input": {
+    "looks": 0
+   },
+   "want": true,
+   "expected.ok": false
+  }
+ ]
+}

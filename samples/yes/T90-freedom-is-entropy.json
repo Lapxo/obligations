@@ -1,0 +1,28 @@
+{
+ "about": [
+  "Freedom is log₂ of the states between the poles and the entropy of a uniform choice among them; four thousand fields under a narrowing act never gain a bit, and every withdrawal gives back what its claim closed.",
+  "Two routes at one span interfere by phase alone: full contrast unseen, almost none once each route is kicked by an observation."
+ ],
+ "cases": [
+  {
+   "name": "entropy, narrowing and two routes",
+   "widths": [
+    0,
+    1,
+    7,
+    63,
+    100
+   ],
+   "entropy": true,
+   "seed": 90,
+   "fields": 4000,
+   "period": 8,
+   "kicks": 91,
+   "trials": 400,
+   "contrast": [
+    1,
+    0.05
+   ]
+  }
+ ]
+}

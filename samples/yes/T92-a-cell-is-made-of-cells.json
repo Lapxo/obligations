@@ -1,0 +1,20 @@
+{
+ "about": [
+  "Five thousand cells whose origins are cells of one or two words each: read at one the first word of each part, at two the meet of the words, at three the same."
+ ],
+ "cases": [
+  {
+   "name": "five thousand cells, read one, two and three deep",
+   "seed": 92,
+   "cells": 5000,
+   "parts": 3,
+   "depth": 2,
+   "moved": [
+    683,
+    1514,
+    0
+   ],
+   "meetOfParts": true
+  }
+ ]
+}

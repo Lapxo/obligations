@@ -1,8 +1,12 @@
 import { witnessesIn } from '../debit/debit.ts';
 import { key } from './field.ts';
 import type { Point, Sighting } from './field.ts';
+import { meet } from './meet.ts';
 import { intervals } from '../lattice/forms.ts';
 import type { Interval } from '../lattice/forms.ts';
+import { live } from '../lattice/obligatory.ts';
+import type { Lattice } from '../lattice/lattice.ts';
+import type { Obligatory, Origin, World } from '../lattice/obligatory.ts';
 
 /**
  * An encounter is two origins at one place. Everything below is read off the set of sightings a point already holds —
@@ -52,3 +56,21 @@ export function turned(before: readonly Point[], after: readonly Point[]): reado
   return after.filter((p) => held.get(key([{ at: p.at }])) !== verdict(p));
 }
 
+export function encounter<T>(L: Lattice<T>, c: Obligatory<T>, world: World<T> = new Map()): { readonly origins: number; readonly held: T } {
+  return { origins: new Set(live(c.seen).map((claim) => claim.origin)).size, held: meet(L, c, world) };
+}
+
+export const cancels = (a: Origin, b: Origin): boolean => Math.cos(a.phase - b.phase) < 0;
+
+export function pairs(origins: readonly Origin[]): { readonly forks: number; readonly closes: number } {
+  let forks = 0;
+  let closes = 0;
+  for (let i = 0; i < origins.length; i += 1) for (let j = i + 1; j < origins.length; j += 1) if (cancels(origins[i]!, origins[j]!)) forks += 1; else closes += 1;
+  return { forks, closes };
+}
+
+export function laminar(origins: readonly Origin[]): boolean {
+  const x = origins.reduce((sum, one) => sum + Math.cos(one.phase), 0);
+  const y = origins.reduce((sum, one) => sum + Math.sin(one.phase), 0);
+  return x * x + y * y > origins.length;
+}
