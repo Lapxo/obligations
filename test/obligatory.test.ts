@@ -1,6 +1,6 @@
 import { chain, freedom, fromScale, state, unit } from '@lapxo/obligations';
 import { intervals } from '@lapxo/obligations/forms';
-import { amplitude, budget, cell, fragility, coherence, decohere, distinct, disturbance, encounter, evolve, fringes, interfere, join as widen, meet, observe, parts, play, refine, sameObject, selfFold, sign } from '@lapxo/obligations/views/field';
+import { amplitude, budget, cell, fragility, coherence, decohere, distinct, disturbance, encounter, evolve, fringes, interfere, join as widen, live, meet, observe, parts, play, refine, sameObject, selfFold, sign } from '@lapxo/obligations/views/field';
 import type { Obligatory, World } from '@lapxo/obligations/views/field';
 import { apart, design, distance, horizon, horizonTotal, lone, loom, rank, reach, resting as turnedBy, sited } from '@lapxo/obligations/views/product';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -557,4 +557,11 @@ test('T101-fragility-is-the-fewest-withdrawals — a cell is as fragile as the f
     const claims = (c.origins as [string, number[]][]).map(([origin, [lo, hi]]) => ({ origin, span: { lo: lo!, hi: hi! } }));
     compare(fragility(intervals(-Infinity, Infinity), cell('x', 0, claims)), c.expect, c);
   }
+});
+
+test('D11-the-obligatory — live — a withdrawal takes back the claim it names in either order, names nothing else, and is never live itself', () => {
+  const ids = (seen: readonly Vector[]): readonly string[] => live(seen as { readonly id?: string; readonly takes?: string }[]).map((one) => one.id ?? '');
+  for (const one of (sample('yes', 'obligatory').cases as Vector[])[9]!['lives'] as Vector[]) compare(ids(one['seen'] as Vector[]), one['live'], one['name'] as string);
+  const no = (sample('no', 'obligatory').cases as Vector[])[6]!;
+  compare(ids((no['input'] as Vector)['seen'] as Vector[]), no['want'], no);
 });

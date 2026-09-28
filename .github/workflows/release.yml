@@ -25,7 +25,7 @@ jobs:
         run: |
           version="v$(node -p "require('./package.json').version")"
           gh release view "$version" >/dev/null 2>&1 && exit 0
-          gh release create "$version" "$(npm pack --silent)" --title "$version" --notes "$version"
+          gh release create "$version" "$(npm pack --silent)" --title "$version" --notes "$(git log -1 --format=%B)"
   publish:
     needs: release
     environment: release

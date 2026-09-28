@@ -8,7 +8,8 @@
   "The object, written down once: two poles read at a resolution, origins that carry the epoch they spoke at and a sign, and an order of rest against other cells.",
   "Five operations answer for it and there are no others. Meet is what the origins hold together, encounter is how many met and what that makes, observe is one more origin at a cost, sign is a bound narrowed wherever it is rested on, refine is the same cell read at another resolution.",
   "A withdrawal takes back its own write and nothing else, so a cell that was written and withdrawn at one epoch is a cell nobody claimed.",
-  "Eight acts in four pairs answer for it under seven names, each an offer with a descriptor, and what a descriptor forces is derived from it and refused: a widening that travels, a floor required past a signed ceiling, a withdrawal that leaves its pole where the claim put it, and an order of rest that returns to itself."
+  "Eight acts in four pairs answer for it under seven names, each an offer with a descriptor, and what a descriptor forces is derived from it and refused: a widening that travels, a floor required past a signed ceiling, a withdrawal that leaves its pole where the claim put it, and an order of rest that returns to itself.",
+  "Which claims of a cell are live, the ones its poles are read from: a withdrawal takes back the claim it names whichever of the two was seen first, takes nothing when it names no claim here, and is never live itself."
  ],
  "cases": [
   {
@@ -237,6 +238,88 @@
    "control": [
     false,
     false
+   ]
+  },
+  {
+   "name": "live — the claims no withdrawal took back, a withdrawal being an observation at −1",
+   "lives": [
+    {
+     "name": "a claim and the withdrawal that names it",
+     "seen": [
+      {
+       "origin": "a",
+       "id": "1",
+       "span": 1
+      },
+      {
+       "origin": "a",
+       "takes": "1",
+       "sign": -1,
+       "span": 1
+      }
+     ],
+     "live": []
+    },
+    {
+     "name": "a withdrawal seen before the claim it names",
+     "seen": [
+      {
+       "origin": "a",
+       "takes": "2",
+       "sign": -1,
+       "span": 1
+      },
+      {
+       "origin": "b",
+       "id": "2",
+       "span": 1
+      }
+     ],
+     "live": []
+    },
+    {
+     "name": "a withdrawal that names no claim here",
+     "seen": [
+      {
+       "origin": "a",
+       "id": "1",
+       "span": 1
+      },
+      {
+       "origin": "a",
+       "takes": "9",
+       "sign": -1,
+       "span": 1
+      }
+     ],
+     "live": [
+      "1"
+     ]
+    },
+    {
+     "name": "two claims, one taken back",
+     "seen": [
+      {
+       "origin": "a",
+       "id": "1",
+       "span": 1
+      },
+      {
+       "origin": "b",
+       "id": "2",
+       "span": 1
+      },
+      {
+       "origin": "b",
+       "takes": "2",
+       "sign": -1,
+       "span": 1
+      }
+     ],
+     "live": [
+      "1"
+     ]
+    }
    ]
   }
  ]
