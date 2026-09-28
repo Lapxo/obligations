@@ -19,7 +19,7 @@ export { bites, restingOn, sign } from '../field/sign.ts';
 export { converge, endsBeforeNow, present } from '../field/present.ts';
 export { amplitude, coherence, fringes, interfere, phase, seenAs } from './field/wave.ts';
 export type { Claim } from './field/wave.ts';
-export { cell, mark, parts, restOf, state } from '../lattice/obligatory.ts';
+export { cell, live, mark, parts, restOf, state } from '../lattice/obligatory.ts';
 export { fragility } from '../field/fragility.ts';
 export type { Act, Cell, Mark, Obligatory, Origin, World } from '../lattice/obligatory.ts';
 export { looksLeft, pay, price } from '../debit/observer.ts';

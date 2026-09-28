@@ -1,6 +1,6 @@
 # Reference
 
-Every operation this package offers, every law it states and every form it declares: 241 operations, 124 laws, 4 forms.
+Every operation this package offers, every law it states and every form it declares: 242 operations, 124 laws, 4 forms.
 
 ## Notation
 
@@ -33,6 +33,7 @@ cell  : at ×  × [Claim] × [restsOn] → Obligatory
 parts : Lattice × Obligatory × World → Cell
 state : Lattice × Obligatory × World → state
 mark  : Mark → Mark
+live  : [L] → [L]
 state(c) ∈ {FREE, REQUIRED, FORBIDDEN, CONFLICT}
 ```
 
@@ -147,6 +148,7 @@ flowchart BT
 | key | field | `key(regions: readonly Region[]): string` | 1 | no law |
 | laminar | field | `laminar(origins: readonly Origin[]): boolean` | 2 | T89-disagreement-is-where-to-look |
 | latest | field | `latest(places: readonly Point[]): Point \| null` | 1 | no law |
+| live | field | `live<L extends { readonly id?: string; readonly takes?: string }>(lines: readonly L[]): readonly L[]` | 2 | D11-the-obligatory |
 | looksLeft | field | `looksLeft(L: Lattice<Interval>, world: World<Interval>, origin: string): number` | 2 | T93-every-act-is-paid-by-its-origin |
 | mark | field | `mark<T>(one: Mark<T>): Mark<T>` | 3 | D11-the-obligatory, A7-freedom-conserved |
 | meet | field | `meet<T>(L: Lattice<T>, c: Obligatory<T>, world: World<T> = new Map()): T` | 7 | D11-the-obligatory |

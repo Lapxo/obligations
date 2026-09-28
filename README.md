@@ -2,7 +2,7 @@
 
 # @lapxo/obligations
 
-![version 0.3.3](https://img.shields.io/badge/version-0.3.3-8c959f) ![license MIT](https://img.shields.io/badge/license-MIT-8c959f) ![node >=22.12](https://img.shields.io/badge/node-%3E%3D22.12-8c959f) ![dependencies 0](https://img.shields.io/badge/dependencies-0-2da44e) ![cases 211 hold](https://img.shields.io/badge/cases-211_hold-2da44e) ![verify agrees](https://img.shields.io/badge/verify-agrees-8c959f) [![DOI 10.5281/zenodo.21858428](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-8c959f)](https://doi.org/10.5281/zenodo.21858428)
+![version 0.3.4](https://img.shields.io/badge/version-0.3.4-8c959f) ![license MIT](https://img.shields.io/badge/license-MIT-8c959f) ![node >=22.12](https://img.shields.io/badge/node-%3E%3D22.12-8c959f) ![dependencies 0](https://img.shields.io/badge/dependencies-0-2da44e) ![cases 211 hold](https://img.shields.io/badge/cases-211_hold-2da44e) ![verify agrees](https://img.shields.io/badge/verify-agrees-8c959f) [![DOI 10.5281/zenodo.21858428](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-8c959f)](https://doi.org/10.5281/zenodo.21858428)
 
 The algebra of a cell: two poles, origins with phase, eight acts.
 

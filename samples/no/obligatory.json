@@ -113,6 +113,29 @@
    "call": "require",
    "want": false,
    "expected.ok": false
+  },
+  {
+   "name": "falsifier: a withdrawal seen before the claim it names keeps that claim live",
+   "input": {
+    "seen": [
+     {
+      "origin": "a",
+      "takes": "2",
+      "sign": -1,
+      "span": 1
+     },
+     {
+      "origin": "b",
+      "id": "2",
+      "span": 1
+     }
+    ]
+   },
+   "call": "live",
+   "want": [
+    "2"
+   ],
+   "expected.ok": false
   }
  ]
 }
