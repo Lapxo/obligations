@@ -42,7 +42,7 @@ jobs:
           node-version: 24
       - run: npm ci
       - run: npm run build
-      - run: npm install --global npm@'>=11.15.0'
+      - run: npm install --global npm@'12.1.0'
       - run: |
           npm view "$(node -p "require('./package.json').name")@$(node -p "require('./package.json').version")" version >/dev/null 2>&1 && exit 0
-          npm stage publish --access public
+          npm stage publish
