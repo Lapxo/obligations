@@ -357,6 +357,16 @@ test('T21-reading-is-an-origin — undisputed readings are the density', () => e
 test('T22-fold-is-superposition — epochs meet, then values meet, or there is no encounter', () => each(sample('yes', 'T22-fold-is-superposition'), superposition));
 test('A1-encounter — one origin is potential, two that meet a fact', () => both('A1-encounter', encounter));
 test('A2-meet — two bounds fold by their meet, in any order of arrival', () => both('A2-meet', meets));
+const combines = (c: Vector): boolean => (new Set(c.cells as string[]).size === 1
+  ? holds(c, c.expect.cells === 1 && rotations((c.interval as number[][]).map(band)).every((o) => same(foldIn(SPAN, o), band(c.expect.value))))
+  : holds(c, c.expect.cells === new Set(c.cells as string[]).size && (c.cells as string[]).every((cell) => coarsen(point(cell), c.resolution).at.join('/') === c.expect.region)));
+test('T102-a-combine-meets-one-cell-and-coarsens-many — readers of one field fold to their meet, readers of many meet only at the region they share', () => both('T102-a-combine-meets-one-cell-and-coarsens-many', combines));
+const heldAt = (c: Vector): boolean => {
+  const [epoch, span] = c.read as [number, number[]];
+  const got = latest([point(c.atom, epoch, [{ origin: 'reader', span: band(span) }]), ...(c.moved === null ? [] : [point(c.atom, c.moved as number, [])])]);
+  return holds(c, (got !== null && got.seen.length > 0 ? 'present' : 'past') === c.expect);
+};
+test('T103-a-reading-holds-at-what-it-read — a reading is of its epoch, and a move of what it read leaves it in the past', () => both('T103-a-reading-holds-at-what-it-read', heldAt));
 test('A3-resolution — a longer prefix refines, and a verdict settles at a coarsest depth', () => both('A3-resolution', refinement));
 test('A4-epoch — what stands is the latest epoch, whatever the order of arrival', () => both('A4-epoch', causal));
 test('A5-origin-is-extension — equal extensions are one origin', () => both('A5-origin-is-extension', extensions));

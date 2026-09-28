@@ -1,0 +1,32 @@
+{
+ "about": [
+  "Today's fold of the two validators: both lines stand and a fork is named, which the meet refuses."
+ ],
+ "cases": [
+  {
+   "name": "two readers on one field, both standing",
+   "cells": [
+    "order/ref",
+    "order/ref"
+   ],
+   "interval": [
+    [
+     0,
+     320
+    ],
+    [
+     0,
+     255
+    ]
+   ],
+   "expect": {
+    "cells": 2,
+    "value": [
+     0,
+     320
+    ]
+   },
+   "expected.ok": false
+  }
+ ]
+}

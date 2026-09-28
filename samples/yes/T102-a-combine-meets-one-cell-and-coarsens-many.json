@@ -1,0 +1,78 @@
+{
+ "about": [
+  "Readers of one field fold to their meet, in any order of arrival: the two validators of spec/vectors/fold.txt, 0..320 and 0..255, make 0..255 and nothing beside it.",
+  "Readers of two fields keep two cells, and read at the region they share they are read together there."
+ ],
+ "cases": [
+  {
+   "name": "two readers on one field",
+   "cells": [
+    "order/ref",
+    "order/ref"
+   ],
+   "interval": [
+    [
+     0,
+     320
+    ],
+    [
+     0,
+     255
+    ]
+   ],
+   "expect": {
+    "cells": 1,
+    "value": [
+     0,
+     255
+    ]
+   }
+  },
+  {
+   "name": "the same two, arriving the other way",
+   "cells": [
+    "order/ref",
+    "order/ref"
+   ],
+   "interval": [
+    [
+     0,
+     255
+    ],
+    [
+     0,
+     320
+    ]
+   ],
+   "expect": {
+    "cells": 1,
+    "value": [
+     0,
+     255
+    ]
+   }
+  },
+  {
+   "name": "readers on two fields of one region, read at the region",
+   "cells": [
+    "order/ref",
+    "order/seq"
+   ],
+   "interval": [
+    [
+     0,
+     320
+    ],
+    [
+     0,
+     64
+    ]
+   ],
+   "resolution": 1,
+   "expect": {
+    "cells": 2,
+    "region": "order"
+   }
+  }
+ ]
+}

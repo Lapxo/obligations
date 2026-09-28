@@ -32,13 +32,6 @@ export const BOTH_LAW_NAMES = [
   'absorption.join',
 ] as const;
 
-export const CLOSURE_LAW_NAMES = [
-  'closure.demand',
-  'closure.permit',
-  'closure.meet',
-  'closure.join',
-] as const;
-
 export const LATTICE_LAW_NAMES = [
   ...POSET_LAW_NAMES,
   ...MEET_LAW_NAMES,

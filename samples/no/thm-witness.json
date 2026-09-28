@@ -1,0 +1,17 @@
+{
+ "about": [
+  "Every conflicting pair of families in b2 called witnessed: condition (W) holds for 144 of the 188, and the claim of 188 is refused."
+ ],
+ "cases": [
+  {
+   "name": "b2, every conflict called a witness",
+   "lattice": "b2",
+   "families": 225,
+   "conflict": 188,
+   "witness": 188,
+   "soundUnderHeight": 8,
+   "expect": true,
+   "expected.ok": false
+  }
+ ]
+}

@@ -42,11 +42,6 @@ export function buildGraph(edges: readonly Edge[]): Graph {
   };
 }
 
-/** A name is owed only when the carrier is unobserved or contains it. */
-function owed(carrier: ReadonlySet<string>, name: string): boolean {
-  return carrier.size === 0 || carrier.has(name);
-}
-
 export function reachIds(g: Graph, from: number, scratch?: Uint8Array): Uint8Array {
   const seen = scratch ?? new Uint8Array(g.size);
   if (scratch) seen.fill(0);

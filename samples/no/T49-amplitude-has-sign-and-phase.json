@@ -1,0 +1,15 @@
+{
+ "about": [
+  "A withdrawal two epochs after its write, called a cancellation: a write and its withdrawal cancel at one epoch only."
+ ],
+ "cases": [
+  {
+   "name": "a write and its withdrawal apart, called nothing",
+   "n": 200,
+   "period": 8,
+   "apart": 0,
+   "expect": true,
+   "expected.ok": false
+  }
+ ]
+}

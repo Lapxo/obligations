@@ -1,0 +1,72 @@
+{
+ "about": [
+  "A cell loses a pole when the fewest origins that set it withdraw: one origin setting a pole alone makes the cell fragile at one, three origins agreeing on both poles make it hold until all three leave, and a cell no origin holds has nothing to lose."
+ ],
+ "cases": [
+  {
+   "name": "two origins, each setting a pole",
+   "origins": [
+    [
+     "a",
+     [
+      0,
+      10
+     ]
+    ],
+    [
+     "b",
+     [
+      5,
+      20
+     ]
+    ]
+   ],
+   "expect": 1
+  },
+  {
+   "name": "three origins agreeing on both poles",
+   "origins": [
+    [
+     "a",
+     [
+      5,
+      10
+     ]
+    ],
+    [
+     "b",
+     [
+      5,
+      10
+     ]
+    ],
+    [
+     "c",
+     [
+      5,
+      10
+     ]
+    ]
+   ],
+   "expect": 3
+  },
+  {
+   "name": "one origin",
+   "origins": [
+    [
+     "a",
+     [
+      5,
+      10
+     ]
+    ]
+   ],
+   "expect": 1
+  },
+  {
+   "name": "no origin, nothing to withdraw",
+   "origins": [],
+   "expect": 0
+  }
+ ]
+}

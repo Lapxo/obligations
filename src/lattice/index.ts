@@ -6,7 +6,7 @@
 export { UnitError } from './errors.ts';
 export type { UnitErrorCode } from './errors.ts';
 
-export { BOOLEAN, chain, height, isDistributive, order } from './order.ts';
+export { chain, height, isDistributive, order } from './order.ts';
 
 export { asBoolean, bitLoss, compose, composeState, fuse, widen, conflictDebits, anyOf, missing, entails, permitAll, state, statesPerDebit, table, unit } from '../debit/unit.ts';
 
@@ -18,7 +18,7 @@ export { WideMask, chunkCount } from '../debit/masks.ts';
 export { rebuild, register } from '../debit/register.ts';
 export type { Register } from '../debit/register.ts';
 
-export { DANGEROUS, STATES, dangerous, moved, quadrants, runQuadrants, sizes, stateAt, transitions } from '../debit/vector.ts';
+export { DANGEROUS, STATES, dangerous, moved, quadrants, runQuadrants, stateAt, transitions } from '../debit/vector.ts';
 export type { Matrix, Quadrants, Run, Span } from '../debit/vector.ts';
 
 export { METHODS, weakest } from '../debit/provenance.ts';
@@ -44,7 +44,6 @@ export { declarationOf, unitOf, stateOf, registerOf, premiumOf, degenerate, with
 export {
   violationsIn, meetViolationsIn, posetViolationsIn, closureViolationsIn,
   LATTICE_LAW_NAMES, POSET_LAW_NAMES, MEET_LAW_NAMES, JOIN_LAW_NAMES, BOTH_LAW_NAMES,
-  CLOSURE_LAW_NAMES,
 } from './axioms.ts';
 export type { LatticeLawName } from './axioms.ts';
 

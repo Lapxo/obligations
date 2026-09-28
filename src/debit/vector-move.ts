@@ -5,12 +5,6 @@ type Run = import('./vector.ts').Run;
 
 const STATES = ['REQUIRED', 'FREE', 'FORBIDDEN', 'CONFLICT'] as const satisfies readonly State[];
 
-function findWithin(runs: readonly Run[], s: State): number {
-  let n = 0;
-  for (const r of runs) if (r.within) n += r.within[s];
-  return n;
-}
-
 export type Matrix = Readonly<Record<State, Readonly<Record<State, number>>>>;
 
 export const DANGEROUS: readonly (readonly [State, State])[] =

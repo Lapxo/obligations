@@ -1,0 +1,28 @@
+{
+ "about": [
+  "Two origins that each set one pole, called fragile at two: withdrawing either alone moves a pole."
+ ],
+ "cases": [
+  {
+   "name": "two origins, each setting a pole, called two",
+   "origins": [
+    [
+     "a",
+     [
+      0,
+      10
+     ]
+    ],
+    [
+     "b",
+     [
+      5,
+      20
+     ]
+    ]
+   ],
+   "expect": 2,
+   "expected.ok": false
+  }
+ ]
+}
