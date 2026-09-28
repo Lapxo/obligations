@@ -1,20 +1,16 @@
-<p align="center"><img src="docs/img/logo.svg" alt="" width="96"></p>
+## The paper
 
-# @lapxo/obligations
+The theory here is not an application of an algebra to a problem. It is one algebra, of a cell with two marks, and three theories that turn out to be that algebra seen from different sides: constraints with a price, states on a scale, and points with an epoch and an origin.
 
-![version 0.3.1](https://img.shields.io/badge/version-0.3.1-8c959f) ![license MIT](https://img.shields.io/badge/license-MIT-8c959f) ![node >=22.12](https://img.shields.io/badge/node-%3E%3D22.12-8c959f) ![dependencies 0](https://img.shields.io/badge/dependencies-0-2da44e) ![cases 211 hold](https://img.shields.io/badge/cases-211_hold-2da44e) ![verify agrees](https://img.shields.io/badge/verify-agrees-8c959f) [![DOI 10.5281/zenodo.21858428](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-8c959f)](https://doi.org/10.5281/zenodo.21858428)
+What it proves is that the price of a fold, the freedom of a system in bits, the four states a verdict can hold, the spectrum a domain admits, the metric that shared observation induces and the phase an epoch carries are all consequences of the same lines. Each law names the view that implements it, and each view is a folder of the source: what is proved in the field view runs in the field view, and a law no operation reaches is a law this package refuses to claim.
 
-The algebra of a cell: two poles, origins with phase, eight acts.
+Ochoa, N. (2026). Two-Sided Constraints on a Valued Lattice (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.21858428
 
 ## The idea
 
 Every quantity a system answers for has two marks on one scale. The floor is what must hold, the ceiling is what may hold, and the pair is a cell. Two origins that touch one cell and whose marks meet make information; two whose marks do not meet make a fork that no average can close.
 
 Four words carry the whole library. A floor, a ceiling, an origin and an epoch. A price is the distance between the marks, a state is where they stand, a verdict is what an origin found, a horizon is what no origin has reached, and none of them is a new idea: each is read off those four.
-
-<p align="center"><img src="docs/img/cell.svg" alt="Two origins on one scale: a claims 2 to 9 and b claims 5 to 12; what they hold together runs from a floor of 5 to a ceiling of 9." width="640"></p>
-
-A cell is drawn as bars on one scale: a grey bar is what one origin claims, potential until another meets it, and a green bar is where two claims meet, its ends the floor and the ceiling. A state carries its render in a figure, a badge and a graph alike: FREE green, REQUIRED grey, FORBIDDEN red, CONFLICT fork.
 
 ## The object
 
@@ -62,62 +58,6 @@ Every quantity has two poles, a floor that is required and a ceiling that is per
 
 One theorem shows the theory meeting its own measurement. An independent second origin never raises a cell's debit: it falls by log2 of the states it leaves standing, a full bit exactly when it admits at most half of them, and nothing exactly when it narrows nothing. Between the two there is a drop that is neither: fifteen of sixteen states costs 0.0931 of a bit.
 
-```bash
-npm install @lapxo/obligations
-```
-
-## Try it
-
-The shortest example this package ships, withdrawal, and what it prints.
-
-```ts
-import { intervals } from '@lapxo/obligations/forms';
-import { cell, encounter, meet, observe } from '@lapxo/obligations/views/field';
-
-const scale = intervals(0, 20);
-const held = cell('x', 0, [{ id: 'k1', origin: 'a', span: { lo: 2, hi: 9 } }, { id: 'k2', origin: 'b', span: { lo: 5, hi: 12 } }]);
-const back = observe(held, { origin: 'b', span: { lo: 5, hi: 12 }, takes: 'k2' });
-
-console.log('two origins ', encounter(scale, held).origins, JSON.stringify(meet(scale, held)));
-console.log('b takes k2  ', encounter(scale, back).origins, JSON.stringify(meet(scale, back)));
-console.log('claims kept ', back.seen.length);
-console.log('why       a withdrawal names the claim it takes back, so the cell returns to one origin while all three claims stay on it and nothing is matched by looking like something');
-```
-
-```
-two origins  2 {"lo":5,"hi":9}
-b takes k2   1 {"lo":2,"hi":9}
-claims kept  3
-why       a withdrawal names the claim it takes back, so the cell returns to one origin while all three claims stay on it and nothing is matched by looking like something
-```
-
-## How to read it
-
-One lattice is read through several views, and each answers one question.
-
-<details><summary>The ten views and the question each answers</summary>
-
-- **chain** — how finely a cell is resolved and how it moves along its scale.
-- **complement** — what can be taken back exactly.
-- **dual** — what the permitted side says on its own.
-- **field** — where a bound is held and by whom.
-- **galois** — what is determined by what.
-- **ideal** — what a cell requires and permits, what two claims hold together, what a declaration decomposes into, and how much freedom is left between its two poles, in bits.
-- **product** — how a region decomposes.
-- **quotient** — what is lost and what is kept when a bound is read coarser.
-- **spectrum** — which values can occur.
-- **valuation** — what a bound is worth.
-
-</details>
-
-## The paper
-
-The theory here is not an application of an algebra to a problem. It is one algebra, of a cell with two marks, and three theories that turn out to be that algebra seen from different sides: constraints with a price, states on a scale, and points with an epoch and an origin.
-
-What it proves is that the price of a fold, the freedom of a system in bits, the four states a verdict can hold, the spectrum a domain admits, the metric that shared observation induces and the phase an epoch carries are all consequences of the same lines. Each law names the view that implements it, and each view is a folder of the source: what is proved in the field view runs in the field view, and a law no operation reaches is a law this package refuses to claim.
-
-Ochoa, N. (2026). Two-Sided Constraints on a Valued Lattice (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.21858428
-
 ## What is open
 
 Nine lines are conjectures: nothing rests on them, and each names what would break it.
@@ -162,6 +102,21 @@ The obligatory is maximal: take away any one of its seven parts and what is left
 
 </details>
 
-## Check
+## How to read it
 
-● 211 cases hold
+One lattice is read through several views, and each answers one question.
+
+<details><summary>The ten views and the question each answers</summary>
+
+- **chain** — how finely a cell is resolved and how it moves along its scale.
+- **complement** — what can be taken back exactly.
+- **dual** — what the permitted side says on its own.
+- **field** — where a bound is held and by whom.
+- **galois** — what is determined by what.
+- **ideal** — what a cell requires and permits, what two claims hold together, what a declaration decomposes into, and how much freedom is left between its two poles, in bits.
+- **product** — how a region decomposes.
+- **quotient** — what is lost and what is kept when a bound is read coarser.
+- **spectrum** — which values can occur.
+- **valuation** — what a bound is worth.
+
+</details>

@@ -311,3 +311,9 @@ test('H3-a-distant-signature-moves-a-cell-that-did-not-move — the same cell, t
   compare(moved > 0 && moved < (c['trials'] as number), true, 'and the verdict came out both ways');
   compare(sample('no', 'H3-a-distant-signature-moves-a-cell-that-did-not-move').cases[0]['expected.ok'], false);
 });
+
+test('T49-amplitude-has-sign-and-phase — a falsifier: a write and its withdrawal apart, called nothing', () => {
+  const c = one(sample('no', 'T49-amplitude-has-sign-and-phase'));
+  const claim: Claim = { origin: 'o', epoch: 3, span: SPAN };
+  compare(Number(interfere([claim, { ...claim, epoch: 5, withdraws: true }], c['period'] as number).toFixed(3)), c['apart'], c);
+});

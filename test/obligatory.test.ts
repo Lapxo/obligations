@@ -1,6 +1,6 @@
 import { chain, freedom, fromScale, state, unit } from '@lapxo/obligations';
 import { intervals } from '@lapxo/obligations/forms';
-import { amplitude, budget, cell, coherence, decohere, distinct, disturbance, encounter, evolve, fringes, interfere, join as widen, meet, observe, parts, play, refine, sameObject, selfFold, sign } from '@lapxo/obligations/views/field';
+import { amplitude, budget, cell, fragility, coherence, decohere, distinct, disturbance, encounter, evolve, fringes, interfere, join as widen, meet, observe, parts, play, refine, sameObject, selfFold, sign } from '@lapxo/obligations/views/field';
 import type { Obligatory, World } from '@lapxo/obligations/views/field';
 import { apart, design, distance, horizon, horizonTotal, lone, loom, rank, reach, resting as turnedBy, sited } from '@lapxo/obligations/views/product';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -551,3 +551,10 @@ test('H9-the-obligatory-is-maximal — seven removals leave seven objects alread
   compare(seen.length, c['removals'], 'seven parts, seven known objects');
 });
 
+
+test('T101-fragility-is-the-fewest-withdrawals — a cell is as fragile as the fewest origins whose withdrawal moves a pole', () => {
+  for (const c of [...sample('yes', 'T101-fragility-is-the-fewest-withdrawals').cases, ...sample('no', 'T101-fragility-is-the-fewest-withdrawals').cases] as Vector[]) {
+    const claims = (c.origins as [string, number[]][]).map(([origin, [lo, hi]]) => ({ origin, span: { lo: lo!, hi: hi! } }));
+    compare(fragility(intervals(-Infinity, Infinity), cell('x', 0, claims)), c.expect, c);
+  }
+});

@@ -177,4 +177,3 @@ export function order(levels: readonly string[], leq: readonly boolean[][]): Sca
   return build(levels, grid(true), grid(false));
 }
 
-export const BOOLEAN = (): Scale => chain(['no', 'yes']);

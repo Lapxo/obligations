@@ -269,3 +269,17 @@ test('thm-witness — one against one reports the whole conflict for every valua
     compare(anyway, c['soundUnderHeight'], `${c.name}: sound under plain height without a witness`);
   }
 });
+
+test('thm-witness — a falsifier: every conflict of b2 called witnessed is refused', () => {
+  for (const c of sample('no', 'thm-witness').cases as Vector[]) {
+    const s = c['lattice'] === 'b2' ? b2() : n5();
+    const all = families(s.levels.length);
+    let witness = 0;
+    for (const A of all) for (const B of all) {
+      const u = A.reduce((x, a) => s.higher(x, a));
+      const m = s.lower(u, B.reduce((x, b) => s.lower(x, b)));
+      if (m !== u && A.includes(u) && B.some((b) => s.lower(u, b) === m)) witness += 1;
+    }
+    compare(witness, c['witness'], c);
+  }
+});

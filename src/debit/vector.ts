@@ -21,15 +21,6 @@ export function quadrants(demanded: WideMask, permitted: WideMask, extent: WideM
   };
 }
 
-export function sizes(q: Quadrants): Readonly<Record<State, number>> {
-  return {
-    REQUIRED: q.REQUIRED.size(),
-    FREE: q.FREE.size(),
-    FORBIDDEN: q.FORBIDDEN.size(),
-    CONFLICT: q.CONFLICT.size(),
-  };
-}
-
 export function stateAt(q: Quadrants, bit: number): State | null {
   for (const s of STATES) if (q[s].has(bit)) return s;
   return null;

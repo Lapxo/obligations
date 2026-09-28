@@ -1,6 +1,6 @@
 # Reference
 
-Every operation this package offers, every law it states and every form it declares: 240 operations, 121 laws, 4 forms.
+Every operation this package offers, every law it states and every form it declares: 241 operations, 124 laws, 4 forms.
 
 ## Notation
 
@@ -26,6 +26,7 @@ c = ⟨⊥, ⊤, O, ⊑⟩        over L at r
 | `⊤(c) = ⋀_{b ⊑ c} signed(b) ∧ ⋀_{o∈O} hi_o, one line per act` | signatures live where they are signed | a signature or requirement is a line at the bound, never a value copied into resting cells; a cell's poles are read up its chain of rest as the meet of the live signatures above it; an absorbed signature stays live so withdrawing a tighter one reveals it. Signing and withdrawing cost one line; reading costs the depth of rest; nothing propagates, and A2 with T3 makes the reading equal to any replay. |
 | `\|e^{ia} + e^{ib}\|² < 2 ⟺ \|a − b\| > π/2` | the quarter turn | two claims reinforce within a quarter turn of each other and cancel beyond it, since \|e^{ia} + e^{ib}\|² < 2 exactly when \|a − b\| > π/2: a fork is destructive interference, and a field is laminar while fewer than half its pairs lie beyond a quarter turn, forks over closes below one |
 | `state(c) ∈ {FREE, REQUIRED, FORBIDDEN, CONFLICT}` | state | a cell is in one of four states: FREE, REQUIRED, FORBIDDEN, CONFLICT — green, grey, red, fork are their renders |
+| `frag(c) = min { \|W\| : W ⊆ O(c), ⊥(c∖W) ≠ ⊥(c) or ⊤(c∖W) ≠ ⊤(c) }` | fragility is the fewest withdrawals | a cell is as fragile as the fewest origins whose withdrawal moves one of its poles: a pole one origin sets breaks with that origin, and a pole several origins set together holds until all of them withdraw |
 
 ```text
 cell  : at ×  × [Claim] × [restsOn] → Obligatory
@@ -96,13 +97,13 @@ flowchart BT
 | foldRegion | chain | `foldRegion<T>(places: readonly Point[], where: Region, f: (met: readonly Point[]) => T): readonly Fold<T>[]` | 1 | no law |
 | freedom | chain | `freedom(c: Scale, u: Unit): number` | 3 | no law |
 | missing | chain | `missing(c: Scale, have: Unit, want: Unit): { raiseFloorTo: string[]; raiseCeilingTo: string[] }` | 2 | no law |
-| size | chain | `size(at: readonly string[], steps?: number): number` | 2 | A3-resolution |
+| size | chain | `size(at: readonly string[], steps?: number): number` | 1 | A3-resolution |
 | sufficientResolution | chain | `sufficientResolution<T>(finest: number, verdict: (steps: number) => T, same: (a: T, b: T) => boolean = Object.is): number` | 1 | T7-sufficient-resolution |
 | unit | chain | `unit(subject: string, bounds: { floor: string; ceiling: string }): Unit` | 1 | D4-debit-in-bits |
 | unitToIdeal | chain | `unitToIdeal(c: Scale, u: Unit): IdealDebit` | 2 | no law |
 | upset | chain | `upset(c: Scale, names: readonly string[]): readonly string[]` | 2 | D2-ideal |
 | weakest | chain | `weakest(methods: Iterable<Method>): Method` | 2 | D4-debit-in-bits |
-| and | complement | `and(a: Packed, b: Packed): Packed` | 9 | no law |
+| and | complement | `and(a: Packed, b: Packed): Packed` | 12 | no law |
 | asBoolean | complement | `asBoolean(c: Scale, u: Unit): BoolView` | 1 | no law |
 | bitLoss | complement | `bitLoss(c: Scale): { readonly possible: number; readonly exactly: number; readonly lossy: number; readonly unsayable: number; }` | 1 | no law |
 | canonical | complement | `canonical(pk: Packer, p: Packed): Packed` | 2 | T8-exact-withdrawal |
@@ -133,6 +134,7 @@ flowchart BT
 | evolve | field | `evolve(world: readonly Obligatory<Band>[], epochs: number, budget_: number, seed: number): readonly (readonly Obligatory<Band>[])[]` | 2 | T52-directing-where-origins-land-closes-the-horizon |
 | exclusive | field | `exclusive(mine: readonly Region[], others: readonly (readonly Region[])[]): readonly Region[]` | 1 | no law |
 | foldIn | field | `foldIn<T>(L: MeetSemilattice<T>, demands: readonly T[]): T` | 2 | A4-epoch |
+| fragility | field | `fragility<T>(L: Lattice<T>, c: Obligatory<T>, world: World<T> = new Map()): number` | 2 | T101-fragility-is-the-fewest-withdrawals |
 | fringes | field | `fringes(claims: readonly Claim[], period: number, delays: readonly number[]): readonly number[]` | 2 | T48-epoch-is-phase |
 | interfere | field | `interfere(claims: readonly Claim[], period: number): number` | 2 | T49-amplitude-has-sign-and-phase |
 | join | field | `join<T>(L: Lattice<T>, c: Obligatory<T>, span: T, witness: string, at?: number): Obligatory<T>` | 5 | D11-the-obligatory, A7-freedom-conserved |
@@ -147,7 +149,7 @@ flowchart BT
 | latest | field | `latest(places: readonly Point[]): Point \| null` | 1 | no law |
 | looksLeft | field | `looksLeft(L: Lattice<Interval>, world: World<Interval>, origin: string): number` | 2 | T93-every-act-is-paid-by-its-origin |
 | mark | field | `mark<T>(one: Mark<T>): Mark<T>` | 3 | D11-the-obligatory, A7-freedom-conserved |
-| meet | field | `meet<T>(L: Lattice<T>, c: Obligatory<T>, world: World<T> = new Map()): T` | 6 | D11-the-obligatory |
+| meet | field | `meet<T>(L: Lattice<T>, c: Obligatory<T>, world: World<T> = new Map()): T` | 7 | D11-the-obligatory |
 | meet | field | `owed` | 0 | no law |
 | meet | field | `owed` | 0 | no law |
 | meet | field | `owed` | 0 | no law |
@@ -162,7 +164,7 @@ flowchart BT
 | observe | field | `owed` | 0 | no law |
 | observe | field | `owed` | 0 | no law |
 | observe | field | `owed` | 0 | no law |
-| origins | field | `origins(place: Point): number` | 17 | no law |
+| origins | field | `origins(place: Point): number` | 18 | no law |
 | pairs | field | `pairs(origins: readonly Origin[]): { readonly forks: number; readonly closes: number }` | 3 | T87-the-quarter-turn |
 | parts | field | `parts<T>(L: Lattice<T>, c: Obligatory<T>, world: World<T> = new Map()): Cell<T>` | 3 | D11-the-obligatory |
 | passes | field | `passes(place: Point \| Region, step: string): boolean` | 1 | no law |
@@ -171,7 +173,7 @@ flowchart BT
 | play | field | `play(lattice: Lattice<Band>, world: readonly Obligatory<Band>[], weights: Weights, epochs: number, seed: number, spread: number): { readonly closed: number; readonly forks: number; readonly reopened: number; readonly coverage: number; }` | 2 | T55-a-policy-is-four-weights |
 | point | field | `point(name: string, epoch = 0, seen: readonly Sighting[] = [], steps = '/'): Point` | 2 | A1-encounter |
 | potential | field | `potential(place: Point): boolean` | 1 | no law |
-| present | field | `present(place: Point): Interval \| 'potential' \| null` | 1 | no law |
+| present | field | `present(place: Point): Interval \| 'potential' \| null` | 2 | no law |
 | price | field | `price<T>(bits: (held: T) => number, before: T, after: T): number` | 1 | T100-an-act-is-paid-with-attention |
 | refine | field | `refine<T>(c: Obligatory<T>, steps: number): Obligatory<T>` | 2 | D11-the-obligatory |
 | refine | field | `owed` | 0 | no law |
@@ -180,7 +182,7 @@ flowchart BT
 | refine | field | `owed` | 0 | no law |
 | refine | field | `owed` | 0 | no law |
 | refine | field | `owed` | 0 | no law |
-| region | field | `region(name: string, steps = '/'): Region` | 4 | D1-region |
+| region | field | `region(name: string, steps = '/'): Region` | 3 | D1-region |
 | require | field | `require<T>(L: Lattice<T>, world: World<T>, name: string, span: T, line: Line = {}): World<T>` | 3 | D11-the-obligatory |
 | require | field | `owed` | 0 | no law |
 | require | field | `owed` | 0 | no law |
@@ -203,7 +205,7 @@ flowchart BT
 | sign | field | `owed` | 0 | no law |
 | state | field | `state<T>(L: Lattice<T>, c: Obligatory<T>, world: World<T> = new Map()): State` | 5 | D11-the-obligatory, A8-four-states |
 | turned | field | `turned(before: readonly Point[], after: readonly Point[]): readonly Point[]` | 1 | no law |
-| within | field | `within(inner: Point \| Region, outer: Region): boolean` | 4 | D1-region |
+| within | field | `within(inner: Point \| Region, outer: Region): boolean` | 3 | D1-region |
 | witnessesIn | field | `witnessesIn<T>(L: MeetSemilattice<T>, demands: readonly T[]): readonly [T, T] \| null` | 1 | no law |
 | alphabets | galois | `alphabets(): Poset<Alphabet>` | 1 | no law |
 | relate | galois | `relate<T>(L: Poset<T>, a: T, b: T): Relation` | 2 | no law |
@@ -211,7 +213,7 @@ flowchart BT
 | complexity | ideal | `complexity(c: Scale, u: Unit): number` | 1 | no law |
 | dangerous | ideal | `dangerous(m: Matrix): readonly { from: State; to: State; n: number }[]` | 2 | no law |
 | fromIdeals | ideal | `fromIdeals(c: Scale): Lattice<IdealDebit>` | 1 | no law |
-| holds | ideal | `holds(c: Scale, units: readonly Unit[], index: number): boolean` | 2 | no law |
+| holds | ideal | `holds(c: Scale, units: readonly Unit[], index: number): boolean` | 3 | no law |
 | idealComplexity | ideal | `idealComplexity(c: Scale, d: IdealDebit): number` | 1 | no law |
 | idealDebit | ideal | `idealDebit(c: Scale, demand: readonly string[], permit: readonly string[]): IdealDebit` | 1 | no law |
 | idealEntails | ideal | `idealEntails(a: IdealDebit, b: IdealDebit): boolean` | 1 | no law |
@@ -232,7 +234,7 @@ flowchart BT
 | stateAt | ideal | `stateAt(q: Quadrants, bit: number): State \| null` | 2 | no law |
 | statesPerDebit | ideal | `statesPerDebit(c: Scale, u: Unit): [string, State][]` | 1 | no law |
 | table | ideal | `table(a: State, b: State): DebitOutcome` | 1 | no law |
-| touches | ideal | `touches(c: Scale, mine: Unit, folded: Unit): boolean` | 2 | no law |
+| touches | ideal | `touches(c: Scale, mine: Unit, folded: Unit): boolean` | 3 | no law |
 | transitions | ideal | `transitions(before: Quadrants, after: Quadrants, width: number): Matrix` | 2 | no law |
 | unitComplexity | ideal | `unitComplexity(c: Scale, u: Unit): number` | 1 | no law |
 | widen | ideal | `widen(c: Scale, units: readonly Unit[]): Unit` | 1 | no law |
@@ -245,7 +247,7 @@ flowchart BT
 | subsets | lattice | `subsets(tokens: readonly string[]): Lattice<WideMask>` | 3 | no law |
 | violationsIn | lattice | `violationsIn<T>(L: Lattice<T>, xs: readonly T[]): readonly string[]` | 1 | no law |
 | agreements | product | `agreements(cells: readonly Point[], steps: number): { readonly agreed: number; readonly forks: number; readonly cells: number }` | 2 | T36-agreement-has-a-resolution |
-| apart | product | `apart(world: readonly Obligatory<Band>[], a: string, b: string, bounds: readonly string[] = []): boolean` | 2 | T51-the-shape-of-knowing-can-be-designed |
+| apart | product | `apart(world: readonly Obligatory<Band>[], a: string, b: string, bounds: readonly string[] = []): boolean` | 3 | T51-the-shape-of-knowing-can-be-designed |
 | area | product | `area(cell: Point): number` | 2 | T38-origins-are-a-polygon |
 | buildGraph | product | `buildGraph(edges: readonly Edge[]): Graph` | 2 | T4-composition |
 | centre | product | `centre(cell: Point): Vertex` | 3 | T38-origins-are-a-polygon |
@@ -276,7 +278,7 @@ flowchart BT
 | red | product | `red(world: readonly Point[], lock: Lock): readonly string[]` | 2 | T37-a-lock-is-a-mould |
 | residual | product | `residual(cells: readonly Point[], steps: number): number` | 2 | T36-agreement-has-a-resolution |
 | resting | product | `resting(world: readonly Point[], bound: string, was: Interval, now: Interval): readonly string[]` | 3 | T45-cells-that-rest-on-one-bound-are-entangled |
-| sited | product | `sited(world: readonly Obligatory<Band>[], sites: readonly (readonly [string, string])[], epoch = 1): readonly Obligatory<Band>[]` | 2 | T51-the-shape-of-knowing-can-be-designed |
+| sited | product | `sited(world: readonly Obligatory<Band>[], sites: readonly (readonly [string, string])[], epoch = 1): readonly Obligatory<Band>[]` | 3 | T51-the-shape-of-knowing-can-be-designed |
 | steady | product | `steady(cell: Point): boolean` | 3 | T38-origins-are-a-polygon |
 | stretch | product | `stretch(lock: Lock, k: number): Lock` | 2 | T37-a-lock-is-a-mould |
 | sufficient | product | `sufficient(cells: readonly Point[], upTo: number, tolerance = 1e-9): number` | 2 | T36-agreement-has-a-resolution |
@@ -314,7 +316,7 @@ flowchart BT
 | isMonotone | valuation | `isMonotone(c: Scale, value: Valuation): boolean` | 1 | no law |
 | isSupermodular | valuation | `isSupermodular(c: Scale, value: Valuation): boolean` | 1 | no law |
 | movesOf | valuation | `movesOf(c: Scale, before: Point, after: Point): Matrix` | 1 | no law |
-| order | valuation | `order(levels: readonly string[], leq: readonly boolean[][]): Scale` | 4 | no law |
+| order | valuation | `order(levels: readonly string[], leq: readonly boolean[][]): Scale` | 6 | no law |
 | premium | valuation | `premium(c: Scale, value: Valuation, u: Level, w: Level): number` | 2 | D6-premium |
 | premiumOf | valuation | `premiumOf(c: Scale, value: (level: Level) => number, place: Point): number` | 1 | no law |
 | price | valuation | `price(c: Scale, value: Valuation, u: Level, w: Level): Price` | 1 | no law |
@@ -379,6 +381,9 @@ flowchart BT
 | T1-only-verdict-bits-travel | theorem | chain | D4-debit-in-bits, A2-meet | an origin that moves a verdict carries at least the bits by which it reduces the cell's debit, and exactly those suffice |  | [yes](../samples/yes/T1-only-verdict-bits-travel.json) | derived by the reader | yes |
 | T10-drift | corollary | quotient | A5-origin-is-extension | two definitions of one question diverge without either failing; the divergence is invisible until an encounter joins them |  | [yes](../samples/yes/T10-drift.json) | derived by the reader | yes |
 | T100-an-act-is-paid-with-attention | theorem | chain | T93-every-act-is-paid-by-its-origin, A6-vacuity, A7-freedom-conserved, T90-freedom-is-entropy | an origin has finite looks per epoch; what it looks at closes a bit of the cell and a bit of itself, and what it stops looking at reopens by vacuity. Freedom plus what is closed is conserved exactly; the field settles where closing equals forgetting, so what one attention can hold real is bounded by its looks over the forgetting rate. The price of an act is attention, and the entropy goes to the grey. |  | [yes](../samples/yes/T100-an-act-is-paid-with-attention.json) | What would break T100, run against the object. | yes |
+| T101-fragility-is-the-fewest-withdrawals | theorem | field | A5-origin-is-extension, T85-withdrawal-is-an-anti-claim, T67-withdrawal-is-reinterpretation | a cell is as fragile as the fewest origins whose withdrawal moves one of its poles: a pole one origin sets breaks with that origin, and a pole several origins set together holds until all of them withdraw | `frag(c) = min { \|W\| : W ⊆ O(c), ⊥(c∖W) ≠ ⊥(c) or ⊤(c∖W) ≠ ⊤(c) }` | [yes](../samples/yes/T101-fragility-is-the-fewest-withdrawals.json) | Two origins that each set one pole, called fragile at two: withdrawing either alone moves a pole. | yes |
+| T102-a-combine-meets-one-cell-and-coarsens-many | corollary | field | A2-meet, T5-coarsen-widens | a combine of bounds meets them where they land on one cell and coarsens them where they land on many: two readers of one field fold to their meet, which neither stands beside nor forks from, and readers of several fields keep their own cells and are read together only at the region they share |  | [yes](../samples/yes/T102-a-combine-meets-one-cell-and-coarsens-many.json) | Today's fold of the two validators: both lines stand and a fork is named, which the meet refuses. | yes |
+| T103-a-reading-holds-at-what-it-read | theorem | field | A4-epoch, T21-reading-is-an-origin, D8-present | a reading holds at what it read, as it was when it was read: its epoch is the state of the atoms it touched, so once those atoms move the reading stays an origin of that past and says nothing of the present until it is read again; a text, a table, a schema and a tree hold their readings the same way |  | [yes](../samples/yes/T103-a-reading-holds-at-what-it-read.json) | A reading taken before its atoms moved, called present. | yes |
 | T11-size-is-questions | theorem | quotient | T10-drift, A6-vacuity | the size of a body of knowledge is its count of distinct questions with an encounter; the rest is drift |  | [yes](../samples/yes/T11-size-is-questions.json) | derived by the reader | yes |
 | T12-reliability-is-encounter-rate | theorem | valuation | A1-encounter, T10-drift | the fraction of a domain's claims that are facts equals its second-origin rate; drift and surviving falsehood are its complement |  | [yes](../samples/yes/T12-reliability-is-encounter-rate.json) | derived by the reader | yes |
 | T13-c_n | corollary | valuation | D6-premium | c_n = log2 n − 2 + 2/n bounds a pairwise audit's conservativeness in bits |  | [yes](../samples/yes/T13-c_n.json) | derived by the reader | yes |
@@ -412,7 +417,7 @@ flowchart BT
 | T46-a-bound-moves-cells-no-walk-reaches | theorem | lattice | A0-carrier, T41-distance-is-the-walk-between-lookings, T45-cells-that-rest-on-one-bound-are-entangled | a world changes in two ways at once: looking travels and stops at the horizon, a bound does not travel and carries no step, so moving it changes cells no walk reaches; counting the bound as if it were a looking would make the whole world one neighbourhood, which is how the two are told apart |  | [yes](../samples/yes/T46-a-bound-moves-cells-no-walk-reaches.json) | derived by the reader | yes |
 | T47-a-two-pole-object | theorem | lattice | A0-carrier, A7-freedom-conserved, D4-debit-in-bits, T45-cells-that-rest-on-one-bound-are-entangled, T46-a-bound-moves-cells-no-walk-reaches | one coordinate on a scale of a hundred and five levels is superposed at six point seven bits, definite when two claims meet at one level, and forbidden rather than narrow when a ceiling falls under that floor, while a second coordinate resting on the bound that moved narrows to five point four bits with nobody measuring it |  | [yes](../samples/yes/T47-a-two-pole-object.json) | derived by the reader | yes |
 | T48-epoch-is-phase | theorem | field | A4-epoch, T22-fold-is-superposition, T45-cells-that-rest-on-one-bound-are-entangled | an epoch is a phase: claims arriving at one turn of a period reinforce and claims half a period apart cancel, so sweeping the delay of half of them draws the period's own shape, and observing one route, which is fixing when those claims arrived, moves the pattern to its complement |  | [yes](../samples/yes/T48-epoch-is-phase.json) | derived by the reader | yes |
-| T49-amplitude-has-sign-and-phase | theorem | field | T48-epoch-is-phase, T19-signatures-fold, A4-epoch, A1-encounter | a claim carries a size and a direction, how much it narrows and the turn it landed on, and a withdrawal is the same size the other way: two hundred claims in phase make the square of their number and the same two hundred strewn make its order, while a write and its withdrawal at one epoch leave nothing and at different epochs do not cancel | `A(c) = \|Σ_{o∈O} s_o w_o e^{iφ_o}\|²` | [yes](../samples/yes/T49-amplitude-has-sign-and-phase.json) | derived by the reader | yes |
+| T49-amplitude-has-sign-and-phase | theorem | field | T48-epoch-is-phase, T19-signatures-fold, A4-epoch, A1-encounter | a claim carries a size and a direction, how much it narrows and the turn it landed on, and a withdrawal is the same size the other way: two hundred claims in phase make the square of their number and the same two hundred strewn make its order, while a write and its withdrawal at one epoch leave nothing and at different epochs do not cancel | `A(c) = \|Σ_{o∈O} s_o w_o e^{iφ_o}\|²` | [yes](../samples/yes/T49-amplitude-has-sign-and-phase.json) | A withdrawal two epochs after its write, called a cancellation: a write and its withdrawal cancel at one epoch only. | yes |
 | T5-coarsen-widens | theorem | chain | A3-resolution, A6-vacuity | a claim coarsened to a lower resolution fits at least as many regions |  | [yes](../samples/yes/T5-coarsen-widens.json) | derived by the reader | yes |
 | T50-signatures-are-meets | theorem | lattice | A2-meet, A9-everything-is-a-bound, T19-signatures-fold | a signature narrows a ceiling and travels to every cell that rests on it as a meet, and meets do not remember the order they were taken in, so no order of any number of signatures ever shows in the field they leave; widening is not a meet and does not travel, which is why a narrowing costs one signature and an error costs one at every cell, and folding the field and signing it commute even with a withdrawal present | `sign: ⊤(c′) ← ⊤(c′) ∧ s ∀ c′ ⊒ c` | [yes](../samples/yes/T50-signatures-are-meets.json) | derived by the reader | yes |
 | T51-the-shape-of-knowing-can-be-designed | theorem | field | T44-an-origin-is-worth-its-reach, T41-distance-is-the-walk-between-lookings, T45-cells-that-rest-on-one-bound-are-entangled, T49-amplitude-has-sign-and-phase | for a budget of origins there is a siting that minimises what a field cannot reach, and it is found by bridging the two largest islands in turn, because what an origin is worth is the product of the two sides it joins; in three hundred cells left with four thousand three hundred and eighty unreachable pairs, twelve origins dropped blindly closed between none and a fifth of them and the same twelve chosen by reach closed four fifths |  | [yes](../samples/yes/T51-the-shape-of-knowing-can-be-designed.json) | derived by the reader | yes |
@@ -421,7 +426,7 @@ flowchart BT
 | T55-a-policy-is-four-weights | theorem | field | A1-encounter, T44-an-origin-is-worth-its-reach, T51-the-shape-of-knowing-can-be-designed, T49-amplitude-has-sign-and-phase | a policy is four weights and nothing else, over the reach of a cell, how together its claims arrived, what stands beside it and what it still leaves free; the law is the relation, that a policy carrying all four closes at least as much as any policy carrying one and forks no more than those that close at all, and the counts belong to whoever reproduces it, here fifty-two closed against fifty-one and forty-eight with the fewest forks of the three |  | [yes](../samples/yes/T55-a-policy-is-four-weights.json) | derived by the reader | yes |
 | T56-forks-over-closes-separates-regimes | theorem | field | T55-a-policy-is-four-weights, D7-fork, T27-disagreement-can-be-provoked, T36-agreement-has-a-resolution | how knowing moves through a field is one number, the forks it opens against the closes it makes, and that number tells regimes apart that no count of looks can: one policy over one field, with claims drawn near the meet, across it, or from two origins alone, separates into three regimes two orders apart |  | [yes](../samples/yes/T56-forks-over-closes-separates-regimes.json) | derived by the reader | yes |
 | T57-a-refereed-game-governs-itself | theorem | field | A1-encounter, A5-origin-is-extension, T55-a-policy-is-four-weights, T21-reading-is-an-origin | the rule that makes the game is in the field and not above it: a cell one origin has claimed is grey and nothing that origin does alone will close it, so what an origin is worth is asymmetric, nothing over its own claims and everything over another-s, and the referee is a rule no player can suspend because it is the rule that makes a claim information |  | [yes](../samples/yes/T57-a-refereed-game-governs-itself.json) | derived by the reader | yes |
-| T58-observation-is-over-regions-by-reach | theorem | field | T41-distance-is-the-walk-between-lookings, A3-resolution, D1-region, T44-an-origin-is-worth-its-reach | a tree is read by regions and not by leaves: what the lock names are regions, what the readers touch are the leaves those regions happen to hold, and on this tree there are several leaves to every region, so a tree that grows a thousand files does not grow a thousand questions and the cost of knowing it follows the regions and not the listing |  | [yes](../samples/yes/T58-observation-is-over-regions-by-reach.json) | derived by the reader | yes |
+| T58-observation-is-over-regions-by-reach | theorem | field | T41-distance-is-the-walk-between-lookings, A3-resolution, D1-region, T44-an-origin-is-worth-its-reach | a domain is read by regions and not by its atoms: what the lock names are regions, what the readers touch are the atoms those regions happen to hold, and a domain holds several atoms to every region, so one that grows a thousand atoms does not grow a thousand questions, and the cost of knowing it follows the regions and never the count of its atoms |  | [yes](../samples/yes/T58-observation-is-over-regions-by-reach.json) | derived by the reader | yes |
 | T6-present-converges | theorem | field | D8-present, A6-vacuity | the width of the present is maturation rate minus forgetting rate; a system with only past or only future has no present |  | [yes](../samples/yes/T6-present-converges.json) | derived by the reader | yes |
 | T63-author-time-memory-are-relative | theorem | galois | A4-epoch, A5-origin-is-extension, D0-coordinate, T2-coordinate-where-disagree | who said it, when they said it and what is remembered are three coordinates of one claim and none of them is the claim: two origins saying one span are two claims and one origin saying it twice is one, so what a cell holds together depends on the spans alone while what it is depends on all three |  | [yes](../samples/yes/T63-author-time-memory-are-relative.json) | derived by the reader | yes |
 | T65-ownership-is-being-an-origin | theorem | field | A5-origin-is-extension, A1-encounter, D5-declaration, T8-exact-withdrawal | to own a claim is to be the origin of it and nothing else: a cell holds what each origin said, taking an origin away takes exactly what it said and no more, and no narrowing survives the origin that made it |  | [yes](../samples/yes/T65-ownership-is-being-an-origin.json) | derived by the reader | yes |
@@ -452,7 +457,7 @@ flowchart BT
 | thm-mi | corollary | valuation | thm-collapse | Mutual information is a planning premium — Take the declaration that demands the first subsystem be answerable and forbids the state to exceed the second: $u=(\top,\bot)$, $w=(\bot,\top)$. Then \[ \viol_f=H(X),\qquad \viols_f=H(X\mid Y),\qquad g_f=I_\mu(X;Y), \] while $g_1=g_2=0$. |  | [yes](../samples/yes/thm-mi.json) | derived by the reader | yes |
 | thm-modular | corollary | valuation | thm-gap | Degeneration — $g\equiv0$ --- retreat is optimal for every declaration --- if and only if $f$ is supermodular, $f(x)+f(y)\le f(x\vee y)+f(x\wedge y)$ for all $x,y$. Modular valuations are the special case of equality. |  | none | derived by the reader | yes |
 | thm-ratio | theorem | spectrum | lem-mediant, lem-merge | The retreat ratio — For every $n\ge2$, over declarations in conflict on $\Pin$ under Shannon entropy, \[ \max\frac{\viol_H}{\viols_H}\;=\;\rho(n)\;:=\;\frac{n}{2}\,H_{bal}(n,2) \;=\;\frac{\varphi(n)-\varphi\bigl(\lceil\tfrac n2\rceil\bigr) -\varphi\bigl(\lfloor\tfrac n2\rfloor\bigr)}{2}, \] attained exactly when the demand $u$ is a balanced two-block partition, the block graph is connected, and the limit merges two singletons of $u\vee w$. In particular the maximum equals $n/2$ exactly for even $n$, and $n/2-\Theta(1/n)$ for odd $n$. |  | [yes](../samples/yes/thm-ratio.json) | derived by the reader | yes |
-| thm-witness | theorem | valuation | D2-ideal, D3-state | The witness — Let $F$ be in conflict. Then $F$ is sound for every monotone valuation if and only if \[ \textrm{(W)}\qquad u\in A\quadand\quad \exists\,b\in B:\ u\wedge b=m . \] |  | [yes](../samples/yes/thm-witness.json) | derived by the reader | yes |
+| thm-witness | theorem | valuation | D2-ideal, D3-state | The witness — Let $F$ be in conflict. Then $F$ is sound for every monotone valuation if and only if \[ \textrm{(W)}\qquad u\in A\quadand\quad \exists\,b\in B:\ u\wedge b=m . \] |  | [yes](../samples/yes/thm-witness.json) | Every conflicting pair of families in b2 called witnessed: condition (W) holds for 144 of the 188, and the claim of 188 is refused. | yes |
 
 ## Forms
 

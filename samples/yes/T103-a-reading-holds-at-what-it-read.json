@@ -1,0 +1,46 @@
+{
+ "about": [
+  "A reading is of the epoch it read at: nothing moved since, it speaks for the present; what it read moved after it, it stays in that past; read again after the move, it speaks again."
+ ],
+ "cases": [
+  {
+   "name": "read at 3, nothing moved since",
+   "atom": "order/ref",
+   "read": [
+    3,
+    [
+     0,
+     255
+    ]
+   ],
+   "moved": null,
+   "expect": "present"
+  },
+  {
+   "name": "read at 3, moved at 4",
+   "atom": "order/ref",
+   "read": [
+    3,
+    [
+     0,
+     255
+    ]
+   ],
+   "moved": 4,
+   "expect": "past"
+  },
+  {
+   "name": "read again at 5, after the move at 4",
+   "atom": "order/ref",
+   "read": [
+    5,
+    [
+     0,
+     255
+    ]
+   ],
+   "moved": 4,
+   "expect": "present"
+  }
+ ]
+}

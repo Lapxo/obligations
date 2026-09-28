@@ -1,0 +1,21 @@
+{
+ "about": [
+  "A reading taken before its atoms moved, called present."
+ ],
+ "cases": [
+  {
+   "name": "read at 3, moved at 4, called present",
+   "atom": "order/ref",
+   "read": [
+    3,
+    [
+     0,
+     255
+    ]
+   ],
+   "moved": 4,
+   "expect": "present",
+   "expected.ok": false
+  }
+ ]
+}
