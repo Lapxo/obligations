@@ -489,3 +489,49 @@ flowchart BT
 | (o, φ) | Origin |
 | s | Act |
 | state | State |
+
+## The object
+
+```text
+c = ⟨⊥, ⊤, O, ⊑⟩        over L at r
+⊥(c)                   = ⋁ required ∨ ⋁_{o∈O} lo_o
+⊤(c)                   = ⋀ signed ∧ ⋀_{o∈O} hi_o
+info(c)                ⟺ |ext(O)| ≥ 2 ∧ meet(c) ≠ ∅
+F(C)                   = Σ_{c∈C} F(c),   F(a(c)) ≤ F(c) for every act a that narrows
+A(c)                   = |Σ_{o∈O} s_o w_o e^{iφ_o}|²
+⊤(c)                   = ⋀_{b ⊑ c} signed(b) ∧ ⋀_{o∈O} hi_o,   one line per act
+|e^{ia} + e^{ib}|² < 2 ⟺ |a − b| > π/2
+state(c)               ∈ {FREE, REQUIRED, FORBIDDEN, CONFLICT}
+```
+
+```text
+bounds that cross                        CONFLICT   ⋔
+one origin                               REQUIRED   ○
+claims that do not meet                  CONFLICT   ⋔
+claims that meet and fit the bounds      FREE       ●
+claims that meet outside the bounds      FORBIDDEN  ✕
+```
+
+## What holds
+
+The theory of this package is ten axioms and what follows from them. Three of them, the ones the rest leans on hardest, read like this.
+
+A claim from one origin is potential; a cell is information only where two independent origins touch it and their intervals meet. That is encounter, and 28 lines of the lock rest on it.
+
+Two bounds on one cell fold by the meet of their form; the order they arrive in never decides. That is meet, and 20 lines of the lock rest on it.
+
+Every quantity has two poles, a floor that is required and a ceiling that is permitted, and a cell is the pair. That is carrier, and 17 lines of the lock rest on it.
+
+<details><summary>The other seven, each one line of the lock with a sample that shows it and one that would break it</summary>
+
+- **resolution** — every observation has a scale; hierarchy is resolution; a coordinate's depth is its resolution.
+- **epoch** — every claim carries when it holds; order is causal, never a clock.
+- **origin is extension** — an origin is the set of (coordinate, interval) it has produced; two origins with one extension are one; independence is distance between extensions.
+- **vacuity** — a region no origin touches for an epoch contracts; nothing keeps a cell alive but a new observation.
+- **four states** — one origin is required; two or more that meet within the ceiling are free; that meet outside it are forbidden; that do not meet are in conflict; fewer states collapse two of them.
+- **everything is a bound** — one relation: an origin bounds a cell at a resolution and an epoch; cells, origins, locks and laws are cells under it; the relation bounds itself, and there is no level above it.
+- **freedom conserved** — the freedom of a system is the sum of its cells' debits in bits; an encounter never raises it; only a new coordinate does.
+
+</details>
+
+One theorem shows the theory meeting its own measurement. An independent second origin never raises a cell's debit: it falls by log2 of the states it leaves standing, a full bit exactly when it admits at most half of them, and nothing exactly when it narrows nothing. Between the two there is a drop that is neither: fifteen of sixteen states costs 0.0931 of a bit.
