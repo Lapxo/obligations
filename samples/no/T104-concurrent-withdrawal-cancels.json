@@ -1,0 +1,26 @@
+{
+ "about": [
+  "What would break T104, run against the object: a withdrawal that rests on its observation, turned by the epochs between them, still cancelling it."
+ ],
+ "cases": [
+  {
+   "name": "falsifier: a withdrawal resting on its observation half a period later, in one lock, cancels it",
+   "input": {
+    "period": 8,
+    "claim": [
+     20,
+     21
+    ],
+    "observed": 8,
+    "withdrawn": 12,
+    "rests": true
+   },
+   "want": [
+    true,
+    0
+   ],
+   "expected.ok": false,
+   "leaves": 1
+  }
+ ]
+}

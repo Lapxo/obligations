@@ -31,6 +31,8 @@ still free 2.32 bits
 why       a seller and a buyer are two origins; where their marks meet is a price, and what is left between the marks is what nobody has decided yet
 ```
 
+Its origins meet.
+
 ## What it rests on
 
 ```mermaid
@@ -47,4 +49,4 @@ flowchart LR
 
 ## Source
 
-[Its source](../../examples/release/price.ts) is one of the examples of obligations, its output pinned by the lock, and it runs as it is written, against the built package, with nothing compiled for it.
+[Its source](../../examples/release/price.ts) is one of the examples of obligations, and it runs as it is written, against the built package, with nothing compiled for it.

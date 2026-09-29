@@ -284,3 +284,14 @@ test('T100-an-act-is-paid-with-attention — looks closed and freedom left sum t
   compare(round(looks * forget * bits({ lo: 0, hi: width - 1 }), 1), c['bound'], 'at its looks over the forgetting');
   for (const k of nos('T100-an-act-is-paid-with-attention')) compare(Math.max(...held) > (k['input']['looks'] as number) * forget * bits({ lo: 0, hi: width - 1 }), k['want'], k);
 });
+
+test('T104-concurrent-withdrawal-cancels — a withdrawal cancels its observation iff neither rests on the other; one that rests on it is turned by the epochs between them and leaves interference', () => {
+  const read = (k: Vector): readonly [boolean, number] => {
+    const turn = (epoch: number): number => (2 * Math.PI * (((epoch % k['period']) + k['period']) % k['period'])) / k['period'];
+    const back = (k['rests'] ? k['withdrawn'] : k['observed']) as number;
+    const wave = (epoch: number, withdraws: boolean) => ({ origin: 'second', epoch, span: band(k['claim']), withdraws });
+    return [cancels({ name: 'observed', phase: turn(k['observed']) }, { name: 'withdrawn', phase: turn(back) + Math.PI }), round(interfere([wave(k['observed'], false), wave(back, true)], k['period']), 3)];
+  };
+  for (const k of sample('yes', 'T104-concurrent-withdrawal-cancels').cases as Vector[]) compare(read(k), [k['cancels'], k['left']], k['name']);
+  for (const k of nos('T104-concurrent-withdrawal-cancels')) compare(read(k['input']), k['want'], k);
+});

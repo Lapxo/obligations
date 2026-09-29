@@ -317,3 +317,13 @@ test('T49-amplitude-has-sign-and-phase — a falsifier: a write and its withdraw
   const claim: Claim = { origin: 'o', epoch: 3, span: SPAN };
   compare(Number(interfere([claim, { ...claim, epoch: 5, withdraws: true }], c['period'] as number).toFixed(3)), c['apart'], c);
 });
+
+test('H10-the-period-is-a-line-of-the-region — two heads that read one region with its period agree on its coherence whatever their clocks, and heads that bring periods of their own do not', () => {
+  const c = one(sample('yes', 'H10-the-period-is-a-line-of-the-region'));
+  const at3 = (x: number): number => Math.round(x * 1000) / 1000;
+  const claims = (k: Vector, shift = 0): readonly Claim[] => (k['epochs'] as number[]).map((epoch) => ({ origin: `o${epoch}`, epoch: epoch + shift, span: { lo: k['claim'][0], hi: k['claim'][1] } }));
+  compare([at3(coherence(claims(c), c['period'])), at3(coherence(claims(c, c['shift']), c['period']))], [c['coherence'], c['coherence']], 'one period from the region, clocks apart: one coherence');
+  const no = one(sample('no', 'H10-the-period-is-a-line-of-the-region'));
+  const [p, q] = no['input']['periods'] as number[];
+  compare(at3(coherence(claims(no['input']), p!)) === at3(coherence(claims(no['input']), q!)), no['want'], no);
+});
