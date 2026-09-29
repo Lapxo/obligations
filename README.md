@@ -2,7 +2,7 @@
 
 # @lapxo/obligations
 
-![version 0.3.4](https://img.shields.io/badge/version-0.3.4-8c959f) ![license MIT](https://img.shields.io/badge/license-MIT-8c959f) ![node >=22.12](https://img.shields.io/badge/node-%3E%3D22.12-8c959f) ![dependencies 0](https://img.shields.io/badge/dependencies-0-2da44e) ![cases 211 hold](https://img.shields.io/badge/cases-211_hold-2da44e) ![verify agrees](https://img.shields.io/badge/verify-agrees-8c959f) [![DOI 10.5281/zenodo.21858428](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-8c959f)](https://doi.org/10.5281/zenodo.21858428)
+![version 0.3.5](https://img.shields.io/badge/version-0.3.5-8c959f) ![license MIT](https://img.shields.io/badge/license-MIT-8c959f) ![node >=22.12](https://img.shields.io/badge/node-%3E%3D22.12-8c959f) ![dependencies 0](https://img.shields.io/badge/dependencies-0-2da44e) ![cases 215 hold](https://img.shields.io/badge/cases-215_hold-2da44e) ![verify agrees](https://img.shields.io/badge/verify-agrees-2da44e) [![DOI 10.5281/zenodo.21858428](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-8c959f)](https://doi.org/10.5281/zenodo.21858428)
 
 The algebra of a cell: two poles, origins with phase, eight acts.
 
@@ -91,6 +91,8 @@ claims kept  3
 why       a withdrawal names the claim it takes back, so the cell returns to one origin while all three claims stay on it and nothing is matched by looking like something
 ```
 
+Its origins meet.
+
 ## How to read it
 
 One lattice is read through several views, and each answers one question.
@@ -120,7 +122,7 @@ Ochoa, N. (2026). Two-Sided Constraints on a Valued Lattice (Version 1.0.0). Zen
 
 ## What is open
 
-Nine lines are conjectures: nothing rests on them, and each names what would break it.
+Ten lines are conjectures: nothing rests on them, and each names what would break it.
 
 Two for a ledger:
 
@@ -139,6 +141,8 @@ Five readings:
 - **Measurement** — a thermometer, a survey, an interferometer and a headcount fill the same five fields. *Breaks if one instrument cannot.*
 - **The medium of encounters** — what carries an encounter is a medium, and a medium is what two origins can both reach: in each instrument the medium can be named and the encounter happens where two origins touch it and nowhere else, so two origins at one cell make information and the same two at two cells make none; structural resemblance, one origin, not a claim about the world. *Breaks if two origins meet with nothing they both reach.*
 - **Refereed game** — a field of cells with origins and signatures is a game whose referee is inside it: a move is a claim, a claim alone is potential, two that meet are information, a signature moves every cell that rests on it, and no player may suspend the rule that makes the first four; the claim is that each of five readings of the field matches all five properties; structural resemblance, one origin, not a claim about the world. *Breaks if a player can suspend the rule that two origins are needed.*
+
+- **The period is the region's** — the period a phase is read against is a line of the region, never a fact of the instrument. *Breaks if two heads measure coherence and need a clock to agree.*
 
 <details><summary>Every conjecture in full</summary>
 
@@ -160,8 +164,16 @@ A field of cells with origins and signatures is a game whose referee is inside i
 
 The obligatory is maximal: take away any one of its seven parts and what is left is an object already known, and anything added to it is either already inside it or breaks the four states. The falsifier: a part the obligatory lacks that keeps the four states and the six operations and is not a reading of one of them.
 
+The period a phase is read against, the one T48 and T87 turn on, is a line of the region and never a fact of the instrument: a concert, a match and a sensor-s cadence each define theirs, and two heads that read one region with its period agree on its coherence with no clock between them; structural resemblance, one origin, not a claim about the world. The falsifier: two heads that read one region, each with the period of its own clock, and agree on its coherence. A period each instrument brought would be the instrument's, and the heads would need a clock between them to agree.
+
 </details>
 
 ## Check
 
-● 211 cases hold
+● 215 cases hold
+
+## Pointers
+
+- [Paper](docs/paper.md)
+- [Reference](docs/reference.md)
+- Learn from an example: [in phase](docs/learn/in-phase.md), [price](docs/learn/price.md), [signature](docs/learn/signature.md), [thermometer](docs/learn/thermometer.md), [withdrawal](docs/learn/withdrawal.md)

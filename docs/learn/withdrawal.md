@@ -27,6 +27,8 @@ claims kept  3
 why       a withdrawal names the claim it takes back, so the cell returns to one origin while all three claims stay on it and nothing is matched by looking like something
 ```
 
+Its origins meet.
+
 ## What it rests on
 
 ```mermaid
@@ -46,4 +48,4 @@ flowchart LR
 
 ## Source
 
-[Its source](../../examples/release/withdrawal.ts) is one of the examples of obligations, its output pinned by the lock, and it runs as it is written, against the built package, with nothing compiled for it.
+[Its source](../../examples/release/withdrawal.ts) is one of the examples of obligations, and it runs as it is written, against the built package, with nothing compiled for it.

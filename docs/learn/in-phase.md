@@ -26,6 +26,8 @@ their number is 32, and its square is 1024
 why       claims that land at one turn of the period add as the square of their number, and the same claims strewn across it add as its order
 ```
 
+Its origins meet.
+
 ## What it rests on
 
 ```mermaid
@@ -41,4 +43,4 @@ flowchart LR
 
 ## Source
 
-[Its source](../../examples/release/in-phase.ts) is one of the examples of obligations, its output pinned by the lock, and it runs as it is written, against the built package, with nothing compiled for it.
+[Its source](../../examples/release/in-phase.ts) is one of the examples of obligations, and it runs as it is written, against the built package, with nothing compiled for it.

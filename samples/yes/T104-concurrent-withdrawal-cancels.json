@@ -1,0 +1,34 @@
+{
+ "about": [
+  "An observation and its withdrawal cancel iff they are concurrent: neither rests on the other.",
+  "Within one lock the same epoch is the concurrent case; across two locks their epochs are never compared, and only rest decides."
+ ],
+ "cases": [
+  {
+   "name": "one lock, one epoch: the withdrawal is concurrent with its observation, and the two leave nothing",
+   "period": 8,
+   "claim": [
+    20,
+    21
+   ],
+   "observed": 8,
+   "withdrawn": 8,
+   "rests": false,
+   "cancels": true,
+   "left": 0
+  },
+  {
+   "name": "two locks, neither resting on the other: concurrent whatever their epochs say, and the two leave nothing",
+   "period": 8,
+   "claim": [
+    20,
+    21
+   ],
+   "observed": 8,
+   "withdrawn": 11,
+   "rests": false,
+   "cancels": true,
+   "left": 0
+  }
+ ]
+}

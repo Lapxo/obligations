@@ -43,6 +43,8 @@ claims edited by the signature 0
 why       one signature narrows a bound and every cell resting on it reads the narrower one, without touching a single claim any origin made
 ```
 
+Its origins meet.
+
 ## Source
 
-[Its source](../../examples/release/signature.ts) is one of the examples of obligations, its output pinned by the lock, and it runs as it is written, against the built package, with nothing compiled for it.
+[Its source](../../examples/release/signature.ts) is one of the examples of obligations, and it runs as it is written, against the built package, with nothing compiled for it.

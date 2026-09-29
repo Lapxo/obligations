@@ -1,0 +1,33 @@
+{
+ "brief": "two heads measure coherence and need a clock to agree",
+ "about": [
+  "The falsifier: two heads that read one region, each with the period of its own clock, and agree on its coherence. A period each instrument brought would be the instrument's, and the heads would need a clock between them to agree."
+ ],
+ "cases": [
+  {
+   "name": "falsifier: two heads, each with its own clock's period, agree on coherence",
+   "input": {
+    "claim": [
+     20,
+     21
+    ],
+    "epochs": [
+     1,
+     2,
+     3,
+     9
+    ],
+    "periods": [
+     8,
+     12
+    ]
+   },
+   "want": true,
+   "expected.ok": false,
+   "coherences": [
+    0.8,
+    0.483
+   ]
+  }
+ ]
+}

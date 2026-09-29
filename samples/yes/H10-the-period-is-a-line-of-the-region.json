@@ -1,0 +1,25 @@
+{
+ "about": [
+  "A conjecture, kept open: nothing rests on it. The period a phase turns on belongs to the region, not to the instrument that reads it."
+ ],
+ "title": "The period is the region's",
+ "brief": "the period a phase is read against is a line of the region, never a fact of the instrument",
+ "cases": [
+  {
+   "name": "two heads, one period from the region, clocks five epochs apart: one coherence",
+   "period": 8,
+   "claim": [
+    20,
+    21
+   ],
+   "epochs": [
+    1,
+    2,
+    3,
+    9
+   ],
+   "shift": 5,
+   "coherence": 0.8
+  }
+ ]
+}

@@ -37,6 +37,8 @@ holds without any one of them: false
 why       leaving one out names the instrument that disagrees, and a verdict that needs every origin is not a verdict
 ```
 
+Its origins meet.
+
 ## What it rests on
 
 ```mermaid
@@ -53,4 +55,4 @@ flowchart LR
 
 ## Source
 
-[Its source](../../examples/release/thermometer.ts) is one of the examples of obligations, its output pinned by the lock, and it runs as it is written, against the built package, with nothing compiled for it.
+[Its source](../../examples/release/thermometer.ts) is one of the examples of obligations, and it runs as it is written, against the built package, with nothing compiled for it.
