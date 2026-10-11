@@ -1,0 +1,6530 @@
+[
+  {
+    "yes": {
+      "group": "spectrum",
+      "place": "orchard",
+      "rows": [
+        {
+          "event": "0",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "10",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-15",
+          "error": 1
+        }
+      ],
+      "origins": [
+        "orchard-0",
+        "orchard-1",
+        "orchard-2",
+        "orchard-3",
+        "orchard-4",
+        "orchard-5",
+        "orchard-6",
+        "orchard-7",
+        "orchard-8",
+        "orchard-9",
+        "orchard-10",
+        "orchard-11",
+        "orchard-12",
+        "orchard-13",
+        "orchard-14",
+        "orchard-15"
+      ],
+      "observationPolicy": {
+        "minCells": 20
+      },
+      "policy": {
+        "absolute": 1e-12,
+        "relative": 1e-10,
+        "maxRotations": 1000
+      },
+      "tau": 0.5
+    },
+    "no": {
+      "group": "spectrum",
+      "place": "orchard",
+      "rows": [
+        {
+          "event": "0",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-0",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-1",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-2",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-3",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-4",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-5",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-6",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-7",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-8",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-9",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-10",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-11",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-12",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-13",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-14",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "orchard-15",
+          "error": 0
+        },
+        {
+          "event": "10",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "orchard-15",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-0",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-1",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-2",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-3",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-4",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-5",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-6",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-7",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-8",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-9",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-10",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-11",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-12",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-13",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-14",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "orchard-15",
+          "error": 1
+        }
+      ],
+      "origins": [
+        "orchard-0",
+        "orchard-1"
+      ],
+      "observationPolicy": {
+        "minCells": 20
+      },
+      "policy": {
+        "absolute": 1e-12,
+        "relative": 1e-10,
+        "maxRotations": 1000
+      },
+      "tau": 0.5,
+      "matrix": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "yes": {
+      "group": "spectrum",
+      "place": "catalog",
+      "rows": [
+        {
+          "event": "0",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "10",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-15",
+          "error": 1
+        }
+      ],
+      "origins": [
+        "catalog-0",
+        "catalog-1",
+        "catalog-2",
+        "catalog-3",
+        "catalog-4",
+        "catalog-5",
+        "catalog-6",
+        "catalog-7",
+        "catalog-8",
+        "catalog-9",
+        "catalog-10",
+        "catalog-11",
+        "catalog-12",
+        "catalog-13",
+        "catalog-14",
+        "catalog-15"
+      ],
+      "observationPolicy": {
+        "minCells": 20
+      },
+      "policy": {
+        "absolute": 1e-12,
+        "relative": 1e-10,
+        "maxRotations": 1000
+      },
+      "tau": 0.5
+    },
+    "no": {
+      "group": "spectrum",
+      "place": "catalog",
+      "rows": [
+        {
+          "event": "0",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "4",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "5",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "6",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "7",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "8",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-0",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-1",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-2",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-3",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-4",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-5",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-6",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-7",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-8",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-9",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-10",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-11",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-12",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-13",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-14",
+          "error": 0
+        },
+        {
+          "event": "9",
+          "origin": "catalog-15",
+          "error": 0
+        },
+        {
+          "event": "10",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "10",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "11",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "12",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "13",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "14",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "15",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "16",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "17",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "18",
+          "origin": "catalog-15",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-0",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-1",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-2",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-3",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-4",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-5",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-6",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-7",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-8",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-9",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-10",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-11",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-12",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-13",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-14",
+          "error": 1
+        },
+        {
+          "event": "19",
+          "origin": "catalog-15",
+          "error": 1
+        }
+      ],
+      "origins": [
+        "catalog-0",
+        "catalog-1"
+      ],
+      "observationPolicy": {
+        "minCells": 20
+      },
+      "policy": {
+        "absolute": 1e-12,
+        "relative": 1e-10,
+        "maxRotations": 1000
+      },
+      "tau": 0.5,
+      "matrix": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    }
+  }
+]

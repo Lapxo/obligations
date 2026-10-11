@@ -1,0 +1,92 @@
+[
+  {
+    "yes": {
+      "group": "descent",
+      "place": "orchard",
+      "graph": [
+        {
+          "scope": "base",
+          "restsOn": []
+        },
+        {
+          "scope": "one",
+          "restsOn": [
+            "base"
+          ]
+        },
+        {
+          "scope": "two",
+          "restsOn": [
+            "base",
+            "one"
+          ]
+        }
+      ],
+      "cell": "base"
+    },
+    "no": {
+      "group": "descent",
+      "place": "orchard",
+      "graph": [
+        {
+          "scope": "base",
+          "restsOn": [
+            "one"
+          ]
+        },
+        {
+          "scope": "one",
+          "restsOn": [
+            "base"
+          ]
+        }
+      ],
+      "cell": "base"
+    }
+  },
+  {
+    "yes": {
+      "group": "descent",
+      "place": "catalog",
+      "graph": [
+        {
+          "scope": "base",
+          "restsOn": []
+        },
+        {
+          "scope": "one",
+          "restsOn": [
+            "base"
+          ]
+        },
+        {
+          "scope": "two",
+          "restsOn": [
+            "base",
+            "one"
+          ]
+        }
+      ],
+      "cell": "base"
+    },
+    "no": {
+      "group": "descent",
+      "place": "catalog",
+      "graph": [
+        {
+          "scope": "base",
+          "restsOn": [
+            "one"
+          ]
+        },
+        {
+          "scope": "one",
+          "restsOn": [
+            "base"
+          ]
+        }
+      ],
+      "cell": "base"
+    }
+  }
+]

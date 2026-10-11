@@ -1,0 +1,76 @@
+[
+  {
+    "yes": {
+      "group": "unanimity",
+      "place": "orchard",
+      "model": {
+        "c": 0.01,
+        "p": 0.1,
+        "n": 2
+      },
+      "k": 3,
+      "searchLimit": 100,
+      "experiment": {
+        "seed": 123456,
+        "trials": 2000
+      },
+      "bias": 0.9,
+      "shared": true
+    },
+    "no": {
+      "group": "unanimity",
+      "place": "orchard",
+      "model": {
+        "c": 0.01,
+        "p": 0.1,
+        "n": 2
+      },
+      "k": 3,
+      "searchLimit": 100,
+      "experiment": {
+        "seed": 123456,
+        "trials": 2000
+      },
+      "bias": 0.9,
+      "shared": true,
+      "claim": "monotone-from-one"
+    }
+  },
+  {
+    "yes": {
+      "group": "unanimity",
+      "place": "catalog",
+      "model": {
+        "c": 0.01,
+        "p": 0.1,
+        "n": 2
+      },
+      "k": 3,
+      "searchLimit": 100,
+      "experiment": {
+        "seed": 123456,
+        "trials": 2000
+      },
+      "bias": 0.9,
+      "shared": true
+    },
+    "no": {
+      "group": "unanimity",
+      "place": "catalog",
+      "model": {
+        "c": 0.01,
+        "p": 0.1,
+        "n": 2
+      },
+      "k": 3,
+      "searchLimit": 100,
+      "experiment": {
+        "seed": 123456,
+        "trials": 2000
+      },
+      "bias": 0.9,
+      "shared": true,
+      "claim": "monotone-from-one"
+    }
+  }
+]

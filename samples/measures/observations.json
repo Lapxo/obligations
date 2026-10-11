@@ -1,0 +1,212 @@
+[
+  {
+    "yes": {
+      "group": "observations",
+      "place": "orchard",
+      "rows": [
+        {
+          "event": "0",
+          "origin": "east",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "west",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "east",
+          "error": 1
+        },
+        {
+          "event": "1",
+          "origin": "west",
+          "error": 1
+        },
+        {
+          "event": "2",
+          "origin": "east",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "west",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "east",
+          "error": 1
+        },
+        {
+          "event": "3",
+          "origin": "west",
+          "error": 1
+        }
+      ],
+      "policy": {
+        "minCells": 2
+      }
+    },
+    "no": {
+      "group": "observations",
+      "place": "orchard",
+      "rows": [
+        {
+          "event": "0",
+          "origin": "east",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "west",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "east",
+          "error": 1
+        },
+        {
+          "event": "1",
+          "origin": "west",
+          "error": 1
+        },
+        {
+          "event": "2",
+          "origin": "east",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "west",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "east",
+          "error": 1
+        },
+        {
+          "event": "3",
+          "origin": "west",
+          "error": 1
+        },
+        {
+          "event": "0",
+          "origin": "east",
+          "error": 1
+        }
+      ],
+      "policy": {
+        "minCells": 2
+      }
+    }
+  },
+  {
+    "yes": {
+      "group": "observations",
+      "place": "catalog",
+      "rows": [
+        {
+          "event": "0",
+          "origin": "first",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "second",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "first",
+          "error": 1
+        },
+        {
+          "event": "1",
+          "origin": "second",
+          "error": 1
+        },
+        {
+          "event": "2",
+          "origin": "first",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "second",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "first",
+          "error": 1
+        },
+        {
+          "event": "3",
+          "origin": "second",
+          "error": 1
+        }
+      ],
+      "policy": {
+        "minCells": 2
+      }
+    },
+    "no": {
+      "group": "observations",
+      "place": "catalog",
+      "rows": [
+        {
+          "event": "0",
+          "origin": "first",
+          "error": 0
+        },
+        {
+          "event": "0",
+          "origin": "second",
+          "error": 0
+        },
+        {
+          "event": "1",
+          "origin": "first",
+          "error": 1
+        },
+        {
+          "event": "1",
+          "origin": "second",
+          "error": 1
+        },
+        {
+          "event": "2",
+          "origin": "first",
+          "error": 0
+        },
+        {
+          "event": "2",
+          "origin": "second",
+          "error": 0
+        },
+        {
+          "event": "3",
+          "origin": "first",
+          "error": 1
+        },
+        {
+          "event": "3",
+          "origin": "second",
+          "error": 1
+        },
+        {
+          "event": "0",
+          "origin": "first",
+          "error": 1
+        }
+      ],
+      "policy": {
+        "minCells": 2
+      }
+    }
+  }
+]

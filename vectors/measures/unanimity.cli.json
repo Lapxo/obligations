@@ -1,0 +1,148 @@
+{
+  "instrument": "@lapxo/bound@0.1.6",
+  "reader": "sha256:d212d85a14143228f69ab6b47e49169fdafbd44592e9063455e845e1bf419230",
+  "captures": [
+    {
+      "place": "orchard",
+      "negative": false,
+      "events": [
+        {
+          "args": [
+            "land",
+            "--key",
+            "device",
+            "--key-file",
+            "<fixture-key>"
+          ],
+          "status": 0,
+          "stdout": "FACT     landed 29 unique lines from 29 in TARGET · 0 of 29 signed lines fail admission by declared authority\nTARGET   29 claims · 0 superseded · 129 ms\nFACT     vouched · 0 sources under 0 locations · 0 needs refused as globs\n",
+          "stderr": "",
+          "runtimeMs": 246
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:901507d77be93b9b27e1c3f728ed1534ad657529824c2b0c06a0b2a658b05909 by=reader:11685772d6d8 form=alphabet measure=observed role=writes scope=inputs/sample.json value=901507d77be93b9b\nbound-lock/1 at=place:sha256:901507d77be93b9b27e1c3f728ed1534ad657529824c2b0c06a0b2a658b05909 by=reader:11685772d6d8 form=alphabet measure=result role=writes scope=measurement/unanimity/orchard value=\"{\\\"result\\\":{\\\"F\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.01499931759246623},\\\"threshold\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":3},\\\"dissent\\\":{\\\"unanimity\\\":{\\\"events\\\":1448,\\\"falseEvents\\\":22,\\\"rate\\\":0.015193370165745856},\\\"majorityWithDissent\\\":{\\\"events\\\":552,\\\"falseEvents\\\":52,\\\"rate\\\":0.09420289855072464}},\\\"interest\\\":{\\\"events\\\":1660,\\\"falseEvents\\\":46,\\\"rate\\\":0.027710843373493974},\\\"sequence\\\":[{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.10900000000000001},{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.02421513750304213},{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.01499931759246623}]},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6\n",
+          "stderr": "READER   reader.mjs · 1 run · 172 ms\nOBSERVE  1 run · 0 read by key · 176 ms\nOWN      imports 19 ms · bodies 0 ms · removed 0 ms · readers 0 ms · alphabets 0 ms · capsules 0 ms · regions 2 ms · vectors 0 ms · zoom 0 ms · nos 0 ms · zoomed 0 ms · applied 1 ms · laid 3 ms · resets 0 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 4 ms · own 27 ms · regions 2 ms · ceilings 2 ms · paid 0 ms · docs 0 ms · ceilings 0 ms\nBEAT     fold edd628d7 folded 0.3 s\nKEPT     fold edd628d7 miss · no fold was kept before this one\n",
+          "runtimeMs": 468
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:901507d77be93b9b27e1c3f728ed1534ad657529824c2b0c06a0b2a658b05909 by=reader:11685772d6d8 form=alphabet measure=observed role=writes scope=inputs/sample.json value=901507d77be93b9b\nbound-lock/1 at=place:sha256:901507d77be93b9b27e1c3f728ed1534ad657529824c2b0c06a0b2a658b05909 by=reader:11685772d6d8 form=alphabet measure=result role=writes scope=measurement/unanimity/orchard value=\"{\\\"result\\\":{\\\"F\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.01499931759246623},\\\"threshold\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":3},\\\"dissent\\\":{\\\"unanimity\\\":{\\\"events\\\":1448,\\\"falseEvents\\\":22,\\\"rate\\\":0.015193370165745856},\\\"majorityWithDissent\\\":{\\\"events\\\":552,\\\"falseEvents\\\":52,\\\"rate\\\":0.09420289855072464}},\\\"interest\\\":{\\\"events\\\":1660,\\\"falseEvents\\\":46,\\\"rate\\\":0.027710843373493974},\\\"sequence\\\":[{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.10900000000000001},{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.02421513750304213},{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.01499931759246623}]},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6\n",
+          "stderr": "OBSERVE  0 run · 1 read by key · 1 readers kept whole · 2 ms\nOWN      imports 18 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 1 ms · zoom 0 ms · nos 0 ms · zoomed 0 ms · applied 1 ms · laid 3 ms · resets 0 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 5 ms · own 26 ms · regions 2 ms · ceilings 1 ms · paid 0 ms · docs 1 ms · ceilings 0 ms\nBEAT     fold edd628d7 folded 0.1 s · 0.3 s folded\nKEPT     fold edd628d7 miss · no fold was kept before this one\n",
+          "runtimeMs": 239
+        }
+      ]
+    },
+    {
+      "place": "orchard",
+      "negative": true,
+      "events": [
+        {
+          "args": [
+            "land",
+            "--key",
+            "device",
+            "--key-file",
+            "<fixture-key>"
+          ],
+          "status": 0,
+          "stdout": "FACT     landed 29 unique lines from 29 in TARGET · 0 of 29 signed lines fail admission by declared authority\nTARGET   29 claims · 0 superseded · 127 ms\nFACT     vouched · 0 sources under 0 locations · 0 needs refused as globs\n",
+          "stderr": "",
+          "runtimeMs": 243
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 1,
+          "stdout": "",
+          "stderr": "REFUSE·reader reader.mjs · REFUSE·reader <workspace>/native-v3/unanimity-orchard-no/reader.mjs · Error: REFUSE·measure T1 monotonicity counterexample {\"sequence\":[{\"status\":\"measured\",\"value\":0.10900000000000001},{\"status\":\"measured\",\"value\":0.02421513750304213},{\"status\":\"measured\",\"value\":0.01499931759246623}],\"threshold\":{\"status\":\"measured\",\"value\":3}}\nOBSERVE  0 run · 0 read by key · 169 ms\nbound: REFUSE·reader reader.mjs · REFUSE·reader <workspace>/native-v3/unanimity-orchard-no/reader.mjs · Error: REFUSE·measure T1 monotonicity counterexample {\"sequence\":[{\"status\":\"measured\",\"value\":0.10900000000000001},{\"status\":\"measured\",\"value\":0.02421513750304213},{\"status\":\"measured\",\"value\":0.01499931759246623}],\"threshold\":{\"status\":\"measured\",\"value\":3}}\n",
+          "runtimeMs": 327
+        }
+      ]
+    },
+    {
+      "place": "catalog",
+      "negative": false,
+      "events": [
+        {
+          "args": [
+            "land",
+            "--key",
+            "device",
+            "--key-file",
+            "<fixture-key>"
+          ],
+          "status": 0,
+          "stdout": "FACT     landed 29 unique lines from 29 in TARGET · 0 of 29 signed lines fail admission by declared authority\nTARGET   29 claims · 0 superseded · 129 ms\nFACT     vouched · 0 sources under 0 locations · 0 needs refused as globs\n",
+          "stderr": "",
+          "runtimeMs": 243
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:b9188f4342e7c858ca26a8cb3c8ce84b9fed4dc0f6e403efdb5d37abe54ce1b9 by=reader:11685772d6d8 form=alphabet measure=observed role=writes scope=inputs/sample.json value=b9188f4342e7c858\nbound-lock/1 at=place:sha256:b9188f4342e7c858ca26a8cb3c8ce84b9fed4dc0f6e403efdb5d37abe54ce1b9 by=reader:11685772d6d8 form=alphabet measure=result role=writes scope=measurement/unanimity/catalog value=\"{\\\"result\\\":{\\\"F\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.01499931759246623},\\\"threshold\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":3},\\\"dissent\\\":{\\\"unanimity\\\":{\\\"events\\\":1448,\\\"falseEvents\\\":22,\\\"rate\\\":0.015193370165745856},\\\"majorityWithDissent\\\":{\\\"events\\\":552,\\\"falseEvents\\\":52,\\\"rate\\\":0.09420289855072464}},\\\"interest\\\":{\\\"events\\\":1660,\\\"falseEvents\\\":46,\\\"rate\\\":0.027710843373493974},\\\"sequence\\\":[{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.10900000000000001},{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.02421513750304213},{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.01499931759246623}]},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6\n",
+          "stderr": "READER   reader.mjs · 1 run · 179 ms\nOBSERVE  1 run · 0 read by key · 183 ms\nOWN      imports 18 ms · bodies 0 ms · removed 0 ms · readers 0 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 0 ms · zoom 1 ms · nos 0 ms · zoomed 0 ms · applied 1 ms · laid 3 ms · resets 0 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 4 ms · own 27 ms · regions 2 ms · ceilings 1 ms · paid 1 ms · docs 0 ms · ceilings 1 ms\nBEAT     fold 79884b50 folded 0.3 s\nKEPT     fold 79884b50 miss · no fold was kept before this one\n",
+          "runtimeMs": 486
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:b9188f4342e7c858ca26a8cb3c8ce84b9fed4dc0f6e403efdb5d37abe54ce1b9 by=reader:11685772d6d8 form=alphabet measure=observed role=writes scope=inputs/sample.json value=b9188f4342e7c858\nbound-lock/1 at=place:sha256:b9188f4342e7c858ca26a8cb3c8ce84b9fed4dc0f6e403efdb5d37abe54ce1b9 by=reader:11685772d6d8 form=alphabet measure=result role=writes scope=measurement/unanimity/catalog value=\"{\\\"result\\\":{\\\"F\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.01499931759246623},\\\"threshold\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":3},\\\"dissent\\\":{\\\"unanimity\\\":{\\\"events\\\":1448,\\\"falseEvents\\\":22,\\\"rate\\\":0.015193370165745856},\\\"majorityWithDissent\\\":{\\\"events\\\":552,\\\"falseEvents\\\":52,\\\"rate\\\":0.09420289855072464}},\\\"interest\\\":{\\\"events\\\":1660,\\\"falseEvents\\\":46,\\\"rate\\\":0.027710843373493974},\\\"sequence\\\":[{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.10900000000000001},{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.02421513750304213},{\\\"status\\\":\\\"measured\\\",\\\"value\\\":0.01499931759246623}]},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6\n",
+          "stderr": "OBSERVE  0 run · 1 read by key · 1 readers kept whole · 3 ms\nOWN      imports 24 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 1 ms · zoom 0 ms · nos 0 ms · zoomed 0 ms · applied 1 ms · laid 3 ms · resets 0 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 4 ms · own 33 ms · regions 2 ms · ceilings 1 ms · paid 0 ms · docs 0 ms · ceilings 1 ms\nBEAT     fold 79884b50 folded 0.1 s · 0.3 s folded\nKEPT     fold 79884b50 miss · no fold was kept before this one\n",
+          "runtimeMs": 252
+        }
+      ]
+    },
+    {
+      "place": "catalog",
+      "negative": true,
+      "events": [
+        {
+          "args": [
+            "land",
+            "--key",
+            "device",
+            "--key-file",
+            "<fixture-key>"
+          ],
+          "status": 0,
+          "stdout": "FACT     landed 29 unique lines from 29 in TARGET · 0 of 29 signed lines fail admission by declared authority\nTARGET   29 claims · 0 superseded · 129 ms\nFACT     vouched · 0 sources under 0 locations · 0 needs refused as globs\n",
+          "stderr": "",
+          "runtimeMs": 243
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 1,
+          "stdout": "",
+          "stderr": "REFUSE·reader reader.mjs · REFUSE·reader <workspace>/native-v3/unanimity-catalog-no/reader.mjs · Error: REFUSE·measure T1 monotonicity counterexample {\"sequence\":[{\"status\":\"measured\",\"value\":0.10900000000000001},{\"status\":\"measured\",\"value\":0.02421513750304213},{\"status\":\"measured\",\"value\":0.01499931759246623}],\"threshold\":{\"status\":\"measured\",\"value\":3}}\nOBSERVE  0 run · 0 read by key · 179 ms\nbound: REFUSE·reader reader.mjs · REFUSE·reader <workspace>/native-v3/unanimity-catalog-no/reader.mjs · Error: REFUSE·measure T1 monotonicity counterexample {\"sequence\":[{\"status\":\"measured\",\"value\":0.10900000000000001},{\"status\":\"measured\",\"value\":0.02421513750304213},{\"status\":\"measured\",\"value\":0.01499931759246623}],\"threshold\":{\"status\":\"measured\",\"value\":3}}\n",
+          "runtimeMs": 339
+        }
+      ]
+    }
+  ]
+}

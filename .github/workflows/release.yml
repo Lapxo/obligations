@@ -1,48 +1,50 @@
 name: release
 on:
-  workflow_run:
-    workflows: [tag]
-    types: [completed]
-  push:
-    tags: ['v*']
-jobs:
   release:
-    if: github.event_name == 'push' || github.event.workflow_run.conclusion == 'success'
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-      - run: npm ci
-      - run: npm run build
-      - env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          version="v$(node -p "require('./package.json').version")"
-          gh release view "$version" >/dev/null 2>&1 && exit 0
-          gh release create "$version" "$(npm pack --silent)" --title "$version" --notes "$(git log -1 --format=%B)"
-  publish:
-    needs: release
+    types: [published]
+jobs:
+  deliver:
     environment: release
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       id-token: write
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          ref: ${{ github.event.release.tag_name }}
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
-      - run: npm ci
-      - run: npm run build
-      - run: npm install --global npm@'12.1.0'
+          node-version-file: package.json
       - run: |
-          npm view "$(node -p "require('./package.json').name")@$(node -p "require('./package.json').version")" version >/dev/null 2>&1 && exit 0
-          npm stage publish
+          set -euo pipefail
+          npm install --global npm@12.1.0
+          mkdir -p .release
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern approval-signed --dir .release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+      - run: |
+          set -euo pipefail
+          npx @lapxo/bound@0.1.7 . --as release .release/approval-signed > .release/verdict
+      - run: |
+          set -euo pipefail
+          read -r status digest name source < .release/verdict
+          test "$status" = READY
+          curl --fail --location --proto '=https' --proto-redir '=https' --max-time 30 --max-filesize 67108864 --output ".release/$name" "$source"
+          printf '%s  %s\n' "${digest#sha256:}" ".release/$name" | sha256sum -c -
+          gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json assets > .release/assets.json
+          if ! jq --exit-status --arg name "$name" '.assets | any(.name == $name)' .release/assets.json > /dev/null; then
+            gh release upload "$TAG" ".release/$name" --repo "$GITHUB_REPOSITORY"
+          fi
+          mkdir -p .release/github
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern "$name" --dir .release/github
+          printf '%s  %s\n' "${digest#sha256:}" ".release/github/$name" | sha256sum -c -
+          printf 'GITHUB %s · %s\n' "$name" "$digest"
+          npm stage publish ".release/$name" --access public --ignore-scripts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
