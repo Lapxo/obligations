@@ -1,0 +1,82 @@
+[
+  {
+    "path": "src/debit/ideal.js",
+    "sha256": "sha256:4c55b1eaad5301c264611e322aee48734c2dd95a7f54493ca1211caf6a4988fd"
+  },
+  {
+    "path": "src/debit/unit-span.js",
+    "sha256": "sha256:f882bf1b9c084707e8490e47324fa68ad48f662cb6ee94be5075e48ecb2eb514"
+  },
+  {
+    "path": "src/debit/unit.js",
+    "sha256": "sha256:a26c30d5456d99667ab44ff56663fff0ced252de60b860acefb820c32a0f5f78"
+  },
+  {
+    "path": "src/lattice/errors.js",
+    "sha256": "sha256:0cc476498db21b2aab91e90cc0172bb34373cbe2876a21a21efdc8ba088112b0"
+  },
+  {
+    "path": "src/lattice/order.js",
+    "sha256": "sha256:4752a5da2995163d26712bb96acc9c14d5d65f76366e941ec29c25dd8fdd6741"
+  },
+  {
+    "path": "src/measures/capacity.js",
+    "sha256": "sha256:d9a178aa08c3ecd4d2630cd99560d1461d1f1e557fb96b01fc21052db5f20881"
+  },
+  {
+    "path": "src/measures/coincidence.js",
+    "sha256": "sha256:61b7c27f3e60b6b5ce026295afe53458a88058c8efd0cd8449ed8b12a4f1d7c2"
+  },
+  {
+    "path": "src/measures/error-events.js",
+    "sha256": "sha256:6a67eb1fbfa48629cff9bc173c9ae569b4803b9dbdbf945368add0ac52a6d200"
+  },
+  {
+    "path": "src/measures/experiments.js",
+    "sha256": "sha256:1b93636b8f8c98332c4a64d5895dd0ec27952062b18eb1c580f58c03f54ccb21"
+  },
+  {
+    "path": "src/measures/fitting.js",
+    "sha256": "sha256:62235cb2bc72fae9cfa5113fbce6fc8101c3389e68c538ee4b11e01c31d183cc"
+  },
+  {
+    "path": "src/measures/identification.js",
+    "sha256": "sha256:ba2a5424e4b54c46d82410d506a47483cf5ad6cc272379fec0a5894b730cbe0d"
+  },
+  {
+    "path": "src/measures/index.js",
+    "sha256": "sha256:2ad8dfb4eb2da8fdbbfd002656e5fc13f1756247080e40ebcb9aa1183fb32d24"
+  },
+  {
+    "path": "src/measures/m3-experiment.js",
+    "sha256": "sha256:159fc546bda79de7f50dfeeccee73854600d0a4d51ca2f875d45866f29b1a0f9"
+  },
+  {
+    "path": "src/measures/m3.js",
+    "sha256": "sha256:b971ae5160893f9565087b7e6b79eb9ad24431d232ad3f37ff290cc4adb44a35"
+  },
+  {
+    "path": "src/measures/model.js",
+    "sha256": "sha256:70b5d5d4e3c835e03fefa2adf632669eec248a2a2adabf9b054be4fd018cb85a"
+  },
+  {
+    "path": "src/measures/rational.js",
+    "sha256": "sha256:f25343eee4bbea1de211543a7036ca58f62aeefec1d124f787151ea57cbda2e7"
+  },
+  {
+    "path": "src/measures/spectrum.js",
+    "sha256": "sha256:06b38b556472d7c27bf51e423b4305cb1427af5aedb0012c3a77f3168a8a9c53"
+  },
+  {
+    "path": "src/measures/unanimity-fit.js",
+    "sha256": "sha256:dccb3a3c4fe72954f02b1e7e0c3a59f26253bd2b10909d56ef599c4e447f7c76"
+  },
+  {
+    "path": "test/support/measures-reader.js",
+    "sha256": "sha256:59c9c25b8d9501bf0b0941e8f410a10e102681cbe856382586c017cd8f0e2010"
+  },
+  {
+    "path": "test/support/unanimity-experiment.js",
+    "sha256": "sha256:e9df8eb11850b6bcb049f170f8dac35cb3edc1fe1679e3731646095f0ed3d921"
+  }
+]

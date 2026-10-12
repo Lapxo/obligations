@@ -1,0 +1,66 @@
+[
+  {
+    "yes": {
+      "group": "decisions",
+      "place": "orchard",
+      "k": 4,
+      "model": {
+        "n": 4,
+        "c": "1/5",
+        "p": "3/10"
+      },
+      "policy": {
+        "logarithm": "binary64-log2",
+        "budget": "100000"
+      },
+      "rule": "posterior-map-uniform-ties@1"
+    },
+    "no": {
+      "group": "decisions",
+      "place": "orchard",
+      "k": 4,
+      "model": {
+        "n": 4,
+        "c": "1/5",
+        "p": "3/10"
+      },
+      "policy": {
+        "logarithm": "binary64-log2",
+        "budget": "100000"
+      },
+      "rule": "undeclared"
+    }
+  },
+  {
+    "yes": {
+      "group": "decisions",
+      "place": "catalog",
+      "k": 1,
+      "model": {
+        "n": 2,
+        "c": "1/5",
+        "p": "1"
+      },
+      "policy": {
+        "logarithm": "binary64-log2",
+        "budget": "100000"
+      },
+      "rule": "posterior-map-uniform-ties@1"
+    },
+    "no": {
+      "group": "decisions",
+      "place": "catalog",
+      "k": 1,
+      "model": {
+        "n": 2,
+        "c": "1/5",
+        "p": "1"
+      },
+      "policy": {
+        "logarithm": "binary64-log2",
+        "budget": "100000"
+      },
+      "rule": "undeclared"
+    }
+  }
+]

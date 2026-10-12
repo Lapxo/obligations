@@ -1,0 +1,97 @@
+{
+  "instrument": "@lapxo/bound@0.1.7",
+  "implementation": "sha256:a0b02d4bf5dc891c88529a8a833ed33c83d210fe23d2ecb7bdf1dd5bb0a6219c",
+  "inventory": "vectors/measures/implementation.json",
+  "captures": [
+    {
+      "place": "orchard",
+      "negative": false,
+      "events": [
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:933514d8d9f800502215a511d2f6ad198542d8884440f68446fe2161b1e2b923 by=reader:41b2920eb5dd form=alphabet measure=observed role=writes scope=inputs/sample.json value=933514d8d9f80050\nbound-lock/1 at=place:sha256:933514d8d9f800502215a511d2f6ad198542d8884440f68446fe2161b1e2b923 by=reader:41b2920eb5dd form=alphabet measure=result role=writes scope=measurement/coincidence/orchard value=\"{\\\"result\\\":{\\\"reference\\\":{\\\"model\\\":\\\"independent-uniform-wrong@1\\\",\\\"values\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\",\\\"4\\\",\\\"5\\\",\\\"6\\\",\\\"7\\\",\\\"8\\\",\\\"9\\\",\\\"10\\\",\\\"11\\\",\\\"12\\\",\\\"13\\\",\\\"14\\\",\\\"15\\\",\\\"16\\\",\\\"17\\\",\\\"18\\\",\\\"19\\\",\\\"20\\\",\\\"21\\\",\\\"22\\\",\\\"23\\\",\\\"24\\\",\\\"25\\\",\\\"26\\\",\\\"27\\\",\\\"28\\\",\\\"29\\\",\\\"30\\\",\\\"31\\\",\\\"32\\\",\\\"33\\\",\\\"34\\\",\\\"35\\\",\\\"36\\\",\\\"37\\\",\\\"38\\\",\\\"39\\\",\\\"40\\\",\\\"41\\\",\\\"42\\\",\\\"43\\\",\\\"44\\\",\\\"45\\\",\\\"46\\\",\\\"47\\\",\\\"48\\\",\\\"49\\\",\\\"50\\\",\\\"51\\\",\\\"52\\\",\\\"53\\\",\\\"54\\\",\\\"55\\\",\\\"56\\\",\\\"57\\\",\\\"58\\\",\\\"59\\\",\\\"60\\\",\\\"61\\\",\\\"62\\\",\\\"63\\\"],\\\"marginals\\\":\\\"handed\\\",\\\"errors\\\":[{\\\"origin\\\":\\\"a\\\",\\\"probability\\\":\\\"1/2\\\"},{\\\"origin\\\":\\\"b\\\",\\\"probability\\\":\\\"1/2\\\"},{\\\"origin\\\":\\\"c\\\",\\\"probability\\\":\\\"1/2\\\"}]},\\\"policy\\\":{\\\"minEvents\\\":1,\\\"minEventsPerTruth\\\":1,\\\"budget\\\":\\\"10000\\\"},\\\"selection\\\":[\\\"a\\\",\\\"b\\\",\\\"c\\\"],\\\"order\\\":3,\\\"interpretation\\\":\\\"coincidence relative to the declared reference; not causal identification\\\",\\\"status\\\":\\\"measured\\\",\\\"events\\\":4,\\\"falseCoincidences\\\":0,\\\"observed\\\":{\\\"numerator\\\":\\\"0\\\",\\\"denominator\\\":\\\"1\\\"},\\\"expected\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"31752\\\"},\\\"delta\\\":{\\\"numerator\\\":\\\"-1\\\",\\\"denominator\\\":\\\"31752\\\"},\\\"ratio\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":{\\\"numerator\\\":\\\"0\\\",\\\"denominator\\\":\\\"1\\\"}},\\\"strata\\\":[{\\\"truth\\\":\\\"0\\\",\\\"events\\\":4,\\\"marginals\\\":[{\\\"origin\\\":\\\"a\\\",\\\"error\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}},{\\\"origin\\\":\\\"b\\\",\\\"error\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}},{\\\"origin\\\":\\\"c\\\",\\\"error\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}}],\\\"reference\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"31752\\\"}}],\\\"uncertainty\\\":{\\\"status\\\":\\\"unmeasured\\\",\\\"cause\\\":\\\"descriptive population only; no sampling design handed\\\"}},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a\n",
+          "stderr": "READER   test/support/measures-reader.js · 1 run · 220 ms\nOBSERVE  1 run · 0 read by key · 224 ms\nOWN      imports 19 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 0 ms · zoom 1 ms · nos 0 ms · zoomed 0 ms · applied 1 ms · laid 3 ms · resets 0 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 5 ms · own 29 ms · regions 9 ms · ceilings 2 ms · paid 0 ms · docs 0 ms · ceilings 0 ms\nBEAT     fold 5f77a04d folded 0.4 s · 0.3 s folded\nKEPT     fold 5f77a04d miss · no fold was kept before this one\n",
+          "runtimeMs": 493
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:933514d8d9f800502215a511d2f6ad198542d8884440f68446fe2161b1e2b923 by=reader:41b2920eb5dd form=alphabet measure=observed role=writes scope=inputs/sample.json value=933514d8d9f80050\nbound-lock/1 at=place:sha256:933514d8d9f800502215a511d2f6ad198542d8884440f68446fe2161b1e2b923 by=reader:41b2920eb5dd form=alphabet measure=result role=writes scope=measurement/coincidence/orchard value=\"{\\\"result\\\":{\\\"reference\\\":{\\\"model\\\":\\\"independent-uniform-wrong@1\\\",\\\"values\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\",\\\"4\\\",\\\"5\\\",\\\"6\\\",\\\"7\\\",\\\"8\\\",\\\"9\\\",\\\"10\\\",\\\"11\\\",\\\"12\\\",\\\"13\\\",\\\"14\\\",\\\"15\\\",\\\"16\\\",\\\"17\\\",\\\"18\\\",\\\"19\\\",\\\"20\\\",\\\"21\\\",\\\"22\\\",\\\"23\\\",\\\"24\\\",\\\"25\\\",\\\"26\\\",\\\"27\\\",\\\"28\\\",\\\"29\\\",\\\"30\\\",\\\"31\\\",\\\"32\\\",\\\"33\\\",\\\"34\\\",\\\"35\\\",\\\"36\\\",\\\"37\\\",\\\"38\\\",\\\"39\\\",\\\"40\\\",\\\"41\\\",\\\"42\\\",\\\"43\\\",\\\"44\\\",\\\"45\\\",\\\"46\\\",\\\"47\\\",\\\"48\\\",\\\"49\\\",\\\"50\\\",\\\"51\\\",\\\"52\\\",\\\"53\\\",\\\"54\\\",\\\"55\\\",\\\"56\\\",\\\"57\\\",\\\"58\\\",\\\"59\\\",\\\"60\\\",\\\"61\\\",\\\"62\\\",\\\"63\\\"],\\\"marginals\\\":\\\"handed\\\",\\\"errors\\\":[{\\\"origin\\\":\\\"a\\\",\\\"probability\\\":\\\"1/2\\\"},{\\\"origin\\\":\\\"b\\\",\\\"probability\\\":\\\"1/2\\\"},{\\\"origin\\\":\\\"c\\\",\\\"probability\\\":\\\"1/2\\\"}]},\\\"policy\\\":{\\\"minEvents\\\":1,\\\"minEventsPerTruth\\\":1,\\\"budget\\\":\\\"10000\\\"},\\\"selection\\\":[\\\"a\\\",\\\"b\\\",\\\"c\\\"],\\\"order\\\":3,\\\"interpretation\\\":\\\"coincidence relative to the declared reference; not causal identification\\\",\\\"status\\\":\\\"measured\\\",\\\"events\\\":4,\\\"falseCoincidences\\\":0,\\\"observed\\\":{\\\"numerator\\\":\\\"0\\\",\\\"denominator\\\":\\\"1\\\"},\\\"expected\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"31752\\\"},\\\"delta\\\":{\\\"numerator\\\":\\\"-1\\\",\\\"denominator\\\":\\\"31752\\\"},\\\"ratio\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":{\\\"numerator\\\":\\\"0\\\",\\\"denominator\\\":\\\"1\\\"}},\\\"strata\\\":[{\\\"truth\\\":\\\"0\\\",\\\"events\\\":4,\\\"marginals\\\":[{\\\"origin\\\":\\\"a\\\",\\\"error\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}},{\\\"origin\\\":\\\"b\\\",\\\"error\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}},{\\\"origin\\\":\\\"c\\\",\\\"error\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}}],\\\"reference\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"31752\\\"}}],\\\"uncertainty\\\":{\\\"status\\\":\\\"unmeasured\\\",\\\"cause\\\":\\\"descriptive population only; no sampling design handed\\\"}},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a\n",
+          "stderr": "OBSERVE  0 run · 1 read by key · 1 readers kept whole · 3 ms\nOWN      imports 18 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 2 ms · vectors 0 ms · zoom 0 ms · nos 0 ms · zoomed 1 ms · applied 0 ms · laid 3 ms · resets 1 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 5 ms · own 28 ms · regions 9 ms · ceilings 1 ms · paid 0 ms · docs 0 ms · ceilings 1 ms\nBEAT     fold 5f77a04d folded 0.1 s · 0.3 s folded\nKEPT     fold 5f77a04d miss · no fold was kept before this one\n",
+          "runtimeMs": 262
+        }
+      ]
+    },
+    {
+      "place": "orchard",
+      "negative": true,
+      "events": [
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 1,
+          "stdout": "",
+          "stderr": "REFUSE·reader test/support/measures-reader.js · REFUSE·reader /private<place>/test/support/measures-reader.js · Error: REFUSE·coincidence conflicting value 0/a\nOBSERVE  0 run · 0 read by key · 183 ms\nbound: REFUSE·reader test/support/measures-reader.js · REFUSE·reader /private<place>/test/support/measures-reader.js · Error: REFUSE·coincidence conflicting value 0/a\n",
+          "runtimeMs": 351
+        }
+      ]
+    },
+    {
+      "place": "catalog",
+      "negative": false,
+      "events": [
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:e12aac61884ed2855727a740d91da53b023825c706f51ae6b97a2bf5fda392fa by=reader:41b2920eb5dd form=alphabet measure=observed role=writes scope=inputs/sample.json value=e12aac61884ed285\nbound-lock/1 at=place:sha256:e12aac61884ed2855727a740d91da53b023825c706f51ae6b97a2bf5fda392fa by=reader:41b2920eb5dd form=alphabet measure=result role=writes scope=measurement/coincidence/catalog value=\"{\\\"result\\\":{\\\"reference\\\":{\\\"model\\\":\\\"independent-uniform-wrong@1\\\",\\\"values\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\"],\\\"marginals\\\":\\\"handed\\\",\\\"errors\\\":[{\\\"origin\\\":\\\"a\\\",\\\"probability\\\":\\\"1/2\\\"},{\\\"origin\\\":\\\"b\\\",\\\"probability\\\":\\\"1/2\\\"},{\\\"origin\\\":\\\"c\\\",\\\"probability\\\":\\\"1/2\\\"}]},\\\"policy\\\":{\\\"minEvents\\\":1,\\\"minEventsPerTruth\\\":1,\\\"budget\\\":\\\"10000\\\"},\\\"selection\\\":[\\\"a\\\",\\\"b\\\",\\\"c\\\"],\\\"order\\\":3,\\\"interpretation\\\":\\\"coincidence relative to the declared reference; not causal identification\\\",\\\"status\\\":\\\"measured\\\",\\\"events\\\":4,\\\"falseCoincidences\\\":0,\\\"observed\\\":{\\\"numerator\\\":\\\"0\\\",\\\"denominator\\\":\\\"1\\\"},\\\"expected\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"72\\\"},\\\"delta\\\":{\\\"numerator\\\":\\\"-1\\\",\\\"denominator\\\":\\\"72\\\"},\\\"ratio\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":{\\\"numerator\\\":\\\"0\\\",\\\"denominator\\\":\\\"1\\\"}},\\\"strata\\\":[{\\\"truth\\\":\\\"0\\\",\\\"events\\\":4,\\\"marginals\\\":[{\\\"origin\\\":\\\"a\\\",\\\"error\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}},{\\\"origin\\\":\\\"b\\\",\\\"error\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}},{\\\"origin\\\":\\\"c\\\",\\\"error\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}}],\\\"reference\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"72\\\"}}],\\\"uncertainty\\\":{\\\"status\\\":\\\"unmeasured\\\",\\\"cause\\\":\\\"descriptive population only; no sampling design handed\\\"}},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a\n",
+          "stderr": "READER   test/support/measures-reader.js · 1 run · 172 ms\nOBSERVE  1 run · 0 read by key · 175 ms\nOWN      imports 18 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 0 ms · zoom 1 ms · nos 0 ms · zoomed 0 ms · applied 1 ms · laid 3 ms · resets 0 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 5 ms · own 26 ms · regions 9 ms · ceilings 1 ms · paid 0 ms · docs 0 ms · ceilings 1 ms\nBEAT     fold 6a154160 folded 0.3 s · 0.3 s folded\nKEPT     fold 6a154160 miss · no fold was kept before this one\n",
+          "runtimeMs": 431
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:e12aac61884ed2855727a740d91da53b023825c706f51ae6b97a2bf5fda392fa by=reader:41b2920eb5dd form=alphabet measure=observed role=writes scope=inputs/sample.json value=e12aac61884ed285\nbound-lock/1 at=place:sha256:e12aac61884ed2855727a740d91da53b023825c706f51ae6b97a2bf5fda392fa by=reader:41b2920eb5dd form=alphabet measure=result role=writes scope=measurement/coincidence/catalog value=\"{\\\"result\\\":{\\\"reference\\\":{\\\"model\\\":\\\"independent-uniform-wrong@1\\\",\\\"values\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\"],\\\"marginals\\\":\\\"handed\\\",\\\"errors\\\":[{\\\"origin\\\":\\\"a\\\",\\\"probability\\\":\\\"1/2\\\"},{\\\"origin\\\":\\\"b\\\",\\\"probability\\\":\\\"1/2\\\"},{\\\"origin\\\":\\\"c\\\",\\\"probability\\\":\\\"1/2\\\"}]},\\\"policy\\\":{\\\"minEvents\\\":1,\\\"minEventsPerTruth\\\":1,\\\"budget\\\":\\\"10000\\\"},\\\"selection\\\":[\\\"a\\\",\\\"b\\\",\\\"c\\\"],\\\"order\\\":3,\\\"interpretation\\\":\\\"coincidence relative to the declared reference; not causal identification\\\",\\\"status\\\":\\\"measured\\\",\\\"events\\\":4,\\\"falseCoincidences\\\":0,\\\"observed\\\":{\\\"numerator\\\":\\\"0\\\",\\\"denominator\\\":\\\"1\\\"},\\\"expected\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"72\\\"},\\\"delta\\\":{\\\"numerator\\\":\\\"-1\\\",\\\"denominator\\\":\\\"72\\\"},\\\"ratio\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":{\\\"numerator\\\":\\\"0\\\",\\\"denominator\\\":\\\"1\\\"}},\\\"strata\\\":[{\\\"truth\\\":\\\"0\\\",\\\"events\\\":4,\\\"marginals\\\":[{\\\"origin\\\":\\\"a\\\",\\\"error\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}},{\\\"origin\\\":\\\"b\\\",\\\"error\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}},{\\\"origin\\\":\\\"c\\\",\\\"error\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}}],\\\"reference\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"72\\\"}}],\\\"uncertainty\\\":{\\\"status\\\":\\\"unmeasured\\\",\\\"cause\\\":\\\"descriptive population only; no sampling design handed\\\"}},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a\n",
+          "stderr": "OBSERVE  0 run · 1 read by key · 1 readers kept whole · 2 ms\nOWN      imports 17 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 1 ms · zoom 0 ms · nos 0 ms · zoomed 0 ms · applied 1 ms · laid 3 ms · resets 0 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 5 ms · own 27 ms · regions 8 ms · ceilings 2 ms · paid 0 ms · docs 0 ms · ceilings 0 ms\nBEAT     fold 6a154160 folded 0.1 s · 0.3 s folded\nKEPT     fold 6a154160 miss · no fold was kept before this one\n",
+          "runtimeMs": 254
+        }
+      ]
+    },
+    {
+      "place": "catalog",
+      "negative": true,
+      "events": [
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 1,
+          "stdout": "",
+          "stderr": "REFUSE·reader test/support/measures-reader.js · REFUSE·reader /private<place>/test/support/measures-reader.js · Error: REFUSE·coincidence conflicting value 0/a\nOBSERVE  0 run · 0 read by key · 174 ms\nbound: REFUSE·reader test/support/measures-reader.js · REFUSE·reader /private<place>/test/support/measures-reader.js · Error: REFUSE·coincidence conflicting value 0/a\n",
+          "runtimeMs": 335
+        }
+      ]
+    }
+  ]
+}

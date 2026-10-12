@@ -1,5 +1,7 @@
 # Contributing
 
-Clone, `npm ci && npm run build`. A case that gives you a different answer is the contribution: send it with what it printed.
-Ten conjectures are open, each in the README under Open, and each says what would close it and who could.
-Nothing else is asked. Lines land through the fold, never by hand; a page and the lock disagree, the lock is right.
+Clone, `npm ci && npm run build`. Bring a counterexample with its inputs and printed output.
+
+Open research demands are named in `TARGET.bound`; a result needs its model, conditions and falsifier. No count is inferred from missing observations.
+
+Lines land through the instrument. Submit proposed lines for review rather than editing an admitted lock or its rendered pages.

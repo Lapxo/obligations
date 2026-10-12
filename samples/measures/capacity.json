@@ -1,0 +1,71 @@
+[
+  {
+    "yes": {
+      "group": "capacity",
+      "place": "orchard",
+      "k": 4,
+      "model": {
+        "n": 4,
+        "c": "1/5",
+        "p": "3/10"
+      },
+      "policy": {
+        "logarithm": "binary64-log2",
+        "budget": "100000"
+      },
+      "ks": [
+        1,
+        2,
+        4,
+        7
+      ]
+    },
+    "no": {
+      "group": "capacity",
+      "place": "orchard",
+      "k": 4,
+      "model": {
+        "n": 4,
+        "c": "1/5",
+        "p": "3/10"
+      },
+      "policy": {
+        "budget": "100000"
+      }
+    }
+  },
+  {
+    "yes": {
+      "group": "capacity",
+      "place": "catalog",
+      "k": 1,
+      "model": {
+        "n": 2,
+        "c": "1/5",
+        "p": "1"
+      },
+      "policy": {
+        "logarithm": "binary64-log2",
+        "budget": "100000"
+      },
+      "ks": [
+        1,
+        2,
+        4
+      ]
+    },
+    "no": {
+      "group": "capacity",
+      "place": "catalog",
+      "k": 1,
+      "model": {
+        "n": 2,
+        "c": "1/5",
+        "p": "1"
+      },
+      "policy": {
+        "budget": "100000"
+      }
+    }
+  }
+]

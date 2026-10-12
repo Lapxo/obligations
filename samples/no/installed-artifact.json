@@ -179,8 +179,16 @@
       "sha256": "sha256:86a33399266ad3d5274838e9580a467d045e8edba6bded643ffdb580a79ae37d"
     },
     {
+      "path": "dist/measures/capacity.js",
+      "sha256": "sha256:d9a178aa08c3ecd4d2630cd99560d1461d1f1e557fb96b01fc21052db5f20881"
+    },
+    {
+      "path": "dist/measures/coincidence.js",
+      "sha256": "sha256:61b7c27f3e60b6b5ce026295afe53458a88058c8efd0cd8449ed8b12a4f1d7c2"
+    },
+    {
       "path": "dist/measures/error-events.js",
-      "sha256": "sha256:df5c77620adf2de919a0f1eb3df53837ce62d43bfdf72acfde04f80961ded97e"
+      "sha256": "sha256:6a67eb1fbfa48629cff9bc173c9ae569b4803b9dbdbf945368add0ac52a6d200"
     },
     {
       "path": "dist/measures/experiments.js",
@@ -196,7 +204,7 @@
     },
     {
       "path": "dist/measures/index.js",
-      "sha256": "sha256:e056393908931aac0ef64e7abcab68ece360536b6578be1e945e62af6a409475"
+      "sha256": "sha256:2ad8dfb4eb2da8fdbbfd002656e5fc13f1756247080e40ebcb9aa1183fb32d24"
     },
     {
       "path": "dist/measures/m3-experiment.js",
@@ -217,6 +225,10 @@
     {
       "path": "dist/measures/spectrum.js",
       "sha256": "sha256:06b38b556472d7c27bf51e423b4305cb1427af5aedb0012c3a77f3168a8a9c53"
+    },
+    {
+      "path": "dist/measures/unanimity-fit.js",
+      "sha256": "sha256:dccb3a3c4fe72954f02b1e7e0c3a59f26253bd2b10909d56ef599c4e447f7c76"
     },
     {
       "path": "dist/replay.js",
