@@ -1,0 +1,3126 @@
+[
+  {
+    "yes": {
+      "group": "m3",
+      "place": "orchard",
+      "models": [
+        {
+          "name": "covering",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "1/5"
+              },
+              {
+                "id": "B",
+                "privateError": "1/5"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": [
+              {
+                "id": "cover",
+                "index": 0,
+                "members": [
+                  "A",
+                  "B"
+                ],
+                "probability": "1/20"
+              }
+            ]
+          }
+        },
+        {
+          "name": "impossible",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "0"
+              },
+              {
+                "id": "B",
+                "privateError": "1"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": []
+          }
+        },
+        {
+          "name": "partial",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "0"
+              },
+              {
+                "id": "B",
+                "privateError": "0"
+              },
+              {
+                "id": "C",
+                "privateError": "0"
+              }
+            ],
+            "selection": [
+              "A",
+              "B",
+              "C"
+            ],
+            "factors": [
+              {
+                "id": "cover",
+                "index": 0,
+                "members": [
+                  "A",
+                  "B",
+                  "C"
+                ],
+                "probability": "1/5"
+              },
+              {
+                "id": "partial",
+                "index": 1,
+                "members": [
+                  "A",
+                  "B"
+                ],
+                "probability": "3/10"
+              }
+            ]
+          }
+        },
+        {
+          "name": "singleton",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "1/5"
+              },
+              {
+                "id": "B",
+                "privateError": "1/5"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": [
+              {
+                "id": "A",
+                "index": 0,
+                "members": [
+                  "A"
+                ],
+                "probability": "3/10"
+              },
+              {
+                "id": "cover",
+                "index": 1,
+                "members": [
+                  "A",
+                  "B"
+                ],
+                "probability": "1/5"
+              }
+            ]
+          }
+        },
+        {
+          "name": "merged-singleton-no-equivalence",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "11/25"
+              },
+              {
+                "id": "B",
+                "privateError": "1/5"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": [
+              {
+                "id": "cover",
+                "index": 1,
+                "members": [
+                  "A",
+                  "B"
+                ],
+                "probability": "1/5"
+              }
+            ]
+          }
+        },
+        {
+          "name": "two-pairs",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "0",
+                "privateError": "0"
+              },
+              {
+                "id": "1",
+                "privateError": "0"
+              },
+              {
+                "id": "2",
+                "privateError": "0"
+              },
+              {
+                "id": "3",
+                "privateError": "0"
+              }
+            ],
+            "selection": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "factors": [
+              {
+                "id": "left",
+                "index": 0,
+                "members": [
+                  "0",
+                  "1"
+                ],
+                "probability": "1/2"
+              },
+              {
+                "id": "right",
+                "index": 1,
+                "members": [
+                  "2",
+                  "3"
+                ],
+                "probability": "1/2"
+              }
+            ]
+          }
+        }
+      ],
+      "identifications": [
+        {
+          "witnesses": [
+            {
+              "id": "A",
+              "correct": "2/5"
+            },
+            {
+              "id": "B",
+              "correct": "1/2"
+            }
+          ],
+          "factors": [
+            {
+              "id": "cover",
+              "members": [
+                "A",
+                "B"
+              ]
+            }
+          ],
+          "pairs": [
+            {
+              "a": "A",
+              "b": "B",
+              "correctTogether": "1/4"
+            }
+          ]
+        },
+        {
+          "witnesses": [
+            {
+              "id": "A",
+              "correct": "0"
+            },
+            {
+              "id": "B",
+              "correct": "1/2"
+            }
+          ],
+          "factors": [
+            {
+              "id": "cover",
+              "members": [
+                "A",
+                "B"
+              ]
+            }
+          ],
+          "pairs": [
+            {
+              "a": "A",
+              "b": "B",
+              "correctTogether": "0"
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "budget": "100000"
+      },
+      "identificationPolicy": {
+        "budget": "1000"
+      },
+      "experiment": {
+        "prng": "xorshift32",
+        "seed": 12345,
+        "trials": 2000,
+        "randomWords": 100000
+      },
+      "fits": [
+        {
+          "rows": [
+            {
+              "event": "0",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "0",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "2",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "2",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "4",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "4",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "6",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "6",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "8",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "8",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "10",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "10",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "12",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "12",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "14",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "14",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "16",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "16",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "18",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "18",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "20",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "20",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "22",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "22",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "24",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "24",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "26",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "26",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "28",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "28",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "30",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "30",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "32",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "32",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "34",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "34",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "36",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "36",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "38",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "38",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "40",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "40",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "42",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "42",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "44",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "44",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "46",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "46",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "48",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "48",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "50",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "50",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "52",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "52",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "54",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "54",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "56",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "56",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "58",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "58",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "60",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "60",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "62",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "62",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "64",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "64",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "66",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "66",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "68",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "68",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "70",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "70",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "72",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "72",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "74",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "74",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "76",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "76",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "78",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "78",
+              "origin": "B",
+              "error": 1
+            }
+          ],
+          "policy": {
+            "observation": {
+              "minCells": 2
+            },
+            "activeSets": "1000",
+            "solveTolerance": 1e-12,
+            "residualTolerance": 1e-10,
+            "bootstrap": {
+              "B": 4,
+              "seed": 123456,
+              "prng": "xorshift32",
+              "randomWords": 10000
+            }
+          },
+          "structure": {
+            "factors": [
+              {
+                "id": "shared",
+                "members": [
+                  "A",
+                  "B"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "rows": [
+            {
+              "event": "one",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "one",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "two",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "two",
+              "origin": "B",
+              "error": 0
+            }
+          ],
+          "policy": {
+            "observation": {
+              "minCells": 2
+            },
+            "activeSets": "1000",
+            "solveTolerance": 1e-12,
+            "residualTolerance": 1e-10,
+            "bootstrap": {
+              "B": 4,
+              "seed": 123456,
+              "prng": "xorshift32",
+              "randomWords": 10000
+            }
+          },
+          "structure": {
+            "factors": [
+              {
+                "id": "shared",
+                "members": [
+                  "A",
+                  "B"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "no": {
+      "group": "m3",
+      "place": "orchard",
+      "models": [
+        {
+          "name": "covering",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "1/5"
+              },
+              {
+                "id": "B",
+                "privateError": "1/5"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": [
+              {
+                "id": "cover",
+                "index": 0,
+                "members": [
+                  "A",
+                  "A"
+                ],
+                "probability": "1/20"
+              }
+            ]
+          }
+        },
+        {
+          "name": "impossible",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "0"
+              },
+              {
+                "id": "B",
+                "privateError": "1"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": []
+          }
+        },
+        {
+          "name": "partial",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "0"
+              },
+              {
+                "id": "B",
+                "privateError": "0"
+              },
+              {
+                "id": "C",
+                "privateError": "0"
+              }
+            ],
+            "selection": [
+              "A",
+              "B",
+              "C"
+            ],
+            "factors": [
+              {
+                "id": "cover",
+                "index": 0,
+                "members": [
+                  "A",
+                  "B",
+                  "C"
+                ],
+                "probability": "1/5"
+              },
+              {
+                "id": "partial",
+                "index": 1,
+                "members": [
+                  "A",
+                  "B"
+                ],
+                "probability": "3/10"
+              }
+            ]
+          }
+        },
+        {
+          "name": "singleton",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "1/5"
+              },
+              {
+                "id": "B",
+                "privateError": "1/5"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": [
+              {
+                "id": "A",
+                "index": 0,
+                "members": [
+                  "A"
+                ],
+                "probability": "3/10"
+              },
+              {
+                "id": "cover",
+                "index": 1,
+                "members": [
+                  "A",
+                  "B"
+                ],
+                "probability": "1/5"
+              }
+            ]
+          }
+        },
+        {
+          "name": "merged-singleton-no-equivalence",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "11/25"
+              },
+              {
+                "id": "B",
+                "privateError": "1/5"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": [
+              {
+                "id": "cover",
+                "index": 1,
+                "members": [
+                  "A",
+                  "B"
+                ],
+                "probability": "1/5"
+              }
+            ]
+          }
+        },
+        {
+          "name": "two-pairs",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "0",
+                "privateError": "0"
+              },
+              {
+                "id": "1",
+                "privateError": "0"
+              },
+              {
+                "id": "2",
+                "privateError": "0"
+              },
+              {
+                "id": "3",
+                "privateError": "0"
+              }
+            ],
+            "selection": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "factors": [
+              {
+                "id": "left",
+                "index": 0,
+                "members": [
+                  "0",
+                  "1"
+                ],
+                "probability": "1/2"
+              },
+              {
+                "id": "right",
+                "index": 1,
+                "members": [
+                  "2",
+                  "3"
+                ],
+                "probability": "1/2"
+              }
+            ]
+          }
+        }
+      ],
+      "identifications": [
+        {
+          "witnesses": [
+            {
+              "id": "A",
+              "correct": "2/5"
+            },
+            {
+              "id": "B",
+              "correct": "1/2"
+            }
+          ],
+          "factors": [
+            {
+              "id": "cover",
+              "members": [
+                "A",
+                "B"
+              ]
+            }
+          ],
+          "pairs": [
+            {
+              "a": "A",
+              "b": "B",
+              "correctTogether": "1/4"
+            }
+          ]
+        },
+        {
+          "witnesses": [
+            {
+              "id": "A",
+              "correct": "0"
+            },
+            {
+              "id": "B",
+              "correct": "1/2"
+            }
+          ],
+          "factors": [
+            {
+              "id": "cover",
+              "members": [
+                "A",
+                "B"
+              ]
+            }
+          ],
+          "pairs": [
+            {
+              "a": "A",
+              "b": "B",
+              "correctTogether": "0"
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "budget": "100000"
+      },
+      "identificationPolicy": {
+        "budget": "1000"
+      },
+      "experiment": {
+        "prng": "xorshift32",
+        "seed": 12345,
+        "trials": 2000,
+        "randomWords": 100000
+      },
+      "fits": [
+        {
+          "rows": [
+            {
+              "event": "0",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "0",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "2",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "2",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "4",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "4",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "6",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "6",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "8",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "8",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "10",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "10",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "12",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "12",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "14",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "14",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "16",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "16",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "18",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "18",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "20",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "20",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "22",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "22",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "24",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "24",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "26",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "26",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "28",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "28",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "30",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "30",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "32",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "32",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "34",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "34",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "36",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "36",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "38",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "38",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "40",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "40",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "42",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "42",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "44",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "44",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "46",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "46",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "48",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "48",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "50",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "50",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "52",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "52",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "54",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "54",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "56",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "56",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "58",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "58",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "60",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "60",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "62",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "62",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "64",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "64",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "66",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "66",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "68",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "68",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "70",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "70",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "72",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "72",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "74",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "74",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "76",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "76",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "78",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "78",
+              "origin": "B",
+              "error": 1
+            }
+          ],
+          "policy": {
+            "observation": {
+              "minCells": 2
+            },
+            "activeSets": "1000",
+            "solveTolerance": 1e-12,
+            "residualTolerance": 1e-10,
+            "bootstrap": {
+              "B": 4,
+              "seed": 123456,
+              "prng": "xorshift32",
+              "randomWords": 10000
+            }
+          },
+          "structure": {
+            "factors": [
+              {
+                "id": "shared",
+                "members": [
+                  "A",
+                  "B"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "rows": [
+            {
+              "event": "one",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "one",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "two",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "two",
+              "origin": "B",
+              "error": 0
+            }
+          ],
+          "policy": {
+            "observation": {
+              "minCells": 2
+            },
+            "activeSets": "1000",
+            "solveTolerance": 1e-12,
+            "residualTolerance": 1e-10,
+            "bootstrap": {
+              "B": 4,
+              "seed": 123456,
+              "prng": "xorshift32",
+              "randomWords": 10000
+            }
+          },
+          "structure": {
+            "factors": [
+              {
+                "id": "shared",
+                "members": [
+                  "A",
+                  "B"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "yes": {
+      "group": "m3",
+      "place": "catalog",
+      "models": [
+        {
+          "name": "covering",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "1/5"
+              },
+              {
+                "id": "B",
+                "privateError": "1/5"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": [
+              {
+                "id": "cover",
+                "index": 0,
+                "members": [
+                  "A",
+                  "B"
+                ],
+                "probability": "1/20"
+              }
+            ]
+          }
+        },
+        {
+          "name": "impossible",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "0"
+              },
+              {
+                "id": "B",
+                "privateError": "1"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": []
+          }
+        },
+        {
+          "name": "partial",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "0"
+              },
+              {
+                "id": "B",
+                "privateError": "0"
+              },
+              {
+                "id": "C",
+                "privateError": "0"
+              }
+            ],
+            "selection": [
+              "A",
+              "B",
+              "C"
+            ],
+            "factors": [
+              {
+                "id": "cover",
+                "index": 0,
+                "members": [
+                  "A",
+                  "B",
+                  "C"
+                ],
+                "probability": "1/5"
+              },
+              {
+                "id": "partial",
+                "index": 1,
+                "members": [
+                  "A",
+                  "B"
+                ],
+                "probability": "3/10"
+              }
+            ]
+          }
+        },
+        {
+          "name": "singleton",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "1/5"
+              },
+              {
+                "id": "B",
+                "privateError": "1/5"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": [
+              {
+                "id": "A",
+                "index": 0,
+                "members": [
+                  "A"
+                ],
+                "probability": "3/10"
+              },
+              {
+                "id": "cover",
+                "index": 1,
+                "members": [
+                  "A",
+                  "B"
+                ],
+                "probability": "1/5"
+              }
+            ]
+          }
+        },
+        {
+          "name": "merged-singleton-no-equivalence",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "11/25"
+              },
+              {
+                "id": "B",
+                "privateError": "1/5"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": [
+              {
+                "id": "cover",
+                "index": 1,
+                "members": [
+                  "A",
+                  "B"
+                ],
+                "probability": "1/5"
+              }
+            ]
+          }
+        },
+        {
+          "name": "two-pairs",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "0",
+                "privateError": "0"
+              },
+              {
+                "id": "1",
+                "privateError": "0"
+              },
+              {
+                "id": "2",
+                "privateError": "0"
+              },
+              {
+                "id": "3",
+                "privateError": "0"
+              }
+            ],
+            "selection": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "factors": [
+              {
+                "id": "left",
+                "index": 0,
+                "members": [
+                  "0",
+                  "1"
+                ],
+                "probability": "1/2"
+              },
+              {
+                "id": "right",
+                "index": 1,
+                "members": [
+                  "2",
+                  "3"
+                ],
+                "probability": "1/2"
+              }
+            ]
+          }
+        }
+      ],
+      "identifications": [
+        {
+          "witnesses": [
+            {
+              "id": "A",
+              "correct": "2/5"
+            },
+            {
+              "id": "B",
+              "correct": "1/2"
+            }
+          ],
+          "factors": [
+            {
+              "id": "cover",
+              "members": [
+                "A",
+                "B"
+              ]
+            }
+          ],
+          "pairs": [
+            {
+              "a": "A",
+              "b": "B",
+              "correctTogether": "1/4"
+            }
+          ]
+        },
+        {
+          "witnesses": [
+            {
+              "id": "A",
+              "correct": "0"
+            },
+            {
+              "id": "B",
+              "correct": "1/2"
+            }
+          ],
+          "factors": [
+            {
+              "id": "cover",
+              "members": [
+                "A",
+                "B"
+              ]
+            }
+          ],
+          "pairs": [
+            {
+              "a": "A",
+              "b": "B",
+              "correctTogether": "0"
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "budget": "100000"
+      },
+      "identificationPolicy": {
+        "budget": "1000"
+      },
+      "experiment": {
+        "prng": "xorshift32",
+        "seed": 98765,
+        "trials": 2000,
+        "randomWords": 100000
+      },
+      "fits": [
+        {
+          "rows": [
+            {
+              "event": "0",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "0",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "2",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "2",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "4",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "4",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "6",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "6",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "8",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "8",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "10",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "10",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "12",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "12",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "14",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "14",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "16",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "16",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "18",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "18",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "20",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "20",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "22",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "22",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "24",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "24",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "26",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "26",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "28",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "28",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "30",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "30",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "32",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "32",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "34",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "34",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "36",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "36",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "38",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "38",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "40",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "40",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "42",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "42",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "44",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "44",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "46",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "46",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "48",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "48",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "50",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "50",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "52",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "52",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "54",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "54",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "56",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "56",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "58",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "58",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "60",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "60",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "62",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "62",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "64",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "64",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "66",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "66",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "68",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "68",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "70",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "70",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "72",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "72",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "74",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "74",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "76",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "76",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "78",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "78",
+              "origin": "B",
+              "error": 1
+            }
+          ],
+          "policy": {
+            "observation": {
+              "minCells": 2
+            },
+            "activeSets": "1000",
+            "solveTolerance": 1e-12,
+            "residualTolerance": 1e-10,
+            "bootstrap": {
+              "B": 4,
+              "seed": 123456,
+              "prng": "xorshift32",
+              "randomWords": 10000
+            }
+          },
+          "structure": {
+            "factors": [
+              {
+                "id": "shared",
+                "members": [
+                  "A",
+                  "B"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "rows": [
+            {
+              "event": "one",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "one",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "two",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "two",
+              "origin": "B",
+              "error": 0
+            }
+          ],
+          "policy": {
+            "observation": {
+              "minCells": 2
+            },
+            "activeSets": "1000",
+            "solveTolerance": 1e-12,
+            "residualTolerance": 1e-10,
+            "bootstrap": {
+              "B": 4,
+              "seed": 123456,
+              "prng": "xorshift32",
+              "randomWords": 10000
+            }
+          },
+          "structure": {
+            "factors": [
+              {
+                "id": "shared",
+                "members": [
+                  "A",
+                  "B"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "no": {
+      "group": "m3",
+      "place": "catalog",
+      "models": [
+        {
+          "name": "covering",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "1/5"
+              },
+              {
+                "id": "B",
+                "privateError": "1/5"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": [
+              {
+                "id": "cover",
+                "index": 0,
+                "members": [
+                  "A",
+                  "A"
+                ],
+                "probability": "1/20"
+              }
+            ]
+          }
+        },
+        {
+          "name": "impossible",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "0"
+              },
+              {
+                "id": "B",
+                "privateError": "1"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": []
+          }
+        },
+        {
+          "name": "partial",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "0"
+              },
+              {
+                "id": "B",
+                "privateError": "0"
+              },
+              {
+                "id": "C",
+                "privateError": "0"
+              }
+            ],
+            "selection": [
+              "A",
+              "B",
+              "C"
+            ],
+            "factors": [
+              {
+                "id": "cover",
+                "index": 0,
+                "members": [
+                  "A",
+                  "B",
+                  "C"
+                ],
+                "probability": "1/5"
+              },
+              {
+                "id": "partial",
+                "index": 1,
+                "members": [
+                  "A",
+                  "B"
+                ],
+                "probability": "3/10"
+              }
+            ]
+          }
+        },
+        {
+          "name": "singleton",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "1/5"
+              },
+              {
+                "id": "B",
+                "privateError": "1/5"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": [
+              {
+                "id": "A",
+                "index": 0,
+                "members": [
+                  "A"
+                ],
+                "probability": "3/10"
+              },
+              {
+                "id": "cover",
+                "index": 1,
+                "members": [
+                  "A",
+                  "B"
+                ],
+                "probability": "1/5"
+              }
+            ]
+          }
+        },
+        {
+          "name": "merged-singleton-no-equivalence",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "A",
+                "privateError": "11/25"
+              },
+              {
+                "id": "B",
+                "privateError": "1/5"
+              }
+            ],
+            "selection": [
+              "A",
+              "B"
+            ],
+            "factors": [
+              {
+                "id": "cover",
+                "index": 1,
+                "members": [
+                  "A",
+                  "B"
+                ],
+                "probability": "1/5"
+              }
+            ]
+          }
+        },
+        {
+          "name": "two-pairs",
+          "model": {
+            "cell": "x",
+            "cardinality": 64,
+            "witnesses": [
+              {
+                "id": "0",
+                "privateError": "0"
+              },
+              {
+                "id": "1",
+                "privateError": "0"
+              },
+              {
+                "id": "2",
+                "privateError": "0"
+              },
+              {
+                "id": "3",
+                "privateError": "0"
+              }
+            ],
+            "selection": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ],
+            "factors": [
+              {
+                "id": "left",
+                "index": 0,
+                "members": [
+                  "0",
+                  "1"
+                ],
+                "probability": "1/2"
+              },
+              {
+                "id": "right",
+                "index": 1,
+                "members": [
+                  "2",
+                  "3"
+                ],
+                "probability": "1/2"
+              }
+            ]
+          }
+        }
+      ],
+      "identifications": [
+        {
+          "witnesses": [
+            {
+              "id": "A",
+              "correct": "2/5"
+            },
+            {
+              "id": "B",
+              "correct": "1/2"
+            }
+          ],
+          "factors": [
+            {
+              "id": "cover",
+              "members": [
+                "A",
+                "B"
+              ]
+            }
+          ],
+          "pairs": [
+            {
+              "a": "A",
+              "b": "B",
+              "correctTogether": "1/4"
+            }
+          ]
+        },
+        {
+          "witnesses": [
+            {
+              "id": "A",
+              "correct": "0"
+            },
+            {
+              "id": "B",
+              "correct": "1/2"
+            }
+          ],
+          "factors": [
+            {
+              "id": "cover",
+              "members": [
+                "A",
+                "B"
+              ]
+            }
+          ],
+          "pairs": [
+            {
+              "a": "A",
+              "b": "B",
+              "correctTogether": "0"
+            }
+          ]
+        }
+      ],
+      "policy": {
+        "budget": "100000"
+      },
+      "identificationPolicy": {
+        "budget": "1000"
+      },
+      "experiment": {
+        "prng": "xorshift32",
+        "seed": 98765,
+        "trials": 2000,
+        "randomWords": 100000
+      },
+      "fits": [
+        {
+          "rows": [
+            {
+              "event": "0",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "0",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "2",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "2",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "4",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "4",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "6",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "6",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "8",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "8",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "10",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "10",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "12",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "12",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "14",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "14",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "16",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "16",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "18",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "18",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "20",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "20",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "22",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "22",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "24",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "24",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "26",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "26",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "28",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "28",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "30",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "30",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "32",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "32",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "34",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "34",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "36",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "36",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "38",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "38",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "40",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "40",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "42",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "42",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "44",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "44",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "46",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "46",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "48",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "48",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "50",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "50",
+              "origin": "B",
+              "error": 0
+            },
+            {
+              "event": "52",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "52",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "54",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "54",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "56",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "56",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "58",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "58",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "60",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "60",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "62",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "62",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "64",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "64",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "66",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "66",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "68",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "68",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "70",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "70",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "72",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "72",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "74",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "74",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "76",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "76",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "78",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "78",
+              "origin": "B",
+              "error": 1
+            }
+          ],
+          "policy": {
+            "observation": {
+              "minCells": 2
+            },
+            "activeSets": "1000",
+            "solveTolerance": 1e-12,
+            "residualTolerance": 1e-10,
+            "bootstrap": {
+              "B": 4,
+              "seed": 123456,
+              "prng": "xorshift32",
+              "randomWords": 10000
+            }
+          },
+          "structure": {
+            "factors": [
+              {
+                "id": "shared",
+                "members": [
+                  "A",
+                  "B"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "rows": [
+            {
+              "event": "one",
+              "origin": "A",
+              "error": 0
+            },
+            {
+              "event": "one",
+              "origin": "B",
+              "error": 1
+            },
+            {
+              "event": "two",
+              "origin": "A",
+              "error": 1
+            },
+            {
+              "event": "two",
+              "origin": "B",
+              "error": 0
+            }
+          ],
+          "policy": {
+            "observation": {
+              "minCells": 2
+            },
+            "activeSets": "1000",
+            "solveTolerance": 1e-12,
+            "residualTolerance": 1e-10,
+            "bootstrap": {
+              "B": 4,
+              "seed": 123456,
+              "prng": "xorshift32",
+              "randomWords": 10000
+            }
+          },
+          "structure": {
+            "factors": [
+              {
+                "id": "shared",
+                "members": [
+                  "A",
+                  "B"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

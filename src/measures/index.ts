@@ -1,0 +1,18 @@
+export {errorMatrix,covariance,errorCovariance,participationRatio} from './error-events.ts';
+export type {ErrorEvent,ErrorMatrix,Covariance,Unmeasured,Scalar,ObservationPolicy} from './error-events.ts';
+export {spectrum,commonMass,loadings,commonMassOf} from './spectrum.ts';
+export type {Spectrum,NumericalPolicy} from './spectrum.ts';
+export {unanimityFloor,unanimityThreshold,descentCount,modelRequired} from './model.ts';
+export type {UnanimityModel,Descent} from './model.ts';
+export {dissentExperiment,interestExperiment} from './experiments.ts';
+export type {ExperimentPolicy,ConditionalRate} from './experiments.ts';
+export {evaluateM3,probeUpdate,dissentCertificate} from './m3.ts';
+export type {Witness,Factor,ModelM3,EvaluationPolicy,Conditional} from './m3.ts';
+export {roundHalfEven} from './rational.ts';
+export type {Rational,RationalInput} from './rational.ts';
+export {identifyM3} from './identification.ts';
+export type {IdentificationInput,IdentificationPolicy} from './identification.ts';
+export {experimentM3} from './m3-experiment.ts';
+export type {M3ExperimentPolicy} from './m3-experiment.ts';
+export {fitM3} from './fitting.ts';
+export type {FitStructure,FitPolicy} from './fitting.ts';

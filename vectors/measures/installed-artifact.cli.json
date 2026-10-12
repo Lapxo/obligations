@@ -1,0 +1,43 @@
+{
+  "format": "installed-acceptance/1",
+  "places": [
+    {
+      "name": "orchard",
+      "code": "sha256:36e9236efa5873e1620b9f33011cc6bf488f8cecf4a06e80f8d7f2dfd80f5d30",
+      "tests": {
+        "status": 0,
+        "stdout": "✔ analytic eigensystem satisfies residual and orthogonality; inputs are unchanged (0.919166ms)\n✔ repeated eigenvalues have no unique top loading; their full variance subspace remains readable (0.751375ms)\n✔ subset variance is descriptive, not a probability of error (0.08075ms)\n✔ invalid matrices refuse, and an insufficient numerical budget never claims a spectrum (0.256042ms)\n✔ spectrum and trace participation ratios agree on handed error events (0.257375ms)\n✔ T1 handles counterexample, degeneracies, and large counts without underflow misclassification (0.158125ms)\n✔ descent counts distinct scopes, keeps absence unknown, and refuses cycles (0.150375ms)\n✔ independent balanced errors and perfectly shared errors have different effective ranks (2.304417ms)\n✔ redelivery and declaration order add neither observations nor origins (0.546333ms)\n✔ missing observations and no variation do not prove independence (0.176875ms)\n✔ population covariance is normalized by the observed event population (0.201625ms)\n✔ T5 reference stream reproduces model counts without claiming certification (62.868958ms)\n✔ interest is an explicit controlled bias within the reference model (3.411ms)\n✔ declared finite-data fit recovers shared log survival, records residuals and reproducible bootstrap, never Φ or D (2.414083ms)\n✔ zero joint counts, absent rank and insufficient resources never report fitted probabilities (0.209458ms)\n✔ the same finite-data procedure identifies a declared overlapping two-factor system (1.182125ms)\n✔ population identification recovers exact shared survival without identifying private versus singleton error (2.99175ms)\n✔ rank, zero correctness, incompatible moments and budget retain unidentified or misfit outcomes (0.229333ms)\n✔ general declared pair systems recover more than one factor and reject unexplained residuals (0.279042ms)\n✔ dissent certificate depends on actual ordered configuration, never on dissent alone (0.568542ms)\n✔ M/3 captured covering, partial and impossible-conditioning vectors are exact (2.187291ms)\n✔ singleton governance is preserved and collision partitions distinguish zero from absence (0.36375ms)\n✔ probe uses the exact posterior and is unmeasured only at zero extension mass (0.130375ms)\n✔ validation and budget refuse or remain unmeasured before accumulating a partial result (0.485792ms)\n✔ half-even display is independent of binary floating point and uses declared digits (0.072708ms)\n✔ controlled T1 and T5 declare their stream and denominators and match handed M/3 populations (33.313625ms)\n✔ partition evaluator equals direct wrong-value enumeration for overlapping factors on a three-value cell (0.400417ms)\n✔ the actual four algebraic states and their cells survive every descriptive measure unchanged (3.234542ms)\nℹ tests 28\nℹ suites 0\nℹ pass 28\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 208.564083\n",
+        "stderr": ""
+      },
+      "exports": {
+        "status": 0,
+        "stdout": "[\".\",\"./debit\",\"./encounter\",\"./field\",\"./forms\",\"./lattice\",\"./measures\",\"./packed\",\"./present\",\"./price\",\"./replay\",\"./shuffle\",\"./signatures\",\"./views/field\",\"./views/product\"]\n",
+        "stderr": ""
+      },
+      "check": {
+        "status": 0,
+        "stdout": "PASS     closed · 1 places · 414 ms\n",
+        "stderr": "RECEIPTS 5 read · 0 opened · reading closures\nRECEIPTS 1 read · 0 opened · 414 ms\nCOST     act 0 s\n"
+      }
+    },
+    {
+      "name": "catalog",
+      "code": "sha256:36e9236efa5873e1620b9f33011cc6bf488f8cecf4a06e80f8d7f2dfd80f5d30",
+      "tests": {
+        "status": 0,
+        "stdout": "✔ analytic eigensystem satisfies residual and orthogonality; inputs are unchanged (2.397209ms)\n✔ repeated eigenvalues have no unique top loading; their full variance subspace remains readable (0.7965ms)\n✔ subset variance is descriptive, not a probability of error (0.085333ms)\n✔ invalid matrices refuse, and an insufficient numerical budget never claims a spectrum (0.261792ms)\n✔ spectrum and trace participation ratios agree on handed error events (0.261625ms)\n✔ T1 handles counterexample, degeneracies, and large counts without underflow misclassification (0.164875ms)\n✔ descent counts distinct scopes, keeps absence unknown, and refuses cycles (0.15375ms)\n✔ independent balanced errors and perfectly shared errors have different effective ranks (1.367958ms)\n✔ redelivery and declaration order add neither observations nor origins (0.217958ms)\n✔ missing observations and no variation do not prove independence (0.067041ms)\n✔ population covariance is normalized by the observed event population (0.080209ms)\n✔ T5 reference stream reproduces model counts without claiming certification (56.86425ms)\n✔ interest is an explicit controlled bias within the reference model (3.248083ms)\n✔ declared finite-data fit recovers shared log survival, records residuals and reproducible bootstrap, never Φ or D (4.0365ms)\n✔ zero joint counts, absent rank and insufficient resources never report fitted probabilities (0.266584ms)\n✔ the same finite-data procedure identifies a declared overlapping two-factor system (1.103458ms)\n✔ population identification recovers exact shared survival without identifying private versus singleton error (1.788291ms)\n✔ rank, zero correctness, incompatible moments and budget retain unidentified or misfit outcomes (0.203958ms)\n✔ general declared pair systems recover more than one factor and reject unexplained residuals (0.363625ms)\n✔ dissent certificate depends on actual ordered configuration, never on dissent alone (1.202334ms)\n✔ M/3 captured covering, partial and impossible-conditioning vectors are exact (2.075791ms)\n✔ singleton governance is preserved and collision partitions distinguish zero from absence (0.364792ms)\n✔ probe uses the exact posterior and is unmeasured only at zero extension mass (0.131042ms)\n✔ validation and budget refuse or remain unmeasured before accumulating a partial result (0.48925ms)\n✔ half-even display is independent of binary floating point and uses declared digits (0.072208ms)\n✔ controlled T1 and T5 declare their stream and denominators and match handed M/3 populations (33.400333ms)\n✔ partition evaluator equals direct wrong-value enumeration for overlapping factors on a three-value cell (0.361917ms)\n✔ the actual four algebraic states and their cells survive every descriptive measure unchanged (3.179083ms)\nℹ tests 28\nℹ suites 0\nℹ pass 28\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 205.148542\n",
+        "stderr": ""
+      },
+      "exports": {
+        "status": 0,
+        "stdout": "[\".\",\"./debit\",\"./encounter\",\"./field\",\"./forms\",\"./lattice\",\"./measures\",\"./packed\",\"./present\",\"./price\",\"./replay\",\"./shuffle\",\"./signatures\",\"./views/field\",\"./views/product\"]\n",
+        "stderr": ""
+      },
+      "check": {
+        "status": 0,
+        "stdout": "PASS     closed · 1 places · 415 ms\n",
+        "stderr": "RECEIPTS 5 read · 0 opened · reading closures\nRECEIPTS 1 read · 0 opened · 415 ms\nCOST     act 0 s\n"
+      }
+    }
+  ]
+}

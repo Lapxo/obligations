@@ -1,11 +1,8 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-/** The four colours a screen shows the four states in, read from the view the wire signs and never from a word here. */
-const COLOUR: Readonly<Record<string, string>> = Object.fromEntries(
-  (/value=(\S+)/.exec(readFileSync(join(import.meta.dirname, '..', '..', 'topos', 'views', 'colour.bound'), 'utf8'))?.[1] ?? '')
-    .split('|').map((one) => one.split(':') as [string, string]),
-);
+/** Presentation is handed sample data, not a dependency on a sibling checkout. */
+const COLOUR: Readonly<Record<string, string>> = JSON.parse(readFileSync(join(import.meta.dirname, 'fixtures', 'palette.json'), 'utf8'));
 import { alphabetForm, alphabets, continuousForm, ladderForm, latticeForm, answers, chain, coarsen, contracts, converge, covers, declarationOf, degenerate, endsBeforeNow, exclusive, foldIn, foldRegion, foldSigned, freedom, intervals, key, latest, meetAt, movesOf, order, origins, outranks, passes, point, potential, premiumOf, present, region, registerOf, resolution, retracted, size, stateOf, sufficientResolution, turned, unit, verified, violationsIn, withdrawsExactly, within } from '@lapxo/obligations';
 import type { Point, Region, Scale, Sighting } from '@lapxo/obligations';
 import { disagree } from '@lapxo/obligations/encounter';
@@ -23,10 +20,10 @@ const at = (name: string, seen: readonly Sighting[] = [], epoch = 0): Point => p
 const regions = (names: readonly string[]): Region[] => names.map((name) => region(name));
 
 /** A case holds when its checks agree with what it expects: a falsifier holds by failing. */
-const holds = (c: Vector, ok: boolean): boolean => compare(ok, true, c);
+const holds = (_c: Vector, ok: boolean): boolean => ok;
 
 function each(v: Vector, check: (c: Vector) => boolean): void {
-  for (const c of v.cases as Vector[]) check(c);
+  for (const c of v.cases as Vector[]) compare(check(c), true, c);
 }
 
 test('field — a coordinate, its resolution, the steps it passes, the regions it refines', () => {

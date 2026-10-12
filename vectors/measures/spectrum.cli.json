@@ -1,0 +1,148 @@
+{
+  "instrument": "@lapxo/bound@0.1.6",
+  "reader": "sha256:d212d85a14143228f69ab6b47e49169fdafbd44592e9063455e845e1bf419230",
+  "captures": [
+    {
+      "place": "orchard",
+      "negative": false,
+      "events": [
+        {
+          "args": [
+            "land",
+            "--key",
+            "device",
+            "--key-file",
+            "<fixture-key>"
+          ],
+          "status": 0,
+          "stdout": "FACT     landed 29 unique lines from 29 in TARGET · 0 of 29 signed lines fail admission by declared authority\nTARGET   29 claims · 0 superseded · 126 ms\nFACT     vouched · 0 sources under 0 locations · 0 needs refused as globs\n",
+          "stderr": "",
+          "runtimeMs": 241
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:83ab5c87c74a2e8172f98c09dc8c56ec076e0d1d9774e86febd2e6e39abf5bd8 by=reader:11685772d6d8 form=alphabet measure=observed role=writes scope=inputs/sample.json value=83ab5c87c74a2e81\nbound-lock/1 at=place:sha256:83ab5c87c74a2e8172f98c09dc8c56ec076e0d1d9774e86febd2e6e39abf5bd8 by=reader:11685772d6d8 form=alphabet measure=result role=writes scope=measurement/spectrum/orchard value=\"{\\\"result\\\":{\\\"rank\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":1},\\\"commonMass\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":1},\\\"loadings\\\":{\\\"status\\\":\\\"measured\\\",\\\"origins\\\":[\\\"orchard-0\\\",\\\"orchard-1\\\",\\\"orchard-10\\\",\\\"orchard-11\\\",\\\"orchard-12\\\",\\\"orchard-13\\\",\\\"orchard-14\\\",\\\"orchard-15\\\",\\\"orchard-2\\\",\\\"orchard-3\\\",\\\"orchard-4\\\",\\\"orchard-5\\\",\\\"orchard-6\\\",\\\"orchard-7\\\",\\\"orchard-8\\\",\\\"orchard-9\\\"],\\\"values\\\":[0.2500000000000001,0.2500000000000002,0.2500000000000001,0.24999999999999997,0.2500000000000002,0.25000000000000006,0.25000000000000006,0.24999999999999992,0.24999999999999992,0.25000000000000006,0.25000000000000006,0.24999999999999992,0.24999999999999997,0.24999999999999986,0.2500000000000001,0.25]},\\\"subset\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":1},\\\"state\\\":\\\"FREE\\\"},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6\n",
+          "stderr": "READER   reader.mjs · 1 run · 170 ms\nOBSERVE  1 run · 0 read by key · 174 ms\nOWN      imports 19 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 0 ms · zoom 0 ms · nos 1 ms · zoomed 0 ms · applied 1 ms · laid 2 ms · resets 1 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 5 ms · own 27 ms · regions 2 ms · ceilings 1 ms · paid 0 ms · docs 0 ms · ceilings 0 ms\nBEAT     fold 60e3706a folded 0.3 s\nKEPT     fold 60e3706a miss · no fold was kept before this one\n",
+          "runtimeMs": 472
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:83ab5c87c74a2e8172f98c09dc8c56ec076e0d1d9774e86febd2e6e39abf5bd8 by=reader:11685772d6d8 form=alphabet measure=observed role=writes scope=inputs/sample.json value=83ab5c87c74a2e81\nbound-lock/1 at=place:sha256:83ab5c87c74a2e8172f98c09dc8c56ec076e0d1d9774e86febd2e6e39abf5bd8 by=reader:11685772d6d8 form=alphabet measure=result role=writes scope=measurement/spectrum/orchard value=\"{\\\"result\\\":{\\\"rank\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":1},\\\"commonMass\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":1},\\\"loadings\\\":{\\\"status\\\":\\\"measured\\\",\\\"origins\\\":[\\\"orchard-0\\\",\\\"orchard-1\\\",\\\"orchard-10\\\",\\\"orchard-11\\\",\\\"orchard-12\\\",\\\"orchard-13\\\",\\\"orchard-14\\\",\\\"orchard-15\\\",\\\"orchard-2\\\",\\\"orchard-3\\\",\\\"orchard-4\\\",\\\"orchard-5\\\",\\\"orchard-6\\\",\\\"orchard-7\\\",\\\"orchard-8\\\",\\\"orchard-9\\\"],\\\"values\\\":[0.2500000000000001,0.2500000000000002,0.2500000000000001,0.24999999999999997,0.2500000000000002,0.25000000000000006,0.25000000000000006,0.24999999999999992,0.24999999999999992,0.25000000000000006,0.25000000000000006,0.24999999999999992,0.24999999999999997,0.24999999999999986,0.2500000000000001,0.25]},\\\"subset\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":1},\\\"state\\\":\\\"FREE\\\"},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6\n",
+          "stderr": "OBSERVE  0 run · 1 read by key · 1 readers kept whole · 2 ms\nOWN      imports 19 ms · bodies 0 ms · removed 0 ms · readers 0 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 0 ms · zoom 0 ms · nos 1 ms · zoomed 0 ms · applied 1 ms · laid 2 ms · resets 0 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 5 ms · own 27 ms · regions 3 ms · ceilings 1 ms · paid 0 ms · docs 0 ms · ceilings 0 ms\nBEAT     fold 60e3706a folded 0.1 s · 0.3 s folded\nKEPT     fold 60e3706a miss · no fold was kept before this one\n",
+          "runtimeMs": 240
+        }
+      ]
+    },
+    {
+      "place": "orchard",
+      "negative": true,
+      "events": [
+        {
+          "args": [
+            "land",
+            "--key",
+            "device",
+            "--key-file",
+            "<fixture-key>"
+          ],
+          "status": 0,
+          "stdout": "FACT     landed 29 unique lines from 29 in TARGET · 0 of 29 signed lines fail admission by declared authority\nTARGET   29 claims · 0 superseded · 126 ms\nFACT     vouched · 0 sources under 0 locations · 0 needs refused as globs\n",
+          "stderr": "",
+          "runtimeMs": 239
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 1,
+          "stdout": "",
+          "stderr": "REFUSE·reader reader.mjs · REFUSE·reader <workspace>/native-v3/spectrum-orchard-no/reader.mjs · Error: REFUSE·measure covariance is not positive semidefinite\nOBSERVE  0 run · 0 read by key · 177 ms\nbound: REFUSE·reader reader.mjs · REFUSE·reader <workspace>/native-v3/spectrum-orchard-no/reader.mjs · Error: REFUSE·measure covariance is not positive semidefinite\n",
+          "runtimeMs": 333
+        }
+      ]
+    },
+    {
+      "place": "catalog",
+      "negative": false,
+      "events": [
+        {
+          "args": [
+            "land",
+            "--key",
+            "device",
+            "--key-file",
+            "<fixture-key>"
+          ],
+          "status": 0,
+          "stdout": "FACT     landed 29 unique lines from 29 in TARGET · 0 of 29 signed lines fail admission by declared authority\nTARGET   29 claims · 0 superseded · 129 ms\nFACT     vouched · 0 sources under 0 locations · 0 needs refused as globs\n",
+          "stderr": "",
+          "runtimeMs": 244
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:865b98aca6f5902138fd8c108d12d50bdf616512a49c9737d34873568ea49b23 by=reader:11685772d6d8 form=alphabet measure=observed role=writes scope=inputs/sample.json value=865b98aca6f59021\nbound-lock/1 at=place:sha256:865b98aca6f5902138fd8c108d12d50bdf616512a49c9737d34873568ea49b23 by=reader:11685772d6d8 form=alphabet measure=result role=writes scope=measurement/spectrum/catalog value=\"{\\\"result\\\":{\\\"rank\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":1},\\\"commonMass\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":1},\\\"loadings\\\":{\\\"status\\\":\\\"measured\\\",\\\"origins\\\":[\\\"catalog-0\\\",\\\"catalog-1\\\",\\\"catalog-10\\\",\\\"catalog-11\\\",\\\"catalog-12\\\",\\\"catalog-13\\\",\\\"catalog-14\\\",\\\"catalog-15\\\",\\\"catalog-2\\\",\\\"catalog-3\\\",\\\"catalog-4\\\",\\\"catalog-5\\\",\\\"catalog-6\\\",\\\"catalog-7\\\",\\\"catalog-8\\\",\\\"catalog-9\\\"],\\\"values\\\":[0.2500000000000001,0.2500000000000002,0.2500000000000001,0.24999999999999997,0.2500000000000002,0.25000000000000006,0.25000000000000006,0.24999999999999992,0.24999999999999992,0.25000000000000006,0.25000000000000006,0.24999999999999992,0.24999999999999997,0.24999999999999986,0.2500000000000001,0.25]},\\\"subset\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":1},\\\"state\\\":\\\"FREE\\\"},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6\n",
+          "stderr": "READER   reader.mjs · 1 run · 174 ms\nOBSERVE  1 run · 0 read by key · 178 ms\nOWN      imports 19 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 0 ms · zoom 0 ms · nos 0 ms · zoomed 1 ms · applied 0 ms · laid 3 ms · resets 1 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 4 ms · own 28 ms · regions 2 ms · ceilings 1 ms · paid 0 ms · docs 0 ms · ceilings 0 ms\nBEAT     fold 5bb8661f folded 0.3 s\nKEPT     fold 5bb8661f miss · no fold was kept before this one\n",
+          "runtimeMs": 477
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:865b98aca6f5902138fd8c108d12d50bdf616512a49c9737d34873568ea49b23 by=reader:11685772d6d8 form=alphabet measure=observed role=writes scope=inputs/sample.json value=865b98aca6f59021\nbound-lock/1 at=place:sha256:865b98aca6f5902138fd8c108d12d50bdf616512a49c9737d34873568ea49b23 by=reader:11685772d6d8 form=alphabet measure=result role=writes scope=measurement/spectrum/catalog value=\"{\\\"result\\\":{\\\"rank\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":1},\\\"commonMass\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":1},\\\"loadings\\\":{\\\"status\\\":\\\"measured\\\",\\\"origins\\\":[\\\"catalog-0\\\",\\\"catalog-1\\\",\\\"catalog-10\\\",\\\"catalog-11\\\",\\\"catalog-12\\\",\\\"catalog-13\\\",\\\"catalog-14\\\",\\\"catalog-15\\\",\\\"catalog-2\\\",\\\"catalog-3\\\",\\\"catalog-4\\\",\\\"catalog-5\\\",\\\"catalog-6\\\",\\\"catalog-7\\\",\\\"catalog-8\\\",\\\"catalog-9\\\"],\\\"values\\\":[0.2500000000000001,0.2500000000000002,0.2500000000000001,0.24999999999999997,0.2500000000000002,0.25000000000000006,0.25000000000000006,0.24999999999999992,0.24999999999999992,0.25000000000000006,0.25000000000000006,0.24999999999999992,0.24999999999999997,0.24999999999999986,0.2500000000000001,0.25]},\\\"subset\\\":{\\\"status\\\":\\\"measured\\\",\\\"value\\\":1},\\\"state\\\":\\\"FREE\\\"},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6\n",
+          "stderr": "OBSERVE  0 run · 1 read by key · 1 readers kept whole · 3 ms\nOWN      imports 19 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 1 ms · zoom 0 ms · nos 0 ms · zoomed 0 ms · applied 1 ms · laid 3 ms · resets 0 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 5 ms · own 27 ms · regions 2 ms · ceilings 1 ms · paid 0 ms · docs 0 ms · ceilings 1 ms\nBEAT     fold 5bb8661f folded 0.1 s · 0.3 s folded\nKEPT     fold 5bb8661f miss · no fold was kept before this one\n",
+          "runtimeMs": 255
+        }
+      ]
+    },
+    {
+      "place": "catalog",
+      "negative": true,
+      "events": [
+        {
+          "args": [
+            "land",
+            "--key",
+            "device",
+            "--key-file",
+            "<fixture-key>"
+          ],
+          "status": 0,
+          "stdout": "FACT     landed 29 unique lines from 29 in TARGET · 0 of 29 signed lines fail admission by declared authority\nTARGET   29 claims · 0 superseded · 130 ms\nFACT     vouched · 0 sources under 0 locations · 0 needs refused as globs\n",
+          "stderr": "",
+          "runtimeMs": 245
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 1,
+          "stdout": "",
+          "stderr": "REFUSE·reader reader.mjs · REFUSE·reader <workspace>/native-v3/spectrum-catalog-no/reader.mjs · Error: REFUSE·measure covariance is not positive semidefinite\nOBSERVE  0 run · 0 read by key · 171 ms\nbound: REFUSE·reader reader.mjs · REFUSE·reader <workspace>/native-v3/spectrum-catalog-no/reader.mjs · Error: REFUSE·measure covariance is not positive semidefinite\n",
+          "runtimeMs": 328
+        }
+      ]
+    }
+  ]
+}

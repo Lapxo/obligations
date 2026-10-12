@@ -18,4 +18,5 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: npm ci
       - run: npm run build
-      - run: npm pack --silent
+      - run: npm test
+      - run: npx @lapxo/bound@0.1.7 fold --check

@@ -1,9 +1,9 @@
-import { chain, freedom, fromScale, state, unit } from '@lapxo/obligations';
+import { chain, freedom, fromScale, state, unit, point, region, within } from '@lapxo/obligations';
 import { intervals } from '@lapxo/obligations/forms';
 import { amplitude, budget, cell, fragility, coherence, decohere, distinct, disturbance, encounter, evolve, fringes, interfere, join as widen, live, meet, observe, parts, play, refine, sameObject, selfFold, sign } from '@lapxo/obligations/views/field';
 import type { Obligatory, World } from '@lapxo/obligations/views/field';
 import { apart, design, distance, horizon, horizonTotal, lone, loom, rank, reach, resting as turnedBy, sited } from '@lapxo/obligations/views/product';
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { sample } from './vectors-harness.ts';
 import type { Vector } from './vectors-harness.ts';
@@ -256,20 +256,14 @@ test('T53-a-decision-is-what-the-form-leaves-open — four classes that partitio
   compare((c['obligations'] as Vector)['oneLegalState'] as number > ((c['obligations'] as Vector)['formLeavesOpen'] as number), true, 'as the case says');
 });
 
-test('T58-observation-is-over-regions-by-reach — a lock names regions, and the leaves are what they happen to hold', () => {
+test('T58-observation-is-over-regions-by-reach — historical cardinality is an observation, not a universal bound', () => {
   const c = one(sample('yes', 'T58-observation-is-over-regions-by-reach'));
-  const reading = lockLines('TARGET.bound').filter((line) => said(line, 'role') === 'reads');
-  const regions = new Set([...reading.map((line) => said(line, 'scope')), ...reading.flatMap((line) => said(line, 'needs').split('|').filter(Boolean))]);
-  const leaves: string[] = [];
-  const walk = (at: string): void => {
-    for (const entry of readdirSync(at, { withFileTypes: true })) {
-      if (entry.isDirectory()) walk(join(at, entry.name));
-      else leaves.push(entry.name);
-    }
-  };
-  walk(join(HERE, 'src'));
-  compare(leaves.length > regions.size, true, 'the leaves outnumber the regions that name them');
   compare((c['leaves'] as number) / (c['regions'] as number) > 1, true, 'as the case says, several leaves to a region');
+  // A legal empty region falsifies the purported universal cardinality inequality.
+  const declared = [region('observed'), region('empty')];
+  const handed = [point('observed/a')];
+  compare(declared.map((r) => handed.filter((p) => within(p, r)).length), [1, 0]);
+  compare(handed.length > declared.length, true, { coordinate: 'T58/empty-regions', 'expected.ok': false });
 });
 
 const POLICIES: Readonly<Record<string, { reach: number; coherence: number; rank: number; bits: number }>> = {
