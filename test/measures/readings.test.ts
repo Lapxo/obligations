@@ -2,6 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {observe} from '../support/measures-reader.ts';
+import {assertCapturedAnswer} from '../support/captured-answer.ts';
 
 for(const group of ['observations','spectrum','unanimity','descent','m3','capacity','decisions','unanimity-fit','coincidence']){
   test('the maintained '+group+' reader reproduces native captures and refusals',()=>{
@@ -18,7 +19,7 @@ for(const group of ['observations','spectrum','unanimity','descent','m3','capaci
           if(!line.includes('scope=measurement/'+group+'/'+pair.yes.place+' '))continue;
           const value=line.match(/(?:^| )value=("(?:[^"\\]|\\.)*"|[^ ]+)/)?.[1];
           assert.ok(value,'captured wire value missing');
-          assert.deepEqual(actual,JSON.parse(JSON.parse(value)));
+          assertCapturedAnswer(actual,JSON.parse(JSON.parse(value)));
           compared++;
         }
       }
@@ -30,4 +31,17 @@ for(const group of ['observations','spectrum','unanimity','descent','m3','capaci
 test('the reading boundary refuses missing names and malformed UTF-8',()=>{
   assert.throws(()=>observe(new TextEncoder().encode('{}')),/REFUSE/);
   assert.throws(()=>observe(new Uint8Array([0xff])));
+});
+
+test('captured logarithms permit one ULP only under their declared policy',()=>{
+ const value=0.3895364293811329;
+ const view=new DataView(new ArrayBuffer(8));view.setFloat64(0,value);const bits=view.getBigUint64(0);
+ const adjacent=(steps:bigint)=>{view.setBigUint64(0,bits+steps);return view.getFloat64(0);};
+ const answer=(n:number)=>({logarithm:'binary64-log2',loss:n,parameters:{p:0.3},rational:{numerator:'1',denominator:'5'},state:'FREE'});
+ assertCapturedAnswer(answer(adjacent(-1n)),answer(value));
+ assert.throws(()=>assertCapturedAnswer(answer(adjacent(-2n)),answer(value)));
+ assert.throws(()=>assertCapturedAnswer({value:adjacent(-1n)},{value}));
+ assert.throws(()=>assertCapturedAnswer({...answer(value),rational:{numerator:'2',denominator:'5'}},answer(value)));
+ assert.throws(()=>assertCapturedAnswer({...answer(value),state:'FORBIDDEN'},answer(value)));
+ assert.throws(()=>assertCapturedAnswer({...answer(value),parameters:{p:0.30000000000000004}},answer(value)));
 });
