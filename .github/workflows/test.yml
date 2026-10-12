@@ -20,3 +20,16 @@ jobs:
       - run: npm run build
       - run: npm test
       - run: npx @lapxo/bound@0.1.7 fold --check
+      - name: Capture public closure inputs
+        if: failure()
+        run: |
+          set -euo pipefail
+          git ls-files -z > "$RUNNER_TEMP/closure-files"
+          find dist -type f -print0 >> "$RUNNER_TEMP/closure-files"
+          tar --null -czf "$RUNNER_TEMP/closure-files.tgz" -T "$RUNNER_TEMP/closure-files"
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: closure-inputs-${{ matrix.node }}
+          path: ${{ runner.temp }}/closure-files.tgz
+          retention-days: 1
