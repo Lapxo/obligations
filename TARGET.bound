@@ -526,6 +526,7 @@ bound-lock/1 at=witness:executor-proposed-inside-the-algebra by=target form=inte
 bound-lock/1 at=witness:four-lists-computed-never-classified by=target form=alphabet measure=id role=reads scope=audit/wire/form/kind value=kinds
 bound-lock/1 at=witness:four-lists-computed-never-classified by=target form=alphabet measure=id role=reads scope=audit/wire/form/view value=views
 bound-lock/1 at=witness:four-lists-computed-never-classified by=target form=alphabet measure=id role=reads scope=audit/wire/views value=field|spectrum|ideal|chain|complement|dual|product|quotient|valuation|galois
+bound-lock/1 at=witness:installed-dependencies-are-foreign by=target form=alphabet measure=role role=writes scope=coordinate-role/node_modules value=foreign
 bound-lock/1 at=witness:kinds-in-topos-and-in-the-capsule-shape by=target form=interval measure=alphabet-in-code role=reads scope=audit/tree/alphabet-in-code value=0..0
 bound-lock/1 at=witness:lane-d-made-by-the-owner by=owner epoch=1 form=alphabet measure=public-key role=reads scope=keys/lane-D sig="ed25519:era1:XhOFA4HLptW67Ec004vZWIdEewqBATFA77uFbFuQgYN/jIssscX0mpVDwwlQcGR3xkI21+W2Den52MalUvDoBg==" value="MCowBQYDK2VwAyEA3gUzYi3KEhQuzmh+o+rgjNyZZrjRRqQ+stwpr91JFcQ="
 bound-lock/1 at=witness:lane-d-made-by-the-owner by=target form=alphabet measure=class role=reads scope=keys/lane-D value=agent
