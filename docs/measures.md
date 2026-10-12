@@ -1,9 +1,3 @@
-## The idea
-
-Every quantity a system answers for has two marks on one scale. The floor is what must hold, the ceiling is what may hold, and the pair is a cell. Two origins that touch one cell and whose marks meet make information; two whose marks do not meet make a fork that no average can close.
-
-Four words carry the whole library. A floor, a ceiling, an origin and an epoch. A price is the distance between the marks, a state is where they stand, a verdict is what an origin found, a horizon is what no origin has reached, and none of them is a new idea: each is read off those four.
-
 # Measures beside the states
 
 The pure API @lapxo/obligations/measures does not change FREE, REQUIRED, FORBIDDEN or CONFLICT. Observed association never establishes independence.
