@@ -97,7 +97,7 @@ bound-lock/1 at=place:sha256:7216b46885c91cae64058e1a51f5741242500f55103faa1667a
 bound-lock/1 at=place:sha256:084db1e70e43341d043ba37fba7ced5b75c6a25b49e3589c4ac785553998c22d by=bound form=alphabet measure=digest role=writes scope=receipts value=sha256:2323899d39f2eecb8931048f11f6f58f9453bdb21f59b3840d5e076d9b0cd9c4
 
 bound-lock/1 at=place:sha256:039c90703e9480ea6ff8a53e8d9b52582bf6cc5693d71f3dd82d860aaead1aee by=bound form=interval measure=count role=writes scope=receipts/. value=2..2
-bound-lock/1 at=place:sha256:ba6b07a386346b3674c39d4908a7efbbd897287db62548c7f1b9764c1fd5d601 by=bound form=alphabet measure=bytes role=writes scope=receipts/. value=sha256:ba6b07a386346b3674c39d4908a7efbbd897287db62548c7f1b9764c1fd5d601
+bound-lock/1 at=place:sha256:a05bcd7d4e0e6ef38c32b37ee3bed4d25e3ba9d847fdcb8d3771faafd4293d91 by=bound form=alphabet measure=bytes role=writes scope=receipts/. value=sha256:a05bcd7d4e0e6ef38c32b37ee3bed4d25e3ba9d847fdcb8d3771faafd4293d91
 bound-lock/1 at=place:sha256:6982ebdb36be85a9368dfe5007ffc6a375bf69b619d984efcbb0bb8d30c877ce by=bound form=interval measure=count role=writes scope=receipts/algebra-is-closed value=2..2
 bound-lock/1 at=place:sha256:9b7eab5c6670c41ff7b96e97d1a089e62d709a2849ea8c42536f5ddaa41727f4 by=bound form=alphabet measure=bytes role=writes scope=receipts/algebra-is-closed value=sha256:9b7eab5c6670c41ff7b96e97d1a089e62d709a2849ea8c42536f5ddaa41727f4
 bound-lock/1 at=place:sha256:21b80080cacb4d392e6e7f7a5a7c259dcc39327420b6dd64b1a223ea4b9419b0 by=bound form=interval measure=count role=writes scope=receipts/door value=1..1

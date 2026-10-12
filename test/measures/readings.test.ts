@@ -39,6 +39,10 @@ test('captured logarithms permit one ULP only under their declared policy',()=>{
  const adjacent=(steps:bigint)=>{view.setBigUint64(0,bits+steps);return view.getFloat64(0);};
  const answer=(n:number)=>({logarithm:'binary64-log2',loss:n,parameters:{p:0.3},rational:{numerator:'1',denominator:'5'},state:'FREE'});
  assertCapturedAnswer(answer(adjacent(-1n)),answer(value));
+ const nested=(n:number)=>({policy:{logarithm:'binary64-log2'},loss:{privateUncertainty:n},parameters:{p:0.3}});
+ assertCapturedAnswer(nested(adjacent(-1n)),nested(value));
+ assert.throws(()=>assertCapturedAnswer(nested(adjacent(-2n)),nested(value)));
+ assert.throws(()=>assertCapturedAnswer({...nested(value),parameters:{p:0.30000000000000004}},nested(value)));
  assert.throws(()=>assertCapturedAnswer(answer(adjacent(-2n)),answer(value)));
  assert.throws(()=>assertCapturedAnswer({value:adjacent(-1n)},{value}));
  assert.throws(()=>assertCapturedAnswer({...answer(value),rational:{numerator:'2',denominator:'5'}},answer(value)));

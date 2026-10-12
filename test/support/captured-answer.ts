@@ -16,7 +16,8 @@ export function assertCapturedAnswer(actual:unknown,expected:unknown,logarithm=f
   if(actual!==null&&expected!==null&&typeof actual==='object'&&typeof expected==='object'){
     const a=actual as Record<string,unknown>,e=expected as Record<string,unknown>;
     assert.deepEqual(Object.keys(a).sort(),Object.keys(e).sort(),path);
-    const numeric=logarithm||(a.logarithm==='binary64-log2'&&e.logarithm==='binary64-log2');
+    const policy=(v:Record<string,unknown>)=>v.logarithm==='binary64-log2'||(v.policy!==null&&typeof v.policy==='object'&&(v.policy as Record<string,unknown>).logarithm==='binary64-log2');
+    const numeric=logarithm||(policy(a)&&policy(e));
     for(const key of Object.keys(e))assertCapturedAnswer(a[key],e[key],key==='parameters'?false:numeric,path+'.'+key);return;
   }
   assert.deepEqual(actual,expected,path);
