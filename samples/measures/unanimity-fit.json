@@ -1,0 +1,166 @@
+[
+  {
+    "yes": {
+      "group": "unanimity-fit",
+      "place": "orchard",
+      "policy": {
+        "procedure": "exact-c-slices-on-declared-p-grid@1",
+        "p": [
+          "0",
+          "1/5",
+          "3/10",
+          "1/2",
+          "1"
+        ],
+        "tolerance": "3/100",
+        "budget": "1000000",
+        "bootstrap": {
+          "B": 0,
+          "seed": 1,
+          "prng": "xorshift32",
+          "randomWords": 0
+        }
+      },
+      "experiment": {
+        "model": "single-dominant-factor@1",
+        "n": 64,
+        "c": "1/20",
+        "p": "1/5",
+        "lineage": "orchard",
+        "sizes": [
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "prng": "xorshift32",
+        "seed": 1729,
+        "trials": 2000,
+        "randomWords": 200000
+      }
+    },
+    "no": {
+      "group": "unanimity-fit",
+      "place": "orchard",
+      "policy": {
+        "procedure": "exact-c-slices-on-declared-p-grid@1",
+        "p": [
+          "0",
+          "1/5",
+          "3/10",
+          "1/2",
+          "1"
+        ],
+        "tolerance": "3/100",
+        "budget": "1000000",
+        "bootstrap": {
+          "B": 0,
+          "seed": 1,
+          "prng": "xorshift32",
+          "randomWords": 0
+        }
+      },
+      "experiment": {
+        "model": "single-dominant-factor@1",
+        "n": 64,
+        "c": "1/20",
+        "p": "1/5",
+        "lineage": "orchard",
+        "sizes": [
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "prng": "xorshift32",
+        "seed": 0,
+        "trials": 2000,
+        "randomWords": 200000
+      }
+    }
+  },
+  {
+    "yes": {
+      "group": "unanimity-fit",
+      "place": "catalog",
+      "policy": {
+        "procedure": "exact-c-slices-on-declared-p-grid@1",
+        "p": [
+          "0",
+          "1/5",
+          "3/10",
+          "1/2",
+          "1"
+        ],
+        "tolerance": "3/100",
+        "budget": "1000000",
+        "bootstrap": {
+          "B": 0,
+          "seed": 1,
+          "prng": "xorshift32",
+          "randomWords": 0
+        }
+      },
+      "experiment": {
+        "model": "single-dominant-factor@1",
+        "n": 64,
+        "c": "1/5",
+        "p": "3/10",
+        "lineage": "catalog",
+        "sizes": [
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "prng": "xorshift32",
+        "seed": 2718,
+        "trials": 2000,
+        "randomWords": 200000
+      }
+    },
+    "no": {
+      "group": "unanimity-fit",
+      "place": "catalog",
+      "policy": {
+        "procedure": "exact-c-slices-on-declared-p-grid@1",
+        "p": [
+          "0",
+          "1/5",
+          "3/10",
+          "1/2",
+          "1"
+        ],
+        "tolerance": "3/100",
+        "budget": "1000000",
+        "bootstrap": {
+          "B": 0,
+          "seed": 1,
+          "prng": "xorshift32",
+          "randomWords": 0
+        }
+      },
+      "experiment": {
+        "model": "single-dominant-factor@1",
+        "n": 64,
+        "c": "1/5",
+        "p": "3/10",
+        "lineage": "catalog",
+        "sizes": [
+          2,
+          4,
+          8,
+          16,
+          32
+        ],
+        "prng": "xorshift32",
+        "seed": 0,
+        "trials": 2000,
+        "randomWords": 200000
+      }
+    }
+  }
+]

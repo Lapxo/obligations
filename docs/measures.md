@@ -147,3 +147,51 @@ TypeScript implementation reproduces every captured vector exactly in rational
 arithmetic; validation refuses by name; budget is computed before work; every result
 carries model, handed parameters and conditions; states identical before and after;
 the descriptive 0.4.0 measures and all algebra hashes unchanged.
+
+## 12. Capacity under a single dominant factor
+
+`capacityBound`, `capacityP0`, `mutualInformation`, and `unanimityNoFactor` use the declared single-dominant-factor model. T is uniform on n >= 2 values. F is independent of T with probability c. On F=1 all witnesses report one W, uniform among values different from T. On F=0 they use independent homogeneous private channels: correct with probability 1-p, otherwise uniform among n-1 wrong values. These hypotheses are handed, never inferred.
+
+For every positive k, I(T;V) <= log2(n)-c*log2(n-1). The entropy chain rule gives
+H(T|V) = c*log2(n-1) + (1-c)*H(T|V,F=0) + I(T;F|V).
+The first term is exclusion uncertainty, the second private uncertainty, the third factor ambiguity. A decoder cannot increase information about T.
+
+For 0<p<1 and p!=(n-1)/n, the bound is attained as k tends to infinity: the empirical private vote distribution distinguishes T, and private unanimity has probability (1-p)^k+p^k/(n-1)^(k-1), tending to zero. For p=1,n>2 the missing value identifies T asymptotically. For p=1,n=2 every vote is the complement of T, giving one bit for every k. At p=0, I=log2(n)-h(c)-c*log2(n-1) for every k. At c=1, I=log2(n/(n-1)) for every k. At c=0 the uninformative private channel p=(n-1)/n gives zero for every k; c=0 does not by itself imply log2(n). At that uninformative p with a factor, the limit is c*log2(n/(n-1)), not the general upper bound.
+
+Probabilities and the conditional-entropy expression are exact rationals. Numerical entropy uses the explicitly handed `binary64-log2` policy, in bits, and is an approximation; it is not an exact rational logarithm. `mutualInformation` declares its joint-cell enumeration budget before work. `unanimityNoFactor` declares a rational-bit upper-bound budget before exponentiation. Budget exhaustion is unmeasured, never zero.
+
+Captured finite information, n=4,c=1/5,p=3/10: k=1,2,4,7 gives approximately 0.313028978, 0.469712906, 0.914458010, 1.332321771 bits. The bound is approximately 1.683007500 bits. At p=0 the information is approximately 0.961079405 bits for every k. These decimals are illustrative approximations under the named policy.
+
+## 13. Decision results are separate
+
+`decisionInformation` accepts `plurality-uniform-ties@1` or `posterior-map-uniform-ties@1`. The second compares exact declared joint probabilities for finite k; it does not apply an intuition-based unanimity threshold. Ties are uniformly distributed among maximizers. It returns posterior information I(T;V), decision information I(T;answer), and exact rational decision accuracy as distinct quantities. The exact T/answer joint table accompanies them. A randomized answer cannot gain information over V.
+
+Under p<(n-1)/n, asymptotically plurality emits the forced wrong value on the factor event. Posterior MAP identifies that event and samples uniformly among its n-1 alternatives. For n=4,c=1/5, plurality decision information is approximately 0.961079405 bits; MAP decision information is approximately 1.222162 bits; posterior information is approximately 1.683007500 bits. The two information gains differ. None is a finite-k or model-free guarantee.
+
+## 14. No-truth fitting
+
+`fitUnanimityModel` uses `exact-c-slices-on-declared-p-grid@1`. It takes one named lineage, cardinality, k/count/denominator rows, a declared p grid, exact absolute rate tolerance, and a work budget. For each handed p it intersects the exact inequalities for c, returning the entire compatible c interval and midpoint residual diagnostics. No claim is made about p values between slices or continuous identification. A measured fit means the declared procedure was evaluated; it does not mean parameters or causes were identified.
+
+The observed rate is compared with c+(1-c)*[(1-p)^k+p^k/(n-1)^(k-1)]. Binary p versus 1-p ambiguity remains visible. Perfect unanimity leaves p=0 and c=1 indistinguishable. Too few informative sizes or no compatible slice are explicitly unmeasured. Mixed populations require a separately declared mixture model and are not pooled here.
+
+Optional bootstrap samples complete paired groups across sizes with a handed xorshift32 seed, B and random-word budget. It retains the full compatible regions in each replicate, not independent uncertainty intervals for each size. Groups are the declared resampling units; the procedure assumes exchangeable independent groups and does not establish that assumption. Counts alone leave uncertainty unmeasured. Replicate regions are empirical bootstrap output, not guaranteed confidence sets. Exhausted random words never produce successful uncertainty.
+
+## 15. False coincidence relative to a declared reference
+
+`coincidenceExcess` takes event/origin/value rows, truth rows (`kind=truth`), an explicit selection S and the `independent-uniform-wrong@1` reference. Order h is |S|; identity and redelivery never add origins or events. Values belong to the declared alphabet. Conflicting values or truth refuse. Incomplete shared events and insufficient declared event counts remain unmeasured. Imperfect probes need a separate contract and are not silently accepted as truth.
+
+The reference uses handed error marginals, or explicitly estimated marginals stratified by observed truth. For handed homogeneous errors p_i, reference false coincidence is product(p_i)/(n-1)^(h-1). Estimated strata use their event weights, never a pooled error probability that confounds truth populations. Output contains the false-coincidence count, denominator, exact observed and reference rates, signed delta=observed-reference, and ratio=observed/reference. Delta is never floored at zero. At reference zero the ratio is unmeasured, while counts and delta remain available. No sampling design is inferred; uncertainty is separately unmeasured.
+
+A ratio greater than one means more coincidence than this reference, not a discovered common cause. Nonuniform wrong labels can exceed the uniform reference with independent witnesses. Independent errors with one shared wrong label give ratio (n-1)^(h-1): at n=64 this is 63 for pairs and 3969 for triples. The fair-bit XOR vector explicitly assigns one common wrong label: pairs have ratio 63, triples ratio zero and a negative delta. Indicators alone do not define the reported-value vector.
+
+Under the separately handed dominant-factor model c=1/10,p=1/5,n=64, observed error marginals are 7/25. Relative to those marginals, delta at orders 2 and 3 is approximately 0.099326984 and 0.099996283. Its convergence to c is a conclusion under this model, never model-free identification.
+
+## 16. Research demands and boundaries
+
+The spectrum summarizes covariance of binary error indicators. It is not a sufficient statistic of reported values, closure events or independence. False-unanimity excess summarizes one event and does not replace the full joint distribution. Higher-order closure statistics need a declared closure rule and the appropriate joint law of reported values given truth; neither is inferred from a form name.
+
+Helly is a property of a declared geometric family, not a probabilistic independence order or a truth guarantee. Geometry, factor precedence, partial label sharing, reproduction, percolation, time-varying fitting, imperfect-probe identification and model-free capacity remain explicitly open until their models, procedures and falsifiers close. Controlled experiments live in a world. No new origin, permission, algebraic amount or state is created by a measure.
+
+## 17. Publication and stability
+
+Every new operation is linked to its contract, yes/no data and native Bound 0.1.7 captures in two places. Validation readers are maintained TypeScript worlds with ordinary modular compilation; no .mjs bundle or private executor ships in this library. Their implementation inventory is retained once by digest. The installed archive must expose the same public exports, preserve the four states, match all published bytes and close native receipts without a private store. Declaring these requirements does not pay them.

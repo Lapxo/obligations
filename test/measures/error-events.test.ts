@@ -28,3 +28,9 @@ test('population covariance is normalized by the observed event population',()=>
  assert.equal(errorMatrix(observations([[0,0],[1,1]]),{minCells:2},['absent']).status,'unmeasured');
  assert.throws(()=>computeCovariance([],{minCells:0}),/invalid minimum/);
 });
+test('malformed runtime inputs refuse by name rather than leaking NaN or a platform exception',()=>{
+ assert.throws(()=>errorMatrix([],null as unknown as {minCells:number}),/REFUSE·measure/);
+ assert.throws(()=>errorMatrix([null] as unknown as ErrorEvent[],{minCells:2}),/REFUSE·measure/);
+ assert.throws(()=>participationRatio({status:'measured',origins:['a'],events:[],matrix:[[NaN]]}),/invalid covariance/);
+ assert.throws(()=>participationRatio({status:'measured',origins:['a','b'],events:[],matrix:[[1,2],[0,1]]}),/nonsymmetric/);
+});

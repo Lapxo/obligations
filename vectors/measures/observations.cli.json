@@ -1,6 +1,7 @@
 {
-  "instrument": "@lapxo/bound@0.1.6",
-  "reader": "sha256:d212d85a14143228f69ab6b47e49169fdafbd44592e9063455e845e1bf419230",
+  "instrument": "@lapxo/bound@0.1.7",
+  "implementation": "sha256:a0b02d4bf5dc891c88529a8a833ed33c83d210fe23d2ecb7bdf1dd5bb0a6219c",
+  "inventory": "vectors/measures/implementation.json",
   "captures": [
     {
       "place": "orchard",
@@ -8,16 +9,14 @@
       "events": [
         {
           "args": [
-            "land",
-            "--key",
-            "device",
-            "--key-file",
-            "<fixture-key>"
+            "fold",
+            "--as",
+            "receipts"
           ],
           "status": 0,
-          "stdout": "FACT     landed 29 unique lines from 29 in TARGET · 0 of 29 signed lines fail admission by declared authority\nTARGET   29 claims · 0 superseded · 133 ms\nFACT     vouched · 0 sources under 0 locations · 0 needs refused as globs\n",
-          "stderr": "",
-          "runtimeMs": 266
+          "stdout": "bound-lock/1 at=place:sha256:1bf55b2e38e1b9a642c82e9b25765a45e4d2dbd5c0d77c03d26a625e795bec06 by=reader:41b2920eb5dd form=alphabet measure=observed role=writes scope=inputs/sample.json value=1bf55b2e38e1b9a6\nbound-lock/1 at=place:sha256:1bf55b2e38e1b9a642c82e9b25765a45e4d2dbd5c0d77c03d26a625e795bec06 by=reader:41b2920eb5dd form=alphabet measure=result role=writes scope=measurement/observations/orchard value=\"{\\\"result\\\":{\\\"status\\\":\\\"measured\\\",\\\"origins\\\":[\\\"east\\\",\\\"west\\\"],\\\"events\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\"],\\\"matrix\\\":[[0.25,0.25],[0.25,0.25]]},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a\n",
+          "stderr": "READER   test/support/measures-reader.js · 1 run · 174 ms\nOBSERVE  1 run · 0 read by key · 178 ms\nOWN      imports 20 ms · bodies 0 ms · removed 1 ms · readers 0 ms · alphabets 0 ms · capsules 0 ms · regions 2 ms · vectors 0 ms · zoom 0 ms · nos 0 ms · zoomed 1 ms · applied 0 ms · laid 3 ms · resets 1 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 5 ms · own 30 ms · regions 9 ms · ceilings 1 ms · paid 0 ms · docs 0 ms · ceilings 0 ms\nBEAT     fold 39f0ac4a folded 0.4 s\nKEPT     fold 39f0ac4a miss · no fold was kept before this one\n",
+          "runtimeMs": 487
         },
         {
           "args": [
@@ -26,20 +25,9 @@
             "receipts"
           ],
           "status": 0,
-          "stdout": "bound-lock/1 at=place:sha256:1bf55b2e38e1b9a642c82e9b25765a45e4d2dbd5c0d77c03d26a625e795bec06 by=reader:11685772d6d8 form=alphabet measure=observed role=writes scope=inputs/sample.json value=1bf55b2e38e1b9a6\nbound-lock/1 at=place:sha256:1bf55b2e38e1b9a642c82e9b25765a45e4d2dbd5c0d77c03d26a625e795bec06 by=reader:11685772d6d8 form=alphabet measure=result role=writes scope=measurement/observations/orchard value=\"{\\\"result\\\":{\\\"status\\\":\\\"measured\\\",\\\"origins\\\":[\\\"east\\\",\\\"west\\\"],\\\"events\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\"],\\\"matrix\\\":[[0.25,0.25],[0.25,0.25]]},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6\n",
-          "stderr": "READER   reader.mjs · 1 run · 166 ms\nOBSERVE  1 run · 0 read by key · 170 ms\nOWN      imports 19 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 0 ms · zoom 0 ms · nos 0 ms · zoomed 0 ms · applied 2 ms · laid 2 ms · resets 0 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 4 ms · own 26 ms · regions 2 ms · ceilings 1 ms · paid 1 ms · docs 0 ms · ceilings 0 ms\nBEAT     fold 8126f1de folded 0.3 s\nKEPT     fold 8126f1de miss · no fold was kept before this one\n",
-          "runtimeMs": 458
-        },
-        {
-          "args": [
-            "fold",
-            "--as",
-            "receipts"
-          ],
-          "status": 0,
-          "stdout": "bound-lock/1 at=place:sha256:1bf55b2e38e1b9a642c82e9b25765a45e4d2dbd5c0d77c03d26a625e795bec06 by=reader:11685772d6d8 form=alphabet measure=observed role=writes scope=inputs/sample.json value=1bf55b2e38e1b9a6\nbound-lock/1 at=place:sha256:1bf55b2e38e1b9a642c82e9b25765a45e4d2dbd5c0d77c03d26a625e795bec06 by=reader:11685772d6d8 form=alphabet measure=result role=writes scope=measurement/observations/orchard value=\"{\\\"result\\\":{\\\"status\\\":\\\"measured\\\",\\\"origins\\\":[\\\"east\\\",\\\"west\\\"],\\\"events\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\"],\\\"matrix\\\":[[0.25,0.25],[0.25,0.25]]},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6\n",
-          "stderr": "OBSERVE  0 run · 1 read by key · 1 readers kept whole · 2 ms\nOWN      imports 19 ms · bodies 0 ms · removed 0 ms · readers 0 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 0 ms · zoom 0 ms · nos 1 ms · zoomed 0 ms · applied 1 ms · laid 2 ms · resets 1 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 5 ms · own 28 ms · regions 2 ms · ceilings 1 ms · paid 0 ms · docs 1 ms · ceilings 1 ms\nBEAT     fold 8126f1de folded 0.1 s · 0.3 s folded\nKEPT     fold 8126f1de miss · no fold was kept before this one\n",
-          "runtimeMs": 243
+          "stdout": "bound-lock/1 at=place:sha256:1bf55b2e38e1b9a642c82e9b25765a45e4d2dbd5c0d77c03d26a625e795bec06 by=reader:41b2920eb5dd form=alphabet measure=observed role=writes scope=inputs/sample.json value=1bf55b2e38e1b9a6\nbound-lock/1 at=place:sha256:1bf55b2e38e1b9a642c82e9b25765a45e4d2dbd5c0d77c03d26a625e795bec06 by=reader:41b2920eb5dd form=alphabet measure=result role=writes scope=measurement/observations/orchard value=\"{\\\"result\\\":{\\\"status\\\":\\\"measured\\\",\\\"origins\\\":[\\\"east\\\",\\\"west\\\"],\\\"events\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\"],\\\"matrix\\\":[[0.25,0.25],[0.25,0.25]]},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a\n",
+          "stderr": "OBSERVE  0 run · 1 read by key · 1 readers kept whole · 3 ms\nOWN      imports 18 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 1 ms · zoom 0 ms · nos 0 ms · zoomed 0 ms · applied 1 ms · laid 3 ms · resets 0 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 5 ms · own 27 ms · regions 8 ms · ceilings 1 ms · paid 1 ms · docs 0 ms · ceilings 1 ms\nBEAT     fold 39f0ac4a folded 0.1 s · 0.4 s folded\nKEPT     fold 39f0ac4a miss · no fold was kept before this one\n",
+          "runtimeMs": 259
         }
       ]
     },
@@ -49,27 +37,14 @@
       "events": [
         {
           "args": [
-            "land",
-            "--key",
-            "device",
-            "--key-file",
-            "<fixture-key>"
-          ],
-          "status": 0,
-          "stdout": "FACT     landed 29 unique lines from 29 in TARGET · 0 of 29 signed lines fail admission by declared authority\nTARGET   29 claims · 0 superseded · 129 ms\nFACT     vouched · 0 sources under 0 locations · 0 needs refused as globs\n",
-          "stderr": "",
-          "runtimeMs": 241
-        },
-        {
-          "args": [
             "fold",
             "--as",
             "receipts"
           ],
           "status": 1,
           "stdout": "",
-          "stderr": "REFUSE·reader reader.mjs · REFUSE·reader <workspace>/native-v3/observations-orchard-no/reader.mjs · Error: REFUSE·measure conflicting error event\nOBSERVE  0 run · 0 read by key · 171 ms\nbound: REFUSE·reader reader.mjs · REFUSE·reader <workspace>/native-v3/observations-orchard-no/reader.mjs · Error: REFUSE·measure conflicting error event\n",
-          "runtimeMs": 327
+          "stderr": "REFUSE·reader test/support/measures-reader.js · REFUSE·reader /private<place>/test/support/measures-reader.js · Error: REFUSE·measure conflicting error event\nOBSERVE  0 run · 0 read by key · 178 ms\nbound: REFUSE·reader test/support/measures-reader.js · REFUSE·reader /private<place>/test/support/measures-reader.js · Error: REFUSE·measure conflicting error event\n",
+          "runtimeMs": 348
         }
       ]
     },
@@ -79,16 +54,14 @@
       "events": [
         {
           "args": [
-            "land",
-            "--key",
-            "device",
-            "--key-file",
-            "<fixture-key>"
+            "fold",
+            "--as",
+            "receipts"
           ],
           "status": 0,
-          "stdout": "FACT     landed 29 unique lines from 29 in TARGET · 0 of 29 signed lines fail admission by declared authority\nTARGET   29 claims · 0 superseded · 133 ms\nFACT     vouched · 0 sources under 0 locations · 0 needs refused as globs\n",
-          "stderr": "",
-          "runtimeMs": 245
+          "stdout": "bound-lock/1 at=place:sha256:03bd62cf03bdd14d3eb64c8fb12f9ddb4c022a24d5c12e859ebfba8a27c2e268 by=reader:41b2920eb5dd form=alphabet measure=observed role=writes scope=inputs/sample.json value=03bd62cf03bdd14d\nbound-lock/1 at=place:sha256:03bd62cf03bdd14d3eb64c8fb12f9ddb4c022a24d5c12e859ebfba8a27c2e268 by=reader:41b2920eb5dd form=alphabet measure=result role=writes scope=measurement/observations/catalog value=\"{\\\"result\\\":{\\\"status\\\":\\\"measured\\\",\\\"origins\\\":[\\\"first\\\",\\\"second\\\"],\\\"events\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\"],\\\"matrix\\\":[[0.25,0.25],[0.25,0.25]]},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a\n",
+          "stderr": "READER   test/support/measures-reader.js · 1 run · 170 ms\nOBSERVE  1 run · 0 read by key · 175 ms\nOWN      imports 20 ms · bodies 1 ms · removed 0 ms · readers 0 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 0 ms · zoom 0 ms · nos 1 ms · zoomed 0 ms · applied 1 ms · laid 2 ms · resets 1 ms · store 0 ms · ship 1 ms\nSPENT    fold capsules 5 ms · own 30 ms · regions 9 ms · ceilings 1 ms · paid 0 ms · docs 0 ms · ceilings 1 ms\nBEAT     fold 64e22ae7 folded 0.3 s\nKEPT     fold 64e22ae7 miss · no fold was kept before this one\n",
+          "runtimeMs": 482
         },
         {
           "args": [
@@ -97,20 +70,9 @@
             "receipts"
           ],
           "status": 0,
-          "stdout": "bound-lock/1 at=place:sha256:03bd62cf03bdd14d3eb64c8fb12f9ddb4c022a24d5c12e859ebfba8a27c2e268 by=reader:11685772d6d8 form=alphabet measure=observed role=writes scope=inputs/sample.json value=03bd62cf03bdd14d\nbound-lock/1 at=place:sha256:03bd62cf03bdd14d3eb64c8fb12f9ddb4c022a24d5c12e859ebfba8a27c2e268 by=reader:11685772d6d8 form=alphabet measure=result role=writes scope=measurement/observations/catalog value=\"{\\\"result\\\":{\\\"status\\\":\\\"measured\\\",\\\"origins\\\":[\\\"first\\\",\\\"second\\\"],\\\"events\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\"],\\\"matrix\\\":[[0.25,0.25],[0.25,0.25]]},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6\n",
-          "stderr": "READER   reader.mjs · 1 run · 165 ms\nOBSERVE  1 run · 0 read by key · 169 ms\nOWN      imports 20 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 0 ms · zoom 0 ms · nos 0 ms · zoomed 0 ms · applied 1 ms · laid 3 ms · resets 0 ms · store 1 ms · ship 0 ms\nSPENT    fold capsules 5 ms · own 27 ms · regions 2 ms · ceilings 1 ms · paid 1 ms · docs 0 ms · ceilings 1 ms\nBEAT     fold f81e1c37 folded 0.3 s\nKEPT     fold f81e1c37 miss · no fold was kept before this one\n",
-          "runtimeMs": 462
-        },
-        {
-          "args": [
-            "fold",
-            "--as",
-            "receipts"
-          ],
-          "status": 0,
-          "stdout": "bound-lock/1 at=place:sha256:03bd62cf03bdd14d3eb64c8fb12f9ddb4c022a24d5c12e859ebfba8a27c2e268 by=reader:11685772d6d8 form=alphabet measure=observed role=writes scope=inputs/sample.json value=03bd62cf03bdd14d\nbound-lock/1 at=place:sha256:03bd62cf03bdd14d3eb64c8fb12f9ddb4c022a24d5c12e859ebfba8a27c2e268 by=reader:11685772d6d8 form=alphabet measure=result role=writes scope=measurement/observations/catalog value=\"{\\\"result\\\":{\\\"status\\\":\\\"measured\\\",\\\"origins\\\":[\\\"first\\\",\\\"second\\\"],\\\"events\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\"],\\\"matrix\\\":[[0.25,0.25],[0.25,0.25]]},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:82d3010064cef600a72e2b316ba5564b23750b0a0701f5b3861017ee653c16d6\n",
-          "stderr": "OBSERVE  0 run · 1 read by key · 1 readers kept whole · 3 ms\nOWN      imports 23 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 1 ms · zoom 0 ms · nos 0 ms · zoomed 0 ms · applied 1 ms · laid 2 ms · resets 0 ms · store 0 ms · ship 1 ms\nSPENT    fold capsules 4 ms · own 32 ms · regions 2 ms · ceilings 1 ms · paid 0 ms · docs 1 ms · ceilings 1 ms\nBEAT     fold f81e1c37 folded 0.1 s · 0.3 s folded\nKEPT     fold f81e1c37 miss · no fold was kept before this one\n",
-          "runtimeMs": 251
+          "stdout": "bound-lock/1 at=place:sha256:03bd62cf03bdd14d3eb64c8fb12f9ddb4c022a24d5c12e859ebfba8a27c2e268 by=reader:41b2920eb5dd form=alphabet measure=observed role=writes scope=inputs/sample.json value=03bd62cf03bdd14d\nbound-lock/1 at=place:sha256:03bd62cf03bdd14d3eb64c8fb12f9ddb4c022a24d5c12e859ebfba8a27c2e268 by=reader:41b2920eb5dd form=alphabet measure=result role=writes scope=measurement/observations/catalog value=\"{\\\"result\\\":{\\\"status\\\":\\\"measured\\\",\\\"origins\\\":[\\\"first\\\",\\\"second\\\"],\\\"events\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\"],\\\"matrix\\\":[[0.25,0.25],[0.25,0.25]]},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:0c0555d938270172204feeaa3cef6273e9f129db27ef8f8a85fd9f12f0b6b30a\n",
+          "stderr": "OBSERVE  0 run · 1 read by key · 1 readers kept whole · 3 ms\nOWN      imports 18 ms · bodies 0 ms · removed 0 ms · readers 0 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 0 ms · zoom 0 ms · nos 1 ms · zoomed 0 ms · applied 1 ms · laid 3 ms · resets 0 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 5 ms · own 27 ms · regions 9 ms · ceilings 1 ms · paid 0 ms · docs 1 ms · ceilings 0 ms\nBEAT     fold 64e22ae7 folded 0.1 s · 0.3 s folded\nKEPT     fold 64e22ae7 miss · no fold was kept before this one\n",
+          "runtimeMs": 252
         }
       ]
     },
@@ -120,27 +82,14 @@
       "events": [
         {
           "args": [
-            "land",
-            "--key",
-            "device",
-            "--key-file",
-            "<fixture-key>"
-          ],
-          "status": 0,
-          "stdout": "FACT     landed 29 unique lines from 29 in TARGET · 0 of 29 signed lines fail admission by declared authority\nTARGET   29 claims · 0 superseded · 123 ms\nFACT     vouched · 0 sources under 0 locations · 0 needs refused as globs\n",
-          "stderr": "",
-          "runtimeMs": 236
-        },
-        {
-          "args": [
             "fold",
             "--as",
             "receipts"
           ],
           "status": 1,
           "stdout": "",
-          "stderr": "REFUSE·reader reader.mjs · REFUSE·reader <workspace>/native-v3/observations-catalog-no/reader.mjs · Error: REFUSE·measure conflicting error event\nOBSERVE  0 run · 0 read by key · 172 ms\nbound: REFUSE·reader reader.mjs · REFUSE·reader <workspace>/native-v3/observations-catalog-no/reader.mjs · Error: REFUSE·measure conflicting error event\n",
-          "runtimeMs": 326
+          "stderr": "REFUSE·reader test/support/measures-reader.js · REFUSE·reader /private<place>/test/support/measures-reader.js · Error: REFUSE·measure conflicting error event\nOBSERVE  0 run · 0 read by key · 177 ms\nbound: REFUSE·reader test/support/measures-reader.js · REFUSE·reader /private<place>/test/support/measures-reader.js · Error: REFUSE·measure conflicting error event\n",
+          "runtimeMs": 339
         }
       ]
     }

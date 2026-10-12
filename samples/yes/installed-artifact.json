@@ -1,7 +1,7 @@
 {
   "format": "installed-acceptance/1",
   "name": "@lapxo/obligations",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "exports": {
     ".": {
       "types": "./dist/lattice/index.d.ts",
@@ -243,8 +243,16 @@
       "sha256": "sha256:86a33399266ad3d5274838e9580a467d045e8edba6bded643ffdb580a79ae37d"
     },
     {
+      "path": "dist/measures/capacity.js",
+      "sha256": "sha256:d9a178aa08c3ecd4d2630cd99560d1461d1f1e557fb96b01fc21052db5f20881"
+    },
+    {
+      "path": "dist/measures/coincidence.js",
+      "sha256": "sha256:61b7c27f3e60b6b5ce026295afe53458a88058c8efd0cd8449ed8b12a4f1d7c2"
+    },
+    {
       "path": "dist/measures/error-events.js",
-      "sha256": "sha256:df5c77620adf2de919a0f1eb3df53837ce62d43bfdf72acfde04f80961ded97e"
+      "sha256": "sha256:6a67eb1fbfa48629cff9bc173c9ae569b4803b9dbdbf945368add0ac52a6d200"
     },
     {
       "path": "dist/measures/experiments.js",
@@ -260,7 +268,7 @@
     },
     {
       "path": "dist/measures/index.js",
-      "sha256": "sha256:e056393908931aac0ef64e7abcab68ece360536b6578be1e945e62af6a409475"
+      "sha256": "sha256:2ad8dfb4eb2da8fdbbfd002656e5fc13f1756247080e40ebcb9aa1183fb32d24"
     },
     {
       "path": "dist/measures/m3-experiment.js",
@@ -281,6 +289,10 @@
     {
       "path": "dist/measures/spectrum.js",
       "sha256": "sha256:06b38b556472d7c27bf51e423b4305cb1427af5aedb0012c3a77f3168a8a9c53"
+    },
+    {
+      "path": "dist/measures/unanimity-fit.js",
+      "sha256": "sha256:dccb3a3c4fe72954f02b1e7e0c3a59f26253bd2b10909d56ef599c4e447f7c76"
     },
     {
       "path": "dist/replay.js",
@@ -363,8 +375,19 @@
       "sha256": "sha256:982ffa68c9512832cce698785d1f67816a504b98d1dd05b7c1962dda0584e808"
     }
   ],
-  "code": "sha256:36e9236efa5873e1620b9f33011cc6bf488f8cecf4a06e80f8d7f2dfd80f5d30",
+  "code": "sha256:df91b63109afbe37c359ee07b497ebc2ded0af71a2fb10982376a095ff685dbc",
   "tests": [
+    "finite exact joint probabilities reproduce the four captured information vectors",
+    "p=0 is k-invariant; limit statements never overwrite finite or uninformative channels",
+    "the binary all-wrong channel carries a full bit; plurality is not an information bound",
+    "finite decision accuracy, decision information and posterior information stay separate",
+    "work budgets refuse before exponential evaluation and logs are explicitly declared",
+    "equal pair marginals hide XOR dependence; signed coincidence excess keeps the triple deficit",
+    "uniform independent wrong values exactly match the declared reference",
+    "independent events with nonuniform labels exceed the uniform reference without proving a cause",
+    "redelivery and ordering add no event; conflicting values refuse; inputs stay unchanged",
+    "absence, zero reference and insufficient budget are distinct, never inferred independence",
+    "estimated marginals condition on truth rather than pooling distinct populations",
     "analytic eigensystem satisfies residual and orthogonality; inputs are unchanged",
     "repeated eigenvalues have no unique top loading; their full variance subspace remains readable",
     "subset variance is descriptive, not a probability of error",
@@ -392,6 +415,10 @@
     "half-even display is independent of binary floating point and uses declared digits",
     "controlled T1 and T5 declare their stream and denominators and match handed M/3 populations",
     "partition evaluator equals direct wrong-value enumeration for overlapping factors on a three-value cell",
-    "the actual four algebraic states and their cells survive every descriptive measure unchanged"
+    "the actual four algebraic states and their cells survive every descriptive measure unchanged",
+    "an exact curve retains both binary parameter branches rather than fabricating identification",
+    "perfect unanimity keeps the whole compatible ambiguity and no causal result",
+    "paired-group bootstrap retains cross-size sampling dependence and is deterministic",
+    "counts alone do not invent sampling uncertainty; inconsistent paired outcomes refuse"
   ]
 }
