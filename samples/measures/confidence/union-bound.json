@@ -1,0 +1,59 @@
+{
+  "yes": {
+    "group": "confidence",
+    "place": "t18",
+    "failures": [
+      {
+        "id": "A",
+        "p": "1/10",
+        "justification": "hypothesis:A"
+      },
+      {
+        "id": "B",
+        "p": "1/5",
+        "justification": "hypothesis:B"
+      }
+    ],
+    "expectedLowerBound": {
+      "numerator": "7",
+      "denominator": "10"
+    }
+  },
+  "no": {
+    "group": "confidence",
+    "place": "t18",
+    "failures": [
+      {
+        "id": "A",
+        "p": "1/10",
+        "justification": ""
+      }
+    ],
+    "expectedRefusal": "justification reference required"
+  },
+  "trivial": {
+    "group": "confidence",
+    "place": "t18",
+    "failures": [
+      {
+        "id": "A",
+        "p": "3/5",
+        "justification": "hypothesis:A"
+      },
+      {
+        "id": "B",
+        "p": "3/5",
+        "justification": "hypothesis:B"
+      }
+    ],
+    "expectedLowerBound": {
+      "numerator": "0",
+      "denominator": "1"
+    }
+  },
+  "open": [
+    "tolerant intersection semantics",
+    "justification authentication",
+    "native reader selection and capture"
+  ]
+}

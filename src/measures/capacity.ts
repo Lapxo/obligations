@@ -29,6 +29,23 @@ export function capacityBound(n:number,c:RationalInput,policy:LogarithmPolicy){
     status:'measured' as const,unit:'bits' as const,value:Math.log2(n)-numeric(factor)*Math.log2(n-1),
     meaning:'upper bound for every k; achievability depends on the private channel' as const};
 }
+/** Upper bound after revealing the independent covering-cause indicator.
+ * When active every observation copies one n-ary symmetric channel (accuracy q).
+ * When inactive the private observations are unrestricted. Copy count is no input.
+ * This is not finite-k mutual information or an achievability claim.
+ */
+export function commonCauseCapacityBound(n:number,c:RationalInput,accuracy:RationalInput,policy:LogarithmPolicy){
+  cardinality(n);logPolicy(policy);
+  if(accuracy===undefined||accuracy===null)refuse('common-cause accuracy q required');
+  const factor=probability(c),correct=probability(accuracy),wrong=sub(one,correct);
+  const conditional=entropy([correct,wrong])+numeric(wrong)*Math.log2(n-1);
+  return {model:'single-covering-symmetric-cause@1' as const,
+    parameters:{n,c:pack(factor),q:pack(correct)},policy,status:'measured' as const,unit:'bits' as const,
+    conditions:['uniform-truth','cause-indicator-independent-of-truth',
+      'active-cause-copies-one-symmetric-channel','inactive-private-channel-unrestricted'] as const,
+    value:Math.max(0,Math.log2(n)-numeric(factor)*conditional),
+    meaning:'upper bound after revealing cause indicator; copies do not add; no achievability claim' as const};
+}
 export function capacityP0(n:number,c:RationalInput,policy:LogarithmPolicy){
   const bound=capacityBound(n,c,policy),factor=probability(c);
   return {...bound,value:bound.value-entropy([factor,sub(one,factor)]),meaning:'mutual information at p=0 for every positive k' as const};

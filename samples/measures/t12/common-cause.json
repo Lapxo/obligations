@@ -1,0 +1,35 @@
+{
+  "yes": {
+    "group": "common-cause-capacity",
+    "place": "t12",
+    "n": 4,
+    "c": "1/5",
+    "q": "1/2",
+    "policy": {
+      "logarithm": "binary64-log2"
+    },
+    "expectedBits": 1.6415037499278844
+  },
+  "no": {
+    "group": "common-cause-capacity",
+    "place": "t12",
+    "n": 4,
+    "c": "1/5",
+    "policy": {
+      "logarithm": "binary64-log2"
+    },
+    "expectedRefusal": "common-cause accuracy q required"
+  },
+  "copyInvariant": {
+    "sameCauseCopies": [
+      1,
+      2,
+      20
+    ],
+    "expectedBits": 1.6415037499278844
+  },
+  "open": [
+    "duplicated/disjoint/triangle governance",
+    "native reader selection and capture"
+  ]
+}
