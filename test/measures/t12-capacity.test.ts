@@ -12,15 +12,34 @@ test('T12 covering symmetric cause: fixed independent entropy oracles and endpoi
   ] as const)near(commonCauseCapacityBound(4,c,q,policy).value,expected);
   near(commonCauseCapacityBound(2,'1','0',policy).value,1); // invertible all-wrong binary channel
 });
-test('T12 copies do not add: one shared signal is independent of its copy count',()=>{
-  const baseline=commonCauseCapacityBound(4,'1/5','1/2',policy);
-  for(const copies of [1,2,20]){
-    const identicalSignals=Array(copies).fill('one-shared-channel');
-    assert.equal(new Set(identicalSignals).size,1);
-    assert.deepEqual(commonCauseCapacityBound(4,'1/5','1/2',policy),baseline);
+test('T12 copying one symmetric channel preserves joint-table mutual information',()=>{
+  // Uniform T: each diagonal joint mass is 1/8; each off-diagonal is 1/24.
+  // Duplicate the observed symbol, not the event mass: Y -> (Y,...,Y).
+  function information(copies:number,diagonal:number,offDiagonal:number){
+    const joint=Array.from({length:4},(_,truth)=>Array.from({length:4},(_,signal)=>({
+      truth,output:Array(copies).fill(signal).join(','),mass:truth===signal?diagonal:offDiagonal,
+    }))).flat();
+    const truthMass=new Map<number,number>(),outputMass=new Map<string,number>();
+    for(const event of joint){
+      truthMass.set(event.truth,(truthMass.get(event.truth)??0)+event.mass);
+      outputMass.set(event.output,(outputMass.get(event.output)??0)+event.mass);
+    }
+    near([...truthMass.values()].reduce((a,b)=>a+b,0),1);
+    assert.equal(outputMass.size,4);
+    return joint.reduce((sum,event)=>sum+event.mass*Math.log2(
+      event.mass/(truthMass.get(event.truth)!*outputMass.get(event.output)!)),0);
   }
-  assert.equal('k' in baseline.parameters,false);
-  assert.notEqual(baseline.value,capacityBound(4,'1/5',policy).value);
+  const expected=0.20751874963942196;
+  for(const copies of [1,2,20]){
+    const symmetric=information(copies,1/8,1/24);
+    near(symmetric,expected);
+    near(symmetric,commonCauseCapacityBound(4,'1','1/2',policy).value);
+    // q=1/4: every joint outcome has mass 1/16, even with identical copy counts.
+    near(information(copies,1/16,1/16),0);
+  }
+  near(commonCauseCapacityBound(4,'1','1/4',policy).value,0);
+  assert.notEqual(commonCauseCapacityBound(4,'1','1/2',policy).value,
+    capacityBound(4,'1',policy).value);
 });
 test('T12 q is mandatory only on the new symmetric-cause operation',()=>{
   assert.throws(()=>commonCauseCapacityBound(4,'1/5',undefined as unknown as RationalInput,policy),/accuracy q required/);
