@@ -1,0 +1,1050 @@
+{
+  "schema": "obligations-canonical-law-map/1",
+  "region": "obl.laws.canonical-map",
+  "date": "2026-10-14",
+  "original_base_commit": "7fd489c21ab362034f164577a97bcb7d9965ad89",
+  "stacked_base_commit": "c8f07ea6034d174a239c30e742bf8bf80d69b55f",
+  "theory": {
+    "path": "docs/theory-2026-10.md",
+    "sha256": "eb6223a3a83af20bf7e8f37d8808a87967746570a91a67971984832561ebdc56"
+  },
+  "scope": "Documentation map only. Proposed tests are not executed tests, receipts or theorem closures. No laws, vectors, relabels, rendered documents, releases or Bound changes.",
+  "limitations": [
+    "Mechanical verification establishes source fidelity and map structure only; it does not prove proposed laws or semantic completeness.",
+    "Theory attribution of independent browser/WebAssembly origins is retained author text, not independently verified here. No proof independence claim.",
+    "A7/T90 and A9/T99 replacement undefined; factor governance and L7 conditional/total interpretation remain open.",
+    "T87 near-phase objective/domain remains open; H3/H5 experiment relabel needs dependent reference review."
+  ],
+  "laws": [
+    {
+      "id": "T12",
+      "historical_scope": "law/T12-reliability-is-encounter-rate",
+      "historical_name": "T12-reliability-is-encounter-rate",
+      "current_kind": "theorem",
+      "current_statement": "the fraction of a domain's claims that are facts equals its second-origin rate; drift and surviving falsehood are its complement",
+      "source": {
+        "path": "src/laws/laws.bound",
+        "line": 56,
+        "line_text": "bound-lock/1 about=\"the fraction of a domain's claims that are facts equals its second-origin rate; drift and surviving falsehood are its complement\" at=policy:law/T12 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T12-reliability-is-encounter-rate.json|samples/no/T12-reliability-is-encounter-rate.json restsOn=law/A1-encounter|law/T10-drift role=demands scope=law/T12-reliability-is-encounter-rate value=present view=valuation",
+        "line_sha256": "77f04d46446dbe2e78db8cf9a5318f47e2c485825b1da774d5d65a878be0f660",
+        "line_hash_convention": "UTF-8 line bytes excluding LF",
+        "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+      },
+      "proposed_replacement": "Information about truth is bounded by declared cause structure, not witness count; copies do not add capacity. Under the single covering-cause F5 model, C = log₂n − c·[h(q) + (1−q)·log₂(n−1)]. Keep reliability-is-encounter-rate as a historical alias.",
+      "proposal_basis": "L6/F5",
+      "hypotheses": [
+        "n ≥ 2 equiprobable states; c,q ∈ [0,1] declared; binary entropy h; binary64-log2",
+        "Single covering cause only; duplicated/disjoint/triangle governance remains open",
+        "L7 conditional-versus-total unanimity meaning remains open; do not use it to infer q"
+      ],
+      "positive_test_proposal": "Single covering cause n=4,c=1/5 with q=0 and q=1/2 reproduces approximately 1.683 and 1.642 bits; copies preserve the bound.",
+      "negative_test_proposal": "Same witness/encounter count with different declared causes or q has different C, defeating encounter rate as reliability; missing q refuses; two witnesses requesting c and three binary witnesses remain unmeasured; perfect agreement reports no-dissent.",
+      "status": "defined proposal; implementation pending",
+      "dependencies": {
+        "outgoing_restsOn": [
+          "law/A1-encounter",
+          "law/T10-drift"
+        ],
+        "incoming_law_restsOn": [],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              84
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              382
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              56
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/laws.test.ts",
+            "lines": [
+              389
+            ],
+            "file_sha256": "7ee2f65f9cd2aafafe5bdc4b08ace4337c8774f27190794871cfe63b9590f353"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      }
+    },
+    {
+      "id": "T18",
+      "historical_scope": "law/T18-freedom-is-a-currency",
+      "historical_name": "T18-freedom-is-a-currency",
+      "current_kind": "theorem",
+      "current_statement": "closed bits with a second origin are scarce, unforgeable, measurable, transferable and third-party verifiable; no issuer exists",
+      "source": {
+        "path": "src/laws/laws.bound",
+        "line": 59,
+        "line_text": "bound-lock/1 about=\"closed bits with a second origin are scarce, unforgeable, measurable, transferable and third-party verifiable; no issuer exists\" at=policy:law/T18 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T18-freedom-is-a-currency.json restsOn=law/A7-freedom-conserved|law/D9-yield|law/A5-origin-is-extension role=demands scope=law/T18-freedom-is-a-currency value=present view=valuation",
+        "line_sha256": "c8c090e531ba88653592fec02422365b2b78e11ef22821c8e472bba9e4516b0f",
+        "line_hash_convention": "UTF-8 line bytes excluding LF",
+        "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+      },
+      "proposed_replacement": "Under declared and justified failure probabilities p_i, the meet guarantee is at least max(0, 1 − Σp_i). If Σp_i ≥ 1, report the bound as trivial. Agreement and copy count do not estimate p_i.",
+      "proposal_basis": "L4",
+      "hypotheses": [
+        "Each p_i ∈ [0,1] is declared and justified for its entering origin",
+        "Union bound does not require independence; confidence is distinct from currency properties"
+      ],
+      "positive_test_proposal": "Declared p=(0.1,0.2) yields guarantee ≥0.7; p=(0.6,0.5) yields trivial zero lower bound.",
+      "negative_test_proposal": "Undeclared or unjustified p_i cannot yield a confidence guarantee; copied agreement cannot manufacture probabilities or third-party-verifiable reliability.",
+      "status": "defined proposal; implementation pending",
+      "dependencies": {
+        "outgoing_restsOn": [
+          "law/A7-freedom-conserved",
+          "law/D9-yield",
+          "law/A5-origin-is-extension"
+        ],
+        "incoming_law_restsOn": [
+          {
+            "line": 78,
+            "scope": "law/T40-cost-by-density",
+            "source_line_sha256": "842703e36e0198537cb4937d4b6eeef0b255cd6a1c5bf5ccc557c465060ff49f"
+          },
+          {
+            "line": 82,
+            "scope": "law/T44-an-origin-is-worth-its-reach",
+            "source_line_sha256": "57f57455a78b8630a01415f1c377cfaab994f2d859852541cc254b68e92a83a9"
+          }
+        ],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              90,
+              107,
+              111
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              388,
+              405,
+              409
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              59,
+              78,
+              82
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/laws.test.ts",
+            "lines": [
+              392
+            ],
+            "file_sha256": "7ee2f65f9cd2aafafe5bdc4b08ace4337c8774f27190794871cfe63b9590f353"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      }
+    },
+    {
+      "id": "T38",
+      "historical_scope": "law/T38-origins-are-a-polygon",
+      "historical_name": "T38-origins-are-a-polygon",
+      "current_kind": "theorem",
+      "current_statement": "n independent origins on a cell are the vertices of a polygon whose interior is their meet: two an edge, three an area, four a vertex the others do not enclose, five a verdict that holds without any one of them, and beyond that a meet that narrows toward consensus — a meet that never closes at any n is two cells wearing one name",
+      "source": {
+        "path": "src/laws/laws.bound",
+        "line": 72,
+        "line_text": "bound-lock/1 about=\"n independent origins on a cell are the vertices of a polygon whose interior is their meet: two an edge, three an area, four a vertex the others do not enclose, five a verdict that holds without any one of them, and beyond that a meet that narrows toward consensus — a meet that never closes at any n is two cells wearing one name\" at=policy:law/T38 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T38-origins-are-a-polygon.json restsOn=law/A1-encounter|law/A2-meet|law/A5-origin-is-extension|law/T2-coordinate-where-disagree role=demands scope=law/T38-origins-are-a-polygon value=present view=product",
+        "line_sha256": "01661aa7bebcec67b5adfe03c4a4bda5a9358349eb9f24d56556da641dc849b9",
+        "line_hash_convention": "UTF-8 line bytes excluding LF",
+        "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+      },
+      "proposed_replacement": "Conflict witness size depends on the declared form: intervals of a lattice h=2; convex forms in R^d h≤d+1 (d=2:3); cyclic arcs without a declared cut have no finite general Helly number, while arcs not crossing a declared cut have h=2; Shannon partitions have no finite general Helly number. Polygon imagery is restricted to the interval contract, not arbitrary origins.",
+      "proposal_basis": "L2/F2/F3",
+      "hypotheses": [
+        "Form and lattice/geometry declared; convexity for R^d; finite families where required",
+        "Declared cut and noncrossing arcs for cyclic h=2; F2 finite circle is a counterexample to pair sufficiency, not a proof of unbounded h"
+      ],
+      "positive_test_proposal": "Intervals with conflicting meet expose a pair; F3 seller/auditor witness {x+y≤12,x+y≥14}; F3 {x≥0,y≥0,x+y≤−1} requires all three.",
+      "negative_test_proposal": "F2 circle 12, arcs of 5 discrete points starting 0,4,8: every pair intersects but triple is empty; refuse applying interval h=2 to this uncut cyclic form.",
+      "status": "defined proposal; implementation pending",
+      "dependencies": {
+        "outgoing_restsOn": [
+          "law/A1-encounter",
+          "law/A2-meet",
+          "law/A5-origin-is-extension",
+          "law/T2-coordinate-where-disagree"
+        ],
+        "incoming_law_restsOn": [
+          {
+            "line": 78,
+            "scope": "law/T40-cost-by-density",
+            "source_line_sha256": "842703e36e0198537cb4937d4b6eeef0b255cd6a1c5bf5ccc557c465060ff49f"
+          }
+        ],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              104,
+              107
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              253,
+              255,
+              259,
+              268,
+              275,
+              284,
+              290,
+              291,
+              402,
+              405
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "offers.bound",
+            "lines": [
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135
+            ],
+            "file_sha256": "b8c5cb8e7f85719ee10f844d19593f6807144eb49d76964ec7f516211f8716a6"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              72,
+              78
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/loom.test.ts",
+            "lines": [
+              74,
+              75
+            ],
+            "file_sha256": "8a12871689ff7f81bdeaa418985f43dc86828ca0fe18cdf2c0b2257a0b8ce125"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      }
+    },
+    {
+      "id": "T87",
+      "historical_scope": "law/T87-the-quarter-turn",
+      "historical_name": "T87-the-quarter-turn",
+      "current_kind": "theorem",
+      "current_statement": "two claims reinforce within a quarter turn of each other and cancel beyond it, since |e^{ia} + e^{ib}|² < 2 exactly when |a − b| > π/2: a fork is destructive interference, and a field is laminar while fewer than half its pairs lie beyond a quarter turn, forks over closes below one",
+      "source": {
+        "path": "src/laws/laws.bound",
+        "line": 127,
+        "line_text": "bound-lock/1 about=\"two claims reinforce within a quarter turn of each other and cancel beyond it, since |e^{ia} + e^{ib}|² < 2 exactly when |a − b| > π/2: a fork is destructive interference, and a field is laminar while fewer than half its pairs lie beyond a quarter turn, forks over closes below one\" at=policy:law/T87 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T87-the-quarter-turn.json|samples/no/T87-the-quarter-turn.json restsOn=law/T48-epoch-is-phase|law/T49-amplitude-has-sign-and-phase|law/A8-four-states role=demands scope=law/T87-the-quarter-turn value=present view=field",
+        "line_sha256": "b43d9ba5d49e3af5e203fe7e0f4113458217792ff263f6e1cc71b0e18980ba63",
+        "line_hash_convention": "UTF-8 line bytes excluding LF",
+        "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+      },
+      "proposed_replacement": "Provisional formula only: RI = log₂(n/p) − h(s/p), with n states, p dividing n and 0≤s<p. No near-phase worst-case replacement is approved pending domain and objective confirmation.",
+      "proposal_basis": "F4 and updated plan",
+      "hypotheses": [
+        "Provisional integer n=12,p=4,s∈{0,1,2,3}; entropy endpoints use h(0)=h(1)=0",
+        "Definition of RI, meaning of near-phase/anti-phase, and optimized quantity remain unconfirmed"
+      ],
+      "positive_test_proposal": "Proposed controls s=0,1,2,3 evaluate log₂3, log₂3−h(1/4), log₂3−1, log₂3−h(3/4); record assumed domain.",
+      "negative_test_proposal": "If worst means minimum RI, s=2 yields a smaller value than s=0; reject claiming near-phase closure from this formula alone. Refuse p not dividing n and shifts outside [0,p).",
+      "status": "open; domain and optimization objective unconfirmed",
+      "dependencies": {
+        "outgoing_restsOn": [
+          "law/T48-epoch-is-phase",
+          "law/T49-amplitude-has-sign-and-phase",
+          "law/A8-four-states"
+        ],
+        "incoming_law_restsOn": [
+          {
+            "line": 128,
+            "scope": "law/T88-turbulence-is-factions",
+            "source_line_sha256": "94037c66f81a1a9772bbc4e27fffb4a86a91d60015ff09d32f4ba362baa5d453"
+          },
+          {
+            "line": 129,
+            "scope": "law/T89-disagreement-is-where-to-look",
+            "source_line_sha256": "62b891ab6ce8740be9f1b793ed2634ad77763ec0e4687d02efa30603d48e316a"
+          },
+          {
+            "line": 143,
+            "scope": "law/H10-the-period-is-a-line-of-the-region",
+            "source_line_sha256": "a2f730d51df144d37eb5365ba0a6fccde150b69261b0e22ae085001d378034c0"
+          }
+        ],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9,
+              193
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              67,
+              136,
+              137,
+              138
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              115,
+              170,
+              365,
+              434,
+              435,
+              436
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "offers.bound",
+            "lines": [
+              216,
+              217
+            ],
+            "file_sha256": "b8c5cb8e7f85719ee10f844d19593f6807144eb49d76964ec7f516211f8716a6"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              124,
+              127,
+              128,
+              129,
+              143
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/object.test.ts",
+            "lines": [
+              40,
+              41,
+              63
+            ],
+            "file_sha256": "17c3e027b855bddf2870d0bcff2711bda5af11b6df5ad4fbacdb03a5c09c979d"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      }
+    },
+    {
+      "id": "A7",
+      "historical_scope": "law/A7-freedom-conserved",
+      "historical_name": "A7-freedom-conserved",
+      "current_kind": "axiom",
+      "current_statement": "the freedom of a system is the sum of its cells' debits in bits; an encounter never raises it; only a new coordinate does",
+      "source": {
+        "path": "src/laws/laws.bound",
+        "line": 10,
+        "line_text": "bound-lock/1 about=\"the freedom of a system is the sum of its cells' debits in bits; an encounter never raises it; only a new coordinate does\" at=policy:law/A7 by=target form=alphabet kind=axiom measure=status needs=samples/yes/A7-freedom-conserved.json|samples/no/A7-freedom-conserved.json role=demands scope=law/A7-freedom-conserved value=present view=chain",
+        "line_sha256": "86accf78f1153c53f48c261a557a9d6c3e52dd358893e594b7b887a6d9d55964",
+        "line_hash_convention": "UTF-8 line bytes excluding LF",
+        "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+      },
+      "proposed_replacement": "replacement undefined",
+      "proposal_basis": "§5 obl.open-A7-T90 / obl.open-A9-T99",
+      "hypotheses": [
+        "Author has supplied no replacement statement for this ID",
+        "P1 well-foundedness and budget do not by themselves prove totality or conservation"
+      ],
+      "positive_test_proposal": "Proposal only: retain historical fixtures as baseline observations; define a new positive contract only after the author supplies a replacement.",
+      "negative_test_proposal": "Proposal only: reject treating missing replacement, instruction-budget exhaustion or a simulation as proof of the historical statement.",
+      "status": "open; replacement undefined",
+      "dependencies": {
+        "outgoing_restsOn": [],
+        "incoming_law_restsOn": [
+          {
+            "line": 59,
+            "scope": "law/T18-freedom-is-a-currency",
+            "source_line_sha256": "c8c090e531ba88653592fec02422365b2b78e11ef22821c8e472bba9e4516b0f"
+          },
+          {
+            "line": 65,
+            "scope": "law/T24-ignorance-has-coordinates",
+            "source_line_sha256": "537edc5f9ee09d3309ed0005fe014a230ed15668299d35376bb7b99fff5fc6cb"
+          },
+          {
+            "line": 68,
+            "scope": "law/T27-disagreement-can-be-provoked",
+            "source_line_sha256": "807f81aa54d982d8b0caa19bed89a6dd23a4d8cfef29c98dc8d8b1c61178797a"
+          },
+          {
+            "line": 85,
+            "scope": "law/T47-a-two-pole-object",
+            "source_line_sha256": "f7048ae01942a63bf7417a413c25b1ab5f60da9b9e107021fb183ec0d9b5553c"
+          },
+          {
+            "line": 89,
+            "scope": "law/D11-the-obligatory",
+            "source_line_sha256": "5ce7caf07f6fb7dbee3f35f7da8088f9bbed9e5dc18c5844a505bb28cffdbc39"
+          },
+          {
+            "line": 108,
+            "scope": "law/T73-a-cell-that-folds-itself-converges",
+            "source_line_sha256": "6362b63d1aa1fbfb19139f049a5219faf4a56df7816e2986dd79cec81f163889"
+          },
+          {
+            "line": 130,
+            "scope": "law/T90-freedom-is-entropy",
+            "source_line_sha256": "ea5476ce79837b9f22a2a7a77f15ec5c4774bd45e8889ab1d229b032cede763b"
+          },
+          {
+            "line": 137,
+            "scope": "law/T100-an-act-is-paid-with-attention",
+            "source_line_sha256": "42048d7fe9e7987224bd78d5c66376d0513d0cc3fdf7ce8761b365f859b2316e"
+          }
+        ],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9,
+              193
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              48,
+              57,
+              78,
+              90,
+              97,
+              100,
+              114,
+              133,
+              140
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              141,
+              153,
+              346,
+              355,
+              376,
+              388,
+              395,
+              398,
+              412,
+              431,
+              438
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "offers.bound",
+            "lines": [
+              163,
+              172
+            ],
+            "file_sha256": "b8c5cb8e7f85719ee10f844d19593f6807144eb49d76964ec7f516211f8716a6"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              10,
+              59,
+              65,
+              68,
+              85,
+              89,
+              108,
+              121,
+              130,
+              137
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/laws.test.ts",
+            "lines": [
+              374
+            ],
+            "file_sha256": "7ee2f65f9cd2aafafe5bdc4b08ace4337c8774f27190794871cfe63b9590f353"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      }
+    },
+    {
+      "id": "T90",
+      "historical_scope": "law/T90-freedom-is-entropy",
+      "historical_name": "T90-freedom-is-entropy",
+      "current_kind": "theorem",
+      "current_statement": "freedom is log₂ of the states between the poles, which is the cell's entropy: encounters lower it, vacuity raises it, and nothing else moves it; two paths interfere from phase alone, and that is lost once which path was taken is observed",
+      "source": {
+        "path": "src/laws/laws.bound",
+        "line": 130,
+        "line_text": "bound-lock/1 about=\"freedom is log₂ of the states between the poles, which is the cell's entropy: encounters lower it, vacuity raises it, and nothing else moves it; two paths interfere from phase alone, and that is lost once which path was taken is observed\" at=policy:law/T90 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T90-freedom-is-entropy.json|samples/no/T90-freedom-is-entropy.json restsOn=law/D4-debit-in-bits|law/A7-freedom-conserved|law/T48-epoch-is-phase role=demands scope=law/T90-freedom-is-entropy value=present view=chain",
+        "line_sha256": "ea5476ce79837b9f22a2a7a77f15ec5c4774bd45e8889ab1d229b032cede763b",
+        "line_hash_convention": "UTF-8 line bytes excluding LF",
+        "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+      },
+      "proposed_replacement": "replacement undefined",
+      "proposal_basis": "§5 obl.open-A7-T90 / obl.open-A9-T99",
+      "hypotheses": [
+        "Author has supplied no replacement statement for this ID",
+        "P1 well-foundedness and budget do not by themselves prove totality or conservation"
+      ],
+      "positive_test_proposal": "Proposal only: retain historical fixtures as baseline observations; define a new positive contract only after the author supplies a replacement.",
+      "negative_test_proposal": "Proposal only: reject treating missing replacement, instruction-budget exhaustion or a simulation as proof of the historical statement.",
+      "status": "open; replacement undefined",
+      "dependencies": {
+        "outgoing_restsOn": [
+          "law/D4-debit-in-bits",
+          "law/A7-freedom-conserved",
+          "law/T48-epoch-is-phase"
+        ],
+        "incoming_law_restsOn": [
+          {
+            "line": 137,
+            "scope": "law/T100-an-act-is-paid-with-attention",
+            "source_line_sha256": "42048d7fe9e7987224bd78d5c66376d0513d0cc3fdf7ce8761b365f859b2316e"
+          }
+        ],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              78,
+              140
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              376,
+              438
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              130,
+              137
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/object.test.ts",
+            "lines": [
+              105,
+              106,
+              132
+            ],
+            "file_sha256": "17c3e027b855bddf2870d0bcff2711bda5af11b6df5ad4fbacdb03a5c09c979d"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      }
+    },
+    {
+      "id": "A9",
+      "historical_scope": "law/A9-everything-is-a-bound",
+      "historical_name": "A9-everything-is-a-bound",
+      "current_kind": "axiom",
+      "current_statement": "one relation: an origin bounds a cell at a resolution and an epoch; cells, origins, locks and laws are cells under it; the relation bounds itself, and there is no level above it",
+      "source": {
+        "path": "src/laws/laws.bound",
+        "line": 9,
+        "line_text": "bound-lock/1 about=\"one relation: an origin bounds a cell at a resolution and an epoch; cells, origins, locks and laws are cells under it; the relation bounds itself, and there is no level above it\" at=policy:law/A9 by=target form=alphabet kind=axiom measure=status needs=samples/yes/A9-everything-is-a-bound.json|samples/no/A9-everything-is-a-bound.json role=demands scope=law/A9-everything-is-a-bound value=present view=lattice",
+        "line_sha256": "20cfd637aec057225142238777f9df47fa5ca096495d483c2d42231360c1b740",
+        "line_hash_convention": "UTF-8 line bytes excluding LF",
+        "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+      },
+      "proposed_replacement": "replacement undefined",
+      "proposal_basis": "§5 obl.open-A7-T90 / obl.open-A9-T99",
+      "hypotheses": [
+        "Author has supplied no replacement statement for this ID",
+        "P1 well-foundedness and budget do not by themselves prove totality or conservation"
+      ],
+      "positive_test_proposal": "Proposal only: retain historical fixtures as baseline observations; define a new positive contract only after the author supplies a replacement.",
+      "negative_test_proposal": "Proposal only: reject treating missing replacement, instruction-budget exhaustion or a simulation as proof of the historical statement.",
+      "status": "open; replacement undefined",
+      "dependencies": {
+        "outgoing_restsOn": [],
+        "incoming_law_restsOn": [
+          {
+            "line": 53,
+            "scope": "law/T9-self-application-converges",
+            "source_line_sha256": "22581a869b8b74ee848dd9bb385977e2cd717b51a71d13e0a6b05f61759f01c9"
+          },
+          {
+            "line": 67,
+            "scope": "law/T26-knowing-has-four-states",
+            "source_line_sha256": "e829d8097a498cb1439aea5215212c2f1964b15544863ec9351abe81302c1809"
+          },
+          {
+            "line": 80,
+            "scope": "law/T42-no-privileged-observer",
+            "source_line_sha256": "a390315f2dad89d3d5ba7c08fb4bb09c616265c720ffc998cab568f7036a9383"
+          },
+          {
+            "line": 81,
+            "scope": "law/T43-each-origin-gives-one-fact-and-one-distance",
+            "source_line_sha256": "3beadd784d134c0d47af12c5105684e9b89eab3a395c1b71c95b8cbd44550bbc"
+          },
+          {
+            "line": 83,
+            "scope": "law/T45-cells-that-rest-on-one-bound-are-entangled",
+            "source_line_sha256": "b7fc5d65edbff6dc97943effadf870d520d83c6c96fe8bff83b51b862e0b7d7a"
+          },
+          {
+            "line": 89,
+            "scope": "law/D11-the-obligatory",
+            "source_line_sha256": "5ce7caf07f6fb7dbee3f35f7da8088f9bbed9e5dc18c5844a505bb28cffdbc39"
+          },
+          {
+            "line": 90,
+            "scope": "law/T50-signatures-are-meets",
+            "source_line_sha256": "9aef686519c2898d7b545ba4936d027e30d7d4b8fff23c1622fd1b44c0f892eb"
+          },
+          {
+            "line": 92,
+            "scope": "law/T52-directing-where-origins-land-closes-the-horizon",
+            "source_line_sha256": "4e3de69a27722ea25cd41cdd21296d867a82b8148b3c73fbd287de47d56da763"
+          },
+          {
+            "line": 108,
+            "scope": "law/T73-a-cell-that-folds-itself-converges",
+            "source_line_sha256": "6362b63d1aa1fbfb19139f049a5219faf4a56df7816e2986dd79cec81f163889"
+          },
+          {
+            "line": 109,
+            "scope": "law/H9-the-obligatory-is-maximal",
+            "source_line_sha256": "fa7c46545190573418c6053da3578b0291179e411a01e19a421da6f8ba2c4f8e"
+          },
+          {
+            "line": 132,
+            "scope": "law/T92-a-cell-is-made-of-cells",
+            "source_line_sha256": "5a4e80fad769d02a710c27925db63b6591f17c2d8d7a132400b4d60cfea4fb4e"
+          },
+          {
+            "line": 136,
+            "scope": "law/T99-the-fold-is-total",
+            "source_line_sha256": "1c6a2e24529d9e6ce44c498469ac063246438b3e2c21a34ba5ce7a88c0458e22"
+          }
+        ],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              50,
+              57,
+              75,
+              99,
+              109,
+              110,
+              112,
+              118,
+              120,
+              133,
+              139,
+              142,
+              146
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              348,
+              355,
+              373,
+              397,
+              407,
+              408,
+              410,
+              416,
+              418,
+              431,
+              437,
+              440,
+              444
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "samples/no/A9-everything-is-a-bound.json",
+            "lines": [
+              4
+            ],
+            "file_sha256": "96ecfde3d3a92452ca1eae15453118b42aa613da9507a7df8757ada476f39a46"
+          },
+          {
+            "path": "samples/yes/A9-everything-is-a-bound.json",
+            "lines": [
+              73
+            ],
+            "file_sha256": "7d56e0449bec71643929c7431922179199bf8700985abfdf5f290f60b5709c64"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              9,
+              53,
+              67,
+              80,
+              81,
+              83,
+              89,
+              90,
+              92,
+              108,
+              109,
+              120,
+              132,
+              136
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/laws.test.ts",
+            "lines": [
+              352
+            ],
+            "file_sha256": "7ee2f65f9cd2aafafe5bdc4b08ace4337c8774f27190794871cfe63b9590f353"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      }
+    },
+    {
+      "id": "T99",
+      "historical_scope": "law/T99-the-fold-is-total",
+      "historical_name": "T99-the-fold-is-total",
+      "current_kind": "theorem",
+      "current_statement": "the fold is a monotone map on a lattice over a rest order with no cycles: every fold reaches its fixed point in finitely many steps and never fails to answer. The lock is not Turing complete by construction — it cannot loop — so verify can check it, rank can read it before landing, and accept can refuse before running. Arbitrary computation lives only in capsules, outside the fold, admitted by vectors and heard as claims.",
+      "source": {
+        "path": "src/laws/laws.bound",
+        "line": 136,
+        "line_text": "bound-lock/1 about=\"the fold is a monotone map on a lattice over a rest order with no cycles: every fold reaches its fixed point in finitely many steps and never fails to answer. The lock is not Turing complete by construction — it cannot loop — so verify can check it, rank can read it before landing, and accept can refuse before running. Arbitrary computation lives only in capsules, outside the fold, admitted by vectors and heard as claims.\" at=policy:law/T99 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T99-the-fold-is-total.json|samples/no/T99-the-fold-is-total.json restsOn=law/A2-meet|law/T9-self-application-converges|law/A9-everything-is-a-bound role=demands scope=law/T99-the-fold-is-total value=present view=lattice",
+        "line_sha256": "1c6a2e24529d9e6ce44c498469ac063246438b3e2c21a34ba5ce7a88c0458e22",
+        "line_hash_convention": "UTF-8 line bytes excluding LF",
+        "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+      },
+      "proposed_replacement": "replacement undefined",
+      "proposal_basis": "§5 obl.open-A7-T90 / obl.open-A9-T99",
+      "hypotheses": [
+        "Author has supplied no replacement statement for this ID",
+        "P1 well-foundedness and budget do not by themselves prove totality or conservation"
+      ],
+      "positive_test_proposal": "Proposal only: retain historical fixtures as baseline observations; define a new positive contract only after the author supplies a replacement.",
+      "negative_test_proposal": "Proposal only: reject treating missing replacement, instruction-budget exhaustion or a simulation as proof of the historical statement.",
+      "status": "open; replacement undefined",
+      "dependencies": {
+        "outgoing_restsOn": [
+          "law/A2-meet",
+          "law/T9-self-application-converges",
+          "law/A9-everything-is-a-bound"
+        ],
+        "incoming_law_restsOn": [],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              146
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              196,
+              444
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "offers.bound",
+            "lines": [
+              162
+            ],
+            "file_sha256": "b8c5cb8e7f85719ee10f844d19593f6807144eb49d76964ec7f516211f8716a6"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              136
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/object.test.ts",
+            "lines": [
+              232,
+              233,
+              248
+            ],
+            "file_sha256": "17c3e027b855bddf2870d0bcff2711bda5af11b6df5ad4fbacdb03a5c09c979d"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      }
+    },
+    {
+      "id": "H3",
+      "historical_scope": "law/H3-a-distant-signature-moves-a-cell-that-did-not-move",
+      "historical_name": "H3-a-distant-signature-moves-a-cell-that-did-not-move",
+      "current_kind": "conjecture",
+      "current_statement": "stated as a hint and never as a claim about the world: if what is is a field of floors and ceilings, a distant signature changes a cell whose own record never moved, and in two hundred trials of one cell holding one value the verdict came out both ways, so nothing stored at the cell explains the difference and what explains it is the bound the cell rests on; the resemblance is structural and never arithmetic, with no continuous amplitudes and no inequality violated by number; structural resemblance, one origin, not a claim about the world",
+      "source": {
+        "path": "src/laws/laws.bound",
+        "line": 88,
+        "line_text": "bound-lock/1 about=\"stated as a hint and never as a claim about the world: if what is is a field of floors and ceilings, a distant signature changes a cell whose own record never moved, and in two hundred trials of one cell holding one value the verdict came out both ways, so nothing stored at the cell explains the difference and what explains it is the bound the cell rests on; the resemblance is structural and never arithmetic, with no continuous amplitudes and no inequality violated by number; structural resemblance, one origin, not a claim about the world\" at=policy:law/H3 by=target form=alphabet kind=conjecture measure=status needs=samples/yes/H3-a-distant-signature-moves-a-cell-that-did-not-move.json|samples/no/H3-a-distant-signature-moves-a-cell-that-did-not-move.json restsOn=law/T46-a-bound-moves-cells-no-walk-reaches|law/T47-a-two-pole-object role=demands scope=law/H3-a-distant-signature-moves-a-cell-that-did-not-move value=present view=lattice",
+        "line_sha256": "ce898d9714dfadd7a58f1fb16d1df52f0aa93c1bb932074195c81e96263c280e",
+        "line_hash_convention": "UTF-8 line bytes excluding LF",
+        "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+      },
+      "proposed_replacement": "Relabel the current modeled observations as experiments, with inputs and falsifier retained; alternatively restate under a declared order-3 form. Exact alternative statement is replacement undefined; do not assert a law of the world.",
+      "proposal_basis": "§5 obl.relabel-H3-H5 / R15",
+      "hypotheses": [
+        "One-origin structural reading and finite simulation observations only",
+        "Order-3 alternative lacks declared form and proof; no law may cite these as law premises after relabel"
+      ],
+      "positive_test_proposal": "Proposal only: retained yes sample is labeled experiment and declares model, conditions and falsifier; inventory every dependent reference.",
+      "negative_test_proposal": "Proposal only: audit rejects any law resting on H3/H5 after experiment relabel, or any physical/general-law conclusion from finite model output.",
+      "status": "open; relabel decision and dependent-reference review pending",
+      "dependencies": {
+        "outgoing_restsOn": [
+          "law/T46-a-bound-moves-cells-no-walk-reaches",
+          "law/T47-a-two-pole-object"
+        ],
+        "incoming_law_restsOn": [
+          {
+            "line": 94,
+            "scope": "law/H5-hilbert-is-the-obligatory-without-four-fields",
+            "source_line_sha256": "6bfc4138eda618b9a79cb608479a8284c561dd0e2f159d82bfed311cc7147316"
+          }
+        ],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9,
+              317
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              69,
+              71
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              367,
+              369
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              88,
+              94
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/wave.test.ts",
+            "lines": [
+              297,
+              298,
+              312
+            ],
+            "file_sha256": "0079f2b69abe8df7e6eec0f1e6a1be21278c3d07909757b704e03b32795f3cdb"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      }
+    },
+    {
+      "id": "H5",
+      "historical_scope": "law/H5-hilbert-is-the-obligatory-without-four-fields",
+      "historical_name": "H5-hilbert-is-the-obligatory-without-four-fields",
+      "current_kind": "conjecture",
+      "current_statement": "amplitudes with a phase and no origin, no signed ceiling, no resolution and no epoch band are what is left of a cell when those four fields are dropped, so the measurement problem is the absence of who, imposed symmetries the absence of a signed ceiling, the classical limit the absence of resolution and universal interference the absence of bands; restored, four claims in phase keep exactly the share of the whole their number leaves them against an environment spread over the period, and six origins around one value are six objects read finely and one read coarsely, so how many things there are is a reading; structural resemblance, one origin, not a claim about the world",
+      "source": {
+        "path": "src/laws/laws.bound",
+        "line": 94,
+        "line_text": "bound-lock/1 about=\"amplitudes with a phase and no origin, no signed ceiling, no resolution and no epoch band are what is left of a cell when those four fields are dropped, so the measurement problem is the absence of who, imposed symmetries the absence of a signed ceiling, the classical limit the absence of resolution and universal interference the absence of bands; restored, four claims in phase keep exactly the share of the whole their number leaves them against an environment spread over the period, and six origins around one value are six objects read finely and one read coarsely, so how many things there are is a reading; structural resemblance, one origin, not a claim about the world\" at=policy:law/H5 by=target form=alphabet kind=conjecture measure=status needs=samples/yes/H5-hilbert-is-the-obligatory-without-four-fields.json|samples/no/H5-hilbert-is-the-obligatory-without-four-fields.json restsOn=law/H3-a-distant-signature-moves-a-cell-that-did-not-move|law/T49-amplitude-has-sign-and-phase|law/T36-agreement-has-a-resolution|law/T45-cells-that-rest-on-one-bound-are-entangled role=demands scope=law/H5-hilbert-is-the-obligatory-without-four-fields value=present view=lattice",
+        "line_sha256": "6bfc4138eda618b9a79cb608479a8284c561dd0e2f159d82bfed311cc7147316",
+        "line_hash_convention": "UTF-8 line bytes excluding LF",
+        "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+      },
+      "proposed_replacement": "Relabel the current modeled observations as experiments, with inputs and falsifier retained; alternatively restate under a declared order-3 form. Exact alternative statement is replacement undefined; do not assert a law of the world.",
+      "proposal_basis": "§5 obl.relabel-H3-H5 / R15",
+      "hypotheses": [
+        "One-origin structural reading and finite simulation observations only",
+        "Order-3 alternative lacks declared form and proof; no law may cite these as law premises after relabel"
+      ],
+      "positive_test_proposal": "Proposal only: retained yes sample is labeled experiment and declares model, conditions and falsifier; inventory every dependent reference.",
+      "negative_test_proposal": "Proposal only: audit rejects any law resting on H3/H5 after experiment relabel, or any physical/general-law conclusion from finite model output.",
+      "status": "open; relabel decision and dependent-reference review pending",
+      "dependencies": {
+        "outgoing_restsOn": [
+          "law/H3-a-distant-signature-moves-a-cell-that-did-not-move",
+          "law/T49-amplitude-has-sign-and-phase",
+          "law/T36-agreement-has-a-resolution",
+          "law/T45-cells-that-rest-on-one-bound-are-entangled"
+        ],
+        "incoming_law_restsOn": [],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9,
+              317
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              71
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              114,
+              123,
+              125,
+              198,
+              369
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "offers.bound",
+            "lines": [
+              229,
+              230,
+              231,
+              232
+            ],
+            "file_sha256": "b8c5cb8e7f85719ee10f844d19593f6807144eb49d76964ec7f516211f8716a6"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              94
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/obligatory.test.ts",
+            "lines": [
+              159,
+              160,
+              177
+            ],
+            "file_sha256": "ed96aa9caebe83344c8ac845390439dd59ba649957a87f0d204223004f0f053e"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      }
+    }
+  ]
+}
