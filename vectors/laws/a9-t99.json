@@ -1,0 +1,71 @@
+{
+  "about": [
+    "A9 names the common object relation; it does not by itself supply finite height, progress, or iteration hypotheses.",
+    "Finite dependency traversal and repeated application of an arbitrary monotone map are distinct operations."
+  ],
+  "branches": {
+    "finite-dependency-evaluation": "For a finite world with finite rests and marks, existing restOf visits each distinct reachable coordinate once and parts computes finite meets of the handed marks and claims. On an acyclic dependency graph this answers without fixed-point iteration.",
+    "monotone-iteration": "Monotonicity alone does not imply eventual stabilization: reflection swaps the two incomparable singleton intervals in a four-element interval sublattice. Finite-height ascending or descending iterations stabilize, but progress/order hypotheses must be specified.",
+    "cycle-check-scope": "A query refuses when its own coordinate is reached again. A reachable cycle excluding that coordinate is deduplicated and can answer; querying each cell on the cycle refuses. Whole-world cycle refusal is different from every root query refusing."
+  },
+  "monotoneIteration": {
+    "carrier": "existing intervals(-1,1), restricted to bottom, singleton(-1), singleton(1), top",
+    "map": "[lo,hi] -> [-hi,-lo]",
+    "sequence": [
+      {
+        "lo": -1,
+        "hi": -1
+      },
+      {
+        "lo": 1,
+        "hi": 1
+      },
+      {
+        "lo": -1,
+        "hi": -1
+      }
+    ]
+  },
+  "reachableCycle": {
+    "edges": {
+      "root": [
+        "a"
+      ],
+      "a": [
+        "b"
+      ],
+      "b": [
+        "a"
+      ]
+    },
+    "rootRest": [
+      "a",
+      "b"
+    ],
+    "rootMeet": {
+      "lo": 2,
+      "hi": 8
+    },
+    "queriesThatRefuse": [
+      "a",
+      "b"
+    ]
+  },
+  "open": [
+    "The historical T99 implication from monotonicity alone to every finite-step fixed point is disproved by the finite counterexample; retain that historical branch with its counterexample.",
+    "Any stronger generalized self-fold claim needs an explicit operator, carrier, iteration seed, chain/progress and height conditions.",
+    "Finite mathematical traversal does not assert bounded machine resources for arbitrarily large worlds or totality of arbitrary supplied lattice operations."
+  ],
+  "publishedBranches": {
+    "law/A9": {
+      "statement": "one relation: an origin bounds a cell at a resolution and an epoch; cells, origins, locks and laws are cells under it; the relation bounds itself, and there is no level above it",
+      "source": "7fd489c:src/laws/laws.bound",
+      "scope": "published mathematical statement"
+    },
+    "law/T99": {
+      "statement": "the fold is a monotone map on a lattice over a rest order with no cycles: every fold reaches its fixed point in finitely many steps and never fails to answer.",
+      "source": "7fd489c:src/laws/laws.bound",
+      "scope": "published mathematical excerpt"
+    }
+  }
+}

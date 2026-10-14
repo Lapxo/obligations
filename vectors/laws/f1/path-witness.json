@@ -1,0 +1,55 @@
+{
+  "scope": "F1/simple-connected-block-graphs",
+  "status": "bounded mathematical argument and fixed distinguishing witnesses; not general reduction or exhaustive extremizers",
+  "proof": [
+    "Trivial meet and discrete join give a connected simple bipartite block graph with n edges. Its vertex degrees are positive integers with sum 2n and vertex count v<=n+1.",
+    "For integer d>=1, phi(d)=d log2(d)>=2(d-1), with equality exactly at d=1,2. For real d>=2 the derivative of phi(d)-2(d-1) is log2(d)+1/ln(2)-2>0; d=1,2 give equality directly.",
+    "Under the uniform measure, H(X)=log2(n)-sum_X d log2(d)/n and H(Y)=log2(n)-sum_Y d log2(d)/n. Trivial meet has entropy 0 and discrete join entropy log2(n), so RI=log2(n)-sum_vertices phi(d)/n directly. Thus sum phi(d)>=4n-2v>=2n-2 and RI<=c_n.",
+    "Equality requires v=n+1 and every degree in {1,2}: the connected graph is a tree of maximum degree two, hence a path. A path attains c_n since its degrees are two ones and n-1 twos."
+  ],
+  "remaining": [
+    "Reduction of weighted overlaps to discrete join without decreasing residual information",
+    "General nontrivial-meet decomposition and equality transfer",
+    "Independent origins and unrestricted equality classification"
+  ],
+  "pathSizes": [
+    3,
+    4,
+    5
+  ],
+  "negative": {
+    "name": "connected branching tree is not an extremal path",
+    "n": 4,
+    "x": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "y": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "degrees": [
+      3,
+      1,
+      1,
+      1,
+      2
+    ],
+    "expectedResidual": 0.31127812445913283,
+    "falseClaim": "Every connected simple tree with n edges attains c_n, regardless of its vertex degrees."
+  }
+}
