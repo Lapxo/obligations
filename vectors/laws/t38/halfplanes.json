@@ -1,0 +1,136 @@
+{
+  "about": [
+    "F3: each inequality has a.x+b.y <= bound. Nonnegative weights annihilate x/y and yield a negative bound, certifying infeasibility. Pair witnesses certify feasibility; no solver or general convexity theorem is introduced."
+  ],
+  "coverage": {
+    "criterion": "fixed witnesses and counterexamples only",
+    "could_exclude_counterexamples": true,
+    "why": "finite arithmetic checks; not a general proof or a native Bound capture"
+  },
+  "cases": [
+    {
+      "id": "seller-auditor",
+      "names": [
+        "seller",
+        "buyer",
+        "carrier",
+        "auditor"
+      ],
+      "planes": [
+        [
+          1,
+          1,
+          12
+        ],
+        [
+          -1,
+          0,
+          -3
+        ],
+        [
+          0,
+          -1,
+          -2
+        ],
+        [
+          -1,
+          -1,
+          -14
+        ]
+      ],
+      "feasibleSubset": {
+        "indices": [
+          0,
+          1,
+          2
+        ],
+        "point": [
+          3,
+          2
+        ]
+      },
+      "conflictIndices": [
+        0,
+        3
+      ],
+      "weights": [
+        1,
+        0,
+        0,
+        1
+      ],
+      "expectedSum": [
+        0,
+        0,
+        -2
+      ]
+    },
+    {
+      "id": "minimal-three",
+      "names": [
+        "x-positive",
+        "y-positive",
+        "negative-sum"
+      ],
+      "planes": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          1,
+          1,
+          -1
+        ]
+      ],
+      "pairWitnesses": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "point": [
+            0,
+            0
+          ]
+        },
+        {
+          "indices": [
+            0,
+            2
+          ],
+          "point": [
+            0,
+            -1
+          ]
+        },
+        {
+          "indices": [
+            1,
+            2
+          ],
+          "point": [
+            -1,
+            0
+          ]
+        }
+      ],
+      "weights": [
+        1,
+        1,
+        1
+      ],
+      "expectedSum": [
+        0,
+        0,
+        -1
+      ]
+    }
+  ]
+}

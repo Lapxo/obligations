@@ -1,0 +1,36 @@
+{
+  "about": [
+    "F4: RI = log2(n/p) - h(s/p), binary64-log2. Fixed oracle constants; halfphase is exactly one bit below inphase. No objective for near-phase is specified."
+  ],
+  "coverage": {
+    "criterion": "fixed witnesses and counterexamples only",
+    "could_exclude_counterexamples": true,
+    "why": "finite arithmetic checks; not a general proof or a native Bound capture"
+  },
+  "cases": [
+    {
+      "n": 12,
+      "p": 4,
+      "s": 0,
+      "expected": 1.584962500721156
+    },
+    {
+      "n": 12,
+      "p": 4,
+      "s": 1,
+      "expected": 0.7736843762620231
+    },
+    {
+      "n": 12,
+      "p": 4,
+      "s": 2,
+      "expected": 0.5849625007211561
+    },
+    {
+      "n": 12,
+      "p": 4,
+      "s": 3,
+      "expected": 0.7736843762620231
+    }
+  ]
+}

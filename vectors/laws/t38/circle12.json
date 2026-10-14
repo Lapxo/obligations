@@ -1,0 +1,56 @@
+{
+  "about": [
+    "F2: discrete points 0..11, five-point arcs; no declared cut. This finite counterexample refutes pairwise sufficiency here, not every finite Helly bound."
+  ],
+  "coverage": {
+    "criterion": "fixed witnesses and counterexamples only",
+    "could_exclude_counterexamples": true,
+    "why": "finite arithmetic checks; not a general proof or a native Bound capture"
+  },
+  "cases": [
+    {
+      "n": 12,
+      "length": 5,
+      "starts": [
+        0,
+        4,
+        8
+      ],
+      "expectedArcs": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      ],
+      "expectedPairMeets": [
+        [
+          4
+        ],
+        [
+          0
+        ],
+        [
+          8
+        ]
+      ],
+      "expectedTripleMeet": []
+    }
+  ]
+}

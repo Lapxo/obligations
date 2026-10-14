@@ -1,0 +1,42 @@
+{
+  "about": [
+    "F1: arithmetic of author-provided extrema formula and Bell squared counts, n=3..7. No partition enumeration, browser/WASM independence or general optimality proof is claimed."
+  ],
+  "coverage": {
+    "criterion": "fixed witnesses and counterexamples only",
+    "could_exclude_counterexamples": true,
+    "why": "finite arithmetic checks; not a general proof or a native Bound capture"
+  },
+  "cases": [
+    {
+      "n": 3,
+      "bell": 5,
+      "pairs": 25,
+      "expected": 0.2516291673878228
+    },
+    {
+      "n": 4,
+      "bell": 15,
+      "pairs": 225,
+      "expected": 0.5
+    },
+    {
+      "n": 5,
+      "bell": 52,
+      "pairs": 2704,
+      "expected": 0.7219280948873623
+    },
+    {
+      "n": 6,
+      "bell": 203,
+      "pairs": 41209,
+      "expected": 0.9182958340544894
+    },
+    {
+      "n": 7,
+      "bell": 877,
+      "pairs": 769129,
+      "expected": 1.093069207771889
+    }
+  ]
+}
