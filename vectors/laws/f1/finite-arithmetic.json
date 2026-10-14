@@ -1,7 +1,7 @@
 {
   "about": [
     "F1: this vector checks formula arithmetic and Bell-squared counts for n=3..7, using binary64 logarithms. It does not itself enumerate partition pairs.",
-    "Existing law samples and laws-papers tests already supply finite partition checks for the declared proof chain; their exact scope is recorded below. General optimality and browser/WASM independent verification are not established by this vector."
+    "Existing law samples and laws-papers tests supply finite partition checks. path-witness.json now supplies the explicit unrestricted proof chain under finite uniform partition hypotheses; arithmetic vectors do not themselves verify that argument or create independent origins."
   ],
   "coverage": {
     "criterion": "fixed witnesses and counterexamples only",
@@ -49,7 +49,8 @@
       "samples/yes/lem-identity.json",
       "samples/yes/lem-join.json",
       "samples/yes/lem-meet.json",
-      "samples/yes/thm-extremal.json"
+      "samples/yes/thm-extremal.json",
+      "vectors/laws/f1/path-witness.json"
     ],
     "finiteChecks": {
       "lem-phi": "t=1..6, equality at 1 and 2",
@@ -59,6 +60,6 @@
       "lem-join": "all ordered trivial-meet pairs on n=3,4,5: 15,119,1343; discrete-join pairs: 8,56,552",
       "thm-extremal": "existing test checks c_n formula values at n=1,2,4,16; this does not check all extremizers"
     },
-    "remaining": "No n=6,7 exhaustive extrema enumeration or independent browser/WASM execution is supplied by these referenced finite tests. The declared general proof still requires verification of its unrestricted derivations and equality classification."
+    "remaining": "No exhaustive n=6,7 extrema enumeration or independent browser/WASM execution is supplied. The explicit general argument is recorded separately in path-witness.json; independent-origin verification remains open."
   }
 }

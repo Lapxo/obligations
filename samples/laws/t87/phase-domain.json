@@ -55,6 +55,22 @@
         0.5
       ],
       "accepted": false
+    },
+    {
+      "input": [
+        1,
+        1,
+        0
+      ],
+      "accepted": true
+    },
+    {
+      "input": [
+        2,
+        2,
+        1
+      ],
+      "accepted": true
     }
   ]
 }

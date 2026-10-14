@@ -132,5 +132,66 @@
         -1
       ]
     }
-  ]
+  ],
+  "radonHelly": {
+    "about": "A square supplies an exact affine-dependence/Radon certificate and compatible three-set witnesses. This illustrates the finite convex Helly proof, not a generic convexity checker.",
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "coefficients": [
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "planes": [
+      [
+        -1,
+        -1,
+        -2
+      ],
+      [
+        1,
+        -1,
+        0
+      ],
+      [
+        -1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        2
+      ]
+    ],
+    "positiveIndices": [
+      0,
+      3
+    ],
+    "negativeIndices": [
+      1,
+      2
+    ],
+    "center": [
+      1,
+      1
+    ]
+  }
 }

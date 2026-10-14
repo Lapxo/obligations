@@ -48,3 +48,16 @@ test('T87: a cancelling pair does not imply the three-origin field is nonlaminar
   const intensity=(2+Math.cos(2))**2+Math.sin(2)**2;
   assert.ok(intensity>origins.length);
 });
+
+test('F4: integer-domain extrema include the one-shift period and allow negative RI',()=>{
+  for(const c of load('vectors/laws/t87/phase-controls.json').extrema) {
+    const values=Array.from({length:c.p},(_,s)=>ri(c.n,c.p,s));
+    const minimum=Math.min(...values),maximum=Math.max(...values);
+    assert.ok(Math.abs(minimum-c.minimum)<1e-12);
+    assert.ok(Math.abs(maximum-c.maximum)<1e-12);
+    assert.deepEqual(values.flatMap((value,s)=>Math.abs(value-minimum)<1e-12?[s]:[]),c.minShifts);
+    assert.deepEqual(values.flatMap((value,s)=>Math.abs(value-maximum)<1e-12?[s]:[]),c.maxShifts);
+    for(let s=1;s<c.p;s++) assert.ok(Math.abs(values[s]!-values[c.p-s]!)<1e-12);
+  }
+  assert.equal(ri(2,2,1),-1);
+});

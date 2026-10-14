@@ -1,6 +1,7 @@
 {
   "about": [
-    "F4: RI = log2(n/p) - h(s/p), binary64-log2. Fixed oracle constants; halfphase is exactly one bit below inphase. No objective for near-phase is specified."
+    "F4: RI = log2(n/p) - h(s/p), binary64-log2. Fixed oracle constants; halfphase is exactly one bit below inphase. No objective for near-phase is specified.",
+    "Under the handed integer domain: p=1 has only s=0; even p>=2 minimizes at p/2; odd p>=3 minimizes at (p-1)/2 and (p+1)/2. Maximum is at s=0. The formula can be negative when n=p; no physical worst-case interpretation is supplied."
   ],
   "coverage": {
     "criterion": "fixed witnesses and counterexamples only",
@@ -31,6 +32,45 @@
       "p": 4,
       "s": 3,
       "expected": 0.7736843762620231
+    }
+  ],
+  "extrema": [
+    {
+      "n": 1,
+      "p": 1,
+      "maxShifts": [
+        0
+      ],
+      "minShifts": [
+        0
+      ],
+      "maximum": 0,
+      "minimum": 0
+    },
+    {
+      "n": 2,
+      "p": 2,
+      "maxShifts": [
+        0
+      ],
+      "minShifts": [
+        1
+      ],
+      "maximum": 0,
+      "minimum": -1
+    },
+    {
+      "n": 5,
+      "p": 5,
+      "maxShifts": [
+        0
+      ],
+      "minShifts": [
+        2,
+        3
+      ],
+      "maximum": 0,
+      "minimum": -0.9709505944546686
     }
   ]
 }

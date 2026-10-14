@@ -73,3 +73,36 @@ test('T38: a singleton empty interval has vacuous distinct-pair agreement and an
   assert.equal(distinctPairs.every(pair=>L.inhabited!(pair)),true);
   assert.equal(L.inhabited!(xs.reduce(L.meet,L.top)),false);
 });
+
+test('L2: square affine dependence gives a Radon point in all four convex halfplanes',()=>{
+  const c=load('vectors/laws/t38/halfplanes.json').radonHelly;
+  const points:number[][]=c.points,coefficients:number[]=c.coefficients;
+  assert.equal(coefficients.reduce((a,b)=>a+b,0),0);
+  for(let j=0;j<2;j++) assert.equal(points.reduce((sum,p,i)=>sum+coefficients[i]!*p[j]!,0),0);
+  const average=(indices:number[])=>[0,1].map(j=>indices.reduce((sum,i)=>sum+points[i]![j]!,0)/indices.length);
+  assert.deepEqual(average(c.positiveIndices),c.center);
+  assert.deepEqual(average(c.negativeIndices),c.center);
+  const satisfies=(indices:number[],point:number[])=>indices.every(i=>{
+    const [a,b,bound]=c.planes[i];return a*point[0]!+b*point[1]!<=bound;
+  });
+  for(let i=0;i<points.length;i++) {
+    const others=points.map((_,j)=>j).filter(j=>j!==i);
+    assert.equal(satisfies(others,points[i]!),true);
+    assert.equal(satisfies([i],points[i]!),false);
+  }
+  assert.equal(satisfies(points.map((_,i)=>i),c.center),true);
+});
+
+test('L2: complement-singleton cyclic arcs have minimal empty families of growing size',()=>{
+  const intersect=(a:number[],b:number[])=>a.filter(x=>b.includes(x));
+  for(const n of load('vectors/laws/t38/circle12.json').complementSingleton.sizes as number[]) {
+    const universe=Array.from({length:n},(_,i)=>i);
+    const arcs=universe.map(i=>Array.from({length:n-1},(_,k)=>(i+1+k)%n));
+    for(let mask=0;mask<2**n;mask++) {
+      const selected=universe.filter(i=>mask&(1<<i));
+      const held=selected.map(i=>arcs[i]!).reduce(intersect,universe);
+      assert.deepEqual(held,universe.filter(i=>!selected.includes(i)));
+      assert.equal(held.length>0,selected.length<n);
+    }
+  }
+});

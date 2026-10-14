@@ -52,5 +52,14 @@
       ],
       "expectedTripleMeet": []
     }
-  ]
+  ],
+  "complementSingleton": {
+    "about": "For every n>=3, the n arcs of n-1 consecutive cyclic points, each omitting a different point, have nonempty intersection for every proper subfamily and empty total intersection. Thus Helly numbers are unbounded across discrete circle sizes; each fixed n still has a bound <= n.",
+    "sizes": [
+      3,
+      4,
+      5,
+      6
+    ]
+  }
 }
