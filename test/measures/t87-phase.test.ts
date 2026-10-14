@@ -1,9 +1,9 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {cancels} from '../../src/field/encounter.ts';
+import {cancels,laminar} from '../../src/field/encounter.ts';
 const load = (path:string) => JSON.parse(readFileSync(new URL(`../../${path}`,import.meta.url),'utf8'));
-// Proposed F4 arithmetic only. This is not an exported measure or a native reading adapter.
+// Provisional F4 arithmetic under the explicitly handed integer domain.
 const inDomain = ([n,p,s]:[number,number,number]) => Number.isSafeInteger(n)&&n>0&&Number.isSafeInteger(p)&&p>0&&
   n%p===0&&Number.isSafeInteger(s)&&s>=0&&s<p;
 const ri = (n:number,p:number,s:number) => {
@@ -30,4 +30,21 @@ test('T87 raw angle-distance statement needs wrapped phase: 0 and 2pi reinforce'
   assert.ok(Math.abs(a.phase-b.phase)>Math.PI/2);
   assert.equal(cancels(a,b),false);
   assert.ok(Math.abs((Math.cos(a.phase)+Math.cos(b.phase))**2+(Math.sin(a.phase)+Math.sin(b.phase))**2-4)<1e-12);
+});
+
+test('F4: odd integer periods cannot attain the continuous halfphase entropy bound',()=>{
+  // p=3 divides n=12, but s=p/2 is outside the integer-shift domain.
+  assert.equal(inDomain([12,3,1.5]),false);
+  const readings=[0,1,2].map(s=>ri(12,3,s));
+  assert.equal(readings[1],readings[2]);
+  assert.ok(readings[1]!<readings[0]!);
+  assert.ok(readings[1]!>Math.log2(12/3)-1);
+  assert.ok(Math.abs(readings[1]!-1.0817041659455104)<1e-12);
+});
+test('T87: a cancelling pair does not imply the three-origin field is nonlaminar',()=>{
+  const origins=[{name:'a',phase:0},{name:'b',phase:0},{name:'c',phase:2}];
+  assert.equal(cancels(origins[0]!,origins[2]!),true);
+  assert.equal(laminar(origins),true);
+  const intensity=(2+Math.cos(2))**2+Math.sin(2)**2;
+  assert.ok(intensity>origins.length);
 });

@@ -8,7 +8,7 @@ import {errorCovariance,participationRatio,spectrum,commonMass,loadings,commonMa
   type ExperimentPolicy,type Descent,type ModelM3,type EvaluationPolicy,
   type IdentificationInput,type IdentificationPolicy,type M3ExperimentPolicy,
   type FitStructure,type FitPolicy} from '../../src/measures/index.ts';
-import {commonCauseCapacityBound,unionBoundConfidence,type DeclaredFailure,type RationalInput,type LogarithmPolicy,capacityBound,capacityP0,mutualInformation,unanimityNoFactor,decisionInformation,
+import {capacityBound,capacityP0,mutualInformation,unanimityNoFactor,decisionInformation,
   fitUnanimityModel,coincidenceExcess,type CapacityModel,type CapacityPolicy,type DecisionRule,
   type UnanimityCurve,type UnanimityFitPolicy,type ValueReading,type TruthReading,
   type CoincidenceReference,type CoincidencePolicy} from '../../src/measures/index.ts';
@@ -26,8 +26,6 @@ type Sample = Named & (
     policy:EvaluationPolicy;identifications:readonly IdentificationInput[];
     identificationPolicy:IdentificationPolicy;experiment:M3ExperimentPolicy;
     fits:readonly Readonly<{rows:readonly ErrorEvent[];structure:FitStructure;policy:FitPolicy}>[]}> |
-  Readonly<{group:'common-cause-capacity';n:number;c:RationalInput;q:RationalInput;policy:LogarithmPolicy}> |
-  Readonly<{group:'confidence';failures:readonly DeclaredFailure[]}> |
   Readonly<{group:'capacity';model:CapacityModel;k:number;ks?:readonly number[];policy:CapacityPolicy}> |
   Readonly<{group:'decisions';model:CapacityModel;k:number;rule:DecisionRule;policy:CapacityPolicy}> |
   (Readonly<{group:'unanimity-fit';policy:UnanimityFitPolicy}> &
@@ -60,8 +58,6 @@ export function evaluate(sample:Sample) {
         interest:interestExperiment(sample.model,sample.bias,sample.shared,sample.experiment),sequence},states};
     }
     case 'descent':return {result:descentCount(sample.graph,sample.cell),states};
-    case 'common-cause-capacity':return {result:commonCauseCapacityBound(sample.n,sample.c,sample.q,sample.policy),states};
-    case 'confidence':return {result:unionBoundConfidence(sample.failures),states};
     case 'capacity':{
       const counts=sample.ks??[sample.k];
       if(!Array.isArray(counts)||!counts.length||new Set(counts).size!==counts.length)throw new Error('REFUSE·measure ambiguous capacity sizes');

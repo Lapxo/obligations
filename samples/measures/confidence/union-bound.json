@@ -1,7 +1,6 @@
 {
   "yes": {
     "group": "confidence",
-    "place": "t18",
     "failures": [
       {
         "id": "A",
@@ -21,7 +20,6 @@
   },
   "no": {
     "group": "confidence",
-    "place": "t18",
     "failures": [
       {
         "id": "A",
@@ -33,7 +31,6 @@
   },
   "trivial": {
     "group": "confidence",
-    "place": "t18",
     "failures": [
       {
         "id": "A",
@@ -52,8 +49,6 @@
     }
   },
   "open": [
-    "tolerant intersection semantics",
-    "justification authentication",
-    "native reader selection and capture"
+    "tolerant intersection semantics"
   ]
 }

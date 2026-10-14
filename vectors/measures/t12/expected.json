@@ -1,6 +1,5 @@
 {
-  "evidence": "fixed arithmetic oracle; not native capture or receipt",
-  "captureStatus": "open",
+  "evidence": "fixed arithmetic oracle",
   "values": [
     {
       "n": 4,

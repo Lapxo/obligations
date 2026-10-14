@@ -1,5 +1,6 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
 import {capacityBound,commonCauseCapacityBound} from '../../src/measures/capacity.ts';
 import type {RationalInput} from '../../src/measures/rational.ts';
 const policy={logarithm:'binary64-log2' as const};
@@ -10,6 +11,11 @@ test('T12 covering symmetric cause: fixed independent entropy oracles and endpoi
     ['1','1/2',0.20751874963942196],['1','1/4',0],
     ['1/5','0',1.6830074998557687],['1/5','1/2',1.6415037499278844],
   ] as const)near(commonCauseCapacityBound(4,c,q,policy).value,expected);
+  const vector=JSON.parse(readFileSync(new URL('../../vectors/measures/t12/expected.json',import.meta.url),'utf8'));
+  for(const {n,c,q,bits} of vector.values)near(commonCauseCapacityBound(n,c,q,policy).value,bits);
+  const samples=JSON.parse(readFileSync(new URL('../../samples/measures/t12/common-cause.json',import.meta.url),'utf8'));
+  near(commonCauseCapacityBound(samples.yes.n,samples.yes.c,samples.yes.q,samples.yes.policy).value,samples.yes.expectedBits);
+  assert.throws(()=>commonCauseCapacityBound(samples.no.n,samples.no.c,samples.no.q,samples.no.policy),/accuracy q required/);
   near(commonCauseCapacityBound(2,'1','0',policy).value,1); // invertible all-wrong binary channel
 });
 test('T12 copying one symmetric channel preserves joint-table mutual information',()=>{

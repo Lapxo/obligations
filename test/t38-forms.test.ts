@@ -53,3 +53,23 @@ test('F1: finite formula arithmetic and Bell squared counts are reproduced, not 
     assert.ok(Math.abs(Math.log2(c.n)-2+2/c.n-c.expected)<1e-12);
   }
 });
+
+// The extremal endpoint pair is the certificate in the finite-interval proof.
+// This verifies the certificate on the handed fixtures, not a generic-form theorem.
+test('T38: extremal endpoint claims reproduce the family meet, including a shared singleton',()=>{
+  for(const c of load('samples/laws/t38/intervals.json').cases) {
+    const xs=c.intervals.map(([lo,hi]:number[])=>({lo:lo!,hi:hi!}));
+    assert.ok(xs.length>0 && xs.every((x:{lo:number;hi:number})=>x.lo<=x.hi));
+    const lower=xs.reduce((a:{lo:number;hi:number},b:{lo:number;hi:number})=>a.lo>=b.lo?a:b);
+    const upper=xs.reduce((a:{lo:number;hi:number},b:{lo:number;hi:number})=>a.hi<=b.hi?a:b);
+    assert.deepEqual(L.meet(lower,upper),xs.reduce(L.meet,L.top));
+    assert.equal(L.inhabited!(L.meet(lower,upper)),c.expected!==undefined);
+  }
+});
+
+test('T38: a singleton empty interval has vacuous distinct-pair agreement and an empty family meet',()=>{
+  const xs=[{lo:2,hi:1}];
+  const distinctPairs=xs.flatMap((a,i)=>xs.slice(i+1).map(b=>L.meet(a,b)));
+  assert.equal(distinctPairs.every(pair=>L.inhabited!(pair)),true);
+  assert.equal(L.inhabited!(xs.reduce(L.meet,L.top)),false);
+});

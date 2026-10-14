@@ -1,180 +1,104 @@
 {
   "base": "0a73d2f",
-  "scope": "source documentary branches, not admitted standing or TARGET withdrawal",
   "branches": [
     {
       "id": "T12",
-      "scope": "law/T12-reliability-is-encounter-rate",
-      "alias": "T12-reliability-is-encounter-rate",
-      "line": "bound-lock/1 about=\"the fraction of a domain's claims that are facts equals its second-origin rate; drift and surviving falsehood are its complement\" at=policy:law/T12 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T12-reliability-is-encounter-rate.json|samples/no/T12-reliability-is-encounter-rate.json restsOn=law/A1-encounter|law/T10-drift role=demands scope=law/T12-reliability-is-encounter-rate value=present view=valuation",
-      "fields": {
-        "about": "the fraction of a domain's claims that are facts equals its second-origin rate; drift and surviving falsehood are its complement",
-        "at": "policy:law/T12",
-        "by": "target",
-        "form": "alphabet",
-        "kind": "theorem",
-        "measure": "status",
-        "needs": "samples/yes/T12-reliability-is-encounter-rate.json|samples/no/T12-reliability-is-encounter-rate.json",
-        "restsOn": "law/A1-encounter|law/T10-drift",
-        "role": "demands",
-        "scope": "law/T12-reliability-is-encounter-rate",
-        "value": "present",
-        "view": "valuation"
-      }
+      "statement": "the fraction of a domain's claims that are facts equals its second-origin rate; drift and surviving falsehood are its complement",
+      "kind": "theorem",
+      "dependencies": [
+        "law/A1-encounter",
+        "law/T10-drift"
+      ]
     },
     {
       "id": "T18",
-      "scope": "law/T18-freedom-is-a-currency",
-      "alias": "T18-freedom-is-a-currency",
-      "line": "bound-lock/1 about=\"closed bits with a second origin are scarce, unforgeable, measurable, transferable and third-party verifiable; no issuer exists\" at=policy:law/T18 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T18-freedom-is-a-currency.json restsOn=law/A7-freedom-conserved|law/D9-yield|law/A5-origin-is-extension role=demands scope=law/T18-freedom-is-a-currency value=present view=valuation",
-      "fields": {
-        "about": "closed bits with a second origin are scarce, unforgeable, measurable, transferable and third-party verifiable; no issuer exists",
-        "at": "policy:law/T18",
-        "by": "target",
-        "form": "alphabet",
-        "kind": "theorem",
-        "measure": "status",
-        "needs": "samples/yes/T18-freedom-is-a-currency.json",
-        "restsOn": "law/A7-freedom-conserved|law/D9-yield|law/A5-origin-is-extension",
-        "role": "demands",
-        "scope": "law/T18-freedom-is-a-currency",
-        "value": "present",
-        "view": "valuation"
-      }
+      "statement": "closed bits with a second origin are scarce, unforgeable, measurable, transferable and third-party verifiable; no issuer exists",
+      "kind": "theorem",
+      "dependencies": [
+        "law/A7-freedom-conserved",
+        "law/D9-yield",
+        "law/A5-origin-is-extension"
+      ]
     },
     {
       "id": "T38",
-      "scope": "law/T38-origins-are-a-polygon",
-      "alias": "T38-origins-are-a-polygon",
-      "line": "bound-lock/1 about=\"n independent origins on a cell are the vertices of a polygon whose interior is their meet: two an edge, three an area, four a vertex the others do not enclose, five a verdict that holds without any one of them, and beyond that a meet that narrows toward consensus — a meet that never closes at any n is two cells wearing one name\" at=policy:law/T38 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T38-origins-are-a-polygon.json restsOn=law/A1-encounter|law/A2-meet|law/A5-origin-is-extension|law/T2-coordinate-where-disagree role=demands scope=law/T38-origins-are-a-polygon value=present view=product",
-      "fields": {
-        "about": "n independent origins on a cell are the vertices of a polygon whose interior is their meet: two an edge, three an area, four a vertex the others do not enclose, five a verdict that holds without any one of them, and beyond that a meet that narrows toward consensus — a meet that never closes at any n is two cells wearing one name",
-        "at": "policy:law/T38",
-        "by": "target",
-        "form": "alphabet",
-        "kind": "theorem",
-        "measure": "status",
-        "needs": "samples/yes/T38-origins-are-a-polygon.json",
-        "restsOn": "law/A1-encounter|law/A2-meet|law/A5-origin-is-extension|law/T2-coordinate-where-disagree",
-        "role": "demands",
-        "scope": "law/T38-origins-are-a-polygon",
-        "value": "present",
-        "view": "product"
-      }
+      "statement": "n independent origins on a cell are the vertices of a polygon whose interior is their meet: two an edge, three an area, four a vertex the others do not enclose, five a verdict that holds without any one of them, and beyond that a meet that narrows toward consensus — a meet that never closes at any n is two cells wearing one name",
+      "kind": "theorem",
+      "dependencies": [
+        "law/A1-encounter",
+        "law/A2-meet",
+        "law/A5-origin-is-extension",
+        "law/T2-coordinate-where-disagree"
+      ]
     },
     {
       "id": "T87",
-      "scope": "law/T87-the-quarter-turn",
-      "alias": "T87-the-quarter-turn",
-      "line": "bound-lock/1 about=\"two claims reinforce within a quarter turn of each other and cancel beyond it, since |e^{ia} + e^{ib}|² < 2 exactly when |a − b| > π/2: a fork is destructive interference, and a field is laminar while fewer than half its pairs lie beyond a quarter turn, forks over closes below one\" at=policy:law/T87 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T87-the-quarter-turn.json|samples/no/T87-the-quarter-turn.json restsOn=law/T48-epoch-is-phase|law/T49-amplitude-has-sign-and-phase|law/A8-four-states role=demands scope=law/T87-the-quarter-turn value=present view=field",
-      "fields": {
-        "about": "two claims reinforce within a quarter turn of each other and cancel beyond it, since |e^{ia} + e^{ib}|² < 2 exactly when |a − b| > π/2: a fork is destructive interference, and a field is laminar while fewer than half its pairs lie beyond a quarter turn, forks over closes below one",
-        "at": "policy:law/T87",
-        "by": "target",
-        "form": "alphabet",
-        "kind": "theorem",
-        "measure": "status",
-        "needs": "samples/yes/T87-the-quarter-turn.json|samples/no/T87-the-quarter-turn.json",
-        "restsOn": "law/T48-epoch-is-phase|law/T49-amplitude-has-sign-and-phase|law/A8-four-states",
-        "role": "demands",
-        "scope": "law/T87-the-quarter-turn",
-        "value": "present",
-        "view": "field"
-      }
+      "statement": "two claims reinforce within a quarter turn of each other and cancel beyond it, since |e^{ia} + e^{ib}|² < 2 exactly when |a − b| > π/2: a fork is destructive interference, and a field is laminar while fewer than half its pairs lie beyond a quarter turn, forks over closes below one",
+      "kind": "theorem",
+      "dependencies": [
+        "law/T48-epoch-is-phase",
+        "law/T49-amplitude-has-sign-and-phase",
+        "law/A8-four-states"
+      ]
     },
     {
       "id": "H3",
-      "scope": "law/H3-a-distant-signature-moves-a-cell-that-did-not-move",
-      "alias": "H3-a-distant-signature-moves-a-cell-that-did-not-move",
-      "line": "bound-lock/1 about=\"stated as a hint and never as a claim about the world: if what is is a field of floors and ceilings, a distant signature changes a cell whose own record never moved, and in two hundred trials of one cell holding one value the verdict came out both ways, so nothing stored at the cell explains the difference and what explains it is the bound the cell rests on; the resemblance is structural and never arithmetic, with no continuous amplitudes and no inequality violated by number; structural resemblance, one origin, not a claim about the world\" at=policy:law/H3 by=target form=alphabet kind=conjecture measure=status needs=samples/yes/H3-a-distant-signature-moves-a-cell-that-did-not-move.json|samples/no/H3-a-distant-signature-moves-a-cell-that-did-not-move.json restsOn=law/T46-a-bound-moves-cells-no-walk-reaches|law/T47-a-two-pole-object role=demands scope=law/H3-a-distant-signature-moves-a-cell-that-did-not-move value=present view=lattice",
-      "fields": {
-        "about": "stated as a hint and never as a claim about the world: if what is is a field of floors and ceilings, a distant signature changes a cell whose own record never moved, and in two hundred trials of one cell holding one value the verdict came out both ways, so nothing stored at the cell explains the difference and what explains it is the bound the cell rests on; the resemblance is structural and never arithmetic, with no continuous amplitudes and no inequality violated by number; structural resemblance, one origin, not a claim about the world",
-        "at": "policy:law/H3",
-        "by": "target",
-        "form": "alphabet",
-        "kind": "conjecture",
-        "measure": "status",
-        "needs": "samples/yes/H3-a-distant-signature-moves-a-cell-that-did-not-move.json|samples/no/H3-a-distant-signature-moves-a-cell-that-did-not-move.json",
-        "restsOn": "law/T46-a-bound-moves-cells-no-walk-reaches|law/T47-a-two-pole-object",
-        "role": "demands",
-        "scope": "law/H3-a-distant-signature-moves-a-cell-that-did-not-move",
-        "value": "present",
-        "view": "lattice"
-      }
+      "statement": "stated as a hint and never as a claim about the world: if what is is a field of floors and ceilings, a distant signature changes a cell whose own record never moved, and in two hundred trials of one cell holding one value the verdict came out both ways, so nothing stored at the cell explains the difference and what explains it is the bound the cell rests on; the resemblance is structural and never arithmetic, with no continuous amplitudes and no inequality violated by number; structural resemblance, one origin, not a claim about the world",
+      "kind": "conjecture",
+      "dependencies": [
+        "law/T46-a-bound-moves-cells-no-walk-reaches",
+        "law/T47-a-two-pole-object"
+      ]
     },
     {
       "id": "H5",
-      "scope": "law/H5-hilbert-is-the-obligatory-without-four-fields",
-      "alias": "H5-hilbert-is-the-obligatory-without-four-fields",
-      "line": "bound-lock/1 about=\"amplitudes with a phase and no origin, no signed ceiling, no resolution and no epoch band are what is left of a cell when those four fields are dropped, so the measurement problem is the absence of who, imposed symmetries the absence of a signed ceiling, the classical limit the absence of resolution and universal interference the absence of bands; restored, four claims in phase keep exactly the share of the whole their number leaves them against an environment spread over the period, and six origins around one value are six objects read finely and one read coarsely, so how many things there are is a reading; structural resemblance, one origin, not a claim about the world\" at=policy:law/H5 by=target form=alphabet kind=conjecture measure=status needs=samples/yes/H5-hilbert-is-the-obligatory-without-four-fields.json|samples/no/H5-hilbert-is-the-obligatory-without-four-fields.json restsOn=law/H3-a-distant-signature-moves-a-cell-that-did-not-move|law/T49-amplitude-has-sign-and-phase|law/T36-agreement-has-a-resolution|law/T45-cells-that-rest-on-one-bound-are-entangled role=demands scope=law/H5-hilbert-is-the-obligatory-without-four-fields value=present view=lattice",
-      "fields": {
-        "about": "amplitudes with a phase and no origin, no signed ceiling, no resolution and no epoch band are what is left of a cell when those four fields are dropped, so the measurement problem is the absence of who, imposed symmetries the absence of a signed ceiling, the classical limit the absence of resolution and universal interference the absence of bands; restored, four claims in phase keep exactly the share of the whole their number leaves them against an environment spread over the period, and six origins around one value are six objects read finely and one read coarsely, so how many things there are is a reading; structural resemblance, one origin, not a claim about the world",
-        "at": "policy:law/H5",
-        "by": "target",
-        "form": "alphabet",
-        "kind": "conjecture",
-        "measure": "status",
-        "needs": "samples/yes/H5-hilbert-is-the-obligatory-without-four-fields.json|samples/no/H5-hilbert-is-the-obligatory-without-four-fields.json",
-        "restsOn": "law/H3-a-distant-signature-moves-a-cell-that-did-not-move|law/T49-amplitude-has-sign-and-phase|law/T36-agreement-has-a-resolution|law/T45-cells-that-rest-on-one-bound-are-entangled",
-        "role": "demands",
-        "scope": "law/H5-hilbert-is-the-obligatory-without-four-fields",
-        "value": "present",
-        "view": "lattice"
-      }
+      "statement": "amplitudes with a phase and no origin, no signed ceiling, no resolution and no epoch band are what is left of a cell when those four fields are dropped, so the measurement problem is the absence of who, imposed symmetries the absence of a signed ceiling, the classical limit the absence of resolution and universal interference the absence of bands; restored, four claims in phase keep exactly the share of the whole their number leaves them against an environment spread over the period, and six origins around one value are six objects read finely and one read coarsely, so how many things there are is a reading; structural resemblance, one origin, not a claim about the world",
+      "kind": "conjecture",
+      "dependencies": [
+        "law/H3-a-distant-signature-moves-a-cell-that-did-not-move",
+        "law/T49-amplitude-has-sign-and-phase",
+        "law/T36-agreement-has-a-resolution",
+        "law/T45-cells-that-rest-on-one-bound-are-entangled"
+      ]
     },
     {
       "id": "T40",
-      "scope": "law/T40-cost-by-density",
-      "alias": "T40-cost-by-density",
-      "line": "bound-lock/1 about=\"what knowing costs is not set by how many origins look but by where they land: one budget of two hundred gives a ratio near two placed blind and above twenty placed where reading already is, so the shape of what is known is a fact about placement, and it leaves cities and deserts in one field\" at=policy:law/T40 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T40-cost-by-density.json restsOn=law/T38-origins-are-a-polygon|law/T27-disagreement-can-be-provoked|law/T18-freedom-is-a-currency role=demands scope=law/T40-cost-by-density value=present view=field",
-      "fields": {
-        "about": "what knowing costs is not set by how many origins look but by where they land: one budget of two hundred gives a ratio near two placed blind and above twenty placed where reading already is, so the shape of what is known is a fact about placement, and it leaves cities and deserts in one field",
-        "at": "policy:law/T40",
-        "by": "target",
-        "form": "alphabet",
-        "kind": "theorem",
-        "measure": "status",
-        "needs": "samples/yes/T40-cost-by-density.json",
-        "restsOn": "law/T38-origins-are-a-polygon|law/T27-disagreement-can-be-provoked|law/T18-freedom-is-a-currency",
-        "role": "demands",
-        "scope": "law/T40-cost-by-density",
-        "value": "present",
-        "view": "field"
-      }
+      "statement": "what knowing costs is not set by how many origins look but by where they land: one budget of two hundred gives a ratio near two placed blind and above twenty placed where reading already is, so the shape of what is known is a fact about placement, and it leaves cities and deserts in one field",
+      "kind": "theorem",
+      "dependencies": [
+        "law/T38-origins-are-a-polygon",
+        "law/T27-disagreement-can-be-provoked",
+        "law/T18-freedom-is-a-currency"
+      ]
     },
     {
       "id": "T44",
-      "scope": "law/T44-an-origin-is-worth-its-reach",
-      "alias": "T44-an-origin-is-worth-its-reach",
-      "line": "bound-lock/1 about=\"one claim of one width is worth what it connects: nothing inside a city where every pair already had a walk, one pair between two lone cells, and the product of two components when it lands across a desert, so where to look is a question with an answer and the answer is read before the claim lands\" at=policy:law/T44 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T44-an-origin-is-worth-its-reach.json restsOn=law/T41-distance-is-the-walk-between-lookings|law/T27-disagreement-can-be-provoked|law/T18-freedom-is-a-currency|law/A5-origin-is-extension role=demands scope=law/T44-an-origin-is-worth-its-reach value=present view=field",
-      "fields": {
-        "about": "one claim of one width is worth what it connects: nothing inside a city where every pair already had a walk, one pair between two lone cells, and the product of two components when it lands across a desert, so where to look is a question with an answer and the answer is read before the claim lands",
-        "at": "policy:law/T44",
-        "by": "target",
-        "form": "alphabet",
-        "kind": "theorem",
-        "measure": "status",
-        "needs": "samples/yes/T44-an-origin-is-worth-its-reach.json",
-        "restsOn": "law/T41-distance-is-the-walk-between-lookings|law/T27-disagreement-can-be-provoked|law/T18-freedom-is-a-currency|law/A5-origin-is-extension",
-        "role": "demands",
-        "scope": "law/T44-an-origin-is-worth-its-reach",
-        "value": "present",
-        "view": "field"
-      }
+      "statement": "one claim of one width is worth what it connects: nothing inside a city where every pair already had a walk, one pair between two lone cells, and the product of two components when it lands across a desert, so where to look is a question with an answer and the answer is read before the claim lands",
+      "kind": "theorem",
+      "dependencies": [
+        "law/T41-distance-is-the-walk-between-lookings",
+        "law/T27-disagreement-can-be-provoked",
+        "law/T18-freedom-is-a-currency",
+        "law/A5-origin-is-extension"
+      ]
     },
     {
       "id": "T87.formula",
-      "scope": "law/T87-the-quarter-turn/formula",
-      "line": "bound-lock/1 at=policy:law/formulas by=target form=formula measure=text role=writes scope=law/T87-the-quarter-turn/formula value=\"|e^{ia} + e^{ib}|² < 2 ⟺ |a − b| > π/2\"",
-      "fields": {
-        "at": "policy:law/formulas",
-        "by": "target",
-        "form": "formula",
-        "measure": "text",
-        "role": "writes",
-        "scope": "law/T87-the-quarter-turn/formula",
-        "value": "|e^{ia} + e^{ib}|² < 2 ⟺ |a − b| > π/2"
-      }
+      "statement": "|e^{ia} + e^{ib}|² < 2 ⟺ |a − b| > π/2",
+      "kind": "historical",
+      "dependencies": []
+    },
+    {
+      "id": "T88",
+      "statement": "phases spread evenly give forks over closes of exactly one; above one is several coherences facing each other, and only a third coherence lowers it",
+      "kind": "historical",
+      "dependencies": []
+    },
+    {
+      "id": "T89",
+      "statement": "disagreement is where to look: a policy that weights the cells whose origins lie beyond a quarter turn of each other closes more than one blind to them",
+      "kind": "historical",
+      "dependencies": []
     }
   ]
 }

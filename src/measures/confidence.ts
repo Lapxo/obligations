@@ -11,7 +11,7 @@ export function unionBoundConfidence(failures:readonly DeclaredFailure[]){
   if(!Array.isArray(failures))refuse('declared failures required');
   let sum=zero;
   const names=new Set<string>();
-  const declarations=failures.map(failure=>{
+  const declarations=Array.from(failures,failure=>{
     if(!failure||typeof failure.id!=='string'||failure.id.trim()==='')refuse('failure identity required');
     if(names.has(failure.id))refuse('duplicate failure identity');
     names.add(failure.id);
