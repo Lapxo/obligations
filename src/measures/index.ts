@@ -22,5 +22,5 @@ export {fitUnanimityModel} from './unanimity-fit.ts';
 export type {UnanimityCount,UnanimityGroup,UnanimityCurve,UnanimityFitPolicy} from './unanimity-fit.ts';
 export {coincidenceExcess} from './coincidence.ts';
 export type {ValueReading,TruthReading,CoincidenceReference,CoincidencePolicy} from './coincidence.ts';
-export {unionBoundConfidence} from './confidence.ts';
+export {unionBoundConfidence,tolerantCountConfidence} from './confidence.ts';
 export type {DeclaredFailure} from './confidence.ts';

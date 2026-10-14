@@ -58,6 +58,15 @@ test('F4: integer-domain extrema include the one-shift period and allow negative
     assert.deepEqual(values.flatMap((value,s)=>Math.abs(value-minimum)<1e-12?[s]:[]),c.minShifts);
     assert.deepEqual(values.flatMap((value,s)=>Math.abs(value-maximum)<1e-12?[s]:[]),c.maxShifts);
     for(let s=1;s<c.p;s++) assert.ok(Math.abs(values[s]!-values[c.p-s]!)<1e-12);
+    const nonzero=values.slice(1);
+    if(nonzero.length===0) {
+      assert.equal(c.nonzeroMaximum,null);
+      assert.deepEqual(c.nonzeroMaxShifts,[]);
+    } else {
+      const maxNonzero=Math.max(...nonzero);
+      assert.ok(Math.abs(maxNonzero-c.nonzeroMaximum)<1e-12);
+      assert.deepEqual(values.flatMap((value,s)=>s>0&&Math.abs(value-maxNonzero)<1e-12?[s]:[]),c.nonzeroMaxShifts);
+    }
   }
   assert.equal(ri(2,2,1),-1);
 });

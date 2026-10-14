@@ -1,0 +1,151 @@
+{
+  "about": [
+    "Two mathematical forms are distinct: intersection after declared interval dilation, and membership in at least m-k of the original sets. No default choice is supplied.",
+    "Dilation here applies only to nonempty closed intervals with finite endpoints and explicitly declared finite nonnegative radii in the same units. Floating overflow is outside the finite-output domain.",
+    "A union-bound guarantee concerns the events truth belongs to each widened set, with justified p_i in one probability space. Radius declarations alone supply no probability or truth metric. If justified failure bounds already hold for the raw sets, inclusion in their dilations also preserves those bounds."
+  ],
+  "dilation": {
+    "unit": "length",
+    "radiusUnit": "length",
+    "intervals": [
+      [
+        0,
+        2
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        6
+      ]
+    ],
+    "radii": [
+      1,
+      1,
+      1
+    ],
+    "widened": [
+      [
+        -1,
+        3
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        7
+      ]
+    ],
+    "rawMeetEmpty": true,
+    "widenedMeet": [
+      3,
+      3
+    ]
+  },
+  "disconnectedUnion": {
+    "intervals": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "m": 2,
+    "k": 1,
+    "exactComponents": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "hull": [
+      0,
+      2
+    ],
+    "excludedGapPoint": 1,
+    "meaning": "For k=1,m=2, at least one set must contain the point. The exact union is disconnected; the interval lattice join is its hull and includes an unwarranted gap."
+  },
+  "open": [
+    "Which form a given contract requests, and its actual radius or count tolerance, must be supplied.",
+    "This geometry does not establish empirical probability premises or an API refusal contract for absent, negative, nonfinite or mismatched-unit radii."
+  ],
+  "countExamples": {
+    "m": 4,
+    "k": 1,
+    "intervals": [
+      [
+        0,
+        10
+      ],
+      [
+        2,
+        12
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        20,
+        30
+      ]
+    ],
+    "subsetIndices": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "exactComponents": [
+      [
+        3,
+        8
+      ]
+    ],
+    "disjointIntervals": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ]
+  }
+}

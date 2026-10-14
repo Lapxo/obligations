@@ -1,7 +1,8 @@
 {
   "about": [
     "F4: RI = log2(n/p) - h(s/p), binary64-log2. Fixed oracle constants; halfphase is exactly one bit below inphase. No objective for near-phase is specified.",
-    "Under the handed integer domain: p=1 has only s=0; even p>=2 minimizes at p/2; odd p>=3 minimizes at (p-1)/2 and (p+1)/2. Maximum is at s=0. The formula can be negative when n=p; no physical worst-case interpretation is supplied."
+    "Under the handed integer domain: p=1 has only s=0; even p>=2 minimizes at p/2; odd p>=3 minimizes at (p-1)/2 and (p+1)/2. Maximum is at s=0. The formula can be negative when n=p; no physical worst-case interpretation is supplied.",
+    "On nonzero integer shifts 1<=s<p, p=1 has an empty domain, p=2 has the sole shift 1, and p>=3 has both maximizing shifts 1 and p-1. Calling the expression phase defect is a definition of signed arithmetic, not proof that it measures common-part entropy or physical phase information."
   ],
   "coverage": {
     "criterion": "fixed witnesses and counterexamples only",
@@ -32,6 +33,24 @@
       "p": 4,
       "s": 3,
       "expected": 0.7736843762620231
+    },
+    {
+      "n": 8,
+      "p": 4,
+      "s": 1,
+      "expected": 0.18872187554086717
+    },
+    {
+      "n": 8,
+      "p": 4,
+      "s": 2,
+      "expected": 0
+    },
+    {
+      "n": 4,
+      "p": 4,
+      "s": 2,
+      "expected": -1
     }
   ],
   "extrema": [
@@ -45,7 +64,9 @@
         0
       ],
       "maximum": 0,
-      "minimum": 0
+      "minimum": 0,
+      "nonzeroMaxShifts": [],
+      "nonzeroMaximum": null
     },
     {
       "n": 2,
@@ -57,7 +78,11 @@
         1
       ],
       "maximum": 0,
-      "minimum": -1
+      "minimum": -1,
+      "nonzeroMaxShifts": [
+        1
+      ],
+      "nonzeroMaximum": -1
     },
     {
       "n": 5,
@@ -70,7 +95,12 @@
         3
       ],
       "maximum": 0,
-      "minimum": -0.9709505944546686
+      "minimum": -0.9709505944546686,
+      "nonzeroMaxShifts": [
+        1,
+        4
+      ],
+      "nonzeroMaximum": -0.7219280948873623
     }
   ]
 }

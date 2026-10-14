@@ -1,0 +1,52 @@
+{
+  "about": [
+    "Two finite joint distributions satisfy the same proposed binary factor marginals: uniform truth, both factors always active independently, and each factor correct with probability 1/2 conditional on either truth.",
+    "An erasure symbol is an observed output, not absence of observation. Conditional factor-emission dependence changes its information about truth; independent activation alone does not determine that dependence."
+  ],
+  "truthMass": 0.5,
+  "activationProbabilities": [1,1],
+  "correctness": [0.5,0.5],
+  "outputRule": "equal emissions produce their shared bit; different emissions produce the observed symbol erasure",
+  "laws": [
+    {
+      "name": "truth-dependent-emission-coupling",
+      "joint": [
+        {"truth":0,"factors":[0,1],"mass":0.25},
+        {"truth":0,"factors":[1,0],"mass":0.25},
+        {"truth":1,"factors":[0,0],"mass":0.25},
+        {"truth":1,"factors":[1,1],"mass":0.25}
+      ],
+      "observedJoint": [
+        {"truth":0,"output":"erasure","mass":0.5},
+        {"truth":1,"output":"0","mass":0.25},
+        {"truth":1,"output":"1","mass":0.25}
+      ],
+      "informationBits": 1,
+      "erasureIndicatorInformationBits": 1
+    },
+    {
+      "name": "conditionally-independent-uniform-emissions",
+      "joint": [
+        {"truth":0,"factors":[0,0],"mass":0.125},
+        {"truth":0,"factors":[0,1],"mass":0.125},
+        {"truth":0,"factors":[1,0],"mass":0.125},
+        {"truth":0,"factors":[1,1],"mass":0.125},
+        {"truth":1,"factors":[0,0],"mass":0.125},
+        {"truth":1,"factors":[0,1],"mass":0.125},
+        {"truth":1,"factors":[1,0],"mass":0.125},
+        {"truth":1,"factors":[1,1],"mass":0.125}
+      ],
+      "observedJoint": [
+        {"truth":0,"output":"0","mass":0.125},
+        {"truth":0,"output":"erasure","mass":0.25},
+        {"truth":0,"output":"1","mass":0.125},
+        {"truth":1,"output":"0","mass":0.125},
+        {"truth":1,"output":"erasure","mass":0.25},
+        {"truth":1,"output":"1","mass":0.125}
+      ],
+      "informationBits": 0,
+      "erasureIndicatorInformationBits": 0
+    }
+  ],
+  "conclusion": "The proposed marginals and independent activation do not determine the joint output law. The unconditional claim that an erasure contributes zero information is false for an observed erasure signal. These counterexamples define no new M/4 or M/3 contract."
+}

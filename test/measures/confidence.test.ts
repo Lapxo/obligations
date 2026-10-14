@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {unionBoundConfidence,type DeclaredFailure} from '../../src/measures/confidence.ts';
+import {unionBoundConfidence,tolerantCountConfidence,type DeclaredFailure} from '../../src/measures/confidence.ts';
 const declaration=(id:string,p:string)=>({id,p,justification:`hypothesis:${id}`});
 test('T18 exact union-bound; no independence premise',()=>{
   const samples=JSON.parse(readFileSync(new URL('../../samples/measures/confidence/union-bound.json',import.meta.url),'utf8'));
@@ -69,4 +69,66 @@ test('T18 can be sharp under dependence; an independence product can overstate s
   // If both failures instead name the same event, success is 7/10; the
   // same union bound remains valid but is no longer tight.
   assert.ok(7n*BigInt(result.value.denominator)>=10n*BigInt(result.value.numerator));
+});
+
+test('C1 failure count bound excludes the false k+1-largest guarantee',()=>{
+  // Three disjoint outcomes, each of mass 1/10, fail disjoint pairs;
+  // the remaining outcome of mass 7/10 fails nobody. Every marginal is 1/10.
+  const outcomes=[{weight:1,failed:[0,1]},{weight:1,failed:[2,3]},
+    {weight:1,failed:[4,5]},{weight:7,failed:[]}];
+  const declarations=Array.from({length:6},(_,i)=>declaration(String(i),'1/10'));
+  for(let i=0;i<6;i++)assert.equal(outcomes.reduce((sum,row)=>sum+(row.failed.includes(i)?row.weight:0),0),1);
+  const actual=outcomes.reduce((sum,row)=>sum+(row.failed.length<=1?row.weight:0),0);
+  assert.equal(actual,7);
+  const result=tolerantCountConfidence(declarations,1);
+  assert.deepEqual(result.value,{numerator:'7',denominator:'10'});
+  // The raw claim instead subtracts the two largest marginals: 1-.2=.8.
+  assert.ok(actual<8);
+});
+
+test('C1 heterogeneous marginals benefit from an intermediate subset Markov bound',()=>{
+  const declarations=['9/10','1/10','1/10','1/10','1/10'].map((p,i)=>declaration(String(i),p));
+  const before=JSON.stringify(declarations),result=tolerantCountConfidence(declarations,2);
+  assert.deepEqual(result.value,{numerator:'4',denominator:'5'});
+  assert.deepEqual(result.candidates.map(c=>c.failureUpperBound),[
+    {numerator:'13',denominator:'30'},{numerator:'1',denominator:'5'},{numerator:'3',denominator:'10'},
+  ]);
+  assert.deepEqual(result.declarations.map(d=>d.justification),declarations.map(d=>d.justification));
+  assert.equal(JSON.stringify(declarations),before);
+  assert.deepEqual(tolerantCountConfidence([...declarations].reverse(),2).value,result.value);
+  // Exact dependent space: two pair-tail failures of mass 1/10, always with
+  // failure 0; failure 0 alone has mass 7/10; nobody fails with mass 1/10.
+  const outcomes=[{weight:1,failed:[0,1,2]},{weight:1,failed:[0,3,4]},
+    {weight:7,failed:[0]},{weight:1,failed:[]}];
+  assert.deepEqual(declarations.map((_,i)=>outcomes.reduce((sum,row)=>sum+(row.failed.includes(i)?row.weight:0),0)),[9,1,1,1,1]);
+  assert.equal(outcomes.reduce((sum,row)=>sum+(row.failed.length<=2?row.weight:0),0),8);
+});
+
+test('C1 exact dependent event spaces satisfy count bounds for every allowed k',()=>{
+  const weights=[1,2,3,4],denominator=10;
+  const mass=(event:number)=>weights.reduce((sum,weight,atom)=>sum+((event&(1<<atom))?weight:0),0);
+  // All event pairs include positive/negative dependence, repeated and empty events.
+  for(let a=0;a<16;a++)for(let b=0;b<16;b++){
+    const events=[a,b],declared=events.map((event,i)=>declaration(String(i),mass(event)+'/10'));
+    for(let k=0;k<=2;k++){
+      const actual=weights.reduce((sum,weight,atom)=>sum+(events.filter(event=>event&(1<<atom)).length<=k?weight:0),0);
+      const result=tolerantCountConfidence(declared,k);
+      assert.ok(BigInt(actual)*BigInt(result.value.denominator)>=BigInt(result.value.numerator)*BigInt(denominator));
+      if(k===0)assert.deepEqual(result.value,unionBoundConfidence(declared).value);
+      if(k===2)assert.deepEqual(result.value,{numerator:'1',denominator:'1'});
+    }
+  }
+});
+
+test('C1 count domain, empty family and trivial bounds remain explicit',()=>{
+  const declared=[declaration('A','1'),declaration('B','1')];
+  for(const k of [-1,0.5,3,NaN,Infinity])assert.throws(()=>tolerantCountConfidence(declared,k),/integer in 0..m/);
+  const empty=tolerantCountConfidence([],0);
+  assert.deepEqual(empty.value,{numerator:'1',denominator:'1'});
+  assert.deepEqual(empty.candidates,[]);
+  assert.equal(empty.trivial,false);
+  const impossible=tolerantCountConfidence(declared,1);
+  assert.deepEqual(impossible.value,{numerator:'0',denominator:'1'});
+  assert.equal(impossible.trivial,true);
+  assert.throws(()=>tolerantCountConfidence([{id:'A',p:'1/10',justification:''}],0),/justification reference required/);
 });
