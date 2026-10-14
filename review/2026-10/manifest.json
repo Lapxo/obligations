@@ -1,0 +1,1114 @@
+{
+  "status": "REVIEW-READY syntax; NOT READY TO SIGN",
+  "authorization": "unsigned external preparation only; no fold, sign, land, render, receipt writes, publication or merge",
+  "instrument": {
+    "path": "/Users/nahumochoa/Documents/Codex/2026-10-03/analiza-el-plan-y-ve-que/work/obligations-0.4.1/published-bound-018/node_modules/@lapxo/bound/dist/cli/verb.js",
+    "bytes": 33755,
+    "sha256": "e7c420e0af8a0c2f551a22fed2fd2c913df910f83e5ec24ff1c01f1c941cde8e"
+  },
+  "accepted_TARGET": {
+    "path": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/integration/TARGET.bound",
+    "bytes": 350579,
+    "sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+  },
+  "raw_law_source": {
+    "path": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/integration/src/laws/laws.bound",
+    "bytes": 70806,
+    "sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+  },
+  "raw_offers_source": {
+    "path": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/integration/offers.bound",
+    "bytes": 53715,
+    "sha256": "b8c5cb8e7f85719ee10f844d19593f6807144eb49d76964ec7f516211f8716a6"
+  },
+  "effective_order": "Source block order and within-block order preserved; no field/value/list or row sorting except public canonical field serialization. Suppressed absent withdrawals are listed, not silently treated as executed.",
+  "blocks": [
+    {
+      "lane": "capacity-confidence",
+      "path": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/capacity-confidence/law-replacements.proposed.bound",
+      "bytes": 1170,
+      "sha256": "85cdcb2da5bb64ae6563c8662071b0d4d3b38151d831c8325cd6d78eca1d9048",
+      "joint_start": 1,
+      "joint_end": 2,
+      "source_rows": 2,
+      "emitted_rows": 2
+    },
+    {
+      "lane": "forms-phase",
+      "path": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/forms-phase/theory.proposed.lines",
+      "bytes": 3240,
+      "sha256": "d7167e45251b2cacfe14f353fe498e555bb83397defb39b7a276f570664f9bf6",
+      "joint_start": 3,
+      "joint_end": 8,
+      "source_rows": 6,
+      "emitted_rows": 6
+    },
+    {
+      "lane": "documentation-audit",
+      "path": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/H3-H5-relabel.proposal",
+      "bytes": 4370,
+      "sha256": "e3aff8550b0bc78cac33701e4dc276051e76bf658b46bf6e439ac4f70c1f5d9d",
+      "joint_start": 9,
+      "joint_end": 10,
+      "source_rows": 4,
+      "emitted_rows": 2
+    },
+    {
+      "lane": "documentation-audit",
+      "path": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "bytes": 9101,
+      "sha256": "430bf288041d0cac0167b82411bb8df0f79844bba61652631e74d815685b564f",
+      "joint_start": 11,
+      "joint_end": 34,
+      "source_rows": 24,
+      "emitted_rows": 24
+    },
+    {
+      "lane": "documentation-audit",
+      "path": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-text-view.proposal",
+      "bytes": 10661,
+      "sha256": "e5f2b544e11eaec721320e514d29eb3af9e671f8b5790cff311a0bbdfd9daba0",
+      "joint_start": 35,
+      "joint_end": 37,
+      "source_rows": 3,
+      "emitted_rows": 3
+    }
+  ],
+  "operations": [
+    {
+      "joint_line": 1,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/capacity-confidence/law-replacements.proposed.bound",
+      "source_line": 1,
+      "operation": "new-proposed-declaration",
+      "source_at": "policy:law/T12",
+      "proposed_at": "witness:042/joint-capacity-confidence",
+      "scope": "law/T12-reliability-is-encounter-rate",
+      "role": "demands",
+      "measure": "status",
+      "raw_law_branches": [
+        {
+          "line": 56,
+          "statement": "the fraction of a domain's claims that are facts equals its second-origin rate; drift and surviving falsehood are its complement",
+          "kind": "theorem",
+          "restsOn": "law/A1-encounter|law/T10-drift",
+          "canonical": "bound-lock/1 about=\"the fraction of a domain's claims that are facts equals its second-origin rate; drift and surviving falsehood are its complement\" at=policy:law/T12 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T12-reliability-is-encounter-rate.json|samples/no/T12-reliability-is-encounter-rate.json restsOn=law/A1-encounter|law/T10-drift role=demands scope=law/T12-reliability-is-encounter-rate value=present view=valuation",
+          "sha256": "77f04d46446dbe2e78db8cf9a5318f47e2c485825b1da774d5d65a878be0f660"
+        }
+      ],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 2,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/capacity-confidence/law-replacements.proposed.bound",
+      "source_line": 2,
+      "operation": "new-proposed-declaration",
+      "source_at": "policy:law/T18",
+      "proposed_at": "witness:042/joint-capacity-confidence",
+      "scope": "law/T18-freedom-is-a-currency",
+      "role": "demands",
+      "measure": "status",
+      "raw_law_branches": [
+        {
+          "line": 59,
+          "statement": "closed bits with a second origin are scarce, unforgeable, measurable, transferable and third-party verifiable; no issuer exists",
+          "kind": "theorem",
+          "restsOn": "law/A7-freedom-conserved|law/D9-yield|law/A5-origin-is-extension",
+          "canonical": "bound-lock/1 about=\"closed bits with a second origin are scarce, unforgeable, measurable, transferable and third-party verifiable; no issuer exists\" at=policy:law/T18 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T18-freedom-is-a-currency.json restsOn=law/A7-freedom-conserved|law/D9-yield|law/A5-origin-is-extension role=demands scope=law/T18-freedom-is-a-currency value=present view=valuation",
+          "sha256": "c8c090e531ba88653592fec02422365b2b78e11ef22821c8e472bba9e4516b0f"
+        }
+      ],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 3,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/forms-phase/theory.proposed.lines",
+      "source_line": 1,
+      "operation": "new-proposed-declaration",
+      "source_at": "policy:theory/T38",
+      "proposed_at": "witness:042/joint-forms-phase",
+      "scope": "obligations/theory/T38",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 4,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/forms-phase/theory.proposed.lines",
+      "source_line": 2,
+      "operation": "new-proposed-declaration",
+      "source_at": "policy:theory/F2",
+      "proposed_at": "witness:042/joint-forms-phase",
+      "scope": "obligations/theory/F2",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 5,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/forms-phase/theory.proposed.lines",
+      "source_line": 3,
+      "operation": "new-proposed-declaration",
+      "source_at": "policy:theory/F3",
+      "proposed_at": "witness:042/joint-forms-phase",
+      "scope": "obligations/theory/F3",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 6,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/forms-phase/theory.proposed.lines",
+      "source_line": 4,
+      "operation": "new-proposed-declaration",
+      "source_at": "policy:theory/F4",
+      "proposed_at": "witness:042/joint-forms-phase",
+      "scope": "obligations/theory/F4",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 7,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/forms-phase/theory.proposed.lines",
+      "source_line": 5,
+      "operation": "new-proposed-declaration",
+      "source_at": "policy:theory/T87",
+      "proposed_at": "witness:042/joint-forms-phase",
+      "scope": "obligations/theory/T87",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 8,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/forms-phase/theory.proposed.lines",
+      "source_line": 6,
+      "operation": "new-proposed-declaration",
+      "source_at": "policy:theory/F1",
+      "proposed_at": "witness:042/joint-forms-phase",
+      "scope": "obligations/theory/F1",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 9,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/H3-H5-relabel.proposal",
+      "source_line": 2,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/relabel-observations",
+      "proposed_at": "witness:042/relabel-observations",
+      "scope": "law/H3-a-distant-signature-moves-a-cell-that-did-not-move",
+      "role": "demands",
+      "measure": "status",
+      "raw_law_branches": [
+        {
+          "line": 88,
+          "statement": "stated as a hint and never as a claim about the world: if what is is a field of floors and ceilings, a distant signature changes a cell whose own record never moved, and in two hundred trials of one cell holding one value the verdict came out both ways, so nothing stored at the cell explains the difference and what explains it is the bound the cell rests on; the resemblance is structural and never arithmetic, with no continuous amplitudes and no inequality violated by number; structural resemblance, one origin, not a claim about the world",
+          "kind": "conjecture",
+          "restsOn": "law/T46-a-bound-moves-cells-no-walk-reaches|law/T47-a-two-pole-object",
+          "canonical": "bound-lock/1 about=\"stated as a hint and never as a claim about the world: if what is is a field of floors and ceilings, a distant signature changes a cell whose own record never moved, and in two hundred trials of one cell holding one value the verdict came out both ways, so nothing stored at the cell explains the difference and what explains it is the bound the cell rests on; the resemblance is structural and never arithmetic, with no continuous amplitudes and no inequality violated by number; structural resemblance, one origin, not a claim about the world\" at=policy:law/H3 by=target form=alphabet kind=conjecture measure=status needs=samples/yes/H3-a-distant-signature-moves-a-cell-that-did-not-move.json|samples/no/H3-a-distant-signature-moves-a-cell-that-did-not-move.json restsOn=law/T46-a-bound-moves-cells-no-walk-reaches|law/T47-a-two-pole-object role=demands scope=law/H3-a-distant-signature-moves-a-cell-that-did-not-move value=present view=lattice",
+          "sha256": "ce898d9714dfadd7a58f1fb16d1df52f0aa93c1bb932074195c81e96263c280e"
+        }
+      ],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 10,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/H3-H5-relabel.proposal",
+      "source_line": 4,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/relabel-observations",
+      "proposed_at": "witness:042/relabel-observations",
+      "scope": "law/H5-hilbert-is-the-obligatory-without-four-fields",
+      "role": "demands",
+      "measure": "status",
+      "raw_law_branches": [
+        {
+          "line": 94,
+          "statement": "amplitudes with a phase and no origin, no signed ceiling, no resolution and no epoch band are what is left of a cell when those four fields are dropped, so the measurement problem is the absence of who, imposed symmetries the absence of a signed ceiling, the classical limit the absence of resolution and universal interference the absence of bands; restored, four claims in phase keep exactly the share of the whole their number leaves them against an environment spread over the period, and six origins around one value are six objects read finely and one read coarsely, so how many things there are is a reading; structural resemblance, one origin, not a claim about the world",
+          "kind": "conjecture",
+          "restsOn": "law/H3-a-distant-signature-moves-a-cell-that-did-not-move|law/T49-amplitude-has-sign-and-phase|law/T36-agreement-has-a-resolution|law/T45-cells-that-rest-on-one-bound-are-entangled",
+          "canonical": "bound-lock/1 about=\"amplitudes with a phase and no origin, no signed ceiling, no resolution and no epoch band are what is left of a cell when those four fields are dropped, so the measurement problem is the absence of who, imposed symmetries the absence of a signed ceiling, the classical limit the absence of resolution and universal interference the absence of bands; restored, four claims in phase keep exactly the share of the whole their number leaves them against an environment spread over the period, and six origins around one value are six objects read finely and one read coarsely, so how many things there are is a reading; structural resemblance, one origin, not a claim about the world\" at=policy:law/H5 by=target form=alphabet kind=conjecture measure=status needs=samples/yes/H5-hilbert-is-the-obligatory-without-four-fields.json|samples/no/H5-hilbert-is-the-obligatory-without-four-fields.json restsOn=law/H3-a-distant-signature-moves-a-cell-that-did-not-move|law/T49-amplitude-has-sign-and-phase|law/T36-agreement-has-a-resolution|law/T45-cells-that-rest-on-one-bound-are-entangled role=demands scope=law/H5-hilbert-is-the-obligatory-without-four-fields value=present view=lattice",
+          "sha256": "6bfc4138eda618b9a79cb608479a8284c561dd0e2f159d82bfed311cc7147316"
+        }
+      ],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 11,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 1,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/L1",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 12,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 2,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/L2",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 13,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 3,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/L3",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 14,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 4,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/L4",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 15,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 5,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/L5",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 16,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 6,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/L6",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 17,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 7,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/L7",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 18,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 8,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/L8",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 19,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 9,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/L9",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 20,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 10,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/F1",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 21,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 11,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/F2",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 22,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 12,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/F3",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 23,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 13,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/F4",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 24,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 14,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/F5",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 25,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 15,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/P1",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 26,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 16,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/P2",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 27,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 17,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/P3",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 28,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 18,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/P4",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 29,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 19,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/P5",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 30,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 20,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/P6",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 31,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 21,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/P7",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 32,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 22,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/P8",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 33,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 23,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/P9",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 34,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-source.proposal",
+      "source_line": 24,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "theory/source/P10",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 35,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-text-view.proposal",
+      "source_line": 1,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "view/theory",
+      "role": "demands",
+      "measure": "id",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 36,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-text-view.proposal",
+      "source_line": 2,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "prose/en/theory",
+      "role": "writes",
+      "measure": "text",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    },
+    {
+      "joint_line": 37,
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/theory-text-view.proposal",
+      "source_line": 3,
+      "operation": "new-proposed-declaration",
+      "source_at": "witness:042/theory-source",
+      "proposed_at": "witness:042/theory-source",
+      "scope": "region/theory",
+      "role": "writes",
+      "measure": "reads",
+      "raw_law_branches": [],
+      "accepted_same_coordinate": [],
+      "closure": "syntax preparation only; law replacement requires accepted selection/source changes and native quartet evidence"
+    }
+  ],
+  "suppressed": [
+    {
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/H3-H5-relabel.proposal",
+      "source_line": 1,
+      "scope": "law/H3-a-distant-signature-moves-a-cell-that-did-not-move",
+      "reason": "exact non-envelope selectors absent from accepted TARGET; raw source does not grant withdrawal",
+      "matches": 0,
+      "source_declaration": "bound-lock/1 about=\"stated as a hint and never as a claim about the world: if what is is a field of floors and ceilings, a distant signature changes a cell whose own record never moved, and in two hundred trials of one cell holding one value the verdict came out both ways, so nothing stored at the cell explains the difference and what explains it is the bound the cell rests on; the resemblance is structural and never arithmetic, with no continuous amplitudes and no inequality violated by number; structural resemblance, one origin, not a claim about the world\" at=policy:law/H3 by=target form=alphabet kind=conjecture measure=status needs=samples/yes/H3-a-distant-signature-moves-a-cell-that-did-not-move.json|samples/no/H3-a-distant-signature-moves-a-cell-that-did-not-move.json restsOn=law/T46-a-bound-moves-cells-no-walk-reaches|law/T47-a-two-pole-object role=demands scope=law/H3-a-distant-signature-moves-a-cell-that-did-not-move value=withdraw view=lattice"
+    },
+    {
+      "source": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/documentation-audit/H3-H5-relabel.proposal",
+      "source_line": 3,
+      "scope": "law/H5-hilbert-is-the-obligatory-without-four-fields",
+      "reason": "exact non-envelope selectors absent from accepted TARGET; raw source does not grant withdrawal",
+      "matches": 0,
+      "source_declaration": "bound-lock/1 about=\"amplitudes with a phase and no origin, no signed ceiling, no resolution and no epoch band are what is left of a cell when those four fields are dropped, so the measurement problem is the absence of who, imposed symmetries the absence of a signed ceiling, the classical limit the absence of resolution and universal interference the absence of bands; restored, four claims in phase keep exactly the share of the whole their number leaves them against an environment spread over the period, and six origins around one value are six objects read finely and one read coarsely, so how many things there are is a reading; structural resemblance, one origin, not a claim about the world\" at=policy:law/H5 by=target form=alphabet kind=conjecture measure=status needs=samples/yes/H5-hilbert-is-the-obligatory-without-four-fields.json|samples/no/H5-hilbert-is-the-obligatory-without-four-fields.json restsOn=law/H3-a-distant-signature-moves-a-cell-that-did-not-move|law/T49-amplitude-has-sign-and-phase|law/T36-agreement-has-a-resolution|law/T45-cells-that-rest-on-one-bound-are-entangled role=demands scope=law/H5-hilbert-is-the-obligatory-without-four-fields value=withdraw view=lattice"
+    }
+  ],
+  "collisions": [],
+  "output": {
+    "path": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/joint-review/joint.proposal",
+    "bytes": 26497,
+    "sha256": "cf30b2f4a6e71c4f73bbb96dc951b6454519dc2221621b6dcb6350b707c93d6b"
+  },
+  "external_theory_source": {
+    "path": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-042/admission/joint-review/theory.lines.proposed",
+    "bytes": 12417,
+    "sha256": "d5ffc62caedcdac8e176f31e54bdea781e8c76c9aaefdf61b09d000ecd942b80"
+  },
+  "native_quartets": "Arithmetic expected vectors/test output are not native receipts; implementation reader patch remains external.",
+  "gates": [
+    "Accepted key/scope coverage and selector revision semantics must be reviewed",
+    "H3/H5 raw-source conjectures remain until actual source/read-selection replacement disposition",
+    "T12/T18 raw law replacement and T18 dependent currency claims must be resolved",
+    "T38 is scoped theory proposal only, not an effective original-law replacement",
+    "T87/F4 objective/domain, confidence tolerance and factor governance remain OPEN",
+    "H5 four offers disposition pending; retirement alternative excluded",
+    "Native selected-reader integration/captures and root/documentary receipts are unpaid",
+    "New source coordinates change root/input closure; no old root receipt is reused"
+  ],
+  "historical_branches": [
+    {
+      "id": "T12",
+      "source_line": 56,
+      "canonical": "bound-lock/1 about=\"the fraction of a domain's claims that are facts equals its second-origin rate; drift and surviving falsehood are its complement\" at=policy:law/T12 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T12-reliability-is-encounter-rate.json|samples/no/T12-reliability-is-encounter-rate.json restsOn=law/A1-encounter|law/T10-drift role=demands scope=law/T12-reliability-is-encounter-rate value=present view=valuation",
+      "sha256": "77f04d46446dbe2e78db8cf9a5318f47e2c485825b1da774d5d65a878be0f660",
+      "status": "historical source branch preserved; no accepted TARGET record inferred"
+    },
+    {
+      "id": "T18",
+      "source_line": 59,
+      "canonical": "bound-lock/1 about=\"closed bits with a second origin are scarce, unforgeable, measurable, transferable and third-party verifiable; no issuer exists\" at=policy:law/T18 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T18-freedom-is-a-currency.json restsOn=law/A7-freedom-conserved|law/D9-yield|law/A5-origin-is-extension role=demands scope=law/T18-freedom-is-a-currency value=present view=valuation",
+      "sha256": "c8c090e531ba88653592fec02422365b2b78e11ef22821c8e472bba9e4516b0f",
+      "status": "historical source branch preserved; no accepted TARGET record inferred"
+    },
+    {
+      "id": "T38",
+      "source_line": 72,
+      "canonical": "bound-lock/1 about=\"n independent origins on a cell are the vertices of a polygon whose interior is their meet: two an edge, three an area, four a vertex the others do not enclose, five a verdict that holds without any one of them, and beyond that a meet that narrows toward consensus — a meet that never closes at any n is two cells wearing one name\" at=policy:law/T38 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T38-origins-are-a-polygon.json restsOn=law/A1-encounter|law/A2-meet|law/A5-origin-is-extension|law/T2-coordinate-where-disagree role=demands scope=law/T38-origins-are-a-polygon value=present view=product",
+      "sha256": "01661aa7bebcec67b5adfe03c4a4bda5a9358349eb9f24d56556da641dc849b9",
+      "status": "historical source branch preserved; no accepted TARGET record inferred"
+    },
+    {
+      "id": "T87",
+      "source_line": 127,
+      "canonical": "bound-lock/1 about=\"two claims reinforce within a quarter turn of each other and cancel beyond it, since |e^{ia} + e^{ib}|² < 2 exactly when |a − b| > π/2: a fork is destructive interference, and a field is laminar while fewer than half its pairs lie beyond a quarter turn, forks over closes below one\" at=policy:law/T87 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T87-the-quarter-turn.json|samples/no/T87-the-quarter-turn.json restsOn=law/T48-epoch-is-phase|law/T49-amplitude-has-sign-and-phase|law/A8-four-states role=demands scope=law/T87-the-quarter-turn value=present view=field",
+      "sha256": "b43d9ba5d49e3af5e203fe7e0f4113458217792ff263f6e1cc71b0e18980ba63",
+      "status": "historical source branch preserved; no accepted TARGET record inferred"
+    },
+    {
+      "id": "H3",
+      "source_line": 88,
+      "canonical": "bound-lock/1 about=\"stated as a hint and never as a claim about the world: if what is is a field of floors and ceilings, a distant signature changes a cell whose own record never moved, and in two hundred trials of one cell holding one value the verdict came out both ways, so nothing stored at the cell explains the difference and what explains it is the bound the cell rests on; the resemblance is structural and never arithmetic, with no continuous amplitudes and no inequality violated by number; structural resemblance, one origin, not a claim about the world\" at=policy:law/H3 by=target form=alphabet kind=conjecture measure=status needs=samples/yes/H3-a-distant-signature-moves-a-cell-that-did-not-move.json|samples/no/H3-a-distant-signature-moves-a-cell-that-did-not-move.json restsOn=law/T46-a-bound-moves-cells-no-walk-reaches|law/T47-a-two-pole-object role=demands scope=law/H3-a-distant-signature-moves-a-cell-that-did-not-move value=present view=lattice",
+      "sha256": "ce898d9714dfadd7a58f1fb16d1df52f0aa93c1bb932074195c81e96263c280e",
+      "status": "historical source branch preserved; no accepted TARGET record inferred"
+    },
+    {
+      "id": "H5",
+      "source_line": 94,
+      "canonical": "bound-lock/1 about=\"amplitudes with a phase and no origin, no signed ceiling, no resolution and no epoch band are what is left of a cell when those four fields are dropped, so the measurement problem is the absence of who, imposed symmetries the absence of a signed ceiling, the classical limit the absence of resolution and universal interference the absence of bands; restored, four claims in phase keep exactly the share of the whole their number leaves them against an environment spread over the period, and six origins around one value are six objects read finely and one read coarsely, so how many things there are is a reading; structural resemblance, one origin, not a claim about the world\" at=policy:law/H5 by=target form=alphabet kind=conjecture measure=status needs=samples/yes/H5-hilbert-is-the-obligatory-without-four-fields.json|samples/no/H5-hilbert-is-the-obligatory-without-four-fields.json restsOn=law/H3-a-distant-signature-moves-a-cell-that-did-not-move|law/T49-amplitude-has-sign-and-phase|law/T36-agreement-has-a-resolution|law/T45-cells-that-rest-on-one-bound-are-entangled role=demands scope=law/H5-hilbert-is-the-obligatory-without-four-fields value=present view=lattice",
+      "sha256": "6bfc4138eda618b9a79cb608479a8284c561dd0e2f159d82bfed311cc7147316",
+      "status": "historical source branch preserved; no accepted TARGET record inferred"
+    }
+  ],
+  "required_source_actions": [
+    {
+      "region": "T12",
+      "operation": "source-leaf revision proposal",
+      "path": "src/laws/laws.bound",
+      "authorization": "unsigned code/data preparation only, not an admitted TARGET withdrawal",
+      "status": "NOT IMPLEMENTED by joint package; requires root-owned central source integration and declared reading captures",
+      "affected_readings": [
+        "declared src/laws/laws.bound reading",
+        "law inventory and derived paper/reference selected readings",
+        "own standing and root receipt input closure"
+      ],
+      "direct_dependency_review": {
+        "outgoing_restsOn": [
+          "law/A1-encounter",
+          "law/T10-drift"
+        ],
+        "incoming_law_restsOn": [],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              84
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              382
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              56
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/laws.test.ts",
+            "lines": [
+              389
+            ],
+            "file_sha256": "7ee2f65f9cd2aafafe5bdc4b08ace4337c8774f27190794871cfe63b9590f353"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      },
+      "transitive_incoming_scopes": "review canonical map and source graph before effecting replacement",
+      "replacement_input": "capacity-confidence/law-replacements.proposed.bound"
+    },
+    {
+      "region": "T18",
+      "operation": "source-leaf revision proposal",
+      "path": "src/laws/laws.bound",
+      "authorization": "unsigned code/data preparation only, not an admitted TARGET withdrawal",
+      "status": "NOT IMPLEMENTED by joint package; requires root-owned central source integration and declared reading captures",
+      "affected_readings": [
+        "declared src/laws/laws.bound reading",
+        "law inventory and derived paper/reference selected readings",
+        "own standing and root receipt input closure"
+      ],
+      "direct_dependency_review": {
+        "outgoing_restsOn": [
+          "law/A7-freedom-conserved",
+          "law/D9-yield",
+          "law/A5-origin-is-extension"
+        ],
+        "incoming_law_restsOn": [
+          {
+            "line": 78,
+            "scope": "law/T40-cost-by-density",
+            "source_line_sha256": "842703e36e0198537cb4937d4b6eeef0b255cd6a1c5bf5ccc557c465060ff49f"
+          },
+          {
+            "line": 82,
+            "scope": "law/T44-an-origin-is-worth-its-reach",
+            "source_line_sha256": "57f57455a78b8630a01415f1c377cfaab994f2d859852541cc254b68e92a83a9"
+          }
+        ],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              90,
+              107,
+              111
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              388,
+              405,
+              409
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              59,
+              78,
+              82
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/laws.test.ts",
+            "lines": [
+              392
+            ],
+            "file_sha256": "7ee2f65f9cd2aafafe5bdc4b08ace4337c8774f27190794871cfe63b9590f353"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      },
+      "transitive_incoming_scopes": "review canonical map and source graph before effecting replacement",
+      "replacement_input": "capacity-confidence/law-replacements.proposed.bound"
+    },
+    {
+      "region": "T38",
+      "operation": "source-leaf revision proposal",
+      "path": "src/laws/laws.bound",
+      "authorization": "unsigned code/data preparation only, not an admitted TARGET withdrawal",
+      "status": "NOT IMPLEMENTED by joint package; requires root-owned central source integration and declared reading captures",
+      "affected_readings": [
+        "declared src/laws/laws.bound reading",
+        "law inventory and derived paper/reference selected readings",
+        "own standing and root receipt input closure"
+      ],
+      "direct_dependency_review": {
+        "outgoing_restsOn": [
+          "law/A1-encounter",
+          "law/A2-meet",
+          "law/A5-origin-is-extension",
+          "law/T2-coordinate-where-disagree"
+        ],
+        "incoming_law_restsOn": [
+          {
+            "line": 78,
+            "scope": "law/T40-cost-by-density",
+            "source_line_sha256": "842703e36e0198537cb4937d4b6eeef0b255cd6a1c5bf5ccc557c465060ff49f"
+          }
+        ],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              104,
+              107
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              253,
+              255,
+              259,
+              268,
+              275,
+              284,
+              290,
+              291,
+              402,
+              405
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "offers.bound",
+            "lines": [
+              128,
+              129,
+              130,
+              131,
+              132,
+              133,
+              134,
+              135
+            ],
+            "file_sha256": "b8c5cb8e7f85719ee10f844d19593f6807144eb49d76964ec7f516211f8716a6"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              72,
+              78
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/loom.test.ts",
+            "lines": [
+              74,
+              75
+            ],
+            "file_sha256": "8a12871689ff7f81bdeaa418985f43dc86828ca0fe18cdf2c0b2257a0b8ce125"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      },
+      "transitive_incoming_scopes": "review canonical map and source graph before effecting replacement",
+      "replacement_input": "forms-phase/theory.proposed.lines (scoped research; original law replacement not supplied)"
+    },
+    {
+      "region": "H3",
+      "operation": "source-leaf revision proposal",
+      "path": "src/laws/laws.bound",
+      "authorization": "unsigned code/data preparation only, not an admitted TARGET withdrawal",
+      "status": "NOT IMPLEMENTED by joint package; requires root-owned central source integration and declared reading captures",
+      "affected_readings": [
+        "declared src/laws/laws.bound reading",
+        "law inventory and derived paper/reference selected readings",
+        "own standing and root receipt input closure"
+      ],
+      "direct_dependency_review": {
+        "outgoing_restsOn": [
+          "law/T46-a-bound-moves-cells-no-walk-reaches",
+          "law/T47-a-two-pole-object"
+        ],
+        "incoming_law_restsOn": [
+          {
+            "line": 94,
+            "scope": "law/H5-hilbert-is-the-obligatory-without-four-fields",
+            "source_line_sha256": "6bfc4138eda618b9a79cb608479a8284c561dd0e2f159d82bfed311cc7147316"
+          }
+        ],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9,
+              317
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              69,
+              71
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              367,
+              369
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              88,
+              94
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/wave.test.ts",
+            "lines": [
+              297,
+              298,
+              312
+            ],
+            "file_sha256": "0079f2b69abe8df7e6eec0f1e6a1be21278c3d07909757b704e03b32795f3cdb"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      },
+      "transitive_incoming_scopes": [
+        "law/H5-hilbert-is-the-obligatory-without-four-fields",
+        "offers/field/budget",
+        "offers/field/decohere",
+        "offers/field/distinct",
+        "offers/field/sameObject"
+      ],
+      "replacement_input": "documentation-audit/H3-H5-relabel.proposal (source experiment intent; no valid direct TARGET withdrawal)"
+    },
+    {
+      "region": "H5",
+      "operation": "source-leaf revision proposal",
+      "path": "src/laws/laws.bound",
+      "authorization": "unsigned code/data preparation only, not an admitted TARGET withdrawal",
+      "status": "NOT IMPLEMENTED by joint package; requires root-owned central source integration and declared reading captures",
+      "affected_readings": [
+        "declared src/laws/laws.bound reading",
+        "law inventory and derived paper/reference selected readings",
+        "own standing and root receipt input closure"
+      ],
+      "direct_dependency_review": {
+        "outgoing_restsOn": [
+          "law/H3-a-distant-signature-moves-a-cell-that-did-not-move",
+          "law/T49-amplitude-has-sign-and-phase",
+          "law/T36-agreement-has-a-resolution",
+          "law/T45-cells-that-rest-on-one-bound-are-entangled"
+        ],
+        "incoming_law_restsOn": [],
+        "text_reference_inventory": [
+          {
+            "path": "TARGET.bound",
+            "lines": [
+              5,
+              9,
+              317
+            ],
+            "file_sha256": "623b60ff06b22073785bbe4bc20114c797cffb0dfb9a900983614a60b0969f6b"
+          },
+          {
+            "path": "docs/paper.md",
+            "lines": [
+              71
+            ],
+            "file_sha256": "6ce76260151c4afa75abb4ee96d48c8ac802181eb944d723af27cc43787889a2"
+          },
+          {
+            "path": "docs/reference.md",
+            "lines": [
+              114,
+              123,
+              125,
+              198,
+              369
+            ],
+            "file_sha256": "3470b299f46add3f878622219f3eb81dfeeef525cc0a5cd5d9769a0246389040"
+          },
+          {
+            "path": "offers.bound",
+            "lines": [
+              229,
+              230,
+              231,
+              232
+            ],
+            "file_sha256": "b8c5cb8e7f85719ee10f844d19593f6807144eb49d76964ec7f516211f8716a6"
+          },
+          {
+            "path": "src/laws/laws.bound",
+            "lines": [
+              94
+            ],
+            "file_sha256": "96d716899e2e545a662df1dd48a6ae09358c39b177e507507ce782b2d6fc150b"
+          },
+          {
+            "path": "test/obligatory.test.ts",
+            "lines": [
+              159,
+              160,
+              177
+            ],
+            "file_sha256": "ed96aa9caebe83344c8ac845390439dd59ba649957a87f0d204223004f0f053e"
+          }
+        ],
+        "review_required": "Review transitive semantic dependence, aliases, samples, formulas, offers and rendered/admitted documentation. Inventory is textual, not proof of semantic completeness; no edit in this wave."
+      },
+      "transitive_incoming_scopes": [
+        "offers/field/budget",
+        "offers/field/decohere",
+        "offers/field/distinct",
+        "offers/field/sameObject"
+      ],
+      "replacement_input": "documentation-audit/H3-H5-relabel.proposal (source experiment intent; no valid direct TARGET withdrawal)"
+    }
+  ],
+  "semantics_gate": "Default TARGET additions alone do not pay fix-T12, fix-T18, fix-T38 or experiment relabel. Requires source-leaf and declared-reading integration under existing public instrument, not waiting for a new Bound version."
+}
