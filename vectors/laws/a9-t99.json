@@ -6,7 +6,7 @@
   "branches": {
     "finite-dependency-evaluation": "For a finite world with finite rests and marks, existing restOf visits each distinct reachable coordinate once and parts computes finite meets of the handed marks and claims. On an acyclic dependency graph this answers without fixed-point iteration.",
     "monotone-iteration": "Monotonicity alone does not imply eventual stabilization: reflection swaps the two incomparable singleton intervals in a four-element interval sublattice. Finite-height ascending or descending iterations stabilize, but progress/order hypotheses must be specified.",
-    "cycle-check-scope": "A query refuses when its own coordinate is reached again. A reachable cycle excluding that coordinate is deduplicated and can answer; querying each cell on the cycle refuses. Whole-world cycle refusal is different from every root query refusing."
+    "cycle-check-scope": "A query refuses any cycle in its reachable dependency subgraph, including an ancestral cycle not containing the queried coordinate. Shared ancestors and unreachable cycles do not constitute a cycle in this subgraph."
   },
   "monotoneIteration": {
     "carrier": "existing intervals(-1,1), restricted to bottom, singleton(-1), singleton(1), top",
@@ -26,31 +26,6 @@
       }
     ]
   },
-  "reachableCycle": {
-    "edges": {
-      "root": [
-        "a"
-      ],
-      "a": [
-        "b"
-      ],
-      "b": [
-        "a"
-      ]
-    },
-    "rootRest": [
-      "a",
-      "b"
-    ],
-    "rootMeet": {
-      "lo": 2,
-      "hi": 8
-    },
-    "queriesThatRefuse": [
-      "a",
-      "b"
-    ]
-  },
   "open": [
     "The historical T99 implication from monotonicity alone to every finite-step fixed point is disproved by the finite counterexample; retain that historical branch with its counterexample.",
     "Any stronger generalized self-fold claim needs an explicit operator, carrier, iteration seed, chain/progress and height conditions.",
@@ -67,5 +42,68 @@
       "source": "7fd489c:src/laws/laws.bound",
       "scope": "published mathematical excerpt"
     }
+  },
+  "historicalObservations": [
+    {
+      "id": "172a651",
+      "meaning": "Before ancestral-cycle correction, root answered while cycle participants refused; historical behavior retained as data, not the new expected result.",
+      "reachableCycle": {
+        "edges": {
+          "root": [
+            "a"
+          ],
+          "a": [
+            "b"
+          ],
+          "b": [
+            "a"
+          ]
+        },
+        "rootRest": [
+          "a",
+          "b"
+        ],
+        "rootMeet": {
+          "lo": 2,
+          "hi": 8
+        },
+        "queriesThatRefuse": [
+          "a",
+          "b"
+        ]
+      }
+    }
+  ],
+  "reachableCycle": {
+    "edges": {
+      "root": [
+        "a"
+      ],
+      "a": [
+        "b"
+      ],
+      "b": [
+        "a"
+      ]
+    },
+    "queriesThatRefuse": [
+      "root",
+      "a",
+      "b"
+    ],
+    "errorCode": "rest-cycle"
+  },
+  "finiteCoverage": {
+    "independentOracle": "reachable subgraph with Kahn vertex elimination, not an implementation of fold",
+    "allDirectedGraphsOnThreeCoordinates": 512,
+    "deepChainCoordinates": 12000,
+    "dagOrder": [
+      "a",
+      "b",
+      "shared",
+      "missing",
+      "last"
+    ],
+    "missingReference": "included in rest order and treated as having no supplied ancestors"
   }
 }

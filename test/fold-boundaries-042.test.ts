@@ -18,6 +18,8 @@ test('A9/T99: a monotone map on an existing finite interval sublattice can alter
     assert.ok(values.some(v=>equal(v,L.join(a,b))));
     if(L.leq(a,b)) assert.equal(L.leq(reflect(a),reflect(b)),true);
   }
+  assert.equal(equal(reflect(values[0]!),values[0]!),true);
+  assert.equal(equal(reflect(values[3]!),values[3]!),true);
   const a=values[1]!,b=values[2]!;
   assert.equal(L.leq(a,b)||L.leq(b,a),false);
   assert.deepEqual(reflect(a),b);
@@ -26,17 +28,72 @@ test('A9/T99: a monotone map on an existing finite interval sublattice can alter
   assert.deepEqual([a,reflect(a),reflect(reflect(a))],evidence.monotoneIteration.sequence);
 });
 
-test('A9/T99: dependency traversal terminates without fixed-point iteration; cycle refusal is rooted at the queried cell',()=>{
+test('A9/T99: a cycle among reachable ancestors refuses every root that reaches it',()=>{
   const L=intervals(0,10);
   const a=cell<Band>('a',0,[],['b']);
   const b=cell<Band>('b',0,[],['a']);
   const root=cell<Band>('root',0,[{origin:'o',span:{lo:2,hi:8}}],['a']);
   const world=new Map([['root',root],['a',a],['b',b]]);
-  assert.deepEqual(restOf(root,world),evidence.reachableCycle.rootRest);
-  assert.deepEqual(meet(L,root,world),evidence.reachableCycle.rootMeet);
-  // The existing routine refuses when the queried cell itself is reached again.
-  for(const c of [a,b]) assert.throws(()=>restOf(c,world),/REFUSE·rest/);
-  const dag=new Map([['root',root],['a',cell<Band>('a',0,[],['b'])],['b',cell<Band>('b')]]);
-  assert.deepEqual(restOf(root,dag),['a','b']);
-  assert.deepEqual(meet(L,root,dag),{lo:2,hi:8});
+  for(const c of [root,a,b])assert.throws(()=>restOf(c,world),{code:'rest-cycle'});
+  assert.throws(()=>meet(L,root,world),{code:'rest-cycle'});
+});
+
+test('A9/T99: diamond ancestors preserve breadth-first first-seen order without a false cycle',()=>{
+  const root=cell<Band>('root',0,[],['a','b','a']);
+  const world=new Map([
+    ['a',cell<Band>('a',0,[],['shared','missing'])],
+    ['b',cell<Band>('b',0,[],['shared'])],
+    ['shared',cell<Band>('shared',0,[],['last'])],
+    ['last',cell<Band>('last')],
+    // Unreachable cyclic coordinates do not invalidate this query.
+    ['x',cell<Band>('x',0,[],['y'])],['y',cell<Band>('y',0,[],['x'])],
+  ]);
+  assert.deepEqual(restOf(root,world),['a','b','shared','missing','last']);
+  assert.deepEqual(restOf(cell<Band>('root',0,[],['missing']),world),['missing']);
+  assert.deepEqual(restOf(cell<Band>('empty'),world),[]);
+});
+
+test('A9/T99: a deep acyclic chain is read iteratively in the established order',()=>{
+  const n=12000,root=cell<Band>('root',0,[],['v0']);
+  const names=Array.from({length:n},(_,i)=>`v${i}`);
+  const world=new Map(names.map((name,i)=>[name,cell<Band>(name,0,[],i+1<n?[names[i+1]!]:[])]));
+  assert.deepEqual(restOf(root,world),names);
+});
+
+// Independent finite graph oracle: reachability followed by Kahn elimination.
+// It neither folds claims nor evaluates marks, and ignores unreachable cycles.
+function reachableIsAcyclic(edges:ReadonlyMap<string,readonly string[]>,starts:readonly string[]):boolean{
+  const reachable=new Set<string>(),frontier=[...starts];
+  for(let i=0;i<frontier.length;i++){
+    const at=frontier[i]!;
+    if(reachable.has(at))continue;
+    reachable.add(at);frontier.push(...(edges.get(at)??[]));
+  }
+  const incoming=new Map([...reachable].map(at=>[at,0]));
+  for(const at of reachable)for(const to of edges.get(at)??[])incoming.set(to,incoming.get(to)!+1);
+  const ready=[...incoming].filter(([,count])=>count===0).map(([at])=>at);
+  let removed=0;
+  for(let i=0;i<ready.length;i++){
+    removed++;
+    for(const to of edges.get(ready[i]!)??[]){const left=incoming.get(to)!-1;incoming.set(to,left);if(left===0)ready.push(to);}
+  }
+  return removed===reachable.size;
+}
+
+test('A9/T99: all 512 three-coordinate directed graphs agree with an independent reachable-DAG oracle',()=>{
+  const names=['a','b','c'];
+  for(let mask=0;mask<1<<9;mask++){
+    const edges=new Map(names.map((name,i)=>[name,names.filter((_,j)=>mask&(1<<(i*3+j)))]));
+    const root=cell<Band>('root',0,[],['a']);
+    const world=new Map([...edges].map(([name,rests])=>[name,cell<Band>(name,0,[],rests)]));
+    if(reachableIsAcyclic(edges,['a']))assert.doesNotThrow(()=>restOf(root,world),`graph ${mask}`);
+    else assert.throws(()=>restOf(root,world),{code:'rest-cycle'},`graph ${mask}`);
+  }
+});
+
+test('A9/T99: the supplied root defines the query even when a world entry with its name disagrees',()=>{
+ const supplied=cell<Band>('root');
+ const conflictingEntry=cell<Band>('root',0,[],['root']);
+ assert.deepEqual(restOf(supplied,new Map([['root',conflictingEntry]])),[]);
+ assert.throws(()=>restOf(conflictingEntry,new Map([['root',supplied]])),{code:'rest-cycle'});
 });
