@@ -23,7 +23,11 @@ test('T18 sum equal to or above one is explicitly trivial, never negative',()=>{
     const result=unionBoundConfidence(ps.map((p,i)=>declaration(String(i),p)));
     assert.deepEqual(result.value,{numerator:'0',denominator:'1'});assert.equal(result.trivial,true);
   }
-  assert.deepEqual(unionBoundConfidence([]).value,{numerator:'1',denominator:'1'});
+  const empty=unionBoundConfidence([]);
+  assert.deepEqual(empty.value,{numerator:'1',denominator:'1'});
+  assert.deepEqual(empty.failureSum,{numerator:'0',denominator:'1'});
+  assert.deepEqual(empty.declarations,[]);
+  assert.equal(empty.trivial,false);
   const vector=JSON.parse(readFileSync(new URL('../../vectors/measures/confidence/expected.json',import.meta.url),'utf8'));
   for(const {p,lowerBound} of vector.values){
     const result=unionBoundConfidence(p.map((value:string,i:number)=>declaration(String(i),value)));

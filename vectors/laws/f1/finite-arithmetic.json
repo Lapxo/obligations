@@ -1,6 +1,7 @@
 {
   "about": [
-    "F1: arithmetic of author-provided extrema formula and Bell squared counts, n=3..7. No partition enumeration, browser/WASM independence or general optimality proof is claimed."
+    "F1: this vector checks formula arithmetic and Bell-squared counts for n=3..7, using binary64 logarithms. It does not itself enumerate partition pairs.",
+    "Existing law samples and laws-papers tests already supply finite partition checks for the declared proof chain; their exact scope is recorded below. General optimality and browser/WASM independent verification are not established by this vector."
   ],
   "coverage": {
     "criterion": "fixed witnesses and counterexamples only",
@@ -38,5 +39,26 @@
       "pairs": 769129,
       "expected": 1.093069207771889
     }
-  ]
+  ],
+  "existingEvidence": {
+    "references": [
+      "test/laws-papers.test.ts",
+      "test/vectors-harness.ts",
+      "samples/yes/lem-phi.json",
+      "samples/yes/lem-merge.json",
+      "samples/yes/lem-identity.json",
+      "samples/yes/lem-join.json",
+      "samples/yes/lem-meet.json",
+      "samples/yes/thm-extremal.json"
+    ],
+    "finiteChecks": {
+      "lem-phi": "t=1..6, equality at 1 and 2",
+      "lem-merge": "all positive block sizes p+q<=6; all coarsenings on n=4",
+      "lem-identity": "119 ordered trivial-meet pairs on n=4",
+      "lem-meet": "225 ordered pairs on n=4, weighted restricted-pair decomposition and bound",
+      "lem-join": "all ordered trivial-meet pairs on n=3,4,5: 15,119,1343; discrete-join pairs: 8,56,552",
+      "thm-extremal": "existing test checks c_n formula values at n=1,2,4,16; this does not check all extremizers"
+    },
+    "remaining": "No n=6,7 exhaustive extrema enumeration or independent browser/WASM execution is supplied by these referenced finite tests. The declared general proof still requires verification of its unrestricted derivations and equality classification."
+  }
 }

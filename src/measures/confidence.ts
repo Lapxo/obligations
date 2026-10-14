@@ -6,6 +6,15 @@ const refuse=(cause:string):never=>{throw new Error('REFUSE·confidence '+cause)
 /** Conditional arithmetic only: callers must justify P(failure_i) <= p_i in one
  * probability space. References are retained, not verified. No independence is
  * needed; agreement/copy counts cannot supply the missing probabilities.
+ *
+ * Proof for a finite family of failure events F_i in that common space:
+ * 1_{union F_i} <= sum_i 1_{F_i} pointwise, even for dependent events.
+ * Taking expectations gives P(union F_i) <= sum_i P(F_i) <= sum_i p_i.
+ * Complementing gives P(intersection F_i^c) >= 1 - sum_i p_i; combining
+ * with nonnegativity yields max(0, 1 - sum_i p_i). For the empty family,
+ * the union is empty and the success intersection is the whole space, so
+ * the bound is 1. A sum at or above 1 gives only the trivial bound 0.
+ * A justification string records a premise; it does not establish its truth.
  */
 export function unionBoundConfidence(failures:readonly DeclaredFailure[]){
   if(!Array.isArray(failures))refuse('declared failures required');

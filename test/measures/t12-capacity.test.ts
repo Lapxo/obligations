@@ -53,3 +53,13 @@ test('T12 q is mandatory only on the new symmetric-cause operation',()=>{
   assert.throws(()=>commonCauseCapacityBound(4,'1/5','1/2',{} as typeof policy),/policy required/);
   near(capacityBound(4,'1/5',policy).value,1.6830074998557687);
 });
+
+test('T12 preserves zero for a uniform channel and positive all-wrong information at large n',()=>{
+  for(const n of [2,3,4485,10000])assert.equal(commonCauseCapacityBound(n,'1',`1/${n}`,policy).value,0);
+  const n=Number.MAX_SAFE_INTEGER;
+  // 90-digit decimal evaluation of log2(n/(n-1)); no subtraction of binary64 logs.
+  const expected=1.601713251907459109731793297638224958887679600519264252354028741949e-16;
+  const actual=commonCauseCapacityBound(n,'1','0',policy).value;
+  assert.ok(actual>0);
+  assert.ok(Math.abs(actual/expected-1)<1e-14);
+});

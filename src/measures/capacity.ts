@@ -33,17 +33,22 @@ export function capacityBound(n:number,c:RationalInput,policy:LogarithmPolicy){
  * When active every observation copies one n-ary symmetric channel (accuracy q).
  * When inactive the private observations are unrestricted. Copy count is no input.
  * This is not finite-k mutual information or an achievability claim.
+ * Returned bits use binary64 approximation, not a directed-rounding certificate.
  */
 export function commonCauseCapacityBound(n:number,c:RationalInput,accuracy:RationalInput,policy:LogarithmPolicy){
   cardinality(n);logPolicy(policy);
   if(accuracy===undefined||accuracy===null)refuse('common-cause accuracy q required');
   const factor=probability(c),correct=probability(accuracy),wrong=sub(one,correct);
-  const conditional=entropy([correct,wrong])+numeric(wrong)*Math.log2(n-1);
+  const uniform=correct[0]*BigInt(n)===correct[1];
+  // Preserve exact zero for the uninformative channel and avoid subtracting
+  // nearly equal logarithms for the all-wrong channel at large cardinality.
+  const channel=uniform?0:correct[0]===0n?Math.log1p(1/(n-1))/Math.LN2:
+    Math.max(0,Math.log2(n)-entropy([correct,wrong])-numeric(wrong)*Math.log2(n-1));
   return {model:'single-covering-symmetric-cause@1' as const,
     parameters:{n,c:pack(factor),q:pack(correct)},policy,status:'measured' as const,unit:'bits' as const,
     conditions:['uniform-truth','cause-indicator-independent-of-truth',
       'active-cause-copies-one-symmetric-channel','inactive-private-channel-unrestricted'] as const,
-    value:Math.max(0,Math.log2(n)-numeric(factor)*conditional),
+    value:numeric(sub(one,factor))*Math.log2(n)+numeric(factor)*channel,
     meaning:'upper bound after revealing cause indicator; copies do not add; no achievability claim' as const};
 }
 export function capacityP0(n:number,c:RationalInput,policy:LogarithmPolicy){
