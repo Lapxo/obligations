@@ -61,5 +61,6 @@
       5,
       6
     ]
-  }
+  },
+  "policy": "vectors/laws/policy.json"
 }

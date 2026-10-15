@@ -1,7 +1,7 @@
 {
   "format": "installed-acceptance/1",
   "name": "@lapxo/obligations",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "exports": {
     ".": {
       "types": "./dist/lattice/index.d.ts",
@@ -401,7 +401,7 @@
     "population covariance is normalized by the observed event population",
     "T5 reference stream reproduces model counts without claiming certification",
     "interest is an explicit controlled bias within the reference model",
-    "declared finite-data fit recovers shared log survival, records residuals and reproducible bootstrap, never Φ or D",
+    "declared finite-data fit recovers shared log survival, records residuals and reproducible bootstrap, never \u03a6 or D",
     "zero joint counts, absent rank and insufficient resources never report fitted probabilities",
     "the same finite-data procedure identifies a declared overlapping two-factor system",
     "population identification recovers exact shared survival without identifying private versus singleton error",

@@ -48,5 +48,6 @@
       "erasureIndicatorInformationBits": 0
     }
   ],
-  "conclusion": "The proposed marginals and independent activation do not determine the joint output law. The unconditional claim that an erasure contributes zero information is false for an observed erasure signal. These counterexamples define no new M/4 or M/3 contract."
+  "conclusion": "The proposed marginals and independent activation do not determine the joint output law. The unconditional claim that an erasure contributes zero information is false for an observed erasure signal. These counterexamples define no new M/4 or M/3 contract.",
+  "policy": "vectors/laws/policy.json"
 }

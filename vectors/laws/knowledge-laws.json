@@ -110,5 +110,6 @@
     ],
     "scope": "Existing M/3 identification uses handed sharing sets and truth-labelled population correctness moments. Positive correctness, full shared-factor column rank, compatible moments and the declared budget are required; singleton/private decomposition stays unresolved. Dissent excludes only a specific ordered configuration. No general partial symmetric-cause q identification iff outsider theorem is supplied by these functions.",
     "linearizationUnderHandedM3": "For positive correctness and compatible handed independent factor survivals, log(P(correct_a,correct_b)/(P(correct_a)P(correct_b))) is the sum of negative log survivals for factors shared by a and b. Full column rank identifies those shared log survivals in this model; singleton/private causes do not supply shared columns and remain unresolved. Zero correctness or incompatible moments invalidates this linearization even with the same declared sharing matrix."
-  }
+  },
+  "policy": "vectors/laws/policy.json"
 }

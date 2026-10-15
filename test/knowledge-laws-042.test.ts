@@ -1,6 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {intervals} from '../src/lattice/forms.ts';
 import {cell,mark,state} from '../src/lattice/obligatory.ts';
 import {observe} from '../src/field/observe.ts';
@@ -51,4 +52,41 @@ test('L7 active covering contribution c/n does not equal whole-mixture unanimity
    assert.notEqual(v.L7.wholeMixtureUnanimityOnEachValue,c/n);
   }
  }
+});
+
+// Test-only canonical byte identity under the mathematical vector policy.
+// Object keys are unordered; all arrays retain their effective order.
+const canonicalValue=(value:unknown):unknown=>{
+ if(Array.isArray(value))return value.map(canonicalValue);
+ if(value!==null&&typeof value==='object')return Object.fromEntries(Object.keys(value).sort().map(key=>[key,canonicalValue((value as Record<string,unknown>)[key])]));
+ return value;
+};
+const identity=(value:unknown)=>createHash('sha256').update(JSON.stringify(canonicalValue(value)),'utf8').digest('hex');
+type StaticClaim={id:string;origin:string;span:{lo:number;hi:number}};
+const unorderedStaticClaims=(claims:readonly StaticClaim[])=>{
+ const ids=new Set<string>();
+ for(const claim of claims){if(ids.has(claim.id))throw new Error('distinct claim IDs required');ids.add(claim.id);}
+ return [...claims].sort((a,b)=>a.id<b.id?-1:a.id>b.id?1:0);
+};
+test('L1 fixed distinct static claims have one projected hash under every arrival permutation',()=>{
+ const claims:StaticClaim[]=[{id:'a',origin:'a',span:{lo:0,hi:4}},{id:'b',origin:'b',span:{lo:2,hi:6}},{id:'c',origin:'c',span:{lo:3,hi:5}}];
+ const permutations=[claims,[claims[0]!,claims[2]!,claims[1]!],[claims[1]!,claims[0]!,claims[2]!],[claims[1]!,claims[2]!,claims[0]!],[claims[2]!,claims[0]!,claims[1]!],[...claims].reverse()];
+ const expected=identity(unorderedStaticClaims(claims));
+ for(const order of permutations){
+  const actual=order.reduce((one,claim)=>observe(one,claim),cell<{lo:number;hi:number}>('x'));
+  assert.deepEqual(meet(L,actual),{lo:3,hi:4});
+  assert.equal(identity(unorderedStaticClaims(order)),expected);
+ }
+ const conflicting=[claims[0]!,{...claims[0]!,span:{lo:7,hi:7}}];
+ assert.throws(()=>unorderedStaticClaims(conflicting),/distinct claim IDs required/);
+ assert.throws(()=>unorderedStaticClaims([...conflicting].reverse()),/distinct claim IDs required/);
+});
+test('L1 canonical keys preserve equal-time effective mark order and distinguish its values and hashes',()=>{
+ assert.equal(identity({z:1,a:{y:2,b:3}}),identity({a:{b:3,y:2},z:1}));
+ const tight=mark({pole:'ceiling',reach:'local',span:{lo:0,hi:1},at:1});
+ const wide=mark({pole:'ceiling',reach:'local',span:{lo:0,hi:7},widens:'witness',at:1});
+ const base=cell('x',0,[{origin:'a',span:L.top},{origin:'b',span:L.top}]);
+ const first={...base,marks:[tight,wide]},second={...base,marks:[wide,tight]};
+ assert.deepEqual(meet(L,first),{lo:0,hi:7});assert.deepEqual(meet(L,second),{lo:0,hi:1});
+ assert.notEqual(identity(first),identity(second));
 });

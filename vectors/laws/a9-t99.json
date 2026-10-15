@@ -105,5 +105,6 @@
       "last"
     ],
     "missingReference": "included in rest order and treated as having no supplied ancestors"
-  }
+  },
+  "policy": "vectors/laws/policy.json"
 }

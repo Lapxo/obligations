@@ -237,5 +237,6 @@
     "expectedBefore": 0,
     "expectedFirstSplit": 0,
     "expectedFinal": 0.2516291673878228
-  }
+  },
+  "policy": "vectors/laws/policy.json"
 }

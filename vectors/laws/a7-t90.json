@@ -67,5 +67,6 @@
         "FREE"
       ]
     }
-  }
+  },
+  "policy": "vectors/laws/policy.json"
 }

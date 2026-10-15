@@ -2,6 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {unionBoundConfidence,tolerantCountConfidence,type DeclaredFailure} from '../../src/measures/confidence.ts';
+import {add,sub,rational,pack,zero,one} from '../../src/measures/rational.ts';
 const declaration=(id:string,p:string)=>({id,p,justification:`hypothesis:${id}`});
 test('T18 exact union-bound; no independence premise',()=>{
   const samples=JSON.parse(readFileSync(new URL('../../samples/measures/confidence/union-bound.json',import.meta.url),'utf8'));
@@ -131,4 +132,49 @@ test('C1 count domain, empty family and trivial bounds remain explicit',()=>{
   assert.deepEqual(impossible.value,{numerator:'0',denominator:'1'});
   assert.equal(impossible.trivial,true);
   assert.throws(()=>tolerantCountConfidence([{id:'A',p:'1/10',justification:''}],0),/justification reference required/);
+});
+
+test('C1 three small marginals do not refute the false general top-two guarantee',()=>{
+  const vector=JSON.parse(readFileSync(new URL('../../vectors/laws/tolerant-k-guarantee.json',import.meta.url),'utf8'));
+  const c=vector.threeMarginalDistinction;
+  const declared=c.probabilities.map((p:string,i:number)=>declaration(String(i),p));
+  assert.deepEqual(tolerantCountConfidence(declared,c.k).value,c.markovSuccessLower);
+  // Sum-min over the three pairs is 3/10, giving only 7/10; Markov gives
+  // 17/20. A weaker *bound* is not a distribution with success below 4/5.
+  const pairBound=(probabilities:readonly string[])=>{
+    const ps=probabilities.map(rational);
+    const sum=[[0,1],[0,2],[1,2]].reduce((sum,[a,b])=>{
+      const x=ps[a!]!,y=ps[b!]!;
+      return add(sum,x[0]*y[1]<=y[0]*x[1]?x:y);
+    },zero);
+    return {sum:pack(sum),lower:pack(sum[0]>=sum[1]?zero:sub(one,sum))};
+  };
+  assert.deepEqual(pairBound(c.probabilities),{sum:c.unionIntersectionsFailureSum,lower:c.unionIntersectionsSuccessLower});
+  assert.ok(BigInt(c.markovSuccessLower.numerator)*BigInt(c.rawTopTwoSuccessLower.denominator)>
+    BigInt(c.rawTopTwoSuccessLower.numerator)*BigInt(c.markovSuccessLower.denominator));
+  const trueNegative=vector.trueCounterexample;
+  const actual=trueNegative.outcomes.reduce((sum:number,row:{weight:number;failed:number[]})=>sum+(row.failed.length<=trueNegative.k?row.weight:0),0);
+  assert.equal(actual,7);
+  assert.ok(BigInt(actual)*BigInt(trueNegative.rawTopTwoSuccessLower.denominator)<
+    BigInt(trueNegative.denominator)*BigInt(trueNegative.rawTopTwoSuccessLower.numerator));
+  const above=vector.sumAboveOne;
+  assert.deepEqual(pairBound(above.probabilities),{sum:above.unionIntersectionsFailureSum,lower:above.unionIntersectionsSuccessLower});
+  assert.deepEqual(tolerantCountConfidence(above.probabilities.map((p:string,i:number)=>declaration(String(i),p)),above.k).value,above.markovSuccessLower);
+  assert.deepEqual(tolerantCountConfidence([declaration('certain','1')],0).value,{numerator:'0',denominator:'1'});
+  assert.throws(()=>tolerantCountConfidence([declaration('invalid','11/10')],0),/probability outside/);
+  for(const k of vector.boundary.invalidK)assert.throws(()=>tolerantCountConfidence(declared,k),/integer in 0..m/);
+});
+
+test('C1 union of pair intersections gives a valid, possibly weaker, count bound',()=>{
+  // Exhaust all triples of events on four nonuniform atoms; compare the
+  // sum of pairwise minima with the actual event N>=2, using integer mass.
+  const weights=[1,2,3,4];
+  const mass=(event:number)=>weights.reduce((sum,weight,atom)=>sum+((event&(1<<atom))?weight:0),0);
+  for(let a=0;a<16;a++)for(let b=0;b<16;b++)for(let c=0;c<16;c++){
+    const events=[a,b,c],marginals=events.map(mass);
+    const sumMin=Math.min(marginals[0]!,marginals[1]!)+Math.min(marginals[0]!,marginals[2]!)+Math.min(marginals[1]!,marginals[2]!);
+    const actualFailure=weights.reduce((sum,weight,atom)=>sum+(events.filter(event=>event&(1<<atom)).length>=2?weight:0),0);
+    assert.ok(actualFailure<=sumMin);
+    assert.ok(10-actualFailure>=Math.max(0,10-sumMin));
+  }
 });

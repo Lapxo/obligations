@@ -61,5 +61,6 @@
       "thm-extremal": "existing test checks c_n formula values at n=1,2,4,16; this does not check all extremizers"
     },
     "remaining": "No exhaustive n=6,7 extrema enumeration or independent browser/WASM execution is supplied. The explicit general argument is recorded separately in path-witness.json; independent-origin verification remains open."
-  }
+  },
+  "policy": "vectors/laws/policy.json"
 }

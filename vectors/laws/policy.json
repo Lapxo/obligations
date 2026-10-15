@@ -1,0 +1,22 @@
+{
+  "id": "obligations-mathematical-vectors@1",
+  "scope": "Mathematical vector interpretation and test-only byte identity; no admission, signing, origin status or general fold engine.",
+  "numeric": {
+    "probabilities": "Exact rational arithmetic. Fractions use rational strings or numerator/denominator integer strings. Explicit finite dyadic constants such as 0, 0.25, 0.5 and 1 in fixed tables denote those exact rationals; do not infer measured probabilities from agreement.",
+    "integerCertificates": "Integer coefficients, counts and finite certificate identities are exact. State counts and partition witnesses retain their handed finite domains.",
+    "logarithms": {"policy":"binary64-log2","meaning":"Entropy, phase and information values computed with Math.log2 are explicit binary64 approximations, not exact real certificates.","defaultAbsoluteTolerance":1e-12,"exception":"A vector or reused historical sample may declare its own decimal precision or tolerance; the specific test must state it."}
+  },
+  "jsonIdentity": {
+    "objectKeys": "Sort object keys lexicographically recursively before JSON serialization.",
+    "arrays": "Preserve every array's order, including constraint witnesses, coefficient order, effective act order and timestamps. Never sort arrays merely to make hashes equal.",
+    "numbers": "Use the handed finite JSON numbers with standard JSON encoding; no decimal rounding, epsilon normalization or replacement of approximation by an exact claim.",
+    "hash": "SHA-256 of the resulting UTF-8 JSON bytes, demonstrated only in tests. A hash establishes byte identity under the declared projection, not theorem truth."
+  },
+  "claimCollectionProjection": {
+    "domain": "Fixed distinct static claims with explicit unique IDs, fixed values and origins, and no order-sensitive widening, withdrawal, epoch or mark interpretation.",
+    "operation": "Keep every claim field and sort this explicitly named collection by its unique ID before canonical JSON encoding. This sorting is a projection specific to that unordered collection; it does not reorder the object or its effective acts.",
+    "duplicates": "Duplicate IDs fall outside the distinct-claim domain and are refused; conflicting duplicates are never resolved by first/last arrival or a chosen value.",
+    "limit": "Equal hashes across arrival permutations apply only to this fixed unordered projection. Distinct effective mark order, including equal-time widening/signature sequence, remains visible and may have different values and hashes."
+  },
+  "research": "Claimed general hypotheses, C3 unqualified odd-period argmin and any unspecified objective stay open. Passing finite vectors alone does not establish unrestricted proofs or independent origins."
+}

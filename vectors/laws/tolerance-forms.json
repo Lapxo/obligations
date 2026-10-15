@@ -147,5 +147,6 @@
         7
       ]
     ]
-  }
+  },
+  "policy": "vectors/laws/policy.json"
 }

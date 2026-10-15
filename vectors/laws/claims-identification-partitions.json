@@ -62,5 +62,6 @@
       "test/vectors-harness.ts:partitionsOf",
       "test/vectors-harness.ts:partitionScale"
     ]
-  }
+  },
+  "policy": "vectors/laws/policy.json"
 }

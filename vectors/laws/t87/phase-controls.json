@@ -102,5 +102,6 @@
       ],
       "nonzeroMaximum": -0.7219280948873623
     }
-  ]
+  ],
+  "policy": "vectors/laws/policy.json"
 }
