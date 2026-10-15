@@ -2,7 +2,7 @@
 
 # @lapxo/obligations
 
-![version 0.4.1](https://img.shields.io/badge/version-0.4.1-) ![license MIT](https://img.shields.io/badge/license-MIT-) ![node >=22.12](https://img.shields.io/badge/node-%3E%3D22.12-) [![DOI 10.5281/zenodo.21858428](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-)](https://doi.org/10.5281/zenodo.21858428)
+![version 0.4.2](https://img.shields.io/badge/version-0.4.2-) ![license MIT](https://img.shields.io/badge/license-MIT-) ![node >=22.12](https://img.shields.io/badge/node-%3E%3D22.12-) [![DOI 10.5281/zenodo.21858428](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-)](https://doi.org/10.5281/zenodo.21858428)
 
 The algebra of a cell: two poles, origins with phase, eight acts.
 
@@ -24,7 +24,7 @@ info(c)                ⟺ |ext(O)| ≥ 2 ∧ meet(c) ≠ ∅
 F(C)                   = Σ_{c∈C} F(c),   F(a(c)) ≤ F(c) for every act a that narrows
 A(c)                   = |Σ_{o∈O} s_o w_o e^{iφ_o}|²
 ⊤(c)                   = ⋀_{b ⊑ c} signed(b) ∧ ⋀_{o∈O} hi_o,   one line per act
-|e^{ia} + e^{ib}|² < 2 ⟺ |a − b| > π/2
+|e^{ia} + e^{ib}|² < 2 ⟺ acos(cos(a − b)) > π/2
 state(c)               ∈ {FREE, REQUIRED, FORBIDDEN, CONFLICT}
 ```
 
