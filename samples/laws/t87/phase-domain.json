@@ -1,0 +1,76 @@
+{
+  "about": [
+    "Provisional F4 inputs: positive safe integers n,p, p divides n, integer shift 0 <= s < p. This tests only the proposed domain; author confirmation and worst-case objective stay open."
+  ],
+  "coverage": {
+    "criterion": "fixed witnesses and counterexamples only",
+    "could_exclude_counterexamples": true,
+    "why": "finite arithmetic checks; not a general proof"
+  },
+  "cases": [
+    {
+      "input": [
+        12,
+        4,
+        0
+      ],
+      "accepted": true
+    },
+    {
+      "input": [
+        12,
+        5,
+        0
+      ],
+      "accepted": false
+    },
+    {
+      "input": [
+        12,
+        4,
+        4
+      ],
+      "accepted": false
+    },
+    {
+      "input": [
+        12,
+        4,
+        -1
+      ],
+      "accepted": false
+    },
+    {
+      "input": [
+        12,
+        0,
+        0
+      ],
+      "accepted": false
+    },
+    {
+      "input": [
+        12,
+        4,
+        0.5
+      ],
+      "accepted": false
+    },
+    {
+      "input": [
+        1,
+        1,
+        0
+      ],
+      "accepted": true
+    },
+    {
+      "input": [
+        2,
+        2,
+        1
+      ],
+      "accepted": true
+    }
+  ]
+}

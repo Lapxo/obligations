@@ -79,13 +79,40 @@ export function restOf<T>(c: Obligatory<T>, world: World<T> = new Map()): readon
   const out: string[] = [];
   const held = new Set<string>();
   const edge = [...c.restsOn];
+  const above = new Map<string, readonly string[]>();
   for (let i = 0; i < edge.length; i += 1) {
     const name = edge[i]!;
     if (name === own) throw new UnitError('rest-cycle', `obligations: REFUSE·rest ${own} rests on itself: an order of rest with a cycle has no fold to reach`, { at: own });
     if (held.has(name)) continue;
     held.add(name);
     out.push(name);
-    edge.push(...(world.get(name)?.restsOn ?? []));
+    const rests = world.get(name)?.restsOn ?? [];
+    above.set(name, rests);
+    for (const ancestor of rests) edge.push(ancestor);
+  }
+  // Preserve breadth-first output; check the reached graph separately. An active
+  // path detects ancestor cycles even when they never return to the queried cell.
+  const status = new Map<string, 'visiting' | 'done'>();
+  for (const name of out) {
+    if (status.has(name)) continue;
+    status.set(name, 'visiting');
+    const path = [{ name, next: 0 }];
+    while (path.length) {
+      const head = path[path.length - 1]!;
+      const rests = above.get(head.name)!;
+      if (head.next === rests.length) {
+        status.set(head.name, 'done');
+        path.pop();
+        continue;
+      }
+      const ancestor = rests[head.next++]!;
+      const seen = status.get(ancestor);
+      if (seen === 'visiting') throw new UnitError('rest-cycle', `obligations: REFUSE·rest ${own} reaches a cycle at ${ancestor}: an order of rest with a cycle has no fold to reach`, { at: own });
+      if (seen === undefined) {
+        status.set(ancestor, 'visiting');
+        path.push({ name: ancestor, next: 0 });
+      }
+    }
   }
   return out;
 }

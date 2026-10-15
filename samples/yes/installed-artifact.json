@@ -1,7 +1,7 @@
 {
   "format": "installed-acceptance/1",
   "name": "@lapxo/obligations",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "exports": {
     ".": {
       "types": "./dist/lattice/index.d.ts",
@@ -204,7 +204,7 @@
     },
     {
       "path": "dist/lattice/obligatory.js",
-      "sha256": "sha256:1cce37198c95a6afd9842d82feef430414f1c6f0933a631f70e0d21b9eafb924"
+      "sha256": "sha256:767c01b525fe5e97997acebdd2aac89c0d6e579fd9d6955c339292d17d34d048"
     },
     {
       "path": "dist/lattice/order.js",
@@ -244,11 +244,15 @@
     },
     {
       "path": "dist/measures/capacity.js",
-      "sha256": "sha256:d9a178aa08c3ecd4d2630cd99560d1461d1f1e557fb96b01fc21052db5f20881"
+      "sha256": "sha256:cb4bca882f1b3352e30821904e9fa5eccb003116e50cea14a34f201ee99768f4"
     },
     {
       "path": "dist/measures/coincidence.js",
       "sha256": "sha256:61b7c27f3e60b6b5ce026295afe53458a88058c8efd0cd8449ed8b12a4f1d7c2"
+    },
+    {
+      "path": "dist/measures/confidence.js",
+      "sha256": "sha256:28e7f2c69c392abf08788db2a4a24a215c4f8d135d68359b99a477b2aee2a752"
     },
     {
       "path": "dist/measures/error-events.js",
@@ -268,7 +272,7 @@
     },
     {
       "path": "dist/measures/index.js",
-      "sha256": "sha256:2ad8dfb4eb2da8fdbbfd002656e5fc13f1756247080e40ebcb9aa1183fb32d24"
+      "sha256": "sha256:f9c946e806f64b1865656ff599d4ee73c32b96001b8d16473f0c457de81ea13b"
     },
     {
       "path": "dist/measures/m3-experiment.js",
@@ -375,7 +379,7 @@
       "sha256": "sha256:982ffa68c9512832cce698785d1f67816a504b98d1dd05b7c1962dda0584e808"
     }
   ],
-  "code": "sha256:df91b63109afbe37c359ee07b497ebc2ded0af71a2fb10982376a095ff685dbc",
+  "code": "sha256:978a5ef46a25146aea963e22998812e4198628ed97823c71ed83922a2c260840",
   "tests": [
     "finite exact joint probabilities reproduce the four captured information vectors",
     "p=0 is k-invariant; limit statements never overwrite finite or uninformative channels",
@@ -388,6 +392,11 @@
     "redelivery and ordering add no event; conflicting values refuse; inputs stay unchanged",
     "absence, zero reference and insufficient budget are distinct, never inferred independence",
     "estimated marginals condition on truth rather than pooling distinct populations",
+    "042 installed covering cause preserves declared symmetric channel boundaries",
+    "042 installed covering cause refuses missing accuracy and invalid probabilities",
+    "042 installed union bound retains justification and refuses unnamed premises",
+    "042 installed tolerant count keeps heterogeneous subset bounds and paired failure counterexample",
+    "042 installed three conditional measures preserve every frozen algebra state",
     "analytic eigensystem satisfies residual and orthogonality; inputs are unchanged",
     "repeated eigenvalues have no unique top loading; their full variance subspace remains readable",
     "subset variance is descriptive, not a probability of error",

@@ -1,0 +1,122 @@
+{
+  "boundary": {
+    "geometryChoice": "still open; this vector does not choose a set operator",
+    "individualProbabilityAboveOne": "refuse",
+    "individualProbabilityOne": "valid input, not a refusal",
+    "invalidK": [
+      -1,
+      0.5,
+      4
+    ]
+  },
+  "evidenceKind": "source mathematics and exact finite event-space witnesses; no native receipt or claimed point",
+  "hypotheses": [
+    "m is the finite number of failure events",
+    "k is an integer in 0..m",
+    "P(F_i)<=p_i with every p_i in [0,1]",
+    "no independence premise"
+  ],
+  "policy": "vectors/laws/policy.json",
+  "scope": "conditional failure-count arithmetic on one probability space",
+  "sumAboveOne": {
+    "k": 1,
+    "m": 3,
+    "markovSuccessLower": {
+      "denominator": "10",
+      "numerator": "1"
+    },
+    "probabilities": [
+      "3/5",
+      "3/5",
+      "3/5"
+    ],
+    "unionIntersectionsFailureSum": {
+      "denominator": "5",
+      "numerator": "9"
+    },
+    "unionIntersectionsSuccessLower": {
+      "denominator": "1",
+      "numerator": "0"
+    }
+  },
+  "threeMarginalDistinction": {
+    "conclusion": "The valid Markov lower bound 0.85 exceeds 0.8; these marginals cannot refute the raw top-two claim. A weaker lower bound of 0.7 is not an actual-success counterexample.",
+    "k": 1,
+    "m": 3,
+    "markovSuccessLower": {
+      "denominator": "20",
+      "numerator": "17"
+    },
+    "probabilities": [
+      "1/10",
+      "1/10",
+      "1/10"
+    ],
+    "rawTopTwoSuccessLower": {
+      "denominator": "5",
+      "numerator": "4"
+    },
+    "unionIntersectionsFailureSum": {
+      "denominator": "10",
+      "numerator": "3"
+    },
+    "unionIntersectionsSuccessLower": {
+      "denominator": "10",
+      "numerator": "7"
+    }
+  },
+  "trueCounterexample": {
+    "actualSuccess": {
+      "denominator": "10",
+      "numerator": "7"
+    },
+    "conclusion": "Actual success 0.7 is below the asserted lower bound 0.8.",
+    "denominator": 10,
+    "k": 1,
+    "m": 6,
+    "outcomes": [
+      {
+        "failed": [
+          0,
+          1
+        ],
+        "weight": 1
+      },
+      {
+        "failed": [
+          2,
+          3
+        ],
+        "weight": 1
+      },
+      {
+        "failed": [
+          4,
+          5
+        ],
+        "weight": 1
+      },
+      {
+        "failed": [],
+        "weight": 7
+      }
+    ],
+    "probabilities": [
+      "1/10",
+      "1/10",
+      "1/10",
+      "1/10",
+      "1/10",
+      "1/10"
+    ],
+    "rawTopTwoSuccessLower": {
+      "denominator": "5",
+      "numerator": "4"
+    }
+  },
+  "unionIntersectionsProof": [
+    "For k<m, {N>=k+1} is the union, over subsets S of size k+1, of intersection_{i in S} F_i.",
+    "P(intersection_{i in S} F_i)<=min_{i in S}p_i, so the union bound gives P(N>=k+1)<=sum_{|S|=k+1}min_{i in S}p_i.",
+    "The success lower bound is max(0,1-that sum). For k=m there are no such subsets and success is certain. This valid bound can be weaker than the existing subset-Markov bound; no combinatorial API is required."
+  ]
+}

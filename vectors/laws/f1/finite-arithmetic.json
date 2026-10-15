@@ -1,0 +1,66 @@
+{
+  "about": [
+    "F1: this vector checks formula arithmetic and Bell-squared counts for n=3..7, using binary64 logarithms. It does not itself enumerate partition pairs.",
+    "Existing law samples and laws-papers tests supply finite partition checks. path-witness.json now supplies the explicit unrestricted proof chain under finite uniform partition hypotheses; arithmetic vectors do not themselves verify that argument or create independent origins."
+  ],
+  "coverage": {
+    "criterion": "fixed witnesses and counterexamples only",
+    "could_exclude_counterexamples": true,
+    "why": "finite arithmetic checks; not a general proof"
+  },
+  "cases": [
+    {
+      "n": 3,
+      "bell": 5,
+      "pairs": 25,
+      "expected": 0.2516291673878228
+    },
+    {
+      "n": 4,
+      "bell": 15,
+      "pairs": 225,
+      "expected": 0.5
+    },
+    {
+      "n": 5,
+      "bell": 52,
+      "pairs": 2704,
+      "expected": 0.7219280948873623
+    },
+    {
+      "n": 6,
+      "bell": 203,
+      "pairs": 41209,
+      "expected": 0.9182958340544894
+    },
+    {
+      "n": 7,
+      "bell": 877,
+      "pairs": 769129,
+      "expected": 1.093069207771889
+    }
+  ],
+  "existingEvidence": {
+    "references": [
+      "test/laws-papers.test.ts",
+      "test/vectors-harness.ts",
+      "samples/yes/lem-phi.json",
+      "samples/yes/lem-merge.json",
+      "samples/yes/lem-identity.json",
+      "samples/yes/lem-join.json",
+      "samples/yes/lem-meet.json",
+      "samples/yes/thm-extremal.json",
+      "vectors/laws/f1/path-witness.json"
+    ],
+    "finiteChecks": {
+      "lem-phi": "t=1..6, equality at 1 and 2",
+      "lem-merge": "all positive block sizes p+q<=6; all coarsenings on n=4",
+      "lem-identity": "119 ordered trivial-meet pairs on n=4",
+      "lem-meet": "225 ordered pairs on n=4, weighted restricted-pair decomposition and bound",
+      "lem-join": "all ordered trivial-meet pairs on n=3,4,5: 15,119,1343; discrete-join pairs: 8,56,552",
+      "thm-extremal": "existing test checks c_n formula values at n=1,2,4,16; this does not check all extremizers"
+    },
+    "remaining": "No exhaustive n=6,7 extrema enumeration or independent browser/WASM execution is supplied. The explicit general argument is recorded separately in path-witness.json; independent-origin verification remains open."
+  },
+  "policy": "vectors/laws/policy.json"
+}

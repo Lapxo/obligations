@@ -1,0 +1,115 @@
+{
+  "about": "Finite distinctions for claim collection, effective order, truth candidates and covering-cause event scope.",
+  "L1": {
+    "claimSpans": [
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        6
+      ]
+    ],
+    "expectedMeet": [
+      2,
+      4
+    ],
+    "expectedUnionOfAdmissibleValues": [
+      0,
+      6
+    ],
+    "orderedMarks": {
+      "tightAt": 1,
+      "widenAt": 2,
+      "expected": [
+        0,
+        7
+      ]
+    },
+    "equalTimestamp": "The existing mark reading retains sequence order on ties; collections with equal timestamps and reversed widening/signature sequence are different effective orders, and may differ."
+  },
+  "L3": {
+    "candidateValues": [
+      0,
+      1
+    ],
+    "truthHypothesis": "Truth is one of these admissible singleton candidates; either candidate can be true. The fixture supplies no external evidence to select it.",
+    "expectedState": "CONFLICT",
+    "meaning": "Swapping claim arrival cannot resolve an empty meet. Choosing either branch can discard the truth in one admissible assignment; this does not establish a normative rule without the truth-candidate hypothesis."
+  },
+  "L6": {
+    "references": [
+      "test/measures/t12-capacity.test.ts",
+      "src/measures/capacity.ts"
+    ],
+    "meaning": "Existing joint-table test proves deterministic copies of one observed symbol have identical mutual information for copies 1,2,20. T12 is an upper bound under uniform truth, independent covering indicator and a handed symmetric active channel; no partial-governance generalization.",
+    "proofUnderDeclaredConditions": "For truth T and independent covering indicator C, I(T;Y) <= I(T;Y,C) = (1-c) I(T;Y|C=0) + c I(T;Y|C=1). The first conditional information is at most log2(n); the copied symmetric active symbol has conditional entropy h(q)+(1-q)log2(n-1), uniform marginal and information log2(n) minus that entropy. Combining terms gives the T12 bound; a deterministic injective replication of Y preserves its information. No achievability or private-channel model follows."
+  },
+  "L7": {
+    "n": 2,
+    "c": 0.5,
+    "activeTruthSymbolTables": [
+      [
+        [
+          0,
+          0.5
+        ],
+        [
+          0.5,
+          0
+        ]
+      ],
+      [
+        [
+          0.25,
+          0.25
+        ],
+        [
+          0.25,
+          0.25
+        ]
+      ],
+      [
+        [
+          0.5,
+          0
+        ],
+        [
+          0,
+          0.5
+        ]
+      ]
+    ],
+    "privateTruthSymbolTable": [
+      [
+        0.5,
+        0
+      ],
+      [
+        0,
+        0.5
+      ]
+    ],
+    "activeJointUnanimityOnEachValue": 0.25,
+    "activeConditionalUnanimityOnEachValue": 0.5,
+    "wholeMixtureUnanimityOnEachValue": 0.5,
+    "meaning": "All witnesses copy the common symbol when active; the private fixture copies truth deterministically when inactive. Active contribution c/n is q-independent by symmetry; total unanimity includes private contribution and is not c/n. This finite counterexample does not define a general factor-governance model.",
+    "conditionalMarginalDerivation": "Under uniform truth and a symmetric active n-ary channel, P(Y=v|C=1)=(q+(n-1)*(1-q)/(n-1))/n=1/n. Copies add no new event condition. Multiplication by P(C=1)=c yields the joint active contribution, not the unconditioned whole-mixture event.",
+    "wholeMixtureCorrectness": [
+      0.5,
+      0.75,
+      1
+    ]
+  },
+  "L8-L9": {
+    "references": [
+      "src/measures/identification.ts",
+      "src/measures/m3.ts",
+      "test/measures/identification.test.ts"
+    ],
+    "scope": "Existing M/3 identification uses handed sharing sets and truth-labelled population correctness moments. Positive correctness, full shared-factor column rank, compatible moments and the declared budget are required; singleton/private decomposition stays unresolved. Dissent excludes only a specific ordered configuration. No general partial symmetric-cause q identification iff outsider theorem is supplied by these functions.",
+    "linearizationUnderHandedM3": "For positive correctness and compatible handed independent factor survivals, log(P(correct_a,correct_b)/(P(correct_a)P(correct_b))) is the sum of negative log survivals for factors shared by a and b. Full column rank identifies those shared log survivals in this model; singleton/private causes do not supply shared columns and remain unresolved. Zero correctness or incompatible moments invalidates this linearization even with the same declared sharing matrix."
+  },
+  "policy": "vectors/laws/policy.json"
+}

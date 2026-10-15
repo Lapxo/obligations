@@ -1,0 +1,72 @@
+{
+  "about": "Existing-object boundary: additive narrowing lowers finite interval freedom; exact withdrawal and witnessed local widening can reopen it without creating a coordinate. Research comparison only; different hypotheses do not establish a fork.",
+  "branches": [
+    {
+      "id": "A7",
+      "scope": "law/A7-freedom-conserved",
+      "publishedStatement": "bound-lock/1 about=\"the freedom of a system is the sum of its cells' debits in bits; an encounter never raises it; only a new coordinate does\" at=policy:law/A7 by=target form=alphabet kind=axiom measure=status needs=samples/yes/A7-freedom-conserved.json|samples/no/A7-freedom-conserved.json role=demands scope=law/A7-freedom-conserved value=present view=chain",
+      "sourceCommit": "7fd489c21ab362034f164577a97bcb7d9965ad89"
+    },
+    {
+      "id": "T90",
+      "scope": "law/T90-freedom-is-entropy",
+      "publishedStatement": "bound-lock/1 about=\"freedom is log₂ of the states between the poles, which is the cell's entropy: encounters lower it, vacuity raises it, and nothing else moves it; two paths interfere from phase alone, and that is lost once which path was taken is observed\" at=policy:law/T90 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T90-freedom-is-entropy.json|samples/no/T90-freedom-is-entropy.json restsOn=law/D4-debit-in-bits|law/A7-freedom-conserved|law/T48-epoch-is-phase role=demands scope=law/T90-freedom-is-entropy value=present view=chain",
+      "sourceCommit": "7fd489c21ab362034f164577a97bcb7d9965ad89"
+    }
+  ],
+  "case": {
+    "object": "existing",
+    "claims": [
+      {
+        "id": "a",
+        "origin": "a",
+        "span": [
+          0,
+          7
+        ]
+      },
+      {
+        "id": "b",
+        "origin": "b",
+        "span": [
+          0,
+          7
+        ]
+      }
+    ],
+    "narrowingClaim": {
+      "id": "n",
+      "origin": "n",
+      "span": [
+        0,
+        1
+      ]
+    },
+    "localCeiling": [
+      0,
+      1
+    ],
+    "widening": [
+      0,
+      7
+    ],
+    "witness": "existing-origin",
+    "expected": {
+      "beforeBits": 3,
+      "narrowedBits": 1,
+      "withdrawnBits": 3,
+      "signedBits": 1,
+      "widenedBits": 3,
+      "narrowingStates": [
+        "FREE",
+        "FREE",
+        "FREE"
+      ],
+      "wideningStates": [
+        "FREE",
+        "FREE"
+      ]
+    }
+  },
+  "policy": "vectors/laws/policy.json"
+}

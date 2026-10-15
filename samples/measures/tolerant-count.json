@@ -1,0 +1,144 @@
+[
+  {
+    "yes": {
+      "group": "tolerant-count",
+      "place": "orchard",
+      "k": 2,
+      "failures": [
+        {
+          "id": "0",
+          "p": "9/10",
+          "justification": "hypothesis:0"
+        },
+        {
+          "id": "1",
+          "p": "1/10",
+          "justification": "hypothesis:1"
+        },
+        {
+          "id": "2",
+          "p": "1/10",
+          "justification": "hypothesis:2"
+        },
+        {
+          "id": "3",
+          "p": "1/10",
+          "justification": "hypothesis:3"
+        },
+        {
+          "id": "4",
+          "p": "1/10",
+          "justification": "hypothesis:4"
+        }
+      ],
+      "expectedLowerBound": {
+        "numerator": "4",
+        "denominator": "5"
+      }
+    },
+    "no": {
+      "group": "tolerant-count",
+      "place": "orchard",
+      "k": 6,
+      "failures": [
+        {
+          "id": "0",
+          "p": "9/10",
+          "justification": "hypothesis:0"
+        },
+        {
+          "id": "1",
+          "p": "1/10",
+          "justification": "hypothesis:1"
+        },
+        {
+          "id": "2",
+          "p": "1/10",
+          "justification": "hypothesis:2"
+        },
+        {
+          "id": "3",
+          "p": "1/10",
+          "justification": "hypothesis:3"
+        },
+        {
+          "id": "4",
+          "p": "1/10",
+          "justification": "hypothesis:4"
+        }
+      ],
+      "expectedRefusal": "allowed failure count must be an integer in 0..m"
+    }
+  },
+  {
+    "yes": {
+      "group": "tolerant-count",
+      "place": "catalog",
+      "k": 2,
+      "failures": [
+        {
+          "id": "0",
+          "p": "9/10",
+          "justification": "hypothesis:0"
+        },
+        {
+          "id": "1",
+          "p": "1/10",
+          "justification": "hypothesis:1"
+        },
+        {
+          "id": "2",
+          "p": "1/10",
+          "justification": "hypothesis:2"
+        },
+        {
+          "id": "3",
+          "p": "1/10",
+          "justification": "hypothesis:3"
+        },
+        {
+          "id": "4",
+          "p": "1/10",
+          "justification": "hypothesis:4"
+        }
+      ],
+      "expectedLowerBound": {
+        "numerator": "4",
+        "denominator": "5"
+      }
+    },
+    "no": {
+      "group": "tolerant-count",
+      "place": "catalog",
+      "k": 6,
+      "failures": [
+        {
+          "id": "0",
+          "p": "9/10",
+          "justification": "hypothesis:0"
+        },
+        {
+          "id": "1",
+          "p": "1/10",
+          "justification": "hypothesis:1"
+        },
+        {
+          "id": "2",
+          "p": "1/10",
+          "justification": "hypothesis:2"
+        },
+        {
+          "id": "3",
+          "p": "1/10",
+          "justification": "hypothesis:3"
+        },
+        {
+          "id": "4",
+          "p": "1/10",
+          "justification": "hypothesis:4"
+        }
+      ],
+      "expectedRefusal": "allowed failure count must be an integer in 0..m"
+    }
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "about": [
+    "F2: discrete points 0..11, five-point arcs; no declared cut. This finite counterexample refutes pairwise sufficiency here, not every finite Helly bound."
+  ],
+  "coverage": {
+    "criterion": "fixed witnesses and counterexamples only",
+    "could_exclude_counterexamples": true,
+    "why": "finite arithmetic checks; not a general proof"
+  },
+  "cases": [
+    {
+      "n": 12,
+      "length": 5,
+      "starts": [
+        0,
+        4,
+        8
+      ],
+      "expectedArcs": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          8,
+          9,
+          10,
+          11,
+          0
+        ]
+      ],
+      "expectedPairMeets": [
+        [
+          4
+        ],
+        [
+          0
+        ],
+        [
+          8
+        ]
+      ],
+      "expectedTripleMeet": []
+    }
+  ],
+  "complementSingleton": {
+    "about": "For every n>=3, the n arcs of n-1 consecutive cyclic points, each omitting a different point, have nonempty intersection for every proper subfamily and empty total intersection. Thus Helly numbers are unbounded across discrete circle sizes; each fixed n still has a bound <= n.",
+    "sizes": [
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "policy": "vectors/laws/policy.json"
+}

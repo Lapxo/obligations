@@ -1,0 +1,242 @@
+{
+  "scope": "F1/finite-uniform-partition-lattice",
+  "status": "explicit general mathematical proof and distinguishing finite witnesses; independent-origin verification remains open",
+  "remaining": [
+    "Independent-origin verification of the explicit general proof; finite witnesses alone do not establish two decorrelated origins."
+  ],
+  "pathSizes": [
+    3,
+    4,
+    5
+  ],
+  "negative": {
+    "name": "connected branching tree is not an extremal path",
+    "n": 4,
+    "x": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "y": [
+      [
+        0
+      ],
+      [
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "degrees": [
+      3,
+      1,
+      1,
+      1,
+      2
+    ],
+    "expectedResidual": 0.31127812445913283,
+    "falseClaim": "Every connected simple tree with n edges attains c_n, regardless of its vertex degrees."
+  },
+  "hypotheses": [
+    "n is a positive integer",
+    "X and Y are partitions of the same n-element set",
+    "the probability measure is uniform on those n elements",
+    "RI = H(X)+H(Y)-H(join)-H(meet), with the maintained refinement order"
+  ],
+  "proofChain": [
+    {
+      "id": "F1/graph-identity",
+      "dependsOn": [],
+      "argument": "If meet is trivial, the bipartite block graph is connected. One vertex per X/Y block; a nonempty intersection gives one edge of integer weight c, vertex degree a is total incident weight, and total edge weight is n. With phi(t)=t log2(t), H(X)=log2(n)-sum_X phi(a)/n, H(Y) analogously, H(join)=log2(n)-sum_edges phi(c)/n, H(meet)=0. Hence RI=log2(n)-Phi/n with Phi=sum_vertices phi(a)-sum_edges phi(c)."
+    },
+    {
+      "id": "F1/overlap-split",
+      "dependsOn": [
+        "F1/graph-identity"
+      ],
+      "argument": "For an edge with weight c>=2, choose one incident block A with size a>=c, pull one atom in that intersection out of A into a new singleton block, and leave the other partition unchanged. The original intersection retains c-1 atoms, so no original graph vertex or connection disappears; the new singleton is a leaf, preserving connectivity and trivial meet. Phi_old-Phi_new=[phi(a)-phi(a-1)]-[phi(c)-phi(c-1)]>=0: phi is strictly convex on positive reals (phi_second(t)=1/(t ln(2))). Thus RI_new>=RI_old, strictly if a>c. The integer potential sum_edges(c-1)=n-edge_count decreases by one; finitely many splits reach discrete join."
+    },
+    {
+      "id": "F1/strict-overlap",
+      "dependsOn": [
+        "F1/overlap-split"
+      ],
+      "argument": "When n>=3 and some edge has c>=2, if either endpoint has size greater than c, choose it for a strict improvement. Otherwise both endpoint sizes equal c; connectedness then forces this to be the sole edge and n=c. The first split may preserve Phi. Since n>=3, the remaining edge has weight n-1>=2; split its opposite endpoint, whose size is still n>n-1, to obtain a strict improvement. Therefore any weighted-overlap pair is strictly below the maximum for n>=3."
+    },
+    {
+      "id": "F1/degree-floor",
+      "dependsOn": [],
+      "argument": "For integer d>=1, phi(d)>=2(d-1), equality exactly at d=1,2. Equality is direct at 1,2. For real d>=2, the derivative of phi(d)-2(d-1) is log2(d)+1/ln(2)-2>0."
+    },
+    {
+      "id": "F1/simple-graph-upper-equality",
+      "dependsOn": [
+        "F1/graph-identity",
+        "F1/degree-floor"
+      ],
+      "argument": "At discrete join every edge weight is one. The connected simple bipartite graph has n edges, v<=n+1 vertices and sum_degrees=2n. Thus Phi=sum phi(d)>=2(2n-v)>=2(n-1), giving RI<=log2(n)-2+2/n=c_n. Equality requires v=n+1 and all degrees in {1,2}: a connected tree with maximum degree two is a path. Conversely a path has two degree-one vertices and n-1 degree-two vertices and attains c_n."
+    },
+    {
+      "id": "F1/trivial-meet-upper-equality",
+      "dependsOn": [
+        "F1/overlap-split",
+        "F1/strict-overlap",
+        "F1/simple-graph-upper-equality"
+      ],
+      "argument": "A trivial-meet weighted pair can be split to a simple connected pair without decreasing RI; the latter is bounded by c_n. For n>=3 strict-overlap excludes weighted pairs from equality, leaving exactly simple paths, including their atom relabellings and interchange of X/Y."
+    },
+    {
+      "id": "F1/component-decomposition",
+      "dependsOn": [],
+      "argument": "For a nontrivial meet, its blocks are the connected components C_t of the block graph, with sizes n_t. X, Y and join refine meet, so entropy chain rules give H(X)=H(meet)+sum_t(n_t/n)H(X|C_t), and likewise for Y and join. Consequently RI=sum_t(n_t/n)RI_t, each restricted pair having trivial meet."
+    },
+    {
+      "id": "F1/component-upper-equality",
+      "dependsOn": [
+        "F1/component-decomposition",
+        "F1/trivial-meet-upper-equality"
+      ],
+      "argument": "Every RI_t<=c_(n_t). Here c_1=c_2=0; for real x>=2, c_prime(x)=1/(x ln(2))-2/x^2>0. Therefore c_k<c_n for every integer 1<=k<n when n>=3. With more than one component, all n_t<n, and RI<=sum_t(n_t/n)c_(n_t)<c_n. Thus equality for n>=3 forces trivial meet and the path characterization above."
+    },
+    {
+      "id": "F1/small-boundary",
+      "dependsOn": [],
+      "argument": "For n=1 the unique partition pair gives RI=0=c_1. For n=2 the two partitions form a chain; for any pair its meet and join are the pair itself in some order, so RI=0=c_2. Hence every pair attains the zero maximum in these two cases."
+    }
+  ],
+  "overlapReduction": {
+    "name": "split a weighted intersection from its larger endpoint",
+    "n": 4,
+    "xBefore": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "y": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "xAfter": [
+      [
+        0,
+        2
+      ],
+      [
+        1
+      ],
+      [
+        3
+      ]
+    ],
+    "splitAtom": 1,
+    "edgeWeightBefore": 2,
+    "endpointSizeBefore": 3,
+    "expectedBefore": 0.31127812445913283,
+    "expectedAfter": 0.5
+  },
+  "componentWitness": {
+    "name": "path on three atoms plus a two-atom component is below global c_5",
+    "n": 5,
+    "x": [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3
+      ],
+      [
+        4
+      ]
+    ],
+    "y": [
+      [
+        0,
+        1
+      ],
+      [
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "components": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "componentSizes": [
+      3,
+      2
+    ]
+  },
+  "soleOverlapReduction": {
+    "name": "sole weighted edge needs an equal split followed by a strict split",
+    "n": 3,
+    "xBefore": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "yBefore": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "xAfter": [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "yAfter": [
+      [
+        0,
+        2
+      ],
+      [
+        1
+      ]
+    ],
+    "expectedBefore": 0,
+    "expectedFirstSplit": 0,
+    "expectedFinal": 0.2516291673878228
+  },
+  "policy": "vectors/laws/policy.json"
+}

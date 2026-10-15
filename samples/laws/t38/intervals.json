@@ -1,0 +1,75 @@
+{
+  "about": [
+    "Closed real intervals represented by existing intervals lattice; pairwise sufficiency is scoped to intervals, not arbitrary lattice forms."
+  ],
+  "coverage": {
+    "criterion": "fixed witnesses and counterexamples only",
+    "could_exclude_counterexamples": true,
+    "why": "finite arithmetic checks; not a general proof"
+  },
+  "cases": [
+    {
+      "id": "positive",
+      "intervals": [
+        [
+          0,
+          6
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          4,
+          10
+        ]
+      ],
+      "expected": [
+        4,
+        6
+      ]
+    },
+    {
+      "id": "negative",
+      "intervals": [
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "emptyWitness": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "singleton-touch",
+      "intervals": [
+        [
+          0,
+          5
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "expected": [
+        5,
+        5
+      ]
+    }
+  ]
+}

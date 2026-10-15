@@ -1,0 +1,67 @@
+{
+  "C4": {
+    "conditions": [
+      "uniform truth on n values",
+      "factor activation independent of truth, with positive activation probability for the conditional observation",
+      "active covering symmetric factor",
+      "conditioning on active factor and emitted value v",
+      "independent external symmetric observation",
+      "known external error p"
+    ],
+    "formula": "P(E=v|active,Fvalue=v)=q(1-p)+(1-q)p/(n-1)",
+    "slope": "1-p-p/(n-1); nonzero iff p!=(n-1)/n",
+    "positive": {
+      "n": 4,
+      "p": "1/10",
+      "q": "4/5",
+      "coincidence": "109/150",
+      "slope": "13/15"
+    },
+    "uniformNegative": {
+      "n": 4,
+      "p": "3/4",
+      "accuracies": [
+        "0",
+        "1/4",
+        "4/5",
+        "1"
+      ],
+      "coincidence": "1/4",
+      "slope": "0"
+    },
+    "mixtureNegative": {
+      "n": 4,
+      "externalP": "1/10",
+      "inactiveInternal": "truth copied exactly",
+      "parameterPairs": [
+        {
+          "c": "1/2",
+          "q": "4/5"
+        },
+        {
+          "c": "1",
+          "q": "9/10"
+        }
+      ],
+      "wholeCoincidence": "61/75"
+    },
+    "cZero": "No active observations exist when c=0; the conditional coincidence is not empirically identified by this population.",
+    "proof": "Uniform truth plus symmetric emissions gives posterior P(truth=v|active,Fvalue=v)=q. Independent external observation agrees with v with probabilities 1-p if truth=v, and p/(n-1) otherwise. Total probability gives the affine formula; nonzero slope yields unique inverse q. A uniform external observation has zero slope. Unknown activation/private mixture parameters require additional observables and assumptions."
+  },
+  "C5": {
+    "family": "same-block equality and different-block inequality constraints on partitions of a fixed finite X",
+    "fixedUniverseBound": "On |X|=n>=2, every incompatible finite family has an incompatible subfamily of size at most n, and n is attained.",
+    "proof": "Equality constraints connect components; inequalities are satisfiable precisely when their endpoints lie in different equality components. A violated inequality has an equality simple path of length at most n-1 between its endpoints; that path plus the inequality is an unsatisfiable witness of at most n constraints. A path through all n elements plus the endpoint inequality is minimal unsatisfiable with n constraints. Thus no finite bound is uniform across universe sizes.",
+    "witnessSizes": [
+      3,
+      5
+    ],
+    "equalityOnly": "Always satisfiable by the one-block coarsest partition. The finest discrete partition does not satisfy a nontrivial equality.",
+    "refinementOnly": "Every set of upper refinement demands is satisfiable by the finest discrete partition.",
+    "references": [
+      "test/vectors-harness.ts:partitionsOf",
+      "test/vectors-harness.ts:partitionScale"
+    ]
+  },
+  "policy": "vectors/laws/policy.json"
+}
