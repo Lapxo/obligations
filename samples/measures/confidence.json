@@ -1,0 +1,70 @@
+[
+  {
+    "yes": {
+      "group": "confidence",
+      "failures": [
+        {
+          "id": "A",
+          "p": "1/10",
+          "justification": "hypothesis:A"
+        },
+        {
+          "id": "B",
+          "p": "1/5",
+          "justification": "hypothesis:B"
+        }
+      ],
+      "expectedLowerBound": {
+        "numerator": "7",
+        "denominator": "10"
+      },
+      "place": "orchard"
+    },
+    "no": {
+      "group": "confidence",
+      "failures": [
+        {
+          "id": "A",
+          "p": "1/10",
+          "justification": ""
+        }
+      ],
+      "expectedRefusal": "justification reference required",
+      "place": "orchard"
+    }
+  },
+  {
+    "yes": {
+      "group": "confidence",
+      "failures": [
+        {
+          "id": "A",
+          "p": "1/10",
+          "justification": "hypothesis:A"
+        },
+        {
+          "id": "B",
+          "p": "1/5",
+          "justification": "hypothesis:B"
+        }
+      ],
+      "expectedLowerBound": {
+        "numerator": "7",
+        "denominator": "10"
+      },
+      "place": "catalog"
+    },
+    "no": {
+      "group": "confidence",
+      "failures": [
+        {
+          "id": "A",
+          "p": "1/10",
+          "justification": ""
+        }
+      ],
+      "expectedRefusal": "justification reference required",
+      "place": "catalog"
+    }
+  }
+]

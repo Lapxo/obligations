@@ -1,0 +1,48 @@
+[
+  {
+    "yes": {
+      "group": "common-cause-capacity",
+      "n": 4,
+      "c": "1/5",
+      "q": "1/2",
+      "policy": {
+        "logarithm": "binary64-log2"
+      },
+      "expectedBits": 1.6415037499278844,
+      "place": "orchard"
+    },
+    "no": {
+      "group": "common-cause-capacity",
+      "n": 4,
+      "c": "1/5",
+      "policy": {
+        "logarithm": "binary64-log2"
+      },
+      "expectedRefusal": "common-cause accuracy q required",
+      "place": "orchard"
+    }
+  },
+  {
+    "yes": {
+      "group": "common-cause-capacity",
+      "n": 4,
+      "c": "1/5",
+      "q": "1/2",
+      "policy": {
+        "logarithm": "binary64-log2"
+      },
+      "expectedBits": 1.6415037499278844,
+      "place": "catalog"
+    },
+    "no": {
+      "group": "common-cause-capacity",
+      "n": 4,
+      "c": "1/5",
+      "policy": {
+        "logarithm": "binary64-log2"
+      },
+      "expectedRefusal": "common-cause accuracy q required",
+      "place": "catalog"
+    }
+  }
+]

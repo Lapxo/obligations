@@ -1,0 +1,97 @@
+{
+  "instrument": "@lapxo/bound@0.1.8",
+  "implementation": "sha256:8a6086d042bbf67cf6161cd97022aa8eaf43d41ac2a46fbd4680a83f394fa7cf",
+  "inventory": "vectors/measures/implementation-042.json",
+  "captures": [
+    {
+      "place": "orchard",
+      "negative": false,
+      "events": [
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:14237f14da2bc334b78bb9f58edd489daa543c6923ab79d95e01c5aaebb0dc88 by=reader:9dcadacead03 form=alphabet measure=observed role=writes scope=inputs/sample.json value=14237f14da2bc334\nbound-lock/1 at=place:sha256:14237f14da2bc334b78bb9f58edd489daa543c6923ab79d95e01c5aaebb0dc88 by=reader:9dcadacead03 form=alphabet measure=result role=writes scope=measurement/tolerant-count/orchard value=\"{\\\"result\\\":{\\\"model\\\":\\\"declared-failure-count-bound@1\\\",\\\"status\\\":\\\"conditional-bound\\\",\\\"unit\\\":\\\"probability\\\",\\\"conditions\\\":[\\\"common-probability-space\\\",\\\"each-failure-probability-justified\\\"],\\\"declarations\\\":[{\\\"id\\\":\\\"0\\\",\\\"p\\\":{\\\"numerator\\\":\\\"9\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:0\\\"},{\\\"id\\\":\\\"1\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:1\\\"},{\\\"id\\\":\\\"2\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:2\\\"},{\\\"id\\\":\\\"3\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:3\\\"},{\\\"id\\\":\\\"4\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:4\\\"}],\\\"failureSum\\\":{\\\"numerator\\\":\\\"13\\\",\\\"denominator\\\":\\\"10\\\"},\\\"value\\\":{\\\"numerator\\\":\\\"4\\\",\\\"denominator\\\":\\\"5\\\"},\\\"trivial\\\":false,\\\"meaning\\\":\\\"lower bound for at most k declared failures; references are not verified\\\",\\\"allowedFailures\\\":2,\\\"totalDeclarations\\\":5,\\\"exclusionOrder\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\",\\\"4\\\"],\\\"candidates\\\":[{\\\"excludedCount\\\":0,\\\"threshold\\\":3,\\\"remainingFailureSum\\\":{\\\"numerator\\\":\\\"13\\\",\\\"denominator\\\":\\\"10\\\"},\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"13\\\",\\\"denominator\\\":\\\"30\\\"}},{\\\"excludedCount\\\":1,\\\"threshold\\\":2,\\\"remainingFailureSum\\\":{\\\"numerator\\\":\\\"2\\\",\\\"denominator\\\":\\\"5\\\"},\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"5\\\"}},{\\\"excludedCount\\\":2,\\\"threshold\\\":1,\\\"remainingFailureSum\\\":{\\\"numerator\\\":\\\"3\\\",\\\"denominator\\\":\\\"10\\\"},\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"3\\\",\\\"denominator\\\":\\\"10\\\"}}],\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"5\\\"}},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:7216b46885c91cae64058e1a51f5741242500f55103faa1667a25a18aacf1817 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:7216b46885c91cae64058e1a51f5741242500f55103faa1667a25a18aacf1817\n",
+          "stderr": "READER   test/support/measures-reader.js · 1 run · 176 ms\nOBSERVE  1 run · 0 read by key · 180 ms\nOWN      imports 18 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 1 ms · zoom 0 ms · nos 0 ms · zoomed 0 ms · applied 1 ms · laid 3 ms · resets 1 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 6 ms · own 28 ms · regions 10 ms · ceilings 1 ms · paid 0 ms · docs 0 ms · ceilings 1 ms\nBEAT     fold de3cda0d folded 0.3 s · 0.3 s folded\nKEPT     fold de3cda0d miss · no fold was kept before this one\n",
+          "runtimeMs": 439
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:14237f14da2bc334b78bb9f58edd489daa543c6923ab79d95e01c5aaebb0dc88 by=reader:9dcadacead03 form=alphabet measure=observed role=writes scope=inputs/sample.json value=14237f14da2bc334\nbound-lock/1 at=place:sha256:14237f14da2bc334b78bb9f58edd489daa543c6923ab79d95e01c5aaebb0dc88 by=reader:9dcadacead03 form=alphabet measure=result role=writes scope=measurement/tolerant-count/orchard value=\"{\\\"result\\\":{\\\"model\\\":\\\"declared-failure-count-bound@1\\\",\\\"status\\\":\\\"conditional-bound\\\",\\\"unit\\\":\\\"probability\\\",\\\"conditions\\\":[\\\"common-probability-space\\\",\\\"each-failure-probability-justified\\\"],\\\"declarations\\\":[{\\\"id\\\":\\\"0\\\",\\\"p\\\":{\\\"numerator\\\":\\\"9\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:0\\\"},{\\\"id\\\":\\\"1\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:1\\\"},{\\\"id\\\":\\\"2\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:2\\\"},{\\\"id\\\":\\\"3\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:3\\\"},{\\\"id\\\":\\\"4\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:4\\\"}],\\\"failureSum\\\":{\\\"numerator\\\":\\\"13\\\",\\\"denominator\\\":\\\"10\\\"},\\\"value\\\":{\\\"numerator\\\":\\\"4\\\",\\\"denominator\\\":\\\"5\\\"},\\\"trivial\\\":false,\\\"meaning\\\":\\\"lower bound for at most k declared failures; references are not verified\\\",\\\"allowedFailures\\\":2,\\\"totalDeclarations\\\":5,\\\"exclusionOrder\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\",\\\"4\\\"],\\\"candidates\\\":[{\\\"excludedCount\\\":0,\\\"threshold\\\":3,\\\"remainingFailureSum\\\":{\\\"numerator\\\":\\\"13\\\",\\\"denominator\\\":\\\"10\\\"},\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"13\\\",\\\"denominator\\\":\\\"30\\\"}},{\\\"excludedCount\\\":1,\\\"threshold\\\":2,\\\"remainingFailureSum\\\":{\\\"numerator\\\":\\\"2\\\",\\\"denominator\\\":\\\"5\\\"},\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"5\\\"}},{\\\"excludedCount\\\":2,\\\"threshold\\\":1,\\\"remainingFailureSum\\\":{\\\"numerator\\\":\\\"3\\\",\\\"denominator\\\":\\\"10\\\"},\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"3\\\",\\\"denominator\\\":\\\"10\\\"}}],\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"5\\\"}},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:7216b46885c91cae64058e1a51f5741242500f55103faa1667a25a18aacf1817 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:7216b46885c91cae64058e1a51f5741242500f55103faa1667a25a18aacf1817\n",
+          "stderr": "OBSERVE  0 run · 1 read by key · 1 readers kept whole · 3 ms\nOWN      imports 18 ms · bodies 0 ms · removed 1 ms · readers 0 ms · alphabets 0 ms · capsules 0 ms · regions 2 ms · vectors 0 ms · zoom 0 ms · nos 0 ms · zoomed 1 ms · applied 0 ms · laid 4 ms · resets 0 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 6 ms · own 27 ms · regions 10 ms · ceilings 1 ms · paid 0 ms · docs 1 ms · ceilings 0 ms\nBEAT     fold de3cda0d folded 0.1 s · 0.3 s folded\nKEPT     fold de3cda0d miss · no fold was kept before this one\n",
+          "runtimeMs": 259
+        }
+      ]
+    },
+    {
+      "place": "orchard",
+      "negative": true,
+      "events": [
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 1,
+          "stdout": "",
+          "stderr": "REFUSE·reader test/support/measures-reader.js · REFUSE·reader <place>/test/support/measures-reader.js · Error: REFUSE·confidence allowed failure count must be an integer in 0..m\nOBSERVE  0 run · 0 read by key · 173 ms\nbound: REFUSE·reader test/support/measures-reader.js · REFUSE·reader <place>/test/support/measures-reader.js · Error: REFUSE·confidence allowed failure count must be an integer in 0..m\n",
+          "runtimeMs": 338
+        }
+      ]
+    },
+    {
+      "place": "catalog",
+      "negative": false,
+      "events": [
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:930d183c6901065c279d8945539291d6905d1af93cb49c1f7a24a8964912d23c by=reader:9dcadacead03 form=alphabet measure=observed role=writes scope=inputs/sample.json value=930d183c6901065c\nbound-lock/1 at=place:sha256:930d183c6901065c279d8945539291d6905d1af93cb49c1f7a24a8964912d23c by=reader:9dcadacead03 form=alphabet measure=result role=writes scope=measurement/tolerant-count/catalog value=\"{\\\"result\\\":{\\\"model\\\":\\\"declared-failure-count-bound@1\\\",\\\"status\\\":\\\"conditional-bound\\\",\\\"unit\\\":\\\"probability\\\",\\\"conditions\\\":[\\\"common-probability-space\\\",\\\"each-failure-probability-justified\\\"],\\\"declarations\\\":[{\\\"id\\\":\\\"0\\\",\\\"p\\\":{\\\"numerator\\\":\\\"9\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:0\\\"},{\\\"id\\\":\\\"1\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:1\\\"},{\\\"id\\\":\\\"2\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:2\\\"},{\\\"id\\\":\\\"3\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:3\\\"},{\\\"id\\\":\\\"4\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:4\\\"}],\\\"failureSum\\\":{\\\"numerator\\\":\\\"13\\\",\\\"denominator\\\":\\\"10\\\"},\\\"value\\\":{\\\"numerator\\\":\\\"4\\\",\\\"denominator\\\":\\\"5\\\"},\\\"trivial\\\":false,\\\"meaning\\\":\\\"lower bound for at most k declared failures; references are not verified\\\",\\\"allowedFailures\\\":2,\\\"totalDeclarations\\\":5,\\\"exclusionOrder\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\",\\\"4\\\"],\\\"candidates\\\":[{\\\"excludedCount\\\":0,\\\"threshold\\\":3,\\\"remainingFailureSum\\\":{\\\"numerator\\\":\\\"13\\\",\\\"denominator\\\":\\\"10\\\"},\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"13\\\",\\\"denominator\\\":\\\"30\\\"}},{\\\"excludedCount\\\":1,\\\"threshold\\\":2,\\\"remainingFailureSum\\\":{\\\"numerator\\\":\\\"2\\\",\\\"denominator\\\":\\\"5\\\"},\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"5\\\"}},{\\\"excludedCount\\\":2,\\\"threshold\\\":1,\\\"remainingFailureSum\\\":{\\\"numerator\\\":\\\"3\\\",\\\"denominator\\\":\\\"10\\\"},\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"3\\\",\\\"denominator\\\":\\\"10\\\"}}],\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"5\\\"}},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:7216b46885c91cae64058e1a51f5741242500f55103faa1667a25a18aacf1817 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:7216b46885c91cae64058e1a51f5741242500f55103faa1667a25a18aacf1817\n",
+          "stderr": "READER   test/support/measures-reader.js · 1 run · 172 ms\nOBSERVE  1 run · 0 read by key · 177 ms\nOWN      imports 19 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 1 ms · zoom 0 ms · nos 0 ms · zoomed 1 ms · applied 1 ms · laid 3 ms · resets 1 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 5 ms · own 29 ms · regions 12 ms · ceilings 1 ms · paid 0 ms · docs 0 ms · ceilings 1 ms\nBEAT     fold 16e59ae8 folded 0.3 s · 0.3 s folded\nKEPT     fold 16e59ae8 miss · no fold was kept before this one\n",
+          "runtimeMs": 433
+        },
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 0,
+          "stdout": "bound-lock/1 at=place:sha256:930d183c6901065c279d8945539291d6905d1af93cb49c1f7a24a8964912d23c by=reader:9dcadacead03 form=alphabet measure=observed role=writes scope=inputs/sample.json value=930d183c6901065c\nbound-lock/1 at=place:sha256:930d183c6901065c279d8945539291d6905d1af93cb49c1f7a24a8964912d23c by=reader:9dcadacead03 form=alphabet measure=result role=writes scope=measurement/tolerant-count/catalog value=\"{\\\"result\\\":{\\\"model\\\":\\\"declared-failure-count-bound@1\\\",\\\"status\\\":\\\"conditional-bound\\\",\\\"unit\\\":\\\"probability\\\",\\\"conditions\\\":[\\\"common-probability-space\\\",\\\"each-failure-probability-justified\\\"],\\\"declarations\\\":[{\\\"id\\\":\\\"0\\\",\\\"p\\\":{\\\"numerator\\\":\\\"9\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:0\\\"},{\\\"id\\\":\\\"1\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:1\\\"},{\\\"id\\\":\\\"2\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:2\\\"},{\\\"id\\\":\\\"3\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:3\\\"},{\\\"id\\\":\\\"4\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"10\\\"},\\\"justification\\\":\\\"hypothesis:4\\\"}],\\\"failureSum\\\":{\\\"numerator\\\":\\\"13\\\",\\\"denominator\\\":\\\"10\\\"},\\\"value\\\":{\\\"numerator\\\":\\\"4\\\",\\\"denominator\\\":\\\"5\\\"},\\\"trivial\\\":false,\\\"meaning\\\":\\\"lower bound for at most k declared failures; references are not verified\\\",\\\"allowedFailures\\\":2,\\\"totalDeclarations\\\":5,\\\"exclusionOrder\\\":[\\\"0\\\",\\\"1\\\",\\\"2\\\",\\\"3\\\",\\\"4\\\"],\\\"candidates\\\":[{\\\"excludedCount\\\":0,\\\"threshold\\\":3,\\\"remainingFailureSum\\\":{\\\"numerator\\\":\\\"13\\\",\\\"denominator\\\":\\\"10\\\"},\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"13\\\",\\\"denominator\\\":\\\"30\\\"}},{\\\"excludedCount\\\":1,\\\"threshold\\\":2,\\\"remainingFailureSum\\\":{\\\"numerator\\\":\\\"2\\\",\\\"denominator\\\":\\\"5\\\"},\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"5\\\"}},{\\\"excludedCount\\\":2,\\\"threshold\\\":1,\\\"remainingFailureSum\\\":{\\\"numerator\\\":\\\"3\\\",\\\"denominator\\\":\\\"10\\\"},\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"3\\\",\\\"denominator\\\":\\\"10\\\"}}],\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"5\\\"}},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"\nbound-lock/1 at=place:sha256:7216b46885c91cae64058e1a51f5741242500f55103faa1667a25a18aacf1817 by=bound form=alphabet measure=digest role=writes scope=instrument/implementation value=sha256:7216b46885c91cae64058e1a51f5741242500f55103faa1667a25a18aacf1817\n",
+          "stderr": "OBSERVE  0 run · 1 read by key · 1 readers kept whole · 3 ms\nOWN      imports 20 ms · bodies 0 ms · removed 0 ms · readers 1 ms · alphabets 0 ms · capsules 0 ms · regions 1 ms · vectors 1 ms · zoom 0 ms · nos 0 ms · zoomed 0 ms · applied 1 ms · laid 4 ms · resets 0 ms · store 0 ms · ship 0 ms\nSPENT    fold capsules 6 ms · own 29 ms · regions 11 ms · ceilings 1 ms · paid 0 ms · docs 0 ms · ceilings 0 ms\nBEAT     fold 16e59ae8 folded 0.1 s · 0.3 s folded\nKEPT     fold 16e59ae8 miss · no fold was kept before this one\n",
+          "runtimeMs": 261
+        }
+      ]
+    },
+    {
+      "place": "catalog",
+      "negative": true,
+      "events": [
+        {
+          "args": [
+            "fold",
+            "--as",
+            "receipts"
+          ],
+          "status": 1,
+          "stdout": "",
+          "stderr": "REFUSE·reader test/support/measures-reader.js · REFUSE·reader <place>/test/support/measures-reader.js · Error: REFUSE·confidence allowed failure count must be an integer in 0..m\nOBSERVE  0 run · 0 read by key · 177 ms\nbound: REFUSE·reader test/support/measures-reader.js · REFUSE·reader <place>/test/support/measures-reader.js · Error: REFUSE·confidence allowed failure count must be an integer in 0..m\n",
+          "runtimeMs": 344
+        }
+      ]
+    }
+  ]
+}

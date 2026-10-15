@@ -194,4 +194,20 @@ Helly is a property of a declared geometric family, not a probabilistic independ
 
 ## 17. Publication and stability
 
-Every new operation is linked to its contract, yes/no data and native Bound 0.1.7 captures in two places. Validation readers are maintained TypeScript worlds with ordinary modular compilation; no .mjs bundle or private executor ships in this library. Their implementation inventory is retained once by digest. The installed archive must expose the same public exports, preserve the four states, match all published bytes and close native receipts without a private store. Declaring these requirements does not pay them.
+The historical nine publication groups are linked to their contracts, yes/no data and declared Bound 0.1.7 captures in two places. The 0.4.2 operations below require new captures under their selected reader; historical implementation-bound receipts do not cover changed bytes. Validation readers are maintained TypeScript worlds with ordinary modular compilation; no .mjs bundle or private executor ships in this library. Their implementation inventory is retained once by digest. The installed archive must expose the same public exports, preserve the four states, match all published bytes and close native receipts without a private store. Declaring these requirements does not pay them.
+
+## 18. Declared failure bounds
+
+`unionBoundConfidence(failures)` requires distinct nonempty IDs, explicit rational probabilities in [0,1], and nonempty justification references. The caller must establish every failure bound in one probability space. References are retained, not verified. The returned lower bound for all events succeeding is max(0,1−Σp_i), with exact rational arithmetic. The empty family gives 1; Σp_i≥1 gives the trivial bound 0. No independence, truth probability, or algebraic state is inferred.
+
+`tolerantCountConfidence(failures,k)` requires a safe integer 0≤k≤m. For k<m it bounds failure by min(1,min_{0≤j≤k}(Σ of the m−j smallest p_i)/(k+1−j)); its exact success lower bound is the complement. For k=m success is certain. For m=3,k=1 and all p_i=1/10 the result is 17/20, not an inferred success rate. The distinct subset-intersection guarantee gives the weaker bound 7/10. Three disjoint paired failures among six events, each pair having probability 1/10, refute the former 4/5 claim: success is 7/10.
+
+These operations compute conditional probability bounds. They select neither a geometric tolerance nor a consumer policy. Count-tolerant intersection T_k and widened-interval intersection T_eps remain named forms; tolerant-choice remains open.
+
+## 19. Declared covering cause
+
+`commonCauseCapacityBound(n,c,q,{logarithm:'binary64-log2'})` requires integer n≥2 and explicit rational c,q in [0,1]. Truth is uniform; the covering-cause indicator is independent of truth; when active, every report copies one symmetric channel with accuracy q. The inactive private channel is unrestricted. Revealing the indicator gives the upper bound log2(n)−c[h(q)+(1−q)log2(n−1)] in approximate bits. Copy count is no input. This is neither finite-sample mutual information nor an achievability claim.
+
+At n=4,c=1,q=1/4 the bound is exactly zero; q=0 gives log2(4/3), and q=1 gives two bits. Missing q refuses. The operational declaration or detection of activation remains open in identification.model. Unconditioned coincidence does not identify q.
+
+M/3 and M/4 retain their existing definitions. Partial-factor governance proposals do not supply a conditional joint observation and selection law. The information carried by dissent, including a bottom symbol, is open for those unspecified proposals.
