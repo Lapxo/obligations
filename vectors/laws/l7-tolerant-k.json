@@ -85,6 +85,46 @@
         "stderr": "",
         "stdoutSha256": "sha256:b0d0d32f76b255efca0631ea85d38df6cceb13d3e1d4c0ba52a453711006f5d0",
         "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "place": "orchard",
+        "case": "independentYes",
+        "input": "[{\"protocol\":\"bound-lock/1\",\"verb\":\"read\",\"rootScope\":\"inputs/sample.json\",\"region\":\"measure\",\"files\":[{\"place\":\"inputs/sample.json\",\"text\":\"{\\\"operation\\\":\\\"independent-convolution\\\",\\\"probabilitySpace\\\":\\\"declared:independent-Bernoulli\\\",\\\"k\\\":1,\\\"failures\\\":[{\\\"id\\\":\\\"0\\\",\\\"p\\\":\\\"1/2\\\",\\\"justification\\\":\\\"hypothesis:0\\\"},{\\\"id\\\":\\\"1\\\",\\\"p\\\":\\\"1/2\\\",\\\"justification\\\":\\\"hypothesis:1\\\"},{\\\"id\\\":\\\"2\\\",\\\"p\\\":\\\"1/2\\\",\\\"justification\\\":\\\"hypothesis:2\\\"}],\\\"independence\\\":{\\\"probabilitySpace\\\":\\\"declared:independent-Bernoulli\\\",\\\"jointIndependence\\\":true,\\\"justification\\\":\\\"hypothesis:joint-product-law\\\"},\\\"expectedFailureUpperBound\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"},\\\"group\\\":\\\"l7-tolerant-k\\\",\\\"place\\\":\\\"orchard\\\"}\\n\"}],\"lines\":[]}]",
+        "stdinSha256": "sha256:49cae487c47f721bbf6848d9c305109f95ed03edf54a9eaa7e0d101c1c0b381c",
+        "status": 0,
+        "runtimeMs": 136.89020800000003,
+        "stdout": "\n[{\"protocol\":\"bound-lock/1\",\"kind\":\"fact\",\"claims\":[{\"scope\":\"measurement/l7-tolerant-k/orchard\",\"role\":\"writes\",\"measure\":\"result\",\"bound\":{\"kind\":\"enumerated\",\"values\":[\"{\\\"result\\\":{\\\"model\\\":\\\"declared-joint-independent-count-bound@1\\\",\\\"status\\\":\\\"conditional-bound\\\",\\\"unit\\\":\\\"probability\\\",\\\"probabilitySpace\\\":\\\"declared:independent-Bernoulli\\\",\\\"declarations\\\":[{\\\"id\\\":\\\"0\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"},\\\"justification\\\":\\\"hypothesis:0\\\"},{\\\"id\\\":\\\"1\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"},\\\"justification\\\":\\\"hypothesis:1\\\"},{\\\"id\\\":\\\"2\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"},\\\"justification\\\":\\\"hypothesis:2\\\"}],\\\"allowedFailures\\\":1,\\\"totalDeclarations\\\":3,\\\"jointIndependence\\\":{\\\"declared\\\":true,\\\"justification\\\":\\\"hypothesis:joint-product-law\\\"},\\\"referencesVerified\\\":false,\\\"bernoulliEnvelope\\\":[{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"8\\\"},{\\\"numerator\\\":\\\"3\\\",\\\"denominator\\\":\\\"8\\\"},{\\\"numerator\\\":\\\"3\\\",\\\"denominator\\\":\\\"8\\\"},{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"8\\\"}],\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"},\\\"value\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"},\\\"trivial\\\":false},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"]}}]}]\n",
+        "stderr": "",
+        "stdoutSha256": "sha256:42ef2b918f93c41ce5f9ec00b05ccc7981c3a7c77cd362f38a8e7d0e81f7d3e6",
+        "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "repeat": {
+          "status": 0,
+          "runtimeMs": 113.61795800000002,
+          "stdoutSha256": "sha256:42ef2b918f93c41ce5f9ec00b05ccc7981c3a7c77cd362f38a8e7d0e81f7d3e6",
+          "stderr": "",
+          "byteIdentical": true,
+          "meaning": "fresh host execution, not a cache-reuse receipt"
+        }
+      },
+      {
+        "place": "catalog",
+        "case": "independentYes",
+        "input": "[{\"protocol\":\"bound-lock/1\",\"verb\":\"read\",\"rootScope\":\"inputs/sample.json\",\"region\":\"measure\",\"files\":[{\"place\":\"inputs/sample.json\",\"text\":\"{\\\"operation\\\":\\\"independent-convolution\\\",\\\"probabilitySpace\\\":\\\"declared:independent-Bernoulli\\\",\\\"k\\\":1,\\\"failures\\\":[{\\\"id\\\":\\\"0\\\",\\\"p\\\":\\\"1/2\\\",\\\"justification\\\":\\\"hypothesis:0\\\"},{\\\"id\\\":\\\"1\\\",\\\"p\\\":\\\"1/2\\\",\\\"justification\\\":\\\"hypothesis:1\\\"},{\\\"id\\\":\\\"2\\\",\\\"p\\\":\\\"1/2\\\",\\\"justification\\\":\\\"hypothesis:2\\\"}],\\\"independence\\\":{\\\"probabilitySpace\\\":\\\"declared:independent-Bernoulli\\\",\\\"jointIndependence\\\":true,\\\"justification\\\":\\\"hypothesis:joint-product-law\\\"},\\\"expectedFailureUpperBound\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"},\\\"group\\\":\\\"l7-tolerant-k\\\",\\\"place\\\":\\\"catalog\\\"}\\n\"}],\"lines\":[]}]",
+        "stdinSha256": "sha256:18ed62461b44e6225c370912d067d8c68c3029447d11c441bb021fa89ac4bf0c",
+        "status": 0,
+        "runtimeMs": 114.046333,
+        "stdout": "\n[{\"protocol\":\"bound-lock/1\",\"kind\":\"fact\",\"claims\":[{\"scope\":\"measurement/l7-tolerant-k/catalog\",\"role\":\"writes\",\"measure\":\"result\",\"bound\":{\"kind\":\"enumerated\",\"values\":[\"{\\\"result\\\":{\\\"model\\\":\\\"declared-joint-independent-count-bound@1\\\",\\\"status\\\":\\\"conditional-bound\\\",\\\"unit\\\":\\\"probability\\\",\\\"probabilitySpace\\\":\\\"declared:independent-Bernoulli\\\",\\\"declarations\\\":[{\\\"id\\\":\\\"0\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"},\\\"justification\\\":\\\"hypothesis:0\\\"},{\\\"id\\\":\\\"1\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"},\\\"justification\\\":\\\"hypothesis:1\\\"},{\\\"id\\\":\\\"2\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"},\\\"justification\\\":\\\"hypothesis:2\\\"}],\\\"allowedFailures\\\":1,\\\"totalDeclarations\\\":3,\\\"jointIndependence\\\":{\\\"declared\\\":true,\\\"justification\\\":\\\"hypothesis:joint-product-law\\\"},\\\"referencesVerified\\\":false,\\\"bernoulliEnvelope\\\":[{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"8\\\"},{\\\"numerator\\\":\\\"3\\\",\\\"denominator\\\":\\\"8\\\"},{\\\"numerator\\\":\\\"3\\\",\\\"denominator\\\":\\\"8\\\"},{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"8\\\"}],\\\"failureUpperBound\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"},\\\"value\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"},\\\"trivial\\\":false},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"]}}]}]\n",
+        "stderr": "",
+        "stdoutSha256": "sha256:bd2d77f25fce51ac596b469b158dd909c51c45b7c7077ec59c381c7851ec1fdc",
+        "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "repeat": {
+          "status": 0,
+          "runtimeMs": 113.99241699999993,
+          "stdoutSha256": "sha256:bd2d77f25fce51ac596b469b158dd909c51c45b7c7077ec59c381c7851ec1fdc",
+          "stderr": "",
+          "byteIdentical": true,
+          "meaning": "fresh host execution, not a cache-reuse receipt"
+        }
       }
     ],
     "isolation": "two separate working directories with identical digest-verified reader image; no ledger, key or store; one origin"

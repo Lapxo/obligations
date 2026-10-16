@@ -15,7 +15,7 @@ const paths=(group:string)=>['docs/measures.md','samples/measures/'+group+'.json
   group in lawTokens?'vectors/laws/'+group+'.json':'vectors/measures/'+group+'.cli.json',
   group in lawTokens?'vectors/laws/implementation-043.json':'vectors/measures/implementation.json'];
 const digest=(text:string)=>'sha256:'+createHash('sha256').update(text).digest('hex');
-type HostCapture=Readonly<{place:string;case:'yes'|'no';input:string;stdinSha256:string;status:number|null;
+type HostCapture=Readonly<{place:string;case:'yes'|'no'|'independentYes';input:string;stdinSha256:string;status:number|null;
   runtimeMs:number;stdout:string;stderr:string;stdoutSha256:string;stderrSha256:string;
   repeat?:Readonly<{status:number|null;runtimeMs:number;stdoutSha256:string;byteIdentical:boolean}>}>;
 const json=(text:string,what:string):any=>{try{return JSON.parse(text);}catch{return refuse('malformed '+what);}};
@@ -46,13 +46,14 @@ function inspectLaw(group:string,read:(path:string)=>string){
     if(digest(readFileSync(new URL('../../'+m.path,import.meta.url),'utf8'))!==m.sha256)refuse('current reader implementation differs '+m.path);
   }
   const captures=native.captures as HostCapture[];
-  if(!Array.isArray(captures)||captures.length!==4||captures.some(c=>!c||typeof c.place!=='string'))
-    refuse('two complete yes/no places required '+group);
+  const cases=group==='l7-tolerant-k'?['yes','no','independentYes']:['yes','no'];
+  if(!Array.isArray(captures)||captures.length!==2*cases.length||captures.some(c=>!c||typeof c.place!=='string'))
+    refuse('two complete sample places required '+group);
   const places=new Set(captures.map(c=>c.place)),pairs=new Set(captures.map(c=>c.place+'/'+c.case));
-  if(places.size!==2||pairs.size!==4||[...places].some(p=>typeof p!=='string'||!p.trim()))refuse('ambiguous capture places '+group);
+  if(places.size!==2||pairs.size!==2*cases.length||[...places].some(p=>typeof p!=='string'||!p.trim()))refuse('ambiguous capture places '+group);
   if(native.limits?.timeoutMs!==5000||native.limits?.responseBytes!==65536)refuse('capture limits differ '+group);
   for(const c of captures){
-    if(!['yes','no'].includes(c.case)||typeof c.input!=='string'||typeof c.stdout!=='string'||typeof c.stderr!=='string'||
+    if(!cases.includes(c.case)||typeof c.input!=='string'||typeof c.stdout!=='string'||typeof c.stderr!=='string'||
       digest(c.input)!==c.stdinSha256||digest(c.stdout)!==c.stdoutSha256||digest(c.stderr)!==c.stderrSha256)
       refuse('capture bytes differ '+group);
     if(c.status===null||!Number.isFinite(c.runtimeMs)||c.runtimeMs<0||c.runtimeMs>5000||
@@ -64,7 +65,7 @@ function inspectLaw(group:string,read:(path:string)=>string){
       refuse('captured input differs '+group);
     const answer=json(c.stdout.trim(),group+' response');
     if(!Array.isArray(answer)||answer.length!==1||answer[0]?.protocol!=='bound-lock/1')refuse('invalid host response '+group);
-    if(c.case==='yes'){
+    if(c.case!=='no'){
       const claims=answer[0]?.claims;
       if(c.status!==0||answer[0]?.kind!=='fact'||!Array.isArray(claims)||claims.length!==1||
         claims[0]?.scope!=='measurement/'+group+'/'+c.place||claims[0]?.measure!=='result'||

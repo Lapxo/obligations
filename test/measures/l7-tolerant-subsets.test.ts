@@ -54,6 +54,13 @@ test('L7 pairwise zero correlation cannot pay for joint-independence convolution
   assert.deepEqual(out.bernoulliEnvelope,['1/8','3/8','3/8','1/8'].map(x=>pack(rational(x))));
   assert.equal(out.jointIndependence.declared,true);assert.equal(out.referencesVerified,false);assert.equal(JSON.stringify(d),before);
   assert.deepEqual(independentCountConfidence([],0,d).value,pack(one));
+  const captures=vector.nativeCapture.captures.filter((c:{case:string})=>c.case==='independentYes');
+  assert.equal(captures.length,2);assert.equal(new Set(captures.map((c:{place:string})=>c.place)).size,2);
+  for(const capture of captures){
+    assert.equal(capture.status,0);assert.equal(capture.repeat.byteIdentical,true);
+    const answer=JSON.parse(capture.stdout.trim());assert.equal(answer[0].kind,'fact');
+    assert.deepEqual(JSON.parse(answer[0].claims[0].bound.values[0]).result.failureUpperBound,out.failureUpperBound);
+  }
 });
 test('L7 refuses absent hypotheses, malformed marginals and count domains by name',()=>{
   const f=declared(['1/2']);
