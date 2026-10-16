@@ -1,0 +1,214 @@
+{
+  "id": "L8",
+  "classification": "law by finite enumeration",
+  "policy": "vectors/laws/policy.json",
+  "numeric": {
+    "logarithm": "binary64-log2",
+    "absoluteTolerance": 1e-12
+  },
+  "contract": {
+    "domain": "n,p positive safe integers, p divides n; s integer with 0 <= s < p",
+    "value": "D(n,p,s)=log2(n/p)-h(s/p), h(0)=h(1)=0",
+    "minimum": "log2(n/p)-h(floor(p/2)/p); shifts floor(p/2),ceil(p/2), deduplicated, p=1 gives s=0",
+    "maximum": "all shifts: s=0; nonzero shifts: empty for p=1, {1} for p=2, {1,p-1} for p>=3",
+    "interpretation": "phase defect only; n>=2p is a nonnegative regime, not an information certificate",
+    "scope": "Enumeration verifies only 3<=n<=64; no unrestricted proof or mutual-information claim"
+  },
+  "enumeration": {
+    "nMinimum": 3,
+    "nMaximum": 64,
+    "divisorPairs": 277,
+    "shifts": 3399,
+    "nonzeroShifts": 3122
+  },
+  "cases": [
+    {
+      "n": 3,
+      "p": 3,
+      "s": 1,
+      "expected": -0.9182958340544896
+    },
+    {
+      "n": 4,
+      "p": 4,
+      "s": 2,
+      "expected": -1
+    },
+    {
+      "n": 8,
+      "p": 4,
+      "s": 1,
+      "expected": 0.18872187554086717
+    },
+    {
+      "n": 8,
+      "p": 4,
+      "s": 0,
+      "expected": 1
+    },
+    {
+      "n": 3,
+      "p": 1,
+      "s": 0,
+      "expected": 1.584962500721156
+    }
+  ],
+  "negativeClaims": [
+    {
+      "claim": "odd-period minimum equals log2(n/p)-1",
+      "counterexample": [
+        3,
+        3,
+        1
+      ],
+      "rejectedValue": -1
+    },
+    {
+      "claim": "maximum over all shifts occurs only at 1,p-1",
+      "counterexample": [
+        8,
+        4,
+        0
+      ],
+      "expected": 1
+    },
+    {
+      "claim": "F4 is information when n<p*2",
+      "counterexample": [
+        4,
+        4,
+        2
+      ],
+      "expectedRefusal": "REFUSE·phase-defect information interpretation unsupported"
+    }
+  ],
+  "invalid": [
+    {
+      "input": [
+        8,
+        3,
+        1
+      ],
+      "expectedRefusal": "REFUSE·phase-defect positive integer divisor domain required"
+    },
+    {
+      "input": [
+        3,
+        3,
+        1.5
+      ],
+      "expectedRefusal": "REFUSE·phase-defect integer shift domain required"
+    },
+    {
+      "input": [
+        4,
+        4,
+        4
+      ],
+      "expectedRefusal": "REFUSE·phase-defect integer shift domain required"
+    },
+    {
+      "input": [
+        0,
+        1,
+        0
+      ],
+      "expectedRefusal": "REFUSE·phase-defect positive integer divisor domain required"
+    },
+    {
+      "input": [
+        4.5,
+        1,
+        0
+      ],
+      "expectedRefusal": "REFUSE·phase-defect positive integer divisor domain required"
+    }
+  ],
+  "nativeCapture": {
+    "instrument": "@lapxo/bound@0.1.8",
+    "mode": "published-host-ABI",
+    "host": "dist/cli/host.js",
+    "hostSha256": "sha256:b0f52ce76b88ed793543897a0bef490414bfb4af2f5b876a3665dabf8583f879",
+    "reader": "test/support/measures-reader.js",
+    "implementation": "vectors/laws/implementation-043.json",
+    "implementationSha256": "sha256:361492637c3ea9eeec83fe7707fd16a0ae53b8882fe4de212bae1838721b710f",
+    "limits": {
+      "timeoutMs": 5000,
+      "responseBytes": 65536
+    },
+    "fullFold": false,
+    "admission": false,
+    "signatures": false,
+    "captures": [
+      {
+        "place": "orchard",
+        "case": "yes",
+        "input": "[{\"protocol\":\"bound-lock/1\",\"verb\":\"read\",\"rootScope\":\"inputs/sample.json\",\"region\":\"measure\",\"files\":[{\"place\":\"inputs/sample.json\",\"text\":\"{\\\"n\\\":8,\\\"p\\\":4,\\\"s\\\":1,\\\"policy\\\":{\\\"logarithm\\\":\\\"binary64-log2\\\"},\\\"interpretation\\\":\\\"phase-defect\\\",\\\"expected\\\":0.18872187554086717,\\\"group\\\":\\\"l8-phase-defect\\\",\\\"place\\\":\\\"orchard\\\"}\\n\"}],\"lines\":[]}]",
+        "stdinSha256": "sha256:06f6b9a12d8895a54df623905ce22d7531b50478fa5392bc8a176ab33b69521d",
+        "status": 0,
+        "signal": null,
+        "runtimeMs": 118.95100000000002,
+        "stdout": "\n[{\"protocol\":\"bound-lock/1\",\"kind\":\"fact\",\"claims\":[{\"scope\":\"measurement/l8-phase-defect/orchard\",\"role\":\"writes\",\"measure\":\"result\",\"bound\":{\"kind\":\"enumerated\",\"values\":[\"{\\\"result\\\":{\\\"reading\\\":{\\\"model\\\":\\\"F4-integer-phase-defect@1\\\",\\\"parameters\\\":{\\\"n\\\":8,\\\"p\\\":4,\\\"s\\\":1},\\\"policy\\\":{\\\"logarithm\\\":\\\"binary64-log2\\\"},\\\"status\\\":\\\"measured\\\",\\\"meaning\\\":\\\"phase defect; information interpretation open\\\",\\\"regime\\\":\\\"nonnegative\\\",\\\"value\\\":0.18872187554086717},\\\"extrema\\\":{\\\"model\\\":\\\"F4-integer-phase-defect@1\\\",\\\"parameters\\\":{\\\"n\\\":8,\\\"p\\\":4},\\\"policy\\\":{\\\"logarithm\\\":\\\"binary64-log2\\\"},\\\"status\\\":\\\"measured\\\",\\\"minimum\\\":{\\\"value\\\":0,\\\"shifts\\\":[2]},\\\"maximum\\\":{\\\"value\\\":1,\\\"shifts\\\":[0]},\\\"nonzeroMaximum\\\":{\\\"value\\\":0.18872187554086717,\\\"shifts\\\":[1,3]}}},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"]}}]}]\n",
+        "stderr": "",
+        "stdoutSha256": "sha256:0262bdd4cc1402588919fd1a42eaf8544fe3484541a26ecb15868e7580dbe8ed",
+        "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "repeat": {
+          "status": 0,
+          "runtimeMs": 119.88958300000013,
+          "stdoutSha256": "sha256:0262bdd4cc1402588919fd1a42eaf8544fe3484541a26ecb15868e7580dbe8ed",
+          "stderr": "",
+          "byteIdentical": true,
+          "meaning": "fresh host execution, not a cache-reuse receipt"
+        }
+      },
+      {
+        "place": "orchard",
+        "case": "no",
+        "input": "[{\"protocol\":\"bound-lock/1\",\"verb\":\"read\",\"rootScope\":\"inputs/sample.json\",\"region\":\"measure\",\"files\":[{\"place\":\"inputs/sample.json\",\"text\":\"{\\\"n\\\":4,\\\"p\\\":4,\\\"s\\\":2,\\\"policy\\\":{\\\"logarithm\\\":\\\"binary64-log2\\\"},\\\"interpretation\\\":\\\"information\\\",\\\"expectedRefusal\\\":\\\"REFUSE·phase-defect information interpretation unsupported\\\",\\\"group\\\":\\\"l8-phase-defect\\\",\\\"place\\\":\\\"orchard\\\"}\\n\"}],\"lines\":[]}]",
+        "stdinSha256": "sha256:0ac114567245151d155ec713f55215806f630b7937094f83ff27378fe9cfed0c",
+        "status": 0,
+        "signal": null,
+        "runtimeMs": 123.7919579999998,
+        "stdout": "\n[{\"protocol\":\"bound-lock/1\",\"kind\":\"refuse\",\"why\":\"Error: REFUSE·phase-defect information interpretation unsupported\"}]\n",
+        "stderr": "",
+        "stdoutSha256": "sha256:aa12855ff3dd5ea02507092e7d1ecb8762d148ab88f040882616d1b8a7e88dc3",
+        "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "place": "catalog",
+        "case": "yes",
+        "input": "[{\"protocol\":\"bound-lock/1\",\"verb\":\"read\",\"rootScope\":\"inputs/sample.json\",\"region\":\"measure\",\"files\":[{\"place\":\"inputs/sample.json\",\"text\":\"{\\\"n\\\":8,\\\"p\\\":4,\\\"s\\\":1,\\\"policy\\\":{\\\"logarithm\\\":\\\"binary64-log2\\\"},\\\"interpretation\\\":\\\"phase-defect\\\",\\\"expected\\\":0.18872187554086717,\\\"group\\\":\\\"l8-phase-defect\\\",\\\"place\\\":\\\"catalog\\\"}\\n\"}],\"lines\":[]}]",
+        "stdinSha256": "sha256:65e9154f7c47afb92af45d9fb15d46f144e2f084f501a8b7cfe6396209d84387",
+        "status": 0,
+        "signal": null,
+        "runtimeMs": 125.11133399999994,
+        "stdout": "\n[{\"protocol\":\"bound-lock/1\",\"kind\":\"fact\",\"claims\":[{\"scope\":\"measurement/l8-phase-defect/catalog\",\"role\":\"writes\",\"measure\":\"result\",\"bound\":{\"kind\":\"enumerated\",\"values\":[\"{\\\"result\\\":{\\\"reading\\\":{\\\"model\\\":\\\"F4-integer-phase-defect@1\\\",\\\"parameters\\\":{\\\"n\\\":8,\\\"p\\\":4,\\\"s\\\":1},\\\"policy\\\":{\\\"logarithm\\\":\\\"binary64-log2\\\"},\\\"status\\\":\\\"measured\\\",\\\"meaning\\\":\\\"phase defect; information interpretation open\\\",\\\"regime\\\":\\\"nonnegative\\\",\\\"value\\\":0.18872187554086717},\\\"extrema\\\":{\\\"model\\\":\\\"F4-integer-phase-defect@1\\\",\\\"parameters\\\":{\\\"n\\\":8,\\\"p\\\":4},\\\"policy\\\":{\\\"logarithm\\\":\\\"binary64-log2\\\"},\\\"status\\\":\\\"measured\\\",\\\"minimum\\\":{\\\"value\\\":0,\\\"shifts\\\":[2]},\\\"maximum\\\":{\\\"value\\\":1,\\\"shifts\\\":[0]},\\\"nonzeroMaximum\\\":{\\\"value\\\":0.18872187554086717,\\\"shifts\\\":[1,3]}}},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"]}}]}]\n",
+        "stderr": "",
+        "stdoutSha256": "sha256:98c24a9572f20c68459370a9b8235400caae0c37f75b32ee003c1f7fc3b5ad40",
+        "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "repeat": {
+          "status": 0,
+          "runtimeMs": 125.88366599999995,
+          "stdoutSha256": "sha256:98c24a9572f20c68459370a9b8235400caae0c37f75b32ee003c1f7fc3b5ad40",
+          "stderr": "",
+          "byteIdentical": true,
+          "meaning": "fresh host execution, not a cache-reuse receipt"
+        }
+      },
+      {
+        "place": "catalog",
+        "case": "no",
+        "input": "[{\"protocol\":\"bound-lock/1\",\"verb\":\"read\",\"rootScope\":\"inputs/sample.json\",\"region\":\"measure\",\"files\":[{\"place\":\"inputs/sample.json\",\"text\":\"{\\\"n\\\":4,\\\"p\\\":4,\\\"s\\\":2,\\\"policy\\\":{\\\"logarithm\\\":\\\"binary64-log2\\\"},\\\"interpretation\\\":\\\"information\\\",\\\"expectedRefusal\\\":\\\"REFUSE·phase-defect information interpretation unsupported\\\",\\\"group\\\":\\\"l8-phase-defect\\\",\\\"place\\\":\\\"catalog\\\"}\\n\"}],\"lines\":[]}]",
+        "stdinSha256": "sha256:ee411cddb841554d41b6918f53713a8162012c9435ff79f6f6e194b4fcb391d1",
+        "status": 0,
+        "signal": null,
+        "runtimeMs": 124.19862499999999,
+        "stdout": "\n[{\"protocol\":\"bound-lock/1\",\"kind\":\"refuse\",\"why\":\"Error: REFUSE·phase-defect information interpretation unsupported\"}]\n",
+        "stderr": "",
+        "stdoutSha256": "sha256:aa12855ff3dd5ea02507092e7d1ecb8762d148ab88f040882616d1b8a7e88dc3",
+        "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "isolation": "two separate working directories with identical digest-verified reader image; no ledger, key or store; one origin"
+  }
+}

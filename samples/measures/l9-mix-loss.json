@@ -1,0 +1,36 @@
+{
+  "group": "l9-mix-loss",
+  "yes": {
+    "model": {
+      "factors": [{"id": "x", "weight": "1"}, {"id": "y", "weight": "1"}],
+      "alphabet": ["a", "b"],
+      "configurations": [
+        {"id": "aa", "values": ["a", "a"]},
+        {"id": "ab", "values": ["a", "b"]},
+        {"id": "ba", "values": ["b", "a"]},
+        {"id": "bb", "values": ["b", "b"]}
+      ],
+      "prior": {"kind": "uniform"}
+    },
+    "policy": {"logarithm": "binary64-log2", "budget": "100"},
+    "expected": {"configurationBits": 2, "mixBits": 1.5, "lossBits": 0.5, "tieConditionalBits": 1, "forkLossBits": 0}
+  },
+  "no": {
+    "model": {
+      "factors": [{"id": "x", "weight": "1"}, {"id": "y", "weight": "1"}],
+      "alphabet": ["a", "b"],
+      "configurations": [
+        {"id": "aa", "values": ["a", "a"]},
+        {"id": "ab", "values": ["a", "b"]},
+        {"id": "ba", "values": ["b", "a"]},
+        {"id": "bb", "values": ["b", "b"]}
+      ],
+      "prior": {"kind": "explicit", "probabilities": [
+        {"configuration": "aa", "p": "1/8"}, {"configuration": "ab", "p": "1/8"},
+        {"configuration": "ba", "p": "1/8"}, {"configuration": "bb", "p": "1/8"}
+      ]}
+    },
+    "policy": {"logarithm": "binary64-log2", "budget": "100"},
+    "expectedRefusal": "REFUSE·mix-loss prior probabilities must sum exactly to one"
+  }
+}
