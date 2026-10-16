@@ -1,7 +1,7 @@
 {
   "format": "installed-acceptance/1",
   "name": "@lapxo/obligations",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "exports": {
     ".": {
       "types": "./dist/lattice/index.d.ts",
@@ -272,7 +272,7 @@
     },
     {
       "path": "dist/measures/index.js",
-      "sha256": "sha256:f9c946e806f64b1865656ff599d4ee73c32b96001b8d16473f0c457de81ea13b"
+      "sha256": "sha256:f91b8411e19f7e58d7edd6956ef828974605ae19584fcb2af6c0b0f0cedd8212"
     },
     {
       "path": "dist/measures/m3-experiment.js",
@@ -283,8 +283,16 @@
       "sha256": "sha256:b971ae5160893f9565087b7e6b79eb9ad24431d232ad3f37ff290cc4adb44a35"
     },
     {
+      "path": "dist/measures/mix-loss.js",
+      "sha256": "sha256:af9c6a3dbeda91981b394b61e187f916dc0e0304801b7b654ff3e025ebce94cb"
+    },
+    {
       "path": "dist/measures/model.js",
       "sha256": "sha256:70b5d5d4e3c835e03fefa2adf632669eec248a2a2adabf9b054be4fd018cb85a"
+    },
+    {
+      "path": "dist/measures/phase-defect.js",
+      "sha256": "sha256:02188b862c7d9976c8c40f7f3bec5a94358d7ef3257264cec00cb046f74cb807"
     },
     {
       "path": "dist/measures/rational.js",
@@ -293,6 +301,10 @@
     {
       "path": "dist/measures/spectrum.js",
       "sha256": "sha256:06b38b556472d7c27bf51e423b4305cb1427af5aedb0012c3a77f3168a8a9c53"
+    },
+    {
+      "path": "dist/measures/tolerant-subsets.js",
+      "sha256": "sha256:e99481ddf1c92fbef2ba34e9ad75e98f7aa98e29e9e638837e1c6ad49c99e2bb"
     },
     {
       "path": "dist/measures/unanimity-fit.js",
@@ -379,55 +391,21 @@
       "sha256": "sha256:982ffa68c9512832cce698785d1f67816a504b98d1dd05b7c1962dda0584e808"
     }
   ],
-  "code": "sha256:978a5ef46a25146aea963e22998812e4198628ed97823c71ed83922a2c260840",
   "tests": [
-    "finite exact joint probabilities reproduce the four captured information vectors",
-    "p=0 is k-invariant; limit statements never overwrite finite or uninformative channels",
-    "the binary all-wrong channel carries a full bit; plurality is not an information bound",
-    "finite decision accuracy, decision information and posterior information stay separate",
-    "work budgets refuse before exponential evaluation and logs are explicitly declared",
-    "equal pair marginals hide XOR dependence; signed coincidence excess keeps the triple deficit",
-    "uniform independent wrong values exactly match the declared reference",
-    "independent events with nonuniform labels exceed the uniform reference without proving a cause",
-    "redelivery and ordering add no event; conflicting values refuse; inputs stay unchanged",
-    "absence, zero reference and insufficient budget are distinct, never inferred independence",
-    "estimated marginals condition on truth rather than pooling distinct populations",
-    "042 installed covering cause preserves declared symmetric channel boundaries",
-    "042 installed covering cause refuses missing accuracy and invalid probabilities",
-    "042 installed union bound retains justification and refuses unnamed premises",
-    "042 installed tolerant count keeps heterogeneous subset bounds and paired failure counterexample",
-    "042 installed three conditional measures preserve every frozen algebra state",
-    "analytic eigensystem satisfies residual and orthogonality; inputs are unchanged",
-    "repeated eigenvalues have no unique top loading; their full variance subspace remains readable",
-    "subset variance is descriptive, not a probability of error",
-    "invalid matrices refuse, and an insufficient numerical budget never claims a spectrum",
-    "spectrum and trace participation ratios agree on handed error events",
-    "T1 handles counterexample, degeneracies, and large counts without underflow misclassification",
-    "descent counts distinct scopes, keeps absence unknown, and refuses cycles",
-    "independent balanced errors and perfectly shared errors have different effective ranks",
-    "redelivery and declaration order add neither observations nor origins",
-    "missing observations and no variation do not prove independence",
-    "population covariance is normalized by the observed event population",
-    "T5 reference stream reproduces model counts without claiming certification",
-    "interest is an explicit controlled bias within the reference model",
-    "declared finite-data fit recovers shared log survival, records residuals and reproducible bootstrap, never Φ or D",
-    "zero joint counts, absent rank and insufficient resources never report fitted probabilities",
-    "the same finite-data procedure identifies a declared overlapping two-factor system",
-    "population identification recovers exact shared survival without identifying private versus singleton error",
-    "rank, zero correctness, incompatible moments and budget retain unidentified or misfit outcomes",
-    "general declared pair systems recover more than one factor and reject unexplained residuals",
-    "dissent certificate depends on actual ordered configuration, never on dissent alone",
-    "M/3 captured covering, partial and impossible-conditioning vectors are exact",
-    "singleton governance is preserved and collision partitions distinguish zero from absence",
-    "probe uses the exact posterior and is unmeasured only at zero extension mass",
-    "validation and budget refuse or remain unmeasured before accumulating a partial result",
-    "half-even display is independent of binary floating point and uses declared digits",
-    "controlled T1 and T5 declare their stream and denominators and match handed M/3 populations",
-    "partition evaluator equals direct wrong-value enumeration for overlapping factors on a three-value cell",
-    "the actual four algebraic states and their cells survive every descriptive measure unchanged",
-    "an exact curve retains both binary parameter branches rather than fabricating identification",
-    "perfect unanimity keeps the whole compatible ambiguity and no causal result",
-    "paired-group bootstrap retains cross-size sampling dependence and is deterministic",
-    "counts alone do not invent sampling uncertainty; inconsistent paired outcomes refuse"
-  ]
+    "L7 exact oracles include sum-p>=1 without triviality and retain stronger 0.4.2 bound",
+    "L7 actual dependent witness refutes top-k+1 guarantee",
+    "L7 sorted coefficient formula bounds all triples of events on nonuniform four-atom space",
+    "L7 pairwise zero correlation cannot pay for joint-independence convolution",
+    "L7 refuses absent hypotheses, malformed marginals and count domains by name",
+    "L8 fixed numerical controls distinguish odd minimum, negative defect and zero-shift maximum",
+    "L8 exhaustively checks the handed finite domain, including degeneracies and symmetry",
+    "L8 refuses invalid domains and information interpretations by name",
+    "L9: one mix tie hides two named forks; uniform mean loss is half a bit",
+    "L9: missing prior stays unmeasured, invalid declared priors refuse by name",
+    "L9: support and prior affect loss; zero mass does not imply global injectivity",
+    "L9: constant winners may lose information and weight rescaling adds none",
+    "L9: named value tie and bottom tie remain distinct; aliases cannot inflate configuration entropy",
+    "L9: explicit logarithm policy and configuration ceiling are retained"
+  ],
+  "code": "sha256:16593a568f0aef344df7c9f5d3363c86ef3b53f4ecda724f55f08c005f14c401"
 }
