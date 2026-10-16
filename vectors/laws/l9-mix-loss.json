@@ -1,0 +1,130 @@
+{
+  "id": "L9-mix-noninjectivity",
+  "classification": [
+    "law-by-counterexample:existence-of-noninjectivity",
+    "measure-with-declared-prior"
+  ],
+  "policy": "vectors/laws/policy.json",
+  "sample": "samples/measures/l9-mix-loss.json",
+  "contract": {
+    "configuration": "Assignments of each named factor to a named value in the explicitly supplied admissible finite configuration list; duplicate assignments with new IDs are refused.",
+    "mix": "Exact rational sum of nonnegative declared weights by value, positive total; unique maximum emits that value, every tie emits the same distinguished bottom.",
+    "fork": "Assignments retain all factor names and values, hence are injective on the declared configurations.",
+    "prior": "Uniform is a selected modeling choice only when kind=uniform is explicitly present. Without a prior, unmeasured; explicit prior must name every configuration and sum exactly to one.",
+    "loss": "H(configuration | mix) under that prior, equal to H(configuration)-H(mix) for a deterministic projection; no causal, M/3, M/4 or algebraic-act contract is added.",
+    "ceiling": "budget bounds declared configuration count only; input validation, rational arithmetic and elapsed act cost are not claimed bounded by that count."
+  },
+  "oracle": {
+    "counterexample": {
+      "configurations": [
+        {
+          "x": "a",
+          "y": "b"
+        },
+        {
+          "x": "b",
+          "y": "a"
+        }
+      ],
+      "sameMix": "tie",
+      "distinctNamedForks": true
+    },
+    "uniformFourConfigurations": {
+      "configurationBits": 2,
+      "mixBits": 1.5,
+      "conditionalLossBits": 0.5,
+      "tiePosteriorBits": 1,
+      "forkLossBits": 0
+    },
+    "rejectedInterpretation": "log2(4/3) is not the conditional loss for this prior",
+    "numeric": "binary64-log2 approximations; tolerance 1e-12"
+  },
+  "nativeCapture": {
+    "instrument": "@lapxo/bound@0.1.8",
+    "mode": "published-host-ABI",
+    "host": "dist/cli/host.js",
+    "hostSha256": "sha256:b0f52ce76b88ed793543897a0bef490414bfb4af2f5b876a3665dabf8583f879",
+    "reader": "test/support/measures-reader.js",
+    "implementation": "vectors/laws/implementation-043.json",
+    "implementationSha256": "sha256:361492637c3ea9eeec83fe7707fd16a0ae53b8882fe4de212bae1838721b710f",
+    "limits": {
+      "timeoutMs": 5000,
+      "responseBytes": 65536
+    },
+    "fullFold": false,
+    "admission": false,
+    "signatures": false,
+    "captures": [
+      {
+        "place": "orchard",
+        "case": "yes",
+        "input": "[{\"protocol\":\"bound-lock/1\",\"verb\":\"read\",\"rootScope\":\"inputs/sample.json\",\"region\":\"measure\",\"files\":[{\"place\":\"inputs/sample.json\",\"text\":\"{\\\"model\\\":{\\\"factors\\\":[{\\\"id\\\":\\\"x\\\",\\\"weight\\\":\\\"1\\\"},{\\\"id\\\":\\\"y\\\",\\\"weight\\\":\\\"1\\\"}],\\\"alphabet\\\":[\\\"a\\\",\\\"b\\\"],\\\"configurations\\\":[{\\\"id\\\":\\\"aa\\\",\\\"values\\\":[\\\"a\\\",\\\"a\\\"]},{\\\"id\\\":\\\"ab\\\",\\\"values\\\":[\\\"a\\\",\\\"b\\\"]},{\\\"id\\\":\\\"ba\\\",\\\"values\\\":[\\\"b\\\",\\\"a\\\"]},{\\\"id\\\":\\\"bb\\\",\\\"values\\\":[\\\"b\\\",\\\"b\\\"]}],\\\"prior\\\":{\\\"kind\\\":\\\"uniform\\\"}},\\\"policy\\\":{\\\"logarithm\\\":\\\"binary64-log2\\\",\\\"budget\\\":\\\"100\\\"},\\\"expected\\\":{\\\"configurationBits\\\":2,\\\"mixBits\\\":1.5,\\\"lossBits\\\":0.5,\\\"tieConditionalBits\\\":1,\\\"forkLossBits\\\":0},\\\"group\\\":\\\"l9-mix-loss\\\",\\\"place\\\":\\\"orchard\\\"}\\n\"}],\"lines\":[]}]",
+        "stdinSha256": "sha256:8490e9d9db186156ef7edd9052bfd4765b516b873d58e0de198cfdf231fb2cb9",
+        "status": 0,
+        "signal": null,
+        "runtimeMs": 126.06233299999985,
+        "stdout": "\n[{\"protocol\":\"bound-lock/1\",\"kind\":\"fact\",\"claims\":[{\"scope\":\"measurement/l9-mix-loss/orchard\",\"role\":\"writes\",\"measure\":\"result\",\"bound\":{\"kind\":\"enumerated\",\"values\":[\"{\\\"result\\\":{\\\"status\\\":\\\"measured\\\",\\\"model\\\":\\\"declared-weighted-mix-projection@1\\\",\\\"parameters\\\":{\\\"m\\\":2,\\\"factors\\\":[{\\\"id\\\":\\\"x\\\",\\\"weight\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"1\\\"}},{\\\"id\\\":\\\"y\\\",\\\"weight\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"1\\\"}}],\\\"alphabet\\\":[\\\"a\\\",\\\"b\\\"],\\\"configurations\\\":[{\\\"id\\\":\\\"aa\\\",\\\"values\\\":[\\\"a\\\",\\\"a\\\"]},{\\\"id\\\":\\\"ab\\\",\\\"values\\\":[\\\"a\\\",\\\"b\\\"]},{\\\"id\\\":\\\"ba\\\",\\\"values\\\":[\\\"b\\\",\\\"a\\\"]},{\\\"id\\\":\\\"bb\\\",\\\"values\\\":[\\\"b\\\",\\\"b\\\"]}]},\\\"prior\\\":{\\\"kind\\\":\\\"uniform\\\",\\\"probabilities\\\":[{\\\"configuration\\\":\\\"aa\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"}},{\\\"configuration\\\":\\\"ab\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"}},{\\\"configuration\\\":\\\"ba\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"}},{\\\"configuration\\\":\\\"bb\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"}}]},\\\"policy\\\":{\\\"logarithm\\\":\\\"binary64-log2\\\",\\\"budget\\\":\\\"100\\\"},\\\"unit\\\":\\\"bits\\\",\\\"approximation\\\":\\\"binary64-log2\\\",\\\"configurationBits\\\":2,\\\"mixBits\\\":1.5,\\\"lossBits\\\":0.5,\\\"entropyDifferenceBits\\\":0.5,\\\"forkLossBits\\\":0,\\\"mixInjectiveOnConfigurations\\\":false,\\\"mixInjectiveOnPositiveSupport\\\":false,\\\"configurations\\\":[{\\\"id\\\":\\\"aa\\\",\\\"probability\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"},\\\"mix\\\":{\\\"kind\\\":\\\"value\\\",\\\"value\\\":\\\"a\\\"},\\\"fork\\\":[{\\\"factor\\\":\\\"x\\\",\\\"value\\\":\\\"a\\\"},{\\\"factor\\\":\\\"y\\\",\\\"value\\\":\\\"a\\\"}]},{\\\"id\\\":\\\"ab\\\",\\\"probability\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"},\\\"mix\\\":{\\\"kind\\\":\\\"tie\\\"},\\\"fork\\\":[{\\\"factor\\\":\\\"x\\\",\\\"value\\\":\\\"a\\\"},{\\\"factor\\\":\\\"y\\\",\\\"value\\\":\\\"b\\\"}]},{\\\"id\\\":\\\"ba\\\",\\\"probability\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"},\\\"mix\\\":{\\\"kind\\\":\\\"tie\\\"},\\\"fork\\\":[{\\\"factor\\\":\\\"x\\\",\\\"value\\\":\\\"b\\\"},{\\\"factor\\\":\\\"y\\\",\\\"value\\\":\\\"a\\\"}]},{\\\"id\\\":\\\"bb\\\",\\\"probability\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"},\\\"mix\\\":{\\\"kind\\\":\\\"value\\\",\\\"value\\\":\\\"b\\\"},\\\"fork\\\":[{\\\"factor\\\":\\\"x\\\",\\\"value\\\":\\\"b\\\"},{\\\"factor\\\":\\\"y\\\",\\\"value\\\":\\\"b\\\"}]}],\\\"outputs\\\":[{\\\"output\\\":{\\\"kind\\\":\\\"value\\\",\\\"value\\\":\\\"a\\\"},\\\"probability\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"},\\\"configurations\\\":[\\\"aa\\\"],\\\"posterior\\\":[{\\\"configuration\\\":\\\"aa\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"1\\\"}}],\\\"conditionalBits\\\":0},{\\\"output\\\":{\\\"kind\\\":\\\"tie\\\"},\\\"probability\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"},\\\"configurations\\\":[\\\"ab\\\",\\\"ba\\\"],\\\"posterior\\\":[{\\\"configuration\\\":\\\"ab\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}},{\\\"configuration\\\":\\\"ba\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}}],\\\"conditionalBits\\\":1},{\\\"output\\\":{\\\"kind\\\":\\\"value\\\",\\\"value\\\":\\\"b\\\"},\\\"probability\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"},\\\"configurations\\\":[\\\"bb\\\"],\\\"posterior\\\":[{\\\"configuration\\\":\\\"bb\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"1\\\"}}],\\\"conditionalBits\\\":0}],\\\"meaning\\\":\\\"conditional entropy of the declared configuration given its deterministic mix output; named fork is injective\\\"},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"]}}]}]\n",
+        "stderr": "",
+        "stdoutSha256": "sha256:ecb4e88e7e6525974d1e69a52d323501155dc359bf72249621dc1eebd7c73060",
+        "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "repeat": {
+          "status": 0,
+          "runtimeMs": 127.334292,
+          "stdoutSha256": "sha256:ecb4e88e7e6525974d1e69a52d323501155dc359bf72249621dc1eebd7c73060",
+          "stderr": "",
+          "byteIdentical": true,
+          "meaning": "fresh host execution, not a cache-reuse receipt"
+        }
+      },
+      {
+        "place": "orchard",
+        "case": "no",
+        "input": "[{\"protocol\":\"bound-lock/1\",\"verb\":\"read\",\"rootScope\":\"inputs/sample.json\",\"region\":\"measure\",\"files\":[{\"place\":\"inputs/sample.json\",\"text\":\"{\\\"model\\\":{\\\"factors\\\":[{\\\"id\\\":\\\"x\\\",\\\"weight\\\":\\\"1\\\"},{\\\"id\\\":\\\"y\\\",\\\"weight\\\":\\\"1\\\"}],\\\"alphabet\\\":[\\\"a\\\",\\\"b\\\"],\\\"configurations\\\":[{\\\"id\\\":\\\"aa\\\",\\\"values\\\":[\\\"a\\\",\\\"a\\\"]},{\\\"id\\\":\\\"ab\\\",\\\"values\\\":[\\\"a\\\",\\\"b\\\"]},{\\\"id\\\":\\\"ba\\\",\\\"values\\\":[\\\"b\\\",\\\"a\\\"]},{\\\"id\\\":\\\"bb\\\",\\\"values\\\":[\\\"b\\\",\\\"b\\\"]}],\\\"prior\\\":{\\\"kind\\\":\\\"explicit\\\",\\\"probabilities\\\":[{\\\"configuration\\\":\\\"aa\\\",\\\"p\\\":\\\"1/8\\\"},{\\\"configuration\\\":\\\"ab\\\",\\\"p\\\":\\\"1/8\\\"},{\\\"configuration\\\":\\\"ba\\\",\\\"p\\\":\\\"1/8\\\"},{\\\"configuration\\\":\\\"bb\\\",\\\"p\\\":\\\"1/8\\\"}]}},\\\"policy\\\":{\\\"logarithm\\\":\\\"binary64-log2\\\",\\\"budget\\\":\\\"100\\\"},\\\"expectedRefusal\\\":\\\"REFUSE·mix-loss prior probabilities must sum exactly to one\\\",\\\"group\\\":\\\"l9-mix-loss\\\",\\\"place\\\":\\\"orchard\\\"}\\n\"}],\"lines\":[]}]",
+        "stdinSha256": "sha256:9454f6951a913341f4c5435abaa75d675ef78c675639c9c8f2b5012cda13f595",
+        "status": 0,
+        "signal": null,
+        "runtimeMs": 124.40258300000005,
+        "stdout": "\n[{\"protocol\":\"bound-lock/1\",\"kind\":\"refuse\",\"why\":\"Error: REFUSE·mix-loss prior probabilities must sum exactly to one\"}]\n",
+        "stderr": "",
+        "stdoutSha256": "sha256:22e1ffc0fc7c27e0fed1e1a62dacdd17088a6c0814e2301138c80b0758b3de34",
+        "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "place": "catalog",
+        "case": "yes",
+        "input": "[{\"protocol\":\"bound-lock/1\",\"verb\":\"read\",\"rootScope\":\"inputs/sample.json\",\"region\":\"measure\",\"files\":[{\"place\":\"inputs/sample.json\",\"text\":\"{\\\"model\\\":{\\\"factors\\\":[{\\\"id\\\":\\\"x\\\",\\\"weight\\\":\\\"1\\\"},{\\\"id\\\":\\\"y\\\",\\\"weight\\\":\\\"1\\\"}],\\\"alphabet\\\":[\\\"a\\\",\\\"b\\\"],\\\"configurations\\\":[{\\\"id\\\":\\\"aa\\\",\\\"values\\\":[\\\"a\\\",\\\"a\\\"]},{\\\"id\\\":\\\"ab\\\",\\\"values\\\":[\\\"a\\\",\\\"b\\\"]},{\\\"id\\\":\\\"ba\\\",\\\"values\\\":[\\\"b\\\",\\\"a\\\"]},{\\\"id\\\":\\\"bb\\\",\\\"values\\\":[\\\"b\\\",\\\"b\\\"]}],\\\"prior\\\":{\\\"kind\\\":\\\"uniform\\\"}},\\\"policy\\\":{\\\"logarithm\\\":\\\"binary64-log2\\\",\\\"budget\\\":\\\"100\\\"},\\\"expected\\\":{\\\"configurationBits\\\":2,\\\"mixBits\\\":1.5,\\\"lossBits\\\":0.5,\\\"tieConditionalBits\\\":1,\\\"forkLossBits\\\":0},\\\"group\\\":\\\"l9-mix-loss\\\",\\\"place\\\":\\\"catalog\\\"}\\n\"}],\"lines\":[]}]",
+        "stdinSha256": "sha256:8b75462af1be9958dd5abffeb94a37d6803024495466da8c313f207beb9e7745",
+        "status": 0,
+        "signal": null,
+        "runtimeMs": 125.88016700000003,
+        "stdout": "\n[{\"protocol\":\"bound-lock/1\",\"kind\":\"fact\",\"claims\":[{\"scope\":\"measurement/l9-mix-loss/catalog\",\"role\":\"writes\",\"measure\":\"result\",\"bound\":{\"kind\":\"enumerated\",\"values\":[\"{\\\"result\\\":{\\\"status\\\":\\\"measured\\\",\\\"model\\\":\\\"declared-weighted-mix-projection@1\\\",\\\"parameters\\\":{\\\"m\\\":2,\\\"factors\\\":[{\\\"id\\\":\\\"x\\\",\\\"weight\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"1\\\"}},{\\\"id\\\":\\\"y\\\",\\\"weight\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"1\\\"}}],\\\"alphabet\\\":[\\\"a\\\",\\\"b\\\"],\\\"configurations\\\":[{\\\"id\\\":\\\"aa\\\",\\\"values\\\":[\\\"a\\\",\\\"a\\\"]},{\\\"id\\\":\\\"ab\\\",\\\"values\\\":[\\\"a\\\",\\\"b\\\"]},{\\\"id\\\":\\\"ba\\\",\\\"values\\\":[\\\"b\\\",\\\"a\\\"]},{\\\"id\\\":\\\"bb\\\",\\\"values\\\":[\\\"b\\\",\\\"b\\\"]}]},\\\"prior\\\":{\\\"kind\\\":\\\"uniform\\\",\\\"probabilities\\\":[{\\\"configuration\\\":\\\"aa\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"}},{\\\"configuration\\\":\\\"ab\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"}},{\\\"configuration\\\":\\\"ba\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"}},{\\\"configuration\\\":\\\"bb\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"}}]},\\\"policy\\\":{\\\"logarithm\\\":\\\"binary64-log2\\\",\\\"budget\\\":\\\"100\\\"},\\\"unit\\\":\\\"bits\\\",\\\"approximation\\\":\\\"binary64-log2\\\",\\\"configurationBits\\\":2,\\\"mixBits\\\":1.5,\\\"lossBits\\\":0.5,\\\"entropyDifferenceBits\\\":0.5,\\\"forkLossBits\\\":0,\\\"mixInjectiveOnConfigurations\\\":false,\\\"mixInjectiveOnPositiveSupport\\\":false,\\\"configurations\\\":[{\\\"id\\\":\\\"aa\\\",\\\"probability\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"},\\\"mix\\\":{\\\"kind\\\":\\\"value\\\",\\\"value\\\":\\\"a\\\"},\\\"fork\\\":[{\\\"factor\\\":\\\"x\\\",\\\"value\\\":\\\"a\\\"},{\\\"factor\\\":\\\"y\\\",\\\"value\\\":\\\"a\\\"}]},{\\\"id\\\":\\\"ab\\\",\\\"probability\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"},\\\"mix\\\":{\\\"kind\\\":\\\"tie\\\"},\\\"fork\\\":[{\\\"factor\\\":\\\"x\\\",\\\"value\\\":\\\"a\\\"},{\\\"factor\\\":\\\"y\\\",\\\"value\\\":\\\"b\\\"}]},{\\\"id\\\":\\\"ba\\\",\\\"probability\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"},\\\"mix\\\":{\\\"kind\\\":\\\"tie\\\"},\\\"fork\\\":[{\\\"factor\\\":\\\"x\\\",\\\"value\\\":\\\"b\\\"},{\\\"factor\\\":\\\"y\\\",\\\"value\\\":\\\"a\\\"}]},{\\\"id\\\":\\\"bb\\\",\\\"probability\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"},\\\"mix\\\":{\\\"kind\\\":\\\"value\\\",\\\"value\\\":\\\"b\\\"},\\\"fork\\\":[{\\\"factor\\\":\\\"x\\\",\\\"value\\\":\\\"b\\\"},{\\\"factor\\\":\\\"y\\\",\\\"value\\\":\\\"b\\\"}]}],\\\"outputs\\\":[{\\\"output\\\":{\\\"kind\\\":\\\"value\\\",\\\"value\\\":\\\"a\\\"},\\\"probability\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"},\\\"configurations\\\":[\\\"aa\\\"],\\\"posterior\\\":[{\\\"configuration\\\":\\\"aa\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"1\\\"}}],\\\"conditionalBits\\\":0},{\\\"output\\\":{\\\"kind\\\":\\\"tie\\\"},\\\"probability\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"},\\\"configurations\\\":[\\\"ab\\\",\\\"ba\\\"],\\\"posterior\\\":[{\\\"configuration\\\":\\\"ab\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}},{\\\"configuration\\\":\\\"ba\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"2\\\"}}],\\\"conditionalBits\\\":1},{\\\"output\\\":{\\\"kind\\\":\\\"value\\\",\\\"value\\\":\\\"b\\\"},\\\"probability\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"4\\\"},\\\"configurations\\\":[\\\"bb\\\"],\\\"posterior\\\":[{\\\"configuration\\\":\\\"bb\\\",\\\"p\\\":{\\\"numerator\\\":\\\"1\\\",\\\"denominator\\\":\\\"1\\\"}}],\\\"conditionalBits\\\":0}],\\\"meaning\\\":\\\"conditional entropy of the declared configuration given its deterministic mix output; named fork is injective\\\"},\\\"states\\\":[\\\"FREE\\\",\\\"REQUIRED\\\",\\\"FORBIDDEN\\\",\\\"CONFLICT\\\"]}\"]}}]}]\n",
+        "stderr": "",
+        "stdoutSha256": "sha256:a90a0118bdde5f1fa65353304761ea57b9d67a09155e9174288f3a7501c0b916",
+        "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "repeat": {
+          "status": 0,
+          "runtimeMs": 129.32158299999992,
+          "stdoutSha256": "sha256:a90a0118bdde5f1fa65353304761ea57b9d67a09155e9174288f3a7501c0b916",
+          "stderr": "",
+          "byteIdentical": true,
+          "meaning": "fresh host execution, not a cache-reuse receipt"
+        }
+      },
+      {
+        "place": "catalog",
+        "case": "no",
+        "input": "[{\"protocol\":\"bound-lock/1\",\"verb\":\"read\",\"rootScope\":\"inputs/sample.json\",\"region\":\"measure\",\"files\":[{\"place\":\"inputs/sample.json\",\"text\":\"{\\\"model\\\":{\\\"factors\\\":[{\\\"id\\\":\\\"x\\\",\\\"weight\\\":\\\"1\\\"},{\\\"id\\\":\\\"y\\\",\\\"weight\\\":\\\"1\\\"}],\\\"alphabet\\\":[\\\"a\\\",\\\"b\\\"],\\\"configurations\\\":[{\\\"id\\\":\\\"aa\\\",\\\"values\\\":[\\\"a\\\",\\\"a\\\"]},{\\\"id\\\":\\\"ab\\\",\\\"values\\\":[\\\"a\\\",\\\"b\\\"]},{\\\"id\\\":\\\"ba\\\",\\\"values\\\":[\\\"b\\\",\\\"a\\\"]},{\\\"id\\\":\\\"bb\\\",\\\"values\\\":[\\\"b\\\",\\\"b\\\"]}],\\\"prior\\\":{\\\"kind\\\":\\\"explicit\\\",\\\"probabilities\\\":[{\\\"configuration\\\":\\\"aa\\\",\\\"p\\\":\\\"1/8\\\"},{\\\"configuration\\\":\\\"ab\\\",\\\"p\\\":\\\"1/8\\\"},{\\\"configuration\\\":\\\"ba\\\",\\\"p\\\":\\\"1/8\\\"},{\\\"configuration\\\":\\\"bb\\\",\\\"p\\\":\\\"1/8\\\"}]}},\\\"policy\\\":{\\\"logarithm\\\":\\\"binary64-log2\\\",\\\"budget\\\":\\\"100\\\"},\\\"expectedRefusal\\\":\\\"REFUSE·mix-loss prior probabilities must sum exactly to one\\\",\\\"group\\\":\\\"l9-mix-loss\\\",\\\"place\\\":\\\"catalog\\\"}\\n\"}],\"lines\":[]}]",
+        "stdinSha256": "sha256:d4dec3671ea9f327062e3e54e2638d9b0c3231a25148d6642db62475b6710612",
+        "status": 0,
+        "signal": null,
+        "runtimeMs": 126.56683399999974,
+        "stdout": "\n[{\"protocol\":\"bound-lock/1\",\"kind\":\"refuse\",\"why\":\"Error: REFUSE·mix-loss prior probabilities must sum exactly to one\"}]\n",
+        "stderr": "",
+        "stdoutSha256": "sha256:22e1ffc0fc7c27e0fed1e1a62dacdd17088a6c0814e2301138c80b0758b3de34",
+        "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "isolation": "two separate working directories with identical digest-verified reader image; no ledger, key or store; one origin"
+  },
+  "admission": "not performed; no signatures or owner authority"
+}

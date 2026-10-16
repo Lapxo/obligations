@@ -211,3 +211,11 @@ These operations compute conditional probability bounds. They select neither a g
 At n=4,c=1,q=1/4 the bound is exactly zero; q=0 gives log2(4/3), and q=1 gives two bits. Missing q refuses. The operational declaration or detection of activation remains open in identification.model. Unconditioned coincidence does not identify q.
 
 M/3 and M/4 retain their existing definitions. Partial-factor governance proposals do not supply a conditional joint observation and selection law. The information carried by dissent, including a bottom symbol, is open for those unspecified proposals.
+
+## Obligations 0.4.3 — proposed conditional measures
+
+L7: conditional bound on one declared common probability space: P(N>k)<=min(1,sum over |S|=k+1 of min p_i), with rational declared marginal failure upper bounds and 0<=k<=m. Trivial iff computed upper bound is one. Counterexamples refute the former top-k+1 success guarantee. Joint-independent Bernoulli convolution is a separate declared hypothesis; rho=0 and pairwise independence do not supply it. Existing stronger 0.4.2 count bound is unchanged and needs no joint independence.
+
+L8: law by enumeration only for 3<=n<=64, positive integer divisors p|n and integer 0<=s<p. D=log2(n/p)-h(s/p), explicit binary64-log2 approximation. Odd-period minimum uses h(floor(p/2)/p), even-period minimum uses one. Complete maximum at zero; nonzero domain has endpoints 1,p-1, empty when p=1. No information or worst-case interpretation follows from nonnegativity. T87 retains its separate wrapped-phase amplitude identity.
+
+L9: law by counterexample of existence of noninjective weighted mix, and measure with a declared prior on a finite explicitly supplied set of named-factor configurations. Equal-weight ab and ba give the same bottom tie and different named forks. Loss is H(configuration | mix)=H(configuration)-H(mix); a uniform prior must be explicitly selected, absent prior is unmeasured. The four-state uniform example has mean loss 0.5 bits and one bit conditioned on tie; the injective named fork has zero loss. Defines no new algebraic act, governance selection, M/3 or M/4 law, or destroyed field.

@@ -1,0 +1,98 @@
+[
+  {
+    "path": "src/debit/ideal.js",
+    "sha256": "sha256:17b76451902fdfe3b6c9d294474a6db6a4f4e0d22414a2b3d053fa89a0adb126"
+  },
+  {
+    "path": "src/debit/unit-span.js",
+    "sha256": "sha256:d5020644158abfa4ea2b04b3483c0ded13e4ba3835a0e86e637d9959c1da81b9"
+  },
+  {
+    "path": "src/debit/unit.js",
+    "sha256": "sha256:a26c30d5456d99667ab44ff56663fff0ced252de60b860acefb820c32a0f5f78"
+  },
+  {
+    "path": "src/lattice/errors.js",
+    "sha256": "sha256:0cc476498db21b2aab91e90cc0172bb34373cbe2876a21a21efdc8ba088112b0"
+  },
+  {
+    "path": "src/lattice/order.js",
+    "sha256": "sha256:4752a5da2995163d26712bb96acc9c14d5d65f76366e941ec29c25dd8fdd6741"
+  },
+  {
+    "path": "src/measures/capacity.js",
+    "sha256": "sha256:6e23144abdcb38905f2d89446cc620fd4285fc9420bf97dc387ddf0ba2743194"
+  },
+  {
+    "path": "src/measures/coincidence.js",
+    "sha256": "sha256:b933cbf41b4450b6e0eadef9655f8fa28ba1795259b2b28a8f40acc8520a236d"
+  },
+  {
+    "path": "src/measures/confidence.js",
+    "sha256": "sha256:0b3377619777f75042526f8e36cb6b6fef3f01694e19e78c1f49a617b5d420da"
+  },
+  {
+    "path": "src/measures/error-events.js",
+    "sha256": "sha256:c748e76c03579fec1fd95e2c00ef9530ccddf34df8570ac59d6c10c0411aca09"
+  },
+  {
+    "path": "src/measures/experiments.js",
+    "sha256": "sha256:0d302c409bb17ed8085140a132c647d61d59582d0ca1fcb7f18d9dfc9ac4ad29"
+  },
+  {
+    "path": "src/measures/fitting.js",
+    "sha256": "sha256:ff9011bc1b7c862a47821a4220341a8a39dc002a6d35cda3ff63ce6e05dc43ce"
+  },
+  {
+    "path": "src/measures/identification.js",
+    "sha256": "sha256:aca5c9c62796a42a2eb7fbebc2f6f5054580081d1e1c3d5aade36ab52d08c623"
+  },
+  {
+    "path": "src/measures/index.js",
+    "sha256": "sha256:f91b8411e19f7e58d7edd6956ef828974605ae19584fcb2af6c0b0f0cedd8212"
+  },
+  {
+    "path": "src/measures/m3-experiment.js",
+    "sha256": "sha256:871b6f618fa199846b5b4f8e2cc956cf28683dcb21f0916f699700902ad19b1c"
+  },
+  {
+    "path": "src/measures/m3.js",
+    "sha256": "sha256:527c424cdf2848510a2fcb7f5d770ca1426da7920f9eff76404cd5406df0e0c8"
+  },
+  {
+    "path": "src/measures/mix-loss.js",
+    "sha256": "sha256:aff23c193600e57895f765d971327797d2e2a22a7157f8a97f2a21eca7e3ebc5"
+  },
+  {
+    "path": "src/measures/model.js",
+    "sha256": "sha256:8c8a97f909e4467f8cda14c843911ac61af3bdd3dc107448ed1d834067906654"
+  },
+  {
+    "path": "src/measures/phase-defect.js",
+    "sha256": "sha256:0af62179f23db3163e70a450a3779d0938e66222ae5c5a333fd86a6aa697a71f"
+  },
+  {
+    "path": "src/measures/rational.js",
+    "sha256": "sha256:f25343eee4bbea1de211543a7036ca58f62aeefec1d124f787151ea57cbda2e7"
+  },
+  {
+    "path": "src/measures/spectrum.js",
+    "sha256": "sha256:eec8a1121c9d39c3ddcbdb54167a09f5ae418a792ff79074a0be015239ae21e8"
+  },
+  {
+    "path": "src/measures/tolerant-subsets.js",
+    "sha256": "sha256:f57da182b6d540e62be451fe6e3a40dbca9129caa7c591e7f19ed6c61320eac5"
+  },
+  {
+    "path": "src/measures/unanimity-fit.js",
+    "sha256": "sha256:f7a46433a2543d9e6f3dfd553b869894d5468f6b001329599da682d85aaffe81"
+  },
+  {
+    "path": "test/support/measures-reader.js",
+    "sha256": "sha256:f745da92a58fc7fa7f1b47f19f88c36d41a44b44f5a19efab5d4e6125814d973"
+  },
+  {
+    "path": "test/support/unanimity-experiment.js",
+    "sha256": "sha256:3e3a38fa254f9d35bc35a2693c5303ab42e70f115b5f63772c711c22e3bb6279"
+  }
+]

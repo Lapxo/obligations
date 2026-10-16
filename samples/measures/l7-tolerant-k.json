@@ -1,0 +1,90 @@
+{
+  "yes": {
+    "group": "l7-tolerant-k",
+    "operation": "subset-bound",
+    "probabilitySpace": "declared:finite-common-space",
+    "k": 1,
+    "failures": [
+      {
+        "id": "0",
+        "p": "1",
+        "justification": "hypothesis:0"
+      },
+      {
+        "id": "1",
+        "p": "0",
+        "justification": "hypothesis:1"
+      },
+      {
+        "id": "2",
+        "p": "0",
+        "justification": "hypothesis:2"
+      }
+    ],
+    "expectedFailureUpperBound": {
+      "numerator": "0",
+      "denominator": "1"
+    }
+  },
+  "no": {
+    "group": "l7-tolerant-k",
+    "operation": "independent-convolution",
+    "probabilitySpace": "declared:finite-common-space",
+    "k": 1,
+    "failures": [
+      {
+        "id": "0",
+        "p": "1/2",
+        "justification": "hypothesis:0"
+      },
+      {
+        "id": "1",
+        "p": "1/2",
+        "justification": "hypothesis:1"
+      },
+      {
+        "id": "2",
+        "p": "1/2",
+        "justification": "hypothesis:2"
+      }
+    ],
+    "independence": {
+      "probabilitySpace": "declared:finite-common-space",
+      "pairwiseIndependence": true,
+      "rho": 0,
+      "justification": "pairwise-only"
+    },
+    "expectedRefusal": "REFUSE·L7 joint-independence-required"
+  },
+  "independentYes": {
+    "operation": "independent-convolution",
+    "probabilitySpace": "declared:independent-Bernoulli",
+    "k": 1,
+    "failures": [
+      {
+        "id": "0",
+        "p": "1/2",
+        "justification": "hypothesis:0"
+      },
+      {
+        "id": "1",
+        "p": "1/2",
+        "justification": "hypothesis:1"
+      },
+      {
+        "id": "2",
+        "p": "1/2",
+        "justification": "hypothesis:2"
+      }
+    ],
+    "independence": {
+      "probabilitySpace": "declared:independent-Bernoulli",
+      "jointIndependence": true,
+      "justification": "hypothesis:joint-product-law"
+    },
+    "expectedFailureUpperBound": {
+      "numerator": "1",
+      "denominator": "2"
+    }
+  }
+}

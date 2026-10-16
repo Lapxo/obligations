@@ -13,6 +13,9 @@ import {capacityBound,capacityP0,mutualInformation,unanimityNoFactor,decisionInf
   type UnanimityCurve,type UnanimityFitPolicy,type ValueReading,type TruthReading,
   type CoincidenceReference,type CoincidencePolicy} from '../../src/measures/index.ts';
 import {unanimityExperiment,type UnanimityExperiment} from './unanimity-experiment.ts';
+import {tolerantSubsetConfidence,independentCountConfidence,phaseDefect,phaseDefectExtrema,mixProjectionLoss,
+  type DeclaredFailure,type JointIndependenceDeclaration,type PhaseDefectInterpretation,
+  type LogarithmPolicy,type MixLossModel,type MixLossPolicy} from '../../src/measures/index.ts';
 
 type Named = Readonly<{place:string}>;
 type Sample = Named & (
@@ -31,7 +34,12 @@ type Sample = Named & (
   (Readonly<{group:'unanimity-fit';policy:UnanimityFitPolicy}> &
     (Readonly<{curve:UnanimityCurve}>|Readonly<{experiment:UnanimityExperiment}>)) |
   Readonly<{group:'coincidence';rows:readonly ValueReading[];truth:readonly TruthReading[];
-    selection:readonly string[];reference:CoincidenceReference;policy:CoincidencePolicy}>);
+    selection:readonly string[];reference:CoincidenceReference;policy:CoincidencePolicy}> |
+  Readonly<{group:'l7-tolerant-k';operation:'subset-bound'|'independent-convolution';
+    failures:readonly DeclaredFailure[];k:number;probabilitySpace:string;independence?:JointIndependenceDeclaration}> |
+  Readonly<{group:'l8-phase-defect';n:number;p:number;s:number;policy:LogarithmPolicy;
+    interpretation?:PhaseDefectInterpretation}> |
+  Readonly<{group:'l9-mix-loss';model:MixLossModel;policy:MixLossPolicy}>);
 
 export function evaluate(sample:Sample) {
   if(!sample||typeof sample.place!=='string'||!sample.place)throw new Error('REFUSE·measure unnamed sample');
@@ -40,6 +48,18 @@ export function evaluate(sample:Sample) {
     unit('forbidden',{floor:'off',ceiling:'off'}),unit('conflict',{floor:'on',ceiling:'off'})];
   const states=cells.map(cell=>state(scale,cell));
   switch(sample.group){
+    case 'l7-tolerant-k':{
+      if(sample.operation==='subset-bound')return {result:tolerantSubsetConfidence(sample.failures,sample.k,sample.probabilitySpace),states};
+      if(sample.operation==='independent-convolution'){
+        if(sample.independence&&sample.independence.probabilitySpace!==sample.probabilitySpace)
+          throw Error('REFUSE·L7 independence-probability-space-differs');
+        return {result:independentCountConfidence(sample.failures,sample.k,sample.independence!),states};
+      }
+      throw Error('REFUSE·L7 operation-required');
+    }
+    case 'l8-phase-defect':return {result:{reading:phaseDefect(sample.n,sample.p,sample.s,sample.policy,sample.interpretation),
+      extrema:phaseDefectExtrema(sample.n,sample.p,sample.policy)},states};
+    case 'l9-mix-loss':return {result:mixProjectionLoss(sample.model,sample.policy),states};
     case 'observations':return {result:errorCovariance(sample.rows,sample.policy),states};
     case 'spectrum':{
       const cov=sample.matrix?{status:'measured' as const,origins:sample.origins,events:[],matrix:sample.matrix}:

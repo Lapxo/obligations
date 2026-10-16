@@ -1,0 +1,19 @@
+{
+  "group": "l8-phase-defect",
+  "yes": {
+    "n": 8,
+    "p": 4,
+    "s": 1,
+    "policy": {"logarithm": "binary64-log2"},
+    "interpretation": "phase-defect",
+    "expected": 0.18872187554086717
+  },
+  "no": {
+    "n": 4,
+    "p": 4,
+    "s": 2,
+    "policy": {"logarithm": "binary64-log2"},
+    "interpretation": "information",
+    "expectedRefusal": "REFUSE·phase-defect information interpretation unsupported"
+  }
+}
