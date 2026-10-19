@@ -19,4 +19,4 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm test
-      - run: npx @lapxo/bound@0.2.1 fold --check
+      - run: npm exec --yes --package=@lapxo/bound@0.2.1 --package=@lapxo/topos@0.2.0 -- bound fold --check
