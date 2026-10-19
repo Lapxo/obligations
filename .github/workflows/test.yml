@@ -20,3 +20,100 @@ jobs:
       - run: npm run build
       - run: npm test
       - run: npm exec --yes --package=@lapxo/bound@0.2.1 --package=@lapxo/topos@0.2.0 -- bound fold --check
+  lean:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    defaults:
+      run:
+        shell: bash
+        working-directory: proofs/lean
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install pinned Elan
+      shell: bash
+      run: |
+        set -euo pipefail
+        curl --fail --location --proto '=https' --proto-redir '=https' https://github.com/leanprover/elan/releases/download/v4.2.4/elan-x86_64-unknown-linux-gnu.tar.gz --output "$RUNNER_TEMP/elan.tar.gz"
+        printf '%s  %s\n' 42b94d4244e8353142c456ec0e4ca6528fd898a6c604d4059f494e706e431f63 "$RUNNER_TEMP/elan.tar.gz" | sha256sum --check
+        mkdir "$RUNNER_TEMP/elan-installer"
+        tar -xzf "$RUNNER_TEMP/elan.tar.gz" -C "$RUNNER_TEMP/elan-installer"
+        "$RUNNER_TEMP/elan-installer/elan-init" -y --default-toolchain none
+        printf '%s\n' "$HOME/.elan/bin" >> "$GITHUB_PATH"
+    - uses: actions/cache@v4
+      with:
+        path: |-
+          ~/.elan/toolchains
+          proofs/lean/.lake
+        key: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('proofs/lean/lean-toolchain', 'proofs/lean/lakefile.toml',
+          'proofs/lean/lake-manifest.json') }}-${{ hashFiles('proofs/lean/**/*.lean') }}
+        restore-keys: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('proofs/lean/lean-toolchain', 'proofs/lean/lakefile.toml',
+          'proofs/lean/lake-manifest.json') }}-
+    - name: Resolve locked dependencies
+      run: |
+        set -euo pipefail
+        test "$(cat lean-toolchain)" = leanprover/lean4:v4.19.0
+        elan toolchain install "$(cat lean-toolchain)"
+        lean --version
+        lake --version
+        lake exe cache get
+        git diff --exit-code -- lean-toolchain lakefile.toml lake-manifest.json
+        python3 - <<'PYTHON'
+        import json, pathlib, subprocess
+        manifest = json.loads(pathlib.Path('lake-manifest.json').read_text())
+        for package in manifest['packages']:
+            actual = subprocess.check_output(['git', '-C', '.lake/packages/' + package['name'], 'rev-parse', 'HEAD'], text=True).strip()
+            if actual != package['rev']:
+                raise SystemExit('dependency revision differs: ' + package['name'])
+        PYTHON
+    - name: Compile proof sources
+      run: |
+        set -euo pipefail
+        lake build Obligations Obligations.HellyComb
+        lake env lean -DwarningAsError=true Obligations/Cell.lean
+        lake env lean -DwarningAsError=true Obligations/HellyComb.lean
+    - name: Audit theorem axioms
+      run: |
+        set -euo pipefail
+        python3 - <<'PYTHON'
+        import json, os, pathlib, re, subprocess
+        vector = json.loads(pathlib.Path('../../vectors/laws/meet-semilattice.json').read_text())
+        names = ['Obligations.Cell.' + name for name in vector['proof']['auditedTheorems']]
+        names += ['Obligations.HellyComb.' + name for name in ['pairwise_nonempty', 'triple_empty', 'c_has_a_hole']]
+        audit = pathlib.Path(os.environ['RUNNER_TEMP']) / 'axiom-audit.lean'
+        audit.write_text('import Obligations.Cell\nimport Obligations.HellyComb\n' + ''.join('#print axioms ' + name + '\n' for name in names))
+        result = subprocess.run(['lake', 'env', 'lean', '-DwarningAsError=true', str(audit)], text=True, capture_output=True, check=True)
+        print(result.stdout, end='')
+        print(result.stderr, end='')
+        rows = result.stdout.strip().splitlines()
+        if len(rows) != len(names):
+            raise SystemExit('incomplete axiom audit')
+        allowed = {'propext', 'Quot.sound', 'Classical.choice'}
+        for name, row in zip(names, rows):
+            if row == "'" + name + "' does not depend on any axioms":
+                continue
+            prefix = "'" + name + "' depends on axioms: ["
+            if not row.startswith(prefix) or not row.endswith(']'):
+                raise SystemExit('unexpected axiom report: ' + name)
+            if not set(row[len(prefix):-1].split(', ')) <= allowed:
+                raise SystemExit('unapproved axiom: ' + name)
+        PYTHON
+    - name: Check declared refusals
+      run: |
+        set -euo pipefail
+        python3 - <<'PYTHON'
+        import os, pathlib, subprocess
+        cases = {
+            'raw-antisymmetry': ('import Obligations.Cell\nexample : (Obligations.Cell.mk (5 : Int) 3) = (Obligations.Cell.mk (8 : Int) 6) := by decide\n', ['tactic', 'decide', 'is false']),
+            'nonconvex-helly': ('import Obligations.HellyComb\nexample : (Obligations.HellyComb.triple != []) = true := by decide\n', ['tactic', 'decide', 'is false']),
+        }
+        for name, (source, causes) in cases.items():
+            path = pathlib.Path(os.environ['RUNNER_TEMP']) / (name + '.lean')
+            path.write_text(source)
+            result = subprocess.run(['lake', 'env', 'lean', str(path)], text=True, capture_output=True)
+            output = result.stdout + result.stderr
+            print(name + ': expected refusal')
+            print(output, end='')
+            if result.returncode != 1 or not all(cause in output for cause in causes):
+                raise SystemExit('negative did not refuse for the declared cause: ' + name)
+        PYTHON
