@@ -1,0 +1,27 @@
+{
+  "id": "coordination@1",
+  "policy": "vectors/laws/policy.json",
+  "classification": "measure with declared conditional model and exact finite enumeration",
+  "statement": "For all L selected sources under a shared activation of probability f, active outputs equal one named wrong value. Otherwise source errors are jointly independent conditional on truth with rate e, uniform among n-1 wrong labels. Then U_L=f+(1-f)*((1-e)^L+e^L/(n-1)^(L-1)), and wrong unanimity W_L=f+(1-f)*e^L/(n-1)^(L-1).",
+  "hypotheses": [
+    "n>=2, L>=1, declared f and e, fixed truth for wrong-label enumeration; symmetry permits uniform truth extension.",
+    "Activation affects every selected source, no other unmodeled activation or observation channel.",
+    "Joint conditional independence is a model declaration for inactive draws, not inferred from pairwise statistics.",
+    "If n>2 and 0<e<=1, or n=2 and 0<e<1, both private unanimity terms tend to zero, giving limit f; finite values generally exceed f."
+  ],
+  "existing": "U_L is exactly the published fitUnanimityModel single-dominant-factor curve, not a new algebraic law or identification method.",
+  "adds": "Explicit equivalence of scheduled coordinated outputs and a shared-cause output distribution under this specified mixture, exact small-L enumeration, wrong-unanimity distinction and named invalid readings.",
+  "nonIdentification": "The activation schedule is itself a common variable in the joint distribution. No inference about a shared physical process, intent or causal origin follows from the same curve; c_total is a compatible model parameter, not model-free truth.",
+  "negative": [
+    "At e=0 all outputs are unanimously correct when inactive: U_L=1 for every L, so U does not identify f. W_L still equals f.",
+    "Two disjoint groups independently activated at rate f/2 do not obey the all-source single-activation curve with mass f.",
+    "Marginal error rate e without joint conditional independence does not determine private unanimity; n=2, e=1/2, identical private errors give U=1 while iid predicts 2^(1-L)."
+  ],
+  "status": "declared-model measure; finite vectors, no causal identification",
+  "unmeasured": "Missing joint-independence declaration refuses curve interpretation by name; unknown mechanism remains unmeasured.",
+  "references": [
+    "https://www.stat.berkeley.edu/~aldous/206-Exch/"
+  ],
+  "signatures": 0,
+  "admission": false
+}

@@ -1,0 +1,868 @@
+{
+  "id": "marginal-information/one-joint-two-orders",
+  "classification": "conditional mutual-information measure under a fixed joint prior; finite chain-rule and comparison vectors, no universal lineage ranking",
+  "policy": "vectors/laws/policy.json",
+  "anchors": [
+    {
+      "path": "proofs/marginal-information.json",
+      "sha256": "sha256:31840e4980f332d65e576ff82bbeddcc1d28b24cb3c2a0d73c75b50f53d91a61"
+    },
+    {
+      "path": "samples/laws/marginal-information/yes.json",
+      "sha256": "sha256:94f16b7cafbf8802f5405ec16014ee0a2636b04b1bc5b94bb3548f97340d0b41"
+    },
+    {
+      "path": "samples/laws/marginal-information/no.json",
+      "sha256": "sha256:7a83d216fc21ec5da03f34e80cffb914ecc8fe6435e8782b54a4515d145f1c1d"
+    },
+    {
+      "path": "vectors/laws/policy.json",
+      "sha256": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+    },
+    {
+      "path": "src/measures/marginal-information.ts",
+      "sha256": "sha256:b3e3b2401a427d05ef89e0ec32df10f995c721ef482ce3a22e8f1f7549d3af07"
+    },
+    {
+      "path": "src/measures/mix-loss.ts",
+      "sha256": "sha256:917ed6c0145b66cee19d31ce0ba1a42d843726530002e609529c01cc8ded7746"
+    },
+    {
+      "path": "src/measures/rational.ts",
+      "sha256": "sha256:d8b9eadbba673a594ee45386cb927ff2e9e5c5323d9aa9f129ed6d8ae2512e2a"
+    }
+  ],
+  "result": {
+    "classification": "conditional information under one declared joint prior; not a lineage ranking",
+    "cases": [
+      {
+        "id": "copy-versus-new-channel",
+        "jointSha256": "sha256:40a513f6de743dfe1c957d26f3aa937b098ba05e0baacabf36c29ef24358761b",
+        "reading": {
+          "status": "measured",
+          "model": "finite-declared-joint@1",
+          "unit": "bits",
+          "approximation": "binary64-log2",
+          "truthEntropy": 1,
+          "declaredAtoms": 8,
+          "computedSubsets": 6,
+          "policy": {
+            "logarithm": "binary64-log2",
+            "budget": "100000"
+          },
+          "workUnit": "declared-support-scans",
+          "required": "288",
+          "readings": [
+            {
+              "additionOrder": [
+                "a",
+                "copy",
+                "b"
+              ],
+              "steps": [
+                {
+                  "source": "a",
+                  "lineage": "L1",
+                  "priorSources": [],
+                  "deltaInformation": 0.18872187554086706,
+                  "cumulativeInformation": 0.18872187554086706,
+                  "remainingConditionalEntropy": 0.8112781244591329
+                },
+                {
+                  "source": "copy",
+                  "lineage": "L1",
+                  "priorSources": [
+                    "a"
+                  ],
+                  "deltaInformation": 0,
+                  "cumulativeInformation": 0.18872187554086706,
+                  "remainingConditionalEntropy": 0.8112781244591329
+                },
+                {
+                  "source": "b",
+                  "lineage": "L2",
+                  "priorSources": [
+                    "a",
+                    "copy"
+                  ],
+                  "deltaInformation": 0.14315587846583222,
+                  "cumulativeInformation": 0.3318777540066993,
+                  "remainingConditionalEntropy": 0.6681222459933007
+                }
+              ],
+              "totalInformation": 0.3318777540066993,
+              "sumMarginals": 0.3318777540066993,
+              "telescopingResidual": 0
+            },
+            {
+              "additionOrder": [
+                "b",
+                "a",
+                "copy"
+              ],
+              "steps": [
+                {
+                  "source": "b",
+                  "lineage": "L2",
+                  "priorSources": [],
+                  "deltaInformation": 0.18872187554086706,
+                  "cumulativeInformation": 0.18872187554086706,
+                  "remainingConditionalEntropy": 0.8112781244591329
+                },
+                {
+                  "source": "a",
+                  "lineage": "L1",
+                  "priorSources": [
+                    "b"
+                  ],
+                  "deltaInformation": 0.14315587846583222,
+                  "cumulativeInformation": 0.3318777540066993,
+                  "remainingConditionalEntropy": 0.6681222459933007
+                },
+                {
+                  "source": "copy",
+                  "lineage": "L1",
+                  "priorSources": [
+                    "b",
+                    "a"
+                  ],
+                  "deltaInformation": 0,
+                  "cumulativeInformation": 0.3318777540066993,
+                  "remainingConditionalEntropy": 0.6681222459933007
+                }
+              ],
+              "totalInformation": 0.3318777540066993,
+              "sumMarginals": 0.3318777540066993,
+              "telescopingResidual": 0
+            }
+          ],
+          "meaning": "I(truth; new source | previous sources) under one unchanged declared joint prior; lineage labels supply no ordering or independence"
+        },
+        "orderJointIdentities": [
+          "sha256:40a513f6de743dfe1c957d26f3aa937b098ba05e0baacabf36c29ef24358761b",
+          "sha256:40a513f6de743dfe1c957d26f3aa937b098ba05e0baacabf36c29ef24358761b"
+        ],
+        "qualities": [
+          {
+            "source": "a",
+            "declaredLineage": "L1",
+            "predictionAccuracy": {
+              "numerator": "3",
+              "denominator": "4"
+            },
+            "individualInformation": 0.18872187554086706
+          },
+          {
+            "source": "copy",
+            "declaredLineage": "L1",
+            "predictionAccuracy": {
+              "numerator": "3",
+              "denominator": "4"
+            },
+            "individualInformation": 0.18872187554086706
+          },
+          {
+            "source": "b",
+            "declaredLineage": "L2",
+            "predictionAccuracy": {
+              "numerator": "3",
+              "denominator": "4"
+            },
+            "individualInformation": 0.18872187554086706
+          }
+        ],
+        "comparison": {
+          "previous": [
+            "a"
+          ],
+          "same": "copy",
+          "other": "b",
+          "sameGain": 0,
+          "otherGain": 0.14315587846583222,
+          "otherMinusSame": 0.14315587846583222,
+          "conditionalGarbling": {
+            "holds": true,
+            "exactFactorizationChecks": 16
+          }
+        },
+        "mixCounterexample": null,
+        "lineageRelabelLeavesDeltasUnchanged": true
+      },
+      {
+        "id": "equal-quality-reverses-lineage-ranking",
+        "jointSha256": "sha256:8f48356ab841bec23f022ab609987eee5001397e1924b0ea99517c2ff31970a6",
+        "reading": {
+          "status": "measured",
+          "model": "finite-declared-joint@1",
+          "unit": "bits",
+          "approximation": "binary64-log2",
+          "truthEntropy": 2,
+          "declaredAtoms": 4,
+          "computedSubsets": 5,
+          "policy": {
+            "logarithm": "binary64-log2",
+            "budget": "100000"
+          },
+          "workUnit": "declared-support-scans",
+          "required": "144",
+          "readings": [
+            {
+              "additionOrder": [
+                "a",
+                "sibling",
+                "b"
+              ],
+              "steps": [
+                {
+                  "source": "a",
+                  "lineage": "L1",
+                  "priorSources": [],
+                  "deltaInformation": 1,
+                  "cumulativeInformation": 1,
+                  "remainingConditionalEntropy": 1
+                },
+                {
+                  "source": "sibling",
+                  "lineage": "L1",
+                  "priorSources": [
+                    "a"
+                  ],
+                  "deltaInformation": 1,
+                  "cumulativeInformation": 2,
+                  "remainingConditionalEntropy": 0
+                },
+                {
+                  "source": "b",
+                  "lineage": "L2",
+                  "priorSources": [
+                    "a",
+                    "sibling"
+                  ],
+                  "deltaInformation": 0,
+                  "cumulativeInformation": 2,
+                  "remainingConditionalEntropy": 0
+                }
+              ],
+              "totalInformation": 2,
+              "sumMarginals": 2,
+              "telescopingResidual": 0
+            },
+            {
+              "additionOrder": [
+                "a",
+                "b",
+                "sibling"
+              ],
+              "steps": [
+                {
+                  "source": "a",
+                  "lineage": "L1",
+                  "priorSources": [],
+                  "deltaInformation": 1,
+                  "cumulativeInformation": 1,
+                  "remainingConditionalEntropy": 1
+                },
+                {
+                  "source": "b",
+                  "lineage": "L2",
+                  "priorSources": [
+                    "a"
+                  ],
+                  "deltaInformation": 0,
+                  "cumulativeInformation": 1,
+                  "remainingConditionalEntropy": 1
+                },
+                {
+                  "source": "sibling",
+                  "lineage": "L1",
+                  "priorSources": [
+                    "a",
+                    "b"
+                  ],
+                  "deltaInformation": 1,
+                  "cumulativeInformation": 2,
+                  "remainingConditionalEntropy": 0
+                }
+              ],
+              "totalInformation": 2,
+              "sumMarginals": 2,
+              "telescopingResidual": 0
+            }
+          ],
+          "meaning": "I(truth; new source | previous sources) under one unchanged declared joint prior; lineage labels supply no ordering or independence"
+        },
+        "orderJointIdentities": [
+          "sha256:8f48356ab841bec23f022ab609987eee5001397e1924b0ea99517c2ff31970a6",
+          "sha256:8f48356ab841bec23f022ab609987eee5001397e1924b0ea99517c2ff31970a6"
+        ],
+        "qualities": [
+          {
+            "source": "a",
+            "declaredLineage": "L1",
+            "predictionAccuracy": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "individualInformation": 1
+          },
+          {
+            "source": "sibling",
+            "declaredLineage": "L1",
+            "predictionAccuracy": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "individualInformation": 1
+          },
+          {
+            "source": "b",
+            "declaredLineage": "L2",
+            "predictionAccuracy": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "individualInformation": 1
+          }
+        ],
+        "comparison": {
+          "previous": [
+            "a"
+          ],
+          "same": "sibling",
+          "other": "b",
+          "sameGain": 1,
+          "otherGain": 0,
+          "otherMinusSame": -1,
+          "conditionalGarbling": {
+            "holds": false,
+            "exactFactorizationChecks": 16
+          }
+        },
+        "mixCounterexample": null,
+        "lineageRelabelLeavesDeltasUnchanged": true
+      },
+      {
+        "id": "xor-synergy",
+        "jointSha256": "sha256:d9173556a42473e199df2548a95bfc99646ad25e86e238ea18116d49023154dc",
+        "reading": {
+          "status": "measured",
+          "model": "finite-declared-joint@1",
+          "unit": "bits",
+          "approximation": "binary64-log2",
+          "truthEntropy": 1,
+          "declaredAtoms": 4,
+          "computedSubsets": 4,
+          "policy": {
+            "logarithm": "binary64-log2",
+            "budget": "100000"
+          },
+          "workUnit": "declared-support-scans",
+          "required": "84",
+          "readings": [
+            {
+              "additionOrder": [
+                "mask",
+                "masked"
+              ],
+              "steps": [
+                {
+                  "source": "mask",
+                  "lineage": "Lmask",
+                  "priorSources": [],
+                  "deltaInformation": 0,
+                  "cumulativeInformation": 0,
+                  "remainingConditionalEntropy": 1
+                },
+                {
+                  "source": "masked",
+                  "lineage": "Lmask",
+                  "priorSources": [
+                    "mask"
+                  ],
+                  "deltaInformation": 1,
+                  "cumulativeInformation": 1,
+                  "remainingConditionalEntropy": 0
+                }
+              ],
+              "totalInformation": 1,
+              "sumMarginals": 1,
+              "telescopingResidual": 0
+            },
+            {
+              "additionOrder": [
+                "masked",
+                "mask"
+              ],
+              "steps": [
+                {
+                  "source": "masked",
+                  "lineage": "Lmask",
+                  "priorSources": [],
+                  "deltaInformation": 0,
+                  "cumulativeInformation": 0,
+                  "remainingConditionalEntropy": 1
+                },
+                {
+                  "source": "mask",
+                  "lineage": "Lmask",
+                  "priorSources": [
+                    "masked"
+                  ],
+                  "deltaInformation": 1,
+                  "cumulativeInformation": 1,
+                  "remainingConditionalEntropy": 0
+                }
+              ],
+              "totalInformation": 1,
+              "sumMarginals": 1,
+              "telescopingResidual": 0
+            }
+          ],
+          "meaning": "I(truth; new source | previous sources) under one unchanged declared joint prior; lineage labels supply no ordering or independence"
+        },
+        "orderJointIdentities": [
+          "sha256:d9173556a42473e199df2548a95bfc99646ad25e86e238ea18116d49023154dc",
+          "sha256:d9173556a42473e199df2548a95bfc99646ad25e86e238ea18116d49023154dc"
+        ],
+        "qualities": [
+          {
+            "source": "mask",
+            "declaredLineage": "Lmask",
+            "predictionAccuracy": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "individualInformation": 0
+          },
+          {
+            "source": "masked",
+            "declaredLineage": "Lmask",
+            "predictionAccuracy": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "individualInformation": 0
+          }
+        ],
+        "comparison": null,
+        "mixCounterexample": null,
+        "lineageRelabelLeavesDeltasUnchanged": true
+      },
+      {
+        "id": "saturated-truth",
+        "jointSha256": "sha256:fcfa9682fa3c09442c234d1d2525a8c97c43bc89868fa53ce45989bd56e4dfd9",
+        "reading": {
+          "status": "measured",
+          "model": "finite-declared-joint@1",
+          "unit": "bits",
+          "approximation": "binary64-log2",
+          "truthEntropy": 1,
+          "declaredAtoms": 2,
+          "computedSubsets": 4,
+          "policy": {
+            "logarithm": "binary64-log2",
+            "budget": "100000"
+          },
+          "workUnit": "declared-support-scans",
+          "required": "42",
+          "readings": [
+            {
+              "additionOrder": [
+                "a",
+                "b"
+              ],
+              "steps": [
+                {
+                  "source": "a",
+                  "lineage": "L1",
+                  "priorSources": [],
+                  "deltaInformation": 1,
+                  "cumulativeInformation": 1,
+                  "remainingConditionalEntropy": 0
+                },
+                {
+                  "source": "b",
+                  "lineage": "L2",
+                  "priorSources": [
+                    "a"
+                  ],
+                  "deltaInformation": 0,
+                  "cumulativeInformation": 1,
+                  "remainingConditionalEntropy": 0
+                }
+              ],
+              "totalInformation": 1,
+              "sumMarginals": 1,
+              "telescopingResidual": 0
+            },
+            {
+              "additionOrder": [
+                "b",
+                "a"
+              ],
+              "steps": [
+                {
+                  "source": "b",
+                  "lineage": "L2",
+                  "priorSources": [],
+                  "deltaInformation": 1,
+                  "cumulativeInformation": 1,
+                  "remainingConditionalEntropy": 0
+                },
+                {
+                  "source": "a",
+                  "lineage": "L1",
+                  "priorSources": [
+                    "b"
+                  ],
+                  "deltaInformation": 0,
+                  "cumulativeInformation": 1,
+                  "remainingConditionalEntropy": 0
+                }
+              ],
+              "totalInformation": 1,
+              "sumMarginals": 1,
+              "telescopingResidual": 0
+            }
+          ],
+          "meaning": "I(truth; new source | previous sources) under one unchanged declared joint prior; lineage labels supply no ordering or independence"
+        },
+        "orderJointIdentities": [
+          "sha256:fcfa9682fa3c09442c234d1d2525a8c97c43bc89868fa53ce45989bd56e4dfd9",
+          "sha256:fcfa9682fa3c09442c234d1d2525a8c97c43bc89868fa53ce45989bd56e4dfd9"
+        ],
+        "qualities": [
+          {
+            "source": "a",
+            "declaredLineage": "L1",
+            "predictionAccuracy": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "individualInformation": 1
+          },
+          {
+            "source": "b",
+            "declaredLineage": "L2",
+            "predictionAccuracy": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "individualInformation": 1
+          }
+        ],
+        "comparison": null,
+        "mixCounterexample": null,
+        "lineageRelabelLeavesDeltasUnchanged": true
+      },
+      {
+        "id": "majority-is-not-the-joint-observation",
+        "jointSha256": "sha256:3355cd40f39dddbb2d4f58424073f43ec1f310f9f05931cb31a9b6ed311eedcd",
+        "reading": {
+          "status": "measured",
+          "model": "finite-declared-joint@1",
+          "unit": "bits",
+          "approximation": "binary64-log2",
+          "truthEntropy": 1,
+          "declaredAtoms": 2,
+          "computedSubsets": 6,
+          "policy": {
+            "logarithm": "binary64-log2",
+            "budget": "100000"
+          },
+          "workUnit": "declared-support-scans",
+          "required": "72",
+          "readings": [
+            {
+              "additionOrder": [
+                "a",
+                "zero1",
+                "zero2"
+              ],
+              "steps": [
+                {
+                  "source": "a",
+                  "lineage": "L1",
+                  "priorSources": [],
+                  "deltaInformation": 1,
+                  "cumulativeInformation": 1,
+                  "remainingConditionalEntropy": 0
+                },
+                {
+                  "source": "zero1",
+                  "lineage": "Lzero",
+                  "priorSources": [
+                    "a"
+                  ],
+                  "deltaInformation": 0,
+                  "cumulativeInformation": 1,
+                  "remainingConditionalEntropy": 0
+                },
+                {
+                  "source": "zero2",
+                  "lineage": "Lzero",
+                  "priorSources": [
+                    "a",
+                    "zero1"
+                  ],
+                  "deltaInformation": 0,
+                  "cumulativeInformation": 1,
+                  "remainingConditionalEntropy": 0
+                }
+              ],
+              "totalInformation": 1,
+              "sumMarginals": 1,
+              "telescopingResidual": 0
+            },
+            {
+              "additionOrder": [
+                "zero1",
+                "zero2",
+                "a"
+              ],
+              "steps": [
+                {
+                  "source": "zero1",
+                  "lineage": "Lzero",
+                  "priorSources": [],
+                  "deltaInformation": 0,
+                  "cumulativeInformation": 0,
+                  "remainingConditionalEntropy": 1
+                },
+                {
+                  "source": "zero2",
+                  "lineage": "Lzero",
+                  "priorSources": [
+                    "zero1"
+                  ],
+                  "deltaInformation": 0,
+                  "cumulativeInformation": 0,
+                  "remainingConditionalEntropy": 1
+                },
+                {
+                  "source": "a",
+                  "lineage": "L1",
+                  "priorSources": [
+                    "zero1",
+                    "zero2"
+                  ],
+                  "deltaInformation": 1,
+                  "cumulativeInformation": 1,
+                  "remainingConditionalEntropy": 0
+                }
+              ],
+              "totalInformation": 1,
+              "sumMarginals": 1,
+              "telescopingResidual": 0
+            }
+          ],
+          "meaning": "I(truth; new source | previous sources) under one unchanged declared joint prior; lineage labels supply no ordering or independence"
+        },
+        "orderJointIdentities": [
+          "sha256:3355cd40f39dddbb2d4f58424073f43ec1f310f9f05931cb31a9b6ed311eedcd",
+          "sha256:3355cd40f39dddbb2d4f58424073f43ec1f310f9f05931cb31a9b6ed311eedcd"
+        ],
+        "qualities": [
+          {
+            "source": "a",
+            "declaredLineage": "L1",
+            "predictionAccuracy": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "individualInformation": 1
+          },
+          {
+            "source": "zero1",
+            "declaredLineage": "Lzero",
+            "predictionAccuracy": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "individualInformation": 0
+          },
+          {
+            "source": "zero2",
+            "declaredLineage": "Lzero",
+            "predictionAccuracy": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "individualInformation": 0
+          }
+        ],
+        "comparison": null,
+        "mixCounterexample": {
+          "meaning": "truth determines the full configuration in this fixture, so I(truth;mix)=H(mix)",
+          "profiles": [
+            {
+              "selected": [
+                "a"
+              ],
+              "mixInformation": 1,
+              "mixLoss": 0,
+              "outputs": [
+                {
+                  "output": {
+                    "kind": "value",
+                    "value": "0"
+                  },
+                  "probability": {
+                    "numerator": "1",
+                    "denominator": "2"
+                  },
+                  "configurations": [
+                    "0"
+                  ],
+                  "posterior": [
+                    {
+                      "configuration": "0",
+                      "p": {
+                        "numerator": "1",
+                        "denominator": "1"
+                      }
+                    }
+                  ],
+                  "conditionalBits": 0
+                },
+                {
+                  "output": {
+                    "kind": "value",
+                    "value": "1"
+                  },
+                  "probability": {
+                    "numerator": "1",
+                    "denominator": "2"
+                  },
+                  "configurations": [
+                    "1"
+                  ],
+                  "posterior": [
+                    {
+                      "configuration": "1",
+                      "p": {
+                        "numerator": "1",
+                        "denominator": "1"
+                      }
+                    }
+                  ],
+                  "conditionalBits": 0
+                }
+              ]
+            },
+            {
+              "selected": [
+                "a",
+                "zero1"
+              ],
+              "mixInformation": 1,
+              "mixLoss": 0,
+              "outputs": [
+                {
+                  "output": {
+                    "kind": "value",
+                    "value": "0"
+                  },
+                  "probability": {
+                    "numerator": "1",
+                    "denominator": "2"
+                  },
+                  "configurations": [
+                    "0"
+                  ],
+                  "posterior": [
+                    {
+                      "configuration": "0",
+                      "p": {
+                        "numerator": "1",
+                        "denominator": "1"
+                      }
+                    }
+                  ],
+                  "conditionalBits": 0
+                },
+                {
+                  "output": {
+                    "kind": "tie"
+                  },
+                  "probability": {
+                    "numerator": "1",
+                    "denominator": "2"
+                  },
+                  "configurations": [
+                    "1"
+                  ],
+                  "posterior": [
+                    {
+                      "configuration": "1",
+                      "p": {
+                        "numerator": "1",
+                        "denominator": "1"
+                      }
+                    }
+                  ],
+                  "conditionalBits": 0
+                }
+              ]
+            },
+            {
+              "selected": [
+                "a",
+                "zero1",
+                "zero2"
+              ],
+              "mixInformation": 0,
+              "mixLoss": 1,
+              "outputs": [
+                {
+                  "output": {
+                    "kind": "value",
+                    "value": "0"
+                  },
+                  "probability": {
+                    "numerator": "1",
+                    "denominator": "1"
+                  },
+                  "configurations": [
+                    "0",
+                    "1"
+                  ],
+                  "posterior": [
+                    {
+                      "configuration": "0",
+                      "p": {
+                        "numerator": "1",
+                        "denominator": "2"
+                      }
+                    },
+                    {
+                      "configuration": "1",
+                      "p": {
+                        "numerator": "1",
+                        "denominator": "2"
+                      }
+                    }
+                  ],
+                  "conditionalBits": 1
+                }
+              ]
+            }
+          ]
+        },
+        "lineageRelabelLeavesDeltasUnchanged": true
+      }
+    ],
+    "missingPrior": {
+      "status": "unmeasured",
+      "cause": "marginal/prior-required"
+    },
+    "missingModel": {
+      "status": "unmeasured",
+      "cause": "marginal/joint-model-required"
+    },
+    "publicExportAdded": false,
+    "empiricalOrTruthFreeEstimate": false
+  },
+  "admission": false,
+  "signatures": 0
+}

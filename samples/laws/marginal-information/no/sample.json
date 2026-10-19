@@ -1,0 +1,17 @@
+{
+  "name": "duplicate-source-in-addition-order",
+  "case": "copy-versus-new-channel",
+  "orders": [
+    [
+      "a",
+      "a",
+      "b"
+    ],
+    [
+      "b",
+      "a",
+      "copy"
+    ]
+  ],
+  "expectedRefusal": "REFUSE\u00b7marginal order-must-be-permutation"
+}

@@ -1,0 +1,64 @@
+{
+  "instrument": "Lean 4.19.0 (6caaee842e94)",
+  "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "source": "proofs/lean/Obligations/HellyComb.lean",
+  "sourceSha256": "sha256:63aaee48944cd7b36bfbf22cd3fb38aad2b1846908d79c8061647d0523069c06",
+  "events": [
+    {
+      "place": "orchard",
+      "operation": "positive",
+      "inputSha256": "sha256:f17221b376155b23cc43996177be95f1abbb0fd9c9e20fe1e7a8d36cd74b321f",
+      "sourceSha256": "sha256:63aaee48944cd7b36bfbf22cd3fb38aad2b1846908d79c8061647d0523069c06",
+      "exitCode": 0,
+      "executionMs": 2716.497542,
+      "stdout": "'Obligations.HellyComb.pairwise_nonempty' does not depend on any axioms\n'Obligations.HellyComb.triple_empty' does not depend on any axioms\n'Obligations.HellyComb.c_has_a_hole' does not depend on any axioms\n",
+      "stderr": "",
+      "stdoutSha256": "sha256:eeb25025656ad0b32157c9ba3c11ea3f2e190adc1882227ec12e5d9f0aa475bb",
+      "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "place": "orchard",
+      "operation": "negative",
+      "inputSha256": "sha256:ffb807040f8fbe4464c3add7de20215473c49aff05772a9e4e242cd2aff4a279",
+      "sourceSha256": "sha256:63aaee48944cd7b36bfbf22cd3fb38aad2b1846908d79c8061647d0523069c06",
+      "exitCode": 1,
+      "executionMs": 523.7031249999999,
+      "stdout": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-044/captures/helly/63aaee48944c/orchard/negative.lean:22:52: error: tactic 'decide' proved that the proposition\n  (triple != []) = true\nis false\n",
+      "stderr": "",
+      "stdoutSha256": "sha256:1a05ee1a4eda61b2e85ebb098cd32166ce3fd59945a82fcde8d3b36fb49b6d3c",
+      "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "place": "catalog",
+      "operation": "positive",
+      "inputSha256": "sha256:f17221b376155b23cc43996177be95f1abbb0fd9c9e20fe1e7a8d36cd74b321f",
+      "sourceSha256": "sha256:63aaee48944cd7b36bfbf22cd3fb38aad2b1846908d79c8061647d0523069c06",
+      "exitCode": 0,
+      "executionMs": 534.43875,
+      "stdout": "'Obligations.HellyComb.pairwise_nonempty' does not depend on any axioms\n'Obligations.HellyComb.triple_empty' does not depend on any axioms\n'Obligations.HellyComb.c_has_a_hole' does not depend on any axioms\n",
+      "stderr": "",
+      "stdoutSha256": "sha256:eeb25025656ad0b32157c9ba3c11ea3f2e190adc1882227ec12e5d9f0aa475bb",
+      "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "place": "catalog",
+      "operation": "negative",
+      "inputSha256": "sha256:ffb807040f8fbe4464c3add7de20215473c49aff05772a9e4e242cd2aff4a279",
+      "sourceSha256": "sha256:63aaee48944cd7b36bfbf22cd3fb38aad2b1846908d79c8061647d0523069c06",
+      "exitCode": 1,
+      "executionMs": 553.2174580000002,
+      "stdout": "/Users/nahumochoa/Documents/Codex/2026-10-14/nec/work/release-044/captures/helly/63aaee48944c/catalog/negative.lean:22:52: error: tactic 'decide' proved that the proposition\n  (triple != []) = true\nis false\n",
+      "stderr": "",
+      "stdoutSha256": "sha256:c85643ae1dab911d1b69f5d2b337661cece25ad00c5a11ffcde73dc206290cf3",
+      "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limits": {
+    "timeoutMs": 25000,
+    "responseBytes": 65536
+  },
+  "places": "two directories, one origin, shared immutable compiler and dependency cache",
+  "proofStatus": "kernel-checked finite witness; no general Helly theorem claimed",
+  "signatures": 0,
+  "admission": false
+}

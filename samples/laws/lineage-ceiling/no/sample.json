@@ -1,0 +1,8 @@
+{
+  "name":"missing-markov-bottleneck",
+  "model":"single-dominant-factor@1",
+  "n":2,"c":"1/2","p":"1/10","k":1,
+  "falseClaim":"capacityP0 is an upper bound without the declared symmetric Markov bottleneck",
+  "expectedRefusal":"REFUSE·lineage markov-model-required",
+  "meaning":"The published general model gives positive information while capacityP0 is zero. The API remains unchanged; this claim is outside the new conditional contract."
+}

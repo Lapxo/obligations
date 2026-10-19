@@ -1,0 +1,386 @@
+{
+  "id": "coordination@1",
+  "policy": "vectors/laws/policy.json",
+  "anchors": [
+    {
+      "path": "proofs/helly-comb.json",
+      "sha256": "sha256:1a8ce99e55a79eaa5685c7cc0253ea9f49bc3fb8e5cb024eeeda25ebdd3279a1"
+    },
+    {
+      "path": "proofs/resolution-encounters.json",
+      "sha256": "sha256:7ce955b553e8f60371ebfc885a76e56fb6f069c8ce34788b7e15ad0fec41024f"
+    },
+    {
+      "path": "proofs/coordination.json",
+      "sha256": "sha256:cce0a70047d346d80bb61e130f1e319b7ffc83d5d68e15ae4b6b875ccdd29c5a"
+    },
+    {
+      "path": "proofs/lean/Obligations/HellyComb.lean",
+      "sha256": "sha256:63aaee48944cd7b36bfbf22cd3fb38aad2b1846908d79c8061647d0523069c06"
+    },
+    {
+      "path": "vectors/laws/helly-comb.lean.json",
+      "sha256": "sha256:95ca2c78b90bb17ce06e0b7cad561b1d87ce6df8fcf0c52f299ac7f73a05845f"
+    },
+    {
+      "path": "samples/laws/linage-rest/yes.json",
+      "sha256": "sha256:5545d2fa682a565bc05fc15210f3d848a4ed4da16306343f6c2022fa4934971f"
+    },
+    {
+      "path": "samples/laws/linage-rest/no.json",
+      "sha256": "sha256:c6430a75437b5bb80139574e5e4e78b6fc7ae3533338c20cd723e0ea8aa5d13d"
+    },
+    {
+      "path": "samples/yes/H1-uncertainty.json",
+      "sha256": "sha256:c776e1efdcb23a2c19f692e1b49300d4779027f953ad1c4e581c2ca2162c9304"
+    },
+    {
+      "path": "samples/no/H1-uncertainty.json",
+      "sha256": "sha256:ce55c4a2fb22e001a41cd7f6227ddbbbcda2ca675663c8a913cad4cd2423f3a7"
+    },
+    {
+      "path": "vectors/laws/policy.json",
+      "sha256": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+    },
+    {
+      "path": "src/measures/unanimity-fit.ts",
+      "sha256": "sha256:bfe9b5d3b24d9dd5391bbb426f19e60ea5064449b95f81994ae55293ed915c47"
+    },
+    {
+      "path": "src/measures/rational.ts",
+      "sha256": "sha256:d8b9eadbba673a594ee45386cb927ff2e9e5c5323d9aa9f129ed6d8ae2512e2a"
+    },
+    {
+      "path": "test/support/linage-rest-reader.ts",
+      "sha256": "sha256:6b1ff1cd94934070821ee4e843d5a68227f77b5f1f9c74746bb3282713e7f315"
+    }
+  ],
+  "result": {
+    "classification": "declared-model measure, exact finite enumeration",
+    "model": {
+      "n": 5,
+      "f": {
+        "numerator": "1",
+        "denominator": "4"
+      },
+      "e": {
+        "numerator": "1",
+        "denominator": "5"
+      },
+      "privateJoint": "conditionally-iid-given-truth",
+      "active": "all-selected-sources-same-wrong-label"
+    },
+    "rows": [
+      {
+        "L": 1,
+        "conditionalTruth": 0,
+        "privateAtoms": 5,
+        "unanimity": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "wrongUnanimity": {
+          "numerator": "2",
+          "denominator": "5"
+        },
+        "finiteExcessAboveF": {
+          "numerator": "3",
+          "denominator": "4"
+        },
+        "exactEnumerationMatches": true
+      },
+      {
+        "L": 2,
+        "conditionalTruth": 0,
+        "privateAtoms": 25,
+        "unanimity": {
+          "numerator": "59",
+          "denominator": "80"
+        },
+        "wrongUnanimity": {
+          "numerator": "103",
+          "denominator": "400"
+        },
+        "finiteExcessAboveF": {
+          "numerator": "39",
+          "denominator": "80"
+        },
+        "exactEnumerationMatches": true
+      },
+      {
+        "L": 3,
+        "conditionalTruth": 0,
+        "privateAtoms": 125,
+        "unanimity": {
+          "numerator": "203",
+          "denominator": "320"
+        },
+        "wrongUnanimity": {
+          "numerator": "2003",
+          "denominator": "8000"
+        },
+        "finiteExcessAboveF": {
+          "numerator": "123",
+          "denominator": "320"
+        },
+        "exactEnumerationMatches": true
+      },
+      {
+        "L": 4,
+        "conditionalTruth": 0,
+        "privateAtoms": 625,
+        "unanimity": {
+          "numerator": "17831",
+          "denominator": "32000"
+        },
+        "wrongUnanimity": {
+          "numerator": "40003",
+          "denominator": "160000"
+        },
+        "finiteExcessAboveF": {
+          "numerator": "9831",
+          "denominator": "32000"
+        },
+        "exactEnumerationMatches": true
+      },
+      {
+        "L": 5,
+        "conditionalTruth": 0,
+        "privateAtoms": 3125,
+        "unanimity": {
+          "numerator": "317287",
+          "denominator": "640000"
+        },
+        "wrongUnanimity": {
+          "numerator": "800003",
+          "denominator": "3200000"
+        },
+        "finiteExcessAboveF": {
+          "numerator": "157287",
+          "denominator": "640000"
+        },
+        "exactEnumerationMatches": true
+      },
+      {
+        "L": 6,
+        "conditionalTruth": 0,
+        "privateAtoms": 15625,
+        "unanimity": {
+          "numerator": "5716583",
+          "denominator": "12800000"
+        },
+        "wrongUnanimity": {
+          "numerator": "16000003",
+          "denominator": "64000000"
+        },
+        "finiteExcessAboveF": {
+          "numerator": "2516583",
+          "denominator": "12800000"
+        },
+        "exactEnumerationMatches": true
+      }
+    ],
+    "existingFit": {
+      "model": "single-dominant-factor@1",
+      "lineage": "declared-coordinated-group",
+      "cardinality": 5,
+      "policy": {
+        "procedure": "exact-c-slices-on-declared-p-grid@1",
+        "p": [
+          "1/5"
+        ],
+        "tolerance": "0",
+        "budget": "1000000",
+        "bootstrap": {
+          "B": 0,
+          "seed": 7,
+          "prng": "xorshift32",
+          "randomWords": 0
+        }
+      },
+      "meaning": "compatible with (c,p) under the declared model, on the declared p slices only",
+      "workUnit": "rational-bit-and-group-bound",
+      "status": "measured",
+      "compatible": [
+        {
+          "p": {
+            "numerator": "1",
+            "denominator": "5"
+          },
+          "c": {
+            "lo": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "hi": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          },
+          "residuals": [
+            {
+              "k": 1,
+              "at": "slice-midpoint",
+              "predicted": {
+                "numerator": "1",
+                "denominator": "1"
+              },
+              "observed": {
+                "numerator": "1",
+                "denominator": "1"
+              },
+              "residual": {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            },
+            {
+              "k": 2,
+              "at": "slice-midpoint",
+              "predicted": {
+                "numerator": "59",
+                "denominator": "80"
+              },
+              "observed": {
+                "numerator": "59",
+                "denominator": "80"
+              },
+              "residual": {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            },
+            {
+              "k": 3,
+              "at": "slice-midpoint",
+              "predicted": {
+                "numerator": "203",
+                "denominator": "320"
+              },
+              "observed": {
+                "numerator": "203",
+                "denominator": "320"
+              },
+              "residual": {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            },
+            {
+              "k": 4,
+              "at": "slice-midpoint",
+              "predicted": {
+                "numerator": "17831",
+                "denominator": "32000"
+              },
+              "observed": {
+                "numerator": "17831",
+                "denominator": "32000"
+              },
+              "residual": {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            },
+            {
+              "k": 5,
+              "at": "slice-midpoint",
+              "predicted": {
+                "numerator": "317287",
+                "denominator": "640000"
+              },
+              "observed": {
+                "numerator": "317287",
+                "denominator": "640000"
+              },
+              "residual": {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            },
+            {
+              "k": 6,
+              "at": "slice-midpoint",
+              "predicted": {
+                "numerator": "5716583",
+                "denominator": "12800000"
+              },
+              "observed": {
+                "numerator": "5716583",
+                "denominator": "12800000"
+              },
+              "residual": {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            }
+          ]
+        }
+      ],
+      "identification": {
+        "status": "unmeasured",
+        "cause": "finite slices do not certify continuous parameter identification",
+        "diagnostics": []
+      },
+      "uncertainty": {
+        "status": "unmeasured",
+        "cause": "sampling groups not handed; size dependence unknown",
+        "words": 0
+      }
+    },
+    "degeneracies": {
+      "eZero": {
+        "unanimity": "1",
+        "wrongUnanimity": {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        "identification": "unmeasured: U_L=1 at every L for any f"
+      },
+      "binaryPrivatePerfectlyCorrelated": {
+        "n": 2,
+        "e": "1/2",
+        "L": 3,
+        "actualUnanimity": "1",
+        "iidUnanimity": "1/4",
+        "jointIndependence": false
+      },
+      "twoPartialCauses": {
+        "n": 3,
+        "L": 4,
+        "e": "0",
+        "groups": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "activationPerGroup": {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        "distinctWrongLabels": [
+          1,
+          2
+        ],
+        "allSourceUnanimity": {
+          "numerator": "49",
+          "denominator": "64"
+        },
+        "singleCauseWithEZeroUnanimity": "1",
+        "sumActivationProbabilities": {
+          "numerator": "1",
+          "denominator": "4"
+        }
+      }
+    },
+    "interpretation": "compatible f on the handed p slice only; no causal mechanism, intention, continuous identification or sampling guarantee",
+    "headInference": false
+  },
+  "admission": false,
+  "signatures": 0
+}

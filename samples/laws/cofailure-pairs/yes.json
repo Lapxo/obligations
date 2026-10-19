@@ -1,0 +1,20 @@
+{
+  "id":"cofailure-pairs-models@1",
+  "origins":["a","b","c","d"],"values":["0","1"],"budget":"100000",
+  "handedCategoricalReference":{"model":"independent-categorical@1","marginals":[
+    {"origin":"a","probabilities":[{"value":"0","p":"1/2"},{"value":"1","p":"1/2"}]},
+    {"origin":"b","probabilities":[{"value":"0","p":"1/2"},{"value":"1","p":"1/2"}]},
+    {"origin":"c","probabilities":[{"value":"0","p":"1/2"},{"value":"1","p":"1/2"}]},
+    {"origin":"d","probabilities":[{"value":"0","p":"1/2"},{"value":"1","p":"1/2"}]}
+  ]},
+  "separated":{"T":400,"blocks":[{"count":200,"values":["1","1","0","0"],"truth":"0"},{"count":200,"values":["0","0","1","1"],"truth":"0"}],
+    "oracleTheta":"1/4","oracleEpsilon":"1/8","observationalTheta":"0","observationalEpsilon":"1/4","referenceGroups":[["a","b"],["c","d"]]},
+  "sameReportsOtherTruth":{"truthFromOrigin":"a","meaning":"same value bytes; the oracle changes which answers count as wrong"},
+  "sharedQuestion":{"T":400,"blocks":[{"count":200,"values":["0","0","0","0"],"truth":"0"},{"count":200,"values":["1","1","1","1"],"truth":"1"}],
+    "meaning":"perfect responses to a varying common question; zero errors do not make marginal categorical reference adequate"},
+  "betweenMeans":{"T":100,"theta":"3/20","blocks":[{"count":59,"values":["1","1","0","0"],"truth":"0"},{"count":21,"values":["1","1","1","0"],"truth":"0"},{"count":20,"values":["0","0","1","1"],"truth":"0"}],"referenceGroups":[["a","b"],["c","d"]]},
+  "finiteConfusion":{"T":4,"c":"1/4","e":"1/4","theta":"1/4","epsilon":"1/8","blocks":[{"count":4,"values":["0","0","0","0"],"truth":"0"}],
+    "declaredGenerator":"factor covering a,b fires with c, otherwise private Bernoulli errors e; c=e=1/4; independent cells and private draws declared; binary wrong symbol is 1",
+    "allCorrectPerCell":"(1-c)*(1-e)^4", "meaning":"a nonzero-probability all-correct batch cannot recover the hidden group even when c=e"},
+  "fixtureProvenance":"new deterministic finite fixtures, not recovered browser outputs; iid sampling is an external conditional premise, not inferred from the fixture"
+}

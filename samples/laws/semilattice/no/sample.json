@@ -1,0 +1,18 @@
+{
+  "name": "raw-api-antisymmetry-counterclaim",
+  "a": {
+    "lo": 5,
+    "hi": 3
+  },
+  "b": {
+    "lo": 8,
+    "hi": 6
+  },
+  "fact": "published apiLeq holds both ways while endpoint pairs differ",
+  "falseClaim": "the published apiLeq is antisymmetric on raw Cell values",
+  "negativeInstrument": "Lean decide",
+  "negativeDeclaration": "raw_api_antisymmetry_counterclaim",
+  "expectedExit": 1,
+  "meaning": "refutes a wrong order identification, not the meet laws or the current algebra",
+  "boundRuntimeRefusalClaimed": false
+}

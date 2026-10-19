@@ -1,0 +1,19 @@
+{
+  "cases": [
+    {
+      "region": "helly-comb",
+      "claim": "pairwise-implies-global",
+      "expectedRefusal": "REFUSE·linage-rest comb-pairwise-is-not-global"
+    },
+    {
+      "region": "resolution-encounters",
+      "claim": "unconditional-monotone-K-N",
+      "expectedRefusal": "REFUSE·linage-rest resolution-counting-model-required"
+    },
+    {
+      "region": "coordination",
+      "claim": "curve-without-joint-model",
+      "expectedRefusal": "REFUSE·linage-rest joint-conditional-independence-required"
+    }
+  ]
+}

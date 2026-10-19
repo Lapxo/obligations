@@ -1,0 +1,2580 @@
+{
+  "id": "cofailure-pairs/two-declared-observables",
+  "classification": "two descriptive measures with declared models and distinguishing finite counterexamples; no causal identification",
+  "policy": "vectors/laws/policy.json",
+  "anchors": [
+    {
+      "path": "proofs/cofailure-pairs.json",
+      "sha256": "sha256:8bc14b94eb3dbc23b1a54ac76d7354112094259501dd44ea75c40ef9cfc60b34"
+    },
+    {
+      "path": "samples/laws/cofailure-pairs/yes.json",
+      "sha256": "sha256:a853c4e95cf7356e3f580865736cfa5b9a6bbb93b7e239311ec01fe8cfbcbb7f"
+    },
+    {
+      "path": "samples/laws/cofailure-pairs/no.json",
+      "sha256": "sha256:bf095d390a432e258d82d316532b7f803ec2884c1633b213756dbc019395711e"
+    },
+    {
+      "path": "vectors/laws/policy.json",
+      "sha256": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+    },
+    {
+      "path": "src/measures/cofailure-pairs.ts",
+      "sha256": "sha256:e8f93543399051d845c9556f689184535fee227afa3fcfcfa864d41502b4e7fc"
+    },
+    {
+      "path": "src/measures/coincidence.ts",
+      "sha256": "sha256:98d0fe894e306eed0d30fa9970546fff1c766e5b8de1562e7032525bbe71a92b"
+    },
+    {
+      "path": "src/measures/confidence.ts",
+      "sha256": "sha256:761407e0b4ccb17bf2a9548c6a2097940a62c155a764e76e782dad7ea45bf9f4"
+    },
+    {
+      "path": "src/measures/rational.ts",
+      "sha256": "sha256:d8b9eadbba673a594ee45386cb927ff2e9e5c5323d9aa9f129ed6d8ae2512e2a"
+    }
+  ],
+  "result": {
+    "classification": "descriptive measures with declared models; no cause identification",
+    "oracle": {
+      "status": "measured",
+      "variant": "oracle-false-rate",
+      "T": 400,
+      "theta": {
+        "numerator": "1",
+        "denominator": "4"
+      },
+      "origins": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "pairs": [
+        {
+          "origins": [
+            "a",
+            "b"
+          ],
+          "observed": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "expected": {
+            "numerator": "1",
+            "denominator": "4"
+          },
+          "excess": {
+            "numerator": "1",
+            "denominator": "4"
+          },
+          "score": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "edge": true
+        },
+        {
+          "origins": [
+            "a",
+            "c"
+          ],
+          "observed": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "expected": {
+            "numerator": "1",
+            "denominator": "4"
+          },
+          "excess": {
+            "numerator": "-1",
+            "denominator": "4"
+          },
+          "score": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "edge": false
+        },
+        {
+          "origins": [
+            "a",
+            "d"
+          ],
+          "observed": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "expected": {
+            "numerator": "1",
+            "denominator": "4"
+          },
+          "excess": {
+            "numerator": "-1",
+            "denominator": "4"
+          },
+          "score": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "edge": false
+        },
+        {
+          "origins": [
+            "b",
+            "c"
+          ],
+          "observed": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "expected": {
+            "numerator": "1",
+            "denominator": "4"
+          },
+          "excess": {
+            "numerator": "-1",
+            "denominator": "4"
+          },
+          "score": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "edge": false
+        },
+        {
+          "origins": [
+            "b",
+            "d"
+          ],
+          "observed": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "expected": {
+            "numerator": "1",
+            "denominator": "4"
+          },
+          "excess": {
+            "numerator": "-1",
+            "denominator": "4"
+          },
+          "score": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "edge": false
+        },
+        {
+          "origins": [
+            "c",
+            "d"
+          ],
+          "observed": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "expected": {
+            "numerator": "1",
+            "denominator": "4"
+          },
+          "excess": {
+            "numerator": "1",
+            "denominator": "4"
+          },
+          "score": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "edge": true
+        }
+      ],
+      "components": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "c",
+          "d"
+        ]
+      ],
+      "uncertainty": {
+        "status": "conditional",
+        "model": "iid-cells@1",
+        "epsilon": {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        "perPairFailureUpper": {
+          "numerator": "1",
+          "denominator": "25"
+        },
+        "confidence": {
+          "model": "declared-failure-union-bound@1",
+          "status": "conditional-bound",
+          "unit": "probability",
+          "conditions": [
+            "common-probability-space",
+            "each-failure-probability-justified"
+          ],
+          "declarations": [
+            {
+              "id": "pair-0",
+              "p": {
+                "numerator": "1",
+                "denominator": "25"
+              },
+              "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+            },
+            {
+              "id": "pair-1",
+              "p": {
+                "numerator": "1",
+                "denominator": "25"
+              },
+              "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+            },
+            {
+              "id": "pair-2",
+              "p": {
+                "numerator": "1",
+                "denominator": "25"
+              },
+              "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+            },
+            {
+              "id": "pair-3",
+              "p": {
+                "numerator": "1",
+                "denominator": "25"
+              },
+              "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+            },
+            {
+              "id": "pair-4",
+              "p": {
+                "numerator": "1",
+                "denominator": "25"
+              },
+              "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+            },
+            {
+              "id": "pair-5",
+              "p": {
+                "numerator": "1",
+                "denominator": "25"
+              },
+              "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+            }
+          ],
+          "failureSum": {
+            "numerator": "6",
+            "denominator": "25"
+          },
+          "value": {
+            "numerator": "19",
+            "denominator": "25"
+          },
+          "trivial": false,
+          "meaning": "lower bound for all declared events succeeding; references are not verified"
+        },
+        "intervals": [
+          {
+            "origins": [
+              "a",
+              "b"
+            ],
+            "lo": {
+              "numerator": "3",
+              "denominator": "8"
+            },
+            "hi": {
+              "numerator": "5",
+              "denominator": "8"
+            },
+            "decision": "above"
+          },
+          {
+            "origins": [
+              "a",
+              "c"
+            ],
+            "lo": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "hi": {
+              "numerator": "1",
+              "denominator": "8"
+            },
+            "decision": "below"
+          },
+          {
+            "origins": [
+              "a",
+              "d"
+            ],
+            "lo": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "hi": {
+              "numerator": "1",
+              "denominator": "8"
+            },
+            "decision": "below"
+          },
+          {
+            "origins": [
+              "b",
+              "c"
+            ],
+            "lo": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "hi": {
+              "numerator": "1",
+              "denominator": "8"
+            },
+            "decision": "below"
+          },
+          {
+            "origins": [
+              "b",
+              "d"
+            ],
+            "lo": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "hi": {
+              "numerator": "1",
+              "denominator": "8"
+            },
+            "decision": "below"
+          },
+          {
+            "origins": [
+              "c",
+              "d"
+            ],
+            "lo": {
+              "numerator": "3",
+              "denominator": "8"
+            },
+            "hi": {
+              "numerator": "5",
+              "denominator": "8"
+            },
+            "decision": "above"
+          }
+        ],
+        "thresholdGraphResolved": true,
+        "conditionalGraphCertificate": true,
+        "meaning": "fixed-frame threshold graph only, conditional on the handed iid design; neither causal grouping nor iid was inferred"
+      },
+      "scoreMeaning": "same wrong answer / T",
+      "interpretation": "descriptive threshold components, not identified causes or probability of truth"
+    },
+    "observational": {
+      "status": "measured",
+      "variant": "categorical-match-excess",
+      "T": 400,
+      "theta": {
+        "numerator": "0",
+        "denominator": "1"
+      },
+      "origins": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "pairs": [
+        {
+          "origins": [
+            "a",
+            "b"
+          ],
+          "observed": {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          "expected": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "excess": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "score": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "edge": true
+        },
+        {
+          "origins": [
+            "a",
+            "c"
+          ],
+          "observed": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "expected": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "excess": {
+            "numerator": "-1",
+            "denominator": "2"
+          },
+          "score": {
+            "numerator": "-1",
+            "denominator": "2"
+          },
+          "edge": false
+        },
+        {
+          "origins": [
+            "a",
+            "d"
+          ],
+          "observed": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "expected": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "excess": {
+            "numerator": "-1",
+            "denominator": "2"
+          },
+          "score": {
+            "numerator": "-1",
+            "denominator": "2"
+          },
+          "edge": false
+        },
+        {
+          "origins": [
+            "b",
+            "c"
+          ],
+          "observed": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "expected": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "excess": {
+            "numerator": "-1",
+            "denominator": "2"
+          },
+          "score": {
+            "numerator": "-1",
+            "denominator": "2"
+          },
+          "edge": false
+        },
+        {
+          "origins": [
+            "b",
+            "d"
+          ],
+          "observed": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "expected": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "excess": {
+            "numerator": "-1",
+            "denominator": "2"
+          },
+          "score": {
+            "numerator": "-1",
+            "denominator": "2"
+          },
+          "edge": false
+        },
+        {
+          "origins": [
+            "c",
+            "d"
+          ],
+          "observed": {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          "expected": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "excess": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "score": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "edge": true
+        }
+      ],
+      "components": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "c",
+          "d"
+        ]
+      ],
+      "uncertainty": {
+        "status": "conditional",
+        "model": "iid-cells@1",
+        "epsilon": {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        "perPairFailureUpper": {
+          "numerator": "1",
+          "denominator": "100"
+        },
+        "confidence": {
+          "model": "declared-failure-union-bound@1",
+          "status": "conditional-bound",
+          "unit": "probability",
+          "conditions": [
+            "common-probability-space",
+            "each-failure-probability-justified"
+          ],
+          "declarations": [
+            {
+              "id": "pair-0",
+              "p": {
+                "numerator": "1",
+                "denominator": "100"
+              },
+              "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+            },
+            {
+              "id": "pair-1",
+              "p": {
+                "numerator": "1",
+                "denominator": "100"
+              },
+              "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+            },
+            {
+              "id": "pair-2",
+              "p": {
+                "numerator": "1",
+                "denominator": "100"
+              },
+              "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+            },
+            {
+              "id": "pair-3",
+              "p": {
+                "numerator": "1",
+                "denominator": "100"
+              },
+              "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+            },
+            {
+              "id": "pair-4",
+              "p": {
+                "numerator": "1",
+                "denominator": "100"
+              },
+              "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+            },
+            {
+              "id": "pair-5",
+              "p": {
+                "numerator": "1",
+                "denominator": "100"
+              },
+              "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+            }
+          ],
+          "failureSum": {
+            "numerator": "3",
+            "denominator": "50"
+          },
+          "value": {
+            "numerator": "47",
+            "denominator": "50"
+          },
+          "trivial": false,
+          "meaning": "lower bound for all declared events succeeding; references are not verified"
+        },
+        "intervals": [
+          {
+            "origins": [
+              "a",
+              "b"
+            ],
+            "lo": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "hi": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "decision": "above"
+          },
+          {
+            "origins": [
+              "a",
+              "c"
+            ],
+            "lo": {
+              "numerator": "-1",
+              "denominator": "2"
+            },
+            "hi": {
+              "numerator": "-1",
+              "denominator": "4"
+            },
+            "decision": "below"
+          },
+          {
+            "origins": [
+              "a",
+              "d"
+            ],
+            "lo": {
+              "numerator": "-1",
+              "denominator": "2"
+            },
+            "hi": {
+              "numerator": "-1",
+              "denominator": "4"
+            },
+            "decision": "below"
+          },
+          {
+            "origins": [
+              "b",
+              "c"
+            ],
+            "lo": {
+              "numerator": "-1",
+              "denominator": "2"
+            },
+            "hi": {
+              "numerator": "-1",
+              "denominator": "4"
+            },
+            "decision": "below"
+          },
+          {
+            "origins": [
+              "b",
+              "d"
+            ],
+            "lo": {
+              "numerator": "-1",
+              "denominator": "2"
+            },
+            "hi": {
+              "numerator": "-1",
+              "denominator": "4"
+            },
+            "decision": "below"
+          },
+          {
+            "origins": [
+              "c",
+              "d"
+            ],
+            "lo": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "hi": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "decision": "above"
+          }
+        ],
+        "thresholdGraphResolved": true,
+        "conditionalGraphCertificate": true,
+        "meaning": "fixed-frame threshold graph only, conditional on the handed iid design; neither causal grouping nor iid was inferred"
+      },
+      "scoreMeaning": "same answer / T minus handed independent-categorical reference",
+      "interpretation": "descriptive threshold components, not identified causes or probability of truth"
+    },
+    "handedTableGaps": {
+      "oracle": {
+        "minInside": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "maxOutside": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "meanInside": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "meanOutside": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "strictPopulationGapForHandedTable": true
+      },
+      "observational": {
+        "minInside": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "maxOutside": {
+          "numerator": "-1",
+          "denominator": "2"
+        },
+        "meanInside": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "meanOutside": {
+          "numerator": "-1",
+          "denominator": "2"
+        },
+        "strictPopulationGapForHandedTable": true
+      }
+    },
+    "counterexamples": {
+      "sameReportsDifferentTruth": {
+        "sameResponseBytes": true,
+        "observationalOutputUnchanged": true,
+        "otherOracle": {
+          "status": "measured",
+          "variant": "oracle-false-rate",
+          "T": 400,
+          "theta": {
+            "numerator": "1",
+            "denominator": "4"
+          },
+          "origins": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "pairs": [
+            {
+              "origins": [
+                "a",
+                "b"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "a",
+                "c"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "a",
+                "d"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "b",
+                "c"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "b",
+                "d"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "c",
+                "d"
+              ],
+              "observed": {
+                "numerator": "1",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "1",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "1",
+                "denominator": "1"
+              },
+              "edge": true
+            }
+          ],
+          "components": [
+            [
+              "a"
+            ],
+            [
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ]
+          ],
+          "uncertainty": {
+            "status": "conditional",
+            "model": "iid-cells@1",
+            "epsilon": {
+              "numerator": "1",
+              "denominator": "8"
+            },
+            "perPairFailureUpper": {
+              "numerator": "1",
+              "denominator": "25"
+            },
+            "confidence": {
+              "model": "declared-failure-union-bound@1",
+              "status": "conditional-bound",
+              "unit": "probability",
+              "conditions": [
+                "common-probability-space",
+                "each-failure-probability-justified"
+              ],
+              "declarations": [
+                {
+                  "id": "pair-0",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-1",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-2",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-3",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-4",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-5",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                }
+              ],
+              "failureSum": {
+                "numerator": "6",
+                "denominator": "25"
+              },
+              "value": {
+                "numerator": "19",
+                "denominator": "25"
+              },
+              "trivial": false,
+              "meaning": "lower bound for all declared events succeeding; references are not verified"
+            },
+            "intervals": [
+              {
+                "origins": [
+                  "a",
+                  "b"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "a",
+                  "c"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "a",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "b",
+                  "c"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "b",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "c",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "7",
+                  "denominator": "8"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "1"
+                },
+                "decision": "above"
+              }
+            ],
+            "thresholdGraphResolved": true,
+            "conditionalGraphCertificate": true,
+            "meaning": "fixed-frame threshold graph only, conditional on the handed iid design; neither causal grouping nor iid was inferred"
+          },
+          "scoreMeaning": "same wrong answer / T",
+          "interpretation": "descriptive threshold components, not identified causes or probability of truth"
+        }
+      },
+      "sharedQuestion": {
+        "oracle": {
+          "status": "measured",
+          "variant": "oracle-false-rate",
+          "T": 400,
+          "theta": {
+            "numerator": "1",
+            "denominator": "4"
+          },
+          "origins": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "pairs": [
+            {
+              "origins": [
+                "a",
+                "b"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "a",
+                "c"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "a",
+                "d"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "b",
+                "c"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "b",
+                "d"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "c",
+                "d"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            }
+          ],
+          "components": [
+            [
+              "a"
+            ],
+            [
+              "b"
+            ],
+            [
+              "c"
+            ],
+            [
+              "d"
+            ]
+          ],
+          "uncertainty": {
+            "status": "conditional",
+            "model": "iid-cells@1",
+            "epsilon": {
+              "numerator": "1",
+              "denominator": "8"
+            },
+            "perPairFailureUpper": {
+              "numerator": "1",
+              "denominator": "25"
+            },
+            "confidence": {
+              "model": "declared-failure-union-bound@1",
+              "status": "conditional-bound",
+              "unit": "probability",
+              "conditions": [
+                "common-probability-space",
+                "each-failure-probability-justified"
+              ],
+              "declarations": [
+                {
+                  "id": "pair-0",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-1",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-2",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-3",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-4",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-5",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                }
+              ],
+              "failureSum": {
+                "numerator": "6",
+                "denominator": "25"
+              },
+              "value": {
+                "numerator": "19",
+                "denominator": "25"
+              },
+              "trivial": false,
+              "meaning": "lower bound for all declared events succeeding; references are not verified"
+            },
+            "intervals": [
+              {
+                "origins": [
+                  "a",
+                  "b"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "a",
+                  "c"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "a",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "b",
+                  "c"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "b",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "c",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              }
+            ],
+            "thresholdGraphResolved": true,
+            "conditionalGraphCertificate": true,
+            "meaning": "fixed-frame threshold graph only, conditional on the handed iid design; neither causal grouping nor iid was inferred"
+          },
+          "scoreMeaning": "same wrong answer / T",
+          "interpretation": "descriptive threshold components, not identified causes or probability of truth"
+        },
+        "observational": {
+          "status": "measured",
+          "variant": "categorical-match-excess",
+          "T": 400,
+          "theta": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "origins": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "pairs": [
+            {
+              "origins": [
+                "a",
+                "b"
+              ],
+              "observed": {
+                "numerator": "1",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "excess": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "score": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "edge": true
+            },
+            {
+              "origins": [
+                "a",
+                "c"
+              ],
+              "observed": {
+                "numerator": "1",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "excess": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "score": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "edge": true
+            },
+            {
+              "origins": [
+                "a",
+                "d"
+              ],
+              "observed": {
+                "numerator": "1",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "excess": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "score": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "edge": true
+            },
+            {
+              "origins": [
+                "b",
+                "c"
+              ],
+              "observed": {
+                "numerator": "1",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "excess": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "score": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "edge": true
+            },
+            {
+              "origins": [
+                "b",
+                "d"
+              ],
+              "observed": {
+                "numerator": "1",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "excess": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "score": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "edge": true
+            },
+            {
+              "origins": [
+                "c",
+                "d"
+              ],
+              "observed": {
+                "numerator": "1",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "excess": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "score": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "edge": true
+            }
+          ],
+          "components": [
+            [
+              "a",
+              "b",
+              "c",
+              "d"
+            ]
+          ],
+          "uncertainty": {
+            "status": "conditional",
+            "model": "iid-cells@1",
+            "epsilon": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "perPairFailureUpper": {
+              "numerator": "1",
+              "denominator": "100"
+            },
+            "confidence": {
+              "model": "declared-failure-union-bound@1",
+              "status": "conditional-bound",
+              "unit": "probability",
+              "conditions": [
+                "common-probability-space",
+                "each-failure-probability-justified"
+              ],
+              "declarations": [
+                {
+                  "id": "pair-0",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "100"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-1",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "100"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-2",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "100"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-3",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "100"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-4",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "100"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-5",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "100"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                }
+              ],
+              "failureSum": {
+                "numerator": "3",
+                "denominator": "50"
+              },
+              "value": {
+                "numerator": "47",
+                "denominator": "50"
+              },
+              "trivial": false,
+              "meaning": "lower bound for all declared events succeeding; references are not verified"
+            },
+            "intervals": [
+              {
+                "origins": [
+                  "a",
+                  "b"
+                ],
+                "lo": {
+                  "numerator": "1",
+                  "denominator": "4"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "2"
+                },
+                "decision": "above"
+              },
+              {
+                "origins": [
+                  "a",
+                  "c"
+                ],
+                "lo": {
+                  "numerator": "1",
+                  "denominator": "4"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "2"
+                },
+                "decision": "above"
+              },
+              {
+                "origins": [
+                  "a",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "1",
+                  "denominator": "4"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "2"
+                },
+                "decision": "above"
+              },
+              {
+                "origins": [
+                  "b",
+                  "c"
+                ],
+                "lo": {
+                  "numerator": "1",
+                  "denominator": "4"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "2"
+                },
+                "decision": "above"
+              },
+              {
+                "origins": [
+                  "b",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "1",
+                  "denominator": "4"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "2"
+                },
+                "decision": "above"
+              },
+              {
+                "origins": [
+                  "c",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "1",
+                  "denominator": "4"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "2"
+                },
+                "decision": "above"
+              }
+            ],
+            "thresholdGraphResolved": true,
+            "conditionalGraphCertificate": true,
+            "meaning": "fixed-frame threshold graph only, conditional on the handed iid design; neither causal grouping nor iid was inferred"
+          },
+          "scoreMeaning": "same answer / T minus handed independent-categorical reference",
+          "interpretation": "descriptive threshold components, not identified causes or probability of truth"
+        }
+      },
+      "betweenMeans": {
+        "reading": {
+          "status": "measured",
+          "variant": "oracle-false-rate",
+          "T": 100,
+          "theta": {
+            "numerator": "3",
+            "denominator": "20"
+          },
+          "origins": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "pairs": [
+            {
+              "origins": [
+                "a",
+                "b"
+              ],
+              "observed": {
+                "numerator": "4",
+                "denominator": "5"
+              },
+              "expected": {
+                "numerator": "16",
+                "denominator": "25"
+              },
+              "excess": {
+                "numerator": "4",
+                "denominator": "25"
+              },
+              "score": {
+                "numerator": "4",
+                "denominator": "5"
+              },
+              "edge": true
+            },
+            {
+              "origins": [
+                "a",
+                "c"
+              ],
+              "observed": {
+                "numerator": "21",
+                "denominator": "100"
+              },
+              "expected": {
+                "numerator": "41",
+                "denominator": "125"
+              },
+              "excess": {
+                "numerator": "-59",
+                "denominator": "500"
+              },
+              "score": {
+                "numerator": "21",
+                "denominator": "100"
+              },
+              "edge": true
+            },
+            {
+              "origins": [
+                "a",
+                "d"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "4",
+                "denominator": "25"
+              },
+              "excess": {
+                "numerator": "-4",
+                "denominator": "25"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "b",
+                "c"
+              ],
+              "observed": {
+                "numerator": "21",
+                "denominator": "100"
+              },
+              "expected": {
+                "numerator": "41",
+                "denominator": "125"
+              },
+              "excess": {
+                "numerator": "-59",
+                "denominator": "500"
+              },
+              "score": {
+                "numerator": "21",
+                "denominator": "100"
+              },
+              "edge": true
+            },
+            {
+              "origins": [
+                "b",
+                "d"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "4",
+                "denominator": "25"
+              },
+              "excess": {
+                "numerator": "-4",
+                "denominator": "25"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "c",
+                "d"
+              ],
+              "observed": {
+                "numerator": "1",
+                "denominator": "5"
+              },
+              "expected": {
+                "numerator": "41",
+                "denominator": "500"
+              },
+              "excess": {
+                "numerator": "59",
+                "denominator": "500"
+              },
+              "score": {
+                "numerator": "1",
+                "denominator": "5"
+              },
+              "edge": true
+            }
+          ],
+          "components": [
+            [
+              "a",
+              "b",
+              "c",
+              "d"
+            ]
+          ],
+          "uncertainty": {
+            "status": "conditional",
+            "model": "iid-cells@1",
+            "epsilon": {
+              "numerator": "1",
+              "denominator": "8"
+            },
+            "perPairFailureUpper": {
+              "numerator": "4",
+              "denominator": "25"
+            },
+            "confidence": {
+              "model": "declared-failure-union-bound@1",
+              "status": "conditional-bound",
+              "unit": "probability",
+              "conditions": [
+                "common-probability-space",
+                "each-failure-probability-justified"
+              ],
+              "declarations": [
+                {
+                  "id": "pair-0",
+                  "p": {
+                    "numerator": "4",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-1",
+                  "p": {
+                    "numerator": "4",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-2",
+                  "p": {
+                    "numerator": "4",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-3",
+                  "p": {
+                    "numerator": "4",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-4",
+                  "p": {
+                    "numerator": "4",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-5",
+                  "p": {
+                    "numerator": "4",
+                    "denominator": "25"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                }
+              ],
+              "failureSum": {
+                "numerator": "24",
+                "denominator": "25"
+              },
+              "value": {
+                "numerator": "1",
+                "denominator": "25"
+              },
+              "trivial": false,
+              "meaning": "lower bound for all declared events succeeding; references are not verified"
+            },
+            "intervals": [
+              {
+                "origins": [
+                  "a",
+                  "b"
+                ],
+                "lo": {
+                  "numerator": "27",
+                  "denominator": "40"
+                },
+                "hi": {
+                  "numerator": "37",
+                  "denominator": "40"
+                },
+                "decision": "above"
+              },
+              {
+                "origins": [
+                  "a",
+                  "c"
+                ],
+                "lo": {
+                  "numerator": "17",
+                  "denominator": "200"
+                },
+                "hi": {
+                  "numerator": "67",
+                  "denominator": "200"
+                },
+                "decision": "unresolved"
+              },
+              {
+                "origins": [
+                  "a",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "b",
+                  "c"
+                ],
+                "lo": {
+                  "numerator": "17",
+                  "denominator": "200"
+                },
+                "hi": {
+                  "numerator": "67",
+                  "denominator": "200"
+                },
+                "decision": "unresolved"
+              },
+              {
+                "origins": [
+                  "b",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "c",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "3",
+                  "denominator": "40"
+                },
+                "hi": {
+                  "numerator": "13",
+                  "denominator": "40"
+                },
+                "decision": "unresolved"
+              }
+            ],
+            "thresholdGraphResolved": false,
+            "conditionalGraphCertificate": false,
+            "meaning": "fixed-frame threshold graph only, conditional on the handed iid design; neither causal grouping nor iid was inferred"
+          },
+          "scoreMeaning": "same wrong answer / T",
+          "interpretation": "descriptive threshold components, not identified causes or probability of truth"
+        },
+        "gap": {
+          "minInside": {
+            "numerator": "1",
+            "denominator": "5"
+          },
+          "maxOutside": {
+            "numerator": "21",
+            "denominator": "100"
+          },
+          "meanInside": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "meanOutside": {
+            "numerator": "21",
+            "denominator": "200"
+          },
+          "strictPopulationGapForHandedTable": false
+        }
+      },
+      "finiteCEqualsE": {
+        "c": "1/4",
+        "e": "1/4",
+        "reading": {
+          "status": "measured",
+          "variant": "oracle-false-rate",
+          "T": 4,
+          "theta": {
+            "numerator": "1",
+            "denominator": "4"
+          },
+          "origins": [
+            "a",
+            "b",
+            "c",
+            "d"
+          ],
+          "pairs": [
+            {
+              "origins": [
+                "a",
+                "b"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "a",
+                "c"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "a",
+                "d"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "b",
+                "c"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "b",
+                "d"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            },
+            {
+              "origins": [
+                "c",
+                "d"
+              ],
+              "observed": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "expected": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "excess": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "score": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "edge": false
+            }
+          ],
+          "components": [
+            [
+              "a"
+            ],
+            [
+              "b"
+            ],
+            [
+              "c"
+            ],
+            [
+              "d"
+            ]
+          ],
+          "uncertainty": {
+            "status": "conditional",
+            "model": "iid-cells@1",
+            "epsilon": {
+              "numerator": "1",
+              "denominator": "8"
+            },
+            "perPairFailureUpper": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "confidence": {
+              "model": "declared-failure-union-bound@1",
+              "status": "conditional-bound",
+              "unit": "probability",
+              "conditions": [
+                "common-probability-space",
+                "each-failure-probability-justified"
+              ],
+              "declarations": [
+                {
+                  "id": "pair-0",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "1"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-1",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "1"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-2",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "1"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-3",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "1"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-4",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "1"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                },
+                {
+                  "id": "pair-5",
+                  "p": {
+                    "numerator": "1",
+                    "denominator": "1"
+                  },
+                  "justification": "Chebyshev: declared iid Bernoulli indicators, variance <= 1/4; fixed handed reference"
+                }
+              ],
+              "failureSum": {
+                "numerator": "6",
+                "denominator": "1"
+              },
+              "value": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "trivial": true,
+              "meaning": "lower bound for all declared events succeeding; references are not verified"
+            },
+            "intervals": [
+              {
+                "origins": [
+                  "a",
+                  "b"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "a",
+                  "c"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "a",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "b",
+                  "c"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "b",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              },
+              {
+                "origins": [
+                  "c",
+                  "d"
+                ],
+                "lo": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "hi": {
+                  "numerator": "1",
+                  "denominator": "8"
+                },
+                "decision": "below"
+              }
+            ],
+            "thresholdGraphResolved": true,
+            "conditionalGraphCertificate": false,
+            "meaning": "fixed-frame threshold graph only, conditional on the handed iid design; neither causal grouping nor iid was inferred"
+          },
+          "scoreMeaning": "same wrong answer / T",
+          "interpretation": "descriptive threshold components, not identified causes or probability of truth"
+        },
+        "allCorrectPerCell": {
+          "numerator": "243",
+          "denominator": "1024"
+        },
+        "allCorrectBatch": {
+          "numerator": "3486784401",
+          "denominator": "1099511627776"
+        }
+      }
+    },
+    "boundaries": {
+      "publishedCoincidenceWithoutTruth": {
+        "reference": {
+          "model": "independent-uniform-wrong@1",
+          "values": [
+            "0",
+            "1"
+          ],
+          "marginals": "estimated-by-truth"
+        },
+        "policy": {
+          "minEvents": 400,
+          "minEventsPerTruth": 1,
+          "budget": "100000"
+        },
+        "selection": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "order": 4,
+        "interpretation": "coincidence relative to the declared reference; not causal identification",
+        "status": "unmeasured",
+        "cause": "incomplete shared events or truth",
+        "events": 400
+      },
+      "missingT": {
+        "status": "unmeasured",
+        "cause": "cofailure/T-and-theta-required"
+      },
+      "missingTheta": {
+        "status": "unmeasured",
+        "cause": "cofailure/T-and-theta-required"
+      },
+      "missingReference": {
+        "status": "unmeasured",
+        "cause": "cofailure/reference-required"
+      },
+      "noSamplingUncertainty": {
+        "status": "unmeasured",
+        "cause": "cofailure/sampling-design-required"
+      },
+      "redeliveryIdempotent": true
+    },
+    "populationIdentification": false,
+    "iidVerified": false,
+    "publicExportAdded": false
+  },
+  "admission": false,
+  "signatures": 0
+}

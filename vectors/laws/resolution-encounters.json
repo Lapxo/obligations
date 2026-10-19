@@ -1,0 +1,171 @@
+{
+  "id": "resolution-encounters@1",
+  "policy": "vectors/laws/policy.json",
+  "anchors": [
+    {
+      "path": "proofs/helly-comb.json",
+      "sha256": "sha256:1a8ce99e55a79eaa5685c7cc0253ea9f49bc3fb8e5cb024eeeda25ebdd3279a1"
+    },
+    {
+      "path": "proofs/resolution-encounters.json",
+      "sha256": "sha256:7ce955b553e8f60371ebfc885a76e56fb6f069c8ce34788b7e15ad0fec41024f"
+    },
+    {
+      "path": "proofs/coordination.json",
+      "sha256": "sha256:cce0a70047d346d80bb61e130f1e319b7ffc83d5d68e15ae4b6b875ccdd29c5a"
+    },
+    {
+      "path": "proofs/lean/Obligations/HellyComb.lean",
+      "sha256": "sha256:63aaee48944cd7b36bfbf22cd3fb38aad2b1846908d79c8061647d0523069c06"
+    },
+    {
+      "path": "vectors/laws/helly-comb.lean.json",
+      "sha256": "sha256:95ca2c78b90bb17ce06e0b7cad561b1d87ce6df8fcf0c52f299ac7f73a05845f"
+    },
+    {
+      "path": "samples/laws/linage-rest/yes.json",
+      "sha256": "sha256:5545d2fa682a565bc05fc15210f3d848a4ed4da16306343f6c2022fa4934971f"
+    },
+    {
+      "path": "samples/laws/linage-rest/no.json",
+      "sha256": "sha256:c6430a75437b5bb80139574e5e4e78b6fc7ae3533338c20cd723e0ea8aa5d13d"
+    },
+    {
+      "path": "samples/yes/H1-uncertainty.json",
+      "sha256": "sha256:c776e1efdcb23a2c19f692e1b49300d4779027f953ad1c4e581c2ca2162c9304"
+    },
+    {
+      "path": "samples/no/H1-uncertainty.json",
+      "sha256": "sha256:ce55c4a2fb22e001a41cd7f6227ddbbbcda2ca675663c8a913cad4cd2423f3a7"
+    },
+    {
+      "path": "vectors/laws/policy.json",
+      "sha256": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+    },
+    {
+      "path": "src/measures/unanimity-fit.ts",
+      "sha256": "sha256:bfe9b5d3b24d9dd5391bbb426f19e60ea5064449b95f81994ae55293ed915c47"
+    },
+    {
+      "path": "src/measures/rational.ts",
+      "sha256": "sha256:d8b9eadbba673a594ee45386cb927ff2e9e5c5323d9aa9f129ed6d8ae2512e2a"
+    },
+    {
+      "path": "test/support/linage-rest-reader.ts",
+      "sha256": "sha256:6b1ff1cd94934070821ee4e843d5a68227f77b5f1f9c74746bb3282713e7f315"
+    }
+  ],
+  "result": {
+    "historicalNegative": {
+      "products": [
+        {
+          "numerator": "4",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        },
+        {
+          "numerator": "3",
+          "denominator": "1"
+        },
+        {
+          "numerator": "4",
+          "denominator": "1"
+        }
+      ],
+      "declaredFloor": {
+        "numerator": "24",
+        "denominator": "5"
+      },
+      "allBelowFloor": true,
+      "interpretation": "existing negative sample refutes its declared numeric floor; its prose about a rising product is incorrect"
+    },
+    "classification": "open conjecture and finite diagnostic countertables",
+    "historicalProducts": [
+      {
+        "numerator": "24",
+        "denominator": "5"
+      },
+      {
+        "numerator": "287",
+        "denominator": "25"
+      },
+      {
+        "numerator": "78",
+        "denominator": "5"
+      },
+      {
+        "numerator": "586",
+        "denominator": "25"
+      },
+      {
+        "numerator": "519",
+        "denominator": "20"
+      },
+      {
+        "numerator": "1057",
+        "denominator": "25"
+      }
+    ],
+    "historicalProductsMonotone": true,
+    "countertables": [
+      {
+        "products": [
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          {
+            "numerator": "2",
+            "denominator": "1"
+          }
+        ],
+        "monotone": false,
+        "floorHolds": true,
+        "ceilingHolds": true,
+        "handedK": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "handedN": {
+          "numerator": "8",
+          "denominator": "1"
+        }
+      },
+      {
+        "products": [
+          {
+            "numerator": "2",
+            "denominator": "1"
+          },
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          {
+            "numerator": "8",
+            "denominator": "1"
+          }
+        ],
+        "monotone": true,
+        "floorHolds": false,
+        "ceilingHolds": false,
+        "handedK": {
+          "numerator": "3",
+          "denominator": "1"
+        },
+        "handedN": {
+          "numerator": "5",
+          "denominator": "1"
+        }
+      }
+    ],
+    "universalBound": false,
+    "countingModelDeclared": false,
+    "wordIndependentJustified": false
+  },
+  "admission": false,
+  "signatures": 0
+}

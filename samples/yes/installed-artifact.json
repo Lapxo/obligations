@@ -1,7 +1,7 @@
 {
   "format": "installed-acceptance/1",
   "name": "@lapxo/obligations",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "exports": {
     ".": {
       "types": "./dist/lattice/index.d.ts",
@@ -247,6 +247,10 @@
       "sha256": "sha256:cb4bca882f1b3352e30821904e9fa5eccb003116e50cea14a34f201ee99768f4"
     },
     {
+      "path": "dist/measures/cofailure-pairs.js",
+      "sha256": "sha256:f1b13c0f233b86e6e40e793aa5a7f341c2f3f3cf6e4edb22a60e28c010dcca88"
+    },
+    {
       "path": "dist/measures/coincidence.js",
       "sha256": "sha256:61b7c27f3e60b6b5ce026295afe53458a88058c8efd0cd8449ed8b12a4f1d7c2"
     },
@@ -272,7 +276,7 @@
     },
     {
       "path": "dist/measures/index.js",
-      "sha256": "sha256:f91b8411e19f7e58d7edd6956ef828974605ae19584fcb2af6c0b0f0cedd8212"
+      "sha256": "sha256:d4f2d30a15a31715f02458a2bc75ce11bbfd10862ee7047b747a43f9291edbc0"
     },
     {
       "path": "dist/measures/m3-experiment.js",
@@ -281,6 +285,10 @@
     {
       "path": "dist/measures/m3.js",
       "sha256": "sha256:b971ae5160893f9565087b7e6b79eb9ad24431d232ad3f37ff290cc4adb44a35"
+    },
+    {
+      "path": "dist/measures/marginal-information.js",
+      "sha256": "sha256:cb6679315dfc693d8cd11d20d2bcb9f252a2e525d76568934f857642b9312698"
     },
     {
       "path": "dist/measures/mix-loss.js",
@@ -327,10 +335,6 @@
       "sha256": "sha256:8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
     },
     {
-      "path": "dist/views/field.js",
-      "sha256": "sha256:691ea483df5d6021feae901607ccd3b67721514c2963ad539466839d6a1db430"
-    },
-    {
       "path": "dist/views/field/physics.js",
       "sha256": "sha256:69e500cdd7bb1a3eff095c4e15078db508d214adae84c3b3d751ec60de314ddb"
     },
@@ -347,16 +351,16 @@
       "sha256": "sha256:ab030ffa1cf49b5b26a9e5b62a94d4f553c6313c5e7138f66016d7d12f620c0d"
     },
     {
+      "path": "dist/views/field.js",
+      "sha256": "sha256:691ea483df5d6021feae901607ccd3b67721514c2963ad539466839d6a1db430"
+    },
+    {
       "path": "dist/views/galois.js",
       "sha256": "sha256:d00226bf65a595b09fd87a93be678161d87f12978ff2e602784a740645b90d05"
     },
     {
       "path": "dist/views/ideal.js",
       "sha256": "sha256:808ae8d7d6b8aabe93aea301078940accf2f983b717d13e8422d7edd0fd22473"
-    },
-    {
-      "path": "dist/views/product.js",
-      "sha256": "sha256:30e36e380abf5889add3344a02391a9b380f9caeec074b7a31aae8cb705e7e07"
     },
     {
       "path": "dist/views/product/design.js",
@@ -379,6 +383,10 @@
       "sha256": "sha256:e99ff8ea01f66fc62144dc160995f8fa4e64adda336d1c31be156dc8d8bd90da"
     },
     {
+      "path": "dist/views/product.js",
+      "sha256": "sha256:30e36e380abf5889add3344a02391a9b380f9caeec074b7a31aae8cb705e7e07"
+    },
+    {
       "path": "dist/views/quotient.js",
       "sha256": "sha256:17bfe8d1d4dfabf20478ffbce8ff23e2602463d1e5c79ea6c3976a53932c2cc0"
     },
@@ -392,20 +400,10 @@
     }
   ],
   "tests": [
-    "L7 exact oracles include sum-p>=1 without triviality and retain stronger 0.4.2 bound",
-    "L7 actual dependent witness refutes top-k+1 guarantee",
-    "L7 sorted coefficient formula bounds all triples of events on nonuniform four-atom space",
-    "L7 pairwise zero correlation cannot pay for joint-independence convolution",
-    "L7 refuses absent hypotheses, malformed marginals and count domains by name",
-    "L8 fixed numerical controls distinguish odd minimum, negative defect and zero-shift maximum",
-    "L8 exhaustively checks the handed finite domain, including degeneracies and symmetry",
-    "L8 refuses invalid domains and information interpretations by name",
-    "L9: one mix tie hides two named forks; uniform mean loss is half a bit",
-    "L9: missing prior stays unmeasured, invalid declared priors refuse by name",
-    "L9: support and prior affect loss; zero mass does not imply global injectivity",
-    "L9: constant winners may lose information and weight rescaling adds none",
-    "L9: named value tie and bottom tie remain distinct; aliases cannot inflate configuration entropy",
-    "L9: explicit logarithm policy and configuration ceiling are retained"
+    "installed 0.4.4 exports have no Bound or Topos runtime dependency",
+    "installed universal algebra retains the four states and named invalid-chain rejection",
+    "installed cofailure measures retain models, unmeasured inputs and named conflict refusal",
+    "installed marginal information retains the declared joint prior, two orders and named order refusal"
   ],
-  "code": "sha256:16593a568f0aef344df7c9f5d3363c86ef3b53f4ecda724f55f08c005f14c401"
+  "code": "sha256:72df3154eb2896bb552c3a052cfa3ba4e943742877c31871e341d9bc1ce0ec05"
 }

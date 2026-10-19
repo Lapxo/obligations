@@ -1,0 +1,200 @@
+{
+  "id": "meet-interval-semilattice",
+  "classification": "law by Lean, conditional on LinearOrder; finite implementation correspondence check",
+  "status": "compiled kernel-checked proof; admission open",
+  "policy": "vectors/laws/policy.json",
+  "sourceAnchor": {
+    "path": "src/lattice/forms.ts",
+    "sha256": "sha256:5efbfaa2a999261e9d78232648bbb17b46f967abea25ae89ed141a6e442afc84",
+    "base": "v0.4.3"
+  },
+  "publishedImplementation": {
+    "archive": "sha256:05547a2cb6aeef89aa792b09b70bb2c56d4b1640e46aa777f264d2d718f779ef",
+    "member": "package/dist/lattice/forms.js",
+    "sha256": "sha256:9061bbb17d68f5d04e469ca83eebf4aa9db184d627b4228bee504f7f0be3dc42"
+  },
+  "samples": {
+    "yes": "samples/laws/semilattice/yes.json",
+    "no": "samples/laws/semilattice/no.json"
+  },
+  "proof": {
+    "files": [
+      {
+        "path": "proofs/lean/lean-toolchain",
+        "sha256": "sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+      },
+      {
+        "path": "proofs/lean/lakefile.toml",
+        "sha256": "sha256:c21110b310604fa643942a067cab53b5f806fb6eceefa19f5f665c2706b4ff32"
+      },
+      {
+        "path": "proofs/lean/lake-manifest.json",
+        "sha256": "sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d"
+      },
+      {
+        "path": "proofs/lean/Obligations.lean",
+        "sha256": "sha256:7b7915b01274dc170520a6baaeaaa83ecf20ecf6462e72bcb25d9e03424065ca"
+      },
+      {
+        "path": "proofs/lean/Obligations/Cell.lean",
+        "sha256": "sha256:eec00e81ecb1ca9cc00bea10a41c14030ed362f81fb409c988e87fbd67e3ae5f"
+      },
+      {
+        "path": "proofs/lean/Obligations/Bridge.lean",
+        "sha256": "sha256:531c1ede945470d68f683d60f27d7526cfe26139db897ceb54aaf6cf3caa275b"
+      }
+    ],
+    "lean": "Lean 4.19.0, arm64-apple-darwin23.6.0, 6caaee842e94",
+    "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "auditedTheorems": [
+      "meet_comm",
+      "meet_assoc",
+      "meet_idem",
+      "meaning_meet",
+      "apiLeq_iff_subset",
+      "meet_narrows_left",
+      "meet_narrows_right",
+      "mutually_narrows_iff",
+      "observe_meet",
+      "observe_order",
+      "crossed_pairs_not_antisymmetric",
+      "permutation_invariant",
+      "duplicate_in_replay"
+    ],
+    "noSorryAx": true,
+    "axioms": "standard Lean foundations printed in the audit; no new local axiom declaration"
+  },
+  "captures": [
+    {
+      "place": "orchard",
+      "operation": "build",
+      "status": 0,
+      "runtimeMs": 9248,
+      "timingPrecision": "rounded milliseconds retained from original collector progress output before collector aborted resolving Node executable",
+      "stdout": "\u2714 [339/342] Built Obligations.Cell\n\u2714 [340/342] Built Obligations.Bridge\n\u2714 [341/342] Built Obligations\nBuild completed successfully.\n",
+      "stderr": "",
+      "stdoutSha256": "sha256:60ba408563df6a0929ffdac1abbd4b2d684cd70c0acf6dd288ee7dec104e03d6",
+      "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "place": "orchard",
+      "operation": "audit",
+      "status": 0,
+      "runtimeMs": 2602,
+      "timingPrecision": "rounded milliseconds retained from original collector progress output before collector aborted resolving Node executable",
+      "stdout": "'Obligations.Cell.meet_comm' depends on axioms: [propext]\n'Obligations.Cell.meet_assoc' depends on axioms: [propext]\n'Obligations.Cell.meet_idem' depends on axioms: [propext]\n'Obligations.Cell.meaning_meet' depends on axioms: [propext, Quot.sound]\n'Obligations.Cell.apiLeq_iff_subset' depends on axioms: [propext, Quot.sound]\n'Obligations.Cell.meet_narrows_left' depends on axioms: [propext, Quot.sound]\n'Obligations.Cell.meet_narrows_right' depends on axioms: [propext, Quot.sound]\n'Obligations.Cell.mutually_narrows_iff' depends on axioms: [propext, Quot.sound]\n'Obligations.Cell.observe_meet' depends on axioms: [propext, Quot.sound]\n'Obligations.Cell.observe_order' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Obligations.Cell.crossed_pairs_not_antisymmetric' depends on axioms: [propext]\n'Obligations.Cell.permutation_invariant' depends on axioms: [propext]\n'Obligations.Cell.duplicate_in_replay' depends on axioms: [propext]\n",
+      "stderr": "",
+      "stdoutSha256": "sha256:ccced839ac36ef23dff2602e08946a942f5c79b50df077be8994217fa588a81e",
+      "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "place": "orchard",
+      "operation": "bridge",
+      "status": 0,
+      "runtimeMs": 2289,
+      "timingPrecision": "rounded milliseconds retained from original collector progress output before collector aborted resolving Node executable",
+      "stdout": "[[-1,-1,-1,-1,-1,-1,true,false],[-1,-1,-1,0,-1,-1,true,false],[-1,-1,-1,1,-1,-1,true,false],[-1,-1,-1,2,-1,-1,true,false],[-1,-1,0,-1,0,-1,false,true],[-1,-1,0,0,0,-1,false,true],[-1,-1,0,1,0,-1,false,true],[-1,-1,0,2,0,-1,false,true],[-1,-1,1,-1,1,-1,false,true],[-1,-1,1,0,1,-1,false,true],[-1,-1,1,1,1,-1,false,true],[-1,-1,1,2,1,-1,false,true],[-1,-1,2,-1,2,-1,false,true],[-1,-1,2,0,2,-1,false,true],[-1,-1,2,1,2,-1,false,true],[-1,-1,2,2,2,-1,false,true],[-1,0,-1,-1,-1,-1,false,false],[-1,0,-1,0,-1,0,true,false],[-1,0,-1,1,-1,0,true,false],[-1,0,-1,2,-1,0,true,false],[-1,0,0,-1,0,-1,false,true],[-1,0,0,0,0,0,false,false],[-1,0,0,1,0,0,false,false],[-1,0,0,2,0,0,false,false],[-1,0,1,-1,1,-1,false,true],[-1,0,1,0,1,0,false,true],[-1,0,1,1,1,0,false,true],[-1,0,1,2,1,0,false,true],[-1,0,2,-1,2,-1,false,true],[-1,0,2,0,2,0,false,true],[-1,0,2,1,2,0,false,true],[-1,0,2,2,2,0,false,true],[-1,1,-1,-1,-1,-1,false,false],[-1,1,-1,0,-1,0,false,false],[-1,1,-1,1,-1,1,true,false],[-1,1,-1,2,-1,1,true,false],[-1,1,0,-1,0,-1,false,true],[-1,1,0,0,0,0,false,false],[-1,1,0,1,0,1,false,false],[-1,1,0,2,0,1,false,false],[-1,1,1,-1,1,-1,false,true],[-1,1,1,0,1,0,false,true],[-1,1,1,1,1,1,false,false],[-1,1,1,2,1,1,false,false],[-1,1,2,-1,2,-1,false,true],[-1,1,2,0,2,0,false,true],[-1,1,2,1,2,1,false,true],[-1,1,2,2,2,1,false,true],[-1,2,-1,-1,-1,-1,false,false],[-1,2,-1,0,-1,0,false,false],[-1,2,-1,1,-1,1,false,false],[-1,2,-1,2,-1,2,true,false],[-1,2,0,-1,0,-1,false,true],[-1,2,0,0,0,0,false,false],[-1,2,0,1,0,1,false,false],[-1,2,0,2,0,2,false,false],[-1,2,1,-1,1,-1,false,true],[-1,2,1,0,1,0,false,true],[-1,2,1,1,1,1,false,false],[-1,2,1,2,1,2,false,false],[-1,2,2,-1,2,-1,false,true],[-1,2,2,0,2,0,false,true],[-1,2,2,1,2,1,false,true],[-1,2,2,2,2,2,false,false],[0,-1,-1,-1,0,-1,true,true],[0,-1,-1,0,0,-1,true,true],[0,-1,-1,1,0,-1,true,true],[0,-1,-1,2,0,-1,true,true],[0,-1,0,-1,0,-1,true,true],[0,-1,0,0,0,-1,true,true],[0,-1,0,1,0,-1,true,true],[0,-1,0,2,0,-1,true,true],[0,-1,1,-1,1,-1,true,true],[0,-1,1,0,1,-1,true,true],[0,-1,1,1,1,-1,true,true],[0,-1,1,2,1,-1,true,true],[0,-1,2,-1,2,-1,true,true],[0,-1,2,0,2,-1,true,true],[0,-1,2,1,2,-1,true,true],[0,-1,2,2,2,-1,true,true],[0,0,-1,-1,0,-1,false,true],[0,0,-1,0,0,0,true,false],[0,0,-1,1,0,0,true,false],[0,0,-1,2,0,0,true,false],[0,0,0,-1,0,-1,false,true],[0,0,0,0,0,0,true,false],[0,0,0,1,0,0,true,false],[0,0,0,2,0,0,true,false],[0,0,1,-1,1,-1,false,true],[0,0,1,0,1,0,false,true],[0,0,1,1,1,0,false,true],[0,0,1,2,1,0,false,true],[0,0,2,-1,2,-1,false,true],[0,0,2,0,2,0,false,true],[0,0,2,1,2,0,false,true],[0,0,2,2,2,0,false,true],[0,1,-1,-1,0,-1,false,true],[0,1,-1,0,0,0,false,false],[0,1,-1,1,0,1,true,false],[0,1,-1,2,0,1,true,false],[0,1,0,-1,0,-1,false,true],[0,1,0,0,0,0,false,false],[0,1,0,1,0,1,true,false],[0,1,0,2,0,1,true,false],[0,1,1,-1,1,-1,false,true],[0,1,1,0,1,0,false,true],[0,1,1,1,1,1,false,false],[0,1,1,2,1,1,false,false],[0,1,2,-1,2,-1,false,true],[0,1,2,0,2,0,false,true],[0,1,2,1,2,1,false,true],[0,1,2,2,2,1,false,true],[0,2,-1,-1,0,-1,false,true],[0,2,-1,0,0,0,false,false],[0,2,-1,1,0,1,false,false],[0,2,-1,2,0,2,true,false],[0,2,0,-1,0,-1,false,true],[0,2,0,0,0,0,false,false],[0,2,0,1,0,1,false,false],[0,2,0,2,0,2,true,false],[0,2,1,-1,1,-1,false,true],[0,2,1,0,1,0,false,true],[0,2,1,1,1,1,false,false],[0,2,1,2,1,2,false,false],[0,2,2,-1,2,-1,false,true],[0,2,2,0,2,0,false,true],[0,2,2,1,2,1,false,true],[0,2,2,2,2,2,false,false],[1,-1,-1,-1,1,-1,true,true],[1,-1,-1,0,1,-1,true,true],[1,-1,-1,1,1,-1,true,true],[1,-1,-1,2,1,-1,true,true],[1,-1,0,-1,1,-1,true,true],[1,-1,0,0,1,-1,true,true],[1,-1,0,1,1,-1,true,true],[1,-1,0,2,1,-1,true,true],[1,-1,1,-1,1,-1,true,true],[1,-1,1,0,1,-1,true,true],[1,-1,1,1,1,-1,true,true],[1,-1,1,2,1,-1,true,true],[1,-1,2,-1,2,-1,true,true],[1,-1,2,0,2,-1,true,true],[1,-1,2,1,2,-1,true,true],[1,-1,2,2,2,-1,true,true],[1,0,-1,-1,1,-1,true,true],[1,0,-1,0,1,0,true,true],[1,0,-1,1,1,0,true,true],[1,0,-1,2,1,0,true,true],[1,0,0,-1,1,-1,true,true],[1,0,0,0,1,0,true,true],[1,0,0,1,1,0,true,true],[1,0,0,2,1,0,true,true],[1,0,1,-1,1,-1,true,true],[1,0,1,0,1,0,true,true],[1,0,1,1,1,0,true,true],[1,0,1,2,1,0,true,true],[1,0,2,-1,2,-1,true,true],[1,0,2,0,2,0,true,true],[1,0,2,1,2,0,true,true],[1,0,2,2,2,0,true,true],[1,1,-1,-1,1,-1,false,true],[1,1,-1,0,1,0,false,true],[1,1,-1,1,1,1,true,false],[1,1,-1,2,1,1,true,false],[1,1,0,-1,1,-1,false,true],[1,1,0,0,1,0,false,true],[1,1,0,1,1,1,true,false],[1,1,0,2,1,1,true,false],[1,1,1,-1,1,-1,false,true],[1,1,1,0,1,0,false,true],[1,1,1,1,1,1,true,false],[1,1,1,2,1,1,true,false],[1,1,2,-1,2,-1,false,true],[1,1,2,0,2,0,false,true],[1,1,2,1,2,1,false,true],[1,1,2,2,2,1,false,true],[1,2,-1,-1,1,-1,false,true],[1,2,-1,0,1,0,false,true],[1,2,-1,1,1,1,false,false],[1,2,-1,2,1,2,true,false],[1,2,0,-1,1,-1,false,true],[1,2,0,0,1,0,false,true],[1,2,0,1,1,1,false,false],[1,2,0,2,1,2,true,false],[1,2,1,-1,1,-1,false,true],[1,2,1,0,1,0,false,true],[1,2,1,1,1,1,false,false],[1,2,1,2,1,2,true,false],[1,2,2,-1,2,-1,false,true],[1,2,2,0,2,0,false,true],[1,2,2,1,2,1,false,true],[1,2,2,2,2,2,false,false],[2,-1,-1,-1,2,-1,true,true],[2,-1,-1,0,2,-1,true,true],[2,-1,-1,1,2,-1,true,true],[2,-1,-1,2,2,-1,true,true],[2,-1,0,-1,2,-1,true,true],[2,-1,0,0,2,-1,true,true],[2,-1,0,1,2,-1,true,true],[2,-1,0,2,2,-1,true,true],[2,-1,1,-1,2,-1,true,true],[2,-1,1,0,2,-1,true,true],[2,-1,1,1,2,-1,true,true],[2,-1,1,2,2,-1,true,true],[2,-1,2,-1,2,-1,true,true],[2,-1,2,0,2,-1,true,true],[2,-1,2,1,2,-1,true,true],[2,-1,2,2,2,-1,true,true],[2,0,-1,-1,2,-1,true,true],[2,0,-1,0,2,0,true,true],[2,0,-1,1,2,0,true,true],[2,0,-1,2,2,0,true,true],[2,0,0,-1,2,-1,true,true],[2,0,0,0,2,0,true,true],[2,0,0,1,2,0,true,true],[2,0,0,2,2,0,true,true],[2,0,1,-1,2,-1,true,true],[2,0,1,0,2,0,true,true],[2,0,1,1,2,0,true,true],[2,0,1,2,2,0,true,true],[2,0,2,-1,2,-1,true,true],[2,0,2,0,2,0,true,true],[2,0,2,1,2,0,true,true],[2,0,2,2,2,0,true,true],[2,1,-1,-1,2,-1,true,true],[2,1,-1,0,2,0,true,true],[2,1,-1,1,2,1,true,true],[2,1,-1,2,2,1,true,true],[2,1,0,-1,2,-1,true,true],[2,1,0,0,2,0,true,true],[2,1,0,1,2,1,true,true],[2,1,0,2,2,1,true,true],[2,1,1,-1,2,-1,true,true],[2,1,1,0,2,0,true,true],[2,1,1,1,2,1,true,true],[2,1,1,2,2,1,true,true],[2,1,2,-1,2,-1,true,true],[2,1,2,0,2,0,true,true],[2,1,2,1,2,1,true,true],[2,1,2,2,2,1,true,true],[2,2,-1,-1,2,-1,false,true],[2,2,-1,0,2,0,false,true],[2,2,-1,1,2,1,false,true],[2,2,-1,2,2,2,true,false],[2,2,0,-1,2,-1,false,true],[2,2,0,0,2,0,false,true],[2,2,0,1,2,1,false,true],[2,2,0,2,2,2,true,false],[2,2,1,-1,2,-1,false,true],[2,2,1,0,2,0,false,true],[2,2,1,1,2,1,false,true],[2,2,1,2,2,2,true,false],[2,2,2,-1,2,-1,false,true],[2,2,2,0,2,0,false,true],[2,2,2,1,2,1,false,true],[2,2,2,2,2,2,true,false]]\n",
+      "stderr": "",
+      "stdoutSha256": "sha256:45c86f9985c0b1b1724536e10ae37c51c2edb5f63cdccaba7264f9ca88b3040c",
+      "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "place": "orchard",
+      "operation": "published-js-bridge",
+      "status": 0,
+      "runtimeMs": 121.84245898970403,
+      "stdout": "{\"publishedVersion\":\"0.4.3\",\"domain\":[-1,0,1,2],\"rawCells\":16,\"pairs\":256,\"associativityTriples\":4096,\"leanTableMatchesPublishedJavaScript\":true,\"rawAntisymmetryCounterexample\":true,\"tableSha256\":\"sha256:45c86f9985c0b1b1724536e10ae37c51c2edb5f63cdccaba7264f9ca88b3040c\"}\n",
+      "stderr": "",
+      "stdoutSha256": "sha256:9d90ddc232cc03ee5f5ff6db98b8285775b3f9335c32724b6b306ce0f6e36c07",
+      "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "place": "orchard",
+      "operation": "negative",
+      "status": 1,
+      "runtimeMs": 6383.26041700202,
+      "stdout": "Negative.lean:3:89: error: tactic 'decide' proved that the proposition\n  { lo := 5, hi := 3 } = { lo := 8, hi := 6 }\nis false\n",
+      "stderr": "",
+      "stdoutSha256": "sha256:9558078892a9319d6726ecc9cb6891a2433cc18af453a532b93158286c7e5e7c",
+      "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "place": "catalog",
+      "operation": "build",
+      "status": 0,
+      "runtimeMs": 5209.1602080035955,
+      "stdout": "\u2714 [339/342] Built Obligations.Cell\n\u2714 [340/342] Built Obligations.Bridge\n\u2714 [341/342] Built Obligations\nBuild completed successfully.\n",
+      "stderr": "",
+      "stdoutSha256": "sha256:60ba408563df6a0929ffdac1abbd4b2d684cd70c0acf6dd288ee7dec104e03d6",
+      "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "place": "catalog",
+      "operation": "audit",
+      "status": 0,
+      "runtimeMs": 2404.8110419826116,
+      "stdout": "'Obligations.Cell.meet_comm' depends on axioms: [propext]\n'Obligations.Cell.meet_assoc' depends on axioms: [propext]\n'Obligations.Cell.meet_idem' depends on axioms: [propext]\n'Obligations.Cell.meaning_meet' depends on axioms: [propext, Quot.sound]\n'Obligations.Cell.apiLeq_iff_subset' depends on axioms: [propext, Quot.sound]\n'Obligations.Cell.meet_narrows_left' depends on axioms: [propext, Quot.sound]\n'Obligations.Cell.meet_narrows_right' depends on axioms: [propext, Quot.sound]\n'Obligations.Cell.mutually_narrows_iff' depends on axioms: [propext, Quot.sound]\n'Obligations.Cell.observe_meet' depends on axioms: [propext, Quot.sound]\n'Obligations.Cell.observe_order' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Obligations.Cell.crossed_pairs_not_antisymmetric' depends on axioms: [propext]\n'Obligations.Cell.permutation_invariant' depends on axioms: [propext]\n'Obligations.Cell.duplicate_in_replay' depends on axioms: [propext]\n",
+      "stderr": "",
+      "stdoutSha256": "sha256:ccced839ac36ef23dff2602e08946a942f5c79b50df077be8994217fa588a81e",
+      "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "place": "catalog",
+      "operation": "bridge",
+      "status": 0,
+      "runtimeMs": 2285.0781249871943,
+      "stdout": "[[-1,-1,-1,-1,-1,-1,true,false],[-1,-1,-1,0,-1,-1,true,false],[-1,-1,-1,1,-1,-1,true,false],[-1,-1,-1,2,-1,-1,true,false],[-1,-1,0,-1,0,-1,false,true],[-1,-1,0,0,0,-1,false,true],[-1,-1,0,1,0,-1,false,true],[-1,-1,0,2,0,-1,false,true],[-1,-1,1,-1,1,-1,false,true],[-1,-1,1,0,1,-1,false,true],[-1,-1,1,1,1,-1,false,true],[-1,-1,1,2,1,-1,false,true],[-1,-1,2,-1,2,-1,false,true],[-1,-1,2,0,2,-1,false,true],[-1,-1,2,1,2,-1,false,true],[-1,-1,2,2,2,-1,false,true],[-1,0,-1,-1,-1,-1,false,false],[-1,0,-1,0,-1,0,true,false],[-1,0,-1,1,-1,0,true,false],[-1,0,-1,2,-1,0,true,false],[-1,0,0,-1,0,-1,false,true],[-1,0,0,0,0,0,false,false],[-1,0,0,1,0,0,false,false],[-1,0,0,2,0,0,false,false],[-1,0,1,-1,1,-1,false,true],[-1,0,1,0,1,0,false,true],[-1,0,1,1,1,0,false,true],[-1,0,1,2,1,0,false,true],[-1,0,2,-1,2,-1,false,true],[-1,0,2,0,2,0,false,true],[-1,0,2,1,2,0,false,true],[-1,0,2,2,2,0,false,true],[-1,1,-1,-1,-1,-1,false,false],[-1,1,-1,0,-1,0,false,false],[-1,1,-1,1,-1,1,true,false],[-1,1,-1,2,-1,1,true,false],[-1,1,0,-1,0,-1,false,true],[-1,1,0,0,0,0,false,false],[-1,1,0,1,0,1,false,false],[-1,1,0,2,0,1,false,false],[-1,1,1,-1,1,-1,false,true],[-1,1,1,0,1,0,false,true],[-1,1,1,1,1,1,false,false],[-1,1,1,2,1,1,false,false],[-1,1,2,-1,2,-1,false,true],[-1,1,2,0,2,0,false,true],[-1,1,2,1,2,1,false,true],[-1,1,2,2,2,1,false,true],[-1,2,-1,-1,-1,-1,false,false],[-1,2,-1,0,-1,0,false,false],[-1,2,-1,1,-1,1,false,false],[-1,2,-1,2,-1,2,true,false],[-1,2,0,-1,0,-1,false,true],[-1,2,0,0,0,0,false,false],[-1,2,0,1,0,1,false,false],[-1,2,0,2,0,2,false,false],[-1,2,1,-1,1,-1,false,true],[-1,2,1,0,1,0,false,true],[-1,2,1,1,1,1,false,false],[-1,2,1,2,1,2,false,false],[-1,2,2,-1,2,-1,false,true],[-1,2,2,0,2,0,false,true],[-1,2,2,1,2,1,false,true],[-1,2,2,2,2,2,false,false],[0,-1,-1,-1,0,-1,true,true],[0,-1,-1,0,0,-1,true,true],[0,-1,-1,1,0,-1,true,true],[0,-1,-1,2,0,-1,true,true],[0,-1,0,-1,0,-1,true,true],[0,-1,0,0,0,-1,true,true],[0,-1,0,1,0,-1,true,true],[0,-1,0,2,0,-1,true,true],[0,-1,1,-1,1,-1,true,true],[0,-1,1,0,1,-1,true,true],[0,-1,1,1,1,-1,true,true],[0,-1,1,2,1,-1,true,true],[0,-1,2,-1,2,-1,true,true],[0,-1,2,0,2,-1,true,true],[0,-1,2,1,2,-1,true,true],[0,-1,2,2,2,-1,true,true],[0,0,-1,-1,0,-1,false,true],[0,0,-1,0,0,0,true,false],[0,0,-1,1,0,0,true,false],[0,0,-1,2,0,0,true,false],[0,0,0,-1,0,-1,false,true],[0,0,0,0,0,0,true,false],[0,0,0,1,0,0,true,false],[0,0,0,2,0,0,true,false],[0,0,1,-1,1,-1,false,true],[0,0,1,0,1,0,false,true],[0,0,1,1,1,0,false,true],[0,0,1,2,1,0,false,true],[0,0,2,-1,2,-1,false,true],[0,0,2,0,2,0,false,true],[0,0,2,1,2,0,false,true],[0,0,2,2,2,0,false,true],[0,1,-1,-1,0,-1,false,true],[0,1,-1,0,0,0,false,false],[0,1,-1,1,0,1,true,false],[0,1,-1,2,0,1,true,false],[0,1,0,-1,0,-1,false,true],[0,1,0,0,0,0,false,false],[0,1,0,1,0,1,true,false],[0,1,0,2,0,1,true,false],[0,1,1,-1,1,-1,false,true],[0,1,1,0,1,0,false,true],[0,1,1,1,1,1,false,false],[0,1,1,2,1,1,false,false],[0,1,2,-1,2,-1,false,true],[0,1,2,0,2,0,false,true],[0,1,2,1,2,1,false,true],[0,1,2,2,2,1,false,true],[0,2,-1,-1,0,-1,false,true],[0,2,-1,0,0,0,false,false],[0,2,-1,1,0,1,false,false],[0,2,-1,2,0,2,true,false],[0,2,0,-1,0,-1,false,true],[0,2,0,0,0,0,false,false],[0,2,0,1,0,1,false,false],[0,2,0,2,0,2,true,false],[0,2,1,-1,1,-1,false,true],[0,2,1,0,1,0,false,true],[0,2,1,1,1,1,false,false],[0,2,1,2,1,2,false,false],[0,2,2,-1,2,-1,false,true],[0,2,2,0,2,0,false,true],[0,2,2,1,2,1,false,true],[0,2,2,2,2,2,false,false],[1,-1,-1,-1,1,-1,true,true],[1,-1,-1,0,1,-1,true,true],[1,-1,-1,1,1,-1,true,true],[1,-1,-1,2,1,-1,true,true],[1,-1,0,-1,1,-1,true,true],[1,-1,0,0,1,-1,true,true],[1,-1,0,1,1,-1,true,true],[1,-1,0,2,1,-1,true,true],[1,-1,1,-1,1,-1,true,true],[1,-1,1,0,1,-1,true,true],[1,-1,1,1,1,-1,true,true],[1,-1,1,2,1,-1,true,true],[1,-1,2,-1,2,-1,true,true],[1,-1,2,0,2,-1,true,true],[1,-1,2,1,2,-1,true,true],[1,-1,2,2,2,-1,true,true],[1,0,-1,-1,1,-1,true,true],[1,0,-1,0,1,0,true,true],[1,0,-1,1,1,0,true,true],[1,0,-1,2,1,0,true,true],[1,0,0,-1,1,-1,true,true],[1,0,0,0,1,0,true,true],[1,0,0,1,1,0,true,true],[1,0,0,2,1,0,true,true],[1,0,1,-1,1,-1,true,true],[1,0,1,0,1,0,true,true],[1,0,1,1,1,0,true,true],[1,0,1,2,1,0,true,true],[1,0,2,-1,2,-1,true,true],[1,0,2,0,2,0,true,true],[1,0,2,1,2,0,true,true],[1,0,2,2,2,0,true,true],[1,1,-1,-1,1,-1,false,true],[1,1,-1,0,1,0,false,true],[1,1,-1,1,1,1,true,false],[1,1,-1,2,1,1,true,false],[1,1,0,-1,1,-1,false,true],[1,1,0,0,1,0,false,true],[1,1,0,1,1,1,true,false],[1,1,0,2,1,1,true,false],[1,1,1,-1,1,-1,false,true],[1,1,1,0,1,0,false,true],[1,1,1,1,1,1,true,false],[1,1,1,2,1,1,true,false],[1,1,2,-1,2,-1,false,true],[1,1,2,0,2,0,false,true],[1,1,2,1,2,1,false,true],[1,1,2,2,2,1,false,true],[1,2,-1,-1,1,-1,false,true],[1,2,-1,0,1,0,false,true],[1,2,-1,1,1,1,false,false],[1,2,-1,2,1,2,true,false],[1,2,0,-1,1,-1,false,true],[1,2,0,0,1,0,false,true],[1,2,0,1,1,1,false,false],[1,2,0,2,1,2,true,false],[1,2,1,-1,1,-1,false,true],[1,2,1,0,1,0,false,true],[1,2,1,1,1,1,false,false],[1,2,1,2,1,2,true,false],[1,2,2,-1,2,-1,false,true],[1,2,2,0,2,0,false,true],[1,2,2,1,2,1,false,true],[1,2,2,2,2,2,false,false],[2,-1,-1,-1,2,-1,true,true],[2,-1,-1,0,2,-1,true,true],[2,-1,-1,1,2,-1,true,true],[2,-1,-1,2,2,-1,true,true],[2,-1,0,-1,2,-1,true,true],[2,-1,0,0,2,-1,true,true],[2,-1,0,1,2,-1,true,true],[2,-1,0,2,2,-1,true,true],[2,-1,1,-1,2,-1,true,true],[2,-1,1,0,2,-1,true,true],[2,-1,1,1,2,-1,true,true],[2,-1,1,2,2,-1,true,true],[2,-1,2,-1,2,-1,true,true],[2,-1,2,0,2,-1,true,true],[2,-1,2,1,2,-1,true,true],[2,-1,2,2,2,-1,true,true],[2,0,-1,-1,2,-1,true,true],[2,0,-1,0,2,0,true,true],[2,0,-1,1,2,0,true,true],[2,0,-1,2,2,0,true,true],[2,0,0,-1,2,-1,true,true],[2,0,0,0,2,0,true,true],[2,0,0,1,2,0,true,true],[2,0,0,2,2,0,true,true],[2,0,1,-1,2,-1,true,true],[2,0,1,0,2,0,true,true],[2,0,1,1,2,0,true,true],[2,0,1,2,2,0,true,true],[2,0,2,-1,2,-1,true,true],[2,0,2,0,2,0,true,true],[2,0,2,1,2,0,true,true],[2,0,2,2,2,0,true,true],[2,1,-1,-1,2,-1,true,true],[2,1,-1,0,2,0,true,true],[2,1,-1,1,2,1,true,true],[2,1,-1,2,2,1,true,true],[2,1,0,-1,2,-1,true,true],[2,1,0,0,2,0,true,true],[2,1,0,1,2,1,true,true],[2,1,0,2,2,1,true,true],[2,1,1,-1,2,-1,true,true],[2,1,1,0,2,0,true,true],[2,1,1,1,2,1,true,true],[2,1,1,2,2,1,true,true],[2,1,2,-1,2,-1,true,true],[2,1,2,0,2,0,true,true],[2,1,2,1,2,1,true,true],[2,1,2,2,2,1,true,true],[2,2,-1,-1,2,-1,false,true],[2,2,-1,0,2,0,false,true],[2,2,-1,1,2,1,false,true],[2,2,-1,2,2,2,true,false],[2,2,0,-1,2,-1,false,true],[2,2,0,0,2,0,false,true],[2,2,0,1,2,1,false,true],[2,2,0,2,2,2,true,false],[2,2,1,-1,2,-1,false,true],[2,2,1,0,2,0,false,true],[2,2,1,1,2,1,false,true],[2,2,1,2,2,2,true,false],[2,2,2,-1,2,-1,false,true],[2,2,2,0,2,0,false,true],[2,2,2,1,2,1,false,true],[2,2,2,2,2,2,true,false]]\n",
+      "stderr": "",
+      "stdoutSha256": "sha256:45c86f9985c0b1b1724536e10ae37c51c2edb5f63cdccaba7264f9ca88b3040c",
+      "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "place": "catalog",
+      "operation": "published-js-bridge",
+      "status": 0,
+      "runtimeMs": 119.0308749792166,
+      "stdout": "{\"publishedVersion\":\"0.4.3\",\"domain\":[-1,0,1,2],\"rawCells\":16,\"pairs\":256,\"associativityTriples\":4096,\"leanTableMatchesPublishedJavaScript\":true,\"rawAntisymmetryCounterexample\":true,\"tableSha256\":\"sha256:45c86f9985c0b1b1724536e10ae37c51c2edb5f63cdccaba7264f9ca88b3040c\"}\n",
+      "stderr": "",
+      "stdoutSha256": "sha256:9d90ddc232cc03ee5f5ff6db98b8285775b3f9335c32724b6b306ce0f6e36c07",
+      "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "place": "catalog",
+      "operation": "negative",
+      "status": 1,
+      "runtimeMs": 2183.4830419975333,
+      "stdout": "Negative.lean:3:89: error: tactic 'decide' proved that the proposition\n  { lo := 5, hi := 3 } = { lo := 8, hi := 6 }\nis false\n",
+      "stderr": "",
+      "stdoutSha256": "sha256:9558078892a9319d6726ecc9cb6891a2433cc18af453a532b93158286c7e5e7c",
+      "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "capturePolicy": {
+    "timeoutMs": 25000,
+    "responseBytes": 65536
+  },
+  "places": {
+    "count": 2,
+    "origin": "codex, one origin; two directories share immutable official dependencies",
+    "shared": "official compiler and immutable Mathlib dependency cache",
+    "independentOriginsClaimed": false
+  },
+  "verificationBoundary": {
+    "lean": "generic mathematical assertions under the declared LinearOrder",
+    "implementation": "256 pairs, 4096 triples per place; a finite check against published JavaScript, not a formal verification of TypeScript compilation",
+    "boundNativeReceipts": false,
+    "admission": false,
+    "signatures": 0
+  },
+  "literature": [
+    {
+      "title": "A comprehensive study of Convergent and Commutative Replicated Data Types",
+      "authors": "Shapiro, Preguica, Baquero, Zawirski",
+      "year": 2011,
+      "url": "https://dsf.berkeley.edu/cs286/papers/crdt-tr2011.pdf",
+      "alreadyKnown": "semilattice merge and monotone replicated state convergence under delivery assumptions",
+      "contributionHere": "checked correspondence of endpoint meet and observable empty-interval equivalence, with restricted replay consequences"
+    }
+  ],
+  "resourceBoundary": "official compiler/dependency acquisition is preparation; not included in the per-process execution measurements and not certified by this vector"
+}

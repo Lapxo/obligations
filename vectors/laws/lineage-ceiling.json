@@ -1,0 +1,790 @@
+{
+  "id": "lineage/symmetric-markov-ceiling",
+  "classification": "conditional law; finite exact joint tables and distinguishing counterexamples, not a general Lean proof",
+  "policy": "vectors/laws/policy.json",
+  "anchors": [
+    {
+      "path": "proofs/lineage-ceiling.json",
+      "sha256": "sha256:2af300624efe431ab6f8a119c49b439c4a6f8a5bd61ce855c881fc7df176b54f"
+    },
+    {
+      "path": "samples/laws/lineage-ceiling/yes.json",
+      "sha256": "sha256:65939cfabe2a3463c361c0425444a7552fd62675af968bcbb5aaaefea46c668c"
+    },
+    {
+      "path": "samples/laws/lineage-ceiling/no.json",
+      "sha256": "sha256:61d020dadb04ddd007311562b3c3348429b3b78f8a5880736ede8a0da376b3b6"
+    },
+    {
+      "path": "vectors/laws/policy.json",
+      "sha256": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+    },
+    {
+      "path": "src/measures/capacity.ts",
+      "sha256": "sha256:fde3d6d1fdcefd9fc91c9a0d7acd9772940d4022b723596b9a36014fe712a8c4"
+    },
+    {
+      "path": "src/measures/mix-loss.ts",
+      "sha256": "sha256:917ed6c0145b66cee19d31ce0ba1a42d843726530002e609529c01cc8ded7746"
+    },
+    {
+      "path": "src/measures/rational.ts",
+      "sha256": "sha256:d8b9eadbba673a594ee45386cb927ff2e9e5c5323d9aa9f129ed6d8ae2512e2a"
+    },
+    {
+      "path": "src/lattice/price/premium.ts",
+      "sha256": "sha256:a901e2ff834faf5bee059c0d65c289b5c6056999aedfd5fad05197dc607a21a1"
+    },
+    {
+      "path": "test/vectors-harness.ts",
+      "sha256": "sha256:cad3e737def48c6b1ed4069aceb9bdf24c75358572c16a082a7a20093bbc38e9"
+    },
+    {
+      "path": "vectors/laws/f1/path-witness.json",
+      "sha256": "sha256:8d441e59faac1bcb860554632e87a7b9f84222c7455de9c999ccfcdbbea3edab"
+    },
+    {
+      "path": "vectors/laws/f1/finite-arithmetic.json",
+      "sha256": "sha256:9e984bc906d9f9ec4dc0d7c91cd0ab732d888675451328b0199d155d9e3a1134"
+    }
+  ],
+  "result": {
+    "model": "truth->symmetric-lineage->reports->aggregate@1",
+    "classification": "declared model; exact joint probabilities, approximate bits",
+    "copies": [
+      {
+        "n": 2,
+        "c": "0",
+        "ceiling": 1,
+        "rows": [
+          {
+            "k": 1,
+            "posteriorInformation": 1,
+            "aggregateInformation": 1
+          },
+          {
+            "k": 3,
+            "posteriorInformation": 1,
+            "aggregateInformation": 1
+          }
+        ]
+      },
+      {
+        "n": 2,
+        "c": "1/2",
+        "ceiling": 0,
+        "rows": [
+          {
+            "k": 1,
+            "posteriorInformation": 0,
+            "aggregateInformation": 0
+          },
+          {
+            "k": 3,
+            "posteriorInformation": 0,
+            "aggregateInformation": 0
+          }
+        ]
+      },
+      {
+        "n": 2,
+        "c": "1",
+        "ceiling": 1,
+        "rows": [
+          {
+            "k": 1,
+            "posteriorInformation": 1,
+            "aggregateInformation": 1
+          },
+          {
+            "k": 3,
+            "posteriorInformation": 1,
+            "aggregateInformation": 1
+          }
+        ]
+      },
+      {
+        "n": 3,
+        "c": "1/5",
+        "ceiling": 0.6630344058337939,
+        "rows": [
+          {
+            "k": 1,
+            "posteriorInformation": 0.6630344058337938,
+            "aggregateInformation": 0.6630344058337938
+          },
+          {
+            "k": 2,
+            "posteriorInformation": 0.6630344058337938,
+            "aggregateInformation": 0.6630344058337938
+          },
+          {
+            "k": 3,
+            "posteriorInformation": 0.6630344058337938,
+            "aggregateInformation": 0.6630344058337938
+          }
+        ]
+      },
+      {
+        "n": 4,
+        "c": "3/4",
+        "ceiling": 0,
+        "rows": [
+          {
+            "k": 1,
+            "posteriorInformation": 0,
+            "aggregateInformation": 0
+          },
+          {
+            "k": 2,
+            "posteriorInformation": 0,
+            "aggregateInformation": 0
+          }
+        ]
+      }
+    ],
+    "approach": [
+      {
+        "n": 2,
+        "c": "1/5",
+        "e": "1/5",
+        "ceiling": 0.2780719051126378,
+        "rows": [
+          {
+            "k": 1,
+            "information": 0.09561854227550581,
+            "joint": [
+              [
+                {
+                  "numerator": "17",
+                  "denominator": "50"
+                },
+                {
+                  "numerator": "4",
+                  "denominator": "25"
+                }
+              ],
+              [
+                {
+                  "numerator": "4",
+                  "denominator": "25"
+                },
+                {
+                  "numerator": "17",
+                  "denominator": "50"
+                }
+              ]
+            ],
+            "downstreamWork": "4",
+            "downstreamAccuracy": {
+              "numerator": "4",
+              "denominator": "5"
+            },
+            "gap": 0.18245336283713198
+          },
+          {
+            "k": 3,
+            "information": 0.16965354732301519,
+            "joint": [
+              [
+                {
+                  "numerator": "461",
+                  "denominator": "1250"
+                },
+                {
+                  "numerator": "82",
+                  "denominator": "625"
+                }
+              ],
+              [
+                {
+                  "numerator": "82",
+                  "denominator": "625"
+                },
+                {
+                  "numerator": "461",
+                  "denominator": "1250"
+                }
+              ]
+            ],
+            "downstreamWork": "16",
+            "downstreamAccuracy": {
+              "numerator": "112",
+              "denominator": "125"
+            },
+            "gap": 0.10841835778962261
+          },
+          {
+            "k": 5,
+            "information": 0.21379643102426504,
+            "joint": [
+              [
+                {
+                  "numerator": "11957",
+                  "denominator": "31250"
+                },
+                {
+                  "numerator": "1834",
+                  "denominator": "15625"
+                }
+              ],
+              [
+                {
+                  "numerator": "1834",
+                  "denominator": "15625"
+                },
+                {
+                  "numerator": "11957",
+                  "denominator": "31250"
+                }
+              ]
+            ],
+            "downstreamWork": "64",
+            "downstreamAccuracy": {
+              "numerator": "2944",
+              "denominator": "3125"
+            },
+            "gap": 0.06427547408837275
+          },
+          {
+            "k": 7,
+            "information": 0.2398208109983737,
+            "joint": [
+              [
+                {
+                  "numerator": "60937",
+                  "denominator": "156250"
+                },
+                {
+                  "numerator": "8594",
+                  "denominator": "78125"
+                }
+              ],
+              [
+                {
+                  "numerator": "8594",
+                  "denominator": "78125"
+                },
+                {
+                  "numerator": "60937",
+                  "denominator": "156250"
+                }
+              ]
+            ],
+            "downstreamWork": "256",
+            "downstreamAccuracy": {
+              "numerator": "15104",
+              "denominator": "15625"
+            },
+            "gap": 0.038251094114264084
+          },
+          {
+            "k": 9,
+            "information": 0.25518764242313363,
+            "joint": [
+              [
+                {
+                  "numerator": "1539553",
+                  "denominator": "3906250"
+                },
+                {
+                  "numerator": "206786",
+                  "denominator": "1953125"
+                }
+              ],
+              [
+                {
+                  "numerator": "206786",
+                  "denominator": "1953125"
+                },
+                {
+                  "numerator": "1539553",
+                  "denominator": "3906250"
+                }
+              ]
+            ],
+            "downstreamWork": "1024",
+            "downstreamAccuracy": {
+              "numerator": "382976",
+              "denominator": "390625"
+            },
+            "gap": 0.022884262689504165
+          }
+        ],
+        "limitCertifiedByFiniteRows": false
+      },
+      {
+        "n": 3,
+        "c": "1/4",
+        "e": "1/5",
+        "ceiling": 0.5236843762620231,
+        "rows": [
+          {
+            "k": 1,
+            "information": 0.2555284977961909,
+            "joint": [
+              [
+                {
+                  "numerator": "5",
+                  "denominator": "24"
+                },
+                {
+                  "numerator": "1",
+                  "denominator": "16"
+                },
+                {
+                  "numerator": "1",
+                  "denominator": "16"
+                }
+              ],
+              [
+                {
+                  "numerator": "1",
+                  "denominator": "16"
+                },
+                {
+                  "numerator": "5",
+                  "denominator": "24"
+                },
+                {
+                  "numerator": "1",
+                  "denominator": "16"
+                }
+              ],
+              [
+                {
+                  "numerator": "1",
+                  "denominator": "16"
+                },
+                {
+                  "numerator": "1",
+                  "denominator": "16"
+                },
+                {
+                  "numerator": "5",
+                  "denominator": "24"
+                }
+              ]
+            ],
+            "downstreamWork": "9",
+            "downstreamAccuracy": {
+              "numerator": "4",
+              "denominator": "5"
+            },
+            "gap": 0.2681558784658322
+          },
+          {
+            "k": 3,
+            "information": 0.39264524444594917,
+            "joint": [
+              [
+                {
+                  "numerator": "139",
+                  "denominator": "600"
+                },
+                {
+                  "numerator": "61",
+                  "denominator": "1200"
+                },
+                {
+                  "numerator": "61",
+                  "denominator": "1200"
+                }
+              ],
+              [
+                {
+                  "numerator": "61",
+                  "denominator": "1200"
+                },
+                {
+                  "numerator": "139",
+                  "denominator": "600"
+                },
+                {
+                  "numerator": "61",
+                  "denominator": "1200"
+                }
+              ],
+              [
+                {
+                  "numerator": "61",
+                  "denominator": "1200"
+                },
+                {
+                  "numerator": "61",
+                  "denominator": "1200"
+                },
+                {
+                  "numerator": "139",
+                  "denominator": "600"
+                }
+              ]
+            ],
+            "downstreamWork": "81",
+            "downstreamAccuracy": {
+              "numerator": "114",
+              "denominator": "125"
+            },
+            "gap": 0.13103913181607396
+          },
+          {
+            "k": 5,
+            "information": 0.46333547887206983,
+            "joint": [
+              [
+                {
+                  "numerator": "3629",
+                  "denominator": "15000"
+                },
+                {
+                  "numerator": "457",
+                  "denominator": "10000"
+                },
+                {
+                  "numerator": "457",
+                  "denominator": "10000"
+                }
+              ],
+              [
+                {
+                  "numerator": "457",
+                  "denominator": "10000"
+                },
+                {
+                  "numerator": "3629",
+                  "denominator": "15000"
+                },
+                {
+                  "numerator": "457",
+                  "denominator": "10000"
+                }
+              ],
+              [
+                {
+                  "numerator": "457",
+                  "denominator": "10000"
+                },
+                {
+                  "numerator": "457",
+                  "denominator": "10000"
+                },
+                {
+                  "numerator": "3629",
+                  "denominator": "15000"
+                }
+              ]
+            ],
+            "downstreamWork": "729",
+            "downstreamAccuracy": {
+              "numerator": "3004",
+              "denominator": "3125"
+            },
+            "gap": 0.060348897389953304
+          }
+        ],
+        "limitCertifiedByFiniteRows": false
+      },
+      {
+        "n": 4,
+        "c": "1/5",
+        "e": "1/4",
+        "ceiling": 0.9610794049684065,
+        "rows": [
+          {
+            "k": 1,
+            "information": 0.43206877107474373,
+            "joint": [
+              [
+                {
+                  "numerator": "37",
+                  "denominator": "240"
+                },
+                {
+                  "numerator": "23",
+                  "denominator": "720"
+                },
+                {
+                  "numerator": "23",
+                  "denominator": "720"
+                },
+                {
+                  "numerator": "23",
+                  "denominator": "720"
+                }
+              ],
+              [
+                {
+                  "numerator": "23",
+                  "denominator": "720"
+                },
+                {
+                  "numerator": "37",
+                  "denominator": "240"
+                },
+                {
+                  "numerator": "23",
+                  "denominator": "720"
+                },
+                {
+                  "numerator": "23",
+                  "denominator": "720"
+                }
+              ],
+              [
+                {
+                  "numerator": "23",
+                  "denominator": "720"
+                },
+                {
+                  "numerator": "23",
+                  "denominator": "720"
+                },
+                {
+                  "numerator": "37",
+                  "denominator": "240"
+                },
+                {
+                  "numerator": "23",
+                  "denominator": "720"
+                }
+              ],
+              [
+                {
+                  "numerator": "23",
+                  "denominator": "720"
+                },
+                {
+                  "numerator": "23",
+                  "denominator": "720"
+                },
+                {
+                  "numerator": "23",
+                  "denominator": "720"
+                },
+                {
+                  "numerator": "37",
+                  "denominator": "240"
+                }
+              ]
+            ],
+            "downstreamWork": "16",
+            "downstreamAccuracy": {
+              "numerator": "3",
+              "denominator": "4"
+            },
+            "gap": 0.5290106338936628
+          },
+          {
+            "k": 3,
+            "information": 0.6668548013876312,
+            "joint": [
+              [
+                {
+                  "numerator": "17",
+                  "denominator": "96"
+                },
+                {
+                  "numerator": "7",
+                  "denominator": "288"
+                },
+                {
+                  "numerator": "7",
+                  "denominator": "288"
+                },
+                {
+                  "numerator": "7",
+                  "denominator": "288"
+                }
+              ],
+              [
+                {
+                  "numerator": "7",
+                  "denominator": "288"
+                },
+                {
+                  "numerator": "17",
+                  "denominator": "96"
+                },
+                {
+                  "numerator": "7",
+                  "denominator": "288"
+                },
+                {
+                  "numerator": "7",
+                  "denominator": "288"
+                }
+              ],
+              [
+                {
+                  "numerator": "7",
+                  "denominator": "288"
+                },
+                {
+                  "numerator": "7",
+                  "denominator": "288"
+                },
+                {
+                  "numerator": "17",
+                  "denominator": "96"
+                },
+                {
+                  "numerator": "7",
+                  "denominator": "288"
+                }
+              ],
+              [
+                {
+                  "numerator": "7",
+                  "denominator": "288"
+                },
+                {
+                  "numerator": "7",
+                  "denominator": "288"
+                },
+                {
+                  "numerator": "7",
+                  "denominator": "288"
+                },
+                {
+                  "numerator": "17",
+                  "denominator": "96"
+                }
+              ]
+            ],
+            "downstreamWork": "256",
+            "downstreamAccuracy": {
+              "numerator": "7",
+              "denominator": "8"
+            },
+            "gap": 0.2942246035807753
+          }
+        ],
+        "limitCertifiedByFiniteRows": false
+      }
+    ],
+    "counterexamples": {
+      "withoutMarkov": {
+        "publishedModel": "single-dominant-factor@1",
+        "parameters": {
+          "k": 1,
+          "n": 2,
+          "c": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "p": {
+            "numerator": "1",
+            "denominator": "10"
+          }
+        },
+        "information": 0.007225546012191497,
+        "misappliedCeiling": 0
+      },
+      "withoutSymmetry": {
+        "error": "1/4",
+        "joint": [
+          [
+            {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          ],
+          [
+            {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          ]
+        ],
+        "information": 0.31127812445913294,
+        "misappliedCeiling": 0.18872187554086706
+      },
+      "revealedIndicator": {
+        "n": 2,
+        "c": "1/2",
+        "information": 1,
+        "lineageOnly": 0,
+        "revealedIndicatorBound": 1
+      }
+    },
+    "f1": {
+      "N": 4,
+      "residual": 0.5,
+      "extremal": 0.5,
+      "joinBits": 2,
+      "commonCoarseningBits": 0,
+      "liftedUniformUniverse": 16,
+      "liftedBound": 2.125,
+      "truthViewsJoint": [
+        [
+          {
+            "numerator": "1",
+            "denominator": "8"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "8"
+          },
+          {
+            "numerator": "1",
+            "denominator": "8"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "8"
+          }
+        ],
+        [
+          {
+            "numerator": "1",
+            "denominator": "8"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "8"
+          },
+          {
+            "numerator": "1",
+            "denominator": "8"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "8"
+          }
+        ]
+      ],
+      "independentTruthInformation": 0,
+      "binaryNoiselessTruthInformation": 1,
+      "binaryF1Bound": 0
+    },
+    "altersAlgebra": false,
+    "infersChannelFromUnanimity": false,
+    "asymptoticLimitVerified": false
+  },
+  "admission": false,
+  "signatures": 0
+}

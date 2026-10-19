@@ -1,0 +1,23 @@
+{
+  "id": "resolution-encounters@1",
+  "policy": "vectors/laws/policy.json",
+  "classification": "conjecture with falsifiers; H1 remains open",
+  "statement": "No unconditional monotonicity, floor K or ceiling N follows for resolution times encounters from the published H1 statement.",
+  "existing": "Published law/H1-uncertainty is a conjecture, not a law. Its sample has resolutions and fractional origins but no K, N, counting population or sampling model.",
+  "unresolved": [
+    "Meaning of r: chain depth is not number of cells.",
+    "Definition and units of encounters per cell, population, multiplicity and denominator.",
+    "Definitions of K and N, fixed across comparisons.",
+    "Coupling of observations across refinements, coverage preservation and admissible withdrawals.",
+    "An explicit assumption about independent observations, if that word is retained; source names are insufficient."
+  ],
+  "conditionalArithmetic": "If independently specified nonnegative r,e satisfy K<=r*e<=N this checks the inequalities only; it does not derive a counting model or prove H1. A refinement needs r_next*e_next>=r*e for monotonicity; increasing r alone is insufficient.",
+  "falsifierCorrection": "A rising product is compatible with a lower bound. A fixed declared positive floor is refuted by a valid product below that floor; monotonicity by a decrease; an upper bound by an exceedance. A sample minimum selected after seeing the data is not an a priori floor.",
+  "positive": "Replay the published six decimal sample values using exact decimal rationals; its products increase. This is an experiment, not independent empirical origins or a universal law.",
+  "negative": "Resolution [1,2] and encounters [4,1] give [4,2], a decrease. With separately handed K=3, N=5, resolution [1,2,4], encounters [2,2,2] give [2,4,8], violating both bounds. Diagnostic countertables have no claimed physical realization or unstated counting model.",
+  "adds": "Explicit failure modes and a corrected falsifier proposal only. No signed README or declaration edited.",
+  "status": "open: counting/refinement model absent",
+  "signatures": 0,
+  "admission": false,
+  "existingNegative": "samples/no/H1-uncertainty.json checks products [4,2,3,4] against floor 4.8. The numeric failure is valid for that declared floor; the prose reason (a rising product refutes a floor) is incorrect."
+}

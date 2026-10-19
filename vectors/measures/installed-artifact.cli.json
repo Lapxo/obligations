@@ -3,11 +3,10 @@
   "places": [
     {
       "name": "orchard",
-      "archiveSha256": "sha256:d0b0c996db09d07b6ea192daf05b89a04519c784341b9b478d59b84b35d939c8",
-      "code": "sha256:16593a568f0aef344df7c9f5d3363c86ef3b53f4ecda724f55f08c005f14c401",
+      "code": "sha256:72df3154eb2896bb552c3a052cfa3ba4e943742877c31871e341d9bc1ce0ec05",
       "tests": {
         "status": 0,
-        "stdout": "✔ L7 exact oracles include sum-p>=1 without triviality and retain stronger 0.4.2 bound (1.917792ms)\n✔ L7 actual dependent witness refutes top-k+1 guarantee (0.140542ms)\n✔ L7 sorted coefficient formula bounds all triples of events on nonuniform four-atom space (50.850667ms)\n✔ L7 pairwise zero correlation cannot pay for joint-independence convolution (0.622959ms)\n✔ L7 refuses absent hypotheses, malformed marginals and count domains by name (0.249459ms)\n✔ L8 fixed numerical controls distinguish odd minimum, negative defect and zero-shift maximum (1.3195ms)\n✔ L8 exhaustively checks the handed finite domain, including degeneracies and symmetry (3.55375ms)\n✔ L8 refuses invalid domains and information interpretations by name (0.318417ms)\n✔ L9: one mix tie hides two named forks; uniform mean loss is half a bit (1.8655ms)\n✔ L9: missing prior stays unmeasured, invalid declared priors refuse by name (0.321833ms)\n✔ L9: support and prior affect loss; zero mass does not imply global injectivity (0.207292ms)\n✔ L9: constant winners may lose information and weight rescaling adds none (0.11575ms)\n✔ L9: named value tie and bottom tie remain distinct; aliases cannot inflate configuration entropy (0.150458ms)\n✔ L9: explicit logarithm policy and configuration ceiling are retained (0.065667ms)\nℹ tests 14\nℹ suites 0\nℹ pass 14\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 179.033125\n",
+        "stdout": "\u2714 installed 0.4.4 exports have no Bound or Topos runtime dependency (5.040375ms)\n\u2714 installed universal algebra retains the four states and named invalid-chain rejection (0.402875ms)\n\u2714 installed cofailure measures retain models, unmeasured inputs and named conflict refusal (10.096167ms)\n\u2714 installed marginal information retains the declared joint prior, two orders and named order refusal (1.380833ms)\n\u2139 tests 4\n\u2139 suites 0\n\u2139 pass 4\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 93.171416\n",
         "stderr": ""
       },
       "exports": {
@@ -17,18 +16,16 @@
       },
       "check": {
         "status": 0,
-        "stdout": "PASS     closed · 1 places · 630 ms\n",
-        "stderr": "RECEIPTS 16 read · 0 opened · reading closures\nRECEIPTS 1 read · 0 opened · 630 ms\nCOST     act 1 s\n",
-        "archiveSha256": "sha256:d0b0c996db09d07b6ea192daf05b89a04519c784341b9b478d59b84b35d939c8"
+        "stdout": "PASS     closed \u00b7 1 places \u00b7 456 ms\n",
+        "stderr": "RECEIPTS 21 read \u00b7 0 opened \u00b7 reading closures\nRECEIPTS 1 read \u00b7 0 opened \u00b7 456 ms\nCOST     act 0 s\n"
       }
     },
     {
       "name": "catalog",
-      "archiveSha256": "sha256:d0b0c996db09d07b6ea192daf05b89a04519c784341b9b478d59b84b35d939c8",
-      "code": "sha256:16593a568f0aef344df7c9f5d3363c86ef3b53f4ecda724f55f08c005f14c401",
+      "code": "sha256:72df3154eb2896bb552c3a052cfa3ba4e943742877c31871e341d9bc1ce0ec05",
       "tests": {
         "status": 0,
-        "stdout": "✔ L7 exact oracles include sum-p>=1 without triviality and retain stronger 0.4.2 bound (1.975291ms)\n✔ L7 actual dependent witness refutes top-k+1 guarantee (0.154ms)\n✔ L7 sorted coefficient formula bounds all triples of events on nonuniform four-atom space (55.736125ms)\n✔ L7 pairwise zero correlation cannot pay for joint-independence convolution (0.670666ms)\n✔ L7 refuses absent hypotheses, malformed marginals and count domains by name (0.276833ms)\n✔ L8 fixed numerical controls distinguish odd minimum, negative defect and zero-shift maximum (1.439708ms)\n✔ L8 exhaustively checks the handed finite domain, including degeneracies and symmetry (3.24325ms)\n✔ L8 refuses invalid domains and information interpretations by name (0.339875ms)\n✔ L9: one mix tie hides two named forks; uniform mean loss is half a bit (2.196416ms)\n✔ L9: missing prior stays unmeasured, invalid declared priors refuse by name (0.46075ms)\n✔ L9: support and prior affect loss; zero mass does not imply global injectivity (0.24325ms)\n✔ L9: constant winners may lose information and weight rescaling adds none (0.133958ms)\n✔ L9: named value tie and bottom tie remain distinct; aliases cannot inflate configuration entropy (0.169666ms)\n✔ L9: explicit logarithm policy and configuration ceiling are retained (0.076917ms)\nℹ tests 14\nℹ suites 0\nℹ pass 14\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 182.334708\n",
+        "stdout": "\u2714 installed 0.4.4 exports have no Bound or Topos runtime dependency (5.045875ms)\n\u2714 installed universal algebra retains the four states and named invalid-chain rejection (0.407542ms)\n\u2714 installed cofailure measures retain models, unmeasured inputs and named conflict refusal (10.023166ms)\n\u2714 installed marginal information retains the declared joint prior, two orders and named order refusal (1.298958ms)\n\u2139 tests 4\n\u2139 suites 0\n\u2139 pass 4\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 92.05125\n",
         "stderr": ""
       },
       "exports": {
@@ -38,9 +35,8 @@
       },
       "check": {
         "status": 0,
-        "stdout": "PASS     closed · 1 places · 642 ms\n",
-        "stderr": "RECEIPTS 16 read · 0 opened · reading closures\nRECEIPTS 1 read · 0 opened · 642 ms\nCOST     act 1 s\n",
-        "archiveSha256": "sha256:d0b0c996db09d07b6ea192daf05b89a04519c784341b9b478d59b84b35d939c8"
+        "stdout": "PASS     closed \u00b7 1 places \u00b7 452 ms\n",
+        "stderr": "RECEIPTS 21 read \u00b7 0 opened \u00b7 reading closures\nRECEIPTS 1 read \u00b7 0 opened \u00b7 452 ms\nCOST     act 0 s\n"
       }
     }
   ]

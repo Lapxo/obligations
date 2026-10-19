@@ -1,0 +1,1 @@
+{"name":"conflicting-value-for-one-event-origin","mutation":{"event":"e0","origin":"a","value":"0"},"expectedRefusal":"REFUSE·cofailure conflicting-value e0/a"}
