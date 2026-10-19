@@ -1,0 +1,265 @@
+{
+  "instrument": "@lapxo/bound@0.2.1",
+  "instrumentClosureSha256": "sha256:1ccae3c7428a06fcb7303aab3426863c7a52af652c4f5c5e1a979a53784c87af",
+  "readerRuntime": "sha256:14ce5a564be859a9f9798370ea0a4e40f2d442531079a80a3ef06f379faf54f1",
+  "provider": "sha256:d2e9315741b53b4a1740d7204179c948443bdc1edfb0d57f55b93e1c1d355fd2",
+  "limits": {
+    "timeoutMs": 5000,
+    "responseBytes": 65536
+  },
+  "structuralForks": 0,
+  "grammar": "pass",
+  "events": [
+    {
+      "place": "orchard",
+      "case": "yes",
+      "context": {
+        "instrument": "sha256:1ccae3c7428a06fcb7303aab3426863c7a52af652c4f5c5e1a979a53784c87af",
+        "implementation": "sha256:14ce5a564be859a9f9798370ea0a4e40f2d442531079a80a3ef06f379faf54f1",
+        "policy": "sha256:1c26da6173999eb5ae19989713bd9e05f776de5a99972a0b722779fa2f154245",
+        "inputs": [
+          [
+            "provider",
+            "sha256:d2e9315741b53b4a1740d7204179c948443bdc1edfb0d57f55b93e1c1d355fd2"
+          ],
+          [
+            "fixture",
+            "sha256:362272af3ac8f17a86abb22dd3305a8b43db8d70f42c94c415b789f81a4ace17"
+          ],
+          [
+            "proofs/lean/lean-toolchain",
+            "sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+          ],
+          [
+            "proofs/lean/lakefile.toml",
+            "sha256:c21110b310604fa643942a067cab53b5f806fb6eceefa19f5f665c2706b4ff32"
+          ],
+          [
+            "proofs/lean/lake-manifest.json",
+            "sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d"
+          ],
+          [
+            "proofs/lean/Obligations.lean",
+            "sha256:7b7915b01274dc170520a6baaeaaa83ecf20ecf6462e72bcb25d9e03424065ca"
+          ],
+          [
+            "proofs/lean/Obligations/Cell.lean",
+            "sha256:eec00e81ecb1ca9cc00bea10a41c14030ed362f81fb409c988e87fbd67e3ae5f"
+          ],
+          [
+            "proofs/lean/Obligations/Bridge.lean",
+            "sha256:531c1ede945470d68f683d60f27d7526cfe26139db897ceb54aaf6cf3caa275b"
+          ],
+          [
+            "src/lattice/forms.ts",
+            "sha256:5efbfaa2a999261e9d78232648bbb17b46f967abea25ae89ed141a6e442afc84"
+          ],
+          [
+            "vectors/laws/policy.json",
+            "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+          ],
+          [
+            "vectors/laws/meet-semilattice.json",
+            "sha256:50b2199bdcd1e77274f7461fba5cfe114d8e361db1dbc17cc889df62969ca614"
+          ],
+          [
+            "samples/laws/semilattice/yes.json",
+            "sha256:7ccb80e4f8551991204f178df0a6b902db93c71a0847b24bb469579c52d3c503"
+          ],
+          [
+            "samples/laws/semilattice/no.json",
+            "sha256:983e78a765648fa90e9a03b492c0d439b6d97d4448a9edbb953c3353c6bdb0c2"
+          ]
+        ],
+        "environment": [
+          [
+            "variables",
+            "sha256:f8aff46e3a216de37011a3d11b0705f9c49d2f79a2c557d4facf5cbf2d36ad80"
+          ],
+          [
+            "cwd",
+            "sha256:988edf9f9978e37fa50984da68726eb09ee93480f9fbe11cc0953665aef2a442"
+          ],
+          [
+            "flags",
+            "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          ],
+          [
+            "runtime",
+            "sha256:849eadb22bf36ee34f9e5f59d6eb409a47ef531b3b2e5fdafb9e807b5399d090"
+          ],
+          [
+            "platform",
+            "sha256:131558aa9b918882931da265b5d354d6b219f87e9ae251ce24f2c18d402b9288"
+          ]
+        ]
+      },
+      "fixture": "sha256:362272af3ac8f17a86abb22dd3305a8b43db8d70f42c94c415b789f81a4ace17",
+      "receiptSha256": "sha256:86e4e73e3fa320fb35aec8a6d4918f691a72f0364f385345840f2b3af6cd6188",
+      "selection": "sha256:d2e9315741b53b4a1740d7204179c948443bdc1edfb0d57f55b93e1c1d355fd2 offers/capsule/semilattice-044",
+      "read": 1,
+      "executed": 1,
+      "reuseExecuted": 0,
+      "executionMs": 597.591042,
+      "verificationMs": 0.5687080000000151,
+      "reuseMs": 9.810040999999956,
+      "verifiedWithoutLedgerOrStore": 1,
+      "requireReadingContext": true,
+      "tamperedCarrierRejected": true,
+      "differentEnvironmentRejected": true,
+      "receipts": "bound-lock/1 at=place:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=publication/evidence/semilattice value=sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb\nbound-lock/1 at=witness:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=proofs/lean/lean-toolchain value=sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea\nbound-lock/1 at=witness:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=proofs/lean/lakefile.toml value=sha256:c21110b310604fa643942a067cab53b5f806fb6eceefa19f5f665c2706b4ff32\nbound-lock/1 at=witness:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=proofs/lean/lake-manifest.json value=sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d\nbound-lock/1 at=witness:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=proofs/lean/Obligations.lean value=sha256:7b7915b01274dc170520a6baaeaaa83ecf20ecf6462e72bcb25d9e03424065ca\nbound-lock/1 at=witness:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=proofs/lean/Obligations/Cell.lean value=sha256:eec00e81ecb1ca9cc00bea10a41c14030ed362f81fb409c988e87fbd67e3ae5f\nbound-lock/1 at=witness:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=proofs/lean/Obligations/Bridge.lean value=sha256:531c1ede945470d68f683d60f27d7526cfe26139db897ceb54aaf6cf3caa275b\nbound-lock/1 at=witness:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=src/lattice/forms.ts value=sha256:5efbfaa2a999261e9d78232648bbb17b46f967abea25ae89ed141a6e442afc84\nbound-lock/1 at=witness:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=vectors/laws/policy.json value=sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939\nbound-lock/1 at=witness:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=vectors/laws/meet-semilattice.json value=sha256:50b2199bdcd1e77274f7461fba5cfe114d8e361db1dbc17cc889df62969ca614\nbound-lock/1 at=witness:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=samples/laws/semilattice/yes.json value=sha256:7ccb80e4f8551991204f178df0a6b902db93c71a0847b24bb469579c52d3c503\nbound-lock/1 at=witness:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=samples/laws/semilattice/no.json value=sha256:983e78a765648fa90e9a03b492c0d439b6d97d4448a9edbb953c3353c6bdb0c2\nbound-lock/1 at=place:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=interval measure=count role=writes scope=publication/evidence/semilattice value=0..0\nbound-lock/1 at=place:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=alphabet measure=digest role=writes scope=receipts/readings/7490769db4f54949bb188ea93aa3faeea9949a0eb14465cf38ab1a2b191d9c11/15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb/identity value=sha256:34ea6dada793247601e53850bb8a9238064c7205264ec4b50fd8593b33dfd972\nbound-lock/1 at=place:sha256:b2b42f50f42ff7a469ca86f3320a74bec8da14fa597b395daaa48a7c51020c1e by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=receipts/readings/7490769db4f54949bb188ea93aa3faeea9949a0eb14465cf38ab1a2b191d9c11/15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb value=sha256:b2b42f50f42ff7a469ca86f3320a74bec8da14fa597b395daaa48a7c51020c1e\nbound-lock/1 about=\"[\\\"reading-context@1\\\",\\\"sha256:1ccae3c7428a06fcb7303aab3426863c7a52af652c4f5c5e1a979a53784c87af\\\",\\\"sha256:14ce5a564be859a9f9798370ea0a4e40f2d442531079a80a3ef06f379faf54f1\\\",\\\"sha256:8d260dbccbe591c07b6bd3f9faaee60a514dac6f8177e33e029a1ec219c068cf\\\",[[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"fixture\\\\\\\"]\\\",\\\"sha256:362272af3ac8f17a86abb22dd3305a8b43db8d70f42c94c415b789f81a4ace17\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"proofs/lean/Obligations.lean\\\\\\\"]\\\",\\\"sha256:7b7915b01274dc170520a6baaeaaa83ecf20ecf6462e72bcb25d9e03424065ca\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"proofs/lean/Obligations/Bridge.lean\\\\\\\"]\\\",\\\"sha256:531c1ede945470d68f683d60f27d7526cfe26139db897ceb54aaf6cf3caa275b\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"proofs/lean/Obligations/Cell.lean\\\\\\\"]\\\",\\\"sha256:eec00e81ecb1ca9cc00bea10a41c14030ed362f81fb409c988e87fbd67e3ae5f\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"proofs/lean/lake-manifest.json\\\\\\\"]\\\",\\\"sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"proofs/lean/lakefile.toml\\\\\\\"]\\\",\\\"sha256:c21110b310604fa643942a067cab53b5f806fb6eceefa19f5f665c2706b4ff32\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"proofs/lean/lean-toolchain\\\\\\\"]\\\",\\\"sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"provider\\\\\\\"]\\\",\\\"sha256:d2e9315741b53b4a1740d7204179c948443bdc1edfb0d57f55b93e1c1d355fd2\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"samples/laws/semilattice/no.json\\\\\\\"]\\\",\\\"sha256:983e78a765648fa90e9a03b492c0d439b6d97d4448a9edbb953c3353c6bdb0c2\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"samples/laws/semilattice/yes.json\\\\\\\"]\\\",\\\"sha256:7ccb80e4f8551991204f178df0a6b902db93c71a0847b24bb469579c52d3c503\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"src/lattice/forms.ts\\\\\\\"]\\\",\\\"sha256:5efbfaa2a999261e9d78232648bbb17b46f967abea25ae89ed141a6e442afc84\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"vectors/laws/meet-semilattice.json\\\\\\\"]\\\",\\\"sha256:50b2199bdcd1e77274f7461fba5cfe114d8e361db1dbc17cc889df62969ca614\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"vectors/laws/policy.json\\\\\\\"]\\\",\\\"sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"proofs/lean/Obligations.lean\\\\\\\"]\\\",\\\"sha256:7b7915b01274dc170520a6baaeaaa83ecf20ecf6462e72bcb25d9e03424065ca\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"proofs/lean/Obligations/Bridge.lean\\\\\\\"]\\\",\\\"sha256:531c1ede945470d68f683d60f27d7526cfe26139db897ceb54aaf6cf3caa275b\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"proofs/lean/Obligations/Cell.lean\\\\\\\"]\\\",\\\"sha256:eec00e81ecb1ca9cc00bea10a41c14030ed362f81fb409c988e87fbd67e3ae5f\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"proofs/lean/lake-manifest.json\\\\\\\"]\\\",\\\"sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"proofs/lean/lakefile.toml\\\\\\\"]\\\",\\\"sha256:c21110b310604fa643942a067cab53b5f806fb6eceefa19f5f665c2706b4ff32\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"proofs/lean/lean-toolchain\\\\\\\"]\\\",\\\"sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"samples/laws/semilattice/no.json\\\\\\\"]\\\",\\\"sha256:983e78a765648fa90e9a03b492c0d439b6d97d4448a9edbb953c3353c6bdb0c2\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"samples/laws/semilattice/yes.json\\\\\\\"]\\\",\\\"sha256:7ccb80e4f8551991204f178df0a6b902db93c71a0847b24bb469579c52d3c503\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"src/lattice/forms.ts\\\\\\\"]\\\",\\\"sha256:5efbfaa2a999261e9d78232648bbb17b46f967abea25ae89ed141a6e442afc84\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"vectors/laws/meet-semilattice.json\\\\\\\"]\\\",\\\"sha256:50b2199bdcd1e77274f7461fba5cfe114d8e361db1dbc17cc889df62969ca614\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"vectors/laws/policy.json\\\\\\\"]\\\",\\\"sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939\\\"],[\\\"[\\\\\\\"plan\\\\\\\"]\\\",\\\"sha256:a0e70216cc3b169ecb35ce9b2214b74387e8f04baf9c9def3ae54adaedcd19c9\\\"]],[[\\\"cwd\\\",\\\"sha256:988edf9f9978e37fa50984da68726eb09ee93480f9fbe11cc0953665aef2a442\\\"],[\\\"flags\\\",\\\"sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\\\"],[\\\"platform\\\",\\\"sha256:131558aa9b918882931da265b5d354d6b219f87e9ae251ce24f2c18d402b9288\\\"],[\\\"runtime\\\",\\\"sha256:849eadb22bf36ee34f9e5f59d6eb409a47ef531b3b2e5fdafb9e807b5399d090\\\"],[\\\"variables\\\",\\\"sha256:f8aff46e3a216de37011a3d11b0705f9c49d2f79a2c557d4facf5cbf2d36ad80\\\"]]]\\n\" at=place:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=alphabet measure=bytes role=writes scope=receipts/readings/7490769db4f54949bb188ea93aa3faeea9949a0eb14465cf38ab1a2b191d9c11/15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb value=sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb\nbound-lock/1 about=\"bound-lock/1 at=place:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=interval measure=count role=writes scope=publication/evidence/semilattice value=0..0\\n\" at=place:sha256:b2b42f50f42ff7a469ca86f3320a74bec8da14fa597b395daaa48a7c51020c1e by=reader:88ca354d6a26 form=interval measure=count role=writes scope=receipts/readings/7490769db4f54949bb188ea93aa3faeea9949a0eb14465cf38ab1a2b191d9c11/15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb value=1..1\nbound-lock/1 at=place:sha256:15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb by=reader:88ca354d6a26 form=interval measure=s role=writes scope=receipts/readings/7490769db4f54949bb188ea93aa3faeea9949a0eb14465cf38ab1a2b191d9c11/15a4da054dea7166cbb47d8a7bfc4c0fa63b2c79bb9335113a7ac5d8bdd54eeb value=0.286577..0.286577\n"
+    },
+    {
+      "place": "orchard-missing-negative",
+      "case": "no",
+      "fixture": "sha256:d7d5a28662d2d76a7a3a2a39edabf8e028c370b74eceadb74140d744aaf54b54",
+      "expectedRefusal": "REFUSE·semilattice two-complete-places",
+      "refusal": "Error: REFUSE·reading publication/evidence/semilattice · Error: REFUSE·semilattice two-complete-places",
+      "executionMs": 559.4855829999999,
+      "fixturePreserved": true
+    },
+    {
+      "place": "orchard-false-contract",
+      "case": "no",
+      "fixture": "sha256:0bd4790fdc9ec4e56e1d6151f689ca2cbb9fc0cc8dcaf0f07dff2cfa9da20e31",
+      "expectedRefusal": "REFUSE·semilattice contract-claims",
+      "refusal": "Error: REFUSE·reading publication/evidence/semilattice · Error: REFUSE·semilattice contract-claims",
+      "executionMs": 545.040334,
+      "fixturePreserved": true
+    },
+    {
+      "place": "catalog",
+      "case": "yes",
+      "context": {
+        "instrument": "sha256:1ccae3c7428a06fcb7303aab3426863c7a52af652c4f5c5e1a979a53784c87af",
+        "implementation": "sha256:14ce5a564be859a9f9798370ea0a4e40f2d442531079a80a3ef06f379faf54f1",
+        "policy": "sha256:1c26da6173999eb5ae19989713bd9e05f776de5a99972a0b722779fa2f154245",
+        "inputs": [
+          [
+            "provider",
+            "sha256:d2e9315741b53b4a1740d7204179c948443bdc1edfb0d57f55b93e1c1d355fd2"
+          ],
+          [
+            "fixture",
+            "sha256:362272af3ac8f17a86abb22dd3305a8b43db8d70f42c94c415b789f81a4ace17"
+          ],
+          [
+            "proofs/lean/lean-toolchain",
+            "sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+          ],
+          [
+            "proofs/lean/lakefile.toml",
+            "sha256:c21110b310604fa643942a067cab53b5f806fb6eceefa19f5f665c2706b4ff32"
+          ],
+          [
+            "proofs/lean/lake-manifest.json",
+            "sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d"
+          ],
+          [
+            "proofs/lean/Obligations.lean",
+            "sha256:7b7915b01274dc170520a6baaeaaa83ecf20ecf6462e72bcb25d9e03424065ca"
+          ],
+          [
+            "proofs/lean/Obligations/Cell.lean",
+            "sha256:eec00e81ecb1ca9cc00bea10a41c14030ed362f81fb409c988e87fbd67e3ae5f"
+          ],
+          [
+            "proofs/lean/Obligations/Bridge.lean",
+            "sha256:531c1ede945470d68f683d60f27d7526cfe26139db897ceb54aaf6cf3caa275b"
+          ],
+          [
+            "src/lattice/forms.ts",
+            "sha256:5efbfaa2a999261e9d78232648bbb17b46f967abea25ae89ed141a6e442afc84"
+          ],
+          [
+            "vectors/laws/policy.json",
+            "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+          ],
+          [
+            "vectors/laws/meet-semilattice.json",
+            "sha256:50b2199bdcd1e77274f7461fba5cfe114d8e361db1dbc17cc889df62969ca614"
+          ],
+          [
+            "samples/laws/semilattice/yes.json",
+            "sha256:7ccb80e4f8551991204f178df0a6b902db93c71a0847b24bb469579c52d3c503"
+          ],
+          [
+            "samples/laws/semilattice/no.json",
+            "sha256:983e78a765648fa90e9a03b492c0d439b6d97d4448a9edbb953c3353c6bdb0c2"
+          ]
+        ],
+        "environment": [
+          [
+            "variables",
+            "sha256:f8aff46e3a216de37011a3d11b0705f9c49d2f79a2c557d4facf5cbf2d36ad80"
+          ],
+          [
+            "cwd",
+            "sha256:7f360641781fcf4a244e9d9690524db2476aa13098f12ce51b359f734ca3ffc1"
+          ],
+          [
+            "flags",
+            "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          ],
+          [
+            "runtime",
+            "sha256:849eadb22bf36ee34f9e5f59d6eb409a47ef531b3b2e5fdafb9e807b5399d090"
+          ],
+          [
+            "platform",
+            "sha256:131558aa9b918882931da265b5d354d6b219f87e9ae251ce24f2c18d402b9288"
+          ]
+        ]
+      },
+      "fixture": "sha256:362272af3ac8f17a86abb22dd3305a8b43db8d70f42c94c415b789f81a4ace17",
+      "receiptSha256": "sha256:5a14a782ae3c34cad1c472c388673fd4839f37b2c9585c52bb46b96c5d4902e9",
+      "selection": "sha256:d2e9315741b53b4a1740d7204179c948443bdc1edfb0d57f55b93e1c1d355fd2 offers/capsule/semilattice-044",
+      "read": 1,
+      "executed": 1,
+      "reuseExecuted": 0,
+      "executionMs": 534.6974170000003,
+      "verificationMs": 0.688083000000006,
+      "reuseMs": 6.293959000000086,
+      "verifiedWithoutLedgerOrStore": 1,
+      "requireReadingContext": true,
+      "tamperedCarrierRejected": true,
+      "differentEnvironmentRejected": true,
+      "receipts": "bound-lock/1 at=place:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=publication/evidence/semilattice value=sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d\nbound-lock/1 at=witness:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=proofs/lean/lean-toolchain value=sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea\nbound-lock/1 at=witness:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=proofs/lean/lakefile.toml value=sha256:c21110b310604fa643942a067cab53b5f806fb6eceefa19f5f665c2706b4ff32\nbound-lock/1 at=witness:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=proofs/lean/lake-manifest.json value=sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d\nbound-lock/1 at=witness:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=proofs/lean/Obligations.lean value=sha256:7b7915b01274dc170520a6baaeaaa83ecf20ecf6462e72bcb25d9e03424065ca\nbound-lock/1 at=witness:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=proofs/lean/Obligations/Cell.lean value=sha256:eec00e81ecb1ca9cc00bea10a41c14030ed362f81fb409c988e87fbd67e3ae5f\nbound-lock/1 at=witness:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=proofs/lean/Obligations/Bridge.lean value=sha256:531c1ede945470d68f683d60f27d7526cfe26139db897ceb54aaf6cf3caa275b\nbound-lock/1 at=witness:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=src/lattice/forms.ts value=sha256:5efbfaa2a999261e9d78232648bbb17b46f967abea25ae89ed141a6e442afc84\nbound-lock/1 at=witness:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=vectors/laws/policy.json value=sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939\nbound-lock/1 at=witness:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=vectors/laws/meet-semilattice.json value=sha256:50b2199bdcd1e77274f7461fba5cfe114d8e361db1dbc17cc889df62969ca614\nbound-lock/1 at=witness:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=samples/laws/semilattice/yes.json value=sha256:7ccb80e4f8551991204f178df0a6b902db93c71a0847b24bb469579c52d3c503\nbound-lock/1 at=witness:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=samples/laws/semilattice/no.json value=sha256:983e78a765648fa90e9a03b492c0d439b6d97d4448a9edbb953c3353c6bdb0c2\nbound-lock/1 at=place:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=interval measure=count role=writes scope=publication/evidence/semilattice value=0..0\nbound-lock/1 at=place:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=alphabet measure=digest role=writes scope=receipts/readings/7490769db4f54949bb188ea93aa3faeea9949a0eb14465cf38ab1a2b191d9c11/793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d/identity value=sha256:24996242934e26331dd3778bc11fb5b3b54bb2e9ba42649b0007982988953cc7\nbound-lock/1 at=place:sha256:b1cc161d83c785605e72bb5dbd88f2c113bc82bc01aa003b904e69476c87ffc7 by=reader:88ca354d6a26 form=alphabet measure=observed role=writes scope=receipts/readings/7490769db4f54949bb188ea93aa3faeea9949a0eb14465cf38ab1a2b191d9c11/793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d value=sha256:b1cc161d83c785605e72bb5dbd88f2c113bc82bc01aa003b904e69476c87ffc7\nbound-lock/1 about=\"[\\\"reading-context@1\\\",\\\"sha256:1ccae3c7428a06fcb7303aab3426863c7a52af652c4f5c5e1a979a53784c87af\\\",\\\"sha256:14ce5a564be859a9f9798370ea0a4e40f2d442531079a80a3ef06f379faf54f1\\\",\\\"sha256:8d260dbccbe591c07b6bd3f9faaee60a514dac6f8177e33e029a1ec219c068cf\\\",[[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"fixture\\\\\\\"]\\\",\\\"sha256:362272af3ac8f17a86abb22dd3305a8b43db8d70f42c94c415b789f81a4ace17\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"proofs/lean/Obligations.lean\\\\\\\"]\\\",\\\"sha256:7b7915b01274dc170520a6baaeaaa83ecf20ecf6462e72bcb25d9e03424065ca\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"proofs/lean/Obligations/Bridge.lean\\\\\\\"]\\\",\\\"sha256:531c1ede945470d68f683d60f27d7526cfe26139db897ceb54aaf6cf3caa275b\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"proofs/lean/Obligations/Cell.lean\\\\\\\"]\\\",\\\"sha256:eec00e81ecb1ca9cc00bea10a41c14030ed362f81fb409c988e87fbd67e3ae5f\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"proofs/lean/lake-manifest.json\\\\\\\"]\\\",\\\"sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"proofs/lean/lakefile.toml\\\\\\\"]\\\",\\\"sha256:c21110b310604fa643942a067cab53b5f806fb6eceefa19f5f665c2706b4ff32\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"proofs/lean/lean-toolchain\\\\\\\"]\\\",\\\"sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"provider\\\\\\\"]\\\",\\\"sha256:d2e9315741b53b4a1740d7204179c948443bdc1edfb0d57f55b93e1c1d355fd2\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"samples/laws/semilattice/no.json\\\\\\\"]\\\",\\\"sha256:983e78a765648fa90e9a03b492c0d439b6d97d4448a9edbb953c3353c6bdb0c2\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"samples/laws/semilattice/yes.json\\\\\\\"]\\\",\\\"sha256:7ccb80e4f8551991204f178df0a6b902db93c71a0847b24bb469579c52d3c503\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"src/lattice/forms.ts\\\\\\\"]\\\",\\\"sha256:5efbfaa2a999261e9d78232648bbb17b46f967abea25ae89ed141a6e442afc84\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"vectors/laws/meet-semilattice.json\\\\\\\"]\\\",\\\"sha256:50b2199bdcd1e77274f7461fba5cfe114d8e361db1dbc17cc889df62969ca614\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"vectors/laws/policy.json\\\\\\\"]\\\",\\\"sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"proofs/lean/Obligations.lean\\\\\\\"]\\\",\\\"sha256:7b7915b01274dc170520a6baaeaaa83ecf20ecf6462e72bcb25d9e03424065ca\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"proofs/lean/Obligations/Bridge.lean\\\\\\\"]\\\",\\\"sha256:531c1ede945470d68f683d60f27d7526cfe26139db897ceb54aaf6cf3caa275b\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"proofs/lean/Obligations/Cell.lean\\\\\\\"]\\\",\\\"sha256:eec00e81ecb1ca9cc00bea10a41c14030ed362f81fb409c988e87fbd67e3ae5f\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"proofs/lean/lake-manifest.json\\\\\\\"]\\\",\\\"sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"proofs/lean/lakefile.toml\\\\\\\"]\\\",\\\"sha256:c21110b310604fa643942a067cab53b5f806fb6eceefa19f5f665c2706b4ff32\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"proofs/lean/lean-toolchain\\\\\\\"]\\\",\\\"sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"samples/laws/semilattice/no.json\\\\\\\"]\\\",\\\"sha256:983e78a765648fa90e9a03b492c0d439b6d97d4448a9edbb953c3353c6bdb0c2\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"samples/laws/semilattice/yes.json\\\\\\\"]\\\",\\\"sha256:7ccb80e4f8551991204f178df0a6b902db93c71a0847b24bb469579c52d3c503\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"src/lattice/forms.ts\\\\\\\"]\\\",\\\"sha256:5efbfaa2a999261e9d78232648bbb17b46f967abea25ae89ed141a6e442afc84\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"vectors/laws/meet-semilattice.json\\\\\\\"]\\\",\\\"sha256:50b2199bdcd1e77274f7461fba5cfe114d8e361db1dbc17cc889df62969ca614\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"vectors/laws/policy.json\\\\\\\"]\\\",\\\"sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939\\\"],[\\\"[\\\\\\\"plan\\\\\\\"]\\\",\\\"sha256:a0e70216cc3b169ecb35ce9b2214b74387e8f04baf9c9def3ae54adaedcd19c9\\\"]],[[\\\"cwd\\\",\\\"sha256:7f360641781fcf4a244e9d9690524db2476aa13098f12ce51b359f734ca3ffc1\\\"],[\\\"flags\\\",\\\"sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\\\"],[\\\"platform\\\",\\\"sha256:131558aa9b918882931da265b5d354d6b219f87e9ae251ce24f2c18d402b9288\\\"],[\\\"runtime\\\",\\\"sha256:849eadb22bf36ee34f9e5f59d6eb409a47ef531b3b2e5fdafb9e807b5399d090\\\"],[\\\"variables\\\",\\\"sha256:f8aff46e3a216de37011a3d11b0705f9c49d2f79a2c557d4facf5cbf2d36ad80\\\"]]]\\n\" at=place:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=alphabet measure=bytes role=writes scope=receipts/readings/7490769db4f54949bb188ea93aa3faeea9949a0eb14465cf38ab1a2b191d9c11/793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d value=sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d\nbound-lock/1 about=\"bound-lock/1 at=place:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=interval measure=count role=writes scope=publication/evidence/semilattice value=0..0\\n\" at=place:sha256:b1cc161d83c785605e72bb5dbd88f2c113bc82bc01aa003b904e69476c87ffc7 by=reader:88ca354d6a26 form=interval measure=count role=writes scope=receipts/readings/7490769db4f54949bb188ea93aa3faeea9949a0eb14465cf38ab1a2b191d9c11/793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d value=1..1\nbound-lock/1 at=place:sha256:793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d by=reader:88ca354d6a26 form=interval measure=s role=writes scope=receipts/readings/7490769db4f54949bb188ea93aa3faeea9949a0eb14465cf38ab1a2b191d9c11/793dfd826e6672c663eb06628506b3c954008f4f4c2a5678c684fb514d9c8a2d value=0.265421..0.265421\n"
+    },
+    {
+      "place": "catalog-missing-negative",
+      "case": "no",
+      "fixture": "sha256:d7d5a28662d2d76a7a3a2a39edabf8e028c370b74eceadb74140d744aaf54b54",
+      "expectedRefusal": "REFUSE·semilattice two-complete-places",
+      "refusal": "Error: REFUSE·reading publication/evidence/semilattice · Error: REFUSE·semilattice two-complete-places",
+      "executionMs": 511.54504099999986,
+      "fixturePreserved": true
+    },
+    {
+      "place": "catalog-false-contract",
+      "case": "no",
+      "fixture": "sha256:0bd4790fdc9ec4e56e1d6151f689ca2cbb9fc0cc8dcaf0f07dff2cfa9da20e31",
+      "expectedRefusal": "REFUSE·semilattice contract-claims",
+      "refusal": "Error: REFUSE·reading publication/evidence/semilattice · Error: REFUSE·semilattice contract-claims",
+      "executionMs": 555.6122499999997,
+      "fixturePreserved": true
+    }
+  ],
+  "signatures": 0,
+  "admission": false,
+  "ownerUsed": false,
+  "kernelReexecution": false,
+  "currentAdmissionResponse": false,
+  "publicDeliveryVerified": false,
+  "READY": false,
+  "meaning": "actual context-bearing native candidate receipts for evidence integrity and finite correspondence; not admitted law or independent kernel proof",
+  "candidateScope": "publication/evidence/semilattice",
+  "proofVector": "vectors/laws/meet-semilattice.json",
+  "proofVectorSha256": "sha256:50b2199bdcd1e77274f7461fba5cfe114d8e361db1dbc17cc889df62969ca614",
+  "readerSource": "test/support/semilattice-reader.ts",
+  "readerSourceSha256": "sha256:11b0a00973f1cdb516f05c8b85da5ac9f12fdbbbd56d13c71b6564b3ea1f6d7c",
+  "providerStanding": "bound-lock/1 at=witness:044/semilattice-evidence form=alphabet kind=capsule measure=digest restsOn=sha256:14ce5a564be859a9f9798370ea0a4e40f2d442531079a80a3ef06f379faf54f1 role=writes scope=offers/capsule/semilattice-044 value=sha256:14ce5a564be859a9f9798370ea0a4e40f2d442531079a80a3ef06f379faf54f1\nbound-lock/1 at=witness:044/semilattice-evidence form=alphabet measure=input-projection role=writes scope=region/semilattice-044 value=inputs\nbound-lock/1 at=witness:044/semilattice-evidence form=alphabet measure=reads role=writes scope=region/semilattice-044 value=offers/capsule/semilattice-044|region/semilattice-044|proofs/lean/lean-toolchain|proofs/lean/lakefile.toml|proofs/lean/lake-manifest.json|proofs/lean/Obligations.lean|proofs/lean/Obligations/Cell.lean|proofs/lean/Obligations/Bridge.lean|src/lattice/forms.ts|vectors/laws/policy.json|vectors/laws/meet-semilattice.json|samples/laws/semilattice/yes.json|samples/laws/semilattice/no.json\nbound-lock/1 at=witness:044/semilattice-evidence form=alphabet measure=writes role=writes scope=region/semilattice-044 value=count\n",
+  "inputIdentityEncoding": "sha256 of compact JSON tuple array; native reading-context additionally commits every coordinate, implementation, policy and execution environment",
+  "places": "two directories, one origin; shared immutable instrument and dependencies",
+  "setupCosts": "fixture construction, instrument hydration, compiler acquisition and capsule archive preparation are outside the native execution timings; no preparation ceiling certified"
+}

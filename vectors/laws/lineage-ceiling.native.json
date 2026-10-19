@@ -1,0 +1,291 @@
+{
+  "instrument": "@lapxo/bound@0.2.1",
+  "instrumentClosureSha256": "sha256:1ccae3c7428a06fcb7303aab3426863c7a52af652c4f5c5e1a979a53784c87af",
+  "readerRuntime": "sha256:5ddeb79a99c83a6f07e79a20ab26f372d4255488304f09384bb132e4e0629053",
+  "provider": "sha256:3b7155e62fc52cdbeeefa505f2d6a9497f7ec6a5f676e7fa078a21a73a460e37",
+  "limits": {
+    "timeoutMs": 5000,
+    "responseBytes": 65536
+  },
+  "structuralForks": 0,
+  "grammar": "pass",
+  "events": [
+    {
+      "place": "orchard",
+      "case": "yes",
+      "context": {
+        "instrument": "sha256:1ccae3c7428a06fcb7303aab3426863c7a52af652c4f5c5e1a979a53784c87af",
+        "implementation": "sha256:5ddeb79a99c83a6f07e79a20ab26f372d4255488304f09384bb132e4e0629053",
+        "policy": "sha256:0d2bb7c2777eafedb22615fc6cf74a11954e542dc87fb448155571b4919bf833",
+        "inputs": [
+          [
+            "provider",
+            "sha256:3b7155e62fc52cdbeeefa505f2d6a9497f7ec6a5f676e7fa078a21a73a460e37"
+          ],
+          [
+            "fixture",
+            "sha256:e1952108784f2655b550c17877c13bee114f5f88160895eaa5425d273b22988e"
+          ],
+          [
+            "proofs/lineage-ceiling.json",
+            "sha256:2af300624efe431ab6f8a119c49b439c4a6f8a5bd61ce855c881fc7df176b54f"
+          ],
+          [
+            "samples/laws/lineage-ceiling/yes.json",
+            "sha256:65939cfabe2a3463c361c0425444a7552fd62675af968bcbb5aaaefea46c668c"
+          ],
+          [
+            "samples/laws/lineage-ceiling/no.json",
+            "sha256:61d020dadb04ddd007311562b3c3348429b3b78f8a5880736ede8a0da376b3b6"
+          ],
+          [
+            "vectors/laws/lineage-ceiling.json",
+            "sha256:aeb0e82d35dcbe54b6a9e8cc3efab96e822382bd17a221962d51e869af50cde2"
+          ],
+          [
+            "vectors/laws/policy.json",
+            "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+          ],
+          [
+            "src/measures/capacity.ts",
+            "sha256:fde3d6d1fdcefd9fc91c9a0d7acd9772940d4022b723596b9a36014fe712a8c4"
+          ],
+          [
+            "src/measures/mix-loss.ts",
+            "sha256:917ed6c0145b66cee19d31ce0ba1a42d843726530002e609529c01cc8ded7746"
+          ],
+          [
+            "src/measures/rational.ts",
+            "sha256:d8b9eadbba673a594ee45386cb927ff2e9e5c5323d9aa9f129ed6d8ae2512e2a"
+          ],
+          [
+            "src/lattice/price/premium.ts",
+            "sha256:a901e2ff834faf5bee059c0d65c289b5c6056999aedfd5fad05197dc607a21a1"
+          ],
+          [
+            "test/vectors-harness.ts",
+            "sha256:cad3e737def48c6b1ed4069aceb9bdf24c75358572c16a082a7a20093bbc38e9"
+          ],
+          [
+            "vectors/laws/f1/path-witness.json",
+            "sha256:8d441e59faac1bcb860554632e87a7b9f84222c7455de9c999ccfcdbbea3edab"
+          ],
+          [
+            "vectors/laws/f1/finite-arithmetic.json",
+            "sha256:9e984bc906d9f9ec4dc0d7c91cd0ab732d888675451328b0199d155d9e3a1134"
+          ]
+        ],
+        "environment": [
+          [
+            "variables",
+            "sha256:f8aff46e3a216de37011a3d11b0705f9c49d2f79a2c557d4facf5cbf2d36ad80"
+          ],
+          [
+            "cwd",
+            "sha256:f3ece8f0dcadfec4043d0fccdc4db57776beb93d82063167ac4db056a8a19f92"
+          ],
+          [
+            "flags",
+            "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          ],
+          [
+            "runtime",
+            "sha256:849eadb22bf36ee34f9e5f59d6eb409a47ef531b3b2e5fdafb9e807b5399d090"
+          ],
+          [
+            "platform",
+            "sha256:131558aa9b918882931da265b5d354d6b219f87e9ae251ce24f2c18d402b9288"
+          ]
+        ]
+      },
+      "fixture": "sha256:e1952108784f2655b550c17877c13bee114f5f88160895eaa5425d273b22988e",
+      "receiptSha256": "sha256:a3db9c0f0171b85a7a896e2b416200ba77b3cac64769eafdb702582e00d6170f",
+      "selection": "sha256:3b7155e62fc52cdbeeefa505f2d6a9497f7ec6a5f676e7fa078a21a73a460e37 offers/capsule/lineage-044",
+      "read": 1,
+      "executed": 1,
+      "reusedRetainedExactReceipt": false,
+      "reuseExecuted": 0,
+      "executionMs": 594.737709,
+      "verificationMs": 0.48166599999990467,
+      "reuseMs": 8.689375000000155,
+      "verifiedWithoutLedgerOrStore": 1,
+      "requireReadingContext": true,
+      "tamperedCarrierRejected": true,
+      "differentEnvironmentRejected": true,
+      "receipts": "bound-lock/1 at=place:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=publication/evidence/lineage-ceiling value=sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8\nbound-lock/1 at=witness:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=proofs/lineage-ceiling.json value=sha256:2af300624efe431ab6f8a119c49b439c4a6f8a5bd61ce855c881fc7df176b54f\nbound-lock/1 at=witness:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=samples/laws/lineage-ceiling/yes.json value=sha256:65939cfabe2a3463c361c0425444a7552fd62675af968bcbb5aaaefea46c668c\nbound-lock/1 at=witness:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=samples/laws/lineage-ceiling/no.json value=sha256:61d020dadb04ddd007311562b3c3348429b3b78f8a5880736ede8a0da376b3b6\nbound-lock/1 at=witness:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=vectors/laws/lineage-ceiling.json value=sha256:aeb0e82d35dcbe54b6a9e8cc3efab96e822382bd17a221962d51e869af50cde2\nbound-lock/1 at=witness:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=vectors/laws/policy.json value=sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939\nbound-lock/1 at=witness:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=src/measures/capacity.ts value=sha256:fde3d6d1fdcefd9fc91c9a0d7acd9772940d4022b723596b9a36014fe712a8c4\nbound-lock/1 at=witness:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=src/measures/mix-loss.ts value=sha256:917ed6c0145b66cee19d31ce0ba1a42d843726530002e609529c01cc8ded7746\nbound-lock/1 at=witness:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=src/measures/rational.ts value=sha256:d8b9eadbba673a594ee45386cb927ff2e9e5c5323d9aa9f129ed6d8ae2512e2a\nbound-lock/1 at=witness:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=src/lattice/price/premium.ts value=sha256:a901e2ff834faf5bee059c0d65c289b5c6056999aedfd5fad05197dc607a21a1\nbound-lock/1 at=witness:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=test/vectors-harness.ts value=sha256:cad3e737def48c6b1ed4069aceb9bdf24c75358572c16a082a7a20093bbc38e9\nbound-lock/1 at=witness:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=vectors/laws/f1/path-witness.json value=sha256:8d441e59faac1bcb860554632e87a7b9f84222c7455de9c999ccfcdbbea3edab\nbound-lock/1 at=witness:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=vectors/laws/f1/finite-arithmetic.json value=sha256:9e984bc906d9f9ec4dc0d7c91cd0ab732d888675451328b0199d155d9e3a1134\nbound-lock/1 at=place:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=interval measure=count role=writes scope=publication/evidence/lineage-ceiling value=0..0\nbound-lock/1 at=place:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=digest role=writes scope=receipts/readings/2934f68cd6dc7ac7490d556d9bd3819c30b46868c50e3e494be3a559288fef54/45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8/identity value=sha256:e45d04c33546d2e09626b18039a61ae32843d90dbd27eacff6d10fd3fdd6d25a\nbound-lock/1 at=place:sha256:949456f834de6cc21cbba23574a30f87bcee85e8a4b67d90dd613772325bb218 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=receipts/readings/2934f68cd6dc7ac7490d556d9bd3819c30b46868c50e3e494be3a559288fef54/45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 value=sha256:949456f834de6cc21cbba23574a30f87bcee85e8a4b67d90dd613772325bb218\nbound-lock/1 about=\"[\\\"reading-context@1\\\",\\\"sha256:1ccae3c7428a06fcb7303aab3426863c7a52af652c4f5c5e1a979a53784c87af\\\",\\\"sha256:5ddeb79a99c83a6f07e79a20ab26f372d4255488304f09384bb132e4e0629053\\\",\\\"sha256:9c8e4480699f6f7297c8c5790700be0ce9b82a23782b221049fcfa0233769b63\\\",[[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"fixture\\\\\\\"]\\\",\\\"sha256:e1952108784f2655b550c17877c13bee114f5f88160895eaa5425d273b22988e\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"proofs/lineage-ceiling.json\\\\\\\"]\\\",\\\"sha256:2af300624efe431ab6f8a119c49b439c4a6f8a5bd61ce855c881fc7df176b54f\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"provider\\\\\\\"]\\\",\\\"sha256:3b7155e62fc52cdbeeefa505f2d6a9497f7ec6a5f676e7fa078a21a73a460e37\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"samples/laws/lineage-ceiling/no.json\\\\\\\"]\\\",\\\"sha256:61d020dadb04ddd007311562b3c3348429b3b78f8a5880736ede8a0da376b3b6\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"samples/laws/lineage-ceiling/yes.json\\\\\\\"]\\\",\\\"sha256:65939cfabe2a3463c361c0425444a7552fd62675af968bcbb5aaaefea46c668c\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"src/lattice/price/premium.ts\\\\\\\"]\\\",\\\"sha256:a901e2ff834faf5bee059c0d65c289b5c6056999aedfd5fad05197dc607a21a1\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"src/measures/capacity.ts\\\\\\\"]\\\",\\\"sha256:fde3d6d1fdcefd9fc91c9a0d7acd9772940d4022b723596b9a36014fe712a8c4\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"src/measures/mix-loss.ts\\\\\\\"]\\\",\\\"sha256:917ed6c0145b66cee19d31ce0ba1a42d843726530002e609529c01cc8ded7746\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"src/measures/rational.ts\\\\\\\"]\\\",\\\"sha256:d8b9eadbba673a594ee45386cb927ff2e9e5c5323d9aa9f129ed6d8ae2512e2a\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"test/vectors-harness.ts\\\\\\\"]\\\",\\\"sha256:cad3e737def48c6b1ed4069aceb9bdf24c75358572c16a082a7a20093bbc38e9\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"vectors/laws/f1/finite-arithmetic.json\\\\\\\"]\\\",\\\"sha256:9e984bc906d9f9ec4dc0d7c91cd0ab732d888675451328b0199d155d9e3a1134\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"vectors/laws/f1/path-witness.json\\\\\\\"]\\\",\\\"sha256:8d441e59faac1bcb860554632e87a7b9f84222c7455de9c999ccfcdbbea3edab\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"vectors/laws/lineage-ceiling.json\\\\\\\"]\\\",\\\"sha256:aeb0e82d35dcbe54b6a9e8cc3efab96e822382bd17a221962d51e869af50cde2\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"vectors/laws/policy.json\\\\\\\"]\\\",\\\"sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"proofs/lineage-ceiling.json\\\\\\\"]\\\",\\\"sha256:2af300624efe431ab6f8a119c49b439c4a6f8a5bd61ce855c881fc7df176b54f\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"samples/laws/lineage-ceiling/no.json\\\\\\\"]\\\",\\\"sha256:61d020dadb04ddd007311562b3c3348429b3b78f8a5880736ede8a0da376b3b6\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"samples/laws/lineage-ceiling/yes.json\\\\\\\"]\\\",\\\"sha256:65939cfabe2a3463c361c0425444a7552fd62675af968bcbb5aaaefea46c668c\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"src/lattice/price/premium.ts\\\\\\\"]\\\",\\\"sha256:a901e2ff834faf5bee059c0d65c289b5c6056999aedfd5fad05197dc607a21a1\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"src/measures/capacity.ts\\\\\\\"]\\\",\\\"sha256:fde3d6d1fdcefd9fc91c9a0d7acd9772940d4022b723596b9a36014fe712a8c4\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"src/measures/mix-loss.ts\\\\\\\"]\\\",\\\"sha256:917ed6c0145b66cee19d31ce0ba1a42d843726530002e609529c01cc8ded7746\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"src/measures/rational.ts\\\\\\\"]\\\",\\\"sha256:d8b9eadbba673a594ee45386cb927ff2e9e5c5323d9aa9f129ed6d8ae2512e2a\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"test/vectors-harness.ts\\\\\\\"]\\\",\\\"sha256:cad3e737def48c6b1ed4069aceb9bdf24c75358572c16a082a7a20093bbc38e9\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"vectors/laws/f1/finite-arithmetic.json\\\\\\\"]\\\",\\\"sha256:9e984bc906d9f9ec4dc0d7c91cd0ab732d888675451328b0199d155d9e3a1134\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"vectors/laws/f1/path-witness.json\\\\\\\"]\\\",\\\"sha256:8d441e59faac1bcb860554632e87a7b9f84222c7455de9c999ccfcdbbea3edab\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"vectors/laws/lineage-ceiling.json\\\\\\\"]\\\",\\\"sha256:aeb0e82d35dcbe54b6a9e8cc3efab96e822382bd17a221962d51e869af50cde2\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"vectors/laws/policy.json\\\\\\\"]\\\",\\\"sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939\\\"],[\\\"[\\\\\\\"plan\\\\\\\"]\\\",\\\"sha256:e4a155dedffa07ca3e30e479a47bdb82927faabad2c638aee982707f847caa78\\\"]],[[\\\"cwd\\\",\\\"sha256:f3ece8f0dcadfec4043d0fccdc4db57776beb93d82063167ac4db056a8a19f92\\\"],[\\\"flags\\\",\\\"sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\\\"],[\\\"platform\\\",\\\"sha256:131558aa9b918882931da265b5d354d6b219f87e9ae251ce24f2c18d402b9288\\\"],[\\\"runtime\\\",\\\"sha256:849eadb22bf36ee34f9e5f59d6eb409a47ef531b3b2e5fdafb9e807b5399d090\\\"],[\\\"variables\\\",\\\"sha256:f8aff46e3a216de37011a3d11b0705f9c49d2f79a2c557d4facf5cbf2d36ad80\\\"]]]\\n\" at=place:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=alphabet measure=bytes role=writes scope=receipts/readings/2934f68cd6dc7ac7490d556d9bd3819c30b46868c50e3e494be3a559288fef54/45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 value=sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8\nbound-lock/1 about=\"bound-lock/1 at=place:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=interval measure=count role=writes scope=publication/evidence/lineage-ceiling value=0..0\\n\" at=place:sha256:949456f834de6cc21cbba23574a30f87bcee85e8a4b67d90dd613772325bb218 by=reader:7f5e6a62ebe4 form=interval measure=count role=writes scope=receipts/readings/2934f68cd6dc7ac7490d556d9bd3819c30b46868c50e3e494be3a559288fef54/45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 value=1..1\nbound-lock/1 at=place:sha256:45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 by=reader:7f5e6a62ebe4 form=interval measure=s role=writes scope=receipts/readings/2934f68cd6dc7ac7490d556d9bd3819c30b46868c50e3e494be3a559288fef54/45f0a384b321b9ab24368f92454f9f3ac65b284af1e375e70358c9d1d81d73c8 value=0.308690..0.308690\n"
+    },
+    {
+      "place": "orchard-missing-model",
+      "case": "no",
+      "fixture": "sha256:267481271cd6bb69525dde0f26e3ad62d5272e1364b85d29045aa052283ba942",
+      "expectedRefusal": "REFUSE·lineage anchor-digest samples/laws/lineage-ceiling/yes.json",
+      "refusal": "Error: REFUSE·reading publication/evidence/lineage-ceiling · Error: REFUSE·lineage anchor-digest samples/laws/lineage-ceiling/yes.json",
+      "executionMs": 550.4602080000002,
+      "fixturePreserved": true
+    },
+    {
+      "place": "orchard-missing-model-matched-digest",
+      "case": "no",
+      "fixture": "sha256:750b2bc1fce6b111b10e4938fdcc31f8eabcfceb7263345fa158383aecad273a",
+      "expectedRefusal": "REFUSE·lineage markov-model-required",
+      "refusal": "Error: REFUSE·reading publication/evidence/lineage-ceiling · Error: REFUSE·lineage markov-model-required",
+      "executionMs": 551.3372919999997,
+      "fixturePreserved": true
+    },
+    {
+      "place": "orchard-revealed-indicator-matched-digest",
+      "case": "no",
+      "fixture": "sha256:6a7769b2cb6e75375fb8329a894ccacd7ffd358e03a72bb04274635c1f76fa31",
+      "expectedRefusal": "REFUSE·lineage declared-channel-required",
+      "refusal": "Error: REFUSE·reading publication/evidence/lineage-ceiling · Error: REFUSE·lineage declared-channel-required",
+      "executionMs": 525.9312500000001,
+      "fixturePreserved": true
+    },
+    {
+      "place": "catalog",
+      "case": "yes",
+      "context": {
+        "instrument": "sha256:1ccae3c7428a06fcb7303aab3426863c7a52af652c4f5c5e1a979a53784c87af",
+        "implementation": "sha256:5ddeb79a99c83a6f07e79a20ab26f372d4255488304f09384bb132e4e0629053",
+        "policy": "sha256:0d2bb7c2777eafedb22615fc6cf74a11954e542dc87fb448155571b4919bf833",
+        "inputs": [
+          [
+            "provider",
+            "sha256:3b7155e62fc52cdbeeefa505f2d6a9497f7ec6a5f676e7fa078a21a73a460e37"
+          ],
+          [
+            "fixture",
+            "sha256:e1952108784f2655b550c17877c13bee114f5f88160895eaa5425d273b22988e"
+          ],
+          [
+            "proofs/lineage-ceiling.json",
+            "sha256:2af300624efe431ab6f8a119c49b439c4a6f8a5bd61ce855c881fc7df176b54f"
+          ],
+          [
+            "samples/laws/lineage-ceiling/yes.json",
+            "sha256:65939cfabe2a3463c361c0425444a7552fd62675af968bcbb5aaaefea46c668c"
+          ],
+          [
+            "samples/laws/lineage-ceiling/no.json",
+            "sha256:61d020dadb04ddd007311562b3c3348429b3b78f8a5880736ede8a0da376b3b6"
+          ],
+          [
+            "vectors/laws/lineage-ceiling.json",
+            "sha256:aeb0e82d35dcbe54b6a9e8cc3efab96e822382bd17a221962d51e869af50cde2"
+          ],
+          [
+            "vectors/laws/policy.json",
+            "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+          ],
+          [
+            "src/measures/capacity.ts",
+            "sha256:fde3d6d1fdcefd9fc91c9a0d7acd9772940d4022b723596b9a36014fe712a8c4"
+          ],
+          [
+            "src/measures/mix-loss.ts",
+            "sha256:917ed6c0145b66cee19d31ce0ba1a42d843726530002e609529c01cc8ded7746"
+          ],
+          [
+            "src/measures/rational.ts",
+            "sha256:d8b9eadbba673a594ee45386cb927ff2e9e5c5323d9aa9f129ed6d8ae2512e2a"
+          ],
+          [
+            "src/lattice/price/premium.ts",
+            "sha256:a901e2ff834faf5bee059c0d65c289b5c6056999aedfd5fad05197dc607a21a1"
+          ],
+          [
+            "test/vectors-harness.ts",
+            "sha256:cad3e737def48c6b1ed4069aceb9bdf24c75358572c16a082a7a20093bbc38e9"
+          ],
+          [
+            "vectors/laws/f1/path-witness.json",
+            "sha256:8d441e59faac1bcb860554632e87a7b9f84222c7455de9c999ccfcdbbea3edab"
+          ],
+          [
+            "vectors/laws/f1/finite-arithmetic.json",
+            "sha256:9e984bc906d9f9ec4dc0d7c91cd0ab732d888675451328b0199d155d9e3a1134"
+          ]
+        ],
+        "environment": [
+          [
+            "variables",
+            "sha256:f8aff46e3a216de37011a3d11b0705f9c49d2f79a2c557d4facf5cbf2d36ad80"
+          ],
+          [
+            "cwd",
+            "sha256:f20990ad23bbb644437946b99e41000cf375748d5c5f1707db0dfc6abc3bc74d"
+          ],
+          [
+            "flags",
+            "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          ],
+          [
+            "runtime",
+            "sha256:849eadb22bf36ee34f9e5f59d6eb409a47ef531b3b2e5fdafb9e807b5399d090"
+          ],
+          [
+            "platform",
+            "sha256:131558aa9b918882931da265b5d354d6b219f87e9ae251ce24f2c18d402b9288"
+          ]
+        ]
+      },
+      "fixture": "sha256:e1952108784f2655b550c17877c13bee114f5f88160895eaa5425d273b22988e",
+      "receiptSha256": "sha256:55022c0519bfa702d57adb957dbe7e03328a5967a9f0ad0810a23909acdb19bb",
+      "selection": "sha256:3b7155e62fc52cdbeeefa505f2d6a9497f7ec6a5f676e7fa078a21a73a460e37 offers/capsule/lineage-044",
+      "read": 1,
+      "executed": 1,
+      "reusedRetainedExactReceipt": false,
+      "reuseExecuted": 0,
+      "executionMs": 556.0124999999998,
+      "verificationMs": 0.4313750000001164,
+      "reuseMs": 6.390124999999898,
+      "verifiedWithoutLedgerOrStore": 1,
+      "requireReadingContext": true,
+      "tamperedCarrierRejected": true,
+      "differentEnvironmentRejected": true,
+      "receipts": "bound-lock/1 at=place:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=publication/evidence/lineage-ceiling value=sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c\nbound-lock/1 at=witness:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=proofs/lineage-ceiling.json value=sha256:2af300624efe431ab6f8a119c49b439c4a6f8a5bd61ce855c881fc7df176b54f\nbound-lock/1 at=witness:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=samples/laws/lineage-ceiling/yes.json value=sha256:65939cfabe2a3463c361c0425444a7552fd62675af968bcbb5aaaefea46c668c\nbound-lock/1 at=witness:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=samples/laws/lineage-ceiling/no.json value=sha256:61d020dadb04ddd007311562b3c3348429b3b78f8a5880736ede8a0da376b3b6\nbound-lock/1 at=witness:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=vectors/laws/lineage-ceiling.json value=sha256:aeb0e82d35dcbe54b6a9e8cc3efab96e822382bd17a221962d51e869af50cde2\nbound-lock/1 at=witness:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=vectors/laws/policy.json value=sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939\nbound-lock/1 at=witness:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=src/measures/capacity.ts value=sha256:fde3d6d1fdcefd9fc91c9a0d7acd9772940d4022b723596b9a36014fe712a8c4\nbound-lock/1 at=witness:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=src/measures/mix-loss.ts value=sha256:917ed6c0145b66cee19d31ce0ba1a42d843726530002e609529c01cc8ded7746\nbound-lock/1 at=witness:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=src/measures/rational.ts value=sha256:d8b9eadbba673a594ee45386cb927ff2e9e5c5323d9aa9f129ed6d8ae2512e2a\nbound-lock/1 at=witness:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=src/lattice/price/premium.ts value=sha256:a901e2ff834faf5bee059c0d65c289b5c6056999aedfd5fad05197dc607a21a1\nbound-lock/1 at=witness:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=test/vectors-harness.ts value=sha256:cad3e737def48c6b1ed4069aceb9bdf24c75358572c16a082a7a20093bbc38e9\nbound-lock/1 at=witness:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=vectors/laws/f1/path-witness.json value=sha256:8d441e59faac1bcb860554632e87a7b9f84222c7455de9c999ccfcdbbea3edab\nbound-lock/1 at=witness:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=vectors/laws/f1/finite-arithmetic.json value=sha256:9e984bc906d9f9ec4dc0d7c91cd0ab732d888675451328b0199d155d9e3a1134\nbound-lock/1 at=place:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=interval measure=count role=writes scope=publication/evidence/lineage-ceiling value=0..0\nbound-lock/1 at=place:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=digest role=writes scope=receipts/readings/2934f68cd6dc7ac7490d556d9bd3819c30b46868c50e3e494be3a559288fef54/33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c/identity value=sha256:4a2659587db2dea961150c97b31f6066f6135fe3ae40293b2ed1ab450c8b078a\nbound-lock/1 at=place:sha256:9fa1c84892384c04f9a93967ffaa4aa2031ad9659442800d3c7d33df10ed4636 by=reader:7f5e6a62ebe4 form=alphabet measure=observed role=writes scope=receipts/readings/2934f68cd6dc7ac7490d556d9bd3819c30b46868c50e3e494be3a559288fef54/33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c value=sha256:9fa1c84892384c04f9a93967ffaa4aa2031ad9659442800d3c7d33df10ed4636\nbound-lock/1 about=\"[\\\"reading-context@1\\\",\\\"sha256:1ccae3c7428a06fcb7303aab3426863c7a52af652c4f5c5e1a979a53784c87af\\\",\\\"sha256:5ddeb79a99c83a6f07e79a20ab26f372d4255488304f09384bb132e4e0629053\\\",\\\"sha256:9c8e4480699f6f7297c8c5790700be0ce9b82a23782b221049fcfa0233769b63\\\",[[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"fixture\\\\\\\"]\\\",\\\"sha256:e1952108784f2655b550c17877c13bee114f5f88160895eaa5425d273b22988e\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"proofs/lineage-ceiling.json\\\\\\\"]\\\",\\\"sha256:2af300624efe431ab6f8a119c49b439c4a6f8a5bd61ce855c881fc7df176b54f\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"provider\\\\\\\"]\\\",\\\"sha256:3b7155e62fc52cdbeeefa505f2d6a9497f7ec6a5f676e7fa078a21a73a460e37\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"samples/laws/lineage-ceiling/no.json\\\\\\\"]\\\",\\\"sha256:61d020dadb04ddd007311562b3c3348429b3b78f8a5880736ede8a0da376b3b6\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"samples/laws/lineage-ceiling/yes.json\\\\\\\"]\\\",\\\"sha256:65939cfabe2a3463c361c0425444a7552fd62675af968bcbb5aaaefea46c668c\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"src/lattice/price/premium.ts\\\\\\\"]\\\",\\\"sha256:a901e2ff834faf5bee059c0d65c289b5c6056999aedfd5fad05197dc607a21a1\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"src/measures/capacity.ts\\\\\\\"]\\\",\\\"sha256:fde3d6d1fdcefd9fc91c9a0d7acd9772940d4022b723596b9a36014fe712a8c4\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"src/measures/mix-loss.ts\\\\\\\"]\\\",\\\"sha256:917ed6c0145b66cee19d31ce0ba1a42d843726530002e609529c01cc8ded7746\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"src/measures/rational.ts\\\\\\\"]\\\",\\\"sha256:d8b9eadbba673a594ee45386cb927ff2e9e5c5323d9aa9f129ed6d8ae2512e2a\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"test/vectors-harness.ts\\\\\\\"]\\\",\\\"sha256:cad3e737def48c6b1ed4069aceb9bdf24c75358572c16a082a7a20093bbc38e9\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"vectors/laws/f1/finite-arithmetic.json\\\\\\\"]\\\",\\\"sha256:9e984bc906d9f9ec4dc0d7c91cd0ab732d888675451328b0199d155d9e3a1134\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"vectors/laws/f1/path-witness.json\\\\\\\"]\\\",\\\"sha256:8d441e59faac1bcb860554632e87a7b9f84222c7455de9c999ccfcdbbea3edab\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"vectors/laws/lineage-ceiling.json\\\\\\\"]\\\",\\\"sha256:aeb0e82d35dcbe54b6a9e8cc3efab96e822382bd17a221962d51e869af50cde2\\\"],[\\\"[\\\\\\\"context\\\\\\\",\\\\\\\"vectors/laws/policy.json\\\\\\\"]\\\",\\\"sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"proofs/lineage-ceiling.json\\\\\\\"]\\\",\\\"sha256:2af300624efe431ab6f8a119c49b439c4a6f8a5bd61ce855c881fc7df176b54f\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"samples/laws/lineage-ceiling/no.json\\\\\\\"]\\\",\\\"sha256:61d020dadb04ddd007311562b3c3348429b3b78f8a5880736ede8a0da376b3b6\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"samples/laws/lineage-ceiling/yes.json\\\\\\\"]\\\",\\\"sha256:65939cfabe2a3463c361c0425444a7552fd62675af968bcbb5aaaefea46c668c\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"src/lattice/price/premium.ts\\\\\\\"]\\\",\\\"sha256:a901e2ff834faf5bee059c0d65c289b5c6056999aedfd5fad05197dc607a21a1\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"src/measures/capacity.ts\\\\\\\"]\\\",\\\"sha256:fde3d6d1fdcefd9fc91c9a0d7acd9772940d4022b723596b9a36014fe712a8c4\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"src/measures/mix-loss.ts\\\\\\\"]\\\",\\\"sha256:917ed6c0145b66cee19d31ce0ba1a42d843726530002e609529c01cc8ded7746\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"src/measures/rational.ts\\\\\\\"]\\\",\\\"sha256:d8b9eadbba673a594ee45386cb927ff2e9e5c5323d9aa9f129ed6d8ae2512e2a\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"test/vectors-harness.ts\\\\\\\"]\\\",\\\"sha256:cad3e737def48c6b1ed4069aceb9bdf24c75358572c16a082a7a20093bbc38e9\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"vectors/laws/f1/finite-arithmetic.json\\\\\\\"]\\\",\\\"sha256:9e984bc906d9f9ec4dc0d7c91cd0ab732d888675451328b0199d155d9e3a1134\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"vectors/laws/f1/path-witness.json\\\\\\\"]\\\",\\\"sha256:8d441e59faac1bcb860554632e87a7b9f84222c7455de9c999ccfcdbbea3edab\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"vectors/laws/lineage-ceiling.json\\\\\\\"]\\\",\\\"sha256:aeb0e82d35dcbe54b6a9e8cc3efab96e822382bd17a221962d51e869af50cde2\\\"],[\\\"[\\\\\\\"file\\\\\\\",\\\\\\\"vectors/laws/policy.json\\\\\\\"]\\\",\\\"sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939\\\"],[\\\"[\\\\\\\"plan\\\\\\\"]\\\",\\\"sha256:e4a155dedffa07ca3e30e479a47bdb82927faabad2c638aee982707f847caa78\\\"]],[[\\\"cwd\\\",\\\"sha256:f20990ad23bbb644437946b99e41000cf375748d5c5f1707db0dfc6abc3bc74d\\\"],[\\\"flags\\\",\\\"sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\\\"],[\\\"platform\\\",\\\"sha256:131558aa9b918882931da265b5d354d6b219f87e9ae251ce24f2c18d402b9288\\\"],[\\\"runtime\\\",\\\"sha256:849eadb22bf36ee34f9e5f59d6eb409a47ef531b3b2e5fdafb9e807b5399d090\\\"],[\\\"variables\\\",\\\"sha256:f8aff46e3a216de37011a3d11b0705f9c49d2f79a2c557d4facf5cbf2d36ad80\\\"]]]\\n\" at=place:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=alphabet measure=bytes role=writes scope=receipts/readings/2934f68cd6dc7ac7490d556d9bd3819c30b46868c50e3e494be3a559288fef54/33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c value=sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c\nbound-lock/1 about=\"bound-lock/1 at=place:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=interval measure=count role=writes scope=publication/evidence/lineage-ceiling value=0..0\\n\" at=place:sha256:9fa1c84892384c04f9a93967ffaa4aa2031ad9659442800d3c7d33df10ed4636 by=reader:7f5e6a62ebe4 form=interval measure=count role=writes scope=receipts/readings/2934f68cd6dc7ac7490d556d9bd3819c30b46868c50e3e494be3a559288fef54/33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c value=1..1\nbound-lock/1 at=place:sha256:33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c by=reader:7f5e6a62ebe4 form=interval measure=s role=writes scope=receipts/readings/2934f68cd6dc7ac7490d556d9bd3819c30b46868c50e3e494be3a559288fef54/33805c7455b449924791b62e9b7bc2eef230bb27a7916c8282de5d1c88fc488c value=0.287389..0.287389\n"
+    },
+    {
+      "place": "catalog-missing-model",
+      "case": "no",
+      "fixture": "sha256:267481271cd6bb69525dde0f26e3ad62d5272e1364b85d29045aa052283ba942",
+      "expectedRefusal": "REFUSE·lineage anchor-digest samples/laws/lineage-ceiling/yes.json",
+      "refusal": "Error: REFUSE·reading publication/evidence/lineage-ceiling · Error: REFUSE·lineage anchor-digest samples/laws/lineage-ceiling/yes.json",
+      "executionMs": 535.2710000000002,
+      "fixturePreserved": true
+    },
+    {
+      "place": "catalog-missing-model-matched-digest",
+      "case": "no",
+      "fixture": "sha256:750b2bc1fce6b111b10e4938fdcc31f8eabcfceb7263345fa158383aecad273a",
+      "expectedRefusal": "REFUSE·lineage markov-model-required",
+      "refusal": "Error: REFUSE·reading publication/evidence/lineage-ceiling · Error: REFUSE·lineage markov-model-required",
+      "executionMs": 474.1072079999999,
+      "fixturePreserved": true
+    },
+    {
+      "place": "catalog-revealed-indicator-matched-digest",
+      "case": "no",
+      "fixture": "sha256:6a7769b2cb6e75375fb8329a894ccacd7ffd358e03a72bb04274635c1f76fa31",
+      "expectedRefusal": "REFUSE·lineage declared-channel-required",
+      "refusal": "Error: REFUSE·reading publication/evidence/lineage-ceiling · Error: REFUSE·lineage declared-channel-required",
+      "executionMs": 466.46941699999934,
+      "fixturePreserved": true
+    }
+  ],
+  "signatures": 0,
+  "admission": false,
+  "ownerUsed": false,
+  "kernelReexecution": false,
+  "currentAdmissionResponse": false,
+  "publicDeliveryVerified": false,
+  "READY": false,
+  "meaning": "actual context-bearing native candidate receipts for declared symmetric Markov composition, exact joint tables, capacityP0 reuse and F1 object separators; no admitted law or general kernel proof",
+  "resultVector": "vectors/laws/lineage-ceiling.json",
+  "resultVectorSha256": "sha256:aeb0e82d35dcbe54b6a9e8cc3efab96e822382bd17a221962d51e869af50cde2",
+  "readerSource": "test/support/lineage-reader.ts",
+  "readerSourceSha256": "sha256:8a261eb13e55cd74192ecf4f07dd0c13669f72cd3bd720fa4c1bab8c5e1f3003",
+  "providerStanding": "bound-lock/1 at=witness:044/lineage-evidence form=alphabet kind=capsule measure=digest restsOn=sha256:5ddeb79a99c83a6f07e79a20ab26f372d4255488304f09384bb132e4e0629053 role=writes scope=offers/capsule/lineage-044 value=sha256:5ddeb79a99c83a6f07e79a20ab26f372d4255488304f09384bb132e4e0629053\nbound-lock/1 at=witness:044/lineage-evidence form=alphabet measure=input-projection role=writes scope=region/lineage-044 value=inputs\nbound-lock/1 at=witness:044/lineage-evidence form=alphabet measure=reads role=writes scope=region/lineage-044 value=offers/capsule/lineage-044|region/lineage-044|proofs/lineage-ceiling.json|samples/laws/lineage-ceiling/yes.json|samples/laws/lineage-ceiling/no.json|vectors/laws/lineage-ceiling.json|vectors/laws/policy.json|src/measures/capacity.ts|src/measures/mix-loss.ts|src/measures/rational.ts|src/lattice/price/premium.ts|test/vectors-harness.ts|vectors/laws/f1/path-witness.json|vectors/laws/f1/finite-arithmetic.json\nbound-lock/1 at=witness:044/lineage-evidence form=alphabet measure=writes role=writes scope=region/lineage-044 value=count\n",
+  "places": "two directories of one origin; immutable instrument/dependencies shared",
+  "setupCosts": "archive construction, fixture preparation and dependency hydration are preparation, outside the recorded native execution intervals; no preparation ceiling certified"
+}

@@ -1,0 +1,30 @@
+{
+  "id":"marginal-information/one-joint-two-orders",
+  "classification":"measure with an explicit finite joint prior; standard chain-rule and conditional-DPI consequences with distinguishing vectors, not a new universal lineage law",
+  "quantity":"Delta(Y|S)=I(T;Y|S)=H(T|S)-H(T|S,Y). Both orders use the identical full joint law, truth variable, prior, source identities and domain. The selected observation is the full tuple, not an aggregated majority value.",
+  "scope":"Finite named alphabets and rational joint probabilities normalized exactly to one; bits use the existing binary64-log2 approximation. These are model quantities, not certified empirical mutual-information estimates.",
+  "knownIdentities":[
+    {"statement":"Delta>=0; Delta=0 iff T and Y are conditionally independent given S, under the declared joint law.","classification":"standard Shannon identity and nonnegativity; finite vectors here, no new Lean formalization"},
+    {"statement":"For any complete addition order, the sum of marginals is I(T;all sources). The sum is invariant, while individual attribution may depend on order.","classification":"chain rule; no permutation of attributed acts or history is performed"},
+    {"statement":"An exact copy determined by S has zero marginal information. Another source has strictly greater gain only when its conditional information is positive.","classification":"conditional consequence, not a rule inferred from lineage labels"}
+  ],
+  "comparison":{
+    "sufficientHypothesis":"For the same prior and previous tuple S, require T -> (S,Y_other) -> Y_same, equivalently I(T;Y_same|S,Y_other)=0. This is a conditional garbling/order assumption; distinct lineage or equal prediction accuracy does not establish it.",
+    "conclusion":"I(T;Y_same|S)<=I(T;Y_other|S). Strictness additionally requires a positive information difference; it is not automatic.",
+    "argument":"Expand I(T;Y_same,Y_other|S) in both orders. Under the stated conditional independence the expansion beginning with Y_other ends at I(T;Y_other|S). The other expansion adds a nonnegative term to I(T;Y_same|S).",
+    "vectorCheck":"The candidate reader verifies the conditional-independence hypothesis by exact rational factorization of the handed finite table; it does not infer causal lineages."
+  },
+  "existingImplementation":"Reuse published mixProjectionLoss on configurations (truth, selected tuple), with zero weight on truth and unit weight on tuple. Its conditional configuration loss is exactly H(truth|tuple). No entropy engine, causal generator or algebra is replaced.",
+  "counterexamples":[
+    {"id":"equal-quality-reverses-lineage-ranking","result":"All three sources have accuracy 1/2 and individual information 1 bit. After the first source, the same-lineage complementary projection adds 1 bit while the other-lineage redundant projection adds 0. A comparable marginal quality is insufficient; the missing condition concerns joint conditional information."},
+    {"id":"saturated-truth","result":"After a perfect report, a noiseless report from a distinct declared lineage adds zero, so no universal strict ranking holds."},
+    {"id":"xor-synergy","result":"Each masked view alone has zero truth information; after one view the other adds a bit. Mutual-information gains need not have diminishing returns without additional hypotheses."},
+    {"id":"majority-is-not-the-joint-observation","result":"The full tuple preserves the perfect first report. The existing weighted mix becomes constant after two constant-zero reports and loses a bit. That loss is not negative conditional mutual information."}
+  ],
+  "validation":"Missing joint/prior is unmeasured; nonnormalized priors, invalid domains and orders that are not permutations refuse by name. Every prefix is projected from the same complete joint table; no defaults, resampling, inferred independence or truth-free estimation is supplied.",
+  "cache":"Only scalar subset readings are cached by an explicitly named set-of-coordinates key. This sorts neither the handed addition orders nor their attributed history; probabilities and atom IDs remain intact.",
+  "numeric":"Exact rational masses; approximate bits, default vector tolerance 1e-12. Raw floating-point residuals are retained, never clamped to zero to claim a law.",
+  "literature":{"title":"Lecture Notes on Statistics and Information Theory","author":"John Duchi","url":"https://web.stanford.edu/class/stats311/lecture-notes.pdf","references":["Chapter 2.1, mutual-information chain rule","Proposition 2.1.9, data processing"],"alreadyKnown":"Conditional mutual information, the chain rule and data processing.","addsHere":"One-joint two-order vectors, an exact finite check of the comparison hypothesis, and counterexamples to lineage-only ranking; no new Shannon inequality."},
+  "unchanged":"Bound, wire, M/3-M/4, the algebra and signed public exports remain unchanged. The new measure is a candidate beside the algebra.",
+  "open":["No causal lineage identification or optimal source-selection policy follows.","No sampling uncertainty or truth-free estimation of mutual information is claimed.","General Shannon formalization, reader admission, public delivery and export remain pending."]
+}

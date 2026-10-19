@@ -1,0 +1,17 @@
+{
+  "id": "helly-comb@1",
+  "policy": "vectors/laws/policy.json",
+  "classification": "law by finite counterexample, Lean kernel checked",
+  "statement": "Pairwise intersection does not imply joint intersection for arbitrary finite nonconvex subsets (combs).",
+  "domain": "Finite carrier {0,1,2}; A={0,1}, B={1,2}, C={0,2}. Witnesses AB=1, AC=0, BC=2; ABC empty.",
+  "hypotheses": "No convexity/interval assumption. C has a hole. Does not refute the interval-only T38.",
+  "negative": "Reject promoting pairwise compatibility of these combs to a global witness.",
+  "existing": "Classical Helly theory needs convexity; finite intervals on a line are 2-Helly. The elementary nonconvex counterexample is not a new discovery.",
+  "adds": "Exact finite subset witness and compiled Lean certificate tied to Obligations candidate bytes; no new form or wire encoding.",
+  "references": [
+    "https://www.math.ucdavis.edu/~deloera/TEACHING/MATH114/convexitythy.pdf"
+  ],
+  "status": "finite witness checked; no generalized theorem",
+  "signatures": 0,
+  "admission": false
+}

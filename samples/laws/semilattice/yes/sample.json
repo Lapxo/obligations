@@ -1,0 +1,29 @@
+{
+  "contract": "static interval meet over a declared LinearOrder",
+  "bridgeDomain": {
+    "endpoints": [
+      -1,
+      0,
+      1,
+      2
+    ],
+    "representation": "exact finite integers; no NaN, infinities or negative-zero identity claim"
+  },
+  "claims": [
+    "commutative",
+    "associative",
+    "idempotent",
+    "narrows in the existing API preorder"
+  ],
+  "semanticOrder": "interval inclusion; distinct crossed endpoint pairs are equivalent only observationally",
+  "context": "fixed bounds and complete context; accumulated restrictions only",
+  "replicationConsequence": "finite permutation and duplicate delivery preserve the reduced interval result; eventual delivery is a separate assumption",
+  "excluded": [
+    "withdrawal",
+    "witnessed widening",
+    "changing epochs or signed context",
+    "equality of full attributed histories",
+    "general all-IEEE-754 implementation verification"
+  ],
+  "proof": "proofs/lean/Obligations/Cell.lean"
+}

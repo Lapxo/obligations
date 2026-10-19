@@ -1,0 +1,41 @@
+{
+  "id":"lineage/symmetric-markov-ceiling",
+  "classification":"conditional law with distinguishing finite vectors; Shannon argument cited, not Lean-formalized",
+  "source":"samples/laws/lineage-ceiling/yes.json",
+  "statement":"For finite n>=2, uniform truth X, an n-ary symmetric channel X->Z with error c in [0,1], and X->Z->Y^K->A, I(X;A)<=I(X;Z)=log2(n)-h2(c)-c*log2(n-1).",
+  "conditions":[
+    "The reports have a joint kernel conditional on Z alone; pairwise conditional independence is neither required for this bound nor a substitute for the Markov condition.",
+    "Aggregation uses reports alone, or randomness conditionally independent of X given the reports. A revealed channel-error/cause indicator, side channel or truth probe is extra input and must be included before applying DPI.",
+    "c is the declared crossover probability of this symmetric channel; neither unanimity nor a shared-cause frequency identifies it without a model.",
+    "No private p, hypothesis of M/3, or governance model M/4 is changed. The old always-wrong active cause with private p>0 is a different joint law.",
+    "Both c=0 and c=1 are permitted. c=(n-1)/n gives zero information; for binary c=1 the channel is an invertible complement and gives one bit. This quantity is not monotone over all c in [0,1]."
+  ],
+  "proofChain":[
+    {"id":"symmetric-output","argument":"Uniform X and the symmetric kernel imply uniform Z. The posterior of X given Z has masses 1-c and c/(n-1) on the other symbols, so H(X|Z)=h2(c)+c*log2(n-1), with 0 log 0=0."},
+    {"id":"data-processing","argument":"The declared Markov kernels imply I(X;Y^K|Z)=0 and I(X;A|Y^K)=0. The chain rule and nonnegative conditional mutual information give I(X;A)<=I(X;Y^K)<=I(X;Z). No independence among reports given Z is needed for this inequality.","reference":"Duchi, Proposition 2.1.9"},
+    {"id":"existing-instance","argument":"Published capacityP0 computes this expression as mutual information for single-dominant-factor@1 at private p=0, for every positive K. In that instance all reports are copies of Z, so equality is already exact; a finite-copy vector is not a new discovery."},
+    {"id":"finite-approach","classification":"experiment with declared conditional-iid model","argument":"Compose the symmetric lineage channel with the published decisionInformation table for c=0, p=e and plurality-uniform-ties@1. Exact rational joint tables give a finite sequence of gaps to capacityP0. Under the separately declared fixed-parameter iid recovery hypothesis, consistency and finite-alphabet entropy continuity imply the limit; the finite sequence does not prove the limit."}
+  ],
+  "fanoBoundary":{
+    "known":"Fano gives H(X|Z)<=h2(P[X!=Z])+P[X!=Z]*log2(n-1). For uniform X this is a lower bound on I(X;Z), not the proposed upper bound.",
+    "equalityCondition":"The symmetric channel supplies equality in the entropy expression. A marginal error probability alone does not.",
+    "negative":"A binary uniform source with P(Z=1|X=0)=0 and P(Z=0|X=1)=1/2 has error 1/4 and I=0.311278124459..., larger than 1-h2(1/4)=0.188721875540...."
+  },
+  "relationToF1":{
+    "existingLaw":"law/thm-extremal",
+    "existingVectors":["vectors/laws/f1/path-witness.json","vectors/laws/f1/finite-arithmetic.json"],
+    "object":"F1 concerns deterministic partitions U,V of one uniformly weighted N-element universe, in the maintained refinement order.",
+    "quantity":"RI_H=H(U)+H(V)-H(join)-H(meet)=I(U;V)-H(G)=I(U;V|G), where join is the common refinement (U,V) and G is their common coarsening, a deterministic function of each.",
+    "bound":"RI_H<=log2(N)-2+2/N; N=1,2 have zero maximum. This is not I(truth;aggregate); N need not equal the truth alphabet n.",
+    "jointUse":"Apply F1 only when the partition/uniform-universe hypotheses hold. Apply the lineage ceiling only to a designated X and its declared Markov channel. If both models are supplied, both bounds may be written beside their own quantities; taking their minimum as a bound on either quantity is invalid.",
+    "separators":[
+      "Uniform binary truth with noiseless Z has I(X;Z)=1 while F1 on N=2 has maximum RI_H=0.",
+      "Let X,Z be independent uniform bits (c=1/2), and R independent uniform on four symbols. The path partitions of R have RI_H=1/2. Reports can ignore Z and output those two views of R, so X->Z->reports holds and I(X;reports)=0. On the full uniform 16-atom (X,Z,R) universe F1 still applies (c_16=2.125), but RI_H=1/2 exceeds the zero lineage ceiling."
+    ],
+    "notAdded":"No proof of F1 is redone; its existing path witness and public c_n are reused."
+  },
+  "literature":[
+    {"title":"Lecture Notes on Statistics and Information Theory","author":"John Duchi","url":"https://web.stanford.edu/class/stats311/lecture-notes.pdf","sections":["2.1.3, Proposition 2.1.9: data processing","Proposition 2.3.3: Fano"],"alreadyKnown":"DPI and Fano, including the direction of the inequalities.","addsHere":"Explicit lineage-channel conditions, reuse of the already published expression, and vectors separating truth information from partition residual. No new information-theory inequality or inference without truth is claimed."}
+  ],
+  "evidenceLimits":["No general Lean proof of Shannon DPI here.","Finite vectors do not enumerate arbitrary observation kernels.","No original browser simulation is recovered or authenticated.","Activation identification, sleeper bounds and all other excluded regions remain open."]
+}

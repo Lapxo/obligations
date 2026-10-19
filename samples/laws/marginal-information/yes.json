@@ -1,0 +1,459 @@
+{
+  "id": "marginal-information-models@1",
+  "policy": {
+    "logarithm": "binary64-log2",
+    "budget": "100000"
+  },
+  "cases": [
+    {
+      "id": "copy-versus-new-channel",
+      "classification": "declared joint model, not inferred independence",
+      "generation": "uniform binary truth; a is BSC(1/4), copy is exactly a; b is a separate BSC(1/4); the two noise bits are jointly independent given truth by this declared joint table",
+      "model": {
+        "model": "finite-declared-joint@1",
+        "truthValues": [
+          "0",
+          "1"
+        ],
+        "sources": [
+          {
+            "id": "a",
+            "lineage": "L1",
+            "values": [
+              "0",
+              "1"
+            ]
+          },
+          {
+            "id": "copy",
+            "lineage": "L1",
+            "values": [
+              "0",
+              "1"
+            ]
+          },
+          {
+            "id": "b",
+            "lineage": "L2",
+            "values": [
+              "0",
+              "1"
+            ]
+          }
+        ],
+        "atoms": [
+          {
+            "id": "0",
+            "truth": "0",
+            "values": {
+              "a": "0",
+              "copy": "0",
+              "b": "0"
+            },
+            "p": "9/32"
+          },
+          {
+            "id": "1",
+            "truth": "0",
+            "values": {
+              "a": "0",
+              "copy": "0",
+              "b": "1"
+            },
+            "p": "3/32"
+          },
+          {
+            "id": "2",
+            "truth": "0",
+            "values": {
+              "a": "1",
+              "copy": "1",
+              "b": "0"
+            },
+            "p": "3/32"
+          },
+          {
+            "id": "3",
+            "truth": "0",
+            "values": {
+              "a": "1",
+              "copy": "1",
+              "b": "1"
+            },
+            "p": "1/32"
+          },
+          {
+            "id": "4",
+            "truth": "1",
+            "values": {
+              "a": "1",
+              "copy": "1",
+              "b": "1"
+            },
+            "p": "9/32"
+          },
+          {
+            "id": "5",
+            "truth": "1",
+            "values": {
+              "a": "1",
+              "copy": "1",
+              "b": "0"
+            },
+            "p": "3/32"
+          },
+          {
+            "id": "6",
+            "truth": "1",
+            "values": {
+              "a": "0",
+              "copy": "0",
+              "b": "1"
+            },
+            "p": "3/32"
+          },
+          {
+            "id": "7",
+            "truth": "1",
+            "values": {
+              "a": "0",
+              "copy": "0",
+              "b": "0"
+            },
+            "p": "1/32"
+          }
+        ]
+      },
+      "orders": [
+        [
+          "a",
+          "copy",
+          "b"
+        ],
+        [
+          "b",
+          "a",
+          "copy"
+        ]
+      ],
+      "comparison": {
+        "previous": [
+          "a"
+        ],
+        "same": "copy",
+        "other": "b"
+      }
+    },
+    {
+      "id": "equal-quality-reverses-lineage-ranking",
+      "classification": "counterexample to universal ranking even at equal individual accuracy and information",
+      "generation": "uniform two-bit truth; L1 carries the full truth and supplies two different projections; L2 directly supplies the first-bit projection. All source predictions have accuracy 1/2 and individual information 1 bit. This is outside any additional hypothesis that all siblings are identical copies.",
+      "model": {
+        "model": "finite-declared-joint@1",
+        "truthValues": [
+          "00",
+          "01",
+          "10",
+          "11"
+        ],
+        "sources": [
+          {
+            "id": "a",
+            "lineage": "L1",
+            "values": [
+              "00",
+              "10"
+            ]
+          },
+          {
+            "id": "sibling",
+            "lineage": "L1",
+            "values": [
+              "00",
+              "01"
+            ]
+          },
+          {
+            "id": "b",
+            "lineage": "L2",
+            "values": [
+              "00",
+              "10"
+            ]
+          }
+        ],
+        "atoms": [
+          {
+            "id": "0",
+            "truth": "00",
+            "values": {
+              "a": "00",
+              "sibling": "00",
+              "b": "00"
+            },
+            "p": "1/4"
+          },
+          {
+            "id": "1",
+            "truth": "01",
+            "values": {
+              "a": "00",
+              "sibling": "01",
+              "b": "00"
+            },
+            "p": "1/4"
+          },
+          {
+            "id": "2",
+            "truth": "10",
+            "values": {
+              "a": "10",
+              "sibling": "00",
+              "b": "10"
+            },
+            "p": "1/4"
+          },
+          {
+            "id": "3",
+            "truth": "11",
+            "values": {
+              "a": "10",
+              "sibling": "01",
+              "b": "10"
+            },
+            "p": "1/4"
+          }
+        ]
+      },
+      "orders": [
+        [
+          "a",
+          "sibling",
+          "b"
+        ],
+        [
+          "a",
+          "b",
+          "sibling"
+        ]
+      ],
+      "comparison": {
+        "previous": [
+          "a"
+        ],
+        "same": "sibling",
+        "other": "b"
+      }
+    },
+    {
+      "id": "xor-synergy",
+      "classification": "counterexample to unconditional diminishing returns",
+      "generation": "truth and mask are jointly independent uniform bits; the two handed views are mask and truth XOR mask. The sources share the declared masking mechanism; no conditional independence of those views is claimed.",
+      "model": {
+        "model": "finite-declared-joint@1",
+        "truthValues": [
+          "0",
+          "1"
+        ],
+        "sources": [
+          {
+            "id": "mask",
+            "lineage": "Lmask",
+            "values": [
+              "0",
+              "1"
+            ]
+          },
+          {
+            "id": "masked",
+            "lineage": "Lmask",
+            "values": [
+              "0",
+              "1"
+            ]
+          }
+        ],
+        "atoms": [
+          {
+            "id": "0",
+            "truth": "0",
+            "values": {
+              "mask": "0",
+              "masked": "0"
+            },
+            "p": "1/4"
+          },
+          {
+            "id": "1",
+            "truth": "0",
+            "values": {
+              "mask": "1",
+              "masked": "1"
+            },
+            "p": "1/4"
+          },
+          {
+            "id": "2",
+            "truth": "1",
+            "values": {
+              "mask": "0",
+              "masked": "1"
+            },
+            "p": "1/4"
+          },
+          {
+            "id": "3",
+            "truth": "1",
+            "values": {
+              "mask": "1",
+              "masked": "0"
+            },
+            "p": "1/4"
+          }
+        ]
+      },
+      "orders": [
+        [
+          "mask",
+          "masked"
+        ],
+        [
+          "masked",
+          "mask"
+        ]
+      ]
+    },
+    {
+      "id": "saturated-truth",
+      "classification": "counterexample to strict gain from another lineage",
+      "generation": "both declared channels are noiseless; after either source, truth is known",
+      "model": {
+        "model": "finite-declared-joint@1",
+        "truthValues": [
+          "0",
+          "1"
+        ],
+        "sources": [
+          {
+            "id": "a",
+            "lineage": "L1",
+            "values": [
+              "0",
+              "1"
+            ]
+          },
+          {
+            "id": "b",
+            "lineage": "L2",
+            "values": [
+              "0",
+              "1"
+            ]
+          }
+        ],
+        "atoms": [
+          {
+            "id": "0",
+            "truth": "0",
+            "values": {
+              "a": "0",
+              "b": "0"
+            },
+            "p": "1/2"
+          },
+          {
+            "id": "1",
+            "truth": "1",
+            "values": {
+              "a": "1",
+              "b": "1"
+            },
+            "p": "1/2"
+          }
+        ]
+      },
+      "orders": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "a"
+        ]
+      ]
+    },
+    {
+      "id": "majority-is-not-the-joint-observation",
+      "classification": "counterexample to monotonic information after a lossy mix",
+      "generation": "a is perfect; zero1 and zero2 always output zero. Equal-weight majority with three reports is constant even though the joint tuple retains truth.",
+      "model": {
+        "model": "finite-declared-joint@1",
+        "truthValues": [
+          "0",
+          "1"
+        ],
+        "sources": [
+          {
+            "id": "a",
+            "lineage": "L1",
+            "values": [
+              "0",
+              "1"
+            ]
+          },
+          {
+            "id": "zero1",
+            "lineage": "Lzero",
+            "values": [
+              "0"
+            ]
+          },
+          {
+            "id": "zero2",
+            "lineage": "Lzero",
+            "values": [
+              "0"
+            ]
+          }
+        ],
+        "atoms": [
+          {
+            "id": "0",
+            "truth": "0",
+            "values": {
+              "a": "0",
+              "zero1": "0",
+              "zero2": "0"
+            },
+            "p": "1/2"
+          },
+          {
+            "id": "1",
+            "truth": "1",
+            "values": {
+              "a": "1",
+              "zero1": "0",
+              "zero2": "0"
+            },
+            "p": "1/2"
+          }
+        ]
+      },
+      "orders": [
+        [
+          "a",
+          "zero1",
+          "zero2"
+        ],
+        [
+          "zero1",
+          "zero2",
+          "a"
+        ]
+      ]
+    }
+  ],
+  "provenance": "new finite declared joint tables; no original browser bytes, empirical truth labels or lineage identification are claimed",
+  "identity": "both orders of a case use the identical model object and all its atoms; no resampling or refitting by prefix"
+}
