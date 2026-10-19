@@ -53,6 +53,10 @@ console.log(bound.value.toFixed(6), bound.unit);
 This is an information upper bound under the declared single-dominant-factor model,
 not a measurement of truth or proof of independent origins. The four states are unchanged.
 
+For the separate, declared n-ary symmetric lineage channel with uniform truth and no extra truth access, h2(c) is a lower bound on residual truth uncertainty, not a ceiling on information. The full residual is h2(c) + c*log2(n-1); the corresponding information ceiling needs that symmetric channel and the report-only Markov bottleneck. This is the capacityP0 case, not a replacement for the capacityBound calculation above.
+
+The parameter c has the meaning given by its selected mixture or channel model; it is not the genetic inbreeding coefficient F. Cell vacuity and missing delivered bytes are separate questions: a statement about a cell does not verify that an archive or provider exists and matches its digest. Their relationship remains a named tension.
+
 
 ## The paper
 
