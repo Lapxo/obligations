@@ -82,6 +82,7 @@ jobs:
       working-directory: .
       run: |
         set -euo pipefail
+        node "$RUNNER_TEMP/lean-instrument/node_modules/@lapxo/bound/dist/cli/verb.js" land "$RUNNER_TEMP/lean-place"
         node "$RUNNER_TEMP/lean-instrument/node_modules/@lapxo/bound/dist/cli/verb.js" fold "$RUNNER_TEMP/lean-place"
         node "$RUNNER_TEMP/lean-instrument/node_modules/@lapxo/bound/dist/cli/verb.js" fold "$RUNNER_TEMP/lean-place" --check
 'on':
