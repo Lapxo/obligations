@@ -23,7 +23,7 @@ jobs:
       run: |
         set -euo pipefail
         mkdir -p .bound/cas/blobs
-        gh release download "v$(node -p "require('./package.json').version")" --pattern 5399fdc87cb104b5030e092e213ad6584004c6d4de49e716838081ae1f2e4182 --pattern 8655c52a0a4f6e19c883f2fe50b8f34eaa2cee7b21ac14b635a1a70130ab45fd --dir .bound/cas/blobs
+        gh release download "v0.4.4" --pattern 5399fdc87cb104b5030e092e213ad6584004c6d4de49e716838081ae1f2e4182 --pattern 8655c52a0a4f6e19c883f2fe50b8f34eaa2cee7b21ac14b635a1a70130ab45fd --dir .bound/cas/blobs
     - run: npm exec --yes --package=@lapxo/bound@0.2.1 --package=@lapxo/topos@0.2.0 -- bound fold --check
   lean:
     runs-on: ubuntu-24.04
@@ -77,7 +77,7 @@ jobs:
         cp proofs/lean/verification.bound "$RUNNER_TEMP/lean-place/TARGET.bound"
         mkdir -p "$RUNNER_TEMP/lean-place/proofs/lean/.lake"
         ln -s "$GITHUB_WORKSPACE/proofs/lean/.lake/packages" "$RUNNER_TEMP/lean-place/proofs/lean/.lake/packages"
-        gh release download "v$(node -p "require('./package.json').version")" --pattern 1b71c00ce6134659534532519d7139cc5576283b4a5bf1dc83327a3511e555e1 --pattern 0b40747e9fa2ac40c706220732c45870321230f3c5164153b428d7fa0273dd43 --dir "$RUNNER_TEMP/lean-place/.bound/cas/blobs"
+        gh release download "v0.4.4" --pattern 1b71c00ce6134659534532519d7139cc5576283b4a5bf1dc83327a3511e555e1 --pattern 0b40747e9fa2ac40c706220732c45870321230f3c5164153b428d7fa0273dd43 --dir "$RUNNER_TEMP/lean-place/.bound/cas/blobs"
     - name: Fold proof inputs and check receipt reuse
       working-directory: .
       run: |

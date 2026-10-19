@@ -6,7 +6,7 @@
       "code": "sha256:72df3154eb2896bb552c3a052cfa3ba4e943742877c31871e341d9bc1ce0ec05",
       "tests": {
         "status": 0,
-        "stdout": "\u2714 installed 0.4.4 exports have no Bound or Topos runtime dependency (5.040375ms)\n\u2714 installed universal algebra retains the four states and named invalid-chain rejection (0.402875ms)\n\u2714 installed cofailure measures retain models, unmeasured inputs and named conflict refusal (10.096167ms)\n\u2714 installed marginal information retains the declared joint prior, two orders and named order refusal (1.380833ms)\n\u2139 tests 4\n\u2139 suites 0\n\u2139 pass 4\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 93.171416\n",
+        "stdout": "✔ installed 0.4.5 exports have no Bound or Topos runtime dependency (4.792917ms)\n✔ installed universal algebra retains the four states and named invalid-chain rejection (0.376875ms)\n✔ installed cofailure measures retain models, unmeasured inputs and named conflict refusal (10.148875ms)\n✔ installed marginal information retains the declared joint prior, two orders and named order refusal (1.332291ms)\nℹ tests 4\nℹ suites 0\nℹ pass 4\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 91.719917\n",
         "stderr": ""
       },
       "exports": {
@@ -16,8 +16,8 @@
       },
       "check": {
         "status": 0,
-        "stdout": "PASS     closed \u00b7 1 places \u00b7 456 ms\n",
-        "stderr": "RECEIPTS 21 read \u00b7 0 opened \u00b7 reading closures\nRECEIPTS 1 read \u00b7 0 opened \u00b7 456 ms\nCOST     act 0 s\n"
+        "stdout": "PASS     closed · 1 places · 551 ms\n",
+        "stderr": "RECEIPTS 26 read · 0 opened · reading closures\nRECEIPTS 1 read · 0 opened · 551 ms\nCOST     act 1 s\n"
       }
     },
     {
@@ -25,7 +25,7 @@
       "code": "sha256:72df3154eb2896bb552c3a052cfa3ba4e943742877c31871e341d9bc1ce0ec05",
       "tests": {
         "status": 0,
-        "stdout": "\u2714 installed 0.4.4 exports have no Bound or Topos runtime dependency (5.045875ms)\n\u2714 installed universal algebra retains the four states and named invalid-chain rejection (0.407542ms)\n\u2714 installed cofailure measures retain models, unmeasured inputs and named conflict refusal (10.023166ms)\n\u2714 installed marginal information retains the declared joint prior, two orders and named order refusal (1.298958ms)\n\u2139 tests 4\n\u2139 suites 0\n\u2139 pass 4\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 92.05125\n",
+        "stdout": "✔ installed 0.4.5 exports have no Bound or Topos runtime dependency (8.154667ms)\n✔ installed universal algebra retains the four states and named invalid-chain rejection (0.422333ms)\n✔ installed cofailure measures retain models, unmeasured inputs and named conflict refusal (17.286417ms)\n✔ installed marginal information retains the declared joint prior, two orders and named order refusal (1.530542ms)\nℹ tests 4\nℹ suites 0\nℹ pass 4\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 85.5165\n",
         "stderr": ""
       },
       "exports": {
@@ -35,8 +35,8 @@
       },
       "check": {
         "status": 0,
-        "stdout": "PASS     closed \u00b7 1 places \u00b7 452 ms\n",
-        "stderr": "RECEIPTS 21 read \u00b7 0 opened \u00b7 reading closures\nRECEIPTS 1 read \u00b7 0 opened \u00b7 452 ms\nCOST     act 0 s\n"
+        "stdout": "PASS     closed · 1 places · 505 ms\n",
+        "stderr": "RECEIPTS 26 read · 0 opened · reading closures\nRECEIPTS 1 read · 0 opened · 505 ms\nCOST     act 1 s\n"
       }
     }
   ]

@@ -1,0 +1,141 @@
+{
+  "id": "m0-045-preparation",
+  "claim": "conditional-transfer-not-unconditional-limit",
+  "status": "unsigned reader candidate, no native standing receipt",
+  "proof": {
+    "files": [
+      {
+        "path": "proofs/m0-045/Obligations045/ConsensusGrid.lean",
+        "sha256": "sha256:b26a1b68522e881e446a47f4c84cd8b569a1c48f085a5c9a9d03abdeecafacce"
+      },
+      {
+        "path": "proofs/m0-045/Obligations045/M0Coincidence.lean",
+        "sha256": "sha256:e870a43e435f4b4b52f28f44dd7391c40704faa41febd272434d2e56b2bd6771"
+      },
+      {
+        "path": "proofs/m0-045/Obligations045/M0Diagonal.lean",
+        "sha256": "sha256:4d83f047fc5e199f46b2cc28dfe77b006a7dd408f0f14ed54afb5e21315148e2"
+      },
+      {
+        "path": "proofs/m0-045/Obligations045/M0Limit.lean",
+        "sha256": "sha256:aedc88b8ba4edf884cacec78da82eef29187ded0199d44674466425af1585b8c"
+      },
+      {
+        "path": "proofs/m0-045/Obligations045/M0Offdiag.lean",
+        "sha256": "sha256:af8a95d00cd0956acaec06deeebe7156dccf156b698408275c3e710f58c1c1e8"
+      },
+      {
+        "path": "proofs/m0-045/Obligations045.lean",
+        "sha256": "sha256:be4956a2720d696e5456ad108543945c6f65f1986126513f10edcd4f1841bced"
+      },
+      {
+        "path": "proofs/m0-045/lake-manifest.json",
+        "sha256": "sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d"
+      },
+      {
+        "path": "proofs/m0-045/lakefile.toml",
+        "sha256": "sha256:965c6f528716b66d706ea51bfdc5254feac3acf945026f8e74371c11532d8174"
+      },
+      {
+        "path": "proofs/m0-045/lean-toolchain",
+        "sha256": "sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+      }
+    ],
+    "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "auditedTheorems": [
+      "Obligations045.Diagonal.unbiased_diagonal_vector"
+    ],
+    "allowedAxioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ]
+  },
+  "samples": {
+    "inputs": [
+      "contracts/m0-limit-diag.json",
+      "samples/laws/m0-limit-diag/yes/sample.json",
+      "samples/laws/m0-limit-diag/no/sample.json",
+      "vectors/laws/policy.json",
+      "docs/proofs/floor-limit-diag.proof.json"
+    ],
+    "digests": {
+      "contracts/m0-limit-diag.json": "sha256:1f5f36f751999f100c9572a67ef4508ff78d8a7a07186f4eda72cb95c7803220",
+      "samples/laws/m0-limit-diag/yes/sample.json": "sha256:9e01e8d46fb9fd8c9e34aaf13841cdce501749976490793ebaa53cb5ffe29a1e",
+      "samples/laws/m0-limit-diag/no/sample.json": "sha256:ee8b5e661a32eb5fa10b99f8a3d90f94007be570ec526649521afeb997335098",
+      "vectors/laws/policy.json": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939",
+      "docs/proofs/floor-limit-diag.proof.json": "sha256:6f090440c1c08fb6238541f143b868a29ace832d236b44382eb0f8f74cbed5d0"
+    }
+  },
+  "capturePolicy": {
+    "timeoutMs": 25000,
+    "responseBytes": 65536
+  },
+  "execution": {
+    "profile": "lean-kernel@1",
+    "project": "proofs/m0-045",
+    "identityInputs": [
+      "proofs/m0-045/Obligations045/ConsensusGrid.lean",
+      "proofs/m0-045/Obligations045/M0Coincidence.lean",
+      "proofs/m0-045/Obligations045/M0Diagonal.lean",
+      "proofs/m0-045/Obligations045/M0Limit.lean",
+      "proofs/m0-045/Obligations045/M0Offdiag.lean",
+      "proofs/m0-045/Obligations045.lean",
+      "proofs/m0-045/lake-manifest.json",
+      "proofs/m0-045/lakefile.toml",
+      "proofs/m0-045/lean-toolchain",
+      "vectors/laws/m0-limit-diag.lean.json",
+      "contracts/m0-limit-diag.json",
+      "samples/laws/m0-limit-diag/yes/sample.json",
+      "samples/laws/m0-limit-diag/no/sample.json",
+      "vectors/laws/policy.json",
+      "docs/proofs/floor-limit-diag.proof.json"
+    ],
+    "toolchain": "leanprover/lean4:v4.19.0",
+    "compilerIdentity": "6caaee842e94",
+    "targets": [
+      "Obligations045"
+    ],
+    "sources": [
+      "Obligations045/M0Diagonal.lean"
+    ],
+    "auditImports": [
+      "Obligations045.M0Diagonal"
+    ],
+    "negative": {
+      "name": "zero-diagonal-mass",
+      "source": "import Obligations045.M0Diagonal\nexample : Obligations045.Diagonal.unbiasedNumerator 4 = 0 := by decide\n",
+      "exitCode": 1,
+      "cause": [
+        "tactic 'decide'",
+        "is false"
+      ]
+    },
+    "extraNegatives": []
+  },
+  "limits": [
+    "The reader candidate reuses executeLean, auditLeanAxioms and judgeLeanNegative from the existing instrument; only declaration-based selection is extended.",
+    "No Bound source, authority, signed file or wire is modified.",
+    "Three original demand cards remain open; no root TARGET or release receipt is regenerated."
+  ],
+  "revision": "v2-offdiag-explicit-diagonal-vector",
+  "quartets": [
+    "m0-allocation",
+    "m0-finite-grid",
+    "m0-limit-offdiag",
+    "m0-limit-diag",
+    "m0-pair-coincidence"
+  ],
+  "theoremBoundary": {
+    "offdiag": "kernel theorem on conditional lineage-array probability spaces; no convergence hypothesis or CLT assumed",
+    "diag": "finite vector + written normal-approximation proof; no general Lean theorem",
+    "computationalBridge": "Grouped binomial count formula to lineage-array integral has not been separately formalized",
+    "lawPromotion": "none; no admission, signatures or READY"
+  },
+  "diagonalProof": {
+    "path": "docs/proofs/floor-limit-diag.proof.json",
+    "sha256": "sha256:6f090440c1c08fb6238541f143b868a29ace832d236b44382eb0f8f74cbed5d0",
+    "kernelChecked": false,
+    "classification": "text proof relying on cited external normal-approximation theorem; finite vector separately kernel checked"
+  }
+}

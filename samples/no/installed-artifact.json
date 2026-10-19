@@ -1,7 +1,7 @@
 {
   "format": "installed-acceptance/1",
   "name": "@lapxo/obligations",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "exports": {
     ".": {
       "types": "./dist/lattice/index.d.ts",
@@ -400,7 +400,7 @@
     }
   ],
   "tests": [
-    "installed 0.4.4 exports have no Bound or Topos runtime dependency",
+    "installed 0.4.5 exports have no Bound or Topos runtime dependency",
     "installed universal algebra retains the four states and named invalid-chain rejection",
     "installed cofailure measures retain models, unmeasured inputs and named conflict refusal",
     "installed marginal information retains the declared joint prior, two orders and named order refusal"

@@ -1,0 +1,5 @@
+{
+  "name": "false-triple-moment",
+  "expectedExit": 1,
+  "causePolicy": "actual reader/Lean diagnostic captured; no expected stdout is invented"
+}
