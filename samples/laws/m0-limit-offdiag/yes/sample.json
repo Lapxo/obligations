@@ -1,0 +1,7 @@
+{
+  "name": "m0-limit-offdiag",
+  "contract": "contracts/m0-limit-offdiag.json",
+  "model": "M0-binary-lineage",
+  "claimsFullDiagonalLeanProof": false,
+  "claimsAdmission": false
+}

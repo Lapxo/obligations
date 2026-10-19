@@ -1,0 +1,6 @@
+{
+  "scope": "m0-allocation",
+  "form": "statement",
+  "status": "unsigned-preparation",
+  "value": "floor_quota_bounds: K>=1, named nonnegative weights summing to one, p in (1/2,1), c in [0,1). Set W_i=sum_{j<i}w_j, n_i(N)=floor(N W_{i+1})-floor(N W_i). Lean proves sum n_i=N, -1<n_i-Nw_i<1, n_i/N tends to w_i, positive-share counts tend to infinity and zero-share counts vanish. Transport counts, membership and weights under permutation."
+}

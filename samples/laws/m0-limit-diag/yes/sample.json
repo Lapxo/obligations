@@ -1,0 +1,7 @@
+{
+  "name": "m0-limit-diag",
+  "contract": "contracts/m0-limit-diag.json",
+  "model": "M0-binary-lineage",
+  "claimsFullDiagonalLeanProof": false,
+  "claimsAdmission": false
+}

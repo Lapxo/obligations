@@ -1,0 +1,29 @@
+{
+  "id": "floor_limit_diag",
+  "classification": "bounded vector with mathematical proof text, not a general kernel proof",
+  "domain": "M0: finite fixed K, nonnegative normalized fixed w, p in (1/2,1), c in [0,1), cumulative-floor counts, fair ties, conditional independent Bernoulli emissions",
+  "fixedState": "Condition on latent A with S(A)=1/2. Set T_N=sum correct bits, mu_N=E[T_N|A], sigma_N^2=Var(T_N|A).",
+  "steps": [
+    "The proved quotas imply |mu_N-N/2|<=K because every q_l is in (0,1).",
+    "Every q_l >= (1-c)p and 1-q_l >= (1-c)(1-p). Thus sigma_N^2 >= kappa*N with kappa=(1-c)^2*p*(1-p)>0; sigma_N^2<=N/4.",
+    "Centered Bernoulli summands are bounded by 1, so their summed third absolute moments are at most sigma_N^2. Dividing by sigma_N^3 gives at most 1/sqrt(kappa*N), tending to zero.",
+    "Apply the independent, non-identically distributed normal-approximation theorem in dimension one to these standardized summands. Its error on half-lines tends to zero.",
+    "The standardized quota shift (N/2-mu_N)/sigma_N tends to zero. Therefore P(T_N<=N/2|A) tends to 1/2.",
+    "The approximation has a continuous limiting CDF, so the atom P(T_N=N/2|A) tends to zero. Fair tie handling changes the non-strict tail by half of this vanishing atom.",
+    "Hence conditional error tends to 1/2. Sum finitely many latent states with their declared product Bernoulli weights, combining this argument with the kernel-proved off-diagonal theorem."
+  ],
+  "externalTheorem": {
+    "author": "Martin Raič",
+    "title": "A multivariate Berry–Esseen theorem with explicit constants",
+    "url": "https://arxiv.org/pdf/1802.06475",
+    "theorem": "1.1, dimension d=1, independent centered standardized summands; convex half-lines",
+    "dependence": "A prior mathematical result, not a theorem newly established by Obligations. The application and this proof text are not checked in Lean."
+  },
+  "degenerates": {
+    "theta=0": "Retains (1-p)^K/2; not the zero-floor domain.",
+    "c=1": "Excluded: kappa=0 and bounded quota errors need not vanish relative to fluctuations. Separate exact-tie-preserving allocation required.",
+    "p=1": "Separate deterministic case, outside current Domain."
+  },
+  "finiteVector": "proofs/lean/Obligations045/M0Diagonal.lean, N=1..12; actual outputs must be captured",
+  "READY": false
+}

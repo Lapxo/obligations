@@ -1,0 +1,7 @@
+{
+  "name": "m0-pair-coincidence",
+  "contract": "contracts/m0-pair-coincidence.json",
+  "model": "M0-binary-lineage",
+  "claimsFullDiagonalLeanProof": false,
+  "claimsAdmission": false
+}

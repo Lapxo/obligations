@@ -1,0 +1,5 @@
+{
+  "name": "zero-diagonal-mass",
+  "expectedExit": 1,
+  "causePolicy": "actual reader/Lean diagnostic captured; no expected stdout is invented"
+}

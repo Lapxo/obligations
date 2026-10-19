@@ -1,0 +1,7 @@
+{
+  "name": "m0-finite-grid",
+  "contract": "contracts/m0-finite-grid.json",
+  "model": "M0-binary-lineage",
+  "claimsFullDiagonalLeanProof": false,
+  "claimsAdmission": false
+}

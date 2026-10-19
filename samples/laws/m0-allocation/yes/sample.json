@@ -1,0 +1,7 @@
+{
+  "name": "m0-allocation",
+  "contract": "contracts/m0-allocation.json",
+  "model": "M0-binary-lineage",
+  "claimsFullDiagonalLeanProof": false,
+  "claimsAdmission": false
+}
