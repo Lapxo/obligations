@@ -493,3 +493,8 @@ flowchart BT
 | (o, φ) | Origin |
 | s | Act |
 | state | State |
+
+
+## Executable Lean evidence
+
+The Lean proof reading executes the declared compiler against handed source bytes after image preparation. Its input identity includes all Lean sources, lean-toolchain, lakefile.toml, lake-manifest.json, both policy vectors and the selected reader implementation. It checks the compiler version/commit and every dependency revision and tracked worktree. A successful receipt means the declared 16 theorem audits and both negative causes passed. No dependencies are installed inside the reading. Native read/open counters distinguish execution from verified reuse. This proof place is separate from npm consumption: consumers verify portable historical readings without installing Lean. Compiler and cache preparation is reported separately, never charged to an existing proof-reader ceiling. Native reading uses the existing 25-second global limit, with the existing 65536-byte capture boundary. Changes to declared inputs reopen the reading; no prose claim closes it.

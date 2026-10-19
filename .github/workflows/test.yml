@@ -1,25 +1,30 @@
 name: test
-on:
-  push:
-    branches: [main]
-  pull_request:
 jobs:
   test:
     strategy:
       matrix:
-        node: [22, 24]
+        node:
+        - 22
+        - 24
     runs-on: ubuntu-latest
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: ${{ matrix.node }}
-      - run: npm ci
-      - run: npm run build
-      - run: npm test
-      - run: npm exec --yes --package=@lapxo/bound@0.2.1 --package=@lapxo/topos@0.2.0 -- bound fold --check
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node }}
+    - run: npm ci
+    - run: npm run build
+    - run: npm test
+    - name: Lay the declared historical proof reader
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        set -euo pipefail
+        mkdir -p .bound/cas/blobs
+        gh release download "v$(node -p "require('./package.json').version")" --pattern 5399fdc87cb104b5030e092e213ad6584004c6d4de49e716838081ae1f2e4182 --pattern 8655c52a0a4f6e19c883f2fe50b8f34eaa2cee7b21ac14b635a1a70130ab45fd --dir .bound/cas/blobs
+    - run: npm exec --yes --package=@lapxo/bound@0.2.1 --package=@lapxo/topos@0.2.0 -- bound fold --check
   lean:
     runs-on: ubuntu-24.04
     permissions:
@@ -45,75 +50,42 @@ jobs:
         path: |-
           ~/.elan/toolchains
           proofs/lean/.lake
-        key: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('proofs/lean/lean-toolchain', 'proofs/lean/lakefile.toml',
-          'proofs/lean/lake-manifest.json') }}-${{ hashFiles('proofs/lean/**/*.lean') }}
-        restore-keys: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('proofs/lean/lean-toolchain', 'proofs/lean/lakefile.toml',
-          'proofs/lean/lake-manifest.json') }}-
-    - name: Resolve locked dependencies
+        key: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('proofs/lean/lean-toolchain', 'proofs/lean/lakefile.toml', 'proofs/lean/lake-manifest.json') }}-${{
+          hashFiles('proofs/lean/**/*.lean') }}
+        restore-keys: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('proofs/lean/lean-toolchain', 'proofs/lean/lakefile.toml', 'proofs/lean/lake-manifest.json')
+          }}-
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 24
+    - name: Prepare locked compiler image
       run: |
         set -euo pipefail
-        test "$(cat lean-toolchain)" = leanprover/lean4:v4.19.0
         elan toolchain install "$(cat lean-toolchain)"
         lean --version
-        lake --version
-        lake exe cache get
-        git diff --exit-code -- lean-toolchain lakefile.toml lake-manifest.json
-        python3 - <<'PYTHON'
-        import json, pathlib, subprocess
-        manifest = json.loads(pathlib.Path('lake-manifest.json').read_text())
-        for package in manifest['packages']:
-            actual = subprocess.check_output(['git', '-C', '.lake/packages/' + package['name'], 'rev-parse', 'HEAD'], text=True).strip()
-            if actual != package['rev']:
-                raise SystemExit('dependency revision differs: ' + package['name'])
-        PYTHON
-    - name: Compile proof sources
+        lake exe cache get Mathlib.Order.Interval.Set.Basic
+    - name: Install the published instrument
+      working-directory: .
+      run: npm install --prefix "$RUNNER_TEMP/lean-instrument" --no-save --ignore-scripts @lapxo/bound@0.2.1 @lapxo/topos@0.2.0
+    - name: Lay the declared proof reader
+      working-directory: .
+      env:
+        GH_TOKEN: ${{ github.token }}
       run: |
         set -euo pipefail
-        lake build Obligations Obligations.HellyComb
-        lake env lean -DwarningAsError=true Obligations/Cell.lean
-        lake env lean -DwarningAsError=true Obligations/HellyComb.lean
-    - name: Audit theorem axioms
+        mkdir -p "$RUNNER_TEMP/lean-place/.bound/cas/blobs"
+        git archive HEAD proofs/lean vectors/laws/meet-semilattice.json vectors/laws/helly-comb.lean.json | tar -x -C "$RUNNER_TEMP/lean-place"
+        cp proofs/lean/verification.bound "$RUNNER_TEMP/lean-place/TARGET.bound"
+        mkdir -p "$RUNNER_TEMP/lean-place/proofs/lean/.lake"
+        ln -s "$GITHUB_WORKSPACE/proofs/lean/.lake/packages" "$RUNNER_TEMP/lean-place/proofs/lean/.lake/packages"
+        gh release download "v$(node -p "require('./package.json').version")" --pattern 1b71c00ce6134659534532519d7139cc5576283b4a5bf1dc83327a3511e555e1 --pattern 0b40747e9fa2ac40c706220732c45870321230f3c5164153b428d7fa0273dd43 --dir "$RUNNER_TEMP/lean-place/.bound/cas/blobs"
+    - name: Fold proof inputs and check receipt reuse
+      working-directory: .
       run: |
         set -euo pipefail
-        python3 - <<'PYTHON'
-        import json, os, pathlib, re, subprocess
-        vector = json.loads(pathlib.Path('../../vectors/laws/meet-semilattice.json').read_text())
-        names = ['Obligations.Cell.' + name for name in vector['proof']['auditedTheorems']]
-        names += ['Obligations.HellyComb.' + name for name in ['pairwise_nonempty', 'triple_empty', 'c_has_a_hole']]
-        audit = pathlib.Path(os.environ['RUNNER_TEMP']) / 'axiom-audit.lean'
-        audit.write_text('import Obligations.Cell\nimport Obligations.HellyComb\n' + ''.join('#print axioms ' + name + '\n' for name in names))
-        result = subprocess.run(['lake', 'env', 'lean', '-DwarningAsError=true', str(audit)], text=True, capture_output=True, check=True)
-        print(result.stdout, end='')
-        print(result.stderr, end='')
-        rows = result.stdout.strip().splitlines()
-        if len(rows) != len(names):
-            raise SystemExit('incomplete axiom audit')
-        allowed = {'propext', 'Quot.sound', 'Classical.choice'}
-        for name, row in zip(names, rows):
-            if row == "'" + name + "' does not depend on any axioms":
-                continue
-            prefix = "'" + name + "' depends on axioms: ["
-            if not row.startswith(prefix) or not row.endswith(']'):
-                raise SystemExit('unexpected axiom report: ' + name)
-            if not set(row[len(prefix):-1].split(', ')) <= allowed:
-                raise SystemExit('unapproved axiom: ' + name)
-        PYTHON
-    - name: Check declared refusals
-      run: |
-        set -euo pipefail
-        python3 - <<'PYTHON'
-        import os, pathlib, subprocess
-        cases = {
-            'raw-antisymmetry': ('import Obligations.Cell\nexample : (Obligations.Cell.mk (5 : Int) 3) = (Obligations.Cell.mk (8 : Int) 6) := by decide\n', ['tactic', 'decide', 'is false']),
-            'nonconvex-helly': ('import Obligations.HellyComb\nexample : (Obligations.HellyComb.triple != []) = true := by decide\n', ['tactic', 'decide', 'is false']),
-        }
-        for name, (source, causes) in cases.items():
-            path = pathlib.Path(os.environ['RUNNER_TEMP']) / (name + '.lean')
-            path.write_text(source)
-            result = subprocess.run(['lake', 'env', 'lean', str(path)], text=True, capture_output=True)
-            output = result.stdout + result.stderr
-            print(name + ': expected refusal')
-            print(output, end='')
-            if result.returncode != 1 or not all(cause in output for cause in causes):
-                raise SystemExit('negative did not refuse for the declared cause: ' + name)
-        PYTHON
+        node "$RUNNER_TEMP/lean-instrument/node_modules/@lapxo/bound/dist/cli/verb.js" fold "$RUNNER_TEMP/lean-place"
+        node "$RUNNER_TEMP/lean-instrument/node_modules/@lapxo/bound/dist/cli/verb.js" fold "$RUNNER_TEMP/lean-place" --check
+'on':
+  push:
+    branches:
+    - main
+  pull_request: null

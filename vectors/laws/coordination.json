@@ -20,7 +20,7 @@
     },
     {
       "path": "vectors/laws/helly-comb.lean.json",
-      "sha256": "sha256:7272019a5b6fa45e63003e19a0508354767ecbb32f65dffed9d83430d018aceb"
+      "sha256": "sha256:e3ae1b0a9a579180a6d4495682bfbd7742e423e59e8a0b0fdd8d0528c16f497d"
     },
     {
       "path": "samples/laws/linage-rest/yes.json",

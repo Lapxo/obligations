@@ -62,7 +62,12 @@
       "duplicate_in_replay"
     ],
     "noSorryAx": true,
-    "axioms": "standard Lean foundations printed in the audit; no new local axiom declaration"
+    "axioms": "standard Lean foundations printed in the audit; no new local axiom declaration",
+    "allowedAxioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ]
   },
   "captures": [
     {
@@ -196,5 +201,44 @@
       "contributionHere": "checked correspondence of endpoint meet and observable empty-interval equivalence, with restricted replay consequences"
     }
   ],
-  "resourceBoundary": "official compiler/dependency acquisition is preparation; not included in the per-process execution measurements and not certified by this vector"
+  "resourceBoundary": "official compiler/dependency acquisition is preparation; not included in the per-process execution measurements and not certified by this vector",
+  "execution": {
+    "profile": "lean-kernel@1",
+    "project": "proofs/lean",
+    "toolchain": "leanprover/lean4:v4.19.0",
+    "compilerIdentity": "6caaee842e94",
+    "targets": [
+      "Obligations",
+      "Obligations.HellyComb"
+    ],
+    "sources": [
+      "Obligations.lean",
+      "Obligations/Cell.lean",
+      "Obligations/Bridge.lean",
+      "Obligations/HellyComb.lean"
+    ],
+    "negative": {
+      "name": "raw-antisymmetry",
+      "source": "import Obligations.Cell\nexample : (Obligations.Cell.mk (5 : Int) 3) = (Obligations.Cell.mk (8 : Int) 6) := by decide\n",
+      "exitCode": 1,
+      "cause": [
+        "tactic 'decide'",
+        "is false"
+      ]
+    },
+    "hellyVector": "vectors/laws/helly-comb.lean.json",
+    "identityInputs": [
+      "proofs/lean/lean-toolchain",
+      "proofs/lean/lakefile.toml",
+      "proofs/lean/lake-manifest.json",
+      "proofs/lean/Obligations.lean",
+      "proofs/lean/Obligations/Cell.lean",
+      "proofs/lean/Obligations/Bridge.lean",
+      "proofs/lean/Obligations/HellyComb.lean",
+      "vectors/laws/meet-semilattice.json",
+      "vectors/laws/helly-comb.lean.json"
+    ],
+    "reuse": "native reading-context@1 / reading-receipt@1; compiler preparation outside the reading; successful process execution and verified receipt reuse printed separately",
+    "preparation": "locked dependencies and compiler installed before reading; execution performs no dependency update or network install"
+  }
 }

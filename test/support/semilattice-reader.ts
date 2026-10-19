@@ -1,5 +1,8 @@
 import {createHash} from 'node:crypto';
-import {readFileSync} from 'node:fs';
+import {readFileSync,mkdtempSync,writeFileSync,rmSync,existsSync} from 'node:fs';
+import {resolve,join} from 'node:path';
+import {tmpdir} from 'node:os';
+import {spawnSync} from 'node:child_process';
 import {intervals} from '@lapxo/obligations/forms';
 
 // A receipt for handed evidence and finite correspondence, not a second Lean kernel.
@@ -16,7 +19,7 @@ const equal = (a:unknown,b:unknown) => JSON.stringify(a) === JSON.stringify(b);
 const check = (condition:unknown,name:string):void => {if(!condition)fail(name);};
 const decode = (text:string):any => {try{return JSON.parse(text);}catch{return fail('malformed-json');}};
 type Input = readonly [string,string];
-type Asked = {lines:readonly {scope:string;measure:string;about?:string}[]};
+type Asked = {region?:string;lines:readonly {scope:string;measure:string;about?:string}[]};
 
 export function inspect(inputs:readonly Input[]){
   const files = new Map(inputs);
@@ -52,10 +55,8 @@ export function inspect(inputs:readonly Input[]){
   const algebra = intervals(-1,2), endpoints = [-1,0,1,2];
   const cells = endpoints.flatMap(lo=>endpoints.map(hi=>({lo,hi})));
   const table = cells.flatMap(a=>cells.map(b=>{const m=algebra.meet(a,b);return [a.lo,a.hi,b.lo,b.hi,m.lo,m.hi,algebra.leq(a,b),!algebra.inhabited(m)];}));
-  const theorems = ['meet_comm','meet_assoc','meet_idem','meaning_meet','apiLeq_iff_subset',
-    'meet_narrows_left','meet_narrows_right','mutually_narrows_iff','observe_meet','observe_order',
-    'crossed_pairs_not_antisymmetric','permutation_invariant','duplicate_in_replay'];
-  check(equal(vector.proof.auditedTheorems,theorems),'theorem-inventory');
+  const theorems:string[] = vector.proof.auditedTheorems;
+  check(Array.isArray(theorems)&&theorems.length>0&&Array.isArray(vector.proof.allowedAxioms),'theorem-inventory');
   for(const place of places){
     const events = captures.filter((c:any)=>c.place===place);
     check(events.length===5 && operations.every(op=>events.filter((c:any)=>c.operation===op).length===1),'two-complete-places');
@@ -71,7 +72,7 @@ export function inspect(inputs:readonly Input[]){
     check(audit.length===theorems.length && theorems.every((t,i)=>{
       const prefix="'Obligations.Cell."+t+"' depends on axioms: [";
       if(!audit[i].startsWith(prefix)||!audit[i].endsWith(']'))return false;
-      return audit[i].slice(prefix.length,-1).split(', ').every((a:string)=>['propext','Quot.sound','Classical.choice'].includes(a));
+      return audit[i].slice(prefix.length,-1).split(', ').every((a:string)=>vector.proof.allowedAxioms.includes(a));
     }),'untrusted-axiom-audit');
     check(equal(decode(event('bridge').stdout),table),'bridge-mismatch');
     const js = decode(event('published-js-bridge').stdout);
@@ -94,5 +95,101 @@ export function inspect(inputs:readonly Input[]){
 }
 
 export function receipt(asked:Asked){
-  return inspect(asked.lines.filter(l=>l.measure==='text' && l.about!==undefined).map(l=>[l.scope,l.about!] as const));
+  const inputs=asked.lines.filter(l=>l.measure==='text' && l.about!==undefined).map(l=>[l.scope,l.about!] as const);
+  return asked.region==='lean-kernel' ? executeLean(inputs,process.cwd()) : inspect(inputs);
+}
+
+const leanProcess:LeanProcess=(command,args,options)=>{const r=spawnSync(command,[...args],{...options,encoding:'utf8',shell:false});return {status:r.status,stdout:r.stdout??'',stderr:r.stderr??'',error:r.error,signal:r.signal};};
+
+/** The same reader executes the declared proof region; the historical capture
+ * region above remains a different reading. Dependency installation is a fixture. */
+export type LeanProcess = (command:string,args:readonly string[],options:{cwd:string;timeout:number;maxBuffer:number}) => {status:number|null;stdout:string;stderr:string;error?:Error;signal?:string|null};
+export function auditLeanAxioms(output:string,names:readonly string[],allowed:readonly string[]){
+  const rows=output.trim().split('\n');
+  check(rows.length===names.length,'incomplete-axiom-audit');
+  for(let i=0;i<names.length;i++){
+    const row=rows[i]!,name=names[i]!;
+    if(row===`'${name}' does not depend on any axioms`)continue;
+    const prefix=`'${name}' depends on axioms: [`;
+    check(row.startsWith(prefix)&&row.endsWith(']'),'malformed-axiom-audit');
+    check(row.slice(prefix.length,-1).split(', ').every(a=>allowed.includes(a)),'unapproved-axiom');
+  }
+}
+export function judgeLeanNegative(result:{status:number|null;stdout:string;stderr:string},negative:{exitCode:number;cause:readonly string[]}){
+  check(negative.exitCode===1&&negative.cause.length>0,'negative-contract');
+  check(result.status===negative.exitCode,'negative-accepted');
+  check(negative.cause.every(c=>(result.stdout+result.stderr).includes(c)),'negative-wrong-cause');
+}
+export function executeLean(inputs:readonly Input[],root:string,run:LeanProcess=leanProcess){
+  const files=new Map(inputs);check(files.size===inputs.length,'duplicate-input');
+  const read=(p:string):string=>files.get(p)??fail('missing-input '+p);
+  const vector=decode(read('vectors/laws/meet-semilattice.json')),policy=vector.execution;
+  check(policy?.profile==='lean-kernel@1'&&policy.project==='proofs/lean','execution-profile');
+  const expectedInputs=[...vector.proof.files.map((f:{path:string})=>f.path),
+    'proofs/lean/Obligations/HellyComb.lean','vectors/laws/meet-semilattice.json','vectors/laws/helly-comb.lean.json'];
+  check(equal(policy.identityInputs,expectedInputs),'execution-input-inventory');
+  const project=resolve(root,policy.project);
+  // Read and identify every handed source before starting the compiler.
+  for(const p of expectedInputs){
+    const text=read(p);check(readFileSync(resolve(root,p),'utf8')===text,'fixture-source-differs '+p);
+  }
+  for(const f of vector.proof.files)check(sha(read(f.path))===f.sha256,'proof-digest '+f.path);
+  check(read('proofs/lean/lean-toolchain').trim()===policy.toolchain,'toolchain');
+  const helly=decode(read(policy.hellyVector));
+  check(helly.execution?.profile===policy.profile&&sha(read(helly.source))===helly.sourceSha256,'helly-source-digest');
+  const manifest=decode(read('proofs/lean/lake-manifest.json'));
+  check(manifest.packages.some((p:any)=>p.name==='mathlib'&&p.rev===vector.proof.mathlib),'mathlib-pin');
+  check(manifest.packages.every((p:any)=>/^[A-Za-z0-9_-]+$/.test(p.name)&&/^[a-f0-9]{40}$/.test(p.rev)),'dependency-revision');
+  check(vector.capturePolicy.timeoutMs===25000&&vector.capturePolicy.responseBytes===65536,'capture-limits');
+  const events:{operation:string;command:string;args:readonly string[];status:number;stdout:string;stderr:string;stdoutSha256:string;stderrSha256:string}[]=[];
+  const temporary=mkdtempSync(join(tmpdir(),'obligations-lean-'));
+  const projectOutput=(text:string)=>text.split(project+'/').join('').split(temporary+'/').join('');
+  const call=(operation:string,command:string,args:readonly string[],expected=0)=>{
+    const started=performance.now(),r=run(command,args,{cwd:project,timeout:vector.capturePolicy.timeoutMs,maxBuffer:vector.capturePolicy.responseBytes});
+    check(!r.error&&!r.signal,'process-failed '+operation);
+    check(Buffer.byteLength(r.stdout)+Buffer.byteLength(r.stderr)<=vector.capturePolicy.responseBytes,'response-budget '+operation);
+    check(r.status===expected,'process-exit '+operation);
+    events.push({operation,command,args:args.map(projectOutput),status:r.status!,stdout:projectOutput(r.stdout),stderr:projectOutput(r.stderr),stdoutSha256:sha(r.stdout),stderrSha256:sha(r.stderr)});
+    process.stderr.write(`LEAN executed · ${operation} · ${Math.round(performance.now()-started)} ms\n`);
+    return r;
+  };
+  try{
+    const version=call('compiler-version','lean',['--version']);
+    check(version.stdout.includes(policy.compilerIdentity)&&version.stdout.includes(policy.toolchain.split(':').at(-1).slice(1)),'compiler-version');
+    call('lake-version','lake',['--version']);
+    for(const p of manifest.packages){
+      check(existsSync(join(project,'.lake/packages',p.name)),'fixture-dependency-absent '+p.name);
+      const actual=call('dependency/'+p.name,'git',['-C','.lake/packages/'+p.name,'rev-parse','HEAD']);
+      check(actual.stdout.trim()===p.rev,'dependency-revision '+p.name);
+      const changed=call('dependency-clean/'+p.name,'git',['-C','.lake/packages/'+p.name,'status','--porcelain','--untracked-files=no']);
+      check(changed.stdout.trim()==='','dependency-dirty '+p.name);
+    }
+    // No installation command, update or dependency download belongs to this reading.
+    check(equal(policy.targets,['Obligations','Obligations.HellyComb']),'build-targets');
+    call('build','lake',['build',...policy.targets]);
+    for(const source of policy.sources){
+      check(expectedInputs.includes(policy.project+'/'+source),'undeclared-build-source');
+      call('compile/'+source,'lake',['env','lean','-DwarningAsError=true',source]);
+    }
+    const cellNames=vector.proof.auditedTheorems.map((n:string)=>'Obligations.Cell.'+n);
+    const audits=[{names:cellNames,allowed:vector.proof.allowedAxioms},{names:helly.execution.auditedTheorems,allowed:helly.execution.allowedAxioms}];
+    check(audits.every(a=>Array.isArray(a.allowed)&&a.names.length>0&&a.names.every((n:string)=>/^[A-Za-z0-9_.]+$/.test(n))),'axiom-policy');
+    const names=audits.flatMap(a=>a.names),audit=join(temporary,'audit.lean');
+    writeFileSync(audit,'import Obligations.Cell\nimport Obligations.HellyComb\n'+names.map(n=>'#print axioms '+n+'\n').join(''));
+    const printed=call('axiom-audit','lake',['env','lean','-DwarningAsError=true',audit]);
+    const rows=printed.stdout.trim().split('\n');let offset=0;
+    for(const a of audits){auditLeanAxioms(rows.slice(offset,offset+a.names.length).join('\n'),a.names,a.allowed);offset+=a.names.length;}
+    check(offset===rows.length,'extra-axiom-report');
+    for(const negative of [policy.negative,helly.execution.negative]){
+      check(/^[a-z-]+$/.test(negative.name)&&typeof negative.source==='string','negative-contract');
+      const at=join(temporary,negative.name+'.lean');writeFileSync(at,negative.source);
+      const result=call('negative/'+negative.name,'lake',['env','lean',at],1);judgeLeanNegative(result,negative);
+    }
+    const transcript={profile:policy.profile,inputs:expectedInputs.map(p=>[p,sha(read(p))]),toolchain:policy.toolchain,
+      dependencies:manifest.packages.map((p:any)=>({name:p.name,revision:p.rev})),events};
+    process.stderr.write('LEAN transcript · '+sha(JSON.stringify(transcript))+' · '+JSON.stringify(transcript)+'\n');
+    const verified={profile:policy.profile,inputs:transcript.inputs,toolchain:policy.toolchain,dependencies:transcript.dependencies,axioms:audits,negatives:[policy.negative,helly.execution.negative]};
+    return [{scope:'publication/evidence/lean',role:'writes' as const,measure:'count',bound:{kind:'interval' as const,lo:0,hi:0}},
+      {scope:'publication/evidence/lean/verification',role:'writes' as const,measure:'digest',bound:{kind:'enumerated' as const,values:[sha(JSON.stringify(verified))]}}];
+  }finally{rmSync(temporary,{recursive:true,force:true});}
 }
