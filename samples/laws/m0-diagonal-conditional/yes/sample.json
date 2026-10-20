@@ -1,0 +1,7 @@
+{
+  "case": "diagonal-prerequisites-and-conditional-transfer",
+  "generalCLTProved": false,
+  "generalDiagonal": "open",
+  "theorems": 81,
+  "symmetricSubdomain": "q_i=1/2 for every member"
+}

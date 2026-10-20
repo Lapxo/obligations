@@ -1,0 +1,47 @@
+{
+  "name": "nonuniform-as-uniform",
+  "counterexample": {
+    "id": "nonuniform-as-uniform",
+    "p": "3/4",
+    "a": {
+      "c": "7/10",
+      "weights": {
+        "1/42": 36,
+        "1/21": 3
+      },
+      "K_eff": "147/4",
+      "populationMoments": {
+        "2": "63/100",
+        "3": "89/200",
+        "4": "7595657/23040000",
+        "6": "63102375293/331776000000"
+      }
+    },
+    "b": {
+      "c": "4/5",
+      "weights": {
+        "1/96": 48,
+        "1/32": 16
+      },
+      "K_eff": "48",
+      "populationMoments": {
+        "2": "63/100",
+        "3": "89/200",
+        "4": "7595657/23040000",
+        "6": "252409495967/1327104000000"
+      }
+    },
+    "sameMoments": [
+      2,
+      3,
+      4
+    ],
+    "sixthDiffers": true,
+    "scope": "Refutes identification of(c,K_eff) from R2,R4 with arbitrary normalized positive weights and known p. Does not assert equal entire observable laws or failure under all higher moments."
+  },
+  "additionalNamedNegatives": [
+    "unknown-p-as-known",
+    "zero-c-as-identifiable"
+  ],
+  "expectedClaim": "These invalid extensions must not inherit the uniform identification theorem. Native reader refusal contract still pending."
+}

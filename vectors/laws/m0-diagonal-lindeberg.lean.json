@@ -1,0 +1,167 @@
+{
+  "id": "m0-diagonal-lindeberg",
+  "claim": "diagonal-prerequisites-and-conditional-transfer",
+  "status": "kernel-proved conditional statement; unsigned native reader preparation",
+  "proof": {
+    "files": [
+      {
+        "path": "proofs/m0-046-diagonal/BridgeNegatives.lean",
+        "sha256": "sha256:956afd1cfe87eaf2c6586822541a3ede6cc285f8659d27d88228f5534e1c640b"
+      },
+      {
+        "path": "proofs/m0-046-diagonal/M0Bridge.lean",
+        "sha256": "sha256:b438b2961b93c62787275e158a90b534a400de8646a0552b099863fa5227c21e"
+      },
+      {
+        "path": "proofs/m0-046-diagonal/M0Diagonal046.lean",
+        "sha256": "sha256:c0403d40e1c6849045bf70eab2854eeac28a2464783e06ce03f2f36e33c2146c"
+      },
+      {
+        "path": "proofs/m0-046-diagonal/M0Lindeberg046.lean",
+        "sha256": "sha256:de5477cdde114064f3d272ede95490483040fc857399181c376c285c02411da8"
+      },
+      {
+        "path": "proofs/m0-046-diagonal/M0Moments046.lean",
+        "sha256": "sha256:06780115a2b44a77a9be72673350332b77045489dba7ff081beecd48b8d51a73"
+      },
+      {
+        "path": "proofs/m0-046-diagonal/M0Threshold046.lean",
+        "sha256": "sha256:861cd13ecd4b7f37a1bc00362b4fdc213cefdcf380171947a14463b0bc465a9e"
+      },
+      {
+        "path": "proofs/m0-046-diagonal/Obligations045.lean",
+        "sha256": "sha256:be4956a2720d696e5456ad108543945c6f65f1986126513f10edcd4f1841bced"
+      },
+      {
+        "path": "proofs/m0-046-diagonal/Obligations045/ConsensusGrid.lean",
+        "sha256": "sha256:b26a1b68522e881e446a47f4c84cd8b569a1c48f085a5c9a9d03abdeecafacce"
+      },
+      {
+        "path": "proofs/m0-046-diagonal/Obligations045/M0Coincidence.lean",
+        "sha256": "sha256:e870a43e435f4b4b52f28f44dd7391c40704faa41febd272434d2e56b2bd6771"
+      },
+      {
+        "path": "proofs/m0-046-diagonal/Obligations045/M0Diagonal.lean",
+        "sha256": "sha256:4d83f047fc5e199f46b2cc28dfe77b006a7dd408f0f14ed54afb5e21315148e2"
+      },
+      {
+        "path": "proofs/m0-046-diagonal/Obligations045/M0Limit.lean",
+        "sha256": "sha256:aedc88b8ba4edf884cacec78da82eef29187ded0199d44674466425af1585b8c"
+      },
+      {
+        "path": "proofs/m0-046-diagonal/Obligations045/M0Offdiag.lean",
+        "sha256": "sha256:af8a95d00cd0956acaec06deeebe7156dccf156b698408275c3e710f58c1c1e8"
+      },
+      {
+        "path": "proofs/m0-046-diagonal/lake-manifest.json",
+        "sha256": "sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d"
+      },
+      {
+        "path": "proofs/m0-046-diagonal/lakefile.toml",
+        "sha256": "sha256:9738f8737965b3383db30a9c7bd7c5c7b24526e59794cf1d3ecf71b5d0827b92"
+      },
+      {
+        "path": "proofs/m0-046-diagonal/lean-toolchain",
+        "sha256": "sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+      }
+    ],
+    "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "auditedTheorems": [
+      "Obligations046.Lindeberg.centered_square_le_one",
+      "Obligations046.Lindeberg.bernoulli_tail_zero",
+      "Obligations046.Lindeberg.cutoff_eventually_large",
+      "Obligations046.Lindeberg.lindeberg_eventually_zero",
+      "Obligations046.Lindeberg.lindeberg_limit",
+      "Obligations046.Lindeberg.bernoulli_tail_expectation",
+      "Obligations046.Lindeberg.bernoulli_zero_cutoff",
+      "Obligations046.Lindeberg.zero_epsilon_ratio",
+      "Obligations046.Lindeberg.actual_mean_standardized_drift"
+    ],
+    "allowedAxioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "samples": {
+    "inputs": [
+      "contracts/m0-diagonal-conditional.json",
+      "samples/laws/m0-diagonal-conditional/yes/sample.json",
+      "samples/laws/m0-diagonal-conditional/no/sample.json",
+      "vectors/laws/policy.json"
+    ],
+    "digests": {
+      "contracts/m0-diagonal-conditional.json": "sha256:e8644b4508965b6187dbf210cdced97ba14c4f1e748dac68fe9bb3e078e528a7",
+      "samples/laws/m0-diagonal-conditional/yes/sample.json": "sha256:769f0bbdc8ab13fffff841ea1121d8348885d65f64fb719528aa5a2a1e219078",
+      "samples/laws/m0-diagonal-conditional/no/sample.json": "sha256:68ff10d4e29c311760aca786dd85362d6dcc62c893ca715882485d38ef77025e",
+      "vectors/laws/policy.json": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+    }
+  },
+  "capturePolicy": {
+    "timeoutMs": 25000,
+    "responseBytes": 65536
+  },
+  "execution": {
+    "profile": "lean-kernel@1",
+    "project": "proofs/m0-046-diagonal",
+    "identityInputs": [
+      "proofs/m0-046-diagonal/BridgeNegatives.lean",
+      "proofs/m0-046-diagonal/M0Bridge.lean",
+      "proofs/m0-046-diagonal/M0Diagonal046.lean",
+      "proofs/m0-046-diagonal/M0Lindeberg046.lean",
+      "proofs/m0-046-diagonal/M0Moments046.lean",
+      "proofs/m0-046-diagonal/M0Threshold046.lean",
+      "proofs/m0-046-diagonal/Obligations045.lean",
+      "proofs/m0-046-diagonal/Obligations045/ConsensusGrid.lean",
+      "proofs/m0-046-diagonal/Obligations045/M0Coincidence.lean",
+      "proofs/m0-046-diagonal/Obligations045/M0Diagonal.lean",
+      "proofs/m0-046-diagonal/Obligations045/M0Limit.lean",
+      "proofs/m0-046-diagonal/Obligations045/M0Offdiag.lean",
+      "proofs/m0-046-diagonal/lake-manifest.json",
+      "proofs/m0-046-diagonal/lakefile.toml",
+      "proofs/m0-046-diagonal/lean-toolchain",
+      "vectors/laws/m0-diagonal-lindeberg.lean.json",
+      "contracts/m0-diagonal-conditional.json",
+      "samples/laws/m0-diagonal-conditional/yes/sample.json",
+      "samples/laws/m0-diagonal-conditional/no/sample.json",
+      "vectors/laws/policy.json"
+    ],
+    "toolchain": "leanprover/lean4:v4.19.0",
+    "compilerIdentity": "6caaee842e94",
+    "targets": [
+      "M0Lindeberg046"
+    ],
+    "sources": [
+      "M0Lindeberg046.lean"
+    ],
+    "auditImports": [
+      "M0Lindeberg046"
+    ],
+    "negative": {
+      "name": "zero-epsilon-is-not-positive",
+      "source": "import M0Lindeberg046\nopen Obligations045.M0 Obligations046.Lindeberg Filter Topology\nnoncomputable section\nexample (M : Domain) (a : Fin M.K \u2192 Bool) :\n    Tendsto (fun N => ratio M a N 0) atTop (\ud835\udcdd 0) := by\n  exact lindeberg_limit M a 0 (by norm_num)\n",
+      "exitCode": 1,
+      "cause": [
+        "unsolved goals"
+      ]
+    },
+    "extraNegatives": []
+  },
+  "boundary": {
+    "productLaw": "raw individual joint Bernoulli law, never assumed binomial counts",
+    "finiteRepresentation": "all N, fair ties",
+    "average": "N>0; zero handled separately",
+    "offdiag": "all inherited sampling/measurability hypotheses and no score=1/2",
+    "generalDiagonal": false,
+    "cEqualsOne": false,
+    "originIndependenceClaimed": false,
+    "admitted": false,
+    "rootReceipts": false,
+    "releaseReady": false
+  },
+  "generalDiagonal": {
+    "status": "open",
+    "actualCLTProved": false
+  },
+  "block": "lindeberg"
+}

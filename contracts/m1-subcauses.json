@@ -1,0 +1,66 @@
+{
+  "boundaryReductions": [
+    {
+      "condition": "c1=0",
+      "meaning": "exact finite M0 leaf model with copyc=c2, same weights/allocation/tie; ancestor bits integrate out"
+    },
+    {
+      "condition": "c2=0",
+      "meaning": "ancestor-only model; inherited per-leaf quotas do not necessarily equal prefix allocation of grouped weights at finiteN; no silent exact grouping claim"
+    },
+    {
+      "condition": "c1=c2=0",
+      "meaning": "N independent Bernoulli(p) votes, irrespective of hierarchy"
+    }
+  ],
+  "classification": "declared finite generative model and exact enumerated counterexamples; no admitted law or native receipt",
+  "domain": {
+    "N": "positive integer; fixed source slots allocated to leaves; not O4/O5 population resampling",
+    "ancestors": "Finite distinct named ancestors, fixed total parent map leaf->ancestor; unused ancestors may be omitted",
+    "c1": "0<=c1<1",
+    "c2": "0<=c2<1",
+    "leaves": "Finite ordered distinct named leaves; normalized nonnegative rational weights; positive total1",
+    "p": "1/2<p<1"
+  },
+  "equations": {
+    "a": "c1",
+    "b": "(1-c1)c2",
+    "conditionalCovarianceDistinctMembers": "p(1-p)*(a^2*1{same parent}+b^2*1{same leaf}); distinct members only; fresh terms independent, no cross terms under declared latent joint law.",
+    "d": "(1-c1)(1-c2)",
+    "finiteLaw": "Given latents: X_l~Bin(n_l,q_l), jointly independent; average fairLoss(sumX,N) against exact product binomial law and latentMass.",
+    "latentMass": "product over independent named A_g and B_l of p^bit (1-p)^(1-bit)",
+    "q_l": "a A_parent(l)+b B_l+d p",
+    "score": "S(A,B)=sum_l w_l q_l; d p+a sum_g W_g A_g+b sum_l w_l B_l, W_g=sum_{parent(l)=g}w_l",
+    "thresholdFunctional": "F_M1=sum_z latentMass(z)*(1{S(z)<1/2}+1/2*1{S(z)=1/2}); finite exact functional, not an unconditional limit theorem."
+  },
+  "generativeSteps": [
+    "For each cell independently draw one A_g~Bernoulli(p) per named ancestor and one B_l~Bernoulli(p) per named leaf; all mutually independent conditional onY.",
+    "Allocate n_l(N)=floor(N cumulativeWeight(l+1))-floor(N cumulativeWeight(l)) using the existing ordered prefix-floor rule; sum n_l=N and |n_l-Nw_l|<1.",
+    "For each member independently of all other selector/fresh draws and latent bits: ancestor branch with probabilityc1; else leaf branch with conditional probabilityc2; else fresh Bernoulli(p). Selectors are mutually exclusive branches, not additive causes.",
+    "A member on ancestor branch returns A_parent(l); leaf branch returnsB_l; fresh branch returnsits fresh bit. Decode majority of correctness counts with independent fair tie."
+  ],
+  "hypotheses": {
+    "H-M1-allocation": "Fixed ordered prefix quotas; conditional member independence; whole cells iid only if a repeated-cell uncertainty claim is requested.",
+    "H-M1-diag": "Positive fresh massd and p in(0,1) imply nondegenerate conditional Bernoulli variables; mean driftO(1), variance growsTheta(N). A probability limit1/2 still needs its own CLT/transfer evidence, not an inherited M0 theorem.",
+    "H-M1-joint-law": "All ancestor/leaf latent bits jointly independent Bernoulli(p), conditional onY, with explicit map and order; merely matching marginals insufficient.",
+    "H-M1-offdiag": "For fixed finite named hierarchy and every positive-mass latent state S!=1/2: conditional mean drift bounded byL; variance<=N/4. Proposed |e_N-F| bound sum_z mass min(1,N/(4*(N*abs(S-1/2)-L)^2)) when N*margin>L; otherwise1. Proof/implementation bridge not Lean-checked or admitted for M1.",
+    "H-M1-selectors": "Ancestor-first exclusive branches, c2 conditional; shared selectors/fresh bits excluded.",
+    "endpoints": "d=0 excluded from the general profile. Endpoint finite examples may be studied under a separate explicitly named profile; fair finite tie alone does not guarantee a per-latent limit."
+  },
+  "id": "binary-M1-ancestor-first-fixed-quota@1",
+  "negativeContracts": [
+    "missing-parent-map",
+    "ambiguous-copy-priority",
+    "c2-treated-as-unconditional",
+    "unspecified-latent-joint-law",
+    "population-resampling-as-fixed-quotas",
+    "threshold-functional-presented-as-proved-limit"
+  ],
+  "nullAndImpossible": {
+    "impossible": "No causal subgroup recovery, oracle-free reference calibration, conditional identification, or unqualified floor inferred from coincidence; M0 O5 interval guarantees do not certify M1.",
+    "null": "Declared full hierarchy, normalized weights, p,c1,c2,joint latent law and fixed-quota sampling. Missing any ->unmeasured at contract level; no new public API rejection claimed."
+  },
+  "status": "unsigned-model-preparation",
+  "truth": "Binary Y; fixed per cell or any declared prior. Conditional onY correctness bits below are independent ofY; an actual report equalsY when correct and1-Y otherwise. All probabilities/floors refer to oracle correctness, not observable calibration without truth.",
+  "value": "M1 is a declared binary two-level ancestral-copy model, not an identified causal explanation. In each cell draw mutually independent Bernoulli(p) ancestor and leaf correctness bits. A fixed named parent map assigns each leaf to one ancestor. Each member first copies its ancestor with probability c1; conditional on not doing so it copies its leaf with probability c2, otherwise draws a fresh Bernoulli(p). The exclusive masses are a=c1, b=(1-c1)c2, d=(1-c1)(1-c2), and conditional correctness is q_l=a A_parent(l)+b B_l+d p. Fixed named leaf weights and the existing prefix-floor allocation define independent conditional binomial counts; majority uses a fair tie. The finite latent threshold functional is not by itself a proved asymptotic limit. Off-diagonal convergence has a proposed conditional variance argument; diagonal transfer and model–implementation proof require new M1 evidence. Parent topology, latent joint law, priority and sampling profile belong to the model identity. Missing them is unmeasured, not a discovered cause. The three original research demands remain open."
+}

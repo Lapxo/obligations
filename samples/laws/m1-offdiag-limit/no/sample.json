@@ -1,0 +1,17 @@
+{
+  "captureMeaning": "Actual Lean rejection of each false equality/inequality, not new public API or native Bound refusal.",
+  "cases": [
+    {
+      "falseClaim": "The off-diagonal squared-gap bound remains valid with zero gap; actual loss difference1/2 exceeds0.",
+      "name": "diagonal-denominator-omitted"
+    },
+    {
+      "falseClaim": "Positive epsilon suffices without a mean-side margin; loss difference1 exceeds0.",
+      "name": "mean-margin-omitted"
+    },
+    {
+      "falseClaim": "A common Bernoulli(1/2) selector driving two votes has variance<=2/4; actual variance is1.",
+      "name": "shared-selectors-as-independent"
+    }
+  ]
+}

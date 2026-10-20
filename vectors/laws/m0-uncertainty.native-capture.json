@@ -1,0 +1,651 @@
+{
+  "archiveApproval": false,
+  "candidatePublicationCorrectionCovered": false,
+  "captures": [
+    {
+      "elapsedMs": 167.14745799999997,
+      "expected": "fact",
+      "name": "blocks-orchard-projection",
+      "passed": true,
+      "requestSHA256": "sha256:944ddd11584fce66b396ab3c4c5151eb176bc1742a13ee350390765789d28929",
+      "result": {
+        "kind": "fact",
+        "lines": [
+          "bound-lock/1 at=receipt:1 form=alphabet measure=reads role=reads scope=publication/evidence/m0-uncertainty/blocks value=proofs/m0-046-uncertainty/BridgeNegatives.lean|proofs/m0-046-uncertainty/M0BlockCoverage046.lean|proofs/m0-046-uncertainty/M0Bridge.lean|proofs/m0-046-uncertainty/M0Diagonal046.lean|proofs/m0-046-uncertainty/M0FiniteDiscord046.lean|proofs/m0-046-uncertainty/M0Interval046.lean|proofs/m0-046-uncertainty/M0Lindeberg046.lean|proofs/m0-046-uncertainty/M0Moments046.lean|proofs/m0-046-uncertainty/M0Threshold046.lean|proofs/m0-046-uncertainty/Obligations045/ConsensusGrid.lean|proofs/m0-046-uncertainty/Obligations045/M0Coincidence.lean|proofs/m0-046-uncertainty/Obligations045/M0Diagonal.lean|proofs/m0-046-uncertainty/Obligations045/M0Limit.lean|proofs/m0-046-uncertainty/Obligations045/M0Offdiag.lean|proofs/m0-046-uncertainty/Obligations045.lean|proofs/m0-046-uncertainty/lake-manifest.json|proofs/m0-046-uncertainty/lakefile.toml|proofs/m0-046-uncertainty/lean-toolchain|vectors/laws/m0-uncertainty-blocks.lean.json|contracts/m0-keff-interval.json|samples/laws/m0-keff-interval/yes/sample.json|samples/laws/m0-keff-interval/yes/api-rows.json|samples/laws/m0-keff-interval/no/sample.json|vectors/laws/policy.json|vectors/laws/m0-keff-interval.json"
+        ],
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 6467.473833,
+      "expected": "fact",
+      "name": "blocks-orchard-read",
+      "passed": true,
+      "requestSHA256": "sha256:9ebb52fd4672d57adc2b476416683227cd1310dc4ecc93f99b38ae6fd451bf69",
+      "result": {
+        "claims": [
+          {
+            "bound": {
+              "hi": 0,
+              "kind": "interval",
+              "lo": 0
+            },
+            "measure": "count",
+            "role": "writes",
+            "scope": "publication/evidence/m0-uncertainty/blocks"
+          },
+          {
+            "bound": {
+              "kind": "enumerated",
+              "values": [
+                "sha256:387082acd70049214d10537a8d2016ee132e8bfb47cd363596a20433819b9b3a"
+              ]
+            },
+            "measure": "digest",
+            "role": "writes",
+            "scope": "publication/evidence/m0-uncertainty/blocks/verification"
+          }
+        ],
+        "kind": "fact",
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 162.8522499999999,
+      "expected": "refuse",
+      "name": "blocks-orchard-missing-input",
+      "passed": true,
+      "requestSHA256": "sha256:0802273dc6ce0fb569d898e4087e710dfa86bb2d653d9d878d99c206bba8e43b",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice missing-input proofs/m0-046-uncertainty/M0BlockCoverage046.lean"
+      }
+    },
+    {
+      "elapsedMs": 158.1334999999999,
+      "expected": "refuse",
+      "name": "blocks-orchard-handed-source-differs",
+      "passed": true,
+      "requestSHA256": "sha256:42b09cddd2628e2a3c93756888bc6754941304594d57b1d171428728e7890c5b",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice fixture-source-differs proofs/m0-046-uncertainty/M0BlockCoverage046.lean"
+      }
+    },
+    {
+      "elapsedMs": 157.80804199999966,
+      "expected": "refuse",
+      "name": "blocks-orchard-overstated-O5",
+      "passed": true,
+      "requestSHA256": "sha256:9f3ace290529020dce5b5cbd98bbba55381d43523b87b1d846f71ed3518dfed2",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice overstated-O5"
+      }
+    },
+    {
+      "elapsedMs": 183.8574580000004,
+      "expected": "fact",
+      "name": "blocks-catalog-projection",
+      "passed": true,
+      "requestSHA256": "sha256:944ddd11584fce66b396ab3c4c5151eb176bc1742a13ee350390765789d28929",
+      "result": {
+        "kind": "fact",
+        "lines": [
+          "bound-lock/1 at=receipt:1 form=alphabet measure=reads role=reads scope=publication/evidence/m0-uncertainty/blocks value=proofs/m0-046-uncertainty/BridgeNegatives.lean|proofs/m0-046-uncertainty/M0BlockCoverage046.lean|proofs/m0-046-uncertainty/M0Bridge.lean|proofs/m0-046-uncertainty/M0Diagonal046.lean|proofs/m0-046-uncertainty/M0FiniteDiscord046.lean|proofs/m0-046-uncertainty/M0Interval046.lean|proofs/m0-046-uncertainty/M0Lindeberg046.lean|proofs/m0-046-uncertainty/M0Moments046.lean|proofs/m0-046-uncertainty/M0Threshold046.lean|proofs/m0-046-uncertainty/Obligations045/ConsensusGrid.lean|proofs/m0-046-uncertainty/Obligations045/M0Coincidence.lean|proofs/m0-046-uncertainty/Obligations045/M0Diagonal.lean|proofs/m0-046-uncertainty/Obligations045/M0Limit.lean|proofs/m0-046-uncertainty/Obligations045/M0Offdiag.lean|proofs/m0-046-uncertainty/Obligations045.lean|proofs/m0-046-uncertainty/lake-manifest.json|proofs/m0-046-uncertainty/lakefile.toml|proofs/m0-046-uncertainty/lean-toolchain|vectors/laws/m0-uncertainty-blocks.lean.json|contracts/m0-keff-interval.json|samples/laws/m0-keff-interval/yes/sample.json|samples/laws/m0-keff-interval/yes/api-rows.json|samples/laws/m0-keff-interval/no/sample.json|vectors/laws/policy.json|vectors/laws/m0-keff-interval.json"
+        ],
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 6118.284207999999,
+      "expected": "fact",
+      "name": "blocks-catalog-read",
+      "passed": true,
+      "requestSHA256": "sha256:9ebb52fd4672d57adc2b476416683227cd1310dc4ecc93f99b38ae6fd451bf69",
+      "result": {
+        "claims": [
+          {
+            "bound": {
+              "hi": 0,
+              "kind": "interval",
+              "lo": 0
+            },
+            "measure": "count",
+            "role": "writes",
+            "scope": "publication/evidence/m0-uncertainty/blocks"
+          },
+          {
+            "bound": {
+              "kind": "enumerated",
+              "values": [
+                "sha256:387082acd70049214d10537a8d2016ee132e8bfb47cd363596a20433819b9b3a"
+              ]
+            },
+            "measure": "digest",
+            "role": "writes",
+            "scope": "publication/evidence/m0-uncertainty/blocks/verification"
+          }
+        ],
+        "kind": "fact",
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 186.40362500000083,
+      "expected": "refuse",
+      "name": "blocks-catalog-missing-input",
+      "passed": true,
+      "requestSHA256": "sha256:0802273dc6ce0fb569d898e4087e710dfa86bb2d653d9d878d99c206bba8e43b",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice missing-input proofs/m0-046-uncertainty/M0BlockCoverage046.lean"
+      }
+    },
+    {
+      "elapsedMs": 185.47975000000042,
+      "expected": "refuse",
+      "name": "blocks-catalog-handed-source-differs",
+      "passed": true,
+      "requestSHA256": "sha256:42b09cddd2628e2a3c93756888bc6754941304594d57b1d171428728e7890c5b",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice fixture-source-differs proofs/m0-046-uncertainty/M0BlockCoverage046.lean"
+      }
+    },
+    {
+      "elapsedMs": 195.34191699999974,
+      "expected": "refuse",
+      "name": "blocks-catalog-overstated-O5",
+      "passed": true,
+      "requestSHA256": "sha256:9f3ace290529020dce5b5cbd98bbba55381d43523b87b1d846f71ed3518dfed2",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice overstated-O5"
+      }
+    },
+    {
+      "elapsedMs": 166.0619999999999,
+      "expected": "fact",
+      "name": "interval-orchard-projection",
+      "passed": true,
+      "requestSHA256": "sha256:af27d998ffd38355184e59508dc07351e6711bf7346e31fd94b767d929d1c679",
+      "result": {
+        "kind": "fact",
+        "lines": [
+          "bound-lock/1 at=receipt:1 form=alphabet measure=reads role=reads scope=publication/evidence/m0-uncertainty/interval value=proofs/m0-046-uncertainty/BridgeNegatives.lean|proofs/m0-046-uncertainty/M0BlockCoverage046.lean|proofs/m0-046-uncertainty/M0Bridge.lean|proofs/m0-046-uncertainty/M0Diagonal046.lean|proofs/m0-046-uncertainty/M0FiniteDiscord046.lean|proofs/m0-046-uncertainty/M0Interval046.lean|proofs/m0-046-uncertainty/M0Lindeberg046.lean|proofs/m0-046-uncertainty/M0Moments046.lean|proofs/m0-046-uncertainty/M0Threshold046.lean|proofs/m0-046-uncertainty/Obligations045/ConsensusGrid.lean|proofs/m0-046-uncertainty/Obligations045/M0Coincidence.lean|proofs/m0-046-uncertainty/Obligations045/M0Diagonal.lean|proofs/m0-046-uncertainty/Obligations045/M0Limit.lean|proofs/m0-046-uncertainty/Obligations045/M0Offdiag.lean|proofs/m0-046-uncertainty/Obligations045.lean|proofs/m0-046-uncertainty/lake-manifest.json|proofs/m0-046-uncertainty/lakefile.toml|proofs/m0-046-uncertainty/lean-toolchain|vectors/laws/m0-uncertainty-interval.lean.json|contracts/m0-keff-interval.json|samples/laws/m0-keff-interval/yes/sample.json|samples/laws/m0-keff-interval/yes/api-rows.json|samples/laws/m0-keff-interval/no/sample.json|vectors/laws/policy.json|vectors/laws/m0-keff-interval.json"
+        ],
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 4899.722374999999,
+      "expected": "fact",
+      "name": "interval-orchard-read",
+      "passed": true,
+      "requestSHA256": "sha256:f33a2cb82afec44764c408e96db435bb7dc89063c5441e98238110f600d40673",
+      "result": {
+        "claims": [
+          {
+            "bound": {
+              "hi": 0,
+              "kind": "interval",
+              "lo": 0
+            },
+            "measure": "count",
+            "role": "writes",
+            "scope": "publication/evidence/m0-uncertainty/interval"
+          },
+          {
+            "bound": {
+              "kind": "enumerated",
+              "values": [
+                "sha256:1c51f4b194604a86451e3d2554478c5c8cea8e47af68003ee95e8aaabf94c3d3"
+              ]
+            },
+            "measure": "digest",
+            "role": "writes",
+            "scope": "publication/evidence/m0-uncertainty/interval/verification"
+          }
+        ],
+        "kind": "fact",
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 163.9019589999989,
+      "expected": "refuse",
+      "name": "interval-orchard-missing-input",
+      "passed": true,
+      "requestSHA256": "sha256:98cd30808eb6532a824a10bfc694840387cf2efbfd415184ef5515ffeec47fef",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice missing-input proofs/m0-046-uncertainty/M0Interval046.lean"
+      }
+    },
+    {
+      "elapsedMs": 158.76370800000223,
+      "expected": "refuse",
+      "name": "interval-orchard-handed-source-differs",
+      "passed": true,
+      "requestSHA256": "sha256:3b6f6f51882bd6c0920f4ce7e0a67a7f53d12e31702f3e7f3a8c2e9bddb32263",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice fixture-source-differs proofs/m0-046-uncertainty/M0Interval046.lean"
+      }
+    },
+    {
+      "elapsedMs": 159.91612499999974,
+      "expected": "refuse",
+      "name": "interval-orchard-overstated-O5",
+      "passed": true,
+      "requestSHA256": "sha256:4ebe2052c914f8278df9d255e7aba64cf0774a2b80b4cc8e763c3eead35eb9b2",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice overstated-O5"
+      }
+    },
+    {
+      "elapsedMs": 181.91170899999997,
+      "expected": "fact",
+      "name": "interval-catalog-projection",
+      "passed": true,
+      "requestSHA256": "sha256:af27d998ffd38355184e59508dc07351e6711bf7346e31fd94b767d929d1c679",
+      "result": {
+        "kind": "fact",
+        "lines": [
+          "bound-lock/1 at=receipt:1 form=alphabet measure=reads role=reads scope=publication/evidence/m0-uncertainty/interval value=proofs/m0-046-uncertainty/BridgeNegatives.lean|proofs/m0-046-uncertainty/M0BlockCoverage046.lean|proofs/m0-046-uncertainty/M0Bridge.lean|proofs/m0-046-uncertainty/M0Diagonal046.lean|proofs/m0-046-uncertainty/M0FiniteDiscord046.lean|proofs/m0-046-uncertainty/M0Interval046.lean|proofs/m0-046-uncertainty/M0Lindeberg046.lean|proofs/m0-046-uncertainty/M0Moments046.lean|proofs/m0-046-uncertainty/M0Threshold046.lean|proofs/m0-046-uncertainty/Obligations045/ConsensusGrid.lean|proofs/m0-046-uncertainty/Obligations045/M0Coincidence.lean|proofs/m0-046-uncertainty/Obligations045/M0Diagonal.lean|proofs/m0-046-uncertainty/Obligations045/M0Limit.lean|proofs/m0-046-uncertainty/Obligations045/M0Offdiag.lean|proofs/m0-046-uncertainty/Obligations045.lean|proofs/m0-046-uncertainty/lake-manifest.json|proofs/m0-046-uncertainty/lakefile.toml|proofs/m0-046-uncertainty/lean-toolchain|vectors/laws/m0-uncertainty-interval.lean.json|contracts/m0-keff-interval.json|samples/laws/m0-keff-interval/yes/sample.json|samples/laws/m0-keff-interval/yes/api-rows.json|samples/laws/m0-keff-interval/no/sample.json|vectors/laws/policy.json|vectors/laws/m0-keff-interval.json"
+        ],
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 4907.975666999999,
+      "expected": "fact",
+      "name": "interval-catalog-read",
+      "passed": true,
+      "requestSHA256": "sha256:f33a2cb82afec44764c408e96db435bb7dc89063c5441e98238110f600d40673",
+      "result": {
+        "claims": [
+          {
+            "bound": {
+              "hi": 0,
+              "kind": "interval",
+              "lo": 0
+            },
+            "measure": "count",
+            "role": "writes",
+            "scope": "publication/evidence/m0-uncertainty/interval"
+          },
+          {
+            "bound": {
+              "kind": "enumerated",
+              "values": [
+                "sha256:1c51f4b194604a86451e3d2554478c5c8cea8e47af68003ee95e8aaabf94c3d3"
+              ]
+            },
+            "measure": "digest",
+            "role": "writes",
+            "scope": "publication/evidence/m0-uncertainty/interval/verification"
+          }
+        ],
+        "kind": "fact",
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 184.63712499999747,
+      "expected": "refuse",
+      "name": "interval-catalog-missing-input",
+      "passed": true,
+      "requestSHA256": "sha256:98cd30808eb6532a824a10bfc694840387cf2efbfd415184ef5515ffeec47fef",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice missing-input proofs/m0-046-uncertainty/M0Interval046.lean"
+      }
+    },
+    {
+      "elapsedMs": 180.33187499999985,
+      "expected": "refuse",
+      "name": "interval-catalog-handed-source-differs",
+      "passed": true,
+      "requestSHA256": "sha256:3b6f6f51882bd6c0920f4ce7e0a67a7f53d12e31702f3e7f3a8c2e9bddb32263",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice fixture-source-differs proofs/m0-046-uncertainty/M0Interval046.lean"
+      }
+    },
+    {
+      "elapsedMs": 184.62604199999987,
+      "expected": "refuse",
+      "name": "interval-catalog-overstated-O5",
+      "passed": true,
+      "requestSHA256": "sha256:4ebe2052c914f8278df9d255e7aba64cf0774a2b80b4cc8e763c3eead35eb9b2",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice overstated-O5"
+      }
+    },
+    {
+      "elapsedMs": 159.46791599999779,
+      "expected": "fact",
+      "name": "finite-discord-orchard-projection",
+      "passed": true,
+      "requestSHA256": "sha256:ed9c3d0534c02120ec26954d30a3d6d76c12810c9e17c787e138bc1010128c8f",
+      "result": {
+        "kind": "fact",
+        "lines": [
+          "bound-lock/1 at=receipt:1 form=alphabet measure=reads role=reads scope=publication/evidence/m0-uncertainty/finite-discord value=proofs/m0-046-uncertainty/BridgeNegatives.lean|proofs/m0-046-uncertainty/M0BlockCoverage046.lean|proofs/m0-046-uncertainty/M0Bridge.lean|proofs/m0-046-uncertainty/M0Diagonal046.lean|proofs/m0-046-uncertainty/M0FiniteDiscord046.lean|proofs/m0-046-uncertainty/M0Interval046.lean|proofs/m0-046-uncertainty/M0Lindeberg046.lean|proofs/m0-046-uncertainty/M0Moments046.lean|proofs/m0-046-uncertainty/M0Threshold046.lean|proofs/m0-046-uncertainty/Obligations045/ConsensusGrid.lean|proofs/m0-046-uncertainty/Obligations045/M0Coincidence.lean|proofs/m0-046-uncertainty/Obligations045/M0Diagonal.lean|proofs/m0-046-uncertainty/Obligations045/M0Limit.lean|proofs/m0-046-uncertainty/Obligations045/M0Offdiag.lean|proofs/m0-046-uncertainty/Obligations045.lean|proofs/m0-046-uncertainty/lake-manifest.json|proofs/m0-046-uncertainty/lakefile.toml|proofs/m0-046-uncertainty/lean-toolchain|vectors/laws/m0-uncertainty-finite-discord.lean.json|contracts/m0-keff-interval.json|samples/laws/m0-keff-interval/yes/sample.json|samples/laws/m0-keff-interval/yes/api-rows.json|samples/laws/m0-keff-interval/no/sample.json|vectors/laws/policy.json|vectors/laws/m0-keff-interval.json"
+        ],
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 9896.000499999998,
+      "expected": "fact",
+      "name": "finite-discord-orchard-read",
+      "passed": true,
+      "requestSHA256": "sha256:7e73dc4191dc00e91b757f38578cbf22310580b710a61ef945195c5356531edd",
+      "result": {
+        "claims": [
+          {
+            "bound": {
+              "hi": 0,
+              "kind": "interval",
+              "lo": 0
+            },
+            "measure": "count",
+            "role": "writes",
+            "scope": "publication/evidence/m0-uncertainty/finite-discord"
+          },
+          {
+            "bound": {
+              "kind": "enumerated",
+              "values": [
+                "sha256:71f8cd2e356e374a2575420da4a1e36d17d04a4ef05573b40291a719a5ac2971"
+              ]
+            },
+            "measure": "digest",
+            "role": "writes",
+            "scope": "publication/evidence/m0-uncertainty/finite-discord/verification"
+          }
+        ],
+        "kind": "fact",
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 181.51058300000295,
+      "expected": "refuse",
+      "name": "finite-discord-orchard-missing-input",
+      "passed": true,
+      "requestSHA256": "sha256:a6f4f8c6ebbadfc5a421327f8e831dd396a62d78c5f1779ab9a0c1ae06472e58",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice missing-input proofs/m0-046-uncertainty/M0FiniteDiscord046.lean"
+      }
+    },
+    {
+      "elapsedMs": 172.0234999999957,
+      "expected": "refuse",
+      "name": "finite-discord-orchard-handed-source-differs",
+      "passed": true,
+      "requestSHA256": "sha256:5ce681b08cec6461a74cf639367a40b7c4461ec722e2d38b68b16a896f8a2428",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice fixture-source-differs proofs/m0-046-uncertainty/M0FiniteDiscord046.lean"
+      }
+    },
+    {
+      "elapsedMs": 164.87075000000186,
+      "expected": "refuse",
+      "name": "finite-discord-orchard-overstated-O5",
+      "passed": true,
+      "requestSHA256": "sha256:a021d872d01dbc22569d061e0eb83932ebb962194e16bc0ce55166d0adb0a0a4",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice overstated-O5"
+      }
+    },
+    {
+      "elapsedMs": 186.90283400000044,
+      "expected": "fact",
+      "name": "finite-discord-catalog-projection",
+      "passed": true,
+      "requestSHA256": "sha256:ed9c3d0534c02120ec26954d30a3d6d76c12810c9e17c787e138bc1010128c8f",
+      "result": {
+        "kind": "fact",
+        "lines": [
+          "bound-lock/1 at=receipt:1 form=alphabet measure=reads role=reads scope=publication/evidence/m0-uncertainty/finite-discord value=proofs/m0-046-uncertainty/BridgeNegatives.lean|proofs/m0-046-uncertainty/M0BlockCoverage046.lean|proofs/m0-046-uncertainty/M0Bridge.lean|proofs/m0-046-uncertainty/M0Diagonal046.lean|proofs/m0-046-uncertainty/M0FiniteDiscord046.lean|proofs/m0-046-uncertainty/M0Interval046.lean|proofs/m0-046-uncertainty/M0Lindeberg046.lean|proofs/m0-046-uncertainty/M0Moments046.lean|proofs/m0-046-uncertainty/M0Threshold046.lean|proofs/m0-046-uncertainty/Obligations045/ConsensusGrid.lean|proofs/m0-046-uncertainty/Obligations045/M0Coincidence.lean|proofs/m0-046-uncertainty/Obligations045/M0Diagonal.lean|proofs/m0-046-uncertainty/Obligations045/M0Limit.lean|proofs/m0-046-uncertainty/Obligations045/M0Offdiag.lean|proofs/m0-046-uncertainty/Obligations045.lean|proofs/m0-046-uncertainty/lake-manifest.json|proofs/m0-046-uncertainty/lakefile.toml|proofs/m0-046-uncertainty/lean-toolchain|vectors/laws/m0-uncertainty-finite-discord.lean.json|contracts/m0-keff-interval.json|samples/laws/m0-keff-interval/yes/sample.json|samples/laws/m0-keff-interval/yes/api-rows.json|samples/laws/m0-keff-interval/no/sample.json|vectors/laws/policy.json|vectors/laws/m0-keff-interval.json"
+        ],
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 7399.761792000005,
+      "expected": "fact",
+      "name": "finite-discord-catalog-read",
+      "passed": true,
+      "requestSHA256": "sha256:7e73dc4191dc00e91b757f38578cbf22310580b710a61ef945195c5356531edd",
+      "result": {
+        "claims": [
+          {
+            "bound": {
+              "hi": 0,
+              "kind": "interval",
+              "lo": 0
+            },
+            "measure": "count",
+            "role": "writes",
+            "scope": "publication/evidence/m0-uncertainty/finite-discord"
+          },
+          {
+            "bound": {
+              "kind": "enumerated",
+              "values": [
+                "sha256:71f8cd2e356e374a2575420da4a1e36d17d04a4ef05573b40291a719a5ac2971"
+              ]
+            },
+            "measure": "digest",
+            "role": "writes",
+            "scope": "publication/evidence/m0-uncertainty/finite-discord/verification"
+          }
+        ],
+        "kind": "fact",
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 189.41495900000155,
+      "expected": "refuse",
+      "name": "finite-discord-catalog-missing-input",
+      "passed": true,
+      "requestSHA256": "sha256:a6f4f8c6ebbadfc5a421327f8e831dd396a62d78c5f1779ab9a0c1ae06472e58",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice missing-input proofs/m0-046-uncertainty/M0FiniteDiscord046.lean"
+      }
+    },
+    {
+      "elapsedMs": 185.64258400000108,
+      "expected": "refuse",
+      "name": "finite-discord-catalog-handed-source-differs",
+      "passed": true,
+      "requestSHA256": "sha256:5ce681b08cec6461a74cf639367a40b7c4461ec722e2d38b68b16a896f8a2428",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice fixture-source-differs proofs/m0-046-uncertainty/M0FiniteDiscord046.lean"
+      }
+    },
+    {
+      "elapsedMs": 182.82779099999607,
+      "expected": "refuse",
+      "name": "finite-discord-catalog-overstated-O5",
+      "passed": true,
+      "requestSHA256": "sha256:a021d872d01dbc22569d061e0eb83932ebb962194e16bc0ce55166d0adb0a0a4",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice overstated-O5"
+      }
+    }
+  ],
+  "classification": "retained actual host responses; exact historical input identities only",
+  "format": "native-reading-capture@1",
+  "ownerAdmitted": true,
+  "sameOrigin": true,
+  "sourceInputDigests": [
+    {
+      "bytes": 914,
+      "path": "proofs/m0-046-uncertainty/BridgeNegatives.lean",
+      "sha256": "sha256:956afd1cfe87eaf2c6586822541a3ede6cc285f8659d27d88228f5534e1c640b"
+    },
+    {
+      "bytes": 7187,
+      "path": "proofs/m0-046-uncertainty/M0BlockCoverage046.lean",
+      "sha256": "sha256:e35ede53b00a995b8d6a8019df552947b4a7bc889efa8533a9187d75d93906b4"
+    },
+    {
+      "bytes": 14408,
+      "path": "proofs/m0-046-uncertainty/M0Bridge.lean",
+      "sha256": "sha256:b438b2961b93c62787275e158a90b534a400de8646a0552b099863fa5227c21e"
+    },
+    {
+      "bytes": 10587,
+      "path": "proofs/m0-046-uncertainty/M0Diagonal046.lean",
+      "sha256": "sha256:c0403d40e1c6849045bf70eab2854eeac28a2464783e06ce03f2f36e33c2146c"
+    },
+    {
+      "bytes": 9206,
+      "path": "proofs/m0-046-uncertainty/M0FiniteDiscord046.lean",
+      "sha256": "sha256:47995f461ba91fa29ce9613fa07cbb74ab9adc32ad11e3fd28fec421639d80e5"
+    },
+    {
+      "bytes": 3402,
+      "path": "proofs/m0-046-uncertainty/M0Interval046.lean",
+      "sha256": "sha256:6a4cf38e6c65e33d8afd91b219e6324edee3385ba36e3b1ee5685c1bf28f82b5"
+    },
+    {
+      "bytes": 4565,
+      "path": "proofs/m0-046-uncertainty/M0Lindeberg046.lean",
+      "sha256": "sha256:de5477cdde114064f3d272ede95490483040fc857399181c376c285c02411da8"
+    },
+    {
+      "bytes": 12023,
+      "path": "proofs/m0-046-uncertainty/M0Moments046.lean",
+      "sha256": "sha256:06780115a2b44a77a9be72673350332b77045489dba7ff081beecd48b8d51a73"
+    },
+    {
+      "bytes": 12990,
+      "path": "proofs/m0-046-uncertainty/M0Threshold046.lean",
+      "sha256": "sha256:861cd13ecd4b7f37a1bc00362b4fdc213cefdcf380171947a14463b0bc465a9e"
+    },
+    {
+      "bytes": 3304,
+      "path": "proofs/m0-046-uncertainty/Obligations045/ConsensusGrid.lean",
+      "sha256": "sha256:b26a1b68522e881e446a47f4c84cd8b569a1c48f085a5c9a9d03abdeecafacce"
+    },
+    {
+      "bytes": 1486,
+      "path": "proofs/m0-046-uncertainty/Obligations045/M0Coincidence.lean",
+      "sha256": "sha256:e870a43e435f4b4b52f28f44dd7391c40704faa41febd272434d2e56b2bd6771"
+    },
+    {
+      "bytes": 939,
+      "path": "proofs/m0-046-uncertainty/Obligations045/M0Diagonal.lean",
+      "sha256": "sha256:4d83f047fc5e199f46b2cc28dfe77b006a7dd408f0f14ed54afb5e21315148e2"
+    },
+    {
+      "bytes": 5762,
+      "path": "proofs/m0-046-uncertainty/Obligations045/M0Limit.lean",
+      "sha256": "sha256:aedc88b8ba4edf884cacec78da82eef29187ded0199d44674466425af1585b8c"
+    },
+    {
+      "bytes": 8801,
+      "path": "proofs/m0-046-uncertainty/Obligations045/M0Offdiag.lean",
+      "sha256": "sha256:af8a95d00cd0956acaec06deeebe7156dccf156b698408275c3e710f58c1c1e8"
+    },
+    {
+      "bytes": 167,
+      "path": "proofs/m0-046-uncertainty/Obligations045.lean",
+      "sha256": "sha256:be4956a2720d696e5456ad108543945c6f65f1986126513f10edcd4f1841bced"
+    },
+    {
+      "bytes": 3526,
+      "path": "proofs/m0-046-uncertainty/lake-manifest.json",
+      "sha256": "sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d"
+    },
+    {
+      "bytes": 599,
+      "path": "proofs/m0-046-uncertainty/lakefile.toml",
+      "sha256": "sha256:d03fb53e4cbc3c34b7fd329841b3fd8d8c3289a367a4a9839cf876ed86d547da"
+    },
+    {
+      "bytes": 25,
+      "path": "proofs/m0-046-uncertainty/lean-toolchain",
+      "sha256": "sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+    },
+    {
+      "bytes": 3408,
+      "path": "contracts/m0-keff-interval.json",
+      "sha256": "sha256:365ece59f8d09a10b5e85b9e07b23687675917b0fe50c008284aa23efbd1fd49"
+    },
+    {
+      "bytes": 1799,
+      "path": "samples/laws/m0-keff-interval/yes/sample.json",
+      "sha256": "sha256:3e9bbc6d330a14182f4395d57d0d7ac7366c3add7e3830787f6cb1ffbec6806d"
+    },
+    {
+      "bytes": 27563,
+      "path": "samples/laws/m0-keff-interval/yes/api-rows.json",
+      "sha256": "sha256:b55a6d8c01151914c55eaec986041be711f38759c8657383866e66d533e794a8"
+    },
+    {
+      "bytes": 6343,
+      "path": "samples/laws/m0-keff-interval/no/sample.json",
+      "sha256": "sha256:c45aadfa7944381be30238d804b9d0897f669c1fee9458fe1bc16eab4509bec1"
+    },
+    {
+      "bytes": 2761,
+      "path": "vectors/laws/policy.json",
+      "sha256": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+    },
+    {
+      "bytes": 16046,
+      "path": "vectors/laws/m0-keff-interval.json",
+      "sha256": "sha256:4374c2635b8a165a299a876fc38a41722d2916ebf80564d74f7cdb5ffd3ec193"
+    },
+    {
+      "bytes": 8242,
+      "path": "vectors/laws/m0-uncertainty-blocks.lean.json",
+      "sha256": "sha256:f21e5451ec1dd4bee21f9264d2ccd432743f4b80b8ee06bb8a0cb3c3b11e8e2f"
+    },
+    {
+      "bytes": 7679,
+      "path": "vectors/laws/m0-uncertainty-interval.lean.json",
+      "sha256": "sha256:56291f91e27334793f201db7c16e1987f8bc208b74b5252bf5724969519a04bb"
+    },
+    {
+      "bytes": 8243,
+      "path": "vectors/laws/m0-uncertainty-finite-discord.lean.json",
+      "sha256": "sha256:5eed35102bd963bd9740f872ab8fe7c3c67a18dedd1c4740db1e2e1e245e0987"
+    }
+  ]
+}

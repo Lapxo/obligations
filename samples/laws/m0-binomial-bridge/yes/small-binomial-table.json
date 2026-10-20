@@ -1,0 +1,100 @@
+{
+  "kind": "exact bounded preparation vector, not a general proof or native captured receipt",
+  "model": "published M0 conditional latent state; joint fresh/copy randomness already declared in model",
+  "K": 2,
+  "p": "3/4",
+  "c": "1/3",
+  "weights": [
+    "1/2",
+    "1/2"
+  ],
+  "N": 4,
+  "A": [
+    false,
+    true
+  ],
+  "q": [
+    "1/2",
+    "5/6"
+  ],
+  "individualConfigurations": 16,
+  "groupedConfigurations": 9,
+  "table": [
+    {
+      "counts": [
+        0,
+        0
+      ],
+      "productBernoulliMass": "1/144",
+      "productBinomialMass": "1/144"
+    },
+    {
+      "counts": [
+        0,
+        1
+      ],
+      "productBernoulliMass": "5/72",
+      "productBinomialMass": "5/72"
+    },
+    {
+      "counts": [
+        0,
+        2
+      ],
+      "productBernoulliMass": "25/144",
+      "productBinomialMass": "25/144"
+    },
+    {
+      "counts": [
+        1,
+        0
+      ],
+      "productBernoulliMass": "1/72",
+      "productBinomialMass": "1/72"
+    },
+    {
+      "counts": [
+        1,
+        1
+      ],
+      "productBernoulliMass": "5/36",
+      "productBinomialMass": "5/36"
+    },
+    {
+      "counts": [
+        1,
+        2
+      ],
+      "productBernoulliMass": "25/72",
+      "productBinomialMass": "25/72"
+    },
+    {
+      "counts": [
+        2,
+        0
+      ],
+      "productBernoulliMass": "1/144",
+      "productBinomialMass": "1/144"
+    },
+    {
+      "counts": [
+        2,
+        1
+      ],
+      "productBernoulliMass": "5/72",
+      "productBinomialMass": "5/72"
+    },
+    {
+      "counts": [
+        2,
+        2
+      ],
+      "productBernoulliMass": "25/144",
+      "productBinomialMass": "25/144"
+    }
+  ],
+  "individualError": "1/4",
+  "binomialError": "1/4",
+  "equal": true,
+  "capturedByInstrument": false
+}

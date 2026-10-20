@@ -1,0 +1,82 @@
+{
+  "id": "definitions-native@1",
+  "classification": "definitions-and-conditional-interpretation",
+  "claimFlags": {
+    "causalIndependentCount": false,
+    "unconditionalEntropy": false,
+    "arbitraryIteration": false,
+    "universalLeanLaw": false
+  },
+  "originalThreeCards": "open",
+  "scope": "publication/evidence/definitions",
+  "identityInputs": [
+    "vectors/laws/definitions.native.json",
+    "contracts/extension-lineage-participation.json",
+    "docs/contracts/extension-lineage-participation.md",
+    "proofs/definitions-046/declaration.json",
+    "vectors/laws/policy.json",
+    "src/laws/laws.bound",
+    "vectors/laws/a7-t90.json",
+    "vectors/laws/a9-t99.json",
+    "samples/laws/definitions/yes/sample.json",
+    "samples/laws/definitions/no/sample.json"
+  ],
+  "anchors": [
+    {
+      "path": "contracts/extension-lineage-participation.json",
+      "sha256": "sha256:527fffd66d35b9a2b856ffb0e7af3c4a2937d204d3dd27f10a29b162788c8a6f"
+    },
+    {
+      "path": "docs/contracts/extension-lineage-participation.md",
+      "sha256": "sha256:b39844d58c7bc04d5b7fdce295a05f4aedc761ab627c1000f9bf0305b8760716"
+    },
+    {
+      "path": "proofs/definitions-046/declaration.json",
+      "sha256": "sha256:022e561e8f6f4efe857935254d01aff688c87f9ed71a25b57007591109907765"
+    },
+    {
+      "path": "vectors/laws/policy.json",
+      "sha256": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+    },
+    {
+      "path": "src/laws/laws.bound",
+      "sha256": "sha256:fb4c6f1818ed368a8e96fc7670d1fc12f5bcc681cde8cbad4b1cc44ead3b932e"
+    },
+    {
+      "path": "vectors/laws/a7-t90.json",
+      "sha256": "sha256:d6c76575f3f0d4df65929cf611f85ea6a64495bfafd99cdb7bdcc389522e4990"
+    },
+    {
+      "path": "vectors/laws/a9-t99.json",
+      "sha256": "sha256:ce97c5ba15382d61c4e99439e201e36a558b46f5fa47c7d3077a7553c71dbb9b"
+    },
+    {
+      "path": "samples/laws/definitions/yes/sample.json",
+      "sha256": "sha256:871a85fe73f9d1c790f596469931cf05a669886c1ae0102b3e52f016f14addae"
+    },
+    {
+      "path": "samples/laws/definitions/no/sample.json",
+      "sha256": "sha256:535ea8c850589c0d8960374e996ab49404a65ce82d22b6b1f1cab56e339aa2f4"
+    }
+  ],
+  "instrument": {
+    "measures/error-events.js": "sha256:6a67eb1fbfa48629cff9bc173c9ae569b4803b9dbdbf945368add0ac52a6d200",
+    "lattice/forms.js": "sha256:9061bbb17d68f5d04e469ca83eebf4aa9db184d627b4228bee504f7f0be3dc42",
+    "lattice/obligatory.js": "sha256:767c01b525fe5e97997acebdd2aac89c0d6e579fd9d6955c339292d17d34d048",
+    "field/meet.js": "sha256:9b52c83f47dbf56e144aba56cc077ac7eb0ef57579aea5c72c13324d4f9dd39c",
+    "field/observe.js": "sha256:e9255aea5a52edaa841ca520804870f714817fb64b764c3d66921055c6165f3f",
+    "field/join.js": "sha256:c574e7f455e18284a8f9c120a78e30c3ad87e666dc85c4c9201f1b1d3abc5f71"
+  },
+  "capturePolicy": {
+    "timeoutMs": 25000,
+    "responseBytes": 65536
+  },
+  "statements": {
+    "A5": "bound-lock/1 about=\"Declared extensional convention: an origin is identified by its supplied set of coordinate/interval pairs. Equal extensions form one class. Distance between extensions is descriptive; it does not establish probabilistic independence.\" at=policy:law/A5 by=target form=alphabet kind=axiom measure=status needs=samples/yes/A5-origin-is-extension.json|samples/no/A5-origin-is-extension.json|vectors/atom/states-not-actions.json role=demands scope=law/A5-origin-is-extension value=present view=galois",
+    "A7": "bound-lock/1 about=\"For fixed coordinates, resolution, context and signed ceilings, adding live narrowing claims cannot increase the sum of log-cardinalities of finite admissible states. Exact withdrawal and witnessed local widening may reopen freedom at the same coordinate. The blanket exclusivity claim that only a new coordinate raises freedom is not valid. Historical alias: freedom-conserved.\" at=policy:law/A7 by=target form=alphabet kind=axiom measure=status needs=samples/yes/A7-freedom-conserved.json|samples/no/A7-freedom-conserved.json|test/laws-boundaries-042.test.ts|vectors/laws/a7-t90.json role=demands scope=law/A7-freedom-conserved value=present view=chain",
+    "A9": "bound-lock/1 about=\"one relation: an origin bounds a cell at a resolution and an epoch; cells, origins, locks and laws are cells under it; the relation bounds itself, and there is no level above it\" at=policy:law/A9 by=target form=alphabet kind=axiom measure=status needs=samples/yes/A9-everything-is-a-bound.json|samples/no/A9-everything-is-a-bound.json role=demands scope=law/A9-everything-is-a-bound value=present view=lattice",
+    "C1": "bound-lock/1 about=\"the independence of two origins is the distance between their extensions: one extension is one origin, disjoint extensions share nothing\" at=policy:law/C1 by=target form=alphabet kind=corollary measure=status needs=samples/yes/C1-independence-is-distance.json restsOn=law/A5-origin-is-extension role=demands scope=law/C1-independence-is-distance value=present view=galois",
+    "T90": "bound-lock/1 about=\"For a finite nonempty set of uniformly weighted admissible states at a fixed resolution, freedom is log2 of its cardinality, equal to its Shannon entropy. A narrowing act cannot increase this quantity. Withdrawal and witnessed local join can increase it on an existing object; phase and vacuity experiments do not establish that these are the only possible changes. Historical alias: freedom-is-entropy.\" at=policy:law/T90 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T90-freedom-is-entropy.json|samples/no/T90-freedom-is-entropy.json|test/laws-boundaries-042.test.ts|vectors/laws/a7-t90.json restsOn=law/D4-debit-in-bits|law/A7-freedom-conserved role=demands scope=law/T90-freedom-is-entropy value=present view=chain",
+    "T99": "bound-lock/1 about=\"For a finite world with finite records, an acyclic dependency order and total supplied lattice operations, ancestry expansion visits each reachable name once and parts/meet perform finitely many operations. This is finite evaluation, not convergence of an arbitrary monotone-map iteration. Monotonicity alone allows a two-cycle from incomparable seeds. Every reachable dependency cycle is rejected; unreachable cycles do not affect the query. Arbitrary iterative convergence remains open without operator, seed and progress hypotheses. Historical alias: the-fold-is-total.\" at=policy:law/T99 by=target form=alphabet kind=theorem measure=status needs=samples/yes/T99-the-fold-is-total.json|samples/no/T99-the-fold-is-total.json|test/fold-boundaries-042.test.ts|vectors/laws/a9-t99.json|src/lattice/obligatory.ts restsOn=law/A2-meet role=demands scope=law/T99-the-fold-is-total value=present view=lattice"
+  }
+}

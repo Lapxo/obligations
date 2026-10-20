@@ -1,0 +1,61 @@
+{
+  "atoms": [
+    "a",
+    "b",
+    "c",
+    "d"
+  ],
+  "chainEnumeration": "g is every partition of the image blocks of f",
+  "id": "projection-chain-bounded@1",
+  "negative": {
+    "Y": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "Z": [
+      0,
+      1,
+      0,
+      1
+    ],
+    "conditionalBits": [
+      1,
+      1,
+      1
+    ],
+    "prior": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "partitionEnumeration": "restricted growth strings length4, starting0",
+  "policy": "policy.json",
+  "positive": {
+    "f": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "g": [
+      0,
+      0
+    ],
+    "lossBits": [
+      1,
+      1,
+      2
+    ],
+    "prior": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "priorNumeratorTotal": 4
+}

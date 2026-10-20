@@ -1,0 +1,45 @@
+{
+  "classification": "Lean-checked unbiased diagonal and resolved-state mixture laws; heterogeneous CLT still open; new proof unsigned/unadmitted",
+  "domain": "Same finite named hierarchy, fixed ordered quotas and product primitive law as admitted M1 bridge/offdiag;1/2<p<1,0<=c1,c2<1, freshd>0. No population-resampling or new algebra.",
+  "example": {
+    "ancestors": 1,
+    "c1": "1/5",
+    "c2": "1/6",
+    "diagonalStateMass": "1/16",
+    "fullGeneratorErrorLimit": "1/32",
+    "leaves": 1,
+    "p": "3/4",
+    "provedBy": "Obligations046.M1Diagonal.example_generator_limit_exact",
+    "unbiasedState": [
+      false,
+      false
+    ],
+    "weight": "1"
+  },
+  "id": "m1-diagonal-regions@1",
+  "mainTheorems": [
+    "Obligations046.M1Diagonal.unbiased_conditional_exact",
+    "Obligations046.M1Diagonal.generator_limit_offdiag_or_unbiased",
+    "Obligations046.M1Diagonal.example_generator_limit_exact",
+    "Obligations046.M1Diagonal.diagonal_transfer_of_fixed_cut_limits"
+  ],
+  "model": "binary-M1-ancestor-first-fixed-quota@1",
+  "notClaimed": [
+    "General heterogeneous-diagonal CLT or limit",
+    "Actual primitive CDF convergence derived from variance/Lindeberg alone",
+    "Real causal/model identification or calibration",
+    "New public M1 measurement API",
+    "Native admission/root receipt of this new proof"
+  ],
+  "proof": "proofs/M1Diagonal046.lean",
+  "proved": {
+    "conditionalTransfer": "IF the actual standardized primitive CDF tends at every fixed cut toF continuous at0, then majority error tends toF(0). To claim1/2 also requiresF(0)=1/2. This hypothesis is unpaid for the general heterogeneous diagonal.",
+    "lindeberg": "For fixed epsilon>0, bounded Bernoulli centered tails vanish identically once epsilon^2*variance>=1",
+    "mixtureLimit": "forallA,B: score!=1/2 OR forall i,q_i=1/2 -> full generator error tends to thresholdFunctional",
+    "quotaDrift": "|mu_N-N*S|<=number of named leaves; on diagonal drift^2/variance->0 and moving standardized cut->0",
+    "unbiasedExact": "forall i,q_i=1/2 -> conditional fair-majority error=1/2 for everyN, includingN0",
+    "varianceLower": "N*((1-c1)(1-c2))^2*p*(1-p)<=variance; strict linear growth at fixed parameters"
+  },
+  "sourceSHA256": "sha256:647b435a37369a0128dbbdf6b3c97110293d6bf1c62e63311e346310cfd49463",
+  "value": "In the declared binary M1 ancestor-first fixed-quota model, a latent configuration with every q_i=1/2 has fair-majority error exactly1/2 at every finiteN. Thus the complete implementation and primitive-generator mixture converge to the latent threshold functional whenever every latent configuration is either off diagonal or entirely unbiased. A two-level example p=3/4,c1=1/5,c2=1/6,one ancestor and one leaf has a positive-mass unbiased diagonal state and a Lean-proved full-generator error limit1/32. For heterogeneous diagonal configurations, positive fresh massd=(1-c1)(1-c2) gives variance>=N*d^2*p*(1-p), bounded quota drift, vanishing standardized threshold and the checked bounded-array Lindeberg condition for epsilon>0. These are prerequisites, not a proved general CLT. Transfer from actual primitive fixed-cut CDF limits to the moving majority cut is proved only with that distributional convergence supplied explicitly. The general heterogeneous-diagonal probability limit remains open, as do the three original research cards."
+}

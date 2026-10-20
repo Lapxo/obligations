@@ -1,0 +1,26 @@
+{
+  "model": "finite-deterministic-chain-same-prior@1",
+  "prior": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "f": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "g": [
+    0,
+    0
+  ],
+  "directZ": [
+    0,
+    1,
+    0,
+    1
+  ],
+  "expectedRefusal": "projection/non-chain"
+}

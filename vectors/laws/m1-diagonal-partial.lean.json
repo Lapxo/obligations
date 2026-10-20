@@ -1,0 +1,192 @@
+{
+  "id": "m1-diagonal-partial",
+  "block": "m1-diagonal",
+  "claim": "M1-partial-diagonal-unbiased-and-resolved-mixture",
+  "generalDiagonal": {
+    "status": "open",
+    "actualCLTProved": false
+  },
+  "m1Boundary": {
+    "model": "binary-M1-ancestor-first-fixed-quota@1",
+    "finiteIdentityOnly": false,
+    "unbiasedDiagonalExact": true,
+    "resolvedMixtureConditionRequired": true,
+    "conditionalFixedCutTransferOnly": true,
+    "generalHeterogeneousDiagonalProved": false,
+    "actualCalibrationCertified": false,
+    "publicM1APIImplemented": false,
+    "originalThreeCards": "open"
+  },
+  "proof": {
+    "files": [
+      {
+        "path": "proofs/m1-046-diagonal/M0Bridge.lean",
+        "sha256": "sha256:b438b2961b93c62787275e158a90b534a400de8646a0552b099863fa5227c21e"
+      },
+      {
+        "path": "proofs/m1-046-diagonal/M0Diagonal046.lean",
+        "sha256": "sha256:c0403d40e1c6849045bf70eab2854eeac28a2464783e06ce03f2f36e33c2146c"
+      },
+      {
+        "path": "proofs/m1-046-diagonal/M0Lindeberg046.lean",
+        "sha256": "sha256:de5477cdde114064f3d272ede95490483040fc857399181c376c285c02411da8"
+      },
+      {
+        "path": "proofs/m1-046-diagonal/M0Moments046.lean",
+        "sha256": "sha256:06780115a2b44a77a9be72673350332b77045489dba7ff081beecd48b8d51a73"
+      },
+      {
+        "path": "proofs/m1-046-diagonal/M0Threshold046.lean",
+        "sha256": "sha256:861cd13ecd4b7f37a1bc00362b4fdc213cefdcf380171947a14463b0bc465a9e"
+      },
+      {
+        "path": "proofs/m1-046-diagonal/M1Bridge046.lean",
+        "sha256": "sha256:a21ac1dedb07af4f28752238edd564293967d8177b75979feead44f01f347b9c"
+      },
+      {
+        "path": "proofs/m1-046-diagonal/M1Diagonal046.lean",
+        "sha256": "sha256:647b435a37369a0128dbbdf6b3c97110293d6bf1c62e63311e346310cfd49463"
+      },
+      {
+        "path": "proofs/m1-046-diagonal/M1Offdiag046.lean",
+        "sha256": "sha256:faf6ef0b27049ff4cb89db0e216102239b8bb3f29a76e2a66442fb7c9b6ccd2b"
+      },
+      {
+        "path": "proofs/m1-046-diagonal/Obligations045/M0Limit.lean",
+        "sha256": "sha256:aedc88b8ba4edf884cacec78da82eef29187ded0199d44674466425af1585b8c"
+      },
+      {
+        "path": "proofs/m1-046-diagonal/Obligations045/M0Offdiag.lean",
+        "sha256": "sha256:af8a95d00cd0956acaec06deeebe7156dccf156b698408275c3e710f58c1c1e8"
+      },
+      {
+        "path": "proofs/m1-046-diagonal/lake-manifest.json",
+        "sha256": "sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d"
+      },
+      {
+        "path": "proofs/m1-046-diagonal/lakefile.toml",
+        "sha256": "sha256:ace8c9379eb053286c962c8fad4ff99dab1cfd0ca44b689180cfed01e4c05710"
+      },
+      {
+        "path": "proofs/m1-046-diagonal/lean-toolchain",
+        "sha256": "sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+      }
+    ],
+    "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "auditedTheorems": [
+      "Obligations046.M1Diagonal.fresh_pos",
+      "Obligations046.M1Diagonal.variance_lower_pos",
+      "Obligations046.M1Diagonal.fresh_probability_bounds",
+      "Obligations046.M1Diagonal.bernoulli_variance_lower",
+      "Obligations046.M1Diagonal.finite_variance_lower",
+      "Obligations046.M1Diagonal.variance_atTop",
+      "Obligations046.M1Diagonal.mean_rounding_bound",
+      "Obligations046.M1Diagonal.diagonal_drift_squared_limit",
+      "Obligations046.M1Diagonal.sigma_pos",
+      "Obligations046.M1Diagonal.threshold_limit",
+      "Obligations046.M1Diagonal.lindeberg_eventually_zero",
+      "Obligations046.M1Diagonal.lindeberg_limit",
+      "Obligations046.M1Diagonal.unbiased_conditional_exact",
+      "Obligations046.M1Diagonal.unbiased_score",
+      "Obligations046.M1Diagonal.conditional_limit_offdiag_or_unbiased",
+      "Obligations046.M1Diagonal.implementation_limit_offdiag_or_unbiased",
+      "Obligations046.M1Diagonal.generator_limit_offdiag_or_unbiased",
+      "Obligations046.M1Diagonal.primitive_cdf_eq",
+      "Obligations046.M1Diagonal.lower_cut",
+      "Obligations046.M1Diagonal.upper_cut",
+      "Obligations046.M1Diagonal.diagonal_transfer_of_fixed_cut_limits",
+      "Obligations046.M1Diagonal.example_regions",
+      "Obligations046.M1Diagonal.example_generator_limit",
+      "Obligations046.M1Diagonal.sum_one_bit",
+      "Obligations046.M1Diagonal.example_threshold_exact",
+      "Obligations046.M1Diagonal.example_generator_limit_exact"
+    ],
+    "allowedAxioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "samples": {
+    "inputs": [
+      "contracts/m1-subcauses.json",
+      "contracts/m1-diagonal-regions.json",
+      "samples/laws/m1-diagonal-regions/yes/sample.json",
+      "samples/laws/m1-diagonal-regions/no/sample.json",
+      "vectors/laws/policy.json"
+    ],
+    "digests": {
+      "contracts/m1-subcauses.json": "sha256:8213a6cc3a5ca80a6adb594b9d8f28504c9566200a6d585f675585db2c8d45cc",
+      "contracts/m1-diagonal-regions.json": "sha256:00d417c5efc29bb70973dc6517202adb0282aa98f4ec13026d24d78a592af92e",
+      "samples/laws/m1-diagonal-regions/yes/sample.json": "sha256:bf28d6e7db21d6873de956f061f54457f9e1341dc509ff8ba7a935e70dc3b5c8",
+      "samples/laws/m1-diagonal-regions/no/sample.json": "sha256:e4ba3a758946eabc3d7168ff536f1a8791fb99991ba5be9747d323a3bcb1c495",
+      "vectors/laws/policy.json": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+    }
+  },
+  "capturePolicy": {
+    "timeoutMs": 25000,
+    "responseBytes": 65536
+  },
+  "execution": {
+    "profile": "lean-kernel@1",
+    "project": "proofs/m1-046-diagonal",
+    "toolchain": "leanprover/lean4:v4.19.0",
+    "compilerIdentity": "6caaee842e94",
+    "targets": [
+      "M1Diagonal046"
+    ],
+    "sources": [
+      "M1Diagonal046.lean"
+    ],
+    "auditImports": [
+      "M1Diagonal046"
+    ],
+    "identityInputs": [
+      "proofs/m1-046-diagonal/M0Bridge.lean",
+      "proofs/m1-046-diagonal/M0Diagonal046.lean",
+      "proofs/m1-046-diagonal/M0Lindeberg046.lean",
+      "proofs/m1-046-diagonal/M0Moments046.lean",
+      "proofs/m1-046-diagonal/M0Threshold046.lean",
+      "proofs/m1-046-diagonal/M1Bridge046.lean",
+      "proofs/m1-046-diagonal/M1Diagonal046.lean",
+      "proofs/m1-046-diagonal/M1Offdiag046.lean",
+      "proofs/m1-046-diagonal/Obligations045/M0Limit.lean",
+      "proofs/m1-046-diagonal/Obligations045/M0Offdiag.lean",
+      "proofs/m1-046-diagonal/lake-manifest.json",
+      "proofs/m1-046-diagonal/lakefile.toml",
+      "proofs/m1-046-diagonal/lean-toolchain",
+      "vectors/laws/m1-diagonal-partial.lean.json",
+      "contracts/m1-subcauses.json",
+      "contracts/m1-diagonal-regions.json",
+      "samples/laws/m1-diagonal-regions/yes/sample.json",
+      "samples/laws/m1-diagonal-regions/no/sample.json",
+      "vectors/laws/policy.json"
+    ],
+    "negative": {
+      "name": "heterogeneous-diagonal-as-unbiased",
+      "source": "import M1Diagonal046\n\nopen Obligations046.M1Offdiag\nexample : 1-Obligations046.M1Bridge.success (3/4) 0 (1/2) false true = (1/2:\u211d) := by norm_num [Obligations045.M0.limitingLoss, abs_div, Fintype.sum_bool, Obligations046.M1Bridge.bernMass, Obligations046.M1Bridge.success, Obligations045.M0.fairLoss, Obligations046.Lindeberg.bernoulliTail]\n",
+      "exitCode": 1,
+      "cause": [
+        "unsolved goals"
+      ]
+    },
+    "extraNegatives": [
+      {
+        "name": "zero-fresh-quota-as-fair-limit",
+        "source": "import M1Diagonal046\n\nopen Obligations046.M1Offdiag\nexample : Obligations045.M0.fairLoss 2 3 = (1/2:\u211d) := by norm_num [Obligations045.M0.limitingLoss, abs_div, Fintype.sum_bool, Obligations046.M1Bridge.bernMass, Obligations046.M1Bridge.success, Obligations045.M0.fairLoss, Obligations046.Lindeberg.bernoulliTail]\n",
+        "exitCode": 1,
+        "cause": [
+          "unsolved goals"
+        ]
+      },
+      {
+        "name": "zero-epsilon-as-positive",
+        "source": "import M1Diagonal046\n\nopen Obligations046.M1Offdiag\nexample : Obligations046.Lindeberg.bernoulliTail (1/2) 0 = 0 := by norm_num [Obligations045.M0.limitingLoss, abs_div, Fintype.sum_bool, Obligations046.M1Bridge.bernMass, Obligations046.M1Bridge.success, Obligations045.M0.fairLoss, Obligations046.Lindeberg.bernoulliTail]\n",
+        "exitCode": 1,
+        "cause": [
+          "unsolved goals"
+        ]
+      }
+    ]
+  }
+}

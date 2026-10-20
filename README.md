@@ -2,7 +2,7 @@
 
 # @lapxo/obligations
 
-![version 0.4.2](https://img.shields.io/badge/version-0.4.2-) ![license MIT](https://img.shields.io/badge/license-MIT-) ![node >=22.12](https://img.shields.io/badge/node-%3E%3D22.12-) [![DOI 10.5281/zenodo.21858428](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-)](https://doi.org/10.5281/zenodo.21858428)
+![version 0.4.6](https://img.shields.io/badge/version-0.4.6-) ![license MIT](https://img.shields.io/badge/license-MIT-) ![node >=22.12](https://img.shields.io/badge/node-%3E%3D22.12-) [![DOI 10.5281/zenodo.21858428](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-)](https://doi.org/10.5281/zenodo.21858428)
 
 The algebra of a cell: two poles, origins with phase, eight acts.
 
@@ -40,7 +40,31 @@ npm install @lapxo/obligations
 ```
 
 
-## A model-bound calculation
+## Use the pure API
+
+The package is ESM and requires Node.js 22.12 or later. It provides the algebra; it does not fetch evidence, choose trusted origins or sign declarations. Bound consumes this algebra to admit and resolve places.
+
+```js
+import { intervals } from '@lapxo/obligations';
+
+const scale = intervals(0, 10);
+console.log(scale.show(scale.meet({ lo: 2, hi: 8 }, { lo: 5, hi: 9 })));
+// 5..8
+```
+
+Public entry points include:
+
+| Entry point | Purpose |
+| --- | --- |
+| `@lapxo/obligations` | Cell algebra, declarations, forms and region operations |
+| `/measures` | Model-bound information, confidence and error-history calculations |
+| `/field`, `/encounter`, `/present` | Regions, observations, epochs and encounters |
+| `/lattice`, `/forms` | Orders, intervals and alphabets |
+| `/debit`, `/packed`, `/price` | Constraint operations, packed states and their price |
+| `/signatures`, `/replay` | Projection of signed declarations and replay |
+| `/shuffle`, `/views/field`, `/views/product` | Permutations and declared views |
+
+### A model-bound calculation
 
 ```js
 import { capacityBound } from '@lapxo/obligations/measures';
@@ -58,11 +82,26 @@ For the separate, declared n-ary symmetric lineage channel with uniform truth an
 The parameter c has the meaning given by its selected mixture or channel model; it is not the genetic inbreeding coefficient F. Cell vacuity and missing delivered bytes are separate questions: a statement about a cell does not verify that an archive or provider exists and matches its digest. Their relationship remains a named tension.
 
 
+## Theory and evidence in 0.4.6
+
+The compiled API and algebra are unchanged from 0.4.5. This release adds contracts, proof sources, samples and executable vectors; these are not new runtime exports.
+
+- **Conditional lineage models:** the finite M0 binomial bridge, diagonal prerequisites, population-moment identification and finite uncertainty retain their declared hypotheses. Identification requires known p and uniform lineage shares; arbitrary weights retain exact counterexamples.
+- **M1 models:** the ancestor-first fixed-quota generator, off-diagonal limit and specified diagonal regions have Lean-checked results within their stated domains.
+- **Projection chains:** deterministic X → Y → Z uses one common prior. The entropy identity has bounded executable evidence; it is not presented as a universal Lean proof.
+- **Origins and participation:** named lineage, shared provenance and participation do not establish joint independence. Independence is a model hypothesis wherever consumed.
+
+Read the [identification contract](docs/contracts/m0-moment-identification.md), [finite-uncertainty contract](docs/contracts/m0-keff-interval.md), [M1 regions](docs/contracts/m1-diagonal-regions.md), [projection-chain contract](docs/contracts/projection-chain.md) and [extension/lineage definitions](docs/contracts/extension-lineage-participation.md) for exact conditions and boundaries. Bound records admitted declarations and their evidence in `TARGET.bound` and `receipts.bound`.
+
+### Open questions
+
+General heterogeneous M0 and M1 diagonal central limit theorems, causal subgroup recovery, oracle-free reference, actual calibration, fixed-source quota uncertainty and a public K_eff interval API remain open. Conditional results do not close those demands. [Experiment 1a](docs/contracts/model-collapse-1a.md) supplies a protocol only: its empirical status is `unmeasured`, with no selected dataset or claimed experimental result.
+
 ## The paper
 
 The theory here is not an application of an algebra to a problem. It is one algebra, of a cell with two marks, and three theories that turn out to be that algebra seen from different sides: constraints with a price, states on a scale, and points with an epoch and an origin.
 
-What it proves is that the price of a fold, the freedom of a system in bits, the four states a verdict can hold, the spectrum a domain admits, the metric that shared observation induces and the phase an epoch carries are all consequences of the same lines. Each law names the view that implements it, and each view is a folder of the source: what is proved in the field view runs in the field view, and a law no operation reaches is a law this package refuses to claim.
+What it proves is that the price of a fold, the freedom of a system in bits, the four states a verdict can hold, the spectrum a domain admits, the metric that shared observation induces and the phase an epoch carries are all consequences of the same lines. Runtime operations, mathematical statements and executable evidence have separate scopes. Their contracts name the assumptions and the evidence that support each claim; proof sources do not imply an exported implementation.
 
 Ochoa, N. (2026). Two-Sided Constraints on a Valued Lattice (Version 1.0.0). Zenodo. https://doi.org/10.5281/zenodo.21858428
 

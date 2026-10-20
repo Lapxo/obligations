@@ -1,0 +1,13 @@
+{
+  "name": "missing-bridge-proof-input",
+  "expectedExit": 1,
+  "omittedInput": "proofs/m0-046/M0Bridge.lean",
+  "readerCause": "missing-input proofs/m0-046/M0Bridge.lean",
+  "compilerNegatives": [
+    "missing-joint-product-law",
+    "zero-average-misuse",
+    "pairwise-implies-product-false"
+  ],
+  "extraReaderNegative": "overstated-limit",
+  "causePolicy": "actual reader/Lean diagnostics captured; no expected stdout invented"
+}

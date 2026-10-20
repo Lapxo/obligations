@@ -1,0 +1,1 @@
+M0 with the published c<1 domain and cumulative-floor quotas. Every conditional q_i=1/2 implies exact conditionalError=1/2 for every N, including zero. A diagonal score alone does not imply every q_i=1/2. General heterogeneous diagonal remains open; c=1 is excluded and parity distinguishes its failure.

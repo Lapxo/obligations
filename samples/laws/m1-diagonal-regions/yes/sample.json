@@ -1,0 +1,45 @@
+{
+  "arithmeticScope": "Exact rational reproduction of the Lean-proved example; no experiment/calibration inferred.",
+  "c1": "1/5",
+  "c2": "1/6",
+  "fullGeneratorErrorLimit": "1/32",
+  "latentTable": [
+    {
+      "ancestor": 0,
+      "latentMass": "1/16",
+      "leaf": 0,
+      "q": "1/2",
+      "thresholdLoss": "1/2"
+    },
+    {
+      "ancestor": 0,
+      "latentMass": "3/16",
+      "leaf": 1,
+      "q": "19/30",
+      "thresholdLoss": "0"
+    },
+    {
+      "ancestor": 1,
+      "latentMass": "3/16",
+      "leaf": 0,
+      "q": "7/10",
+      "thresholdLoss": "0"
+    },
+    {
+      "ancestor": 1,
+      "latentMass": "9/16",
+      "leaf": 1,
+      "q": "5/6",
+      "thresholdLoss": "0"
+    }
+  ],
+  "model": "binary-M1-ancestor-first-fixed-quota@1",
+  "p": "3/4",
+  "parent": [
+    "g"
+  ],
+  "proof": "Obligations046.M1Diagonal.example_generator_limit_exact",
+  "weights": [
+    "1"
+  ]
+}

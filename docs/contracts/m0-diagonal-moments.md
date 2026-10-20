@@ -1,0 +1,1 @@
+Under the declared joint independent Bernoulli member product, the existing sum n_i*q_i and sum n_i*q_i*(1-q_i) equal the actual mean and variance. These identities hold for every finite N. Marginals alone do not justify the variance sum, as the correlated-pair negative demonstrates.

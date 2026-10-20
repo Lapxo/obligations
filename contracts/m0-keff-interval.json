@@ -1,0 +1,27 @@
+{
+  "casesNotCovered": [
+    "missing/latent activity identification",
+    "causal subgroup recovery",
+    "general oracle-free calibration",
+    "fixed quotas without finite correction"
+  ],
+  "classification": "conditional finite-model coverage and algebra; external calibration still required",
+  "currentCalibration": "No real calibration data or admitted c,p calibration receipts were supplied. Example boxes are synthetic coverage premises only.",
+  "implementationBoundary": "Published cofailurePairs supplies raw observed pair rates. A new public K_eff interval API is not implemented or claimed by this mathematical preparation.",
+  "model": {
+    "attribution": "Observation-position names only under this population-sampling profile: lineage membership is resampled per cell/draw as in the O4 conditional population observation. Fixed source-to-lineage membership is outside this profile without its gamma_N conversion.",
+    "coverage": "P(|Dhat-D|>=epsilon)<=min(1,1/(4T epsilon^2)); joint miss<=min(1,alphaD+betaP+betaC), without requiring calibration/data independence.",
+    "externalCalibration": "Coverage-certified boxes forp,c with allocated marginal error budgets and provenance; neither inferred from agreement nor supplied by these synthetic fixtures.",
+    "frame": "T independent identically distributed complete cells; N>=2 observations per cell, fixed or handed complete frame. No inference of iid from these bytes.",
+    "id": "binary-M0-whole-cell-iid@1",
+    "latent": "Per cell, jointly independent Bernoulli(p) named lineages with declared normalized shares, shared copy probabilityc, fresh member draws. Latent/fresh randomness independent across cells.",
+    "mean": "E U_t=2p(1-p)*(1-c^2*sum(w_l^2)) exactly for finiteN under this observation design.",
+    "members": "Conditional population draws with replacement, independent given the cell latent lineages. Fixed lineage quotas/distinct finite-population member samples require their gamma_N correction and are not this profile.",
+    "optionalCap": "A known deterministic cap is an explicit additional premise. A merely probabilistic cap would require another failure budget and is outside this profile.",
+    "output": "Conditional outer enclosure for K_eff, not exact identified-set equality, latent causal groups, probability of truth or a physical count of independent sources.",
+    "statistic": "U_t=(sum of discordant unordered member pairs)/choose(N,2)=2X_t(N-X_t)/(N(N-1)); Dhat=mean over whole cells. Shared-member pairs need not be independent."
+  },
+  "scope": "m0-keff-interval",
+  "status": "unsigned-preparation",
+  "value": "Under the declared binary M0 conditional-population-iid member design, finite-cell pair discord has the published population disagreement mean. ForT jointly independent complete cells, the all-pairs average is a bounded whole-cell statistic: its tail is at most min(1,1/(4T epsilon^2)), not a bound withT multiplied by the number of pairs. External coverage-calibrated p,c boxes and their union error budgets propagate through the positive M0 denominator to a conditional outer K_eff enclosure. A denominator that may approach zero has no certified finite upper bound unless a valid external cap is declared. Missing calibration is unmeasured; an incompatible confidence box is not an unconditional rejection of the model. No finite interval establishes causal independence."
+}

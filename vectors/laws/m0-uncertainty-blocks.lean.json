@@ -1,0 +1,201 @@
+{
+  "id": "m0-uncertainty-blocks",
+  "block": "blocks",
+  "claim": "conditional-population-whole-cell-uncertainty",
+  "generalDiagonal": {
+    "status": "open",
+    "actualCLTProved": false
+  },
+  "uncertaintyBoundary": {
+    "family": "population-observation-iid-cells@1",
+    "actualCalibrationCertified": false,
+    "publicIntervalAPIImplemented": false,
+    "fixedSourceQuotaApplicable": false,
+    "originalThreeCards": "open"
+  },
+  "proof": {
+    "files": [
+      {
+        "path": "proofs/m0-046-uncertainty/BridgeNegatives.lean",
+        "sha256": "sha256:956afd1cfe87eaf2c6586822541a3ede6cc285f8659d27d88228f5534e1c640b"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/M0BlockCoverage046.lean",
+        "sha256": "sha256:e35ede53b00a995b8d6a8019df552947b4a7bc889efa8533a9187d75d93906b4"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/M0Bridge.lean",
+        "sha256": "sha256:b438b2961b93c62787275e158a90b534a400de8646a0552b099863fa5227c21e"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/M0Diagonal046.lean",
+        "sha256": "sha256:c0403d40e1c6849045bf70eab2854eeac28a2464783e06ce03f2f36e33c2146c"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/M0FiniteDiscord046.lean",
+        "sha256": "sha256:47995f461ba91fa29ce9613fa07cbb74ab9adc32ad11e3fd28fec421639d80e5"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/M0Interval046.lean",
+        "sha256": "sha256:6a4cf38e6c65e33d8afd91b219e6324edee3385ba36e3b1ee5685c1bf28f82b5"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/M0Lindeberg046.lean",
+        "sha256": "sha256:de5477cdde114064f3d272ede95490483040fc857399181c376c285c02411da8"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/M0Moments046.lean",
+        "sha256": "sha256:06780115a2b44a77a9be72673350332b77045489dba7ff081beecd48b8d51a73"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/M0Threshold046.lean",
+        "sha256": "sha256:861cd13ecd4b7f37a1bc00362b4fdc213cefdcf380171947a14463b0bc465a9e"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/Obligations045/ConsensusGrid.lean",
+        "sha256": "sha256:b26a1b68522e881e446a47f4c84cd8b569a1c48f085a5c9a9d03abdeecafacce"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/Obligations045/M0Coincidence.lean",
+        "sha256": "sha256:e870a43e435f4b4b52f28f44dd7391c40704faa41febd272434d2e56b2bd6771"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/Obligations045/M0Diagonal.lean",
+        "sha256": "sha256:4d83f047fc5e199f46b2cc28dfe77b006a7dd408f0f14ed54afb5e21315148e2"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/Obligations045/M0Limit.lean",
+        "sha256": "sha256:aedc88b8ba4edf884cacec78da82eef29187ded0199d44674466425af1585b8c"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/Obligations045/M0Offdiag.lean",
+        "sha256": "sha256:af8a95d00cd0956acaec06deeebe7156dccf156b698408275c3e710f58c1c1e8"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/Obligations045.lean",
+        "sha256": "sha256:be4956a2720d696e5456ad108543945c6f65f1986126513f10edcd4f1841bced"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/lake-manifest.json",
+        "sha256": "sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/lakefile.toml",
+        "sha256": "sha256:d03fb53e4cbc3c34b7fd329841b3fd8d8c3289a367a4a9839cf876ed86d547da"
+      },
+      {
+        "path": "proofs/m0-046-uncertainty/lean-toolchain",
+        "sha256": "sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+      }
+    ],
+    "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "auditedTheorems": [
+      "Obligations046.BlockCoverage.iidSum_mono",
+      "Obligations046.BlockCoverage.iidSum_quadratic",
+      "Obligations046.BlockCoverage.bounded_cell_variance",
+      "Obligations046.BlockCoverage.iid_centered_second",
+      "Obligations046.BlockCoverage.block_tail_le",
+      "Obligations046.BlockCoverage.pair_pseudoreplication_negative",
+      "Obligations046.BlockCoverage.indicator_union_pointwise",
+      "Obligations046.BlockCoverage.union3",
+      "Obligations046.BlockCoverage.prob_le_one",
+      "Obligations046.BlockCoverage.clipped_union_budget",
+      "Obligations046.BlockCoverage.clipped_block_tail"
+    ],
+    "allowedAxioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "samples": {
+    "inputs": [
+      "contracts/m0-keff-interval.json",
+      "samples/laws/m0-keff-interval/yes/sample.json",
+      "samples/laws/m0-keff-interval/yes/api-rows.json",
+      "samples/laws/m0-keff-interval/no/sample.json",
+      "vectors/laws/policy.json",
+      "vectors/laws/m0-keff-interval.json"
+    ],
+    "digests": {
+      "contracts/m0-keff-interval.json": "sha256:365ece59f8d09a10b5e85b9e07b23687675917b0fe50c008284aa23efbd1fd49",
+      "samples/laws/m0-keff-interval/yes/sample.json": "sha256:3e9bbc6d330a14182f4395d57d0d7ac7366c3add7e3830787f6cb1ffbec6806d",
+      "samples/laws/m0-keff-interval/yes/api-rows.json": "sha256:b55a6d8c01151914c55eaec986041be711f38759c8657383866e66d533e794a8",
+      "samples/laws/m0-keff-interval/no/sample.json": "sha256:c45aadfa7944381be30238d804b9d0897f669c1fee9458fe1bc16eab4509bec1",
+      "vectors/laws/policy.json": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939",
+      "vectors/laws/m0-keff-interval.json": "sha256:4374c2635b8a165a299a876fc38a41722d2916ebf80564d74f7cdb5ffd3ec193"
+    }
+  },
+  "capturePolicy": {
+    "timeoutMs": 25000,
+    "responseBytes": 65536
+  },
+  "execution": {
+    "profile": "lean-kernel@1",
+    "project": "proofs/m0-046-uncertainty",
+    "toolchain": "leanprover/lean4:v4.19.0",
+    "compilerIdentity": "6caaee842e94",
+    "targets": [
+      "M0BlockCoverage046"
+    ],
+    "sources": [
+      "M0BlockCoverage046.lean"
+    ],
+    "auditImports": [
+      "M0BlockCoverage046"
+    ],
+    "identityInputs": [
+      "proofs/m0-046-uncertainty/BridgeNegatives.lean",
+      "proofs/m0-046-uncertainty/M0BlockCoverage046.lean",
+      "proofs/m0-046-uncertainty/M0Bridge.lean",
+      "proofs/m0-046-uncertainty/M0Diagonal046.lean",
+      "proofs/m0-046-uncertainty/M0FiniteDiscord046.lean",
+      "proofs/m0-046-uncertainty/M0Interval046.lean",
+      "proofs/m0-046-uncertainty/M0Lindeberg046.lean",
+      "proofs/m0-046-uncertainty/M0Moments046.lean",
+      "proofs/m0-046-uncertainty/M0Threshold046.lean",
+      "proofs/m0-046-uncertainty/Obligations045/ConsensusGrid.lean",
+      "proofs/m0-046-uncertainty/Obligations045/M0Coincidence.lean",
+      "proofs/m0-046-uncertainty/Obligations045/M0Diagonal.lean",
+      "proofs/m0-046-uncertainty/Obligations045/M0Limit.lean",
+      "proofs/m0-046-uncertainty/Obligations045/M0Offdiag.lean",
+      "proofs/m0-046-uncertainty/Obligations045.lean",
+      "proofs/m0-046-uncertainty/lake-manifest.json",
+      "proofs/m0-046-uncertainty/lakefile.toml",
+      "proofs/m0-046-uncertainty/lean-toolchain",
+      "vectors/laws/m0-uncertainty-blocks.lean.json",
+      "contracts/m0-keff-interval.json",
+      "samples/laws/m0-keff-interval/yes/sample.json",
+      "samples/laws/m0-keff-interval/yes/api-rows.json",
+      "samples/laws/m0-keff-interval/no/sample.json",
+      "vectors/laws/policy.json",
+      "vectors/laws/m0-keff-interval.json"
+    ],
+    "negative": {
+      "name": "pair-count-as-independent",
+      "source": "import Mathlib.Data.Rat.Defs\nimport Mathlib.Tactic.NormNum\nexample : (157/2048:\u211a) \u2264 1/(4*6) := by norm_num\n",
+      "exitCode": 1,
+      "cause": [
+        "unsolved goals"
+      ]
+    },
+    "extraNegatives": [
+      {
+        "name": "repeated-cells-as-independent",
+        "source": "import Mathlib.Data.Rat.Defs\nimport Mathlib.Tactic.NormNum\nexample : (157/2048:\u211a) \u2264 1/(4*100) := by norm_num\n",
+        "exitCode": 1,
+        "cause": [
+          "unsolved goals"
+        ]
+      },
+      {
+        "name": "zero-epsilon-as-positive",
+        "source": "import Mathlib.Data.Rat.Defs\nimport Mathlib.Tactic.NormNum\nexample : (1:\u211a) \u2264 1/(4*100*0^2) := by norm_num\n",
+        "exitCode": 1,
+        "cause": [
+          "unsolved goals"
+        ]
+      }
+    ]
+  }
+}

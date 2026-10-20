@@ -1,0 +1,15 @@
+{
+  "id": "m0-diagonal-conditional",
+  "profile": "lean-kernel@1",
+  "status": "partial",
+  "closed": [
+    "symmetric diagonal subdomain",
+    "actual mean and variance",
+    "member-level Lindeberg",
+    "conditional moving-threshold/fair-tie transfer"
+  ],
+  "generalDiagonal": "open",
+  "unpaidHypothesis": "actual standardized fixed-cut CDF convergence to a continuous symmetric limit",
+  "domain": "published M0 with c<1 and cumulative-floor allocation",
+  "noNewAlgebra": true
+}
