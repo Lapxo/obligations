@@ -1,0 +1,1 @@
+For the declared member product, c<1 and the published quota rule imply positive growing actual variance. For each epsilon>0 the member-level Lindeberg truncated-second-moment ratio is eventually exactly zero. At epsilon=0 it equals one for N>0. This is a checked CLT hypothesis, not a CLT theorem.

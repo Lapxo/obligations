@@ -1,0 +1,59 @@
+{
+  "kind": "exact adversarial distribution showing pairwise independence does not imply product-binomial count law; not an admissible alternativeM0process",
+  "atoms": [
+    {
+      "bits": [
+        0,
+        0,
+        0
+      ],
+      "probability": "1/16"
+    },
+    {
+      "bits": [
+        0,
+        1,
+        1
+      ],
+      "probability": "3/16"
+    },
+    {
+      "bits": [
+        1,
+        0,
+        1
+      ],
+      "probability": "3/16"
+    },
+    {
+      "bits": [
+        1,
+        1,
+        0
+      ],
+      "probability": "3/16"
+    },
+    {
+      "bits": [
+        1,
+        1,
+        1
+      ],
+      "probability": "3/8"
+    }
+  ],
+  "means": [
+    "3/4",
+    "3/4",
+    "3/4"
+  ],
+  "pairJointOnes": [
+    "9/16",
+    "9/16",
+    "9/16"
+  ],
+  "actualP_all_zero": "1/16",
+  "jointIndependentP_all_zero": "1/64",
+  "proposedNamedRefusal": "REFUSE·bridge joint Bernoulli product law required",
+  "nativeRefusalCaptured": false
+}

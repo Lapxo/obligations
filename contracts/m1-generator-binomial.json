@@ -1,0 +1,26 @@
+{
+  "assumptionBoundary": "Named parent map, jointly independent latent and per-member primitive laws are declared generative hypotheses. Correlated selectors/latent bits, reverse priority and population-resampled memberships are different models.",
+  "classification": "Lean-checked finite probability identity; not admitted",
+  "domain": "Model in M1Bridge046: existing M0 weight/ordered-prefix-quota domain, base.c=c1, named parent map, additional conditional c2 in[0,1); p in(1/2,1), c1 in[0,1). Bridge valid for every finiteN, including algebraic N0; canonical M1 consumer domain stillN>0.",
+  "generator": "FullWorld includes all named latent bits and the three Bernoulli primitive bits for each allocated member. FullLaw uses their normalized nonnegative product masses. No output-binomial premise is assumed.",
+  "id": "m1-generator-binomial@1",
+  "mainTheorems": [
+    "Obligations046.M1Bridge.primitive_branch_fiber",
+    "Obligations046.M1Bridge.primitive_output_is_sequential",
+    "Obligations046.M1Bridge.primitive_generator_to_binomial",
+    "Obligations046.M1Bridge.primitive_law_count_probability",
+    "Obligations046.M1Bridge.fullMass_nonneg",
+    "Obligations046.M1Bridge.fullMass_normalized",
+    "Obligations046.M1Bridge.full_generator_error_bridge"
+  ],
+  "model": "binary-M1-ancestor-first-fixed-quota@1",
+  "proof": "proofs/M1Bridge046.lean",
+  "sourceSHA256": "sha256:a21ac1dedb07af4f28752238edd564293967d8177b75979feead44f01f347b9c",
+  "unpaid": [
+    "M1 off-diagonal limit formalization",
+    "M1 diagonal probability transfer",
+    "Native reader/captures/admission for this proof identity",
+    "Any public M1 API or data-calibrated identification"
+  ],
+  "value": "For the declared binary M1 ancestor-first fixed-quota model, the complete finite generative PMF contains jointly independent named ancestor and leaf correctness bits and three independent primitive bits per member: ancestor selector, conditional leaf selector, and fresh vote. Summing unused primitive draws gives exclusive masses c1, (1-c1)c2, (1-c1)(1-c2)p and (1-c1)(1-c2)(1-p). Pushing this law to named lineage counts yields the product binomial law with q_l=c1 A_parent(l)+(1-c1)c2 B_l+(1-c1)(1-c2)p. For every finite N its fair-majority error is exactly the finite latent mixture of binomial errors. This identity is compiled in Lean without assuming a count law or convergence theorem. It does not prove an asymptotic floor, a CLT, a calibrated public API or causal identification."
+}

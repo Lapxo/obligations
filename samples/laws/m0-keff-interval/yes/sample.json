@@ -1,0 +1,70 @@
+{
+  "case": {
+    "actualCalculation": {
+      "Dbox": [
+        "0",
+        "4/25"
+      ],
+      "K_eff": [
+        "1",
+        "20577/12800"
+      ],
+      "cap": null,
+      "classification": "conditional outer confidence enclosure, not a certified calibration or measured causal count",
+      "confidence": {
+        "cFailureUpper": "1/100",
+        "coverageLower": "73/100",
+        "dataFailureUpper": "1/4",
+        "dependenceOfCalibrationErrors": "allowed; only marginal coverage premises used",
+        "pFailureUpper": "1/100",
+        "trivial": false,
+        "unionFailureUpper": "27/100"
+      },
+      "denominatorBox": [
+        "32/57",
+        "1"
+      ],
+      "noiseBox": [
+        "228/625",
+        "481/1250"
+      ],
+      "notIdentifiedSetEquality": true,
+      "status": "bounded-outer-enclosure"
+    },
+    "input": {
+      "Dhat": "3/50",
+      "N": 4,
+      "T": 100,
+      "c": {
+        "failureUpper": "1/100",
+        "interval": [
+          "9/10",
+          "19/20"
+        ],
+        "provenance": "synthetic handed coverage premise; not inferred from cofailurePairs"
+      },
+      "cellUnit": "whole-complete-cell",
+      "epsilon": "1/10",
+      "memberSampling": "conditional-population-iid-with-replacement",
+      "model": "binary-M0-population-agreement@1",
+      "p": {
+        "failureUpper": "1/100",
+        "interval": [
+          "37/50",
+          "19/25"
+        ],
+        "provenance": "synthetic handed coverage premise; not an admitted calibrator receipt"
+      },
+      "sampling": "iid-cells@1"
+    }
+  },
+  "coveragePremisesOnly": true,
+  "name": "calibrated-whole-cell-conditional-enclosure",
+  "notAnActualCalibrationReceipt": true,
+  "otherCases": [
+    "unbounded",
+    "zero-crossing",
+    "capped",
+    "trivial-coverage"
+  ]
+}

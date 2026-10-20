@@ -1,0 +1,569 @@
+{
+  "calibrationBudgetNegative": {
+    "finiteFailureAtoms": [
+      "1/10",
+      "1/10",
+      "1/10",
+      "7/10"
+    ],
+    "omittingCalibration": "1/10",
+    "union": "3/10"
+  },
+  "cases": {
+    "boundary-calibration": {
+      "actualCalculation": {
+        "cause": "calibration-domain-not-certified",
+        "status": "unmeasured"
+      },
+      "input": {
+        "Dhat": "3/50",
+        "N": 4,
+        "T": 100,
+        "c": {
+          "failureUpper": "1/100",
+          "interval": [
+            "0",
+            "1"
+          ],
+          "provenance": "synthetic handed coverage premise; not inferred from cofailurePairs"
+        },
+        "cellUnit": "whole-complete-cell",
+        "epsilon": "1/10",
+        "memberSampling": "conditional-population-iid-with-replacement",
+        "model": "binary-M0-population-agreement@1",
+        "p": {
+          "failureUpper": "1/100",
+          "interval": [
+            "37/50",
+            "19/25"
+          ],
+          "provenance": "synthetic handed coverage premise; not an admitted calibrator receipt"
+        },
+        "sampling": "iid-cells@1"
+      }
+    },
+    "bounded": {
+      "actualCalculation": {
+        "Dbox": [
+          "0",
+          "4/25"
+        ],
+        "K_eff": [
+          "1",
+          "20577/12800"
+        ],
+        "cap": null,
+        "classification": "conditional outer confidence enclosure, not a certified calibration or measured causal count",
+        "confidence": {
+          "cFailureUpper": "1/100",
+          "coverageLower": "73/100",
+          "dataFailureUpper": "1/4",
+          "dependenceOfCalibrationErrors": "allowed; only marginal coverage premises used",
+          "pFailureUpper": "1/100",
+          "trivial": false,
+          "unionFailureUpper": "27/100"
+        },
+        "denominatorBox": [
+          "32/57",
+          "1"
+        ],
+        "noiseBox": [
+          "228/625",
+          "481/1250"
+        ],
+        "notIdentifiedSetEquality": true,
+        "status": "bounded-outer-enclosure"
+      },
+      "input": {
+        "Dhat": "3/50",
+        "N": 4,
+        "T": 100,
+        "c": {
+          "failureUpper": "1/100",
+          "interval": [
+            "9/10",
+            "19/20"
+          ],
+          "provenance": "synthetic handed coverage premise; not inferred from cofailurePairs"
+        },
+        "cellUnit": "whole-complete-cell",
+        "epsilon": "1/10",
+        "memberSampling": "conditional-population-iid-with-replacement",
+        "model": "binary-M0-population-agreement@1",
+        "p": {
+          "failureUpper": "1/100",
+          "interval": [
+            "37/50",
+            "19/25"
+          ],
+          "provenance": "synthetic handed coverage premise; not an admitted calibrator receipt"
+        },
+        "sampling": "iid-cells@1"
+      }
+    },
+    "capped": {
+      "actualCalculation": {
+        "Dbox": [
+          "11/40",
+          "19/40"
+        ],
+        "K_eff": [
+          "1",
+          "10"
+        ],
+        "cap": {
+          "provenance": "externally handed known upper bound; not inferred from names or coincidence",
+          "value": "10"
+        },
+        "classification": "conditional outer confidence enclosure, not a certified calibration or measured causal count",
+        "confidence": {
+          "cFailureUpper": "1/100",
+          "coverageLower": "73/100",
+          "dataFailureUpper": "1/4",
+          "dependenceOfCalibrationErrors": "allowed; only marginal coverage premises used",
+          "pFailureUpper": "1/100",
+          "trivial": false,
+          "unionFailureUpper": "27/100"
+        },
+        "denominatorBox": [
+          "-31/64",
+          "29/84"
+        ],
+        "noiseBox": [
+          "8/25",
+          "21/50"
+        ],
+        "notIdentifiedSetEquality": true,
+        "status": "bounded-outer-enclosure"
+      },
+      "input": {
+        "Dhat": "3/8",
+        "N": 4,
+        "T": 100,
+        "c": {
+          "failureUpper": "1/100",
+          "interval": [
+            "2/5",
+            "3/5"
+          ],
+          "provenance": "synthetic handed coverage premise; not inferred from cofailurePairs"
+        },
+        "cap": {
+          "provenance": "externally handed known upper bound; not inferred from names or coincidence",
+          "value": "10"
+        },
+        "cellUnit": "whole-complete-cell",
+        "epsilon": "1/10",
+        "memberSampling": "conditional-population-iid-with-replacement",
+        "model": "binary-M0-population-agreement@1",
+        "p": {
+          "failureUpper": "1/100",
+          "interval": [
+            "7/10",
+            "4/5"
+          ],
+          "provenance": "synthetic handed coverage premise; not an admitted calibrator receipt"
+        },
+        "sampling": "iid-cells@1"
+      }
+    },
+    "fixed-quota": {
+      "actualCalculation": {
+        "cause": "finite-member-correction-required",
+        "status": "refused"
+      },
+      "input": {
+        "Dhat": "3/50",
+        "N": 4,
+        "T": 100,
+        "c": {
+          "failureUpper": "1/100",
+          "interval": [
+            "9/10",
+            "19/20"
+          ],
+          "provenance": "synthetic handed coverage premise; not inferred from cofailurePairs"
+        },
+        "cellUnit": "whole-complete-cell",
+        "epsilon": "1/10",
+        "memberSampling": "fixed-quota-distinct-members",
+        "model": "binary-M0-population-agreement@1",
+        "p": {
+          "failureUpper": "1/100",
+          "interval": [
+            "37/50",
+            "19/25"
+          ],
+          "provenance": "synthetic handed coverage premise; not an admitted calibrator receipt"
+        },
+        "sampling": "iid-cells@1"
+      }
+    },
+    "incompatible": {
+      "actualCalculation": {
+        "Dbox": [
+          "13/20",
+          "67/100"
+        ],
+        "cause": "no-positive-M0-denominator",
+        "classification": "conditional outer confidence enclosure, not a certified calibration or measured causal count",
+        "confidence": {
+          "cFailureUpper": "1/100",
+          "coverageLower": "73/100",
+          "dataFailureUpper": "1/4",
+          "dependenceOfCalibrationErrors": "allowed; only marginal coverage premises used",
+          "pFailureUpper": "1/100",
+          "trivial": false,
+          "unionFailureUpper": "27/100"
+        },
+        "denominatorBox": [
+          "-59/75",
+          "-11/15"
+        ],
+        "noiseBox": [
+          "3/8",
+          "3/8"
+        ],
+        "scope": "Empty conditional box is not an unconditional model rejection; a calibrated procedure may miss with its allocated error probability.",
+        "status": "incompatible-confidence-box"
+      },
+      "input": {
+        "Dhat": "33/50",
+        "N": 4,
+        "T": 10000,
+        "c": {
+          "failureUpper": "1/100",
+          "interval": [
+            "9/10",
+            "19/20"
+          ],
+          "provenance": "synthetic handed coverage premise; not inferred from cofailurePairs"
+        },
+        "cellUnit": "whole-complete-cell",
+        "epsilon": "1/100",
+        "memberSampling": "conditional-population-iid-with-replacement",
+        "model": "binary-M0-population-agreement@1",
+        "p": {
+          "failureUpper": "1/100",
+          "interval": [
+            "3/4",
+            "3/4"
+          ],
+          "provenance": "synthetic handed coverage premise; not an admitted calibrator receipt"
+        },
+        "sampling": "iid-cells@1"
+      }
+    },
+    "missing-calibration": {
+      "actualCalculation": {
+        "cause": "external-calibration-coverage-required",
+        "status": "unmeasured"
+      },
+      "input": {
+        "Dhat": "3/50",
+        "N": 4,
+        "T": 100,
+        "c": null,
+        "cellUnit": "whole-complete-cell",
+        "epsilon": "1/10",
+        "memberSampling": "conditional-population-iid-with-replacement",
+        "model": "binary-M0-population-agreement@1",
+        "p": {
+          "failureUpper": "1/100",
+          "interval": [
+            "37/50",
+            "19/25"
+          ],
+          "provenance": "synthetic handed coverage premise; not an admitted calibrator receipt"
+        },
+        "sampling": "iid-cells@1"
+      }
+    },
+    "pairs-as-T": {
+      "actualCalculation": {
+        "cause": "independent-whole-cells-required",
+        "status": "refused"
+      },
+      "input": {
+        "Dhat": "3/50",
+        "N": 4,
+        "T": 100,
+        "c": {
+          "failureUpper": "1/100",
+          "interval": [
+            "9/10",
+            "19/20"
+          ],
+          "provenance": "synthetic handed coverage premise; not inferred from cofailurePairs"
+        },
+        "cellUnit": "member-pair",
+        "epsilon": "1/10",
+        "memberSampling": "conditional-population-iid-with-replacement",
+        "model": "binary-M0-population-agreement@1",
+        "p": {
+          "failureUpper": "1/100",
+          "interval": [
+            "37/50",
+            "19/25"
+          ],
+          "provenance": "synthetic handed coverage premise; not an admitted calibrator receipt"
+        },
+        "sampling": "iid-cells@1"
+      }
+    },
+    "trivial-coverage": {
+      "actualCalculation": {
+        "Dbox": [
+          "1/20",
+          "7/100"
+        ],
+        "K_eff": [
+          "1",
+          "20577/18425"
+        ],
+        "cap": null,
+        "classification": "conditional outer confidence enclosure, not a certified calibration or measured causal count",
+        "confidence": {
+          "cFailureUpper": "1/100",
+          "coverageLower": "0",
+          "dataFailureUpper": "1",
+          "dependenceOfCalibrationErrors": "allowed; only marginal coverage premises used",
+          "pFailureUpper": "1/100",
+          "trivial": true,
+          "unionFailureUpper": "1"
+        },
+        "denominatorBox": [
+          "737/912",
+          "837/962"
+        ],
+        "noiseBox": [
+          "228/625",
+          "481/1250"
+        ],
+        "notIdentifiedSetEquality": true,
+        "status": "bounded-outer-enclosure"
+      },
+      "input": {
+        "Dhat": "3/50",
+        "N": 4,
+        "T": 100,
+        "c": {
+          "failureUpper": "1/100",
+          "interval": [
+            "9/10",
+            "19/20"
+          ],
+          "provenance": "synthetic handed coverage premise; not inferred from cofailurePairs"
+        },
+        "cellUnit": "whole-complete-cell",
+        "epsilon": "1/100",
+        "memberSampling": "conditional-population-iid-with-replacement",
+        "model": "binary-M0-population-agreement@1",
+        "p": {
+          "failureUpper": "1/100",
+          "interval": [
+            "37/50",
+            "19/25"
+          ],
+          "provenance": "synthetic handed coverage premise; not an admitted calibrator receipt"
+        },
+        "sampling": "iid-cells@1"
+      }
+    },
+    "unbounded": {
+      "actualCalculation": {
+        "Dbox": [
+          "11/40",
+          "19/40"
+        ],
+        "K_eff": [
+          "1",
+          null
+        ],
+        "cap": null,
+        "classification": "conditional outer confidence enclosure, not a certified calibration or measured causal count",
+        "confidence": {
+          "cFailureUpper": "1/100",
+          "coverageLower": "73/100",
+          "dataFailureUpper": "1/4",
+          "dependenceOfCalibrationErrors": "allowed; only marginal coverage premises used",
+          "pFailureUpper": "1/100",
+          "trivial": false,
+          "unionFailureUpper": "27/100"
+        },
+        "denominatorBox": [
+          "-31/64",
+          "29/84"
+        ],
+        "noiseBox": [
+          "8/25",
+          "21/50"
+        ],
+        "notIdentifiedSetEquality": true,
+        "status": "unbounded-outer-enclosure"
+      },
+      "input": {
+        "Dhat": "3/8",
+        "N": 4,
+        "T": 100,
+        "c": {
+          "failureUpper": "1/100",
+          "interval": [
+            "2/5",
+            "3/5"
+          ],
+          "provenance": "synthetic handed coverage premise; not inferred from cofailurePairs"
+        },
+        "cellUnit": "whole-complete-cell",
+        "epsilon": "1/10",
+        "memberSampling": "conditional-population-iid-with-replacement",
+        "model": "binary-M0-population-agreement@1",
+        "p": {
+          "failureUpper": "1/100",
+          "interval": [
+            "7/10",
+            "4/5"
+          ],
+          "provenance": "synthetic handed coverage premise; not an admitted calibrator receipt"
+        },
+        "sampling": "iid-cells@1"
+      }
+    },
+    "zero-crossing": {
+      "actualCalculation": {
+        "Dbox": [
+          "73/200",
+          "77/200"
+        ],
+        "K_eff": [
+          "75/8",
+          null
+        ],
+        "cap": null,
+        "classification": "conditional outer confidence enclosure, not a certified calibration or measured causal count",
+        "confidence": {
+          "cFailureUpper": "1/100",
+          "coverageLower": "73/100",
+          "dataFailureUpper": "1/4",
+          "dependenceOfCalibrationErrors": "allowed; only marginal coverage premises used",
+          "pFailureUpper": "1/100",
+          "trivial": false,
+          "unionFailureUpper": "27/100"
+        },
+        "denominatorBox": [
+          "-2/75",
+          "2/75"
+        ],
+        "noiseBox": [
+          "3/8",
+          "3/8"
+        ],
+        "notIdentifiedSetEquality": true,
+        "status": "unbounded-outer-enclosure"
+      },
+      "input": {
+        "Dhat": "3/8",
+        "N": 4,
+        "T": 10000,
+        "c": {
+          "failureUpper": "1/100",
+          "interval": [
+            "1/2",
+            "1/2"
+          ],
+          "provenance": "synthetic handed coverage premise; not inferred from cofailurePairs"
+        },
+        "cellUnit": "whole-complete-cell",
+        "epsilon": "1/100",
+        "memberSampling": "conditional-population-iid-with-replacement",
+        "model": "binary-M0-population-agreement@1",
+        "p": {
+          "failureUpper": "1/100",
+          "interval": [
+            "3/4",
+            "3/4"
+          ],
+          "provenance": "synthetic handed coverage premise; not an admitted calibrator receipt"
+        },
+        "sampling": "iid-cells@1"
+      }
+    },
+    "zero-epsilon": {
+      "actualCalculation": {
+        "cause": "positive-T-and-epsilon-required",
+        "status": "refused"
+      },
+      "input": {
+        "Dhat": "3/50",
+        "N": 4,
+        "T": 100,
+        "c": {
+          "failureUpper": "1/100",
+          "interval": [
+            "9/10",
+            "19/20"
+          ],
+          "provenance": "synthetic handed coverage premise; not inferred from cofailurePairs"
+        },
+        "cellUnit": "whole-complete-cell",
+        "epsilon": "0",
+        "memberSampling": "conditional-population-iid-with-replacement",
+        "model": "binary-M0-population-agreement@1",
+        "p": {
+          "failureUpper": "1/100",
+          "interval": [
+            "37/50",
+            "19/25"
+          ],
+          "provenance": "synthetic handed coverage premise; not an admitted calibrator receipt"
+        },
+        "sampling": "iid-cells@1"
+      }
+    }
+  },
+  "classification": "exact rational calculated fixtures with separate Lean checks; not native root receipts",
+  "fixedQuotaNegative": {
+    "K": 2,
+    "N": 2,
+    "actualD": "3/8",
+    "c": "1/2",
+    "incorrectPopulationIidD": "21/64",
+    "p": "3/4"
+  },
+  "id": "m0-keff-interval",
+  "pairDependenceWitness": {
+    "K": 1,
+    "N": 4,
+    "c": "1/2",
+    "incorrectPairIidVarianceUpper": "1/24",
+    "mass": [
+      {
+        "U": "0",
+        "p": "157/4096"
+      },
+      {
+        "U": "1/2",
+        "p": "99/1024"
+      },
+      {
+        "U": "2/3",
+        "p": "279/2048"
+      },
+      {
+        "U": "1/2",
+        "p": "291/1024"
+      },
+      {
+        "U": "0",
+        "p": "1821/4096"
+      }
+    ],
+    "mean": "9/32",
+    "p": "3/4",
+    "variance": "157/2048"
+  },
+  "policy": {
+    "path": "vectors/laws/policy.json",
+    "sha256": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+  }
+}

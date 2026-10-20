@@ -1,0 +1,42 @@
+{
+  "classification": "Lean-checked conditional probability-limit theorem; unsigned/unadmitted new proof",
+  "derivation": [
+    "q_l in[0,1] derived from the exclusive selector law",
+    "mu_N/N -> S by the existing prefix-quota theorem",
+    "The admitted count bridge plus unchanged product-Bernoulli moment machinery gives Var(total)=sum n_l q_l(1-q_l)<=N/4",
+    "Pointwise loss changes require a deviation beyond the finite mean margin; bound its expected size by Var/(N^2 epsilon^2)",
+    "The positive bound1/(4N epsilon^2) tends0; finite latent mixtures commute with these limits",
+    "The admitted full_generator_error_bridge transfers this implementation limit to the actual full generative PMF"
+  ],
+  "finitePremises": [
+    "Joint product latent and member primitive law are encoded in admitted fullLaw; they are generative hypotheses, not inferred from data.",
+    "N>0 for the finite gap inequality; an eventual condition suffices forN->infinity.",
+    "epsilon>0 fixed; mu_N/N+epsilon<=1/2 for left-side limit1, or1/2<=mu_N/N-epsilon for right-side limit0."
+  ],
+  "id": "m1-offdiag-limit@1",
+  "mainTheorems": [
+    "Obligations046.M1Offdiag.conditional_offdiag_limit",
+    "Obligations046.M1Offdiag.implementation_offdiag_limit",
+    "Obligations046.M1Offdiag.generator_offdiag_limit",
+    "Obligations046.M1Offdiag.example_offdiag",
+    "Obligations046.M1Offdiag.example_generator_limit"
+  ],
+  "model": "binary-M1-ancestor-first-fixed-quota@1",
+  "notAssumed": [
+    "count-law certificate",
+    "probability convergence",
+    "CLT",
+    "an ambient iid array or latent identification oracle"
+  ],
+  "offdiagCondition": "For ALL named ancestor/leaf latent assignmentsA,B: S(A,B)!=1/2. With the declared p domain every latent assignment has positive mass.",
+  "pending": [
+    "Native reader selection/captures/admission for the new off-diagonal proof identity",
+    "M1 diagonal probability transfer",
+    "Original three research demands and empirical model calibration"
+  ],
+  "proof": "proofs/M1Offdiag046.lean",
+  "quantitativeBoundary": "No uniform finiteN cutoff or calibrated empirical confidence interval is claimed. The finite bound requires the displayed mean-margin premise; it is not valid merely because a limiting score is off diagonal.",
+  "scope": "Fixed finite named hierarchy/weights, same p,c1,c2 and prefix allocation as the admitted M1 bridge. Domain1/2<p<1,0<=c1,c2<1. No model or algebra widening.",
+  "sourceSHA256": "sha256:faf6ef0b27049ff4cb89db0e216102239b8bb3f29a76e2a66442fb7c9b6ccd2b",
+  "value": "For the declared finite binary M1 ancestor-first fixed-quota model, if every named ancestor/leaf latent configuration has score S different from1/2, the actual full-generator fair-majority error tends to the exact latent threshold functional sum_z mass(z)1{S(z)<1/2}. The proof uses the admitted finite primitive-generator/binomial bridge, prefix-quota convergence, the exact finite conditional second moment and variance at mostN/4. For any fixed epsilon>0, once the finite conditional mean divided byN lies on the correct side with margin epsilon, its error gap is at most1/(4N epsilon^2). This yields the off-diagonal limit without an assumed probability limit, ambient process oracle or CLT. A concrete shared-parent two-leaf example withp=2/3,c1=c2=1/2 meets the off-diagonal condition. Configurations onS=1/2, causal identification and calibration are outside this theorem; the three original research cards remain open."
+}

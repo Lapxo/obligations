@@ -1,0 +1,16 @@
+{
+  "closure": "Freeze a fully bound run manifest before retrieval/holdout, execute its authorized licensed bytes, report all outcomes and justified uncertainty. Causal interpretations additionally require observable intervention/design.",
+  "id": "model-collapse-1a@1",
+  "negative": "A seed, synthetic table, unnamed dataset, presumed training nonexposure, pairwise iid shortcut or falling finite curve cannot pay the empirical/causal claim.",
+  "nulls": [
+    "dataset identity/license",
+    "trained model and lineage mechanism",
+    "finite hypothesis/effect/error budget",
+    "sampling units and holdout binding",
+    "observable intervention and causal estimand"
+  ],
+  "protocol": "protocols/model-collapse-1a.json",
+  "reason": "No owner-selected licensed dataset or bound training/observation/analysis design supplied. Protocol prepared only; no empirical execution.",
+  "status": "unmeasured",
+  "threeResearchCards": "open; unchanged"
+}

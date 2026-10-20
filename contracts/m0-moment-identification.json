@@ -1,0 +1,42 @@
+{
+  "scope": "m0-moment-identification",
+  "form": "statement",
+  "status": "unsigned-preparation",
+  "classification": "conditional Lean theorem plus exact counterexample",
+  "model": {
+    "id": "binary-M0-uniform-population@1",
+    "latent": "A_l independent Bernoulli(p); joint independence is a declared model hypothesis",
+    "observation": "Conditional on A, independent population draws have correctness probability q=(1-c)*p+c*sum(w_l*A_l); R_j=E[q^j+(1-q)^j]. No truth is needed to count agreement; p is externally declared/calibrated, not inferred from agreement.",
+    "known": [
+      "p in (0,1)",
+      "uniform named shares w_l=1/K",
+      "population expectation semantics"
+    ],
+    "unknown": [
+      "c in (0,1]",
+      "K positive integer"
+    ],
+    "target": "unique(c,K), hence K_eff=K only within this declared uniform family",
+    "units": {
+      "p,c,R_j": "probabilities",
+      "K,K_eff": "dimensionless counts/effective counts"
+    },
+    "samplingBoundary": "Population moments/with-replacement conditional draws. Finite distinct-member observations need their finite population correction; observed moments also need dependent-pair uncertainty. No finite-sample inverse guarantee here."
+  },
+  "value": "Binary M0 with jointly independent Bernoulli(p) latent lineages, known p in(0,1), uniform shares1/K with K>=1 and0<c<=1: the exact population pair and fourth agreement moments identify(c,K). A general quartic expectation bridge and strict monotonicity prove this beyond the old finite grid. For arbitrary normalized weights, p declared is insufficient for this moment map: c=7/10,K_eff=147/4 and c=4/5,K_eff=48 have equal R2,R4 at p=3/4. This collision concerns these moments only, not the entire observable law. R3 remains redundant. No sample uncertainty, causal recovery or contextual activity identification is claimed.",
+  "nullWithoutKnownP": "unmeasured:known-p-required",
+  "nullWithoutUniformity": "identified-set:{normalized positive weights,c satisfying the declared R2/R4 equations}; no singleton inferred",
+  "nullFiniteDataWithoutUncertainty": "unmeasured:population-moment-uncertainty-required",
+  "doesNotClose": [
+    "conditional-lineage-identification",
+    "causal-subgroup-recovery",
+    "oracle-free-reference",
+    "general heterogeneous M0 CLT"
+  ],
+  "priorWorkInPackage": [
+    "Obligations045.M0Coincidence.expect_quadratic",
+    "pair_coincidence",
+    "triple_redundant"
+  ],
+  "newContribution": "Exact quartic model bridge; uniform-family continuous parameter injectivity; explicit nonuniform moment collision."
+}

@@ -1,0 +1,21 @@
+{
+  "cases": [
+    {
+      "falseClaim": "q(false,true)=1/2 instead of5/12",
+      "name": "unconditional-child-rate",
+      "namedCompilerRejection": "unsolved goals"
+    },
+    {
+      "falseClaim": "q(false,true)=2/3 instead of5/12",
+      "name": "priority-erased",
+      "namedCompilerRejection": "unsolved goals"
+    },
+    {
+      "falseClaim": "two independent ancestor-selector successes have probability1/2 instead of1/4",
+      "name": "shared-selector-as-independent",
+      "namedCompilerRejection": "unsolved goals"
+    }
+  ],
+  "model": "binary-M1-ancestor-first-fixed-quota@1",
+  "scope": "Actual Lean rejects each deliberately false equality. This is not a public API/native Bound refusal."
+}

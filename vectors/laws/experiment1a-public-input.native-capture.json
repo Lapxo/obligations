@@ -1,0 +1,224 @@
+{
+  "classification": "prospective unsigned input-correction captures; no experimental result",
+  "runtimeSHA256": "sha256:e9dbb4cc260e03b127f3e45f17b34de0197e2edded8387e37dde37cebbe78508",
+  "inputs": [
+    {
+      "path": "vectors/laws/experiment1a-protocol.native.json",
+      "sha256": "sha256:2b3ddb9e9d08d97d6a33c6726dc8efb298236bb9fd6a0077d0bfdaeda1c16f7b"
+    },
+    {
+      "path": "contracts/model-collapse-1a.json",
+      "sha256": "sha256:d06165f3a8d4d31b5224c9cd7fbc20a89fdfd5783aba00862b97920659adba13"
+    },
+    {
+      "path": "protocols/model-collapse-1a.json",
+      "sha256": "sha256:7b8e16cbc8dff5d1654b8bb3710dd619810dde74ad8bb3a70b92dec377af736f"
+    },
+    {
+      "path": "docs/contracts/model-collapse-1a.md",
+      "sha256": "sha256:05c2a6ac20d209dab21a4fd5ff9392add36158b2194b5776329386b839ff77ec"
+    },
+    {
+      "path": "proofs/experiment1a-046/declaration.json",
+      "sha256": "sha256:327a0729dfa0c007f070d3b9db09089dc93f6168d83b22a8143edb6952f4d233"
+    },
+    {
+      "path": "vectors/laws/policy.json",
+      "sha256": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+    },
+    {
+      "path": "vectors/laws/model-collapse-1a.json",
+      "sha256": "sha256:dda54cc8ae7d204251fd343f572093434aaee02fd272d5f4f65b5a1ff95e2d50"
+    },
+    {
+      "path": "samples/laws/experiment1a/yes/sample.json",
+      "sha256": "sha256:5141a0c51fbb0b8dd75f16511e0a60612e71e14a27b92d2a33a419a7c1497961"
+    },
+    {
+      "path": "samples/laws/experiment1a/no/sample.json",
+      "sha256": "sha256:0fbb4408ca17795184a984a5de822a37b82dd98655d92893aae3088004230280"
+    }
+  ],
+  "events": [
+    {
+      "place": "orchard",
+      "nodeVersion": "v22.15.0",
+      "case": "projection",
+      "requestSHA256": "sha256:4dfb19660892366496ad643e65489f2a20c586847ded02f59e0abc6b8f4979a6",
+      "elapsedMs": 290.39812500000005,
+      "result": {
+        "protocol": "bound-lock/1",
+        "kind": "fact",
+        "lines": [
+          "bound-lock/1 at=receipt:1 form=alphabet measure=reads role=reads scope=publication/evidence/experiment1a-protocol value=vectors/laws/experiment1a-protocol.native.json|contracts/model-collapse-1a.json|protocols/model-collapse-1a.json|docs/contracts/model-collapse-1a.md|proofs/experiment1a-046/declaration.json|vectors/laws/policy.json|vectors/laws/model-collapse-1a.json|samples/laws/experiment1a/yes/sample.json|samples/laws/experiment1a/no/sample.json"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "place": "orchard",
+      "nodeVersion": "v22.15.0",
+      "case": "read",
+      "requestSHA256": "sha256:ee7c417b53229c54bb6354cf98277afc82ed40b3eee4d96c00ebbae1a0abfc72",
+      "elapsedMs": 143.95600000000002,
+      "result": {
+        "protocol": "bound-lock/1",
+        "kind": "fact",
+        "claims": [
+          {
+            "scope": "publication/evidence/experiment1a-protocol",
+            "role": "writes",
+            "measure": "count",
+            "bound": {
+              "kind": "interval",
+              "lo": 0,
+              "hi": 0
+            }
+          },
+          {
+            "scope": "publication/evidence/experiment1a-protocol/verification",
+            "role": "writes",
+            "measure": "digest",
+            "bound": {
+              "kind": "enumerated",
+              "values": [
+                "sha256:d765458fc6240e7f268e74915c7ed379f2101ca3873f7262326d783f935fa4ea"
+              ]
+            }
+          },
+          {
+            "scope": "publication/evidence/experiment1a-protocol/empirical-status",
+            "role": "writes",
+            "measure": "status",
+            "bound": {
+              "kind": "enumerated",
+              "values": [
+                "unmeasured"
+              ]
+            }
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "place": "orchard",
+      "nodeVersion": "v22.15.0",
+      "case": "missing-input",
+      "requestSHA256": "sha256:8e7ed22f63694af44cdf2888352dace243581184a5caed0c75616b38b2b9b5ad",
+      "elapsedMs": 140.30758300000002,
+      "result": {
+        "protocol": "bound-lock/1",
+        "kind": "refuse",
+        "why": "Error: REFUSE·experiment1a missing-input samples/laws/experiment1a/yes/sample.json"
+      },
+      "passed": true
+    },
+    {
+      "place": "orchard",
+      "nodeVersion": "v22.15.0",
+      "case": "handed-source-differs",
+      "requestSHA256": "sha256:33b67543428cbce15829102408dc3db48a10a0eeabad325e043ac3bdb9b4d1dd",
+      "elapsedMs": 144.36654199999998,
+      "result": {
+        "protocol": "bound-lock/1",
+        "kind": "refuse",
+        "why": "Error: REFUSE·experiment1a fixture-source-differs samples/laws/experiment1a/yes/sample.json"
+      },
+      "passed": true
+    },
+    {
+      "place": "catalog",
+      "nodeVersion": "v24.14.1",
+      "case": "projection",
+      "requestSHA256": "sha256:4dfb19660892366496ad643e65489f2a20c586847ded02f59e0abc6b8f4979a6",
+      "elapsedMs": 170.86233399999992,
+      "result": {
+        "protocol": "bound-lock/1",
+        "kind": "fact",
+        "lines": [
+          "bound-lock/1 at=receipt:1 form=alphabet measure=reads role=reads scope=publication/evidence/experiment1a-protocol value=vectors/laws/experiment1a-protocol.native.json|contracts/model-collapse-1a.json|protocols/model-collapse-1a.json|docs/contracts/model-collapse-1a.md|proofs/experiment1a-046/declaration.json|vectors/laws/policy.json|vectors/laws/model-collapse-1a.json|samples/laws/experiment1a/yes/sample.json|samples/laws/experiment1a/no/sample.json"
+        ]
+      },
+      "passed": true
+    },
+    {
+      "place": "catalog",
+      "nodeVersion": "v24.14.1",
+      "case": "read",
+      "requestSHA256": "sha256:ee7c417b53229c54bb6354cf98277afc82ed40b3eee4d96c00ebbae1a0abfc72",
+      "elapsedMs": 174.25037499999996,
+      "result": {
+        "protocol": "bound-lock/1",
+        "kind": "fact",
+        "claims": [
+          {
+            "scope": "publication/evidence/experiment1a-protocol",
+            "role": "writes",
+            "measure": "count",
+            "bound": {
+              "kind": "interval",
+              "lo": 0,
+              "hi": 0
+            }
+          },
+          {
+            "scope": "publication/evidence/experiment1a-protocol/verification",
+            "role": "writes",
+            "measure": "digest",
+            "bound": {
+              "kind": "enumerated",
+              "values": [
+                "sha256:d765458fc6240e7f268e74915c7ed379f2101ca3873f7262326d783f935fa4ea"
+              ]
+            }
+          },
+          {
+            "scope": "publication/evidence/experiment1a-protocol/empirical-status",
+            "role": "writes",
+            "measure": "status",
+            "bound": {
+              "kind": "enumerated",
+              "values": [
+                "unmeasured"
+              ]
+            }
+          }
+        ]
+      },
+      "passed": true
+    },
+    {
+      "place": "catalog",
+      "nodeVersion": "v24.14.1",
+      "case": "missing-input",
+      "requestSHA256": "sha256:8e7ed22f63694af44cdf2888352dace243581184a5caed0c75616b38b2b9b5ad",
+      "elapsedMs": 168.53945799999997,
+      "result": {
+        "protocol": "bound-lock/1",
+        "kind": "refuse",
+        "why": "Error: REFUSE·experiment1a missing-input samples/laws/experiment1a/yes/sample.json"
+      },
+      "passed": true
+    },
+    {
+      "place": "catalog",
+      "nodeVersion": "v24.14.1",
+      "case": "handed-source-differs",
+      "requestSHA256": "sha256:33b67543428cbce15829102408dc3db48a10a0eeabad325e043ac3bdb9b4d1dd",
+      "elapsedMs": 169.2275830000001,
+      "result": {
+        "protocol": "bound-lock/1",
+        "kind": "refuse",
+        "why": "Error: REFUSE·experiment1a fixture-source-differs samples/laws/experiment1a/yes/sample.json"
+      },
+      "passed": true
+    }
+  ],
+  "candidateVerificationDigest": "sha256:d765458fc6240e7f268e74915c7ed379f2101ca3873f7262326d783f935fa4ea",
+  "empiricalStatus": "unmeasured",
+  "originalThreeCards": "open",
+  "ownerAdmitted": false,
+  "signatures": 0,
+  "runtimeReusedExactly": true
+}

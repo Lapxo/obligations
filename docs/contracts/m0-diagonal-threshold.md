@@ -1,0 +1,1 @@
+For the actual M0 product law, moving-threshold majority and fair-tie transfer are conditional on standardized fixed-cut CDF convergence to F, continuous at zero. The tie atom then vanishes; conditionalError tends to F(0), hence to one half only when F(0)=1/2 is declared. The actual M0 CLT remains unpaid and open. A scalar LGN limit alone does not give half error.

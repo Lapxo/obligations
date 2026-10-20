@@ -1,0 +1,12 @@
+{
+  "K_eff": "8/5",
+  "interpretation": "declared weight concentration only",
+  "normalized": [
+    "3/4",
+    "1/4"
+  ],
+  "weights": [
+    3,
+    1
+  ]
+}

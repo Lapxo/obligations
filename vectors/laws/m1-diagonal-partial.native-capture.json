@@ -1,0 +1,275 @@
+{
+  "archiveApproval": false,
+  "candidatePublicationCorrectionCovered": false,
+  "captures": [
+    {
+      "elapsedMs": 260.897584,
+      "expected": "fact",
+      "name": "orchard-projection",
+      "passed": true,
+      "requestSHA256": "sha256:a1122c0a34172d5c6c80e8cc71888e2c7b93e671f648c20cf002d9aca37102f3",
+      "result": {
+        "kind": "fact",
+        "lines": [
+          "bound-lock/1 at=receipt:1 form=alphabet measure=reads role=reads scope=publication/evidence/m1-diagonal-partial value=proofs/m1-046-diagonal/M0Bridge.lean|proofs/m1-046-diagonal/M0Diagonal046.lean|proofs/m1-046-diagonal/M0Lindeberg046.lean|proofs/m1-046-diagonal/M0Moments046.lean|proofs/m1-046-diagonal/M0Threshold046.lean|proofs/m1-046-diagonal/M1Bridge046.lean|proofs/m1-046-diagonal/M1Diagonal046.lean|proofs/m1-046-diagonal/M1Offdiag046.lean|proofs/m1-046-diagonal/Obligations045/M0Limit.lean|proofs/m1-046-diagonal/Obligations045/M0Offdiag.lean|proofs/m1-046-diagonal/lake-manifest.json|proofs/m1-046-diagonal/lakefile.toml|proofs/m1-046-diagonal/lean-toolchain|vectors/laws/m1-diagonal-partial.lean.json|contracts/m1-subcauses.json|contracts/m1-diagonal-regions.json|samples/laws/m1-diagonal-regions/yes/sample.json|samples/laws/m1-diagonal-regions/no/sample.json|vectors/laws/policy.json"
+        ],
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 21230.500375,
+      "expected": "fact",
+      "name": "orchard-read",
+      "passed": true,
+      "requestSHA256": "sha256:5465936c14997bacb786d0c2d4242bee475cd0c0d9b0e48d3015bef7607917d5",
+      "result": {
+        "claims": [
+          {
+            "bound": {
+              "hi": 0,
+              "kind": "interval",
+              "lo": 0
+            },
+            "measure": "count",
+            "role": "writes",
+            "scope": "publication/evidence/m1-diagonal-partial"
+          },
+          {
+            "bound": {
+              "kind": "enumerated",
+              "values": [
+                "sha256:4fd0255cd52b46f6114101e0d3700f3ebfd5aced4bff3929a88c34a82137e0ab"
+              ]
+            },
+            "measure": "digest",
+            "role": "writes",
+            "scope": "publication/evidence/m1-diagonal-partial/verification"
+          }
+        ],
+        "kind": "fact",
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 174.49762499999997,
+      "expected": "refuse",
+      "name": "orchard-missing-input",
+      "passed": true,
+      "requestSHA256": "sha256:77108a8925fe324ea16c7f66fa84c9b9f325113dd8a14e036d59b47ab6380b7e",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice missing-input proofs/m1-046-diagonal/M1Diagonal046.lean"
+      }
+    },
+    {
+      "elapsedMs": 164.12408399999913,
+      "expected": "refuse",
+      "name": "orchard-handed-source-differs",
+      "passed": true,
+      "requestSHA256": "sha256:2964c17994e98a4e0fda308754fcacee97eed9b1f15079208f2fd4daf1c44051",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice fixture-source-differs proofs/m1-046-diagonal/M1Diagonal046.lean"
+      }
+    },
+    {
+      "elapsedMs": 160.69666700000016,
+      "expected": "refuse",
+      "name": "orchard-overstated-M1-diagonal",
+      "passed": true,
+      "requestSHA256": "sha256:ececa2df8275eaf6473d2948ea5b48db806810c906b8d2c4e0eb75cd30707775",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice overstated-M1-diagonal"
+      }
+    },
+    {
+      "elapsedMs": 186.44616699999824,
+      "expected": "fact",
+      "name": "catalog-projection",
+      "passed": true,
+      "requestSHA256": "sha256:a1122c0a34172d5c6c80e8cc71888e2c7b93e671f648c20cf002d9aca37102f3",
+      "result": {
+        "kind": "fact",
+        "lines": [
+          "bound-lock/1 at=receipt:1 form=alphabet measure=reads role=reads scope=publication/evidence/m1-diagonal-partial value=proofs/m1-046-diagonal/M0Bridge.lean|proofs/m1-046-diagonal/M0Diagonal046.lean|proofs/m1-046-diagonal/M0Lindeberg046.lean|proofs/m1-046-diagonal/M0Moments046.lean|proofs/m1-046-diagonal/M0Threshold046.lean|proofs/m1-046-diagonal/M1Bridge046.lean|proofs/m1-046-diagonal/M1Diagonal046.lean|proofs/m1-046-diagonal/M1Offdiag046.lean|proofs/m1-046-diagonal/Obligations045/M0Limit.lean|proofs/m1-046-diagonal/Obligations045/M0Offdiag.lean|proofs/m1-046-diagonal/lake-manifest.json|proofs/m1-046-diagonal/lakefile.toml|proofs/m1-046-diagonal/lean-toolchain|vectors/laws/m1-diagonal-partial.lean.json|contracts/m1-subcauses.json|contracts/m1-diagonal-regions.json|samples/laws/m1-diagonal-regions/yes/sample.json|samples/laws/m1-diagonal-regions/no/sample.json|vectors/laws/policy.json"
+        ],
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 13629.077708,
+      "expected": "fact",
+      "name": "catalog-read",
+      "passed": true,
+      "requestSHA256": "sha256:5465936c14997bacb786d0c2d4242bee475cd0c0d9b0e48d3015bef7607917d5",
+      "result": {
+        "claims": [
+          {
+            "bound": {
+              "hi": 0,
+              "kind": "interval",
+              "lo": 0
+            },
+            "measure": "count",
+            "role": "writes",
+            "scope": "publication/evidence/m1-diagonal-partial"
+          },
+          {
+            "bound": {
+              "kind": "enumerated",
+              "values": [
+                "sha256:4fd0255cd52b46f6114101e0d3700f3ebfd5aced4bff3929a88c34a82137e0ab"
+              ]
+            },
+            "measure": "digest",
+            "role": "writes",
+            "scope": "publication/evidence/m1-diagonal-partial/verification"
+          }
+        ],
+        "kind": "fact",
+        "protocol": "bound-lock/1"
+      }
+    },
+    {
+      "elapsedMs": 214.21862500000134,
+      "expected": "refuse",
+      "name": "catalog-missing-input",
+      "passed": true,
+      "requestSHA256": "sha256:77108a8925fe324ea16c7f66fa84c9b9f325113dd8a14e036d59b47ab6380b7e",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice missing-input proofs/m1-046-diagonal/M1Diagonal046.lean"
+      }
+    },
+    {
+      "elapsedMs": 180.91612500000338,
+      "expected": "refuse",
+      "name": "catalog-handed-source-differs",
+      "passed": true,
+      "requestSHA256": "sha256:2964c17994e98a4e0fda308754fcacee97eed9b1f15079208f2fd4daf1c44051",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice fixture-source-differs proofs/m1-046-diagonal/M1Diagonal046.lean"
+      }
+    },
+    {
+      "elapsedMs": 180.35033400000248,
+      "expected": "refuse",
+      "name": "catalog-overstated-M1-diagonal",
+      "passed": true,
+      "requestSHA256": "sha256:ececa2df8275eaf6473d2948ea5b48db806810c906b8d2c4e0eb75cd30707775",
+      "result": {
+        "kind": "refuse",
+        "protocol": "bound-lock/1",
+        "why": "Error: REFUSE\u00b7semilattice overstated-M1-diagonal"
+      }
+    }
+  ],
+  "classification": "retained actual host responses; exact historical input identities only",
+  "format": "native-reading-capture@1",
+  "ownerAdmitted": true,
+  "sameOrigin": true,
+  "sourceInputDigests": [
+    {
+      "bytes": 14408,
+      "path": "proofs/m1-046-diagonal/M0Bridge.lean",
+      "sha256": "sha256:b438b2961b93c62787275e158a90b534a400de8646a0552b099863fa5227c21e"
+    },
+    {
+      "bytes": 10587,
+      "path": "proofs/m1-046-diagonal/M0Diagonal046.lean",
+      "sha256": "sha256:c0403d40e1c6849045bf70eab2854eeac28a2464783e06ce03f2f36e33c2146c"
+    },
+    {
+      "bytes": 4565,
+      "path": "proofs/m1-046-diagonal/M0Lindeberg046.lean",
+      "sha256": "sha256:de5477cdde114064f3d272ede95490483040fc857399181c376c285c02411da8"
+    },
+    {
+      "bytes": 12023,
+      "path": "proofs/m1-046-diagonal/M0Moments046.lean",
+      "sha256": "sha256:06780115a2b44a77a9be72673350332b77045489dba7ff081beecd48b8d51a73"
+    },
+    {
+      "bytes": 12990,
+      "path": "proofs/m1-046-diagonal/M0Threshold046.lean",
+      "sha256": "sha256:861cd13ecd4b7f37a1bc00362b4fdc213cefdcf380171947a14463b0bc465a9e"
+    },
+    {
+      "bytes": 17502,
+      "path": "proofs/m1-046-diagonal/M1Bridge046.lean",
+      "sha256": "sha256:a21ac1dedb07af4f28752238edd564293967d8177b75979feead44f01f347b9c"
+    },
+    {
+      "bytes": 16346,
+      "path": "proofs/m1-046-diagonal/M1Diagonal046.lean",
+      "sha256": "sha256:647b435a37369a0128dbbdf6b3c97110293d6bf1c62e63311e346310cfd49463"
+    },
+    {
+      "bytes": 12823,
+      "path": "proofs/m1-046-diagonal/M1Offdiag046.lean",
+      "sha256": "sha256:faf6ef0b27049ff4cb89db0e216102239b8bb3f29a76e2a66442fb7c9b6ccd2b"
+    },
+    {
+      "bytes": 5762,
+      "path": "proofs/m1-046-diagonal/Obligations045/M0Limit.lean",
+      "sha256": "sha256:aedc88b8ba4edf884cacec78da82eef29187ded0199d44674466425af1585b8c"
+    },
+    {
+      "bytes": 8801,
+      "path": "proofs/m1-046-diagonal/Obligations045/M0Offdiag.lean",
+      "sha256": "sha256:af8a95d00cd0956acaec06deeebe7156dccf156b698408275c3e710f58c1c1e8"
+    },
+    {
+      "bytes": 3526,
+      "path": "proofs/m1-046-diagonal/lake-manifest.json",
+      "sha256": "sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d"
+    },
+    {
+      "bytes": 586,
+      "path": "proofs/m1-046-diagonal/lakefile.toml",
+      "sha256": "sha256:ace8c9379eb053286c962c8fad4ff99dab1cfd0ca44b689180cfed01e4c05710"
+    },
+    {
+      "bytes": 25,
+      "path": "proofs/m1-046-diagonal/lean-toolchain",
+      "sha256": "sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+    },
+    {
+      "bytes": 8324,
+      "path": "vectors/laws/m1-diagonal-partial.lean.json",
+      "sha256": "sha256:45327a676e5ea726cda8c1ef882652d60ad44588f9df1a1183252d3c6bcb1aba"
+    },
+    {
+      "bytes": 6036,
+      "path": "contracts/m1-subcauses.json",
+      "sha256": "sha256:8213a6cc3a5ca80a6adb594b9d8f28504c9566200a6d585f675585db2c8d45cc"
+    },
+    {
+      "bytes": 3364,
+      "path": "contracts/m1-diagonal-regions.json",
+      "sha256": "sha256:00d417c5efc29bb70973dc6517202adb0282aa98f4ec13026d24d78a592af92e"
+    },
+    {
+      "bytes": 902,
+      "path": "samples/laws/m1-diagonal-regions/yes/sample.json",
+      "sha256": "sha256:bf28d6e7db21d6873de956f061f54457f9e1341dc509ff8ba7a935e70dc3b5c8"
+    },
+    {
+      "bytes": 1131,
+      "path": "samples/laws/m1-diagonal-regions/no/sample.json",
+      "sha256": "sha256:e4ba3a758946eabc3d7168ff536f1a8791fb99991ba5be9747d323a3bcb1c495"
+    },
+    {
+      "bytes": 2761,
+      "path": "vectors/laws/policy.json",
+      "sha256": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+    }
+  ]
+}

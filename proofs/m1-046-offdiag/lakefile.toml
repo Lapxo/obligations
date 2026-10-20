@@ -1,0 +1,32 @@
+name = "obligations_lineage"
+version = "0.0.0"
+defaultTargets = ["Obligations045"]
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "c44e0c8ee63ca166450922a373c7409c5d26b00b"
+[[lean_lib]]
+name = "Obligations045"
+
+[[lean_lib]]
+name = "M0Bridge"
+[[lean_lib]]
+name = "BridgeNegatives"
+
+[[lean_lib]]
+name = "M0Diagonal046"
+
+[[lean_lib]]
+name = "M0Moments046"
+
+[[lean_lib]]
+name = "M0Lindeberg046"
+
+[[lean_lib]]
+name = "M0Threshold046"
+
+[[lean_lib]]
+name = "M1Bridge046"
+
+[[lean_lib]]
+name = "M1Offdiag046"

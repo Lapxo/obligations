@@ -1,0 +1,20 @@
+{
+  "classification": "bounded enumeration; general finite derivation in text, not Lean-certified",
+  "domain": "Finite named X, exact rational mu_X>=0 summing to1; total deterministic maps Y=f(X), Z=g(Y); mu_Y=f_*mu_X and mu_Z=g_*mu_Y, never separately chosen priors. Zero-mass fibers contribute0. Units bits.",
+  "evidenceScope": "All partitions of four named atoms, every nested coarsening, all nonnegative integer masses summing4 divided4. Binary64 log2 tolerance1e-12. This is bounded enumeration, not a universal kernel proof.",
+  "id": "projection-chain-composition@1",
+  "model": "finite-deterministic-chain-same-prior@1",
+  "negative": [
+    "projection/non-chain",
+    "projection/changed-prior",
+    "projection/randomized-map",
+    "mix-loss/prior-required"
+  ],
+  "open": [
+    "General Lean finite entropy proof and native reader admission not prepared by this vector alone",
+    "Original three research cards unchanged/open"
+  ],
+  "policy": "vectors/laws/policy.json",
+  "reuse": "Published mixProjectionLoss with weights0,1 encodes each deterministic projection; same construction as published marginalInformation. No new public API.",
+  "value": "H_mu(X|Z)=H_mu(X|Y)+H_mu(Y|Z). Loss vanishes exactly when the respective projection is injective on positive support. No independence assumption."
+}

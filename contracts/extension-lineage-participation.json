@@ -1,0 +1,30 @@
+{
+  "boundary": "Definitions settle meanings only. Different hypotheses or missing proofs are not a fork. No algebra, actor identity rule, M/3-M/4, protocol or wire changes.",
+  "classification": "definitions and conditional interpretation; no new law",
+  "definitions": {
+    "effectiveParticipation": "For finite nonnegative masses a_i with positive total, w_i=a_i/sum(a), K_eff=1/sum(w_i^2). Dimensionless; zeros do not count as active support. It measures weight concentration, not causally independent extensions.",
+    "extension": "A5 supplied set of coordinate/interval pairs ext(o), compared at fixed coordinate interpretation, resolution and context. Equality is extensional equivalence under that convention; it does not identify historical actors, causal processes or independent random variables.",
+    "jointIndependence": "For declared variables and one probability law, every joint event factors into the product of its marginal probabilities. For a conditional claim, declare the conditioning variable and require factorization in each positive-mass stratum. Pairwise zero covariance, distinct names and disjoint extensions do not imply this.",
+    "namedLineage": "A supplied model label grouping sources by a declared common generation/ancestry mechanism, with membership and any active weighting supplied. Labels and extension distances do not certify that mechanism. Observational identification remains conditional.",
+    "spectralParticipation": "For nonnegative eigenvalues lambda_i of a declared symmetric PSD covariance with positive trace, normalize w_i=lambda_i/trace: K_eff=trace(C)^2/tr(C^2). This spectral measure and a declared lineage-weight measure are distinct objects unless a model connects them."
+  },
+  "id": "extension-lineage-participation@1",
+  "open": [
+    "conditional-lineage-identification",
+    "causal-subgroup-recovery",
+    "oracle-free-reference"
+  ],
+  "reusedEvidence": {
+    "A7/T90": "vectors/laws/a7-t90.json",
+    "A9/T99": "vectors/laws/a9-t99.json",
+    "participation": "dist/measures/error-events.js",
+    "uniformIdentification": "admitted O4 uniform_population_identification, known p and uniform weights only"
+  },
+  "scopeConditions": {
+    "A7": "Fixed coordinates, resolution, context and ceilings; adding live narrowing constraints cannot increase summed finite log-cardinal freedoms. Withdrawal and witnessed local widening can increase freedom on an existing coordinate. A sum over coordinates is not automatically joint Shannon entropy.",
+    "A9": "Representation convention for the object relation; supplies no iteration theorem or independence premise.",
+    "C1": "Historical independence-is-distance wording is not probabilistic factorization; any probabilistic reading needs a separately supplied joint law and independence proof.",
+    "T90": "Nonempty finite admissible states, uniform distribution at fixed resolution: entropy=log2(cardinality). Arbitrary priors, phase interpretations and exclusive lists of freedom-changing acts do not follow. Empty regions need their separately declared algebraic state, not an invented entropy convention.",
+    "T99": "Finite world and records, acyclic reachable dependency graph, total supplied lattice operations. Finite dependency evaluation is not repeated application of an arbitrary monotone map. Reachable ancestral cycles reject; unreachable cycles do not affect the query. General iterative convergence needs a carrier, operator, seed and progress/height hypotheses."
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "id": "m0-binomial-bridge-046",
+  "claim": "model-implementation-under-joint-member-law",
+  "status": "kernel-proved conditional statement; unsigned native reader preparation",
+  "proof": {
+    "files": [
+      {
+        "path": "proofs/m0-046/BridgeNegatives.lean",
+        "sha256": "sha256:956afd1cfe87eaf2c6586822541a3ede6cc285f8659d27d88228f5534e1c640b"
+      },
+      {
+        "path": "proofs/m0-046/M0Bridge.lean",
+        "sha256": "sha256:b438b2961b93c62787275e158a90b534a400de8646a0552b099863fa5227c21e"
+      },
+      {
+        "path": "proofs/m0-046/Obligations045.lean",
+        "sha256": "sha256:be4956a2720d696e5456ad108543945c6f65f1986126513f10edcd4f1841bced"
+      },
+      {
+        "path": "proofs/m0-046/Obligations045/ConsensusGrid.lean",
+        "sha256": "sha256:b26a1b68522e881e446a47f4c84cd8b569a1c48f085a5c9a9d03abdeecafacce"
+      },
+      {
+        "path": "proofs/m0-046/Obligations045/M0Coincidence.lean",
+        "sha256": "sha256:e870a43e435f4b4b52f28f44dd7391c40704faa41febd272434d2e56b2bd6771"
+      },
+      {
+        "path": "proofs/m0-046/Obligations045/M0Diagonal.lean",
+        "sha256": "sha256:4d83f047fc5e199f46b2cc28dfe77b006a7dd408f0f14ed54afb5e21315148e2"
+      },
+      {
+        "path": "proofs/m0-046/Obligations045/M0Limit.lean",
+        "sha256": "sha256:aedc88b8ba4edf884cacec78da82eef29187ded0199d44674466425af1585b8c"
+      },
+      {
+        "path": "proofs/m0-046/Obligations045/M0Offdiag.lean",
+        "sha256": "sha256:af8a95d00cd0956acaec06deeebe7156dccf156b698408275c3e710f58c1c1e8"
+      },
+      {
+        "path": "proofs/m0-046/lake-manifest.json",
+        "sha256": "sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d"
+      },
+      {
+        "path": "proofs/m0-046/lakefile.toml",
+        "sha256": "sha256:5238801942ad2da374d15f64ad21e859e2e1ea188285af315dd387ef2e5bbbdc"
+      },
+      {
+        "path": "proofs/m0-046/lean-toolchain",
+        "sha256": "sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea"
+      }
+    ],
+    "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "auditedTheorems": [
+      "Obligations046.Bridge.count_fiber_mass",
+      "Obligations046.Bridge.product_pushforward",
+      "Obligations046.Bridge.joint_count_pushforward",
+      "Obligations046.Bridge.mass_sum",
+      "Obligations046.Bridge.mass_nonneg",
+      "Obligations046.Bridge.jointMass_sum",
+      "Obligations046.Bridge.memberLaw_expectation",
+      "Obligations046.Bridge.conditional_error_representation",
+      "Obligations046.Bridge.conditional_error_zero",
+      "Obligations046.Bridge.fair_loss_average_bridge",
+      "Obligations046.Bridge.lineage_count_binomial_law",
+      "Obligations046.Bridge.snapshot_card",
+      "Obligations046.Bridge.snapshot_average",
+      "Obligations046.Bridge.ambient_conditional_error_representation",
+      "Obligations046.Bridge.mixture_error_representation",
+      "Obligations046.Bridge.computational_offdiag_limit",
+      "Obligations046.Bridge.mass_eq_individual_product",
+      "Obligations046.Bridge.memberLaw_individual_probability",
+      "Obligations046.Bridge.zero_average_counterexample",
+      "Obligations046.Bridge.latentMass_sum",
+      "Obligations046.Bridge.model_mixture_error_representation",
+      "Obligations046.BridgeTests.pairwise_not_joint"
+    ],
+    "allowedAxioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "samples": {
+    "inputs": [
+      "contracts/m0-binomial-bridge.json",
+      "docs/contracts/m0-binomial-bridge.md",
+      "samples/laws/m0-binomial-bridge/yes/sample.json",
+      "samples/laws/m0-binomial-bridge/no/sample.json",
+      "samples/laws/m0-binomial-bridge/yes/small-binomial-table.json",
+      "samples/laws/m0-binomial-bridge/no/pairwise-is-not-joint.json",
+      "vectors/laws/policy.json"
+    ],
+    "digests": {
+      "contracts/m0-binomial-bridge.json": "sha256:8b1f47cee00c3f283336971bf65488533f65d2c94608fe81cc590afe106d9781",
+      "docs/contracts/m0-binomial-bridge.md": "sha256:e889accdbba87f0642a95926e2437d53e98454714b13afcbc173f6f5826452c4",
+      "samples/laws/m0-binomial-bridge/yes/sample.json": "sha256:d45673e46f0ef5ccaa44192bf65f3750ec2becda9a958b2f81c840dff68b1c04",
+      "samples/laws/m0-binomial-bridge/no/sample.json": "sha256:4ec1cfe17f6a0510cc0b1a32c83f740c2ff22c0a04add5a456bdd3e0aac39e19",
+      "samples/laws/m0-binomial-bridge/yes/small-binomial-table.json": "sha256:f5b8a2995637c6005aeae7b855f2e8640d3c1ba6855add37a7baf5505730245d",
+      "samples/laws/m0-binomial-bridge/no/pairwise-is-not-joint.json": "sha256:0f3f91f694a9e9b7fe725096dea53e404a5f695319583c22e3b1b4977b7a979d",
+      "vectors/laws/policy.json": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+    }
+  },
+  "capturePolicy": {
+    "timeoutMs": 25000,
+    "responseBytes": 65536
+  },
+  "execution": {
+    "profile": "lean-kernel@1",
+    "project": "proofs/m0-046",
+    "identityInputs": [
+      "proofs/m0-046/BridgeNegatives.lean",
+      "proofs/m0-046/M0Bridge.lean",
+      "proofs/m0-046/Obligations045.lean",
+      "proofs/m0-046/Obligations045/ConsensusGrid.lean",
+      "proofs/m0-046/Obligations045/M0Coincidence.lean",
+      "proofs/m0-046/Obligations045/M0Diagonal.lean",
+      "proofs/m0-046/Obligations045/M0Limit.lean",
+      "proofs/m0-046/Obligations045/M0Offdiag.lean",
+      "proofs/m0-046/lake-manifest.json",
+      "proofs/m0-046/lakefile.toml",
+      "proofs/m0-046/lean-toolchain",
+      "vectors/laws/m0-binomial-bridge.lean.json",
+      "contracts/m0-binomial-bridge.json",
+      "docs/contracts/m0-binomial-bridge.md",
+      "samples/laws/m0-binomial-bridge/yes/sample.json",
+      "samples/laws/m0-binomial-bridge/no/sample.json",
+      "samples/laws/m0-binomial-bridge/yes/small-binomial-table.json",
+      "samples/laws/m0-binomial-bridge/no/pairwise-is-not-joint.json",
+      "vectors/laws/policy.json"
+    ],
+    "toolchain": "leanprover/lean4:v4.19.0",
+    "compilerIdentity": "6caaee842e94",
+    "targets": [
+      "M0Bridge",
+      "BridgeNegatives"
+    ],
+    "sources": [
+      "M0Bridge.lean",
+      "BridgeNegatives.lean"
+    ],
+    "auditImports": [
+      "M0Bridge",
+      "BridgeNegatives"
+    ],
+    "negative": {
+      "name": "missing-joint-product-law",
+      "source": "import M0Bridge\nopen MeasureTheory Obligations045.M0 Obligations046.Bridge\nexample {Ω : Type*} [MeasurableSpace Ω] (M : Domain) (N : ℕ) (a : Fin M.K → Bool)\n    (μ : Measure Ω) (X : Fin M.K → ℕ → Ω → Bool) (hN : 0 < N)\n    (hmeas : AEMeasurable (snapshot M N X) μ) :\n    (∫ ω, limitingLoss (memberAverage M (indicator X) N ω) ∂μ) = conditionalError M N a := by\n  exact ambient_conditional_error_representation M N a μ X hN hmeas\n",
+      "exitCode": 1,
+      "cause": [
+        "type mismatch",
+        "Measure.map"
+      ]
+    },
+    "extraNegatives": [
+      {
+        "name": "zero-average-misuse",
+        "source": "import M0Bridge\nopen Obligations045.M0\nexample : fairLoss 0 0 = limitingLoss ((0:ℝ)/0) := by\n  norm_num [fairLoss, limitingLoss]\n",
+        "exitCode": 1,
+        "cause": [
+          "unsolved goals"
+        ]
+      },
+      {
+        "name": "pairwise-implies-product-false",
+        "source": "import BridgeNegatives\nopen Obligations046.BridgeTests\nexample : expect (fun a b c => (1-a)*(1-b)*(1-c)) = (1/4:ℚ)^3 := by\n  norm_num [expect, atoms]\n",
+        "exitCode": 1,
+        "cause": [
+          "unsolved goals"
+        ]
+      }
+    ]
+  },
+  "boundary": {
+    "productLaw": "raw individual joint Bernoulli law, never assumed binomial counts",
+    "finiteRepresentation": "all N, fair ties",
+    "average": "N>0; zero handled separately",
+    "offdiag": "all inherited sampling/measurability hypotheses and no score=1/2",
+    "generalDiagonal": false,
+    "cEqualsOne": false,
+    "originIndependenceClaimed": false,
+    "admitted": false,
+    "rootReceipts": false,
+    "releaseReady": false
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "projection-chain-native@1",
+  "classification": "bounded-enumeration",
+  "universalLeanLaw": false,
+  "originalThreeCards": "open",
+  "scope": "publication/evidence/projection-chain",
+  "identityInputs": [
+    "vectors/laws/projection-chain.native.json",
+    "contracts/projection-chain.json",
+    "proofs/projection-chain.md",
+    "vectors/laws/policy.json",
+    "vectors/laws/projection-chain.json",
+    "samples/laws/projection-chain/yes/sample.json",
+    "samples/laws/projection-chain/no/sample.json"
+  ],
+  "anchors": [
+    {
+      "path": "contracts/projection-chain.json",
+      "sha256": "sha256:34add91f4dfd04d38490f85577fcbb95059a58803c8b82c4a82af2d265a421d9"
+    },
+    {
+      "path": "proofs/projection-chain.md",
+      "sha256": "sha256:7e6edc63c8dccd35ad6cc076f36cb61e4f8283cb97f3860d8355c7cab2ba4a5b"
+    },
+    {
+      "path": "vectors/laws/policy.json",
+      "sha256": "sha256:e941ce8cd86f0ec31621fa6b4deef9685dc1fead283f4b2fe22a8a58e3d5d939"
+    },
+    {
+      "path": "vectors/laws/projection-chain.json",
+      "sha256": "sha256:904476a29e10dc29403d9dbc1f9c5d59d0793befccaed72cf8d57aff2d4e300a"
+    },
+    {
+      "path": "samples/laws/projection-chain/yes/sample.json",
+      "sha256": "sha256:070799ba415f7a264e3755f0c136fdb58c8c0e077688ec34aaf5d0d132b251d5"
+    },
+    {
+      "path": "samples/laws/projection-chain/no/sample.json",
+      "sha256": "sha256:647ec37e4ac3852211391f2bf81d1c05134860207d33d9eb8010c7ff43076965"
+    }
+  ],
+  "instrument": {
+    "mix-loss.js": "sha256:af9c6a3dbeda91981b394b61e187f916dc0e0304801b7b654ff3e025ebce94cb",
+    "rational.js": "sha256:f25343eee4bbea1de211543a7036ca58f62aeefec1d124f787151ea57cbda2e7"
+  },
+  "capturePolicy": {
+    "timeoutMs": 25000,
+    "responseBytes": 65536
+  },
+  "result": {
+    "checks": 2100,
+    "zeroSupportCases": 2040,
+    "maxResidual": 1.1102230246251565e-16,
+    "transcriptSHA256": "sha256:389843437eed32a21777c1b754abd69826a3ac9b5450ae0720fd1b76b9adf323"
+  }
+}

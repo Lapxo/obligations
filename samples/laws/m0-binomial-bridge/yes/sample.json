@@ -1,0 +1,16 @@
+{
+  "name": "m0-binomial-bridge",
+  "contract": "contracts/m0-binomial-bridge.json",
+  "model": "M0-binary-lineage",
+  "claims": "raw-member-product-to-binomial-representation-and-offdiag-limit",
+  "claimsGeneralDiagonal": false,
+  "claimsAdmission": false,
+  "fixtures": [
+    {
+      "path": "samples/laws/m0-binomial-bridge/yes/small-binomial-table.json"
+    },
+    {
+      "path": "samples/laws/m0-binomial-bridge/no/pairwise-is-not-joint.json"
+    }
+  ]
+}

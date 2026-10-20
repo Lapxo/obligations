@@ -1,0 +1,12 @@
+{
+  "classification": "protocol-status fixture only, not experimental result",
+  "id": "experiment1a-protocol-boundaries@1",
+  "nativeReceipt": false,
+  "negative": "No empirical/causal result can be inferred from metadata or finite falling curve",
+  "policy": "policy.json",
+  "positive": "No licensed dataset or execution -> unmeasured",
+  "protocol": {
+    "path": "protocols/model-collapse-1a.json",
+    "sha256": "sha256:7b8e16cbc8dff5d1654b8bb3710dd619810dde74ad8bb3a70b92dec377af736f"
+  }
+}
