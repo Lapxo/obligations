@@ -1,0 +1,20 @@
+{
+  "id": "theory-coverage@1",
+  "title": "Claim, assumptions, evidence and consumer coverage",
+  "model": "declared-theory-coverage@1",
+  "statement": "Every entry identifies its proposition, parameter domain, evidence class, consumed contract and unresolved obligations. A finite case is not a universal proof; a source identity is not correctness. T2 and missing exact claims stay visibly pending.",
+  "assumptions": [
+    "Existing proof identities are retained",
+    "No renumbering or implicit domain expansion",
+    "Unproved regions remain named",
+    "Release selection and delivery are separate from theory acceptance"
+  ],
+  "reuses": [
+    "contracts/region-measure.json",
+    "contracts/key-lineage-independence.json"
+  ],
+  "boundary": "The current 0.4.6 selection and its closed Root do not certify the complete 0.4.7 scope or authorize publication.",
+  "status": "coverage registry with explicit open regions",
+  "runtimeAPI": "No new runtime export; these contracts and their native finite witnesses extend the admitted theory without duplicating the engine.",
+  "T2": "pending approval; excluded"
+}

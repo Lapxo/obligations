@@ -1,0 +1,87 @@
+{
+  "profile": "finite-captured-mathematics@1",
+  "instrument": "published Bound reader process port",
+  "captures": [
+    {
+      "place": "reservoir",
+      "kind": "yes",
+      "input": "samples/laws/region-measure/yes/reservoir.json",
+      "inputDigest": "sha256:f2c2d37fb95b3538282ce1fbe9aef5cf43e73acf624bb6cd2c0a74f705163fcc",
+      "readerDigest": "sha256:e55ba50f646d2413cae6b58eb815c5cbfc7a4b881ff8874529ac45361a1ff000",
+      "status": "accepted",
+      "claims": [
+        {
+          "scope": "law/region-measure",
+          "role": "writes",
+          "measure": "count",
+          "bound": {
+            "kind": "interval",
+            "lo": 1,
+            "hi": 1
+          }
+        },
+        {
+          "scope": "law/region-measure/result",
+          "role": "writes",
+          "measure": "result",
+          "bound": {
+            "kind": "enumerated",
+            "values": [
+              "{\"status\":\"measured\",\"model\":\"finite-nonnegative-atomic-valuation@1\",\"unit\":\"declared-lines\",\"arithmetic\":\"exact-rational\",\"readings\":[{\"region\":\"reservoir/first\",\"members\":[\"valve/1\"],\"value\":{\"numerator\":\"1\",\"denominator\":\"1\"}},{\"region\":\"reservoir/second\",\"members\":[\"valve/2\"],\"value\":{\"numerator\":\"1\",\"denominator\":\"1\"}}],\"union\":{\"members\":[\"valve/1\",\"valve/2\"],\"value\":{\"numerator\":\"2\",\"denominator\":\"1\"}},\"sumOfRegions\":{\"numerator\":\"2\",\"denominator\":\"1\"},\"overlapExcess\":{\"numerator\":\"0\",\"denominator\":\"1\"},\"disjointBySupport\":true,\"overlaps\":[],\"unassigned\":[\"unused/1\"],\"work\":{\"unit\":\"declared-input-rows\",\"required\":\"7\"}}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "place": "reservoir",
+      "kind": "no",
+      "input": "samples/laws/region-measure/no/reservoir.json",
+      "inputDigest": "sha256:cf5688f545846180d2e1bc0157d1c514ab6ba660768df2eeb5536e0b8fa1b6b1",
+      "readerDigest": "sha256:e55ba50f646d2413cae6b58eb815c5cbfc7a4b881ff8874529ac45361a1ff000",
+      "status": "refused",
+      "cause": "region-measure/unknown-atom"
+    },
+    {
+      "place": "shipping",
+      "kind": "yes",
+      "input": "samples/laws/region-measure/yes/shipping.json",
+      "inputDigest": "sha256:a3651c423a5e5502d9e3a137f6b07151e77ec1356b95839941708cf147a10e4d",
+      "readerDigest": "sha256:e55ba50f646d2413cae6b58eb815c5cbfc7a4b881ff8874529ac45361a1ff000",
+      "status": "accepted",
+      "claims": [
+        {
+          "scope": "law/region-measure",
+          "role": "writes",
+          "measure": "count",
+          "bound": {
+            "kind": "interval",
+            "lo": 1,
+            "hi": 1
+          }
+        },
+        {
+          "scope": "law/region-measure/result",
+          "role": "writes",
+          "measure": "result",
+          "bound": {
+            "kind": "enumerated",
+            "values": [
+              "{\"status\":\"measured\",\"model\":\"finite-nonnegative-atomic-valuation@1\",\"unit\":\"declared-calls\",\"arithmetic\":\"exact-rational\",\"readings\":[{\"region\":\"shipping/first\",\"members\":[\"request/a\"],\"value\":{\"numerator\":\"1\",\"denominator\":\"1\"}},{\"region\":\"shipping/second\",\"members\":[\"request/b\"],\"value\":{\"numerator\":\"1\",\"denominator\":\"1\"}}],\"union\":{\"members\":[\"request/a\",\"request/b\"],\"value\":{\"numerator\":\"2\",\"denominator\":\"1\"}},\"sumOfRegions\":{\"numerator\":\"2\",\"denominator\":\"1\"},\"overlapExcess\":{\"numerator\":\"0\",\"denominator\":\"1\"},\"disjointBySupport\":true,\"overlaps\":[],\"unassigned\":[\"request/unassigned\"],\"work\":{\"unit\":\"declared-input-rows\",\"required\":\"7\"}}"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "place": "shipping",
+      "kind": "no",
+      "input": "samples/laws/region-measure/no/shipping.json",
+      "inputDigest": "sha256:b057162c3cf408bf85b09263a20def13c025331f874babd5800279397543b3b5",
+      "readerDigest": "sha256:e55ba50f646d2413cae6b58eb815c5cbfc7a4b881ff8874529ac45361a1ff000",
+      "status": "refused",
+      "cause": "region-measure/unknown-atom"
+    }
+  ],
+  "scope": "finite mathematical vectors, not owner admission, key authentication or a fresh Lean run"
+}

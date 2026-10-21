@@ -1,0 +1,60 @@
+{
+  "id": "key-lineage-independence@1",
+  "status": "candidate; not admitted",
+  "contract": "contracts/key-lineage-independence.json",
+  "contractDigest": "sha256:ee9adea04812f098980ff3df96e3fed075fdec85fc50e9c831071c071875730a",
+  "sourceDigest": "sha256:d726f52f4ee4f2c273676bc087d276764aba904c324cbd9ce26e18f981fa94ec",
+  "formalProof": {
+    "source": "proofs/lean/Obligations/KeyLineage.lean",
+    "sha256": "5a0ff68f3fca194c5528a19c8c3c6771f5ab074bd48b48a35349c11a1b385bd3",
+    "lean": "4.19.0",
+    "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "noSorry": true
+  },
+  "vectors": [
+    {
+      "place": "reservoir",
+      "kind": "yes",
+      "sample": "samples/laws/key-lineage-independence/yes/reservoir.json",
+      "inputDigest": "944a5dff38ffbdccde46289a68ae5c92dfb772d350a40fa076876e6b647f73f5",
+      "readerDigest": "915ebb61d0e8bf908013d2e455c0b5f70b2725eedf9d085895d0f19687174c7e",
+      "expectedStatus": "accepted"
+    },
+    {
+      "place": "reservoir",
+      "kind": "no",
+      "sample": "samples/laws/key-lineage-independence/no/reservoir.json",
+      "inputDigest": "5fe67faad417678b6a4b923f945b434c016fea7319d7e51bc36b2034b2fdae6f",
+      "readerDigest": "915ebb61d0e8bf908013d2e455c0b5f70b2725eedf9d085895d0f19687174c7e",
+      "expectedStatus": "refused",
+      "expectedCause": "key-lineage/countermodel"
+    },
+    {
+      "place": "shipping",
+      "kind": "yes",
+      "sample": "samples/laws/key-lineage-independence/yes/shipping.json",
+      "inputDigest": "3382ffdab774e4ff117ebc546b22d8b300133abdc0d3615e56f4159650318ef1",
+      "readerDigest": "915ebb61d0e8bf908013d2e455c0b5f70b2725eedf9d085895d0f19687174c7e",
+      "expectedStatus": "accepted"
+    },
+    {
+      "place": "shipping",
+      "kind": "no",
+      "sample": "samples/laws/key-lineage-independence/no/shipping.json",
+      "inputDigest": "142c96205eaf2fb95e32cd2b7f33f382e218156b86430b0922bc587c815d2c79",
+      "readerDigest": "915ebb61d0e8bf908013d2e455c0b5f70b2725eedf9d085895d0f19687174c7e",
+      "expectedStatus": "refused",
+      "expectedCause": "key-lineage/countermodel"
+    }
+  ],
+  "evidenceScope": "Mathematical inputs through the published reader process port; no dataset, signature generation, owner admission or complete release closure",
+  "pending": [
+    "public export and manifest selection as needed",
+    "native declaration and receipt admission"
+  ]
+}

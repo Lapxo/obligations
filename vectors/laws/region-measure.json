@@ -1,0 +1,60 @@
+{
+  "id": "region-measure@1",
+  "status": "candidate; not admitted",
+  "contract": "contracts/region-measure.json",
+  "contractDigest": "sha256:636ace16eeaa46eafb7b07c28d1d57916bc9108b188e96b5a8bf7bed6dc15707",
+  "sourceDigest": "sha256:8514f34edcfd9345f6b2a0b5fe720212ea7fd866111382157c35f19d77437d5a",
+  "formalProof": {
+    "source": "proofs/lean/Obligations/RegionMeasure.lean",
+    "sha256": "4bc6e2c43b4a76dee34089368941a94426eab7352a545dd4f45e3d8a34785693",
+    "lean": "4.19.0",
+    "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "noSorry": true
+  },
+  "vectors": [
+    {
+      "place": "reservoir",
+      "kind": "yes",
+      "sample": "samples/laws/region-measure/yes/reservoir.json",
+      "inputDigest": "f2c2d37fb95b3538282ce1fbe9aef5cf43e73acf624bb6cd2c0a74f705163fcc",
+      "readerDigest": "e55ba50f646d2413cae6b58eb815c5cbfc7a4b881ff8874529ac45361a1ff000",
+      "expectedStatus": "accepted"
+    },
+    {
+      "place": "reservoir",
+      "kind": "no",
+      "sample": "samples/laws/region-measure/no/reservoir.json",
+      "inputDigest": "cf5688f545846180d2e1bc0157d1c514ab6ba660768df2eeb5536e0b8fa1b6b1",
+      "readerDigest": "e55ba50f646d2413cae6b58eb815c5cbfc7a4b881ff8874529ac45361a1ff000",
+      "expectedStatus": "refused",
+      "expectedCause": "region-measure/unknown-atom"
+    },
+    {
+      "place": "shipping",
+      "kind": "yes",
+      "sample": "samples/laws/region-measure/yes/shipping.json",
+      "inputDigest": "a3651c423a5e5502d9e3a137f6b07151e77ec1356b95839941708cf147a10e4d",
+      "readerDigest": "e55ba50f646d2413cae6b58eb815c5cbfc7a4b881ff8874529ac45361a1ff000",
+      "expectedStatus": "accepted"
+    },
+    {
+      "place": "shipping",
+      "kind": "no",
+      "sample": "samples/laws/region-measure/no/shipping.json",
+      "inputDigest": "b057162c3cf408bf85b09263a20def13c025331f874babd5800279397543b3b5",
+      "readerDigest": "e55ba50f646d2413cae6b58eb815c5cbfc7a4b881ff8874529ac45361a1ff000",
+      "expectedStatus": "refused",
+      "expectedCause": "region-measure/unknown-atom"
+    }
+  ],
+  "evidenceScope": "Mathematical inputs through the published reader process port; no dataset, signature generation, owner admission or complete release closure",
+  "pending": [
+    "public export and manifest selection as needed",
+    "native declaration and receipt admission"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "withdrawal-witness@1",
+  "title": "Retained contributions, exact withdrawal and evidence",
+  "model": "retained-meet-family@1",
+  "statement": "Re-evaluating the remaining identified contributions uses the existing meet operation on a fixed form and context. The aggregate alone need not identify that remainder, even on a distributive two-element chain. A reading identifies evidence; mathematical form does not confer admission authority.",
+  "assumptions": [
+    "Fixed form, coordinates and effective context",
+    "Complete identified live contribution family for recomputation",
+    "Removing one identified contribution, not all equal values",
+    "Authority and widening rules are decided by the consuming policy"
+  ],
+  "reuses": [
+    "src/field/motion.ts:withdrawsExactly (finite distributivity criterion)",
+    "src/lattice/order.ts:chain",
+    "vectors/coherence.json",
+    "law/T8-exact-withdrawal"
+  ],
+  "boundary": "The published withdrawsExactly API checks a finite scale property. It is not an inverse of an arbitrary lossy aggregate. Associative and commutative aggregation alone proves neither cancellation nor authorization.",
+  "status": "conditional interpretation and finite counterexample; no existing algebra or judge changed",
+  "runtimeAPI": "No new runtime export; these contracts and their native finite witnesses extend the admitted theory without duplicating the engine.",
+  "T2": "pending approval; excluded"
+}

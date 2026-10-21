@@ -1,0 +1,37 @@
+{
+  "id": "key-lineage-independence@1",
+  "status": "candidate; not owner-admitted",
+  "classification": "interpretation of published definitions with finite countermodels",
+  "reuses": "contracts/extension-lineage-participation.json",
+  "statement": "Distinct key identifiers or declared lineage labels do not entail factorization of a joint probability law. Threshold authorization and probabilistic independence are separate properties.",
+  "observable": "Two key identifiers, any supplied provenance grouping and a declared response domain",
+  "countermodels": [
+    "A fair bit copied by both sources gives P(00)=P(11)=1/2",
+    "Two independent fair bits give all four joint states probability 1/4",
+    "Both models admit the same key identifiers and declared provenance labels"
+  ],
+  "consequence": "Metadata alone does not identify which joint law generated reports. Different labels are provenance declarations; a handed independent joint law proves independence only for that declared finite model, not causal identification of observed sources.",
+  "implementation": "Vectors reuse published marginalInformation and exact rational arithmetic; no new estimator or authority evaluator",
+  "doesNotEstablish": [
+    "signature authenticity",
+    "key eligibility",
+    "causal lineage recovery",
+    "physical control from labels",
+    "independence from k-of-n"
+  ],
+  "consumer": "Topos threshold and provenance contracts",
+  "formalEvidence": {
+    "source": "proofs/lean/Obligations/KeyLineage.lean",
+    "theorems": [
+      "copied_nonnegative",
+      "independent_nonnegative",
+      "copied_normalized",
+      "independent_normalized",
+      "same_fair_marginals",
+      "copied_not_factorized",
+      "independent_factorized",
+      "same_metadata_two_joint_laws"
+    ],
+    "entropyValues": "existing marginalInformation API; numeric vectors, not a new Lean entropy proof"
+  }
+}

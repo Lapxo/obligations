@@ -1,0 +1,5 @@
+{
+  "place": "shipping",
+  "claim": "aggregate-always-invertible",
+  "evidenceGrantsAuthority": true
+}

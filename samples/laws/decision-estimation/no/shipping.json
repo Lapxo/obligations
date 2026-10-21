@@ -1,0 +1,18 @@
+{
+  "place": "shipping",
+  "states": [
+    "absent",
+    "present"
+  ],
+  "actions": [
+    "hold",
+    "act"
+  ],
+  "prior": [
+    "3/5",
+    "2/5"
+  ],
+  "estimateUnit": "declared quantity",
+  "lossUnit": "declared penalty",
+  "tie": "all-minimizers"
+}

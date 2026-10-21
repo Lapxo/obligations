@@ -1,0 +1,28 @@
+{
+  "place": "reservoir",
+  "claim": "retained-family-required",
+  "evidenceGrantsAuthority": false,
+  "removedId": "reservoir/x",
+  "families": [
+    [
+      {
+        "id": "reservoir/x",
+        "level": 0
+      },
+      {
+        "id": "reservoir/y",
+        "level": 0
+      }
+    ],
+    [
+      {
+        "id": "reservoir/x",
+        "level": 0
+      },
+      {
+        "id": "reservoir/y",
+        "level": 1
+      }
+    ]
+  ]
+}

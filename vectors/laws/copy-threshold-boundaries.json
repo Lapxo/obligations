@@ -1,0 +1,38 @@
+{
+  "profile": "declared-contract-quartet@1",
+  "region": "copy-threshold-boundaries",
+  "contract": "contracts/copy-threshold-boundaries.json",
+  "contractDigest": "sha256:c0e3e93112a123b48cb5a53178015abc94f9fb10cd94267d76d8e9d56e3a4dd1",
+  "places": [
+    "reservoir",
+    "shipping"
+  ],
+  "scope": "Finite witness and named rejection; evidence classification is part of the contract, not inferred from a passing vector.",
+  "T2": "pending-owner-approval",
+  "cases": [
+    {
+      "place": "reservoir",
+      "kind": "yes",
+      "input": "samples/laws/copy-threshold-boundaries/yes/reservoir.json",
+      "inputDigest": "sha256:4505ac67c56b64d3f4d466f8e6c3ea0fb2fea3aaaeb37abfce858db24904c165"
+    },
+    {
+      "place": "reservoir",
+      "kind": "no",
+      "input": "samples/laws/copy-threshold-boundaries/no/reservoir.json",
+      "inputDigest": "sha256:c871deba91b7b198d7ded73ac01538dba75fae029e6661423dc1e7956fa17df3"
+    },
+    {
+      "place": "shipping",
+      "kind": "yes",
+      "input": "samples/laws/copy-threshold-boundaries/yes/shipping.json",
+      "inputDigest": "sha256:cf153f68e681ef5636291f152714e9e9068fdce9957602511ebcb18c16b5b095"
+    },
+    {
+      "place": "shipping",
+      "kind": "no",
+      "input": "samples/laws/copy-threshold-boundaries/no/shipping.json",
+      "inputDigest": "sha256:3b148f99872d59dd7609c3999b8be9455d6f59b9c5ba495ba9d1c8927690cc9e"
+    }
+  ]
+}

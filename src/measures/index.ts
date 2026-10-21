@@ -34,3 +34,5 @@ export {cofailurePairs} from './cofailure-pairs.ts';
 export type {PairReference,PairSampling,CofailureModel} from './cofailure-pairs.ts';
 export {marginalInformation} from './marginal-information.ts';
 export type {MarginalSource,JointAtom,MarginalModel} from './marginal-information.ts';
+export {finiteRegionMeasure} from './region-measure.ts';
+export type {RegionMeasure} from './region-measure.ts';

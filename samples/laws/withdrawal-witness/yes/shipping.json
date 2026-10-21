@@ -1,0 +1,36 @@
+{
+  "place": "shipping",
+  "claim": "retained-family-required",
+  "evidenceGrantsAuthority": false,
+  "removedId": "shipping/x",
+  "families": [
+    [
+      {
+        "id": "shipping/x",
+        "level": 0
+      },
+      {
+        "id": "shipping/y",
+        "level": 0
+      },
+      {
+        "id": "shipping/z",
+        "level": 1
+      }
+    ],
+    [
+      {
+        "id": "shipping/x",
+        "level": 0
+      },
+      {
+        "id": "shipping/y",
+        "level": 1
+      },
+      {
+        "id": "shipping/z",
+        "level": 1
+      }
+    ]
+  ]
+}

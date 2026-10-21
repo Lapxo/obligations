@@ -1,0 +1,21 @@
+{
+  "id": "decision-estimation@1",
+  "title": "Estimates and decisions have distinct contracts",
+  "model": "finite-declared-loss-decision@1",
+  "statement": "A finite decision is evaluated against a declared action space, state law, loss and tie rule. The same estimate can select different actions under different loss tables. An estimate or K_corr alone does not specify an action, accuracy or a universal scale of ceilings and floors.",
+  "assumptions": [
+    "Finite named states and actions; normalized rational prior",
+    "Every action-state loss is declared in a fixed loss unit",
+    "Return every minimizing action; do not break an undeclared tie",
+    "Estimation units and decision loss units remain distinct"
+  ],
+  "reuses": [
+    "src/measures/rational.ts",
+    "contracts/extension-lineage-participation.json",
+    "proofs/marginal-information.json"
+  ],
+  "boundary": "These are conditional finite decision tables, not a universal product law. The estimation-to-decision bridge remains open outside a declared operation.",
+  "status": "definition and exact countermodels; no new runtime estimator or decision authority",
+  "runtimeAPI": "No new runtime export; these contracts and their native finite witnesses extend the admitted theory without duplicating the engine.",
+  "T2": "pending approval; excluded"
+}

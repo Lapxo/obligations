@@ -1,0 +1,26 @@
+{
+  "profile": "retained-copy-proof-inventory@1",
+  "inputs": [
+    {
+      "path": "contracts/m0-allocation.json",
+      "sha256": "sha256:9fe73bccb91c414d978bfdafd6e3c6b117f60d228dc1e4e9e265db8d891df67f"
+    },
+    {
+      "path": "contracts/m0-limit-offdiag.json",
+      "sha256": "sha256:4a710e685b231752526f5e29c0cf7cd216ac4dfee13e0a6a2aebfc8da5f243fc"
+    },
+    {
+      "path": "contracts/m0-binomial-bridge.json",
+      "sha256": "sha256:8b1f47cee00c3f283336971bf65488533f65d2c94608fe81cc590afe106d9781"
+    },
+    {
+      "path": "contracts/m0-diagonal-conditional.json",
+      "sha256": "sha256:e8644b4508965b6187dbf210cdced97ba14c4f1e748dac68fe9bb3e078e528a7"
+    },
+    {
+      "path": "proofs/m0-046-diagonal/M0Threshold046.lean",
+      "sha256": "sha256:861cd13ecd4b7f37a1bc00362b4fdc213cefdcf380171947a14463b0bc465a9e"
+    }
+  ],
+  "scope": "Reuse unchanged published contracts and proof sources. This is not a fresh kernel check, a c=1 extension or a general diagonal limit."
+}

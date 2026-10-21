@@ -1,0 +1,32 @@
+{
+  "model": "finite-nonnegative-atomic-valuation@1",
+  "unit": "declared-lines",
+  "atoms": [
+    {
+      "id": "valve/1",
+      "value": "1"
+    },
+    {
+      "id": "valve/2",
+      "value": "1"
+    },
+    {
+      "id": "unused/1",
+      "value": "1"
+    }
+  ],
+  "regions": [
+    {
+      "id": "reservoir/first",
+      "members": [
+        "absent/atom"
+      ]
+    },
+    {
+      "id": "reservoir/second",
+      "members": [
+        "valve/2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "profile": "declared-relations-native-capture@1",
+  "region": "copy-threshold-boundaries",
+  "cases": [
+    {
+      "place": "reservoir",
+      "kind": "yes",
+      "input": "samples/laws/copy-threshold-boundaries/yes/reservoir.json",
+      "inputDigest": "sha256:4505ac67c56b64d3f4d466f8e6c3ea0fb2fea3aaaeb37abfce858db24904c165",
+      "readerDigest": "sha256:4c0175620f2cf47278dc3fa7b1b5c46caa89c241b34a7356d7f0da973ac04474",
+      "status": "accepted",
+      "result": "{\"model\":\"declared-binary-copy-decoder@1\",\"params\":{\"place\":\"reservoir\",\"p\":\"3/4\",\"c\":\"1/4\",\"cases\":[{\"K\":2,\"p\":\"3/4\",\"weights\":[\"1/2\",\"1/2\"],\"jointLaw\":\"product-bernoulli@1\",\"tie\":\"fair\",\"atoms\":[{\"bits\":[0,0],\"p\":\"1/16\"},{\"bits\":[0,1],\"p\":\"3/16\"},{\"bits\":[1,0],\"p\":\"3/16\"},{\"bits\":[1,1],\"p\":\"9/16\"}]},{\"K\":3,\"p\":\"3/4\",\"weights\":[\"1/3\",\"1/3\",\"1/3\"],\"jointLaw\":\"product-bernoulli@1\",\"tie\":\"fair\",\"atoms\":[{\"bits\":[0,0,0],\"p\":\"1/64\"},{\"bits\":[0,0,1],\"p\":\"3/64\"},{\"bits\":[0,1,0],\"p\":\"3/64\"},{\"bits\":[0,1,1],\"p\":\"9/64\"},{\"bits\":[1,0,0],\"p\":\"3/64\"},{\"bits\":[1,0,1],\"p\":\"9/64\"},{\"bits\":[1,1,0],\"p\":\"9/64\"},{\"bits\":[1,1,1],\"p\":\"27/64\"}]},{\"K\":3,\"p\":\"3/4\",\"weights\":[\"3/4\",\"1/8\",\"1/8\"],\"jointLaw\":\"product-bernoulli@1\",\"tie\":\"fair\",\"atoms\":[{\"bits\":[0,0,0],\"p\":\"1/64\"},{\"bits\":[0,0,1],\"p\":\"3/64\"},{\"bits\":[0,1,0],\"p\":\"3/64\"},{\"bits\":[0,1,1],\"p\":\"9/64\"},{\"bits\":[1,0,0],\"p\":\"3/64\"},{\"bits\":[1,0,1],\"p\":\"9/64\"},{\"bits\":[1,1,0],\"p\":\"9/64\"},{\"bits\":[1,1,1],\"p\":\"27/64\"}]}],\"uniformBoundStatus\":\"Lean-open\"},\"reading\":{\"gap\":{\"numerator\":\"1\",\"denominator\":\"8\"},\"threshold\":{\"numerator\":\"1\",\"denominator\":\"3\"},\"cases\":[{\"K\":2,\"weights\":[{\"numerator\":\"1\",\"denominator\":\"2\"},{\"numerator\":\"1\",\"denominator\":\"2\"}],\"tie\":\"fair\",\"error\":{\"numerator\":\"1\",\"denominator\":\"4\"}},{\"K\":3,\"weights\":[{\"numerator\":\"1\",\"denominator\":\"3\"},{\"numerator\":\"1\",\"denominator\":\"3\"},{\"numerator\":\"1\",\"denominator\":\"3\"}],\"tie\":\"fair\",\"error\":{\"numerator\":\"5\",\"denominator\":\"32\"}},{\"K\":3,\"weights\":[{\"numerator\":\"3\",\"denominator\":\"4\"},{\"numerator\":\"1\",\"denominator\":\"8\"},{\"numerator\":\"1\",\"denominator\":\"8\"}],\"tie\":\"fair\",\"error\":{\"numerator\":\"1\",\"denominator\":\"4\"}}],\"uniformConcentration\":\"Lean-open\"}}"
+    },
+    {
+      "place": "reservoir",
+      "kind": "no",
+      "input": "samples/laws/copy-threshold-boundaries/no/reservoir.json",
+      "inputDigest": "sha256:c871deba91b7b198d7ded73ac01538dba75fae029e6661423dc1e7956fa17df3",
+      "readerDigest": "sha256:4c0175620f2cf47278dc3fa7b1b5c46caa89c241b34a7356d7f0da973ac04474",
+      "status": "refused",
+      "cause": "Error: REFUSE·declared-relations/threshold/joint-law-required"
+    },
+    {
+      "place": "shipping",
+      "kind": "yes",
+      "input": "samples/laws/copy-threshold-boundaries/yes/shipping.json",
+      "inputDigest": "sha256:cf153f68e681ef5636291f152714e9e9068fdce9957602511ebcb18c16b5b095",
+      "readerDigest": "sha256:4c0175620f2cf47278dc3fa7b1b5c46caa89c241b34a7356d7f0da973ac04474",
+      "status": "accepted",
+      "result": "{\"model\":\"declared-binary-copy-decoder@1\",\"params\":{\"place\":\"shipping\",\"p\":\"2/3\",\"c\":\"1/8\",\"cases\":[{\"K\":2,\"p\":\"2/3\",\"weights\":[\"1/2\",\"1/2\"],\"jointLaw\":\"product-bernoulli@1\",\"tie\":\"fair\",\"atoms\":[{\"bits\":[0,0],\"p\":\"1/9\"},{\"bits\":[0,1],\"p\":\"2/9\"},{\"bits\":[1,0],\"p\":\"2/9\"},{\"bits\":[1,1],\"p\":\"4/9\"}]},{\"K\":3,\"p\":\"2/3\",\"weights\":[\"1/3\",\"1/3\",\"1/3\"],\"jointLaw\":\"product-bernoulli@1\",\"tie\":\"fair\",\"atoms\":[{\"bits\":[0,0,0],\"p\":\"1/27\"},{\"bits\":[0,0,1],\"p\":\"2/27\"},{\"bits\":[0,1,0],\"p\":\"2/27\"},{\"bits\":[0,1,1],\"p\":\"4/27\"},{\"bits\":[1,0,0],\"p\":\"2/27\"},{\"bits\":[1,0,1],\"p\":\"4/27\"},{\"bits\":[1,1,0],\"p\":\"4/27\"},{\"bits\":[1,1,1],\"p\":\"8/27\"}]},{\"K\":3,\"p\":\"2/3\",\"weights\":[\"3/4\",\"1/8\",\"1/8\"],\"jointLaw\":\"product-bernoulli@1\",\"tie\":\"fair\",\"atoms\":[{\"bits\":[0,0,0],\"p\":\"1/27\"},{\"bits\":[0,0,1],\"p\":\"2/27\"},{\"bits\":[0,1,0],\"p\":\"2/27\"},{\"bits\":[0,1,1],\"p\":\"4/27\"},{\"bits\":[1,0,0],\"p\":\"2/27\"},{\"bits\":[1,0,1],\"p\":\"4/27\"},{\"bits\":[1,1,0],\"p\":\"4/27\"},{\"bits\":[1,1,1],\"p\":\"8/27\"}]}],\"uniformBoundStatus\":\"Lean-open\"},\"reading\":{\"gap\":{\"numerator\":\"1\",\"denominator\":\"6\"},\"threshold\":{\"numerator\":\"1\",\"denominator\":\"4\"},\"cases\":[{\"K\":2,\"weights\":[{\"numerator\":\"1\",\"denominator\":\"2\"},{\"numerator\":\"1\",\"denominator\":\"2\"}],\"tie\":\"fair\",\"error\":{\"numerator\":\"1\",\"denominator\":\"3\"}},{\"K\":3,\"weights\":[{\"numerator\":\"1\",\"denominator\":\"3\"},{\"numerator\":\"1\",\"denominator\":\"3\"},{\"numerator\":\"1\",\"denominator\":\"3\"}],\"tie\":\"fair\",\"error\":{\"numerator\":\"7\",\"denominator\":\"27\"}},{\"K\":3,\"weights\":[{\"numerator\":\"3\",\"denominator\":\"4\"},{\"numerator\":\"1\",\"denominator\":\"8\"},{\"numerator\":\"1\",\"denominator\":\"8\"}],\"tie\":\"fair\",\"error\":{\"numerator\":\"1\",\"denominator\":\"3\"}}],\"uniformConcentration\":\"Lean-open\"}}"
+    },
+    {
+      "place": "shipping",
+      "kind": "no",
+      "input": "samples/laws/copy-threshold-boundaries/no/shipping.json",
+      "inputDigest": "sha256:3b148f99872d59dd7609c3999b8be9455d6f59b9c5ba495ba9d1c8927690cc9e",
+      "readerDigest": "sha256:4c0175620f2cf47278dc3fa7b1b5c46caa89c241b34a7356d7f0da973ac04474",
+      "status": "refused",
+      "cause": "Error: REFUSE·declared-relations/threshold/joint-law-required"
+    }
+  ],
+  "scope": "Finite witnesses replayed through the unchanged published Bound process port; not an owner act or universal empirical proof"
+}

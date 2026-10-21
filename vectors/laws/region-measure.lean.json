@@ -1,0 +1,21 @@
+{
+  "profile": "lean-kernel-capture@1",
+  "source": "proofs/lean/Obligations/RegionMeasure.lean",
+  "sourceDigest": "sha256:4bc6e2c43b4a76dee34089368941a94426eab7352a545dd4f45e3d8a34785693",
+  "toolchain": "leanprover/lean4:v4.19.0",
+  "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "module": "RegionMeasure",
+  "theorems": [
+    "union_inter",
+    "disjoint_union",
+    "union_le_sum"
+  ],
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "noSorry": true,
+  "noNewAxioms": true,
+  "scope": "captured compilation and axiom audit for exactly these source bytes; implementation equivalence remains bounded, not kernel-proved"
+}

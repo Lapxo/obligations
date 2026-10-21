@@ -2,7 +2,7 @@
 
 # @lapxo/obligations
 
-![version 0.4.6](https://img.shields.io/badge/version-0.4.6-) ![license MIT](https://img.shields.io/badge/license-MIT-) ![node >=22.12](https://img.shields.io/badge/node-%3E%3D22.12-) [![DOI 10.5281/zenodo.21858428](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-)](https://doi.org/10.5281/zenodo.21858428)
+![version 0.4.7](https://img.shields.io/badge/version-0.4.7-) ![license MIT](https://img.shields.io/badge/license-MIT-) ![node >=22.12](https://img.shields.io/badge/node-%3E%3D22.12-) [![DOI 10.5281/zenodo.21858428](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-)](https://doi.org/10.5281/zenodo.21858428)
 
 The algebra of a cell: two poles, origins with phase, eight acts.
 
@@ -13,6 +13,14 @@ Every quantity a system answers for has two marks on one scale. The floor is wha
 Four words carry the whole library. A floor, a ceiling, an origin and an epoch. A price is the distance between the marks, a state is where they stand, a verdict is what an origin found, a horizon is what no origin has reached, and none of them is a new idea: each is read off those four.
 
 The pure API `@lapxo/obligations/measures` describes error histories of origins: covariance, spectrum, effective rank and common variance. It ships M/3 as the reference conditional model with an exact rational evaluator. No measure changes a state; observed association never establishes independence. [Measures](docs/measures.md).
+
+## Measures on declared regions
+
+The public measures API includes `finiteRegionMeasure`: an exact nonnegative atomic valuation on declared finite support. It reports the union, overlap excess and unassigned atoms. Disjoint support makes region sums additive; overlapping selectors do not. The caller declares the model, unit and work budget.
+
+`key-lineage-independence@1` separates admitted keys from independent causes. Multiple signatures establish neither joint independence nor distinct control. See the [region measure](docs/contracts/region-measure.md) and [key lineage](docs/contracts/key-lineage-independence.md) contracts.
+
+The theory contracts distinguish [retained withdrawal witnesses](docs/contracts/withdrawal-witness.md), [finite linear influence](docs/contracts/linear-influence.md), [copy threshold boundaries](docs/contracts/copy-threshold-boundaries.md), and [decisions with declared losses](docs/contracts/decision-estimation.md). Rational Lean identities, conditional derivations and finite counterexamples have separate evidence classes. [Theory coverage](docs/contracts/theory-coverage.md) names the remaining obligations. [Research declarations](docs/contracts/research-evidence-register.md) are attributed records, not audited empirical results. T2 remains pending; no stochastic T2 recurrence or new empirical conclusion is asserted.
 
 ## The object
 
