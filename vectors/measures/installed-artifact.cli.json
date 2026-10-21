@@ -2,11 +2,11 @@
   "format": "installed-acceptance/1",
   "places": [
     {
-      "name": "orchard",
-      "code": "sha256:72df3154eb2896bb552c3a052cfa3ba4e943742877c31871e341d9bc1ce0ec05",
+      "name": "catalog",
+      "code": "sha256:54f8e10eefac6c1c958bbef7890f3a91ee68f474c4716c820379808c2db0261a",
       "tests": {
         "status": 0,
-        "stdout": "\u2714 installed 0.4.6 exports have no Bound or Topos runtime dependency (8.869542ms)\n\u2714 installed universal algebra retains the four states and named invalid-chain rejection (0.413833ms)\n\u2714 installed cofailure measures retain models, unmeasured inputs and named conflict refusal (17.652041ms)\n\u2714 installed marginal information retains the declared joint prior, two orders and named order refusal (1.941791ms)\n\u2139 tests 4\n\u2139 suites 0\n\u2139 pass 4\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 86.485917\n",
+        "stdout": "✔ installed 0.4.7 exports have no Bound or Topos runtime dependency (5.505875ms)\n✔ installed universal algebra retains the four states and named invalid-chain rejection (0.458125ms)\n✔ installed cofailure measures retain models, unmeasured inputs and named conflict refusal (10.76075ms)\n✔ installed marginal information retains the declared joint prior, two orders and named order refusal (1.46575ms)\n✔ installed declared region measure retains support, overlap and named refusal (0.473542ms)\n✔ installed provenance labels do not imply independence (0.97225ms)\nℹ tests 6\nℹ suites 0\nℹ pass 6\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 97.019208\n",
         "stderr": ""
       },
       "exports": {
@@ -16,16 +16,16 @@
       },
       "check": {
         "status": 0,
-        "stdout": "PASS     closed \u00b7 1 places \u00b7 748 ms\n",
-        "stderr": "RECEIPTS 41 read \u00b7 0 opened \u00b7 reading closures\nRECEIPTS 1 read \u00b7 0 opened \u00b7 748 ms\nCOST     act 1 s\n"
+        "stdout": "PASS     closed · 1 places · 603 ms\n",
+        "stderr": "RECEIPTS 48 read · 0 opened · reading closures\nRECEIPTS 1 read · 0 opened · 603 ms\nCOST     act 1 s\n"
       }
     },
     {
-      "name": "catalog",
-      "code": "sha256:72df3154eb2896bb552c3a052cfa3ba4e943742877c31871e341d9bc1ce0ec05",
+      "name": "orchard",
+      "code": "sha256:54f8e10eefac6c1c958bbef7890f3a91ee68f474c4716c820379808c2db0261a",
       "tests": {
         "status": 0,
-        "stdout": "\u2714 installed 0.4.6 exports have no Bound or Topos runtime dependency (5.71325ms)\n\u2714 installed universal algebra retains the four states and named invalid-chain rejection (0.37925ms)\n\u2714 installed cofailure measures retain models, unmeasured inputs and named conflict refusal (10.334ms)\n\u2714 installed marginal information retains the declared joint prior, two orders and named order refusal (1.658083ms)\n\u2139 tests 4\n\u2139 suites 0\n\u2139 pass 4\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 97.375167\n",
+        "stdout": "✔ installed 0.4.7 exports have no Bound or Topos runtime dependency (7.630041ms)\n✔ installed universal algebra retains the four states and named invalid-chain rejection (0.413958ms)\n✔ installed cofailure measures retain models, unmeasured inputs and named conflict refusal (9.894833ms)\n✔ installed marginal information retains the declared joint prior, two orders and named order refusal (1.40625ms)\n✔ installed declared region measure retains support, overlap and named refusal (0.532208ms)\n✔ installed provenance labels do not imply independence (0.591167ms)\nℹ tests 6\nℹ suites 0\nℹ pass 6\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 63.76275\n",
         "stderr": ""
       },
       "exports": {
@@ -35,8 +35,8 @@
       },
       "check": {
         "status": 0,
-        "stdout": "PASS     closed \u00b7 1 places \u00b7 624 ms\n",
-        "stderr": "RECEIPTS 41 read \u00b7 0 opened \u00b7 reading closures\nRECEIPTS 1 read \u00b7 0 opened \u00b7 624 ms\nCOST     act 1 s\n"
+        "stdout": "PASS     closed · 1 places · 625 ms\n",
+        "stderr": "RECEIPTS 48 read · 0 opened · reading closures\nRECEIPTS 1 read · 0 opened · 625 ms\nCOST     act 1 s\n"
       }
     }
   ]

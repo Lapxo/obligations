@@ -1,0 +1,50 @@
+{
+  "place": "shipping",
+  "keyIdentifiers": [
+    "key-a",
+    "key-b"
+  ],
+  "declaredProvenance": [
+    "lineage-a",
+    "lineage-b"
+  ],
+  "copiedJoint": [
+    [
+      "0",
+      "0",
+      "1/2"
+    ],
+    [
+      "1",
+      "1",
+      "1/2"
+    ]
+  ],
+  "independentJoint": [
+    [
+      "0",
+      "0",
+      "1/4"
+    ],
+    [
+      "0",
+      "1",
+      "1/4"
+    ],
+    [
+      "1",
+      "0",
+      "1/4"
+    ],
+    [
+      "1",
+      "1",
+      "1/4"
+    ]
+  ],
+  "expected": {
+    "sharedInformationBits": 0,
+    "independentInformationBits": 0
+  },
+  "classification": "finite supplied countermodels; metadata do not authenticate keys or identify causal lineages"
+}

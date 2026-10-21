@@ -1,0 +1,26 @@
+{
+  "profile": "lean-kernel-capture@1",
+  "source": "proofs/lean/Obligations/KeyLineage.lean",
+  "sourceDigest": "sha256:5a0ff68f3fca194c5528a19c8c3c6771f5ab074bd48b48a35349c11a1b385bd3",
+  "toolchain": "leanprover/lean4:v4.19.0",
+  "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "module": "KeyLineage",
+  "theorems": [
+    "copied_nonnegative",
+    "independent_nonnegative",
+    "copied_normalized",
+    "independent_normalized",
+    "same_fair_marginals",
+    "copied_not_factorized",
+    "independent_factorized",
+    "same_metadata_two_joint_laws"
+  ],
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "noSorry": true,
+  "noNewAxioms": true,
+  "scope": "captured compilation and axiom audit for exactly these source bytes; implementation equivalence remains bounded, not kernel-proved"
+}

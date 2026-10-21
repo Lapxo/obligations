@@ -1,0 +1,38 @@
+{
+  "profile": "declared-contract-quartet@1",
+  "region": "theory-coverage",
+  "contract": "contracts/theory-coverage.json",
+  "contractDigest": "sha256:48a0450ac77d37ff614a2110efbb0e3005ef7ea50879c7b7c5e2cfa1c74a216d",
+  "places": [
+    "reservoir",
+    "shipping"
+  ],
+  "scope": "Finite witness and named rejection; evidence classification is part of the contract, not inferred from a passing vector.",
+  "T2": "pending-owner-approval",
+  "cases": [
+    {
+      "place": "reservoir",
+      "kind": "yes",
+      "input": "samples/laws/theory-coverage/yes/reservoir.json",
+      "inputDigest": "sha256:056f7192303fb11482234d6b8034520ba750c38461e686b15ef053f0518440f7"
+    },
+    {
+      "place": "reservoir",
+      "kind": "no",
+      "input": "samples/laws/theory-coverage/no/reservoir.json",
+      "inputDigest": "sha256:9a982e99edc6d70a80c314a76212fa6ac8e12b5267c976a52d96d8538ee06122"
+    },
+    {
+      "place": "shipping",
+      "kind": "yes",
+      "input": "samples/laws/theory-coverage/yes/shipping.json",
+      "inputDigest": "sha256:75f53ff207ad2742f56a554111cc91051c328d8d850bdfe082ce350928d7e4d2"
+    },
+    {
+      "place": "shipping",
+      "kind": "no",
+      "input": "samples/laws/theory-coverage/no/shipping.json",
+      "inputDigest": "sha256:2627754f85b1b63c29182644b00759291c298c04eb11314de4b37d7ca2231a2c"
+    }
+  ]
+}

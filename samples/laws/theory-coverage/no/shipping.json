@@ -1,0 +1,6 @@
+{
+  "place": "shipping",
+  "coverage": "proofs/theory-coverage.json",
+  "promoteT2": true,
+  "promoteMissingReport": false
+}

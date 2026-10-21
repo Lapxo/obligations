@@ -1,0 +1,32 @@
+{
+  "model": "finite-nonnegative-atomic-valuation@1",
+  "unit": "declared-calls",
+  "atoms": [
+    {
+      "id": "request/a",
+      "value": "1"
+    },
+    {
+      "id": "request/b",
+      "value": "1"
+    },
+    {
+      "id": "request/unassigned",
+      "value": "1"
+    }
+  ],
+  "regions": [
+    {
+      "id": "shipping/first",
+      "members": [
+        "request/a"
+      ]
+    },
+    {
+      "id": "shipping/second",
+      "members": [
+        "request/b"
+      ]
+    }
+  ]
+}

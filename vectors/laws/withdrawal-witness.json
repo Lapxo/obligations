@@ -1,0 +1,38 @@
+{
+  "profile": "declared-contract-quartet@1",
+  "region": "withdrawal-witness",
+  "contract": "contracts/withdrawal-witness.json",
+  "contractDigest": "sha256:ef05a663883c1cdfdbc21b3a9ed971684cdc5f743e7e36c3a6e46d529e6a12ea",
+  "places": [
+    "reservoir",
+    "shipping"
+  ],
+  "scope": "Finite witness and named rejection; evidence classification is part of the contract, not inferred from a passing vector.",
+  "T2": "pending-owner-approval",
+  "cases": [
+    {
+      "place": "reservoir",
+      "kind": "yes",
+      "input": "samples/laws/withdrawal-witness/yes/reservoir.json",
+      "inputDigest": "sha256:bca388d4352b2e270f2ed0fdfcc75d6bb97d5aad910ad3646b855907c8ce4bbe"
+    },
+    {
+      "place": "reservoir",
+      "kind": "no",
+      "input": "samples/laws/withdrawal-witness/no/reservoir.json",
+      "inputDigest": "sha256:bf4aaebb5b1dbe8608426844fd19d9ccd4dee965e06132e778819a9e0a3adf57"
+    },
+    {
+      "place": "shipping",
+      "kind": "yes",
+      "input": "samples/laws/withdrawal-witness/yes/shipping.json",
+      "inputDigest": "sha256:a62c837fdd93018c2dd64e7f0fb61270a212e2d8305ec397ad32555b0c87d97d"
+    },
+    {
+      "place": "shipping",
+      "kind": "no",
+      "input": "samples/laws/withdrawal-witness/no/shipping.json",
+      "inputDigest": "sha256:b0c390e9f415d337045ddccaea06cfb52af8ae924e20af8f453e676809cd03ec"
+    }
+  ]
+}

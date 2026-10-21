@@ -1,0 +1,218 @@
+{
+  "auditedTheorems": [
+    {
+      "theorem": "Obligations047.LinearInfluence.mean_add",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.mean_sub",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.mean_smul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.mean_mul_const",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.complete_drift",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.constant_mean",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.homogeneous_cov",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.homogeneous_mean",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.total_transport",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.column_mean",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.transport_drift",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.stationary_weighted_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.correlation_scale",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.complete_covariance_ratio",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.heterogeneous_counterexample",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.LinearInfluence.negative_covariance_exceeds_population",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.ThresholdBoundary.gap_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.ThresholdBoundary.positive_gap",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.ThresholdBoundary.threshold_range",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.ThresholdBoundary.fair_two_votes",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "theorem": "Obligations047.ThresholdBoundary.fair_three_votes",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "toolchain": "leanprover/lean4:v4.19.0",
+  "mathlib": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "allowedAxioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "theoremCount": 21,
+  "modules": {
+    "LinearInfluence": {
+      "source": "proofs/lean/Obligations/LinearInfluence.lean",
+      "sourceDigest": "sha256:351fd3c8aca7a243c42ec8cefaa65a4beb357e4b515e9c7285bd7823e856adfe",
+      "theorems": [
+        "Obligations047.LinearInfluence.mean_add",
+        "Obligations047.LinearInfluence.mean_sub",
+        "Obligations047.LinearInfluence.mean_smul",
+        "Obligations047.LinearInfluence.mean_mul_const",
+        "Obligations047.LinearInfluence.complete_drift",
+        "Obligations047.LinearInfluence.constant_mean",
+        "Obligations047.LinearInfluence.homogeneous_cov",
+        "Obligations047.LinearInfluence.homogeneous_mean",
+        "Obligations047.LinearInfluence.total_transport",
+        "Obligations047.LinearInfluence.column_mean",
+        "Obligations047.LinearInfluence.transport_drift",
+        "Obligations047.LinearInfluence.stationary_weighted_sum",
+        "Obligations047.LinearInfluence.correlation_scale",
+        "Obligations047.LinearInfluence.complete_covariance_ratio",
+        "Obligations047.LinearInfluence.heterogeneous_counterexample",
+        "Obligations047.LinearInfluence.negative_covariance_exceeds_population"
+      ]
+    },
+    "ThresholdBoundary": {
+      "source": "proofs/lean/Obligations/ThresholdBoundary.lean",
+      "sourceDigest": "sha256:68dc0032c26be0610a3b74c538f821df4a6ff13e813d957edd40b7fc6eaa24a3",
+      "theorems": [
+        "Obligations047.ThresholdBoundary.gap_identity",
+        "Obligations047.ThresholdBoundary.positive_gap",
+        "Obligations047.ThresholdBoundary.threshold_range",
+        "Obligations047.ThresholdBoundary.fair_two_votes",
+        "Obligations047.ThresholdBoundary.fair_three_votes"
+      ]
+    }
+  },
+  "noSorry": true,
+  "noNewAxioms": true,
+  "scope": "Rational finite identities and scalar normalizations only; not a real convergence, stochastic recurrence or uniform probability proof"
+}

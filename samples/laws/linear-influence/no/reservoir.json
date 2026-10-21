@@ -1,0 +1,146 @@
+{
+  "place": "reservoir",
+  "cases": [
+    {
+      "kind": "transport",
+      "id": "complete-heterogeneous",
+      "x": [
+        "0",
+        "0",
+        "0",
+        "12"
+      ],
+      "alpha": [
+        "0",
+        "0",
+        "0",
+        "1/2"
+      ],
+      "W": [
+        [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ],
+        [
+          "1/4",
+          "1/4",
+          "1/4",
+          "1/4"
+        ]
+      ],
+      "noise": "centered-unconditional",
+      "scale": "linear"
+    },
+    {
+      "kind": "transport",
+      "id": "neighbor-path",
+      "x": [
+        "1",
+        "0",
+        "0"
+      ],
+      "alpha": [
+        "1",
+        "1",
+        "1"
+      ],
+      "W": [
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1/2",
+          "0",
+          "1/2"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ]
+      ],
+      "noise": "zero",
+      "scale": "linear",
+      "stationaryProbability": [
+        "1/4",
+        "1/2",
+        "1/4"
+      ]
+    },
+    {
+      "kind": "transport",
+      "id": "complete-homogeneous",
+      "x": [
+        "2",
+        "4"
+      ],
+      "alpha": [
+        "1/2",
+        "1/2"
+      ],
+      "W": [
+        [
+          "1/2",
+          "1/2"
+        ],
+        [
+          "1/2",
+          "1/2"
+        ]
+      ],
+      "noise": "zero",
+      "scale": "linear"
+    },
+    {
+      "kind": "gram-correlation",
+      "id": "negative-correlation",
+      "B": [
+        [
+          "1",
+          "0"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ]
+    },
+    {
+      "kind": "gram-correlation",
+      "id": "degenerate",
+      "B": [
+        [
+          "1"
+        ],
+        [
+          "-1"
+        ]
+      ]
+    },
+    {
+      "kind": "complete-covariance",
+      "id": "declared-isotropic",
+      "n": 3,
+      "variance": "2",
+      "alpha": "1/2",
+      "steps": 2
+    }
+  ],
+  "claims": "declared-rational-identities"
+}

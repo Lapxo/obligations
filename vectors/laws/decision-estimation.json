@@ -1,0 +1,38 @@
+{
+  "profile": "declared-contract-quartet@1",
+  "region": "decision-estimation",
+  "contract": "contracts/decision-estimation.json",
+  "contractDigest": "sha256:5d27187cb836979c1d2efc7f1f7016be6b72a3c0e95f80635fdce6759a32d608",
+  "places": [
+    "reservoir",
+    "shipping"
+  ],
+  "scope": "Finite witness and named rejection; evidence classification is part of the contract, not inferred from a passing vector.",
+  "T2": "pending-owner-approval",
+  "cases": [
+    {
+      "place": "reservoir",
+      "kind": "yes",
+      "input": "samples/laws/decision-estimation/yes/reservoir.json",
+      "inputDigest": "sha256:4ec0809be01126c87d8507f3904238fcfb65f8ac04717678c1108b1a587e0ad0"
+    },
+    {
+      "place": "reservoir",
+      "kind": "no",
+      "input": "samples/laws/decision-estimation/no/reservoir.json",
+      "inputDigest": "sha256:ebb50ae72803272780e62409b83d16eafb85060c65d4c1ab16a4d13f260705d9"
+    },
+    {
+      "place": "shipping",
+      "kind": "yes",
+      "input": "samples/laws/decision-estimation/yes/shipping.json",
+      "inputDigest": "sha256:7ff8a4b580853dab94af3c0320f6b89d9e584650988b804321b8dd7867cad94a"
+    },
+    {
+      "place": "shipping",
+      "kind": "no",
+      "input": "samples/laws/decision-estimation/no/shipping.json",
+      "inputDigest": "sha256:4c01767a70621afdafe685748a4ff8061c60ada195ea7aa44e7ef3c1961feca3"
+    }
+  ]
+}

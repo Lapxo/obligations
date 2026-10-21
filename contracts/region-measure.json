@@ -1,0 +1,53 @@
+{
+  "id": "finite-nonnegative-atomic-valuation@1",
+  "status": "candidate; not owner-admitted",
+  "classification": "Lean-checked pairwise finite valuation laws; written finite-family excess derivation; tested exact-rational candidate implementation",
+  "domain": "Finite named support, one declared unit, nonnegative rational atom weights, regions as subsets of that support",
+  "identities": [
+    "m(A)+m(B)=m(A union B)+m(A intersection B)",
+    "disjoint A,B imply m(A union B)=m(A)+m(B)",
+    "sum_i m(A_i)-m(union_i A_i)=sum_{r(a)>0}(r(a)-1)w(a)"
+  ],
+  "api": {
+    "candidate": "src/measures/region-measure.ts#finiteRegionMeasure",
+    "reuses": "src/measures/rational.ts",
+    "publicExport": "@lapxo/obligations/measures#finiteRegionMeasure (candidate; admission pending)"
+  },
+  "work": {
+    "unit": "declared-input-rows",
+    "required": "atom rows + region rows + member rows",
+    "scope": "support scan; not parsing, sorting, rational bit complexity or wall time"
+  },
+  "refusals": [
+    "model-and-unit",
+    "domain",
+    "budget",
+    "region",
+    "atom",
+    "weight",
+    "negative-weight",
+    "conflicting-atom",
+    "duplicate-region",
+    "unknown-atom"
+  ],
+  "unmeasured": "region-measure/budget",
+  "doesNotEstablish": [
+    "selector disjointness",
+    "physical completeness",
+    "source authentication",
+    "lattice distributivity",
+    "exact withdrawal",
+    "permission to widen a ceiling"
+  ],
+  "consumer": "Topos interprets identified region measurements; Bound evaluates policy and ceilings",
+  "formalEvidence": {
+    "source": "proofs/lean/Obligations/RegionMeasure.lean",
+    "theorems": [
+      "union_inter",
+      "disjoint_union",
+      "union_le_sum"
+    ],
+    "implementationEquivalence": "bounded vectors; no kernel equivalence claim",
+    "finiteFamilyExcess": "written proof; not Lean-checked"
+  }
+}

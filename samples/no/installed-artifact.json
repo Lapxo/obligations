@@ -1,7 +1,7 @@
 {
   "format": "installed-acceptance/1",
   "name": "@lapxo/obligations",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "exports": {
     ".": {
       "types": "./dist/lattice/index.d.ts",
@@ -68,7 +68,7 @@
   "implementation": [
     {
       "path": "dist/debit/debit.js",
-      "sha256": "sha256:e8816859eebe62dedcbf903246230b9dd60f7065a19406962cac6f242f46494d"
+      "sha256": "sha256:4e9c79bfb91f542dcb1609846da3d32058b87a4c45cd3eafa13821d567f8feb9"
     },
     {
       "path": "dist/debit/graph.js",
@@ -276,7 +276,7 @@
     },
     {
       "path": "dist/measures/index.js",
-      "sha256": "sha256:d4f2d30a15a31715f02458a2bc75ce11bbfd10862ee7047b747a43f9291edbc0"
+      "sha256": "sha256:b30f425fa096e574e88e88b22806593838cb5090f5e661dc884c44203285395d"
     },
     {
       "path": "dist/measures/m3-experiment.js",
@@ -307,6 +307,10 @@
       "sha256": "sha256:f25343eee4bbea1de211543a7036ca58f62aeefec1d124f787151ea57cbda2e7"
     },
     {
+      "path": "dist/measures/region-measure.js",
+      "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
       "path": "dist/measures/spectrum.js",
       "sha256": "sha256:06b38b556472d7c27bf51e423b4305cb1427af5aedb0012c3a77f3168a8a9c53"
     },
@@ -335,6 +339,10 @@
       "sha256": "sha256:8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
     },
     {
+      "path": "dist/views/field.js",
+      "sha256": "sha256:691ea483df5d6021feae901607ccd3b67721514c2963ad539466839d6a1db430"
+    },
+    {
       "path": "dist/views/field/physics.js",
       "sha256": "sha256:69e500cdd7bb1a3eff095c4e15078db508d214adae84c3b3d751ec60de314ddb"
     },
@@ -351,16 +359,16 @@
       "sha256": "sha256:ab030ffa1cf49b5b26a9e5b62a94d4f553c6313c5e7138f66016d7d12f620c0d"
     },
     {
-      "path": "dist/views/field.js",
-      "sha256": "sha256:691ea483df5d6021feae901607ccd3b67721514c2963ad539466839d6a1db430"
-    },
-    {
       "path": "dist/views/galois.js",
       "sha256": "sha256:d00226bf65a595b09fd87a93be678161d87f12978ff2e602784a740645b90d05"
     },
     {
       "path": "dist/views/ideal.js",
       "sha256": "sha256:808ae8d7d6b8aabe93aea301078940accf2f983b717d13e8422d7edd0fd22473"
+    },
+    {
+      "path": "dist/views/product.js",
+      "sha256": "sha256:30e36e380abf5889add3344a02391a9b380f9caeec074b7a31aae8cb705e7e07"
     },
     {
       "path": "dist/views/product/design.js",
@@ -383,10 +391,6 @@
       "sha256": "sha256:e99ff8ea01f66fc62144dc160995f8fa4e64adda336d1c31be156dc8d8bd90da"
     },
     {
-      "path": "dist/views/product.js",
-      "sha256": "sha256:30e36e380abf5889add3344a02391a9b380f9caeec074b7a31aae8cb705e7e07"
-    },
-    {
       "path": "dist/views/quotient.js",
       "sha256": "sha256:17bfe8d1d4dfabf20478ffbce8ff23e2602463d1e5c79ea6c3976a53932c2cc0"
     },
@@ -400,10 +404,12 @@
     }
   ],
   "tests": [
-    "installed 0.4.6 exports have no Bound or Topos runtime dependency",
+    "installed 0.4.7 exports have no Bound or Topos runtime dependency",
     "installed universal algebra retains the four states and named invalid-chain rejection",
     "installed cofailure measures retain models, unmeasured inputs and named conflict refusal",
-    "installed marginal information retains the declared joint prior, two orders and named order refusal"
+    "installed marginal information retains the declared joint prior, two orders and named order refusal",
+    "installed declared region measure retains support, overlap and named refusal",
+    "installed provenance labels do not imply independence"
   ],
-  "code": "sha256:38f98c2ad931ce52d8f20089ff6b97b21b10a70439e78db7cf0f547d131c982f"
+  "code": "sha256:72d03cb5b1f4f743c5ff8b2486f34f6ca8d9c0a63f590e1670d84c9ce2ed1b74"
 }
