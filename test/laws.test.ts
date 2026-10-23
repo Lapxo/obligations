@@ -17,7 +17,16 @@ const SAID: Readonly<Record<string, string>> = { grey: 'potential', agreed: 'fac
 const same = (a: unknown, b: unknown): boolean => JSON.stringify(a) === JSON.stringify(b);
 const band = (span: readonly number[]): { lo: number; hi: number } => ({ lo: span[0]!, hi: span[1]! });
 const holds = (c: Vector, ok: boolean): boolean => compare(ok, true, c);
-const chainOf = (n: number): Scale => chain(Array.from({ length: n }, (_, i) => `l${i}`));
+// A chain fixture is determined by its level count; each sample still computes its own verdict.
+const chains = new Map<number, Scale>();
+const chainOf = (n: number): Scale => {
+  let scale = chains.get(n);
+  if (scale === undefined) {
+    scale = chain(Array.from({ length: n }, (_, i) => `l${i}`));
+    chains.set(n, scale);
+  }
+  return scale;
+};
 const bitsOn = (s: Scale, span: readonly number[]): number => freedom(s, unit('x', { floor: `l${span[0]}`, ceiling: `l${span[1]}` }));
 const seen = (named: readonly (readonly [string, readonly number[]])[]): Sighting[] => named.map(([origin, span]) => ({ origin, span: band(span) }));
 const rotations = <T>(xs: readonly T[]): T[][] => [...xs.map((_, i) => [...xs.slice(i), ...xs.slice(0, i)]), [...xs].reverse()];

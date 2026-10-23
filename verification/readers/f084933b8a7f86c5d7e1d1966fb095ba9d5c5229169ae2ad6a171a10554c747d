@@ -1,4 +1,4 @@
-bound-lock/1 at=policy:mathematics form=alphabet kind=capsule measure=digest restsOn=sha256:62ee86fac79011e1b814b5e64d1aadbbe8ee64e5b7a9633109616bfd7a567f03 role=writes scope=offers/capsule/foundations value=sha256:62ee86fac79011e1b814b5e64d1aadbbe8ee64e5b7a9633109616bfd7a567f03
+bound-lock/1 at=policy:mathematics form=alphabet kind=capsule measure=digest restsOn=sha256:3e6df711271ebd393825c201766bcaf03a3c156117c4c75f25799a32f1b7669f role=writes scope=offers/capsule/foundations value=sha256:3e6df711271ebd393825c201766bcaf03a3c156117c4c75f25799a32f1b7669f
 bound-lock/1 at=policy:mathematics form=alphabet measure=input-projection role=writes scope=region/foundations value=foundations-inputs
 bound-lock/1 at=policy:mathematics form=alphabet measure=reads role=receipt scope=region/foundations value=**@0
 bound-lock/1 at=policy:mathematics form=alphabet measure=reads role=render scope=region/foundations-inputs value=**@0
