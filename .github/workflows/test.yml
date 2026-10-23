@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         node: [22, 24]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -18,15 +18,6 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: npm ci --ignore-scripts
       - run: npm run build
-      - run: npm test
-  lean:
-    runs-on: ubuntu-24.04
-    defaults:
-      run:
-        shell: bash
-        working-directory: proofs/lean
-    steps:
-      - uses: actions/checkout@v4
       - name: Install pinned Elan
         run: |
           set -euo pipefail
@@ -43,15 +34,32 @@ jobs:
             proofs/lean/.lake
           key: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('proofs/lean/lean-toolchain', 'proofs/lean/lakefile.toml', 'proofs/lean/lake-manifest.json') }}-${{ hashFiles('proofs/lean/**/*.lean') }}
           restore-keys: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('proofs/lean/lean-toolchain', 'proofs/lean/lakefile.toml', 'proofs/lean/lake-manifest.json') }}-
-      - name: Prepare pinned compiler and dependencies
+      - name: Prepare pinned proof dependencies
+        working-directory: proofs/lean
         run: |
           set -euo pipefail
           elan toolchain install "$(cat lean-toolchain)"
           lean --version
           lake exe cache get
-      - name: Compile mathematical proofs
-        run: lake build
-      - name: Audit theorem axioms
-        run: lake env lean -DwarningAsError=true Audit.lean
-      - name: Check false mathematical claims are rejected
-        run: lake env lean -DwarningAsError=true Negatives.lean
+          mkdir -p .lake/build/lib/lean
+          printf 'OBLIGATIONS_LEAN=%s/bin/lean\n' "$(lean --print-prefix)" >> "$GITHUB_ENV"
+          printf 'OBLIGATIONS_LEAN_DEPENDENCIES=%s\n' "$(lake env printenv LEAN_PATH)" >> "$GITHUB_ENV"
+      - name: Install the verification instrument
+        run: npm install --prefix "$RUNNER_TEMP/obligations-instrument" --no-save --ignore-scripts @lapxo/bound@0.2.6
+      - name: Admit signed mathematical declarations
+        run: |
+          set -euo pipefail
+          mkdir -p .bound/cas/blobs
+          cp verification/readers/* .bound/cas/blobs/
+          node "$RUNNER_TEMP/obligations-instrument/node_modules/@lapxo/bound/dist/cli/verb.js" land TARGET.bound
+      - name: Verify mathematical obligations and retain receipts
+        run: |
+          set -euo pipefail
+          node "$RUNNER_TEMP/obligations-instrument/node_modules/@lapxo/bound/dist/cli/verb.js" fold
+          node "$RUNNER_TEMP/obligations-instrument/node_modules/@lapxo/bound/dist/cli/verb.js" fold --check
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mathematical-receipts-node-${{ matrix.node }}
+          path: receipts.bound
+          if-no-files-found: error

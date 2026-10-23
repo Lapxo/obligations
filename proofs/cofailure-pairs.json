@@ -11,7 +11,7 @@
     "reference": "independent-categorical@1 with fixed, normalized, handed per-origin categorical marginals over the named alphabet. No truth or estimated error marginal is read.",
     "thetaUnit": "excess probability, in [-1,1]",
     "absentReference": "unmeasured; never silently estimate a null from this batch",
-    "Head": "This is the candidate observable available without truth; no Head or a constraint evaluator change is made, and no causal interpretation is supplied."
+    "interpretation": "This candidate observable does not require truth labels; no causal interpretation is supplied."
   },
   "existingBoundary": "The published coincidenceExcess itself requires truth. Its no-truth reading stays unmeasured. This candidate is a different observable, not a relabel of that API.",
   "frame": "T and theta are explicit and mandatory: absence is unmeasured. T counts distinct complete selected events. Missing cells are unmeasured; identical redelivery is idempotent; conflicting event/origin values refuse by name. Budget is checked before indexing rows.",
@@ -54,7 +54,7 @@
   "alreadyKnown": "Cooccurrence relative to a declared null, Chebyshev concentration and union bounds are standard. The published package already has truth-conditioned coincidenceExcess and exact unionBoundConfidence.",
   "addsHere": "The oracle-free observable and its explicit null, pair graph with threshold units, and model-separating fixtures. No c is identified, no M/3-M/4 hypothesis changes, and no algebraic act or wire field is introduced.",
   "open": [
-    "Choice of an adequate observable-context reference for Head; this marginal null can be confounded by shared questions.",
+    "Choice of an adequate observable-context reference; this marginal null can be confounded by shared questions.",
     "No causal subgroup identification from these statistics alone.",
     "No iid certificate, population-margin estimate, or guarantee without the declared sampling premises."
   ]
