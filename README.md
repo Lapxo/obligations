@@ -1,10 +1,45 @@
-# Obligations
+<p align="center"><img src="docs/img/logo.svg" alt="Attributed declarations with a shared intersection" width="96"></p>
 
-An algebra of requirements, permissions and attributed declarations.
+<h1 align="center">Obligations</h1>
+
+<p align="center">An algebra of requirements, permissions and attributed declarations.</p>
 
 A requirement says what must hold. A permission says what may hold. A declaration carries both sides, together with the origin that supplied it. Obligations makes their conjunction, disagreement, refinement and withdrawal explicit, so a result can retain what supports it instead of replacing its sources with a single number.
 
 The operative object is the obligatory cell over a declared lattice. The lattice supplies the order and operations; the cell retains its declarations, support and epoch. The same structure can describe intervals, finite choices, information partitions or any domain with the required order laws.
+
+## Quick start
+
+Install the dependency-free runtime on Node.js 22.12 or later:
+
+```sh
+npm install @lapxo/obligations
+```
+
+```js
+import { intervals, point, meetAt, origins } from '@lapxo/obligations';
+
+const scale = intervals(0, 20);
+const cell = point('capacity', 0, [
+  { origin: 'seller', span: { lo: 2, hi: 9 } },
+  { origin: 'buyer', span: { lo: 5, hi: 12 } },
+]);
+
+console.log(scale.show(meetAt(cell))); // 5..9
+console.log(origins(cell));           // 2
+```
+
+The intersection reports what these declarations hold together. It does not authenticate either party or establish two independent causes. Disjoint claims remain a disagreement rather than a price invented between them.
+
+## What it preserves
+
+| Operation | What remains explicit |
+| --- | --- |
+| Combine declarations | Both the demand and the limit, with their origins |
+| Read disagreement | The incompatible constraints, rather than a replacement value |
+| Withdraw a declaration | Its identity; another origin's equal content remains |
+| Replay acts | Their declared order, epoch and exact withdrawal targets |
+| Measure a projection | Its model, unit, prior and numerical assumptions |
 
 ## Requirements and permissions
 
@@ -42,29 +77,6 @@ A withdrawal names the declaration it takes back. Equal content is insufficient 
 
 Authentication and admission are separate responsibilities. The algebra can retain an origin or verify a supplied mathematical relation; an application decides which keys, evidence and policies authorize a change. Neither a confidence score nor a diversity measure grants that authority.
 
-## A small example
-
-Install the dependency-free runtime on Node.js 22.12 or later:
-
-```sh
-npm install @lapxo/obligations
-```
-
-```js
-import { intervals, point, meetAt, origins } from '@lapxo/obligations';
-
-const scale = intervals(0, 20);
-const price = point('price', 0, [
-  { origin: 'seller', span: { lo: 2, hi: 9 } },
-  { origin: 'buyer', span: { lo: 5, hi: 12 } },
-]);
-
-console.log(scale.show(meetAt(price))); // 5..9
-console.log(origins(price));           // 2
-```
-
-The intersection reports what these declarations hold together. It does not authenticate either party or establish two independent causes. Disjoint claims remain a disagreement rather than a price invented between them.
-
 ## Valuation and information
 
 A valuation assigns a quantity to elements of a declared lattice under explicit mathematical hypotheses. This gives several readings of the same two-sided structure: the cost of violating a bound, the remaining freedom on a finite scale, or the information lost under a projection.
@@ -88,13 +100,29 @@ A resolution declares which distinctions a reading preserves. Coarsening can mer
 
 An epoch identifies the history being read. Replay applies the declared acts and exact withdrawals, preserving their identities. Dependency, origin, epoch and resolution answer different questions and remain separate inputs.
 
-## API and verification
+## API
+
+| Import | Purpose |
+| --- | --- |
+| `@lapxo/obligations` | Declarations, cells, finite orders, fields, replay and valuations |
+| `/lattice`, `/forms` | Supplied orders, intervals and finite alphabets |
+| `/field`, `/encounter`, `/present` | Coordinates, observations, origins and epochs |
+| `/debit`, `/packed`, `/price` | Constraint operations and finite representations |
+| `/signatures`, `/replay` | Mathematical projection of signed marks and replay |
+| `/views/field`, `/views/product` | Declared views |
+| `/measures` | Diversity, evidence, region measures and projection loss |
+
 
 The root export includes declarations, forms, finite order checks, fields, replay and valuation operations. Focused subpaths include `lattice`, `forms`, `field`, `encounter`, `debit`, `price`, `signatures`, `views/field`, `views/product` and `measures`. TypeScript declarations ship with the JavaScript runtime; no runtime package dependencies are required.
 
+The runtime performs no network requests or cryptographic signing and requires no database or key store. Applications supply their own authentication and admission policy.
+
+## Theory and verification
+
 The source repository contains written arguments, fixed countermodels, executable tests and Lean proofs. Each has a distinct scope. A bibliographic theorem retains its citation; a formal proof identifies its theorem and axioms; an empirical report retains its model and evidence status. Missing evidence stays missing, and no metadata field promotes a report to a proof.
 
-Lean, test fixtures and research records are not runtime dependencies.
+Lean and verification fixtures are outside the npm runtime package.
+
 ## Read further
 
 - [Reference](docs/reference.md)
