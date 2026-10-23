@@ -939,7 +939,7 @@
         "vectors/transitions.json": "sha256:260437cdda99e92c5bbf17cb31eec16ccb819f176ecdbe8ea3b009ac512091b6",
         "vectors/units-16.json": "sha256:b871a566a2964051886ae883f63eceac767822d2cabba0812e44fc598265b3ff",
         "vectors/vacuity.json": "sha256:e6a91765e875d5db3737f738725abd4d643f5bab984b149ae28d53e8cd48e3ca",
-        "verification/mathematics-reader.mjs": "sha256:7bc32a9b4ee53bf2923f3c7836f4043f00731741911eaa4fb6418bbd64f30d71"
+        "verification/mathematics-reader.mjs": "sha256:74b68f756fe881aef06ae0823fa3c24acf7339eaecbd1012a90338ccaed2bbba"
       },
       "tests": [
         "test/acts.test.ts",
@@ -951,7 +951,7 @@
         "test/wave.test.ts"
       ],
       "expectedTests": 63,
-      "inputsDigest": "sha256:ee030c689aef82c4f912dcbe2ac8d31f86d4426163bad7c23a3ed7077442bdae"
+      "inputsDigest": "sha256:bf6ecef2424afd663743f0085c8065b5faf224f9317d3b2fca90f7c60698490e"
     },
     {
       "region": "views",
@@ -1891,7 +1891,7 @@
         "vectors/transitions.json": "sha256:260437cdda99e92c5bbf17cb31eec16ccb819f176ecdbe8ea3b009ac512091b6",
         "vectors/units-16.json": "sha256:b871a566a2964051886ae883f63eceac767822d2cabba0812e44fc598265b3ff",
         "vectors/vacuity.json": "sha256:e6a91765e875d5db3737f738725abd4d643f5bab984b149ae28d53e8cd48e3ca",
-        "verification/mathematics-reader.mjs": "sha256:7bc32a9b4ee53bf2923f3c7836f4043f00731741911eaa4fb6418bbd64f30d71"
+        "verification/mathematics-reader.mjs": "sha256:74b68f756fe881aef06ae0823fa3c24acf7339eaecbd1012a90338ccaed2bbba"
       },
       "tests": [
         "test/fold-boundaries-042.test.ts",
@@ -1917,7 +1917,7 @@
         "test/vectors.test.ts"
       ],
       "expectedTests": 146,
-      "inputsDigest": "sha256:ee030c689aef82c4f912dcbe2ac8d31f86d4426163bad7c23a3ed7077442bdae"
+      "inputsDigest": "sha256:bf6ecef2424afd663743f0085c8065b5faf224f9317d3b2fca90f7c60698490e"
     },
     {
       "region": "measures",
@@ -2857,7 +2857,7 @@
         "vectors/transitions.json": "sha256:260437cdda99e92c5bbf17cb31eec16ccb819f176ecdbe8ea3b009ac512091b6",
         "vectors/units-16.json": "sha256:b871a566a2964051886ae883f63eceac767822d2cabba0812e44fc598265b3ff",
         "vectors/vacuity.json": "sha256:e6a91765e875d5db3737f738725abd4d643f5bab984b149ae28d53e8cd48e3ca",
-        "verification/mathematics-reader.mjs": "sha256:7bc32a9b4ee53bf2923f3c7836f4043f00731741911eaa4fb6418bbd64f30d71"
+        "verification/mathematics-reader.mjs": "sha256:74b68f756fe881aef06ae0823fa3c24acf7339eaecbd1012a90338ccaed2bbba"
       },
       "tests": [
         "test/claims-identification-partitions-042.test.ts",
@@ -2891,7 +2891,7 @@
         "test/vectors-measure.test.ts"
       ],
       "expectedTests": 126,
-      "inputsDigest": "sha256:ee030c689aef82c4f912dcbe2ac8d31f86d4426163bad7c23a3ed7077442bdae"
+      "inputsDigest": "sha256:bf6ecef2424afd663743f0085c8065b5faf224f9317d3b2fca90f7c60698490e"
     },
     {
       "region": "foundations",
@@ -3831,7 +3831,7 @@
         "vectors/transitions.json": "sha256:260437cdda99e92c5bbf17cb31eec16ccb819f176ecdbe8ea3b009ac512091b6",
         "vectors/units-16.json": "sha256:b871a566a2964051886ae883f63eceac767822d2cabba0812e44fc598265b3ff",
         "vectors/vacuity.json": "sha256:e6a91765e875d5db3737f738725abd4d643f5bab984b149ae28d53e8cd48e3ca",
-        "verification/mathematics-reader.mjs": "sha256:7bc32a9b4ee53bf2923f3c7836f4043f00731741911eaa4fb6418bbd64f30d71"
+        "verification/mathematics-reader.mjs": "sha256:74b68f756fe881aef06ae0823fa3c24acf7339eaecbd1012a90338ccaed2bbba"
       },
       "tests": [
         "test/authorship-value-050.test.ts",
@@ -3844,7 +3844,7 @@
         "test/shared-causes-050.test.ts"
       ],
       "expectedTests": 143,
-      "inputsDigest": "sha256:ee030c689aef82c4f912dcbe2ac8d31f86d4426163bad7c23a3ed7077442bdae"
+      "inputsDigest": "sha256:bf6ecef2424afd663743f0085c8065b5faf224f9317d3b2fca90f7c60698490e"
     },
     {
       "region": "proofs",
@@ -3867,7 +3867,7 @@
         "proofs/lean/lake-manifest.json": "sha256:fc8b4ba4b08bbcadf736bc8bcf803b5fdedfebafb57dec61ce0106e99964285d",
         "proofs/lean/lakefile.toml": "sha256:c21110b310604fa643942a067cab53b5f806fb6eceefa19f5f665c2706b4ff32",
         "proofs/lean/lean-toolchain": "sha256:55e97be96000b5e9e290c9e74482e5e317861499a5540353ce845471bded8cea",
-        "verification/mathematics-reader.mjs": "sha256:7bc32a9b4ee53bf2923f3c7836f4043f00731741911eaa4fb6418bbd64f30d71"
+        "verification/mathematics-reader.mjs": "sha256:74b68f756fe881aef06ae0823fa3c24acf7339eaecbd1012a90338ccaed2bbba"
       },
       "modules": [
         "Obligations/Cell.lean",
@@ -3881,13 +3881,39 @@
         "Obligations/KLProperties.lean",
         "Obligations.lean"
       ],
-      "inputsDigest": "sha256:10cbc5efc467fca5e2b93f52c24e42bf082262bf29e13f722e84db531d1b9642"
+      "inputsDigest": "sha256:c5e4044bc618e15892e8f5c38b1fe0888f68c3f80e2d743f04e280e60a88bcd1",
+      "compilationBatches": [
+        [
+          "Obligations/Cell.lean",
+          "Obligations/HellyComb.lean"
+        ],
+        [
+          "Obligations/Bridge.lean",
+          "Obligations/RegionMeasure.lean"
+        ],
+        [
+          "Obligations/KeyLineage.lean",
+          "Obligations/ThresholdBoundary.lean"
+        ],
+        [
+          "Obligations/LinearInfluence.lean",
+          "Obligations/MeasureProperties.lean"
+        ],
+        [
+          "Obligations/KLProperties.lean"
+        ],
+        [
+          "Obligations.lean"
+        ]
+      ]
     }
   ],
   "limits": {
     "timeoutMs": 25000,
     "responseBytes": 65536,
-    "subprocessTimeoutMs": 24000
+    "subprocessTimeoutMs": 24000,
+    "proofCompileConcurrency": 2,
+    "proofCompileThreads": 1
   },
   "subject": "Mathematical obligations of this library; no tests of verification tools or downstream applications"
 }

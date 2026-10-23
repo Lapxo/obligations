@@ -28,12 +28,37 @@ export function render(asked){
  if(asked.region!==spec.region+'-inputs')refuse('undeclared-projection');
  return[`bound-lock/1 at=receipt:1 form=alphabet measure=reads role=reads scope=${spec.scope} value=${[...Object.keys(spec.files),'verification/inputs.json'].join('|')}`];
 }
-function checkedRun(command,args,cwd,env,deadline){
+function checkedRun(command,args,cwd,env,deadline,input){
  const remaining=deadline-Date.now();if(remaining<=0)refuse('execution-budget');
- const run=spawnSync(command,args,{cwd,env,encoding:'utf8',timeout:remaining,maxBuffer:2097152});
+ const run=spawnSync(command,args,{cwd,env,input,encoding:'utf8',timeout:remaining,maxBuffer:2097152});
  if(run.error?.code==='ETIMEDOUT'||run.signal)refuse('execution-budget');
  if(run.error||run.status!==0)refuse('mathematical-check-failed');
  return run.stdout;
+}
+// This child only schedules compiler processes. Lean and the existing audit judge the proofs.
+const proofBatchProgram = String.raw`
+const {spawn}=require('node:child_process');
+const {readFileSync}=require('node:fs');
+const jobs=JSON.parse(readFileSync(0,'utf8')),active=new Set();
+let stopped=false;
+const stop=()=>{stopped=true;for(const child of active)child.kill('SIGKILL');};
+process.on('SIGTERM',()=>{stop();process.exit(124)});
+const run=job=>new Promise((resolve,reject)=>{
+ if(stopped){reject(Error('cancelled'));return;}
+ const child=spawn(job.command,job.args,{stdio:['ignore','pipe','pipe']});active.add(child);
+ let stdout='',stderr='';
+ const collect=(kind,chunk)=>{if(kind==='out')stdout+=chunk;else stderr+=chunk;if(Buffer.byteLength(stdout)+Buffer.byteLength(stderr)>2097152){stop();reject(Error('compiler-output-budget'));}};
+ child.stdout.on('data',chunk=>collect('out',chunk));child.stderr.on('data',chunk=>collect('err',chunk));
+ child.on('error',error=>{active.delete(child);stop();reject(error)});
+ child.on('close',(code,signal)=>{active.delete(child);if(code!==0||signal){stop();reject(Error('compiler-failed'));}else resolve(stdout)});
+});
+Promise.all(jobs.map(run)).then(outputs=>process.stdout.write(JSON.stringify(outputs))).catch(error=>{stop();process.stderr.write(String(error));process.exitCode=1});
+`;
+function compilerBatch(jobs,cwd,env,deadline){
+ if(!jobs.length||jobs.length>manifest.limits.proofCompileConcurrency)refuse('compiler-concurrency');
+ const outputs=JSON.parse(checkedRun(process.execPath,['-e',proofBatchProgram],cwd,env,deadline,JSON.stringify(jobs)));
+ if(!Array.isArray(outputs)||outputs.length!==jobs.length||outputs.some(x=>typeof x!=='string'))refuse('compiler-accounting');
+ return outputs;
 }
 function prove(spec,root,env,deadline){
  const compiler=process.env.OBLIGATIONS_LEAN||'lean';
@@ -46,13 +71,14 @@ function prove(spec,root,env,deadline){
  const lib=join(root,'compiled');mkdirSync(lib);
  const proofEnv={...env,LEAN_PATH:[lib,...external].join(':')};
  const project=join(root,'proofs/lean');
- for(const name of spec.modules){
-  const out=join(lib,name.replace(/\.lean$/,'.olean'));mkdirSync(dirname(out),{recursive:true});
-  checkedRun(compiler,['-DwarningAsError=true','-o',out,name],project,proofEnv,deadline);
+ const modules=spec.compilationBatches.flat();
+ if(modules.length!==spec.modules.length||new Set(modules).size!==modules.length||modules.some(name=>!spec.modules.includes(name)))refuse('compiler-module-coverage');
+ for(const batch of spec.compilationBatches){
+  const jobs=batch.map(name=>{const out=join(lib,name.replace(/\.lean$/,'.olean'));mkdirSync(dirname(out),{recursive:true});return{command:compiler,args:['-j1','-DwarningAsError=true','-o',out,name]};});
+  compilerBatch(jobs,project,proofEnv,deadline);
  }
- const audit=checkedRun(compiler,['-DwarningAsError=true','Audit.lean'],project,proofEnv,deadline);
+ const [audit]=compilerBatch(['Audit.lean','Negatives.lean'].map(name=>({command:compiler,args:['-j1','-DwarningAsError=true',name]})),project,proofEnv,deadline);
  if(!/Audited \d+ mathematical theorems/.test(audit))refuse('axiom-audit-missing');
- checkedRun(compiler,['-DwarningAsError=true','Negatives.lean'],project,proofEnv,deadline);
  return {compiledModules:spec.modules.length,axiomAudit:true,mathematicalNegatives:true};
 }
 export function receipt(asked){
