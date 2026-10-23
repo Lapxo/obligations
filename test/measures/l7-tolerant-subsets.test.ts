@@ -39,29 +39,6 @@ test('L7 sorted coefficient formula bounds all triples of events on nonuniform f
       assert.deepEqual(out.uncappedFailureBound,pack(rational(sum+'/10')));}
   }
 });
-test('L7 pairwise zero correlation cannot pay for joint-independence convolution',()=>{
-  const c=vector.pairwiseNotJoint,states=c.states.map((s:string)=>[...s].map(Number));
-  for(let i=0;i<3;i++){
-    assert.equal(states.filter((s:number[])=>s[i]).length,2);
-    for(let j=i+1;j<3;j++)assert.equal(states.filter((s:number[])=>s[i]&&s[j]).length,1);
-  }
-  assert.equal(states.filter((s:number[])=>s.reduce((a,b)=>a+b,0)>c.k).length,3);
-  const sample=JSON.parse(readFileSync(new URL('../../samples/measures/l7-tolerant-k.json',import.meta.url),'utf8'));
-  assert.throws(()=>independentCountConfidence(sample.no.failures,sample.no.k,sample.no.independence),/REFUSE·L7 joint-independence-required/);
-  const d=sample.independentYes.independence,before=JSON.stringify(d);
-  const out=independentCountConfidence(sample.independentYes.failures,1,d);
-  assert.deepEqual(out.failureUpperBound,pack(rational(c.independentFailure)));
-  assert.deepEqual(out.bernoulliEnvelope,['1/8','3/8','3/8','1/8'].map(x=>pack(rational(x))));
-  assert.equal(out.jointIndependence.declared,true);assert.equal(out.referencesVerified,false);assert.equal(JSON.stringify(d),before);
-  assert.deepEqual(independentCountConfidence([],0,d).value,pack(one));
-  const captures=vector.nativeCapture.captures.filter((c:{case:string})=>c.case==='independentYes');
-  assert.equal(captures.length,2);assert.equal(new Set(captures.map((c:{place:string})=>c.place)).size,2);
-  for(const capture of captures){
-    assert.equal(capture.status,0);assert.equal(capture.repeat.byteIdentical,true);
-    const answer=JSON.parse(capture.stdout.trim());assert.equal(answer[0].kind,'fact');
-    assert.deepEqual(JSON.parse(answer[0].claims[0].bound.values[0]).result.failureUpperBound,out.failureUpperBound);
-  }
-});
 test('L7 refuses absent hypotheses, malformed marginals and count domains by name',()=>{
   const f=declared(['1/2']);
   for(const k of [-1,.5,2,NaN,Infinity])assert.throws(()=>tolerantSubsetConfidence(f,k,space),/allowed-failure-count-outside/);

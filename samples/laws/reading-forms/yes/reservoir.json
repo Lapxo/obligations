@@ -1,0 +1,43 @@
+{
+  "profile": "reading-form-acceptance@1",
+  "place": "reservoir",
+  "request": "compose-declared-readings",
+  "requirements": "contracts/reading-forms.requirements.json",
+  "fixtures": {
+    "cell": "samples/laws/cell-declaration/yes/reservoir.json",
+    "provenance": "samples/laws/declaration-provenance/yes/reservoir.json",
+    "diversity": "samples/laws/similarity-diversity/yes/reservoir.json",
+    "evidence": "samples/laws/normalized-evidence/yes/reservoir.json",
+    "authorship": "samples/laws/authorship-value/yes/reservoir.json",
+    "decision": "samples/laws/decision-refinements/yes/reservoir.json"
+  },
+  "interpretation": {
+    "authentication": "not-assessed",
+    "authorityFromMeasure": false,
+    "mergeAuthorsOnZeroLoss": false,
+    "promoteUnmeasuredToZero": false
+  },
+  "numericReporting": {
+    "rendering": "binary64-toFixed",
+    "digits": 12,
+    "realEqualityClaimed": false
+  },
+  "support": {
+    "at": "reservoir/reading",
+    "epoch": 4,
+    "restsOn": [
+      "reservoir/model"
+    ],
+    "world": [
+      {
+        "at": "reservoir/model",
+        "restsOn": [
+          "needs/bytes/reservoir/declared-input"
+        ]
+      }
+    ],
+    "producer": "content-host",
+    "nextActionRef": "consumer/supply-declared-input",
+    "catalogMembership": "not-assessed"
+  }
+}

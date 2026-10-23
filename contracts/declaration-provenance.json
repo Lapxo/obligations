@@ -1,0 +1,18 @@
+{
+  "id": "declaration-provenance@1",
+  "status": {
+    "scientific": "definition and finite executable contract"
+  },
+  "title": "Attribution survives projection and exact withdrawal",
+  "statement": "Within the declared domain of distinct nonempty claim ids, every historical claim retains its origin, id, epoch and span. Equal spans do not merge authors. Withdrawing a named id removes exactly that live line while history remains available.",
+  "reuses": [
+    "contracts/key-lineage-independence.json",
+    "contracts/extension-lineage-participation.json"
+  ],
+  "boundary": "Origin is attribution, not a key certificate. Distinct ids, keys or lineage labels do not identify independent causes; authority stays with the consumer instrument. No lineage recovery is inferred.",
+  "acceptance": {
+    "positive": "deterministic mathematical fixtures",
+    "negative": "withdrawal-unnamed"
+  },
+  "experiments": false
+}

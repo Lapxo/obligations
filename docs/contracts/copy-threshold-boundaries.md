@@ -8,6 +8,6 @@ Declared conditions:
 - c=1 equal-vote conclusion requires equal lineage replication; unequal weights use their actual weighted decoder
 - Existing 0.4.6 off-diagonal and conditional diagonal contracts retain all their original assumptions
 
-Boundary: The positive-gap algebra is not a kernel proof of a Hoeffding inequality. Uniform concentration needs the joint-law hypotheses and its concentration proof; the complete uniform bound in Lean stays open. Generic optimal blind-decoder limits and monotonicity of the decoder gap remain open.
+a constraint evaluatorary: The positive-gap algebra is not a kernel proof of a Hoeffding inequality. Uniform concentration needs the joint-law hypotheses and its concentration proof; the complete uniform bound in Lean stays open. Generic optimal blind-decoder limits and monotonicity of the decoder gap remain open.
 
 Evidence status: Lean algebraic boundary, finite endpoint PMFs and explicit inventory; no replacement of published probability theorems. T2 remains pending approval.

@@ -1,3 +1,4 @@
+import {reduceExact} from './exact-reduction.ts';
 import {add,sub,mul,div,q,zero,one,equal,pack,probability,refuse,type Q,type RationalInput} from './rational.ts';
 export type IdentificationInput=Readonly<{
  witnesses:readonly Readonly<{id:string;correct:RationalInput}>[];
@@ -41,15 +42,7 @@ export function identifyM3(input:IdentificationInput,policy:IdentificationPolicy
  // An explicit upper bound on elimination updates is checked before elimination.
  const work=BigInt(rows)*BigInt(columns)*BigInt(rows+columns+1);
  if(work>BigInt(policy.budget))return {...metadata,status:'unmeasured' as const,cause:'identification/budget',required:String(work)};
- const transform=matrix.map((_,i)=>matrix.map((__,j)=>i===j?one:zero));
- let rank=0;const pivots:number[]=[];
- for(let column=0;column<columns;column++){
-  const pivot=matrix.findIndex((row,i)=>i>=rank&&row[column]![0]!==0n);if(pivot<0)continue;
-  [matrix[rank],matrix[pivot]]=[matrix[pivot]!,matrix[rank]!];[transform[rank],transform[pivot]]=[transform[pivot]!,transform[rank]!];
-  const divisor=matrix[rank]![column]!;matrix[rank]=matrix[rank]!.map(v=>div(v,divisor));transform[rank]=transform[rank]!.map(v=>div(v,divisor));
-  for(let i=0;i<rows;i++)if(i!==rank){const amount=matrix[i]![column]!;matrix[i]=matrix[i]!.map((v,j)=>sub(v,mul(amount,matrix[rank]![j]!)));transform[i]=transform[i]!.map((v,j)=>sub(v,mul(amount,transform[rank]![j]!)));}
-  pivots.push(column);rank++;
- }
+ const {rank,pivots,transform}=reduceExact(matrix,columns);
  if(rank!==columns)return {...metadata,status:'unmeasured' as const,cause:'rank-deficient declared sharing system',rank,columns};
  for(let i=rank;i<rows;i++){const residual=monomial(bases,transform[i]!);if(!equal(q(BigInt(residual.radicand.numerator),BigInt(residual.radicand.denominator)),one))return {...metadata,status:'unmeasured' as const,cause:'model/M misfit',rank,columns};}
  const factors=shared.map((factor,j)=>{

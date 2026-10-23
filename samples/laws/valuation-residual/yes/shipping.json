@@ -1,0 +1,175 @@
+{
+  "profile": "foundation-reading@1",
+  "kind": "valuation-residual",
+  "levels": [
+    "constant",
+    "inlet",
+    "outlet",
+    "xor",
+    "joint"
+  ],
+  "leq": [
+    [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      false,
+      true,
+      false,
+      true
+    ],
+    [
+      false,
+      false,
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      false,
+      false,
+      false,
+      true
+    ]
+  ],
+  "values": [
+    0,
+    1,
+    1,
+    0.8112781244591328,
+    1.811278124459133
+  ],
+  "pair": [
+    1,
+    2
+  ],
+  "model": "Shannon-entropy/correlated-fair-bits",
+  "unit": "bits",
+  "workBudget": 1000,
+  "numericPolicy": {
+    "logarithm": "binary64-log2",
+    "budget": "10000"
+  },
+  "xorModel": {
+    "model": "finite-declared-joint@1",
+    "truthValues": [
+      "0",
+      "1"
+    ],
+    "sources": [
+      {
+        "id": "inlet",
+        "lineage": "declared/inlet",
+        "values": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "id": "outlet",
+        "lineage": "declared/outlet",
+        "values": [
+          "0",
+          "1"
+        ]
+      }
+    ],
+    "atoms": [
+      {
+        "id": "00",
+        "truth": "0",
+        "values": {
+          "inlet": "0",
+          "outlet": "0"
+        },
+        "p": "1/4"
+      },
+      {
+        "id": "01",
+        "truth": "1",
+        "values": {
+          "inlet": "0",
+          "outlet": "1"
+        },
+        "p": "1/4"
+      },
+      {
+        "id": "10",
+        "truth": "1",
+        "values": {
+          "inlet": "1",
+          "outlet": "0"
+        },
+        "p": "1/4"
+      },
+      {
+        "id": "11",
+        "truth": "0",
+        "values": {
+          "inlet": "1",
+          "outlet": "1"
+        },
+        "p": "1/4"
+      }
+    ]
+  },
+  "expected": {
+    "model": "Shannon-entropy/correlated-fair-bits",
+    "unit": "bits",
+    "valuationClass": "finite-declared-data-processing",
+    "residual": 0.18872187554086706,
+    "premium": 0.18872187554086706,
+    "xor": {
+      "alone": [
+        0,
+        0
+      ],
+      "together": 1,
+      "informationValuation": "outside-universal-class"
+    },
+    "supportWithZeros": "open",
+    "NAdmissibility": "open"
+  },
+  "entropyTables": [
+    [
+      "1"
+    ],
+    [
+      "1/2",
+      "1/2"
+    ],
+    [
+      "1/2",
+      "1/2"
+    ],
+    [
+      "3/4",
+      "1/4"
+    ],
+    [
+      "3/8",
+      "1/8",
+      "1/8",
+      "3/8"
+    ]
+  ],
+  "valuationPrior": {
+    "00": "3/8",
+    "01": "1/8",
+    "10": "1/8",
+    "11": "3/8"
+  }
+}

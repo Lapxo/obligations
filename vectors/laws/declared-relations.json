@@ -3,10 +3,6 @@
     "withdrawal-witness",
     "linear-influence",
     "copy-threshold-boundaries",
-    "decision-estimation",
-    "research-evidence-register",
-    "theory-coverage"
-  ],
-  "T2": "pending-owner-approval",
-  "experimentsRun": false
+    "decision-estimation"
+  ]
 }

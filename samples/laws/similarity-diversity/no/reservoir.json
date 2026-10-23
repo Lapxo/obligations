@@ -1,0 +1,33 @@
+{
+  "view": "similarity-diversity",
+  "model": {
+    "model": "normalized-symmetric-similarity@1",
+    "sources": [
+      "spring/a",
+      "spring/b"
+    ],
+    "matrix": [
+      [
+        "1",
+        "1/3"
+      ],
+      [
+        "1/2",
+        "1"
+      ]
+    ]
+  },
+  "policy": {
+    "budget": "100000"
+  },
+  "expected": {
+    "value": {
+      "numerator": "4",
+      "denominator": "3"
+    },
+    "sources": [
+      "spring/a",
+      "spring/b"
+    ]
+  }
+}

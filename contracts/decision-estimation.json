@@ -16,6 +16,5 @@
   ],
   "boundary": "These are conditional finite decision tables, not a universal product law. The estimation-to-decision bridge remains open outside a declared operation.",
   "status": "definition and exact countermodels; no new runtime estimator or decision authority",
-  "runtimeAPI": "No new runtime export; these contracts and their native finite witnesses extend the admitted theory without duplicating the engine.",
-  "T2": "pending approval; excluded"
+  "runtimeAPI": "No new runtime export; these contracts and their native finite witnesses extend the admitted theory without duplicating the engine."
 }

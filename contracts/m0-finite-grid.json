@@ -1,6 +1,5 @@
 {
   "scope": "m0-finite-grid",
   "form": "statement",
-  "status": "unsigned-preparation",
   "value": "Finite law by enumeration: K=1..4, p=11/20..19/20, c=1/20..20/20, uniform shares. All 720 closed scores equal exact binary-configuration enumeration and lie in [0,1]. This is a static score formula, not a proof of the N-limit. The false WF expected-floor monotonicity is rejected by a normalized 21-state counterexample at N=5,p=3/4,c=9/10,w=(3,1,1)/5."
 }

@@ -10,6 +10,6 @@ Declared conditions:
 - The homogeneous transport identity additionally requires constant alpha
 - K_corr uses the declared covariance, not keys, Kish, accuracy or causal independence
 
-Boundary: T2 is excluded. Finite identities are kernel-checked over rationals; no general real convergence or stochastic covariance theorem is claimed by the finite cases.
+a constraint evaluatorary: T2 is excluded. Finite identities are kernel-checked over rationals; no general real convergence or stochastic covariance theorem is claimed by the finite cases.
 
 Evidence status: Lean identities plus exact finite vectors; covariance evolution derivation separated from its scalar normalization. T2 remains pending approval.

@@ -1,0 +1,64 @@
+{
+  "primitive": "Existing obligatory cell over a supplied lattice; these are readings, not authority",
+  "status": {
+    "scientific": "Each proposition is classified below"
+  },
+  "id": "alterity@1",
+  "reuses": [],
+  "propositions": [
+    {
+      "id": "N/orientation-reference",
+      "state": "conditional-law",
+      "conditions": "Supplied normalized finite conditional laws, named positive reference divergence, common orientation and declared numeric policy",
+      "proof": "proofs/normalized-evidence.md"
+    },
+    {
+      "id": "N/six-axioms",
+      "state": "open",
+      "conditions": "A model-specific six-axiom domain must be supplied; no universal N<=n or arbitrary denominator change",
+      "counterexample": "proofs/normalized-evidence.md"
+    },
+    {
+      "id": "N/independent-common-reference",
+      "state": "conditional-law",
+      "conditions": "Full-support conditional product laws and one identical positive reference",
+      "formal": "proofs/lean/Obligations/KLProperties.lean"
+    },
+    {
+      "id": "Dmax/global-q2",
+      "state": "conditional-law",
+      "conditions": "Normalized symmetric similarity, exact rational enumeration budget and exhaustive support certificate",
+      "proof": "proofs/similarity-diversity.md"
+    },
+    {
+      "id": "Dmax/approximates-N",
+      "state": "evidence",
+      "values": {
+        "reportedMedianErrorWeakMedium": "1.2%",
+        "reportedMedianErrorStrong": "8.9%",
+        "reportedRankCorrelation": "0.998"
+      },
+      "verification": "received summary; no guarantee or original archive verification"
+    },
+    {
+      "id": "candidate-refutations",
+      "state": "refuted",
+      "candidates": [
+        "K_mean",
+        "Hill_q for q=1,2,infinity",
+        "GLS monotonicity and cardinality bound",
+        "rank continuity",
+        "A_H copy monotonicity",
+        "A_I conditional-block additivity",
+        "Chernoff scalar decision capacity"
+      ],
+      "vector": "vectors/laws/finite-countermodels.json",
+      "scope": "Explicit fixed analytic countermodels, not a reconstruction of the campaign. Hill0 passes copy invariance but fails continuity."
+    }
+  ],
+  "conversion": {
+    "implicitCovarianceConversion": false,
+    "required": "Declare the conversion before supplying a similarity matrix; fair-sign conversions in the fixed vectors state their complete generator and domain."
+  },
+  "countermodelReader": "test/support/finite-countermodels-reader.ts"
+}

@@ -18,8 +18,7 @@ state of its own, not an error to be hidden. Everything the library computes is 
 
 ## One lattice, read through its views
 
-The pairs live on a lattice, and the lattice is the only primitive. What looks like many theories is the same meet and
-join asked different questions:
+The operative cell lives over a declared lattice. The lattice supplies meet and join; it does not replace the cell, its attributed declarations, epoch or support. The views ask those same operations different questions:
 
 - as a **chain**, how finely a cell is resolved and how it moves along its scale;
 - as **ideals**, what a cell requires and what it permits, as an upset and a downset;
@@ -51,7 +50,7 @@ read through its ideals and its chain: four states per irreducible, and the bits
 is the pair laid over coordinates and origins: where it is held, when, and by whom, and what an encounter of two
 origins makes of it.
 
-Stated once, in `src/laws/laws.bound`, each law carries its statement, what it rests on, the view it is read in, its
+Stated once, in `src/laws/laws.json`, each law carries its statement, what it rests on, the view it is read in, its
 case and, where it can be falsified, its falsifier. This page argues why the laws belong together; it counts nothing
 that the render of the lock already counts.
 

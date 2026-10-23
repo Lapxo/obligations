@@ -8,7 +8,6 @@
     "shipping"
   ],
   "scope": "Finite witness and named rejection; evidence classification is part of the contract, not inferred from a passing vector.",
-  "T2": "pending-owner-approval",
   "cases": [
     {
       "place": "reservoir",

@@ -72,7 +72,6 @@
   "places": "two directories, one origin, shared immutable compiler and dependency cache",
   "proofStatus": "kernel-checked finite witness; no general Helly theorem claimed",
   "signatures": 0,
-  "admission": false,
   "execution": {
     "profile": "lean-kernel@1",
     "auditedTheorems": [

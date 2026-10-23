@@ -1,6 +1,8 @@
 {
   "id": "finite-nonnegative-atomic-valuation@1",
-  "status": "candidate; not owner-admitted",
+  "status": {
+    "scientific": "Lean-checked pairwise finite valuation laws; written finite-family excess derivation; tested exact-rational candidate implementation"
+  },
   "classification": "Lean-checked pairwise finite valuation laws; written finite-family excess derivation; tested exact-rational candidate implementation",
   "domain": "Finite named support, one declared unit, nonnegative rational atom weights, regions as subsets of that support",
   "identities": [
@@ -11,7 +13,7 @@
   "api": {
     "candidate": "src/measures/region-measure.ts#finiteRegionMeasure",
     "reuses": "src/measures/rational.ts",
-    "publicExport": "@lapxo/obligations/measures#finiteRegionMeasure (candidate; admission pending)"
+    "publicExport": "@lapxo/obligations/measures#finiteRegionMeasure "
   },
   "work": {
     "unit": "declared-input-rows",
@@ -39,7 +41,7 @@
     "exact withdrawal",
     "permission to widen a ceiling"
   ],
-  "consumer": "Topos interprets identified region measurements; Bound evaluates policy and ceilings",
+  "consumer": "a structured-data consumer interprets identified region measurements; a constraint evaluator evaluates policy and ceilings",
   "formalEvidence": {
     "source": "proofs/lean/Obligations/RegionMeasure.lean",
     "theorems": [

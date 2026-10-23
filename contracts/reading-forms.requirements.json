@@ -1,0 +1,423 @@
+{
+  "profile": "semantic-reading-requirements@1",
+  "primitive": "Existing Obligatory and Cell views, never another stored Cell",
+  "formStatus": "Consumer obligations, not a canonical wire schema or a uniqueness theorem",
+  "requirements": [
+    {
+      "id": "attribution",
+      "needs": [
+        "declaration identities",
+        "origin and attribution/authentication state",
+        "epoch",
+        "authentication evidence reference when claimed"
+      ],
+      "producer": "views/field/parts",
+      "contract": "contracts/cell-declaration.json",
+      "contractDigest": "sha256:bf67f090b1fca8586bab7b78a855f75d80dc9009552c2b69bd5f310069128313",
+      "fields": [
+        {
+          "name": "declaration identities",
+          "law": "contracts/cell-declaration.json",
+          "lawDigest": "sha256:bf67f090b1fca8586bab7b78a855f75d80dc9009552c2b69bd5f310069128313",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/attribution-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "origin and attribution/authentication state",
+          "law": "contracts/cell-declaration.json",
+          "lawDigest": "sha256:bf67f090b1fca8586bab7b78a855f75d80dc9009552c2b69bd5f310069128313",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/attribution-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "epoch",
+          "law": "contracts/cell-declaration.json",
+          "lawDigest": "sha256:bf67f090b1fca8586bab7b78a855f75d80dc9009552c2b69bd5f310069128313",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/attribution-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "authentication evidence reference when claimed",
+          "law": "contracts/cell-declaration.json",
+          "lawDigest": "sha256:bf67f090b1fca8586bab7b78a855f75d80dc9009552c2b69bd5f310069128313",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/attribution-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        }
+      ]
+    },
+    {
+      "id": "measurement",
+      "needs": [
+        "named source population",
+        "model and complete applicable parameters",
+        "unit",
+        "numeric policy or exact representation",
+        "unmeasured cause instead of a fabricated zero"
+      ],
+      "producer": "measures/maximumDiversity",
+      "contract": "contracts/similarity-diversity.json",
+      "contractDigest": "sha256:749b105b6150b3ac04ce04478b3ea74cd6b6c9e416ec517fb84a1dc0cb61b06e",
+      "fields": [
+        {
+          "name": "named source population",
+          "law": "contracts/similarity-diversity.json",
+          "lawDigest": "sha256:749b105b6150b3ac04ce04478b3ea74cd6b6c9e416ec517fb84a1dc0cb61b06e",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/model-or-parameter-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "model and complete applicable parameters",
+          "law": "contracts/similarity-diversity.json",
+          "lawDigest": "sha256:749b105b6150b3ac04ce04478b3ea74cd6b6c9e416ec517fb84a1dc0cb61b06e",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/model-or-parameter-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "unit",
+          "law": "contracts/similarity-diversity.json",
+          "lawDigest": "sha256:749b105b6150b3ac04ce04478b3ea74cd6b6c9e416ec517fb84a1dc0cb61b06e",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/model-or-parameter-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "numeric policy or exact representation",
+          "law": "contracts/similarity-diversity.json",
+          "lawDigest": "sha256:749b105b6150b3ac04ce04478b3ea74cd6b6c9e416ec517fb84a1dc0cb61b06e",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/model-or-parameter-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "unmeasured cause instead of a fabricated zero",
+          "law": "contracts/similarity-diversity.json",
+          "lawDigest": "sha256:749b105b6150b3ac04ce04478b3ea74cd6b6c9e416ec517fb84a1dc0cb61b06e",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/model-or-parameter-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        }
+      ]
+    },
+    {
+      "id": "decision",
+      "needs": [
+        "objective",
+        "state prior",
+        "actions and loss",
+        "decoder and ties",
+        "estimate and loss units kept distinct"
+      ],
+      "producer": "measures/decisionInformation",
+      "contract": "contracts/decision-refinements.json",
+      "contractDigest": "sha256:30dce6e7c4efc6115f69c8a102a1019e6b0c1ffb4ddd37314e45663bf1235464",
+      "fields": [
+        {
+          "name": "objective",
+          "law": "contracts/decision-refinements.json",
+          "lawDigest": "sha256:30dce6e7c4efc6115f69c8a102a1019e6b0c1ffb4ddd37314e45663bf1235464",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/decision-contract-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "state prior",
+          "law": "contracts/decision-refinements.json",
+          "lawDigest": "sha256:30dce6e7c4efc6115f69c8a102a1019e6b0c1ffb4ddd37314e45663bf1235464",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/decision-contract-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "actions and loss",
+          "law": "contracts/decision-refinements.json",
+          "lawDigest": "sha256:30dce6e7c4efc6115f69c8a102a1019e6b0c1ffb4ddd37314e45663bf1235464",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/decision-contract-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "decoder and ties",
+          "law": "contracts/decision-refinements.json",
+          "lawDigest": "sha256:30dce6e7c4efc6115f69c8a102a1019e6b0c1ffb4ddd37314e45663bf1235464",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/decision-contract-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "estimate and loss units kept distinct",
+          "law": "contracts/decision-refinements.json",
+          "lawDigest": "sha256:30dce6e7c4efc6115f69c8a102a1019e6b0c1ffb4ddd37314e45663bf1235464",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/decision-contract-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        }
+      ]
+    },
+    {
+      "id": "projection",
+      "needs": [
+        "projection map",
+        "one declared joint prior",
+        "retained source identities",
+        "information loss and precision",
+        "support hypothesis and unresolved residual when applicable"
+      ],
+      "producer": "measures/authorshipValue",
+      "contract": "contracts/authorship-value.json",
+      "contractDigest": "sha256:335a903fffc2d8157b03da199ea22915166641bdc9aea5b5b4333b905f69a9bf",
+      "fields": [
+        {
+          "name": "projection map",
+          "law": "contracts/authorship-value.json",
+          "lawDigest": "sha256:335a903fffc2d8157b03da199ea22915166641bdc9aea5b5b4333b905f69a9bf",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/common-prior-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "one declared joint prior",
+          "law": "contracts/authorship-value.json",
+          "lawDigest": "sha256:335a903fffc2d8157b03da199ea22915166641bdc9aea5b5b4333b905f69a9bf",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/common-prior-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "retained source identities",
+          "law": "contracts/authorship-value.json",
+          "lawDigest": "sha256:335a903fffc2d8157b03da199ea22915166641bdc9aea5b5b4333b905f69a9bf",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/common-prior-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "information loss and precision",
+          "law": "contracts/authorship-value.json",
+          "lawDigest": "sha256:335a903fffc2d8157b03da199ea22915166641bdc9aea5b5b4333b905f69a9bf",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/common-prior-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "support hypothesis and unresolved residual when applicable",
+          "law": "contracts/authorship-value.json",
+          "lawDigest": "sha256:335a903fffc2d8157b03da199ea22915166641bdc9aea5b5b4333b905f69a9bf",
+          "whenMissing": {
+            "state": "unmeasured",
+            "cause": "reading/common-prior-required"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        }
+      ]
+    },
+    {
+      "id": "withdrawal",
+      "needs": [
+        "epoch",
+        "target declaration id",
+        "withdrawal identity when required by act contract",
+        "full history retained"
+      ],
+      "producer": "views/field/observe",
+      "contract": "contracts/declaration-provenance.json",
+      "contractDigest": "sha256:035498ffdfb98524ece253bfa0a60e63933eb8ac646291b80b9b1f8ae21e5d2e",
+      "fields": [
+        {
+          "name": "epoch",
+          "law": "contracts/declaration-provenance.json",
+          "lawDigest": "sha256:035498ffdfb98524ece253bfa0a60e63933eb8ac646291b80b9b1f8ae21e5d2e",
+          "whenMissing": {
+            "state": "refuse",
+            "cause": "withdrawal-unnamed"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "target declaration id",
+          "law": "contracts/declaration-provenance.json",
+          "lawDigest": "sha256:035498ffdfb98524ece253bfa0a60e63933eb8ac646291b80b9b1f8ae21e5d2e",
+          "whenMissing": {
+            "state": "refuse",
+            "cause": "withdrawal-unnamed"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "withdrawal identity when required by act contract",
+          "law": "contracts/declaration-provenance.json",
+          "lawDigest": "sha256:035498ffdfb98524ece253bfa0a60e63933eb8ac646291b80b9b1f8ae21e5d2e",
+          "whenMissing": {
+            "state": "refuse",
+            "cause": "withdrawal-unnamed"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "full history retained",
+          "law": "contracts/declaration-provenance.json",
+          "lawDigest": "sha256:035498ffdfb98524ece253bfa0a60e63933eb8ac646291b80b9b1f8ae21e5d2e",
+          "whenMissing": {
+            "state": "refuse",
+            "cause": "withdrawal-unnamed"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        }
+      ]
+    },
+    {
+      "id": "support",
+      "needs": [
+        "restsOn references",
+        "finite reached dependency context",
+        "missing input or cycle cause",
+        "named producer and consumer catalog action reference"
+      ],
+      "producer": "views/field/restOf",
+      "contract": "contracts/extension-lineage-participation.json",
+      "contractDigest": "sha256:527fffd66d35b9a2b856ffb0e7af3c4a2937d204d3dd27f10a29b162788c8a6f",
+      "fields": [
+        {
+          "name": "restsOn references",
+          "law": "contracts/extension-lineage-participation.json",
+          "lawDigest": "sha256:527fffd66d35b9a2b856ffb0e7af3c4a2937d204d3dd27f10a29b162788c8a6f",
+          "whenMissing": {
+            "state": "open",
+            "cause": "support/missing-declared-content"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "finite reached dependency context",
+          "law": "contracts/extension-lineage-participation.json",
+          "lawDigest": "sha256:527fffd66d35b9a2b856ffb0e7af3c4a2937d204d3dd27f10a29b162788c8a6f",
+          "whenMissing": {
+            "state": "open",
+            "cause": "support/missing-declared-content"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "missing input or cycle cause",
+          "law": "contracts/extension-lineage-participation.json",
+          "lawDigest": "sha256:527fffd66d35b9a2b856ffb0e7af3c4a2937d204d3dd27f10a29b162788c8a6f",
+          "whenMissing": {
+            "state": "open",
+            "cause": "support/missing-declared-content"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        },
+        {
+          "name": "named producer and consumer catalog action reference",
+          "law": "contracts/extension-lineage-participation.json",
+          "lawDigest": "sha256:527fffd66d35b9a2b856ffb0e7af3c4a2937d204d3dd27f10a29b162788c8a6f",
+          "whenMissing": {
+            "state": "open",
+            "cause": "support/missing-declared-content"
+          },
+          "scope": "semantic requirement; consumer maps this name to its public form and preserves the cause; not a canonical product schema"
+        }
+      ]
+    }
+  ],
+  "normalizedEvidence": {
+    "contract": "contracts/normalized-evidence.json",
+    "digest": "sha256:ec1f43c1ca6e8285c705063e6d865b92d206623a4b5eaafda82e902b32ca09fb",
+    "needs": [
+      "both conditional laws",
+      "truth orientation",
+      "named reference source",
+      "numeric policy and unit"
+    ],
+    "fields": [
+      {
+        "name": "both conditional laws",
+        "law": "contracts/normalized-evidence.json",
+        "lawDigest": "sha256:c58991092199737ce3c664e594406054ea945e5dc3a82fada7566014ce205156",
+        "whenMissing": {
+          "state": "unmeasured",
+          "cause": "evidence/conditional-laws-required"
+        }
+      },
+      {
+        "name": "truth orientation",
+        "law": "contracts/normalized-evidence.json",
+        "lawDigest": "sha256:c58991092199737ce3c664e594406054ea945e5dc3a82fada7566014ce205156",
+        "whenMissing": {
+          "state": "unmeasured",
+          "cause": "evidence/conditional-laws-required"
+        }
+      },
+      {
+        "name": "named reference source",
+        "law": "contracts/normalized-evidence.json",
+        "lawDigest": "sha256:c58991092199737ce3c664e594406054ea945e5dc3a82fada7566014ce205156",
+        "whenMissing": {
+          "state": "unmeasured",
+          "cause": "evidence/reference-required"
+        }
+      },
+      {
+        "name": "numeric policy and unit",
+        "law": "contracts/normalized-evidence.json",
+        "lawDigest": "sha256:c58991092199737ce3c664e594406054ea945e5dc3a82fada7566014ce205156",
+        "whenMissing": {
+          "state": "unmeasured",
+          "cause": "evidence/conditional-laws-required"
+        }
+      }
+    ]
+  },
+  "responsibilities": {
+    "algebra": "Definitions and mathematical functions",
+    "consumer": "Representation, authentication, authorization and persistence"
+  },
+  "commonNonInferences": [
+    "signature is not correctness",
+    "keys are not independent causes",
+    "loss zero does not permit erasure or withdrawal",
+    "unmeasured is not zero",
+    "evidence is not authority"
+  ]
+}

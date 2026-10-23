@@ -1,0 +1,58 @@
+{
+  "status": "analytic fixtures with written derivation; not executed experiments or native receipts",
+  "unit": "bits",
+  "logBase": 2,
+  "positive": {
+    "X": [
+      "00",
+      "01",
+      "10",
+      "11"
+    ],
+    "jointMassY0": [
+      "1/8",
+      "3/16",
+      "1/16",
+      "1/8"
+    ],
+    "jointMassY1": [
+      "1/8",
+      "1/16",
+      "3/16",
+      "1/8"
+    ],
+    "K": "sum of bits",
+    "G": "equivalent to K",
+    "H_G_given_K": "0",
+    "V": "(1-h2(1/4))/2",
+    "RI_H": "(1-h2(1/4))/2"
+  },
+  "negative": {
+    "X": [
+      "00",
+      "01",
+      "10",
+      "11"
+    ],
+    "jointMassY0": [
+      "1/4",
+      "1/4",
+      "0",
+      "0"
+    ],
+    "jointMassY1": [
+      "0",
+      "0",
+      "1/4",
+      "1/4"
+    ],
+    "K": "sum of bits",
+    "Y": "X1",
+    "G": "equivalent to X",
+    "H_G_given_K": "1/2",
+    "V": "1/2",
+    "RI_H": "0"
+  },
+  "open": "authorship-value/support-with-zeros",
+  "sourceCases": "T8 correspondence, 168 zero-support patterns from T1; retained as reported evidence"
+}

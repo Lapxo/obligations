@@ -18,6 +18,5 @@
   "adds": "Explicit failure modes and a corrected falsifier proposal only. No signed README or declaration edited.",
   "status": "open: counting/refinement model absent",
   "signatures": 0,
-  "admission": false,
   "existingNegative": "samples/no/H1-uncertainty.json checks products [4,2,3,4] against floor 4.8. The numeric failure is valid for that declared floor; the prose reason (a rising product refutes a floor) is incorrect."
 }

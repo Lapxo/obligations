@@ -1,0 +1,31 @@
+{
+  "primitive": "Existing obligatory cell over a supplied lattice; these are readings, not authority",
+  "status": {
+    "scientific": "Each proposition is classified below"
+  },
+  "id": "no-scalar-capacity@1",
+  "statement": "The five specified candidates do not determine Bayes error on all declared finite full-support channels. This is not a theorem about every scalar encoding.",
+  "propositions": [
+    {
+      "id": "five-candidate-counterexample",
+      "state": "refuted",
+      "scope": "D_max,GLS,N,A_H and Chernoff as universal Bayes-error capacity; full-support ternary channel pair, two duplicate named sources",
+      "vector": "vectors/laws/finite-countermodels.json#five-scalar-capacity"
+    },
+    {
+      "id": "reported-T1-T10",
+      "state": "evidence",
+      "source": {
+        "status": "unavailable",
+        "cause": "original-study-artifact-unavailable"
+      },
+      "verification": "received; original files unavailable"
+    },
+    {
+      "id": "Stein-Chernoff-explanation",
+      "state": "refuted",
+      "scope": "The proposed explanation of the reported single-decision ranking is withdrawn. Classical asymptotic theorems under their own hypotheses are not refuted."
+    }
+  ],
+  "classicalTheoremsUnchanged": true
+}

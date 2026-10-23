@@ -34,12 +34,12 @@
   "publishedBranches": {
     "law/A9": {
       "statement": "one relation: an origin bounds a cell at a resolution and an epoch; cells, origins, locks and laws are cells under it; the relation bounds itself, and there is no level above it",
-      "source": "7fd489c:src/laws/laws.bound",
+      "source": "7fd489c:src/laws/laws.json",
       "scope": "published mathematical statement"
     },
     "law/T99": {
       "statement": "the fold is a monotone map on a lattice over a rest order with no cycles: every fold reaches its fixed point in finitely many steps and never fails to answer.",
-      "source": "7fd489c:src/laws/laws.bound",
+      "source": "7fd489c:src/laws/laws.json",
       "scope": "published mathematical excerpt"
     }
   },

@@ -19,5 +19,19 @@
   "boundary": "The positive-gap algebra is not a kernel proof of a Hoeffding inequality. Uniform concentration needs the joint-law hypotheses and its concentration proof; the complete uniform bound in Lean stays open. Generic optimal blind-decoder limits and monotonicity of the decoder gap remain open.",
   "status": "Lean algebraic boundary, finite endpoint PMFs and explicit inventory; no replacement of published probability theorems",
   "runtimeAPI": "No new runtime export; these contracts and their native finite witnesses extend the admitted theory without duplicating the engine.",
-  "T2": "pending approval; excluded"
+  "countSaturation": {
+    "state": "refuted",
+    "vector": "vectors/laws/finite-countermodels.json#count-not-saturated",
+    "scope": "Fixed p=3/4,c=1/2,K=1: c exceeds c*=1/3 but count information improves fromN1 toN3 and count MAP error decreases1/4->13/64. This finite fact does not prove generic asymptotic optimality."
+  },
+  "convergenceEvidence": {
+    "state": "evidence",
+    "source": {
+      "status": "unavailable",
+      "cause": "original-study-artifact-unavailable"
+    },
+    "sealedCriterion": "n=801,tolerance0.02 missed threshold by0.02-0.03 forp=0.6/0.75",
+    "exploratory": "n up to12801 approachedc*",
+    "verification": "received only; initial and exploratory outcomes retained separately"
+  }
 }

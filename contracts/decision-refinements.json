@@ -1,0 +1,37 @@
+{
+  "id": "decision-refinements@1",
+  "primitive": "Attributed obligatory cell; estimates and decisions are readings, never authority",
+  "status": {
+    "scientific": "Conditional finite acceptance; admission is determined by standing and receipts"
+  },
+  "reuses": [
+    "contracts/decision-estimation.json",
+    "contracts/copy-threshold-boundaries.json",
+    "test/support/declared-relations-reader.ts"
+  ],
+  "statement": "A posterior estimate does not choose an action without a declared loss and tie rule. Information, decision information and accuracy have different units and meanings. Copy thresholds retain their declared model and decoder.",
+  "conditions": [
+    "finite named states/actions and normalized exact prior",
+    "declared loss unit and all-minimizers policy for finite risk",
+    "declared plurality or posterior MAP and uniform ties in the single-dominant-factor model",
+    "population and model hypotheses are inputs, not inferred lineage independence"
+  ],
+  "refusals": [
+    "decision-refinements/no-universal-estimation-threshold",
+    "decision-refinements/decoder-required",
+    "decision-refinements/unproved-uniform-bound",
+    "decision-refinements/model-family-required"
+  ],
+  "open": [
+    "universal concentration kernel proof",
+    "generic optimal blind-decoder asymptotics",
+    "monotonicity of decoder gap",
+    "universal scalar decision capacity"
+  ],
+  "numericReporting": {
+    "probabilities": "exact rational",
+    "bits": "binary64-log2; explicitly rendered with toFixed(12)",
+    "comparisonTolerance": "1e-12",
+    "boundary": "Decimal equality is not exact equality of real information. Original Node-version transcripts are retained."
+  }
+}

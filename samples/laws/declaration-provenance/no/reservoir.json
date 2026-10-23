@@ -1,0 +1,109 @@
+{
+  "profile": "foundation-reading@1",
+  "kind": "declaration-provenance",
+  "at": "reservoir/reports",
+  "epoch": 2,
+  "claims": [
+    {
+      "id": "spring/1",
+      "origin": "spring",
+      "span": {
+        "subject": "",
+        "floor": "held",
+        "ceiling": "full"
+      },
+      "at": 1
+    },
+    {
+      "id": "basin/1",
+      "origin": "basin",
+      "span": {
+        "subject": "",
+        "floor": "held",
+        "ceiling": "full"
+      },
+      "at": 2
+    }
+  ],
+  "withdrawal": {
+    "origin": "spring",
+    "span": {
+      "subject": "",
+      "floor": "held",
+      "ceiling": "full"
+    },
+    "at": 3
+  },
+  "expected": {
+    "before": [
+      {
+        "id": "spring/1",
+        "origin": "spring",
+        "span": {
+          "subject": "",
+          "floor": "held",
+          "ceiling": "full"
+        },
+        "at": 1
+      },
+      {
+        "id": "basin/1",
+        "origin": "basin",
+        "span": {
+          "subject": "",
+          "floor": "held",
+          "ceiling": "full"
+        },
+        "at": 2
+      }
+    ],
+    "after": [
+      {
+        "id": "basin/1",
+        "origin": "basin",
+        "span": {
+          "subject": "",
+          "floor": "held",
+          "ceiling": "full"
+        },
+        "at": 2
+      }
+    ],
+    "history": [
+      {
+        "id": "spring/1",
+        "origin": "spring",
+        "span": {
+          "subject": "",
+          "floor": "held",
+          "ceiling": "full"
+        },
+        "at": 1
+      },
+      {
+        "id": "basin/1",
+        "origin": "basin",
+        "span": {
+          "subject": "",
+          "floor": "held",
+          "ceiling": "full"
+        },
+        "at": 2
+      },
+      {
+        "origin": "spring",
+        "span": {
+          "subject": "",
+          "floor": "held",
+          "ceiling": "full"
+        },
+        "sign": -1,
+        "takes": "spring/1",
+        "at": 3
+      }
+    ],
+    "epoch": 3,
+    "authentication": "not-assessed",
+    "independentCauses": "unmeasured"
+  }
+}

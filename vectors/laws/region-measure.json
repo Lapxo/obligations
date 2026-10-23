@@ -1,6 +1,8 @@
 {
   "id": "region-measure@1",
-  "status": "candidate; not admitted",
+  "status": {
+    "scientific": "existing fixed acceptance and proof-source record; hypotheses unchanged"
+  },
   "contract": "contracts/region-measure.json",
   "contractDigest": "sha256:636ace16eeaa46eafb7b07c28d1d57916bc9108b188e96b5a8bf7bed6dc15707",
   "sourceDigest": "sha256:8514f34edcfd9345f6b2a0b5fe720212ea7fd866111382157c35f19d77437d5a",

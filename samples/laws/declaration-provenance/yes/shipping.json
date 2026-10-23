@@ -1,0 +1,110 @@
+{
+  "profile": "foundation-reading@1",
+  "kind": "declaration-provenance",
+  "at": "shipping/reports",
+  "epoch": 2,
+  "claims": [
+    {
+      "id": "inlet/1",
+      "origin": "inlet",
+      "span": {
+        "subject": "",
+        "floor": "queued",
+        "ceiling": "sent"
+      },
+      "at": 1
+    },
+    {
+      "id": "outlet/1",
+      "origin": "outlet",
+      "span": {
+        "subject": "",
+        "floor": "queued",
+        "ceiling": "sent"
+      },
+      "at": 2
+    }
+  ],
+  "withdrawal": {
+    "origin": "inlet",
+    "span": {
+      "subject": "",
+      "floor": "queued",
+      "ceiling": "sent"
+    },
+    "takes": "inlet/1",
+    "at": 3
+  },
+  "expected": {
+    "before": [
+      {
+        "id": "inlet/1",
+        "origin": "inlet",
+        "span": {
+          "subject": "",
+          "floor": "queued",
+          "ceiling": "sent"
+        },
+        "at": 1
+      },
+      {
+        "id": "outlet/1",
+        "origin": "outlet",
+        "span": {
+          "subject": "",
+          "floor": "queued",
+          "ceiling": "sent"
+        },
+        "at": 2
+      }
+    ],
+    "after": [
+      {
+        "id": "outlet/1",
+        "origin": "outlet",
+        "span": {
+          "subject": "",
+          "floor": "queued",
+          "ceiling": "sent"
+        },
+        "at": 2
+      }
+    ],
+    "history": [
+      {
+        "id": "inlet/1",
+        "origin": "inlet",
+        "span": {
+          "subject": "",
+          "floor": "queued",
+          "ceiling": "sent"
+        },
+        "at": 1
+      },
+      {
+        "id": "outlet/1",
+        "origin": "outlet",
+        "span": {
+          "subject": "",
+          "floor": "queued",
+          "ceiling": "sent"
+        },
+        "at": 2
+      },
+      {
+        "origin": "inlet",
+        "span": {
+          "subject": "",
+          "floor": "queued",
+          "ceiling": "sent"
+        },
+        "sign": -1,
+        "takes": "inlet/1",
+        "at": 3
+      }
+    ],
+    "epoch": 3,
+    "authentication": "not-assessed",
+    "independentCauses": "unmeasured"
+  }
+}

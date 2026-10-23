@@ -1,92 +1,73 @@
 name: test
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
 jobs:
   test:
     strategy:
       matrix:
-        node:
-        - 22
-        - 24
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node }}
-    - run: npm ci
-    - run: npm run build
-    - run: npm test
-    - name: Lay the declared historical proof reader
-      env:
-        GH_TOKEN: ${{ github.token }}
-      run: |
-        set -euo pipefail
-        mkdir -p .bound/cas/blobs
-        gh release download "v0.4.4" --pattern 5399fdc87cb104b5030e092e213ad6584004c6d4de49e716838081ae1f2e4182 --pattern 8655c52a0a4f6e19c883f2fe50b8f34eaa2cee7b21ac14b635a1a70130ab45fd --dir .bound/cas/blobs
-    - run: npm exec --yes --package=@lapxo/bound@0.2.1 --package=@lapxo/topos@0.2.0 -- bound fold --check
-  lean:
+        node: [22, 24]
     runs-on: ubuntu-24.04
-    permissions:
-      contents: write
-    defaults:
-      run:
-        shell: bash
-        working-directory: proofs/lean
     steps:
-    - uses: actions/checkout@v4
-    - name: Install pinned Elan
-      shell: bash
-      run: |
-        set -euo pipefail
-        curl --fail --location --proto '=https' --proto-redir '=https' https://github.com/leanprover/elan/releases/download/v4.2.4/elan-x86_64-unknown-linux-gnu.tar.gz --output "$RUNNER_TEMP/elan.tar.gz"
-        printf '%s  %s\n' 42b94d4244e8353142c456ec0e4ca6528fd898a6c604d4059f494e706e431f63 "$RUNNER_TEMP/elan.tar.gz" | sha256sum --check
-        mkdir "$RUNNER_TEMP/elan-installer"
-        tar -xzf "$RUNNER_TEMP/elan.tar.gz" -C "$RUNNER_TEMP/elan-installer"
-        "$RUNNER_TEMP/elan-installer/elan-init" -y --default-toolchain none
-        printf '%s\n' "$HOME/.elan/bin" >> "$GITHUB_PATH"
-    - uses: actions/cache@v4
-      with:
-        path: |-
-          ~/.elan/toolchains
-          proofs/lean/.lake
-        key: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('proofs/lean/lean-toolchain', 'proofs/lean/lakefile.toml', 'proofs/lean/lake-manifest.json') }}-${{
-          hashFiles('proofs/lean/**/*.lean') }}
-        restore-keys: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('proofs/lean/lean-toolchain', 'proofs/lean/lakefile.toml', 'proofs/lean/lake-manifest.json')
-          }}-
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 24
-    - name: Prepare locked compiler image
-      run: |
-        set -euo pipefail
-        elan toolchain install "$(cat lean-toolchain)"
-        lean --version
-        lake exe cache get Mathlib.Order.Interval.Set.Basic
-    - name: Install the published instrument
-      working-directory: .
-      run: npm install --prefix "$RUNNER_TEMP/lean-instrument" --no-save --ignore-scripts @lapxo/bound@0.2.1 @lapxo/topos@0.2.0
-    - name: Lay the declared proof reader
-      working-directory: .
-      env:
-        GH_TOKEN: ${{ github.token }}
-      run: |
-        set -euo pipefail
-        mkdir -p "$RUNNER_TEMP/lean-place/.bound/cas/blobs"
-        git archive HEAD proofs/lean vectors/laws/meet-semilattice.json vectors/laws/helly-comb.lean.json | tar -x -C "$RUNNER_TEMP/lean-place"
-        cp proofs/lean/verification.bound "$RUNNER_TEMP/lean-place/TARGET.bound"
-        mkdir -p "$RUNNER_TEMP/lean-place/proofs/lean/.lake"
-        ln -s "$GITHUB_WORKSPACE/proofs/lean/.lake/packages" "$RUNNER_TEMP/lean-place/proofs/lean/.lake/packages"
-        gh release download "v0.4.4" --pattern 1b71c00ce6134659534532519d7139cc5576283b4a5bf1dc83327a3511e555e1 --pattern 0b40747e9fa2ac40c706220732c45870321230f3c5164153b428d7fa0273dd43 --dir "$RUNNER_TEMP/lean-place/.bound/cas/blobs"
-    - name: Fold proof inputs and check receipt reuse
-      working-directory: .
-      run: |
-        set -euo pipefail
-        node "$RUNNER_TEMP/lean-instrument/node_modules/@lapxo/bound/dist/cli/verb.js" land "$RUNNER_TEMP/lean-place"
-        node "$RUNNER_TEMP/lean-instrument/node_modules/@lapxo/bound/dist/cli/verb.js" fold "$RUNNER_TEMP/lean-place"
-        node "$RUNNER_TEMP/lean-instrument/node_modules/@lapxo/bound/dist/cli/verb.js" fold "$RUNNER_TEMP/lean-place" --check
-'on':
-  push:
-    branches:
-    - main
-  pull_request: null
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm ci --ignore-scripts
+      - run: npm run build
+      - name: Install pinned Elan
+        run: |
+          set -euo pipefail
+          curl --fail --location --proto '=https' --proto-redir '=https' https://github.com/leanprover/elan/releases/download/v4.2.4/elan-x86_64-unknown-linux-gnu.tar.gz --output "$RUNNER_TEMP/elan.tar.gz"
+          printf '%s  %s\n' 42b94d4244e8353142c456ec0e4ca6528fd898a6c604d4059f494e706e431f63 "$RUNNER_TEMP/elan.tar.gz" | sha256sum --check
+          mkdir "$RUNNER_TEMP/elan-installer"
+          tar -xzf "$RUNNER_TEMP/elan.tar.gz" -C "$RUNNER_TEMP/elan-installer"
+          "$RUNNER_TEMP/elan-installer/elan-init" -y --default-toolchain none
+          printf '%s\n' "$HOME/.elan/bin" >> "$GITHUB_PATH"
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.elan/toolchains
+            proofs/lean/.lake
+          key: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('proofs/lean/lean-toolchain', 'proofs/lean/lakefile.toml', 'proofs/lean/lake-manifest.json') }}-${{ hashFiles('proofs/lean/**/*.lean') }}
+          restore-keys: lean-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('proofs/lean/lean-toolchain', 'proofs/lean/lakefile.toml', 'proofs/lean/lake-manifest.json') }}-
+      - name: Prepare pinned proof dependencies
+        working-directory: proofs/lean
+        run: |
+          set -euo pipefail
+          elan toolchain install "$(cat lean-toolchain)"
+          lean --version
+          lake exe cache get
+          lake build @Cli
+          mkdir -p .lake/build/lib/lean
+          printf 'OBLIGATIONS_LEAN=%s/bin/lean\n' "$(lean --print-prefix)" >> "$GITHUB_ENV"
+          IFS=: read -ra dependencies <<< "$(lake env printenv LEAN_PATH)"
+          proof_path=
+          for dependency in "${dependencies[@]}"; do
+            test -d "$dependency" || { printf 'Missing proof dependency directory: %s\n' "$dependency" >&2; exit 1; }
+            resolved="$(cd "$dependency" && pwd -P)"
+            proof_path="${proof_path:+$proof_path:}$resolved"
+          done
+          printf 'OBLIGATIONS_LEAN_DEPENDENCIES=%s\n' "$proof_path" >> "$GITHUB_ENV"
+      - name: Install the verification instrument
+        run: npm install --prefix "$RUNNER_TEMP/obligations-instrument" --no-save --ignore-scripts @lapxo/bound@0.2.6
+      - name: Admit signed mathematical declarations
+        run: |
+          set -euo pipefail
+          mkdir -p .bound/cas/blobs
+          cp verification/readers/* .bound/cas/blobs/
+          node "$RUNNER_TEMP/obligations-instrument/node_modules/@lapxo/bound/dist/cli/verb.js" land TARGET.bound
+      - name: Verify mathematical obligations and retain receipts
+        run: |
+          set -euo pipefail
+          node "$RUNNER_TEMP/obligations-instrument/node_modules/@lapxo/bound/dist/cli/verb.js" fold
+          node "$RUNNER_TEMP/obligations-instrument/node_modules/@lapxo/bound/dist/cli/verb.js" fold --check
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mathematical-receipts-node-${{ matrix.node }}
+          path: receipts.bound
+          if-no-files-found: error

@@ -1,26 +1,61 @@
 {
-  "id":"cofailure-pairs/two-declared-observables",
-  "classification":"two descriptive measures with declared models; finite counterexamples, not a law identifying causes",
-  "oracle":{"score":"number of complete cells with Y_i=Y_j!=truth divided by declared T","reference":"Published coincidenceExcess supplies this pair rate and its independent-uniform-wrong baseline, with handed or truth-estimated error marginals. The graph uses the raw false rate, not the excess.","thetaUnit":"false-coincidence probability"},
-  "withoutTruth":{"score":"number of complete cells with Y_i=Y_j divided by T, minus sum_v q_i(v)*q_j(v)","reference":"independent-categorical@1 with fixed, normalized, handed per-origin categorical marginals over the named alphabet. No truth or estimated error marginal is read.","thetaUnit":"excess probability, in [-1,1]","absentReference":"unmeasured; never silently estimate a null from this batch","Head":"This is the candidate observable available without truth; no Head or Bound change is made, and no causal interpretation is supplied."},
-  "existingBoundary":"The published coincidenceExcess itself requires truth. Its no-truth reading stays unmeasured. This candidate is a different observable, not a relabel of that API.",
-  "frame":"T and theta are explicit and mandatory: absence is unmeasured. T counts distinct complete selected events. Missing cells are unmeasured; identical redelivery is idempotent; conflicting event/origin values refuse by name. Budget is checked before indexing rows.",
-  "graph":"An edge is score>theta. Connected components are a descriptive projection; a path of above-threshold edges does not establish a common cause or a clique.",
-  "populationRecovery":"For a handed target partition, require max score_outside < theta < min score_inside over every pair. A threshold between the two means is insufficient. The partition itself and population scores are not inferred by this rule.",
-  "finiteUncertainty":{
-    "sampling":"Optional iid-cells@1, with epsilon in (0,1], fixed frame, selected origins, epsilon and (for the non-oracle observable) null marginals fixed before observing the batch. The caller supplies these premises; the instrument does not verify them.",
-    "chain":["For each pair's Bernoulli event, Var(mean)<=1/(4T) under the declared independent cells.","Chebyshev gives P(|observed-population|>=epsilon)<=min(1,1/(4*T*epsilon^2)). Subtracting a fixed handed baseline preserves the deviation.","The existing unionBoundConfidence combines these failures for all M=m(m-1)/2 pairs; no independence between pairs is required.","Exact rational intervals score+-epsilon are clipped to their probability support. Resolve an edge only if the whole interval is strictly above or below theta. Unresolved intervals and trivial bounds stay visible.","This bounds simultaneous threshold decisions under the handed model. Causal recovery requires the separate population partition and strict gap premises."],
-    "arithmetic":"rational, no logarithmic or directed-rounding approximation; conservative Chebyshev bound, not an optimal interval",
-    "reference":"https://theory.stanford.edu/~blynn/pr/markov.html"
+  "id": "cofailure-pairs/two-declared-observables",
+  "classification": "two descriptive measures with declared models; finite counterexamples, not a law identifying causes",
+  "oracle": {
+    "score": "number of complete cells with Y_i=Y_j!=truth divided by declared T",
+    "reference": "Published coincidenceExcess supplies this pair rate and its independent-uniform-wrong baseline, with handed or truth-estimated error marginals. The graph uses the raw false rate, not the excess.",
+    "thetaUnit": "false-coincidence probability"
   },
-  "counterexamples":[
-    {"id":"truth-relabel","claimRefuted":"the no-truth statistic identifies which coincidences are wrong","witness":"Identical response rows, truth all zero versus truth copied from a: observational output is unchanged but oracle edges differ."},
-    {"id":"shared-question","claimRefuted":"positive categorical excess proves shared error lineage","witness":"All sources answer a balanced binary question correctly. Oracle false rate is zero; a handed marginal 1/2 reference gives observed agreement 1 and excess 1/2. Conditional errors are degenerate zero, while the shared question drives unconditional agreement."},
-    {"id":"between-means","claimRefuted":"threshold between mean within and outside rates suffices","witness":"Within rates 0.8 and 0.2; outside 0.21,0.21,0,0. Theta=0.15 lies between means 0.5 and 0.105 but merges the handed groups; max outside exceeds min inside."},
-    {"id":"c-e-finite-confusion","claimRefuted":"finite exact subgroup recovery whenever shared c is comparable to private e","witness":"With c=e=1/4, the all-correct T=4 batch has probability [(3/4)^5]^4>0; it has no above-threshold oracle edges. Its confidence bound is trivial, not a certificate of no common factor."}
+  "withoutTruth": {
+    "score": "number of complete cells with Y_i=Y_j divided by T, minus sum_v q_i(v)*q_j(v)",
+    "reference": "independent-categorical@1 with fixed, normalized, handed per-origin categorical marginals over the named alphabet. No truth or estimated error marginal is read.",
+    "thetaUnit": "excess probability, in [-1,1]",
+    "absentReference": "unmeasured; never silently estimate a null from this batch",
+    "interpretation": "This candidate observable does not require truth labels; no causal interpretation is supplied."
+  },
+  "existingBoundary": "The published coincidenceExcess itself requires truth. Its no-truth reading stays unmeasured. This candidate is a different observable, not a relabel of that API.",
+  "frame": "T and theta are explicit and mandatory: absence is unmeasured. T counts distinct complete selected events. Missing cells are unmeasured; identical redelivery is idempotent; conflicting event/origin values refuse by name. Budget is checked before indexing rows.",
+  "graph": "An edge is score>theta. Connected components are a descriptive projection; a path of above-threshold edges does not establish a common cause or a clique.",
+  "populationRecovery": "For a handed target partition, require max score_outside < theta < min score_inside over every pair. A threshold between the two means is insufficient. The partition itself and population scores are not inferred by this rule.",
+  "finiteUncertainty": {
+    "sampling": "Optional iid-cells@1, with epsilon in (0,1], fixed frame, selected origins, epsilon and (for the non-oracle observable) null marginals fixed before observing the batch. The caller supplies these premises; the instrument does not verify them.",
+    "chain": [
+      "For each pair's Bernoulli event, Var(mean)<=1/(4T) under the declared independent cells.",
+      "Chebyshev gives P(|observed-population|>=epsilon)<=min(1,1/(4*T*epsilon^2)). Subtracting a fixed handed baseline preserves the deviation.",
+      "The existing unionBoundConfidence combines these failures for all M=m(m-1)/2 pairs; no independence between pairs is required.",
+      "Exact rational intervals score+-epsilon are clipped to their probability support. Resolve an edge only if the whole interval is strictly above or below theta. Unresolved intervals and trivial bounds stay visible.",
+      "This bounds simultaneous threshold decisions under the handed model. Causal recovery requires the separate population partition and strict gap premises."
+    ],
+    "arithmetic": "rational, no logarithmic or directed-rounding approximation; conservative Chebyshev bound, not an optimal interval",
+    "reference": "https://theory.stanford.edu/~blynn/pr/markov.html"
+  },
+  "counterexamples": [
+    {
+      "id": "truth-relabel",
+      "claimRefuted": "the no-truth statistic identifies which coincidences are wrong",
+      "witness": "Identical response rows, truth all zero versus truth copied from a: observational output is unchanged but oracle edges differ."
+    },
+    {
+      "id": "shared-question",
+      "claimRefuted": "positive categorical excess proves shared error lineage",
+      "witness": "All sources answer a balanced binary question correctly. Oracle false rate is zero; a handed marginal 1/2 reference gives observed agreement 1 and excess 1/2. Conditional errors are degenerate zero, while the shared question drives unconditional agreement."
+    },
+    {
+      "id": "between-means",
+      "claimRefuted": "threshold between mean within and outside rates suffices",
+      "witness": "Within rates 0.8 and 0.2; outside 0.21,0.21,0,0. Theta=0.15 lies between means 0.5 and 0.105 but merges the handed groups; max outside exceeds min inside."
+    },
+    {
+      "id": "c-e-finite-confusion",
+      "claimRefuted": "finite exact subgroup recovery whenever shared c is comparable to private e",
+      "witness": "With c=e=1/4, the all-correct T=4 batch has probability [(3/4)^5]^4>0; it has no above-threshold oracle edges. Its confidence bound is trivial, not a certificate of no common factor."
+    }
   ],
-  "alreadyKnown":"Cooccurrence relative to a declared null, Chebyshev concentration and union bounds are standard. The published package already has truth-conditioned coincidenceExcess and exact unionBoundConfidence.",
-  "addsHere":"The oracle-free observable and its explicit null, pair graph with threshold units, and model-separating fixtures. No c is identified, no M/3-M/4 hypothesis changes, and no algebraic act or wire field is introduced.",
-  "publication":"new candidate module only; existing signed public exports, TARGET, receipts and derived docs remain unchanged",
-  "open":["Choice of an adequate observable-context reference for Head; this marginal null can be confounded by shared questions.","No causal subgroup identification from these statistics alone.","No iid certificate, population-margin estimate, or guarantee without the declared sampling premises."]
+  "alreadyKnown": "Cooccurrence relative to a declared null, Chebyshev concentration and union bounds are standard. The published package already has truth-conditioned coincidenceExcess and exact unionBoundConfidence.",
+  "addsHere": "The oracle-free observable and its explicit null, pair graph with threshold units, and model-separating fixtures. No c is identified, no M/3-M/4 hypothesis changes, and no algebraic act or wire field is introduced.",
+  "open": [
+    "Choice of an adequate observable-context reference; this marginal null can be confounded by shared questions.",
+    "No causal subgroup identification from these statistics alone.",
+    "No iid certificate, population-margin estimate, or guarantee without the declared sampling premises."
+  ]
 }

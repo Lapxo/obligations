@@ -1,0 +1,30 @@
+{
+  "id": "valuation-residual@1",
+  "status": {
+    "scientific": "definition and finite executable contract"
+  },
+  "title": "The residual requires its declared valuation class",
+  "statement": "For a finite declared lattice and a normalized monotone valuation whose mutual valuation is monotone separately in both arguments, the existing premium agrees with the residual under the paper hypotheses. Shannon H is admissible; Z -> I(Y;Z) is not universally admissible, as the XOR countermodel shows.",
+  "reuses": [
+    "proofs/authorship-value.md"
+  ],
+  "boundary": "Finite checks certify only the supplied finite table; no universal admissibility is inferred for N. Authorship equality still requires the full-support lemma or a separate common-part proof. Support-with-zeros and N admissibility remain open.",
+  "acceptance": {
+    "positive": "deterministic mathematical fixtures",
+    "negative": "foundation/valuation-data-processing"
+  },
+  "experiments": false,
+  "paper": {
+    "doi": "10.5281/zenodo.21858428",
+    "pdfSHA256": "69dcbd6fec21a85125659ac719ca178754daa524f4a060349b724360c3b30653",
+    "references": [
+      "Remark 1.1",
+      "Definition 2.4",
+      "Proposition 2.5",
+      "Definition 2.6",
+      "Theorem 2.8",
+      "Corollary 2.10"
+    ],
+    "scope": "Consume the cited theorem under its stated valuation class; finite API vectors check implementation correspondence, not a new proof of the cited theorem."
+  }
+}

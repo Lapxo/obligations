@@ -76,7 +76,7 @@
       "status": 0,
       "runtimeMs": 9248,
       "timingPrecision": "rounded milliseconds retained from original collector progress output before collector aborted resolving Node executable",
-      "stdout": "\u2714 [339/342] Built Obligations.Cell\n\u2714 [340/342] Built Obligations.Bridge\n\u2714 [341/342] Built Obligations\nBuild completed successfully.\n",
+      "stdout": "✔ [339/342] Built Obligations.Cell\n✔ [340/342] Built Obligations.Bridge\n✔ [341/342] Built Obligations\nBuild completed successfully.\n",
       "stderr": "",
       "stdoutSha256": "sha256:60ba408563df6a0929ffdac1abbd4b2d684cd70c0acf6dd288ee7dec104e03d6",
       "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -128,7 +128,7 @@
       "operation": "build",
       "status": 0,
       "runtimeMs": 5209.1602080035955,
-      "stdout": "\u2714 [339/342] Built Obligations.Cell\n\u2714 [340/342] Built Obligations.Bridge\n\u2714 [341/342] Built Obligations\nBuild completed successfully.\n",
+      "stdout": "✔ [339/342] Built Obligations.Cell\n✔ [340/342] Built Obligations.Bridge\n✔ [341/342] Built Obligations\nBuild completed successfully.\n",
       "stderr": "",
       "stdoutSha256": "sha256:60ba408563df6a0929ffdac1abbd4b2d684cd70c0acf6dd288ee7dec104e03d6",
       "stderrSha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -188,7 +188,6 @@
     "lean": "generic mathematical assertions under the declared LinearOrder",
     "implementation": "256 pairs, 4096 triples per place; a finite check against published JavaScript, not a formal verification of TypeScript compilation",
     "boundNativeReceipts": false,
-    "admission": false,
     "signatures": 0
   },
   "literature": [

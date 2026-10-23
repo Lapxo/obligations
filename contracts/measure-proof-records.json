@@ -1,0 +1,6 @@
+{
+  "id": "measure-proof-records@1",
+  "scope": "Audited kernel records for exactly named finite theorems, not a general proof of every numerical API claim",
+  "record": "vectors/laws/measure-properties.lean.json",
+  "map": "proofs/measures-050/theorem-map.json"
+}

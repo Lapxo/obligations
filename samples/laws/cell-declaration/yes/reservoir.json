@@ -1,0 +1,145 @@
+{
+  "profile": "foundation-reading@1",
+  "kind": "cell-declaration",
+  "levels": [
+    "empty",
+    "held",
+    "full"
+  ],
+  "resolution": 1,
+  "cell": {
+    "at": "reservoir/reading",
+    "epoch": 2,
+    "seen": [
+      {
+        "id": "spring/1",
+        "origin": "spring",
+        "span": {
+          "subject": "",
+          "floor": "empty",
+          "ceiling": "full"
+        },
+        "at": 1
+      },
+      {
+        "id": "basin/1",
+        "origin": "basin",
+        "span": {
+          "subject": "",
+          "floor": "held",
+          "ceiling": "full"
+        },
+        "at": 2
+      }
+    ],
+    "restsOn": [
+      "reservoir/parent"
+    ],
+    "marks": []
+  },
+  "world": [
+    {
+      "at": "reservoir/parent",
+      "epoch": 1,
+      "seen": [],
+      "restsOn": [],
+      "marks": [
+        {
+          "id": "spring/ceiling",
+          "pole": "ceiling",
+          "reach": "travels",
+          "span": {
+            "subject": "",
+            "floor": "empty",
+            "ceiling": "held"
+          },
+          "at": 1
+        }
+      ]
+    }
+  ],
+  "expected": {
+    "floor": {
+      "subject": "",
+      "floor": "held",
+      "ceiling": "full"
+    },
+    "ceiling": {
+      "subject": "",
+      "floor": "held",
+      "ceiling": "held"
+    },
+    "required": {
+      "subject": "",
+      "floor": "empty",
+      "ceiling": "full"
+    },
+    "signed": {
+      "subject": "",
+      "floor": "empty",
+      "ceiling": "held"
+    },
+    "origins": [
+      {
+        "id": "spring/1",
+        "origin": "spring",
+        "span": {
+          "subject": "",
+          "floor": "empty",
+          "ceiling": "full"
+        },
+        "at": 1
+      },
+      {
+        "id": "basin/1",
+        "origin": "basin",
+        "span": {
+          "subject": "",
+          "floor": "held",
+          "ceiling": "full"
+        },
+        "at": 2
+      }
+    ],
+    "rest": [
+      "reservoir/parent"
+    ],
+    "declaration": {
+      "demand": 1,
+      "limit": 1
+    },
+    "refined": {
+      "at": [
+        "reservoir"
+      ],
+      "epoch": 2,
+      "seen": [
+        {
+          "id": "spring/1",
+          "origin": "spring",
+          "span": {
+            "subject": "",
+            "floor": "empty",
+            "ceiling": "full"
+          },
+          "at": 1
+        },
+        {
+          "id": "basin/1",
+          "origin": "basin",
+          "span": {
+            "subject": "",
+            "floor": "held",
+            "ceiling": "full"
+          },
+          "at": 2
+        }
+      ],
+      "restsOn": [
+        "reservoir/parent"
+      ],
+      "marks": []
+    },
+    "state": "FREE"
+  }
+}

@@ -2,7 +2,7 @@
 
 <p align="center"><img src="../img/price.svg" alt="Two origins on one scale: seller claims 2 to 9 and buyer claims 5 to 12; what they hold together runs from a floor of 5 to a ceiling of 9." width="640"></p>
 
-A claim from one origin is potential; a cell is information only where two independent origins touch it and their intervals meet.
+A claim from one origin is potential; a cell is information only where two named extensional origins touch it and their intervals meet. Named origins do not establish authentication or joint probabilistic independence.
 
 ## Run it
 

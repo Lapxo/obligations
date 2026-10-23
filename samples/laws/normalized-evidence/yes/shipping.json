@@ -1,0 +1,51 @@
+{
+  "view": "normalized-evidence",
+  "model": {
+    "model": "finite-conditional-evidence@1",
+    "truth": {
+      "positive": "present",
+      "negative": "absent"
+    },
+    "sources": [
+      "harbor/a",
+      "harbor/b"
+    ],
+    "configurations": [
+      {
+        "id": "harbor/00",
+        "values": [
+          "0",
+          "0"
+        ]
+      },
+      {
+        "id": "harbor/11",
+        "values": [
+          "1",
+          "1"
+        ]
+      }
+    ],
+    "positive": [
+      "3/4",
+      "1/4"
+    ],
+    "negative": [
+      "1/4",
+      "3/4"
+    ],
+    "referenceSource": "harbor/a"
+  },
+  "policy": {
+    "logarithm": "binary64-log2",
+    "budget": "10000",
+    "minimumPositiveBits": 1e-12
+  },
+  "expected": {
+    "value": 1,
+    "sources": [
+      "harbor/a",
+      "harbor/b"
+    ]
+  }
+}

@@ -17,5 +17,5 @@
     }
   ],
   "model": "binary-M1-ancestor-first-fixed-quota@1",
-  "scope": "Actual Lean rejects each deliberately false equality. This is not a public API/native Bound refusal."
+  "scope": "Actual Lean rejects each deliberately false equality. This is not a public API/native a constraint evaluator refusal."
 }
