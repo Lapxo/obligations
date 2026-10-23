@@ -1,6 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="title">
-<title id="title">2 origins and the bond where they touch</title>
-<path d="M32 17.58 A17 17 0 0 1 32 46.42 A17 17 0 0 1 32 17.58 Z" fill="#2da44e"/>
-<path d="M32 17.58 A17 17 0 1 0 32 46.42" fill="none" stroke="#8c959f" stroke-width="4" stroke-linecap="round"/>
-<path d="M32 17.58 A17 17 0 1 1 32 46.42" fill="none" stroke="#8c959f" stroke-width="4" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-labelledby="t d">
+  <title id="t">Obligations</title>
+  <desc id="d">A ceiling bracket and a floor bracket with a dot pressed against the ceiling: who, between what must hold and what may hold.</desc>
+  <g fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 58V28h104"/>
+    <path d="M132 102v30H28"/>
+  </g>
+  <circle cx="80" cy="54" r="18" fill="#d97706"/>
 </svg>
