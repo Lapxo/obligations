@@ -217,7 +217,7 @@
         "dist/views/spectrum.js": "sha256:41a7cf926fd64d14ef1e73f630778e21597641f9cf40930a77586e7b08468604",
         "dist/views/valuation.d.ts": "sha256:b3e6e9f5bdaba7e3e7b7b0bf54241c1ad86f6299c349b062477def7b9bdfc4d2",
         "dist/views/valuation.js": "sha256:982ffa68c9512832cce698785d1f67816a504b98d1dd05b7c1962dda0584e808",
-        "package.json": "sha256:3f4a3f8fac3fd26a817e40e9a59861f4fd9f565f1a2074d0363a8d7bdbe0d92f",
+        "package.json": "sha256:6bd9a323c7899738b35600d57b0a483d3b83faeee37e53efce084d6db160487f",
         "proofs/authorship-value.md": "sha256:1f6be3f9b0c7942eeef63ea3f9660e4e6cadafac714f7c7a623fe9689660ac9d",
         "proofs/cell-declaration.md": "sha256:1d4dd9cf096589af3e26f3e51e771e92163770b3b50a803054cd910a5cce7978",
         "proofs/cofailure-pairs.json": "sha256:139f4d07df90994510101b3ff45a66515556ece570529d7e74eb68f65c511b5d",
@@ -951,7 +951,7 @@
         "test/wave.test.ts"
       ],
       "expectedTests": 63,
-      "inputsDigest": "sha256:bf6ecef2424afd663743f0085c8065b5faf224f9317d3b2fca90f7c60698490e"
+      "inputsDigest": "sha256:85f0c009aac6e5e41e4e5216e98ad1e8eed0a99dd04793200098a6db33ea8492"
     },
     {
       "region": "views",
@@ -1169,7 +1169,7 @@
         "dist/views/spectrum.js": "sha256:41a7cf926fd64d14ef1e73f630778e21597641f9cf40930a77586e7b08468604",
         "dist/views/valuation.d.ts": "sha256:b3e6e9f5bdaba7e3e7b7b0bf54241c1ad86f6299c349b062477def7b9bdfc4d2",
         "dist/views/valuation.js": "sha256:982ffa68c9512832cce698785d1f67816a504b98d1dd05b7c1962dda0584e808",
-        "package.json": "sha256:3f4a3f8fac3fd26a817e40e9a59861f4fd9f565f1a2074d0363a8d7bdbe0d92f",
+        "package.json": "sha256:6bd9a323c7899738b35600d57b0a483d3b83faeee37e53efce084d6db160487f",
         "proofs/authorship-value.md": "sha256:1f6be3f9b0c7942eeef63ea3f9660e4e6cadafac714f7c7a623fe9689660ac9d",
         "proofs/cell-declaration.md": "sha256:1d4dd9cf096589af3e26f3e51e771e92163770b3b50a803054cd910a5cce7978",
         "proofs/cofailure-pairs.json": "sha256:139f4d07df90994510101b3ff45a66515556ece570529d7e74eb68f65c511b5d",
@@ -1917,7 +1917,7 @@
         "test/vectors.test.ts"
       ],
       "expectedTests": 146,
-      "inputsDigest": "sha256:bf6ecef2424afd663743f0085c8065b5faf224f9317d3b2fca90f7c60698490e"
+      "inputsDigest": "sha256:85f0c009aac6e5e41e4e5216e98ad1e8eed0a99dd04793200098a6db33ea8492"
     },
     {
       "region": "measures",
@@ -2135,7 +2135,7 @@
         "dist/views/spectrum.js": "sha256:41a7cf926fd64d14ef1e73f630778e21597641f9cf40930a77586e7b08468604",
         "dist/views/valuation.d.ts": "sha256:b3e6e9f5bdaba7e3e7b7b0bf54241c1ad86f6299c349b062477def7b9bdfc4d2",
         "dist/views/valuation.js": "sha256:982ffa68c9512832cce698785d1f67816a504b98d1dd05b7c1962dda0584e808",
-        "package.json": "sha256:3f4a3f8fac3fd26a817e40e9a59861f4fd9f565f1a2074d0363a8d7bdbe0d92f",
+        "package.json": "sha256:6bd9a323c7899738b35600d57b0a483d3b83faeee37e53efce084d6db160487f",
         "proofs/authorship-value.md": "sha256:1f6be3f9b0c7942eeef63ea3f9660e4e6cadafac714f7c7a623fe9689660ac9d",
         "proofs/cell-declaration.md": "sha256:1d4dd9cf096589af3e26f3e51e771e92163770b3b50a803054cd910a5cce7978",
         "proofs/cofailure-pairs.json": "sha256:139f4d07df90994510101b3ff45a66515556ece570529d7e74eb68f65c511b5d",
@@ -2891,7 +2891,7 @@
         "test/vectors-measure.test.ts"
       ],
       "expectedTests": 126,
-      "inputsDigest": "sha256:bf6ecef2424afd663743f0085c8065b5faf224f9317d3b2fca90f7c60698490e"
+      "inputsDigest": "sha256:85f0c009aac6e5e41e4e5216e98ad1e8eed0a99dd04793200098a6db33ea8492"
     },
     {
       "region": "foundations",
@@ -3109,7 +3109,7 @@
         "dist/views/spectrum.js": "sha256:41a7cf926fd64d14ef1e73f630778e21597641f9cf40930a77586e7b08468604",
         "dist/views/valuation.d.ts": "sha256:b3e6e9f5bdaba7e3e7b7b0bf54241c1ad86f6299c349b062477def7b9bdfc4d2",
         "dist/views/valuation.js": "sha256:982ffa68c9512832cce698785d1f67816a504b98d1dd05b7c1962dda0584e808",
-        "package.json": "sha256:3f4a3f8fac3fd26a817e40e9a59861f4fd9f565f1a2074d0363a8d7bdbe0d92f",
+        "package.json": "sha256:6bd9a323c7899738b35600d57b0a483d3b83faeee37e53efce084d6db160487f",
         "proofs/authorship-value.md": "sha256:1f6be3f9b0c7942eeef63ea3f9660e4e6cadafac714f7c7a623fe9689660ac9d",
         "proofs/cell-declaration.md": "sha256:1d4dd9cf096589af3e26f3e51e771e92163770b3b50a803054cd910a5cce7978",
         "proofs/cofailure-pairs.json": "sha256:139f4d07df90994510101b3ff45a66515556ece570529d7e74eb68f65c511b5d",
@@ -3844,7 +3844,7 @@
         "test/shared-causes-050.test.ts"
       ],
       "expectedTests": 143,
-      "inputsDigest": "sha256:bf6ecef2424afd663743f0085c8065b5faf224f9317d3b2fca90f7c60698490e"
+      "inputsDigest": "sha256:85f0c009aac6e5e41e4e5216e98ad1e8eed0a99dd04793200098a6db33ea8492"
     },
     {
       "region": "proofs",

@@ -7,7 +7,7 @@ Floors, ceilings, origins and epochs — so disagreement, withdrawal and
 "how many independent sources" are operations, not afterthoughts.</p>
 
 <p align="center">
-<img src="https://img.shields.io/badge/version-0.5.0-" alt="">
+<img src="https://img.shields.io/badge/version-0.5.1-" alt="">
 <img src="https://img.shields.io/badge/dependencies-0-brightgreen" alt="">
 <img src="https://img.shields.io/badge/Lean-sorry--free-blue" alt="">
 <a href="https://doi.org/10.5281/zenodo.21858428"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-" alt=""></a>
