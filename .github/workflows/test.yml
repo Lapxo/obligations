@@ -43,7 +43,14 @@ jobs:
           lake exe cache get
           mkdir -p .lake/build/lib/lean
           printf 'OBLIGATIONS_LEAN=%s/bin/lean\n' "$(lean --print-prefix)" >> "$GITHUB_ENV"
-          printf 'OBLIGATIONS_LEAN_DEPENDENCIES=%s\n' "$(lake env printenv LEAN_PATH)" >> "$GITHUB_ENV"
+          IFS=: read -ra dependencies <<< "$(lake env printenv LEAN_PATH)"
+          proof_path=
+          for dependency in "${dependencies[@]}"; do
+            test -d "$dependency"
+            resolved="$(cd "$dependency" && pwd -P)"
+            proof_path="${proof_path:+$proof_path:}$resolved"
+          done
+          printf 'OBLIGATIONS_LEAN_DEPENDENCIES=%s\n' "$proof_path" >> "$GITHUB_ENV"
       - name: Install the verification instrument
         run: npm install --prefix "$RUNNER_TEMP/obligations-instrument" --no-save --ignore-scripts @lapxo/bound@0.2.6
       - name: Admit signed mathematical declarations
