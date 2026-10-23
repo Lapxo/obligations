@@ -1,0 +1,12 @@
+{
+  "id": "finite-countermodels@1",
+  "title": "Finite analytic countermodels",
+  "primitive": "Existing obligatory cell; no new Cell or authority",
+  "reuses": [
+    "contracts/alterity.json",
+    "contracts/no-scalar-capacity.json",
+    "contracts/shared-causes.json",
+    "contracts/copy-threshold-boundaries.json"
+  ],
+  "scientific": "Every proposition retains the status and hypotheses of the referenced contract. New fixed analytic acceptance vectors are not campaign replication."
+}

@@ -12,13 +12,14 @@ descentCount counts distinct proper descendants in a declared restsOn graph. Ide
 ## Controlled procedures
 unanimityFloor and unanimityThreshold implement the declared T1 special case. With P_k=(1-c)p^k(n-1)^(1-k), F_k=(c+P_k)/(c+P_k+(1-c)(1-p)^k). For nondegenerate parameters, F_(k+1) >= F_k iff p*c >= (1-p-p/(n-1))*P_k. The c=.01,p=.1,n=2 no-sample decreases before k=3; its threshold is 3. dissentExperiment and interestExperiment report conditional counts under explicitly handed generators: xorshift32, nonzero seed and trial count. Their denominators are events and falseEvents, and zero events are unmeasured. Interest is an explicitly handed bias toward one wrong value, not inferred from a missing observation. E3: a school answers truth with probability q, otherwise its own wrong value. These are controlled procedures, never laws or state changes.
 
-## Native publication evidence
-observations, spectrum, unanimity and descent each have yes/no cases in samples/measures/<group>.json and installed-instrument captures in vectors/measures/<group>.cli.json. M/3 has samples/measures/m3.json and vectors/measures/m3.cli.json. Each vector ran on two independent places, repeated the positive reading byte-for-byte and refused its negative by name. State-preservation tests compare all four actual algebraic states before and after measurements.
+## Mathematical verification
+
+Fixed inputs and counterexamples in `samples/measures` and `vectors` exercise the functions directly. The mathematical tests check exact probabilities, declared independence assumptions, numerical domains and preservation of the four algebraic states.
 
 ## Model boundary
 M/3 below is the only reference model. The older descriptive D/commonMass and independence claims are superseded. modelRequired returns unmeasured for an absent model; no measurement silently supplies a causal model. Factor attribution, dissent and probe results are conditional on M/3's handed parameters, not empirical independence certificates.
 
-# obligations 0.4.0 — model M/3 (authoritative contract)
+# Reference conditional model M/3
 
 M/3 is the reference conditional model shipped beside the descriptive measures. Every M/3
 result carries `model=M/3`, its handed parameters and its conditions. The descriptive
@@ -150,7 +151,7 @@ the descriptive 0.4.0 measures and all algebra hashes unchanged.
 
 ## 12. Capacity under a single dominant factor
 
-`capacityBound`, `capacityP0`, `mutualInformation`, and `unanimityNoFactor` use the declared single-dominant-factor model. T is uniform on n >= 2 values. F is independent of T with probability c. On F=1 all witnesses report one W, uniform among values different from T. On F=0 they use independent homogeneous private channels: correct with probability 1-p, otherwise uniform among n-1 wrong values. These hypotheses are handed, never inferred.
+`capacitya constraint evaluator`, `capacityP0`, `mutualInformation`, and `unanimityNoFactor` use the declared single-dominant-factor model. T is uniform on n >= 2 values. F is independent of T with probability c. On F=1 all witnesses report one W, uniform among values different from T. On F=0 they use independent homogeneous private channels: correct with probability 1-p, otherwise uniform among n-1 wrong values. These hypotheses are handed, never inferred.
 
 For every positive k, I(T;V) <= log2(n)-c*log2(n-1). The entropy chain rule gives
 H(T|V) = c*log2(n-1) + (1-c)*H(T|V,F=0) + I(T;F|V).
@@ -194,11 +195,11 @@ Helly is a property of a declared geometric family, not a probabilistic independ
 
 ## 17. Publication and stability
 
-The historical nine publication groups are linked to their contracts, yes/no data and declared Bound 0.1.7 captures in two places. The 0.4.2 operations below require new captures under their selected reader; historical implementation-bound receipts do not cover changed bytes. Validation readers are maintained TypeScript worlds with ordinary modular compilation; no .mjs bundle or private executor ships in this library. Their implementation inventory is retained once by digest. The installed archive must expose the same public exports, preserve the four states, match all published bytes and close native receipts without a private store. Declaring these requirements does not pay them.
+The historical nine publication groups are linked to their contracts, yes/no data and declared a constraint evaluator 0.1.7 captures in two places. The 0.4.2 operations below require new captures under their selected reader; historical implementation-bound receipts do not cover changed bytes. Validation readers are maintained TypeScript worlds with ordinary modular compilation; no .mjs bundle or private executor ships in this library. Their implementation inventory is retained once by digest. The installed archive must expose the same public exports, preserve the four states, match all published bytes and close native receipts without a private store. Declaring these requirements does not pay them.
 
 ## 18. Declared failure bounds
 
-`unionBoundConfidence(failures)` requires distinct nonempty IDs, explicit rational probabilities in [0,1], and nonempty justification references. The caller must establish every failure bound in one probability space. References are retained, not verified. The returned lower bound for all events succeeding is max(0,1−Σp_i), with exact rational arithmetic. The empty family gives 1; Σp_i≥1 gives the trivial bound 0. No independence, truth probability, or algebraic state is inferred.
+`uniona constraint evaluatorConfidence(failures)` requires distinct nonempty IDs, explicit rational probabilities in [0,1], and nonempty justification references. The caller must establish every failure bound in one probability space. References are retained, not verified. The returned lower bound for all events succeeding is max(0,1−Σp_i), with exact rational arithmetic. The empty family gives 1; Σp_i≥1 gives the trivial bound 0. No independence, truth probability, or algebraic state is inferred.
 
 `tolerantCountConfidence(failures,k)` requires a safe integer 0≤k≤m. For k<m it bounds failure by min(1,min_{0≤j≤k}(Σ of the m−j smallest p_i)/(k+1−j)); its exact success lower bound is the complement. For k=m success is certain. For m=3,k=1 and all p_i=1/10 the result is 17/20, not an inferred success rate. The distinct subset-intersection guarantee gives the weaker bound 7/10. Three disjoint paired failures among six events, each pair having probability 1/10, refute the former 4/5 claim: success is 7/10.
 
@@ -206,7 +207,7 @@ These operations compute conditional probability bounds. They select neither a g
 
 ## 19. Declared covering cause
 
-`commonCauseCapacityBound(n,c,q,{logarithm:'binary64-log2'})` requires integer n≥2 and explicit rational c,q in [0,1]. Truth is uniform; the covering-cause indicator is independent of truth; when active, every report copies one symmetric channel with accuracy q. The inactive private channel is unrestricted. Revealing the indicator gives the upper bound log2(n)−c[h(q)+(1−q)log2(n−1)] in approximate bits. Copy count is no input. This is neither finite-sample mutual information nor an achievability claim.
+`commonCauseCapacitya constraint evaluator(n,c,q,{logarithm:'binary64-log2'})` requires integer n≥2 and explicit rational c,q in [0,1]. Truth is uniform; the covering-cause indicator is independent of truth; when active, every report copies one symmetric channel with accuracy q. The inactive private channel is unrestricted. Revealing the indicator gives the upper bound log2(n)−c[h(q)+(1−q)log2(n−1)] in approximate bits. Copy count is no input. This is neither finite-sample mutual information nor an achievability claim.
 
 At n=4,c=1,q=1/4 the bound is exactly zero; q=0 gives log2(4/3), and q=1 gives two bits. Missing q refuses. The operational declaration or detection of activation remains open in identification.model. Unconditioned coincidence does not identify q.
 
@@ -230,7 +231,7 @@ H(X|A) >= H(X|Z)
 I(X;A) <= log2(n) - h2(c) - c*log2(n-1)
 ```
 
-Here h2 is binary entropy, with 0*log2(0)=0. The uncertainty floor and information ceiling follow from this symmetric-channel equality and the declared Markov bottleneck. The reports and aggregation have no additional access to truth or a revealed error/cause indicator. This reuses capacityP0; it neither replaces capacityBound nor changes M/3 or M/4. An error rate alone, an asymmetric channel or the existing private-error model does not establish this ceiling. The distinguishing counterexamples and relation to F1 are in [the conditional lineage contract](../proofs/lineage-ceiling.json).
+Here h2 is binary entropy, with 0*log2(0)=0. The uncertainty floor and information ceiling follow from this symmetric-channel equality and the declared Markov bottleneck. The reports and aggregation have no additional access to truth or a revealed error/cause indicator. This reuses capacityP0; it neither replaces capacitya constraint evaluator nor changes M/3 or M/4. An error rate alone, an asymmetric channel or the existing private-error model does not establish this ceiling. The distinguishing counterexamples and relation to F1 are in [the conditional lineage contract](../proofs/lineage-ceiling.json).
 
 The parameter c denotes the mixture activation or channel crossover specified by the selected model. It is not identified from unanimity without that model, and no equality with the genetic inbreeding coefficient F is asserted. No genetic law follows here.
 

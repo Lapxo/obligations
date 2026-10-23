@@ -1,0 +1,24 @@
+{
+  "id": "reading-forms@1",
+  "statement": "A reading preserves its subject declarations and exposes the information required by its model, numeric policy and consumer operation. Missing inputs remain named; no reading creates authority or a second cell.",
+  "classification": "Design obligations grounded in existing contracts; not a new mathematical uniqueness law",
+  "requirements": "contracts/reading-forms.requirements.json",
+  "reuse": [
+    "contracts/cell-declaration.json",
+    "contracts/similarity-diversity.json",
+    "contracts/decision-refinements.json",
+    "contracts/authorship-value.json",
+    "contracts/declaration-provenance.json",
+    "contracts/extension-lineage-participation.json",
+    "contracts/normalized-evidence.json",
+    "src/lattice/obligatory.ts",
+    "test/support/foundation-reader.ts",
+    "test/support/decision-refinements-reader.ts"
+  ],
+  "acceptance": "Compose admitted public functions and existing finite fixtures, retaining ids and unmeasured statuses; no new public schema validator or estimator",
+  "wireChanges": false,
+  "publicAPIChanges": false,
+  "status": {
+    "scientific": "Design obligations grounded in existing contracts; not a new mathematical uniqueness law"
+  }
+}

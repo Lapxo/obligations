@@ -1,0 +1,48 @@
+{
+  "id": "similarity-diversity@1",
+  "statement": "Maximum order-2 similarity diversity over a finite declared population; exact rational exhaustive-support certificate. The normalized symmetric similarity domain is the domain of the cited common-maximum theorem; no covariance conversion is implicit.",
+  "api": "maximumDiversity",
+  "domain": [
+    "distinct source ids",
+    "symmetric rational matrix",
+    "entries in [0,1]",
+    "diagonal exactly 1",
+    "nonempty population",
+    "declared rational-update budget"
+  ],
+  "result": [
+    "exact maximum rational",
+    "one attained simplex weighting over all original source ids",
+    "enumeration and quadratic certificate",
+    "explicit representative tie rule"
+  ],
+  "unmeasured": [
+    "diversity/similarity-required",
+    "diversity/budget"
+  ],
+  "refusals": [
+    "diversity/source-identity",
+    "diversity/matrix-domain",
+    "diversity/unit-diagonal-required",
+    "diversity/symmetric-similarity-required"
+  ],
+  "doesNotEstablish": [
+    "covariance-to-similarity conversion",
+    "causal independence",
+    "number of shared latent causes",
+    "probability of decision error",
+    "error-optimal voting",
+    "unique optimizer",
+    "admission authority"
+  ],
+  "proof": "proofs/similarity-diversity.md",
+  "theoryTrace": {
+    "finiteCertificate": "written stationary-support and singular-support-reduction proof",
+    "commonMaximumAcrossOrders": "Leinster-Meckes, Entropy 18(3):88 (2016), doi:10.3390/e18030088; cited in received context, not a new paper audit or numerical experiment"
+  },
+  "copyRule": "Copies may receive zero in the chosen optimizer representative, but every original source id remains in parameters and weights. A zero weight does not withdraw a declaration.",
+  "status": {
+    "scientific": "definition and conditioned mathematical properties; deterministic finite acceptance"
+  },
+  "primitive": "A reading over attributed declarations, not a second cell or stored authority"
+}

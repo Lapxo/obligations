@@ -12,6 +12,6 @@ The pairwise union/intersection identity, disjoint additivity and the nonnegativ
 
 ## Public consumption
 
-`finiteRegionMeasure` and type `RegionMeasure` are available through the candidate `@lapxo/obligations/measures` export. The existing subpath remains unchanged. Measurements require an explicit model, unit, finite support and deterministic input-row budget. Topos supplies selector interpretation; Bound applies authority and ceilings.
+`finiteRegionMeasure` and type `RegionMeasure` are available through the candidate `@lapxo/obligations/measures` export. The existing subpath remains unchanged. Measurements require an explicit model, unit, finite support and deterministic input-row budget. a structured-data consumer supplies selector interpretation; a constraint evaluator applies authority and ceilings.
 
 The supplemental reader seals declared inputs and replays finite mathematical cases. Compilation evidence is reused only for the same proof sources and pinned toolchain; it does not claim a new Lean execution during receipt replay. Owner admission and release delivery are separate acts. T2 remains outside this selection.

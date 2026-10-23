@@ -1,0 +1,58 @@
+{
+  "meet": {
+    "pole": "ceiling",
+    "sense": "narrow",
+    "reach": "local",
+    "pays": "origin",
+    "needs": "none",
+    "sign": "+1"
+  },
+  "join": {
+    "pole": "ceiling",
+    "sense": "widen",
+    "reach": "local",
+    "pays": "origin",
+    "needs": "witness",
+    "sign": "+1"
+  },
+  "observe": {
+    "pole": "floor",
+    "sense": "raise",
+    "reach": "local",
+    "pays": "origin",
+    "needs": "none",
+    "sign": "+1|-1"
+  },
+  "sign": {
+    "pole": "ceiling",
+    "sense": "narrow",
+    "reach": "travels",
+    "pays": "origin",
+    "needs": "coverage",
+    "sign": "+1"
+  },
+  "require": {
+    "pole": "floor",
+    "sense": "raise",
+    "reach": "travels",
+    "pays": "origin",
+    "needs": "coverage",
+    "sign": "+1"
+  },
+  "encounter": {
+    "pole": "none",
+    "sense": "count",
+    "reach": "local",
+    "pays": "origin",
+    "needs": "none",
+    "sign": "+1"
+  },
+  "refine": {
+    "pole": "none",
+    "sense": "rescale",
+    "reach": "local",
+    "pays": "origin",
+    "needs": "none",
+    "sign": "+1"
+  }
+}

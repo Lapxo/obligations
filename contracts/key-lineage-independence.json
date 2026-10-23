@@ -1,8 +1,10 @@
 {
   "id": "key-lineage-independence@1",
-  "status": "candidate; not owner-admitted",
+  "status": {
+    "scientific": "interpretation of published definitions with finite countermodels"
+  },
   "classification": "interpretation of published definitions with finite countermodels",
-  "reuses": "contracts/extension-lineage-participation.json",
+  "reuses": [],
   "statement": "Distinct key identifiers or declared lineage labels do not entail factorization of a joint probability law. Threshold authorization and probabilistic independence are separate properties.",
   "observable": "Two key identifiers, any supplied provenance grouping and a declared response domain",
   "countermodels": [
@@ -19,7 +21,7 @@
     "physical control from labels",
     "independence from k-of-n"
   ],
-  "consumer": "Topos threshold and provenance contracts",
+  "consumer": "a structured-data consumer threshold and provenance contracts",
   "formalEvidence": {
     "source": "proofs/lean/Obligations/KeyLineage.lean",
     "theorems": [

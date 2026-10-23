@@ -1,0 +1,106 @@
+{
+  "model": {
+    "model": "finite-declared-joint@1",
+    "truthValues": [
+      "0",
+      "1"
+    ],
+    "sources": [
+      {
+        "id": "shipping/observation/a",
+        "lineage": "shipping/observation/declared-lineage",
+        "values": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "id": "shipping/observation/b",
+        "lineage": "shipping/observation/declared-lineage",
+        "values": [
+          "0",
+          "1"
+        ]
+      }
+    ],
+    "atoms": [
+      {
+        "id": "shipping/00/0",
+        "truth": "0",
+        "values": {
+          "shipping/observation/a": "0",
+          "shipping/observation/b": "0"
+        },
+        "p": "1/4"
+      },
+      {
+        "id": "shipping/00/1",
+        "truth": "1",
+        "values": {
+          "shipping/observation/a": "0",
+          "shipping/observation/b": "0"
+        },
+        "p": "0"
+      },
+      {
+        "id": "shipping/01/0",
+        "truth": "0",
+        "values": {
+          "shipping/observation/a": "0",
+          "shipping/observation/b": "1"
+        },
+        "p": "1/4"
+      },
+      {
+        "id": "shipping/01/1",
+        "truth": "1",
+        "values": {
+          "shipping/observation/a": "0",
+          "shipping/observation/b": "1"
+        },
+        "p": "0"
+      },
+      {
+        "id": "shipping/10/0",
+        "truth": "0",
+        "values": {
+          "shipping/observation/a": "1",
+          "shipping/observation/b": "0"
+        },
+        "p": "0"
+      },
+      {
+        "id": "shipping/10/1",
+        "truth": "1",
+        "values": {
+          "shipping/observation/a": "1",
+          "shipping/observation/b": "0"
+        },
+        "p": "1/4"
+      },
+      {
+        "id": "shipping/11/0",
+        "truth": "0",
+        "values": {
+          "shipping/observation/a": "1",
+          "shipping/observation/b": "1"
+        },
+        "p": "0"
+      },
+      {
+        "id": "shipping/11/1",
+        "truth": "1",
+        "values": {
+          "shipping/observation/a": "1",
+          "shipping/observation/b": "1"
+        },
+        "p": "1/4"
+      }
+    ]
+  },
+  "policy": {
+    "logarithm": "binary64-log2",
+    "budget": "10000"
+  },
+  "claim": "residual-equals-authorship-value"
+}

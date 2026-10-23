@@ -13,7 +13,7 @@
       "meaning": "N independent Bernoulli(p) votes, irrespective of hierarchy"
     }
   ],
-  "classification": "declared finite generative model and exact enumerated counterexamples; no admitted law or native receipt",
+  "classification": "declared finite generative model and exact enumerated counterexamples; no general identification theorem",
   "domain": {
     "N": "positive integer; fixed source slots allocated to leaves; not O4/O5 population resampling",
     "ancestors": "Finite distinct named ancestors, fixed total parent map leaf->ancestor; unused ancestors may be omitted",
@@ -60,7 +60,6 @@
     "impossible": "No causal subgroup recovery, oracle-free reference calibration, conditional identification, or unqualified floor inferred from coincidence; M0 O5 interval guarantees do not certify M1.",
     "null": "Declared full hierarchy, normalized weights, p,c1,c2,joint latent law and fixed-quota sampling. Missing any ->unmeasured at contract level; no new public API rejection claimed."
   },
-  "status": "unsigned-model-preparation",
   "truth": "Binary Y; fixed per cell or any declared prior. Conditional onY correctness bits below are independent ofY; an actual report equalsY when correct and1-Y otherwise. All probabilities/floors refer to oracle correctness, not observable calibration without truth.",
   "value": "M1 is a declared binary two-level ancestral-copy model, not an identified causal explanation. In each cell draw mutually independent Bernoulli(p) ancestor and leaf correctness bits. A fixed named parent map assigns each leaf to one ancestor. Each member first copies its ancestor with probability c1; conditional on not doing so it copies its leaf with probability c2, otherwise draws a fresh Bernoulli(p). The exclusive masses are a=c1, b=(1-c1)c2, d=(1-c1)(1-c2), and conditional correctness is q_l=a A_parent(l)+b B_l+d p. Fixed named leaf weights and the existing prefix-floor allocation define independent conditional binomial counts; majority uses a fair tie. The finite latent threshold functional is not by itself a proved asymptotic limit. Off-diagonal convergence has a proposed conditional variance argument; diagonal transfer and model–implementation proof require new M1 evidence. Parent topology, latent joint law, priority and sampling profile belong to the model identity. Missing them is unmeasured, not a discovered cause. The three original research demands remain open."
 }

@@ -11,7 +11,7 @@ c = ⟨⊥, ⊤, O, ⊑⟩        over L at r
 | formula | law | sentence |
 |---|---|---|
 | `meet(c) = ⊤ ∧ ⋀_{o∈O} span_o` | meet | two bounds on one cell fold by the meet of their form; the order they arrive in never decides |
-| `info(c) ⟺ \|ext(O)\| ≥ 2 ∧ meet(c) ≠ ∅` | encounter | a claim from one origin is potential; a cell is information only where two independent origins touch it and their intervals meet |
+| `info(c) ⟺ \|ext(O)\| ≥ 2 ∧ meet(c) ≠ ∅` | encounter | a claim from one origin is potential; a cell is information only where two named extensional origins touch it and their intervals meet; names alone establish neither authentication nor joint probabilistic independence |
 | `state(c) ∈ {FREE, REQUIRED, FORBIDDEN, CONFLICT}` | four states | one origin is required; two or more that meet within the ceiling are free; that meet outside it are forbidden; that do not meet are in conflict; fewer states collapse two of them |
 | `x ⊨ c ⟺ ⊥ ⊑ x ⊑ ⊤` | carrier | every quantity has two poles, a floor that is required and a ceiling that is permitted, and a cell is the pair |
 | `F(c) = log₂ \|{x ∈ L : ⊥ ≤ x ≤ ⊤}\|` | debit in bits | the debit of a cell is log2 of the states between its floor and ceiling; a closed cell has zero |
@@ -337,7 +337,7 @@ flowchart BT
 | law | kind | view | rests on | sentence | formula | yes | falsifier | reproduced |
 |---|---|---|---|---|---|---|---|---|
 | A0-carrier | axiom | lattice | nothing | every quantity has two poles, a floor that is required and a ceiling that is permitted, and a cell is the pair | `x ⊨ c ⟺ ⊥ ⊑ x ⊑ ⊤` | [yes](../samples/yes/A0-carrier.json) | derived by the reader | not a derivation |
-| A1-encounter | axiom | field | nothing | a claim from one origin is potential; a cell is information only where two independent origins touch it and their intervals meet | `info(c) ⟺ \|ext(O)\| ≥ 2 ∧ meet(c) ≠ ∅` | [yes](../samples/yes/A1-encounter.json) | derived by the reader | not a derivation |
+| A1-encounter | axiom | field | nothing | a claim from one origin is potential; a cell is information only where two named extensional origins touch it and their intervals meet; names alone establish neither authentication nor joint probabilistic independence | `info(c) ⟺ \|ext(O)\| ≥ 2 ∧ meet(c) ≠ ∅` | [yes](../samples/yes/A1-encounter.json) | derived by the reader | not a derivation |
 | A2-meet | axiom | lattice | nothing | two bounds on one cell fold by the meet of their form; the order they arrive in never decides | `meet(c) = ⊤ ∧ ⋀_{o∈O} span_o` | [yes](../samples/yes/A2-meet.json) | derived by the reader | not a derivation |
 | A3-resolution | axiom | chain | nothing | every observation has a scale; hierarchy is resolution; a coordinate's depth is its resolution |  | [yes](../samples/yes/A3-resolution.json) | derived by the reader | not a derivation |
 | A4-epoch | axiom | field | nothing | every claim carries when it holds; order is causal, never a clock | `claim = (o, span, e), e ≺ e′ ⟺ e → e′` | [yes](../samples/yes/A4-epoch.json) | derived by the reader | not a derivation |

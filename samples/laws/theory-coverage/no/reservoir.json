@@ -1,6 +1,0 @@
-{
-  "place": "reservoir",
-  "coverage": "proofs/theory-coverage.json",
-  "promoteT2": true,
-  "promoteMissingReport": false
-}

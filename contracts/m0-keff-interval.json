@@ -22,6 +22,5 @@
     "statistic": "U_t=(sum of discordant unordered member pairs)/choose(N,2)=2X_t(N-X_t)/(N(N-1)); Dhat=mean over whole cells. Shared-member pairs need not be independent."
   },
   "scope": "m0-keff-interval",
-  "status": "unsigned-preparation",
   "value": "Under the declared binary M0 conditional-population-iid member design, finite-cell pair discord has the published population disagreement mean. ForT jointly independent complete cells, the all-pairs average is a bounded whole-cell statistic: its tail is at most min(1,1/(4T epsilon^2)), not a bound withT multiplied by the number of pairs. External coverage-calibrated p,c boxes and their union error budgets propagate through the positive M0 denominator to a conditional outer K_eff enclosure. A denominator that may approach zero has no certified finite upper bound unless a valid external cap is declared. Missing calibration is unmeasured; an incompatible confidence box is not an unconditional rejection of the model. No finite interval establishes causal independence."
 }

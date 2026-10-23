@@ -1,0 +1,8 @@
+{
+  "profile": "analytic-countermodel-reading@1",
+  "place": "reservoir",
+  "provenance": "analytic-fixed-not-campaign",
+  "promoteReportedEvidence": false,
+  "universalNBound": false,
+  "universalScalarImpossibility": false
+}

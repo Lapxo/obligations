@@ -1,0 +1,172 @@
+{
+  "profile": "measure-theorem-claim-map@1",
+  "entries": [
+    {
+      "theorem": "Obligations050.quadratic_mono",
+      "source": "proofs/lean/Obligations/MeasureProperties.lean",
+      "sourceDigest": "sha256:2dca1e2b8f5974b7c26e9eadcd45854cc6930312ac0a51a19eeba2af1b4a64a0",
+      "scope": "q2 pointwise/attained bounds, twin projection identity or common-function factorization",
+      "notProvedHere": [
+        "general six-axiom N domain",
+        "optimizer algorithm kernel correspondence",
+        "entropy/common-part equality in Lean",
+        "common maximum across q; bibliographic theorem"
+      ]
+    },
+    {
+      "theorem": "Obligations050.diversity_bounds",
+      "source": "proofs/lean/Obligations/MeasureProperties.lean",
+      "sourceDigest": "sha256:2dca1e2b8f5974b7c26e9eadcd45854cc6930312ac0a51a19eeba2af1b4a64a0",
+      "scope": "q2 pointwise/attained bounds, twin projection identity or common-function factorization",
+      "notProvedHere": [
+        "general six-axiom N domain",
+        "optimizer algorithm kernel correspondence",
+        "entropy/common-part equality in Lean",
+        "common maximum across q; bibliographic theorem"
+      ]
+    },
+    {
+      "theorem": "Obligations050.diversity_mono",
+      "source": "proofs/lean/Obligations/MeasureProperties.lean",
+      "sourceDigest": "sha256:2dca1e2b8f5974b7c26e9eadcd45854cc6930312ac0a51a19eeba2af1b4a64a0",
+      "scope": "q2 pointwise/attained bounds, twin projection identity or common-function factorization",
+      "notProvedHere": [
+        "general six-axiom N domain",
+        "optimizer algorithm kernel correspondence",
+        "entropy/common-part equality in Lean",
+        "common maximum across q; bibliographic theorem"
+      ]
+    },
+    {
+      "theorem": "Obligations050.twins_projection_identity",
+      "source": "proofs/lean/Obligations/MeasureProperties.lean",
+      "sourceDigest": "sha256:2dca1e2b8f5974b7c26e9eadcd45854cc6930312ac0a51a19eeba2af1b4a64a0",
+      "scope": "q2 pointwise/attained bounds, twin projection identity or common-function factorization",
+      "notProvedHere": [
+        "general six-axiom N domain",
+        "optimizer algorithm kernel correspondence",
+        "entropy/common-part equality in Lean",
+        "common maximum across q; bibliographic theorem"
+      ]
+    },
+    {
+      "theorem": "Obligations050.twins_simplex_preserved",
+      "source": "proofs/lean/Obligations/MeasureProperties.lean",
+      "sourceDigest": "sha256:2dca1e2b8f5974b7c26e9eadcd45854cc6930312ac0a51a19eeba2af1b4a64a0",
+      "scope": "q2 pointwise/attained bounds, twin projection identity or common-function factorization",
+      "notProvedHere": [
+        "general six-axiom N domain",
+        "optimizer algorithm kernel correspondence",
+        "entropy/common-part equality in Lean",
+        "common maximum across q; bibliographic theorem"
+      ]
+    },
+    {
+      "theorem": "Obligations050.attained_maximum_bound",
+      "source": "proofs/lean/Obligations/MeasureProperties.lean",
+      "sourceDigest": "sha256:2dca1e2b8f5974b7c26e9eadcd45854cc6930312ac0a51a19eeba2af1b4a64a0",
+      "scope": "q2 pointwise/attained bounds, twin projection identity or common-function factorization",
+      "notProvedHere": [
+        "general six-axiom N domain",
+        "optimizer algorithm kernel correspondence",
+        "entropy/common-part equality in Lean",
+        "common maximum across q; bibliographic theorem"
+      ]
+    },
+    {
+      "theorem": "Obligations050.common_factors_through_projection",
+      "source": "proofs/lean/Obligations/MeasureProperties.lean",
+      "sourceDigest": "sha256:2dca1e2b8f5974b7c26e9eadcd45854cc6930312ac0a51a19eeba2af1b4a64a0",
+      "scope": "q2 pointwise/attained bounds, twin projection identity or common-function factorization",
+      "notProvedHere": [
+        "general six-axiom N domain",
+        "optimizer algorithm kernel correspondence",
+        "entropy/common-part equality in Lean",
+        "common maximum across q; bibliographic theorem"
+      ]
+    },
+    {
+      "theorem": "Obligations050.KL.reindex",
+      "source": "proofs/lean/Obligations/KLProperties.lean",
+      "sourceDigest": "sha256:17a4970503f25cdc9d1799ec95c5d8d3e39b74462a9467ed32677f74b94352d1",
+      "scope": "finite full-support KL/common reference",
+      "notProvedHere": [
+        "general six-axiom N domain",
+        "optimizer algorithm kernel correspondence",
+        "entropy/common-part equality in Lean",
+        "common maximum across q; bibliographic theorem"
+      ]
+    },
+    {
+      "theorem": "Obligations050.KL.product_log",
+      "source": "proofs/lean/Obligations/KLProperties.lean",
+      "sourceDigest": "sha256:17a4970503f25cdc9d1799ec95c5d8d3e39b74462a9467ed32677f74b94352d1",
+      "scope": "finite full-support KL/common reference",
+      "notProvedHere": [
+        "general six-axiom N domain",
+        "optimizer algorithm kernel correspondence",
+        "entropy/common-part equality in Lean",
+        "common maximum across q; bibliographic theorem"
+      ]
+    },
+    {
+      "theorem": "Obligations050.KL.independent_product",
+      "source": "proofs/lean/Obligations/KLProperties.lean",
+      "sourceDigest": "sha256:17a4970503f25cdc9d1799ec95c5d8d3e39b74462a9467ed32677f74b94352d1",
+      "scope": "finite full-support KL/common reference",
+      "notProvedHere": [
+        "general six-axiom N domain",
+        "optimizer algorithm kernel correspondence",
+        "entropy/common-part equality in Lean",
+        "common maximum across q; bibliographic theorem"
+      ]
+    },
+    {
+      "theorem": "Obligations050.KL.common_reference_add",
+      "source": "proofs/lean/Obligations/KLProperties.lean",
+      "sourceDigest": "sha256:17a4970503f25cdc9d1799ec95c5d8d3e39b74462a9467ed32677f74b94352d1",
+      "scope": "finite full-support KL/common reference",
+      "notProvedHere": [
+        "general six-axiom N domain",
+        "optimizer algorithm kernel correspondence",
+        "entropy/common-part equality in Lean",
+        "common maximum across q; bibliographic theorem"
+      ]
+    },
+    {
+      "theorem": "Obligations050.KL.normalized_identical_blocks",
+      "source": "proofs/lean/Obligations/KLProperties.lean",
+      "sourceDigest": "sha256:17a4970503f25cdc9d1799ec95c5d8d3e39b74462a9467ed32677f74b94352d1",
+      "scope": "finite full-support KL/common reference",
+      "notProvedHere": [
+        "general six-axiom N domain",
+        "optimizer algorithm kernel correspondence",
+        "entropy/common-part equality in Lean",
+        "common maximum across q; bibliographic theorem"
+      ]
+    },
+    {
+      "theorem": "Obligations050.KL.bounded_blocks",
+      "source": "proofs/lean/Obligations/KLProperties.lean",
+      "sourceDigest": "sha256:17a4970503f25cdc9d1799ec95c5d8d3e39b74462a9467ed32677f74b94352d1",
+      "scope": "finite full-support KL/common reference",
+      "notProvedHere": [
+        "general six-axiom N domain",
+        "optimizer algorithm kernel correspondence",
+        "entropy/common-part equality in Lean",
+        "common maximum across q; bibliographic theorem"
+      ]
+    }
+  ],
+  "bibliographicOnly": [
+    {
+      "claim": "common maximum across diversity orders",
+      "doi": "10.3390/e18030088"
+    },
+    {
+      "claim": "premium equals residual under valuation class",
+      "doi": "10.5281/zenodo.21858428",
+      "reference": "Theorem2.8"
+    }
+  ]
+}

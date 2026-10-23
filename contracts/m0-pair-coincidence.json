@@ -1,6 +1,5 @@
 {
   "scope": "m0-pair-coincidence",
   "form": "statement",
-  "status": "unsigned-preparation",
   "value": "Exact M0 independent-Bernoulli expectation gives R2=p^2+(1-p)^2+2c^2 p(1-p) sum w^2 for normalized declared shares; this identity is checked generally in Lean by expect_quadratic and pair_coincidence. Triple agreement satisfies R3=(3R2-1)/2 and adds no independent equation. Population agreement is not majority error or causal identification. Finite distinct-member sampling needs gamma_N, and observed data still need calibration, justified reference and uncertainty."
 }

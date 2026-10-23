@@ -1,6 +1,8 @@
 {
   "id": "key-lineage-independence@1",
-  "status": "candidate; not admitted",
+  "status": {
+    "scientific": "existing fixed acceptance and proof-source record; hypotheses unchanged"
+  },
   "contract": "contracts/key-lineage-independence.json",
   "contractDigest": "sha256:ee9adea04812f098980ff3df96e3fed075fdec85fc50e9c831071c071875730a",
   "sourceDigest": "sha256:d726f52f4ee4f2c273676bc087d276764aba904c324cbd9ce26e18f981fa94ec",

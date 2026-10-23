@@ -1,0 +1,73 @@
+{
+  "id": "shared-causes@1",
+  "status": {
+    "scientific": "conditional interpretation and finite analytic countermodels"
+  },
+  "primitive": "Readings of attributed declarations under a named model; no second cell, estimator or authority evaluator",
+  "statement": "Known-incidence population identification, indistinguishability and similarity diversity are separate readings. No latent cause count is inferred from a source count, a pair matrix or a key/lineage label.",
+  "reuse": [
+    "measures/identifyM3",
+    "measures/marginalInformation",
+    "measures/maximumDiversity",
+    "measures/rational",
+    "contracts/extension-lineage-participation.json",
+    "contracts/key-lineage-independence.json"
+  ],
+  "families": {
+    "M3": "Declared shared failure-factor incidence and oracle population moments; full-column-rank and positive correctness required; singleton/private decomposition unresolved",
+    "T5": "Received latent-signal copy/noise summary; not the M3 model. Unknown-incidence recovery and nondegeneracy are not established by n>=2L or by M3 acceptance.",
+    "finiteCountermodels": "Exact hand-specified probability tables; not a rerun of the campaign or an empirical causal inference"
+  },
+  "acceptance": [
+    "known M3 incidence recovers existing exact parameters without finding the incidence",
+    "rank deficiency persists despite four sources and two declared factors",
+    "two laws have identical conditional pair marginals and different total information",
+    "private/singleton representations share moments and retain unresolved decomposition",
+    "one nondegenerate shared binary channel has normalized pair diversity 8/5 > declared shared count 1"
+  ],
+  "refusals": [
+    "shared-causes/cardinality-not-identification",
+    "shared-causes/private-singleton-unresolved",
+    "shared-causes/model-family-required",
+    "shared-causes/T5-evidence-not-verified"
+  ],
+  "doesNotEstablish": [
+    "T5 global identifiability",
+    "causal recovery from covariance",
+    "a bound D_max<=L",
+    "a universal information bound from pair similarity",
+    "private versus singleton cause recovery",
+    "total cause count",
+    "authority or independent physical control"
+  ],
+  "open": [
+    "unknown-incidence-identification",
+    "latent-noise-nondegeneracy-outside-declared-model",
+    "T5-archive-verification-not-performed"
+  ],
+  "informationBound": {
+    "state": "conditional-law",
+    "statement": "I(Y;X)<=I(Y;S_1,...,S_L)<=sum_l I(Y;S_l); equals L*I_S only for a declared common signal information",
+    "conditions": [
+      "Y -> (S_1,...,S_L) -> X is a declared Markov channel",
+      "Signals are mutually independent conditioned on Y",
+      "Finite variables and one joint prior",
+      "Equal I(Y;S_l) is needed for the L*I_S abbreviation"
+    ],
+    "proof": "proofs/shared-causes.md#conditional-information-bound",
+    "formalization": "written Shannon/data-processing derivation, not a Lean theorem"
+  },
+  "upperBoundCountermodel": {
+    "state": "refuted",
+    "vector": "vectors/laws/finite-countermodels.json#latent-two-signals",
+    "scope": "New exact three-source/two-signal model; not the missing received1.52/1.60 archive"
+  },
+  "lowerBound": {
+    "state": "evidence",
+    "source": {
+      "status": "unavailable",
+      "cause": "original-study-artifact-unavailable"
+    },
+    "guarantee": false
+  }
+}

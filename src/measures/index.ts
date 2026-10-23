@@ -36,3 +36,8 @@ export {marginalInformation} from './marginal-information.ts';
 export type {MarginalSource,JointAtom,MarginalModel} from './marginal-information.ts';
 export {finiteRegionMeasure} from './region-measure.ts';
 export type {RegionMeasure} from './region-measure.ts';
+export {authorshipValue} from './authorship-value.ts';
+export {maximumDiversity} from './diversity.ts';
+export type {SimilarityModel,DiversityPolicy} from './diversity.ts';
+export {normalizedEvidence} from './evidence.ts';
+export type {ConditionalEvidence,EvidencePolicy} from './evidence.ts';

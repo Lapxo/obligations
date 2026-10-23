@@ -1,0 +1,146 @@
+{
+  "profile": "foundation-reading@1",
+  "kind": "cell-declaration",
+  "levels": [
+    "off",
+    "queued",
+    "sent"
+  ],
+  "resolution": 1,
+  "cell": {
+    "at": "shipping/reading",
+    "epoch": 2,
+    "seen": [
+      {
+        "id": "inlet/1",
+        "origin": "inlet",
+        "span": {
+          "subject": "",
+          "floor": "off",
+          "ceiling": "sent"
+        },
+        "at": 1
+      },
+      {
+        "id": "outlet/1",
+        "origin": "outlet",
+        "span": {
+          "subject": "",
+          "floor": "queued",
+          "ceiling": "sent"
+        },
+        "at": 2
+      }
+    ],
+    "restsOn": [
+      "shipping/parent"
+    ],
+    "marks": []
+  },
+  "world": [
+    {
+      "at": "shipping/parent",
+      "epoch": 1,
+      "seen": [],
+      "restsOn": [],
+      "marks": [
+        {
+          "id": "inlet/ceiling",
+          "pole": "ceiling",
+          "reach": "travels",
+          "span": {
+            "subject": "",
+            "floor": "off",
+            "ceiling": "queued"
+          },
+          "at": 1,
+          "widens": "declared-local-witness"
+        }
+      ]
+    }
+  ],
+  "expected": {
+    "floor": {
+      "subject": "",
+      "floor": "queued",
+      "ceiling": "sent"
+    },
+    "ceiling": {
+      "subject": "",
+      "floor": "queued",
+      "ceiling": "queued"
+    },
+    "required": {
+      "subject": "",
+      "floor": "off",
+      "ceiling": "sent"
+    },
+    "signed": {
+      "subject": "",
+      "floor": "off",
+      "ceiling": "queued"
+    },
+    "origins": [
+      {
+        "id": "inlet/1",
+        "origin": "inlet",
+        "span": {
+          "subject": "",
+          "floor": "off",
+          "ceiling": "sent"
+        },
+        "at": 1
+      },
+      {
+        "id": "outlet/1",
+        "origin": "outlet",
+        "span": {
+          "subject": "",
+          "floor": "queued",
+          "ceiling": "sent"
+        },
+        "at": 2
+      }
+    ],
+    "rest": [
+      "shipping/parent"
+    ],
+    "declaration": {
+      "demand": 1,
+      "limit": 1
+    },
+    "refined": {
+      "at": [
+        "shipping"
+      ],
+      "epoch": 2,
+      "seen": [
+        {
+          "id": "inlet/1",
+          "origin": "inlet",
+          "span": {
+            "subject": "",
+            "floor": "off",
+            "ceiling": "sent"
+          },
+          "at": 1
+        },
+        {
+          "id": "outlet/1",
+          "origin": "outlet",
+          "span": {
+            "subject": "",
+            "floor": "queued",
+            "ceiling": "sent"
+          },
+          "at": 2
+        }
+      ],
+      "restsOn": [
+        "shipping/parent"
+      ],
+      "marks": []
+    },
+    "state": "FREE"
+  }
+}

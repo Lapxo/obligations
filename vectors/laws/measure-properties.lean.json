@@ -1,0 +1,78 @@
+{
+  "profile": "measure-kernel-record@1",
+  "toolchain": "leanprover/lean4:v4.19.0",
+  "mathlibRevision": "c44e0c8ee63ca166450922a373c7409c5d26b00b",
+  "sources": [
+    {
+      "source": "proofs/lean/Obligations/MeasureProperties.lean",
+      "sourceSHA256": "sha256:2dca1e2b8f5974b7c26e9eadcd45854cc6930312ac0a51a19eeba2af1b4a64a0",
+      "compilerExitCode": 0,
+      "stdout": "'Obligations050.quadratic_mono' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Obligations050.diversity_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Obligations050.diversity_mono' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Obligations050.twins_projection_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Obligations050.twins_simplex_preserved' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Obligations050.attained_maximum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Obligations050.common_factors_through_projection' does not depend on any axioms\n",
+      "stderr": "",
+      "theorems": [
+        "Obligations050.quadratic_mono",
+        "Obligations050.diversity_bounds",
+        "Obligations050.diversity_mono",
+        "Obligations050.twins_projection_identity",
+        "Obligations050.twins_simplex_preserved",
+        "Obligations050.attained_maximum_bound",
+        "Obligations050.common_factors_through_projection"
+      ],
+      "allowedAxioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "source": "proofs/lean/Obligations/KLProperties.lean",
+      "sourceSHA256": "sha256:17a4970503f25cdc9d1799ec95c5d8d3e39b74462a9467ed32677f74b94352d1",
+      "compilerExitCode": 0,
+      "stdout": "'Obligations050.KL.reindex' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Obligations050.KL.product_log' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Obligations050.KL.independent_product' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Obligations050.KL.common_reference_add' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Obligations050.KL.normalized_identical_blocks' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Obligations050.KL.bounded_blocks' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "theorems": [
+        "Obligations050.KL.reindex",
+        "Obligations050.KL.product_log",
+        "Obligations050.KL.independent_product",
+        "Obligations050.KL.common_reference_add",
+        "Obligations050.KL.normalized_identical_blocks",
+        "Obligations050.KL.bounded_blocks"
+      ],
+      "allowedAxioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "negatives": [
+    {
+      "name": "zero-reference",
+      "status": 1,
+      "stdout": "zero-reference.lean:2:27: error: unsolved goals\n⊢ False\n",
+      "stderr": "",
+      "source": "import Mathlib.Data.Real.Basic\nexample : ((1:ℝ)*0)/0=1 := by norm_num\n",
+      "stdoutProjection": {
+        "profile": "compiler-location-basename@1",
+        "rawOutputSHA256": "sha256:7021640af5df91aef13b0a9b1afadeb1546d175acd2edb64fe80ea5672364ce3",
+        "scope": "Only the local absolute temporary path is omitted; source basename, line, column and refusal remain."
+      }
+    },
+    {
+      "name": "extra-axiom",
+      "status": 0,
+      "stdout": "'badProof' depends on axioms: [forbiddenWitness]\n",
+      "stderr": "",
+      "source": "import Mathlib.Data.Real.Basic\naxiom forbiddenWitness : False\ntheorem badProof : False := forbiddenWitness\n#print axioms badProof\n",
+      "stdoutProjection": {
+        "profile": "compiler-location-basename@1",
+        "rawOutputSHA256": "sha256:d08dbf2338b57ac3593b246516eb608df6f6c6b55551305507a2f4d0fc75f4e9",
+        "scope": "Only the local absolute temporary path is omitted; source basename, line, column and refusal remain."
+      }
+    }
+  ],
+  "sourceInterpretation": "Kernel output is recorded with exact source digest; the bounded native reader audits these records. It does not infer absent hypotheses, claim a new paper proof or authenticate itself.",
+  "newAxiomsAccepted": 0,
+  "theoremCount": 13,
+  "experiments": 0
+}

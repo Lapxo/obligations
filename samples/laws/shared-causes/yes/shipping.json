@@ -1,0 +1,754 @@
+{
+  "profile": "shared-cause-boundaries@1",
+  "request": "conditional-boundaries",
+  "modelFamily": "declared-M3-and-finite-countermodels@1",
+  "policy": {
+    "budget": "10000"
+  },
+  "known": {
+    "witnesses": [
+      {
+        "id": "harbor/a",
+        "correct": "4/5"
+      },
+      {
+        "id": "harbor/b",
+        "correct": "3/5"
+      },
+      {
+        "id": "harbor/c",
+        "correct": "3/4"
+      }
+    ],
+    "factors": [
+      {
+        "id": "harbor/ab",
+        "members": [
+          "harbor/a",
+          "harbor/b"
+        ]
+      },
+      {
+        "id": "harbor/bc",
+        "members": [
+          "harbor/b",
+          "harbor/c"
+        ]
+      }
+    ],
+    "pairs": [
+      {
+        "a": "harbor/a",
+        "b": "harbor/b",
+        "correctTogether": "3/5"
+      },
+      {
+        "a": "harbor/b",
+        "b": "harbor/c",
+        "correctTogether": "3/5"
+      },
+      {
+        "a": "harbor/a",
+        "b": "harbor/c",
+        "correctTogether": "3/5"
+      }
+    ]
+  },
+  "rankDeficient": {
+    "witnesses": [
+      {
+        "id": "harbor/u",
+        "correct": "1/4"
+      },
+      {
+        "id": "harbor/v",
+        "correct": "1/4"
+      },
+      {
+        "id": "harbor/w",
+        "correct": "1/4"
+      },
+      {
+        "id": "harbor/z",
+        "correct": "1/4"
+      }
+    ],
+    "factors": [
+      {
+        "id": "harbor/factor-1",
+        "members": [
+          "harbor/u",
+          "harbor/v",
+          "harbor/w",
+          "harbor/z"
+        ]
+      },
+      {
+        "id": "harbor/factor-2",
+        "members": [
+          "harbor/u",
+          "harbor/v",
+          "harbor/w",
+          "harbor/z"
+        ]
+      }
+    ],
+    "pairs": [
+      {
+        "a": "harbor/u",
+        "b": "harbor/v",
+        "correctTogether": "1/4"
+      },
+      {
+        "a": "harbor/u",
+        "b": "harbor/w",
+        "correctTogether": "1/4"
+      },
+      {
+        "a": "harbor/u",
+        "b": "harbor/z",
+        "correctTogether": "1/4"
+      },
+      {
+        "a": "harbor/v",
+        "b": "harbor/w",
+        "correctTogether": "1/4"
+      },
+      {
+        "a": "harbor/v",
+        "b": "harbor/z",
+        "correctTogether": "1/4"
+      },
+      {
+        "a": "harbor/w",
+        "b": "harbor/z",
+        "correctTogether": "1/4"
+      }
+    ]
+  },
+  "samePairs": {
+    "laws": [
+      {
+        "model": "finite-declared-joint@1",
+        "truthValues": [
+          "0",
+          "1"
+        ],
+        "sources": [
+          {
+            "id": "harbor/a",
+            "lineage": "harbor/declared-provenance",
+            "values": [
+              "0",
+              "1"
+            ]
+          },
+          {
+            "id": "harbor/b",
+            "lineage": "harbor/declared-provenance",
+            "values": [
+              "0",
+              "1"
+            ]
+          },
+          {
+            "id": "harbor/c",
+            "lineage": "harbor/declared-provenance",
+            "values": [
+              "0",
+              "1"
+            ]
+          }
+        ],
+        "atoms": [
+          {
+            "id": "harbor/0/000",
+            "truth": "0",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "0",
+              "harbor/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/0/001",
+            "truth": "0",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "0",
+              "harbor/c": "1"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/0/010",
+            "truth": "0",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "1",
+              "harbor/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/0/011",
+            "truth": "0",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "1",
+              "harbor/c": "1"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/0/100",
+            "truth": "0",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "0",
+              "harbor/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/0/101",
+            "truth": "0",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "0",
+              "harbor/c": "1"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/0/110",
+            "truth": "0",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "1",
+              "harbor/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/0/111",
+            "truth": "0",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "1",
+              "harbor/c": "1"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/1/000",
+            "truth": "1",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "0",
+              "harbor/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/1/001",
+            "truth": "1",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "0",
+              "harbor/c": "1"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/1/010",
+            "truth": "1",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "1",
+              "harbor/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/1/011",
+            "truth": "1",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "1",
+              "harbor/c": "1"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/1/100",
+            "truth": "1",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "0",
+              "harbor/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/1/101",
+            "truth": "1",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "0",
+              "harbor/c": "1"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/1/110",
+            "truth": "1",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "1",
+              "harbor/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "harbor/1/111",
+            "truth": "1",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "1",
+              "harbor/c": "1"
+            },
+            "p": "1/16"
+          }
+        ]
+      },
+      {
+        "model": "finite-declared-joint@1",
+        "truthValues": [
+          "0",
+          "1"
+        ],
+        "sources": [
+          {
+            "id": "harbor/a",
+            "lineage": "harbor/declared-provenance",
+            "values": [
+              "0",
+              "1"
+            ]
+          },
+          {
+            "id": "harbor/b",
+            "lineage": "harbor/declared-provenance",
+            "values": [
+              "0",
+              "1"
+            ]
+          },
+          {
+            "id": "harbor/c",
+            "lineage": "harbor/declared-provenance",
+            "values": [
+              "0",
+              "1"
+            ]
+          }
+        ],
+        "atoms": [
+          {
+            "id": "harbor/0/000",
+            "truth": "0",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "0",
+              "harbor/c": "0"
+            },
+            "p": "1/8"
+          },
+          {
+            "id": "harbor/0/001",
+            "truth": "0",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "0",
+              "harbor/c": "1"
+            },
+            "p": "0"
+          },
+          {
+            "id": "harbor/0/010",
+            "truth": "0",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "1",
+              "harbor/c": "0"
+            },
+            "p": "0"
+          },
+          {
+            "id": "harbor/0/011",
+            "truth": "0",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "1",
+              "harbor/c": "1"
+            },
+            "p": "1/8"
+          },
+          {
+            "id": "harbor/0/100",
+            "truth": "0",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "0",
+              "harbor/c": "0"
+            },
+            "p": "0"
+          },
+          {
+            "id": "harbor/0/101",
+            "truth": "0",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "0",
+              "harbor/c": "1"
+            },
+            "p": "1/8"
+          },
+          {
+            "id": "harbor/0/110",
+            "truth": "0",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "1",
+              "harbor/c": "0"
+            },
+            "p": "1/8"
+          },
+          {
+            "id": "harbor/0/111",
+            "truth": "0",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "1",
+              "harbor/c": "1"
+            },
+            "p": "0"
+          },
+          {
+            "id": "harbor/1/000",
+            "truth": "1",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "0",
+              "harbor/c": "0"
+            },
+            "p": "0"
+          },
+          {
+            "id": "harbor/1/001",
+            "truth": "1",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "0",
+              "harbor/c": "1"
+            },
+            "p": "1/8"
+          },
+          {
+            "id": "harbor/1/010",
+            "truth": "1",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "1",
+              "harbor/c": "0"
+            },
+            "p": "1/8"
+          },
+          {
+            "id": "harbor/1/011",
+            "truth": "1",
+            "values": {
+              "harbor/a": "0",
+              "harbor/b": "1",
+              "harbor/c": "1"
+            },
+            "p": "0"
+          },
+          {
+            "id": "harbor/1/100",
+            "truth": "1",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "0",
+              "harbor/c": "0"
+            },
+            "p": "1/8"
+          },
+          {
+            "id": "harbor/1/101",
+            "truth": "1",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "0",
+              "harbor/c": "1"
+            },
+            "p": "0"
+          },
+          {
+            "id": "harbor/1/110",
+            "truth": "1",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "1",
+              "harbor/c": "0"
+            },
+            "p": "0"
+          },
+          {
+            "id": "harbor/1/111",
+            "truth": "1",
+            "values": {
+              "harbor/a": "1",
+              "harbor/b": "1",
+              "harbor/c": "1"
+            },
+            "p": "1/8"
+          }
+        ]
+      }
+    ],
+    "policy": {
+      "logarithm": "binary64-log2",
+      "budget": "100000"
+    }
+  },
+  "privateSingleton": {
+    "withoutSingletons": {
+      "witnesses": [
+        {
+          "id": "harbor/a",
+          "correct": "3/4"
+        },
+        {
+          "id": "harbor/b",
+          "correct": "3/4"
+        }
+      ],
+      "factors": [],
+      "pairs": [
+        {
+          "a": "harbor/a",
+          "b": "harbor/b",
+          "correctTogether": "9/16"
+        }
+      ]
+    },
+    "withSingletons": {
+      "witnesses": [
+        {
+          "id": "harbor/a",
+          "correct": "3/4"
+        },
+        {
+          "id": "harbor/b",
+          "correct": "3/4"
+        }
+      ],
+      "factors": [
+        {
+          "id": "harbor/singleton-0",
+          "members": [
+            "harbor/a"
+          ]
+        },
+        {
+          "id": "harbor/singleton-1",
+          "members": [
+            "harbor/b"
+          ]
+        }
+      ],
+      "pairs": [
+        {
+          "a": "harbor/a",
+          "b": "harbor/b",
+          "correctTogether": "9/16"
+        }
+      ]
+    }
+  },
+  "sharedChannel": {
+    "model": "binary-shared-channel@1",
+    "sources": [
+      "harbor/a",
+      "harbor/b"
+    ],
+    "signals": [
+      {
+        "id": "harbor/shared-signal",
+        "members": [
+          "harbor/a",
+          "harbor/b"
+        ]
+      }
+    ],
+    "truthPrior": "1/2",
+    "latentAccuracy": "3/4",
+    "noiseFlip": "1/4",
+    "similarityConversion": "unconditional-centered-fair-sign-correlation@1",
+    "atoms": [
+      {
+        "truth": 0,
+        "signal": 0,
+        "values": [
+          0,
+          0
+        ],
+        "p": "27/128"
+      },
+      {
+        "truth": 0,
+        "signal": 0,
+        "values": [
+          0,
+          1
+        ],
+        "p": "9/128"
+      },
+      {
+        "truth": 0,
+        "signal": 0,
+        "values": [
+          1,
+          0
+        ],
+        "p": "9/128"
+      },
+      {
+        "truth": 0,
+        "signal": 0,
+        "values": [
+          1,
+          1
+        ],
+        "p": "3/128"
+      },
+      {
+        "truth": 0,
+        "signal": 1,
+        "values": [
+          0,
+          0
+        ],
+        "p": "1/128"
+      },
+      {
+        "truth": 0,
+        "signal": 1,
+        "values": [
+          0,
+          1
+        ],
+        "p": "3/128"
+      },
+      {
+        "truth": 0,
+        "signal": 1,
+        "values": [
+          1,
+          0
+        ],
+        "p": "3/128"
+      },
+      {
+        "truth": 0,
+        "signal": 1,
+        "values": [
+          1,
+          1
+        ],
+        "p": "9/128"
+      },
+      {
+        "truth": 1,
+        "signal": 0,
+        "values": [
+          0,
+          0
+        ],
+        "p": "9/128"
+      },
+      {
+        "truth": 1,
+        "signal": 0,
+        "values": [
+          0,
+          1
+        ],
+        "p": "3/128"
+      },
+      {
+        "truth": 1,
+        "signal": 0,
+        "values": [
+          1,
+          0
+        ],
+        "p": "3/128"
+      },
+      {
+        "truth": 1,
+        "signal": 0,
+        "values": [
+          1,
+          1
+        ],
+        "p": "1/128"
+      },
+      {
+        "truth": 1,
+        "signal": 1,
+        "values": [
+          0,
+          0
+        ],
+        "p": "3/128"
+      },
+      {
+        "truth": 1,
+        "signal": 1,
+        "values": [
+          0,
+          1
+        ],
+        "p": "9/128"
+      },
+      {
+        "truth": 1,
+        "signal": 1,
+        "values": [
+          1,
+          0
+        ],
+        "p": "9/128"
+      },
+      {
+        "truth": 1,
+        "signal": 1,
+        "values": [
+          1,
+          1
+        ],
+        "p": "27/128"
+      }
+    ],
+    "diversityPolicy": {
+      "budget": "10000"
+    }
+  },
+  "scope": {
+    "unknownIncidenceIdentification": "open"
+  }
+}

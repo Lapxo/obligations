@@ -38,14 +38,6 @@
     "expectedState": "CONFLICT",
     "meaning": "Swapping claim arrival cannot resolve an empty meet. Choosing either branch can discard the truth in one admissible assignment; this does not establish a normative rule without the truth-candidate hypothesis."
   },
-  "L6": {
-    "references": [
-      "test/measures/t12-capacity.test.ts",
-      "src/measures/capacity.ts"
-    ],
-    "meaning": "Existing joint-table test proves deterministic copies of one observed symbol have identical mutual information for copies 1,2,20. T12 is an upper bound under uniform truth, independent covering indicator and a handed symmetric active channel; no partial-governance generalization.",
-    "proofUnderDeclaredConditions": "For truth T and independent covering indicator C, I(T;Y) <= I(T;Y,C) = (1-c) I(T;Y|C=0) + c I(T;Y|C=1). The first conditional information is at most log2(n); the copied symmetric active symbol has conditional entropy h(q)+(1-q)log2(n-1), uniform marginal and information log2(n) minus that entropy. Combining terms gives the T12 bound; a deterministic injective replication of Y preserves its information. No achievability or private-channel model follows."
-  },
   "L7": {
     "n": 2,
     "c": 0.5,

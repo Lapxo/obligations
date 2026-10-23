@@ -1,5 +1,5 @@
 {
-  "captureMeaning": "Actual Lean rejection of each false equality/inequality, not new public API or native Bound refusal.",
+  "captureMeaning": "Actual Lean rejection of each false equality/inequality, not new public API or native a constraint evaluator refusal.",
   "cases": [
     {
       "falseClaim": "The off-diagonal squared-gap bound remains valid with zero gap; actual loss difference1/2 exceeds0.",

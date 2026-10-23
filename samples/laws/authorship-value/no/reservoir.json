@@ -1,0 +1,106 @@
+{
+  "model": {
+    "model": "finite-declared-joint@1",
+    "truthValues": [
+      "0",
+      "1"
+    ],
+    "sources": [
+      {
+        "id": "reservoir/source/a",
+        "lineage": "reservoir/source/declared-lineage",
+        "values": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "id": "reservoir/source/b",
+        "lineage": "reservoir/source/declared-lineage",
+        "values": [
+          "0",
+          "1"
+        ]
+      }
+    ],
+    "atoms": [
+      {
+        "id": "reservoir/00/0",
+        "truth": "0",
+        "values": {
+          "reservoir/source/a": "0",
+          "reservoir/source/b": "0"
+        },
+        "p": "1/4"
+      },
+      {
+        "id": "reservoir/00/1",
+        "truth": "1",
+        "values": {
+          "reservoir/source/a": "0",
+          "reservoir/source/b": "0"
+        },
+        "p": "0"
+      },
+      {
+        "id": "reservoir/01/0",
+        "truth": "0",
+        "values": {
+          "reservoir/source/a": "0",
+          "reservoir/source/b": "1"
+        },
+        "p": "1/4"
+      },
+      {
+        "id": "reservoir/01/1",
+        "truth": "1",
+        "values": {
+          "reservoir/source/a": "0",
+          "reservoir/source/b": "1"
+        },
+        "p": "0"
+      },
+      {
+        "id": "reservoir/10/0",
+        "truth": "0",
+        "values": {
+          "reservoir/source/a": "1",
+          "reservoir/source/b": "0"
+        },
+        "p": "0"
+      },
+      {
+        "id": "reservoir/10/1",
+        "truth": "1",
+        "values": {
+          "reservoir/source/a": "1",
+          "reservoir/source/b": "0"
+        },
+        "p": "1/4"
+      },
+      {
+        "id": "reservoir/11/0",
+        "truth": "0",
+        "values": {
+          "reservoir/source/a": "1",
+          "reservoir/source/b": "1"
+        },
+        "p": "0"
+      },
+      {
+        "id": "reservoir/11/1",
+        "truth": "1",
+        "values": {
+          "reservoir/source/a": "1",
+          "reservoir/source/b": "1"
+        },
+        "p": "1/4"
+      }
+    ]
+  },
+  "policy": {
+    "logarithm": "binary64-log2",
+    "budget": "10000"
+  },
+  "claim": "residual-equals-authorship-value"
+}

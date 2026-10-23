@@ -1,0 +1,1957 @@
+{
+  "profile": "mathematical-law-catalog@1",
+  "laws": [
+    {
+      "id": "A0-carrier",
+      "kind": "axiom",
+      "statement": "every quantity has two poles, a floor that is required and a ceiling that is permitted, and a cell is the pair",
+      "dependsOn": [],
+      "vectors": [
+        "samples/yes/A0-carrier.json",
+        "samples/no/A0-carrier.json",
+        "vectors/closure.json"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "A1-encounter",
+      "kind": "axiom",
+      "statement": "a claim from one origin is potential; a cell is information only where two named extensional origins touch it and their intervals meet; this establishes neither authentication nor joint probabilistic independence",
+      "dependsOn": [],
+      "vectors": [
+        "samples/yes/A1-encounter.json",
+        "samples/no/A1-encounter.json",
+        "vectors/encounter.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "A2-meet",
+      "kind": "axiom",
+      "statement": "For a fixed family of supplied lattice values, associative and commutative meet is independent of their arrival permutation. This does not erase effective epochs, widening, withdrawals or the order of equal-epoch acts.",
+      "dependsOn": [],
+      "vectors": [
+        "samples/yes/A2-meet.json",
+        "samples/no/A2-meet.json",
+        "vectors/meet.json",
+        "vectors/join.json",
+        "vectors/fold.json",
+        "test/knowledge-laws-042.test.ts"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "A3-resolution",
+      "kind": "axiom",
+      "statement": "every observation has a scale; hierarchy is resolution; a coordinate's depth is its resolution",
+      "dependsOn": [],
+      "vectors": [
+        "samples/yes/A3-resolution.json",
+        "samples/no/A3-resolution.json",
+        "vectors/field.json",
+        "vectors/render.json"
+      ],
+      "view": "chain"
+    },
+    {
+      "id": "A4-epoch",
+      "kind": "axiom",
+      "statement": "every claim carries when it holds; order is causal, never a clock",
+      "dependsOn": [],
+      "vectors": [
+        "samples/yes/A4-epoch.json",
+        "samples/no/A4-epoch.json",
+        "vectors/info/observation-close.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "A5-origin-is-extension",
+      "kind": "axiom",
+      "statement": "Declared extensional convention: an origin is identified by its supplied set of coordinate/interval pairs. Equal extensions form one class. Distance between extensions is descriptive; it does not establish probabilistic independence.",
+      "dependsOn": [],
+      "vectors": [
+        "samples/yes/A5-origin-is-extension.json",
+        "samples/no/A5-origin-is-extension.json",
+        "vectors/atom/states-not-actions.json"
+      ],
+      "view": "galois"
+    },
+    {
+      "id": "A6-vacuity",
+      "kind": "axiom",
+      "statement": "a region no origin touches for an epoch contracts; nothing keeps a cell alive but a new observation",
+      "dependsOn": [],
+      "vectors": [
+        "samples/yes/A6-vacuity.json",
+        "samples/no/A6-vacuity.json",
+        "vectors/field.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "A8-four-states",
+      "kind": "axiom",
+      "statement": "one origin is required; two or more that meet within the ceiling are free; that meet outside it are forbidden; that do not meet are in conflict; fewer states collapse two of them",
+      "dependsOn": [],
+      "vectors": [
+        "samples/yes/A8-four-states.json",
+        "samples/no/A8-four-states.json"
+      ],
+      "view": "ideal"
+    },
+    {
+      "id": "A9-everything-is-a-bound",
+      "kind": "axiom",
+      "statement": "one relation: an origin bounds a cell at a resolution and an epoch; cells, origins, locks and laws are cells under it; the relation bounds itself, and there is no level above it",
+      "dependsOn": [],
+      "vectors": [
+        "samples/yes/A9-everything-is-a-bound.json",
+        "samples/no/A9-everything-is-a-bound.json"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "A7-freedom-conserved",
+      "kind": "axiom",
+      "statement": "For fixed coordinates, resolution, context and signed ceilings, adding live narrowing claims cannot increase the sum of log-cardinalities of finite admissible states. Exact withdrawal and witnessed local widening may reopen freedom at the same coordinate. The blanket exclusivity claim that only a new coordinate raises freedom is not valid. Historical alias: freedom-conserved.",
+      "dependsOn": [],
+      "vectors": [
+        "samples/yes/A7-freedom-conserved.json",
+        "samples/no/A7-freedom-conserved.json",
+        "test/laws-boundaries-042.test.ts",
+        "vectors/laws/a7-t90.json"
+      ],
+      "view": "chain"
+    },
+    {
+      "id": "D0-coordinate",
+      "kind": "definition",
+      "statement": "a coordinate exists where two origins agree they observe one thing; the coordinate set of a domain is the fold of recognitions, never a schema",
+      "dependsOn": [
+        "A1-encounter"
+      ],
+      "vectors": [
+        "samples/yes/D0-coordinate.json",
+        "vectors/info/falsifier.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "D1-region",
+      "kind": "definition",
+      "statement": "a region is (coordinate prefix, length); refinement is a longer prefix; regions are derived, never stored",
+      "dependsOn": [
+        "A3-resolution"
+      ],
+      "vectors": [
+        "vectors/region.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "D2-ideal",
+      "kind": "definition",
+      "statement": "a cell's bound is an ideal (upset, downset): what is required and what is forbidden, as a pair",
+      "dependsOn": [
+        "A0-carrier"
+      ],
+      "vectors": [
+        "vectors/ideals.json"
+      ],
+      "view": "ideal"
+    },
+    {
+      "id": "D3-state",
+      "kind": "definition",
+      "statement": "a cell is in one of four states: FREE, REQUIRED, FORBIDDEN, CONFLICT — green, grey, red, fork are their renders",
+      "dependsOn": [
+        "D2-ideal"
+      ],
+      "vectors": [
+        "samples/yes/D3-state.json",
+        "vectors/states.json",
+        "vectors/states-per-step.json",
+        "vectors/units-16.json",
+        "vectors/transitions.json"
+      ],
+      "view": "ideal"
+    },
+    {
+      "id": "D4-debit-in-bits",
+      "kind": "definition",
+      "statement": "For a finite nonempty set of uniformly weighted admissible states at fixed resolution, debit is log2 of its cardinality. A singleton has zero debit. An empty set has no uniform distribution; any zero-debit convention for empty/vacuous regions is separate from this Shannon statement.",
+      "dependsOn": [
+        "A0-carrier",
+        "A3-resolution"
+      ],
+      "vectors": [
+        "samples/yes/D4-debit-in-bits.json",
+        "vectors/freedom.json",
+        "vectors/debits.json",
+        "test/laws-boundaries-042.test.ts",
+        "vectors/laws/a7-t90.json"
+      ],
+      "view": "chain"
+    },
+    {
+      "id": "D5-declaration",
+      "kind": "definition",
+      "statement": "a declaration is a demand u and a limit w on a valued lattice; its cost is forced by two axioms",
+      "dependsOn": [
+        "A0-carrier"
+      ],
+      "vectors": [
+        "vectors/declaration.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "D6-premium",
+      "kind": "definition",
+      "statement": "the premium of a cell is what closing it costs: the residual information under the declaration",
+      "dependsOn": [
+        "D5-declaration",
+        "D4-debit-in-bits"
+      ],
+      "vectors": [
+        "vectors/premium.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "D7-fork",
+      "kind": "definition",
+      "statement": "two incomparable bounds on one cell from two signers; rendered with both, closed only by a signature",
+      "dependsOn": [
+        "A2-meet"
+      ],
+      "vectors": [
+        "vectors/atom/ledger.json"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "D8-present",
+      "kind": "definition",
+      "statement": "the present is the meet of overlapping observation bands; there is no instant to certify",
+      "dependsOn": [
+        "A4-epoch",
+        "A3-resolution"
+      ],
+      "vectors": [
+        "samples/yes/D8-present.json",
+        "vectors/info/present-meet.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "D9-yield",
+      "kind": "definition",
+      "statement": "an origin's yield is bits it closed minus bits reopened against it, per act, over an epoch",
+      "dependsOn": [
+        "A5-origin-is-extension",
+        "D4-debit-in-bits"
+      ],
+      "vectors": [
+        "samples/yes/D9-yield.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "D10-open-question",
+      "kind": "definition",
+      "statement": "a signed ceiling with no origin: a question with form, resolution, premium, dependents and a cheapest closer",
+      "dependsOn": [
+        "A0-carrier",
+        "A1-encounter",
+        "D6-premium"
+      ],
+      "vectors": [
+        "samples/yes/D10-open-question.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "lem-identity",
+      "kind": "theorem",
+      "statement": "The graph identity — If $x\\wedge y=\\bot$ then \\[ \\RI_H(x,y)\\;=\\;\\log_2 n-\\frac{\\Phi(x,y)}{n}, \\qquad \\Phi(x,y)=\\sum_{e}c_e\\log_2\\frac{a_e\\,b_e}{c_e}, \\] the sum running over the edges of $G(x,y)$, where $c_e$ is the weight of $e$ and $a_e,b_e$ are the sizes of the two blocks it joins. Domain: two partitions of a nonempty finite uniformly weighted universe, with trivial common meet. Proof: H(X)=log2(n)-sum_a a*log2(a)/n, likewise for Y, and H(X,Y)=log2(n)-sum_c c*log2(c)/n. Each row and column of the intersection table sums to its block size, so sum_c c*log2(a*b/c)=sum_a a*log2(a)+sum_b b*log2(b)-sum_c c*log2(c). Substitute into H(X)+H(Y)-H(X,Y).",
+      "dependsOn": [
+        "A0-carrier",
+        "A2-meet",
+        "D5-declaration"
+      ],
+      "vectors": [
+        "samples/yes/lem-identity.json",
+        "test/laws-papers.test.ts",
+        "test/f1-boundary-042.test.ts",
+        "vectors/laws/f1/path-witness.json"
+      ],
+      "view": "spectrum"
+    },
+    {
+      "id": "lem-merge",
+      "kind": "theorem",
+      "statement": "Every coarsening step costs two — For integers $p,q\\ge1$, $\\varphi(p+q)-\\varphi(p)-\\varphi(q)\\ge2$, with equality exactly at $p=q=1$. Consequently, if $P$ coarsens $Q$ from $|Q|$ blocks to $|P|$ blocks then $\\Sigma(P)-\\Sigma(Q)\\ge2\\bigl(|Q|-|P|\\bigr)$.",
+      "dependsOn": [
+        "A0-carrier",
+        "A2-meet",
+        "D5-declaration"
+      ],
+      "vectors": [
+        "samples/yes/lem-merge.json"
+      ],
+      "view": "spectrum"
+    },
+    {
+      "id": "lem-join",
+      "kind": "corollary",
+      "statement": "Reduction to a discrete join — Every pair with trivial meet can be transformed, without decreasing $\\RI_H$ and in finitely many steps, into a pair on the same $n$ states with trivial meet and discrete join.",
+      "dependsOn": [
+        "lem-identity"
+      ],
+      "vectors": [
+        "samples/yes/lem-join.json",
+        "test/f1-boundary-042.test.ts",
+        "vectors/laws/f1/path-witness.json"
+      ],
+      "view": "spectrum"
+    },
+    {
+      "id": "lem-meet",
+      "kind": "theorem",
+      "statement": "Reduction to a trivial meet — Let $\\tau(N)$ denote the maximum of $\\RI_H$ over pairs on $N$ states with trivial meet. Then for any $x,y\\in\\Pin$ with $x\\wedge y$ having blocks of sizes $n_1,\\dots,n_r$, \\[ \\RI_H(x,y)=\\sum_{t=1}^{r}\\frac{n_t}{n}\\,\\RI_H\\bigl(x|_{B_t},y|_{B_t}\\bigr) \\;\\le\\;\\sum_t \\frac{n_t}{n}\\,\\tau(n_t). \\] Each restricted pair has trivial meet. If $\\tau$ is non-decreasing the bound is $\\tau(n)$; and if $\\tau$ is moreover strictly increasing above $N=2$, equality for $n\\ge3$ forces $r=1$.",
+      "dependsOn": [
+        "lem-identity",
+        "prop-cmi"
+      ],
+      "vectors": [
+        "samples/yes/lem-meet.json",
+        "test/f1-boundary-042.test.ts",
+        "vectors/laws/f1/path-witness.json"
+      ],
+      "view": "spectrum"
+    },
+    {
+      "id": "lem-mediant",
+      "kind": "corollary",
+      "statement": "Components, and the mediant — Both $\\Sigma(m)-\\Sigma(u)$ and $\\Sigma(w)-\\Sigma(j)$ decompose as sums over the blocks of $m$, which are the connected components of the block graph $G(u,w)$; and a component contributing $0$ to the denominator contributes $0$ to the numerator. Hence the ratio is at most the largest ratio of a single component, each of which is a declaration on $n_t\\le n$ states with trivial meet.",
+      "dependsOn": [
+        "lem-merge"
+      ],
+      "vectors": [
+        "vectors/blocks.json"
+      ],
+      "view": "spectrum"
+    },
+    {
+      "id": "lem-phi",
+      "kind": "theorem",
+      "statement": "The integer inequality — For every integer $t\\ge1$, $\\varphi(t)\\ge 2(t-1)$, with equality exactly at $t\\in\\{1,2\\}$.",
+      "dependsOn": [
+        "lem-join",
+        "lem-meet"
+      ],
+      "vectors": [
+        "samples/yes/lem-phi.json",
+        "test/f1-boundary-042.test.ts",
+        "vectors/laws/f1/path-witness.json"
+      ],
+      "view": "spectrum"
+    },
+    {
+      "id": "thm-extremal",
+      "kind": "theorem",
+      "statement": "The extremal — For every $n\\ge1$, \\[ c_n\\;=\\;\\log_2 n-2+\\frac{2}{n}, \\] and for $n\\ge3$ the maximum is attained exactly at the following configuration and its relabellings (for $n\\le2$ the maximum is $0$ and every pair attains it): identify the $n$ states with the $n$ edges of a path on $n+1$ vertices; let $x$ group the edges sharing an even-numbered endpoint and $y$ those sharing an odd-numbered endpoint. These have $\\lceil (n+1)/2\\rceil$ and $\\lfloor (n+1)/2\\rfloor$ blocks, every block of size $1$ or $2$, trivial meet and discrete join.",
+      "dependsOn": [
+        "lem-identity",
+        "lem-join",
+        "lem-meet",
+        "lem-phi"
+      ],
+      "vectors": [
+        "samples/yes/thm-extremal.json",
+        "test/f1-boundary-042.test.ts",
+        "vectors/laws/f1/path-witness.json"
+      ],
+      "view": "spectrum"
+    },
+    {
+      "id": "thm-ratio",
+      "kind": "theorem",
+      "statement": "The retreat ratio — For every $n\\ge2$, over declarations in conflict on $\\Pin$ under Shannon entropy, \\[ \\max\\frac{\\viol_H}{\\viols_H}\\;=\\;\\rho(n)\\;:=\\;\\frac{n}{2}\\,H_{bal}(n,2) \\;=\\;\\frac{\\varphi(n)-\\varphi\\bigl(\\lceil\\tfrac n2\\rceil\\bigr) -\\varphi\\bigl(\\lfloor\\tfrac n2\\rfloor\\bigr)}{2}, \\] attained exactly when the demand $u$ is a balanced two-block partition, the block graph is connected, and the limit merges two singletons of $u\\vee w$. In particular the maximum equals $n/2$ exactly for even $n$, and $n/2-\\Theta(1/n)$ for odd $n$.",
+      "dependsOn": [
+        "lem-mediant",
+        "lem-merge"
+      ],
+      "vectors": [
+        "samples/yes/thm-ratio.json"
+      ],
+      "view": "spectrum"
+    },
+    {
+      "id": "thm-gap",
+      "kind": "theorem",
+      "statement": "The gap, exactly — For every lattice and every monotone $f$, \\[ g(u,w)\\;=\\;\\max\\bigl\\{\\,f(p)+f(q)-f(p\\vee q)\\;:\\;p\\le u,\\ q\\le w\\,\\bigr\\}\\;-\\;f(m), \\] the maximum being at least $f(m)$, as $p=q=m$ shows.",
+      "dependsOn": [
+        "A0-carrier",
+        "A2-meet",
+        "D5-declaration"
+      ],
+      "vectors": [
+        "vectors/premium.json",
+        "vectors/hypothesis.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "thm-collapse",
+      "kind": "theorem",
+      "statement": "Collapse, and its converse — The following are equivalent for a monotone valuation $f$. · $f$ has the data-processing property. · For every $u,w$: $\\viols_f(u,w)=f(u\\vee w)-f(w)$, attained at $S=u\\vee w$. · For every $u,w$: $g(u,w)=\\RI_f(u,w)$.",
+      "dependsOn": [
+        "D6-premium",
+        "thm-gap"
+      ],
+      "vectors": [
+        "vectors/premium.json",
+        "vectors/supermodular.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "thm-modular",
+      "kind": "corollary",
+      "statement": "Degeneration — $g\\equiv0$ --- retreat is optimal for every declaration --- if and only if $f$ is supermodular, $f(x)+f(y)\\le f(x\\vee y)+f(x\\wedge y)$ for all $x,y$. Modular valuations are the special case of equality.",
+      "dependsOn": [
+        "thm-gap"
+      ],
+      "vectors": [
+        "vectors/supermodular.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "thm-local",
+      "kind": "theorem",
+      "statement": "Retreat is locally optimal — For every lattice and every monotone $f$, the retreat $S_0=m$ is a weak local minimum of $C$ with respect to cover moves.",
+      "dependsOn": [
+        "A0-carrier",
+        "A2-meet",
+        "D5-declaration"
+      ],
+      "vectors": [
+        "samples/yes/thm-local.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "prop-cmi",
+      "kind": "theorem",
+      "statement": "cf. — $\\RI_H(x,y)=I(x;y\\mid x\\wedge y)$. Domain: two partitions of a nonempty finite uniformly weighted universe. Let Z be their common coarsening, a function of both X and Y. The entropy chain rule gives I(X;Y|Z)=H(X)+H(Y)-H(X,Y)-H(Z), which is the declared residual-information expression. This is a partition identity, not a causal-independence inference.",
+      "dependsOn": [
+        "A0-carrier",
+        "A2-meet",
+        "D5-declaration"
+      ],
+      "vectors": [
+        "samples/yes/prop-cmi.json",
+        "test/laws-papers.test.ts",
+        "test/f1-boundary-042.test.ts"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "prop-dep",
+      "kind": "corollary",
+      "statement": "Both costs, decomposed — For every declaration on $L$, with $u,w,m,j$ as usual and $\\viol_i,g_i$ computed from $f_i$ on coordinate $i$, \\[ \\viol_f \\;=\\; \\viol_1+\\viol_2+\\bigl[D(u)-D(m)\\bigr], \\qquad g_f \\;=\\; g_1+g_2+\\RI_D(u,w), \\] the second under the data-processing property for $f,f_1,f_2$.",
+      "dependsOn": [
+        "thm-collapse"
+      ],
+      "vectors": [
+        "samples/yes/prop-dep.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "thm-mi",
+      "kind": "corollary",
+      "statement": "Mutual information is a planning premium — Take the declaration that demands the first subsystem be answerable and forbids the state to exceed the second: $u=(\\top,\\bot)$, $w=(\\bot,\\top)$. Then \\[ \\viol_f=H(X),\\qquad \\viols_f=H(X\\mid Y),\\qquad g_f=I_\\mu(X;Y), \\] while $g_1=g_2=0$.",
+      "dependsOn": [
+        "thm-collapse"
+      ],
+      "vectors": [
+        "samples/yes/thm-mi.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "thm-dep",
+      "kind": "theorem",
+      "statement": "Additivity up to the mutual information — For every declaration on a product of two subsystems under a joint measure, \\[ \\viol_1+\\viol_2-I_\\mu\\;\\le\\;\\viol_f\\;\\le\\;\\viol_1+\\viol_2, \\qquad \\bigl|\\,g_f-(g_1+g_2)\\,\\bigr|\\;\\le\\;I_\\mu . \\] The conflict is therefore always discounted by dependence and never inflated, while the premium is always inflated and never discounted by more than the same amount. Both ends that are reached are reached by different declarations: the left inequality on the conflict at $u=\\top$, $w=\\bot$, and $g_f=g_1+g_2+I_\\mu$ at the crossed declaration of Theorem . The lower end of the band on the premium is not known to be attained, and Remark says what reaching it would require.",
+      "dependsOn": [
+        "prop-dep",
+        "thm-mi"
+      ],
+      "vectors": [
+        "samples/yes/thm-dep.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "T13-c_n",
+      "kind": "corollary",
+      "statement": "c_n = log2 n − 2 + 2/n bounds a pairwise audit's conservativeness in bits",
+      "dependsOn": [
+        "D6-premium"
+      ],
+      "vectors": [
+        "samples/yes/T13-c_n.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "T14-supermodular-degeneration",
+      "kind": "theorem",
+      "statement": "premium is zero iff the valuation is supermodular there: a second origin adds nothing",
+      "dependsOn": [
+        "D6-premium",
+        "A1-encounter"
+      ],
+      "vectors": [
+        "vectors/field-uses.json",
+        "vectors/hypothesis.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "T15-premium-is-residual-information",
+      "kind": "theorem",
+      "statement": "the premium equals residual information exactly for valuations with the data-processing property",
+      "dependsOn": [
+        "D6-premium",
+        "thm-gap"
+      ],
+      "vectors": [
+        "vectors/premium.json",
+        "vectors/slack.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "thm-decomp",
+      "kind": "theorem",
+      "statement": "Exact decomposition — On every finite lattice $u=\\bigvee\\{j\\in\\JI(L):j\\le u\\}$ and $w=\\bigwedge\\{m\\in\\MI(L):w\\le m\\}$. Hence $\\reg$ is injective: a declaration is its register, with nothing lost.",
+      "dependsOn": [
+        "D2-ideal",
+        "D3-state"
+      ],
+      "vectors": [
+        "vectors/register.json",
+        "vectors/incidence.json"
+      ],
+      "view": "ideal"
+    },
+    {
+      "id": "prop-halfboolean",
+      "kind": "theorem",
+      "statement": "Half Boolean — For every finite lattice and every debit $j$, the limit side is truth-functional: $j\\le w_1\\wedge w_2$ iff $j\\le w_1$ and $j\\le w_2$. The demand side --- whether $j\\le u_1\\vee u_2$ is determined by $(j\\le u_1,\\ j\\le u_2)$ --- is truth-functional if and only if $L$ is distributive.",
+      "dependsOn": [
+        "D2-ideal",
+        "D3-state"
+      ],
+      "vectors": [
+        "vectors/boolean.json",
+        "vectors/bit-loss.json"
+      ],
+      "view": "complement"
+    },
+    {
+      "id": "prop-additive",
+      "kind": "theorem",
+      "statement": "What is additive under independence, and what is not — Let $L=L_1\\times L_2$ with each factor of at least two elements, and let $f=f_1\\oplus f_2$. Then $\\viol_f$ and $\\viols_f$ are exactly additive on product declarations: two-sided constraints admit no economy of scale under independence. The vocabulary is not: \\[ \\delta(L_1\\times L_2)\\;=\\;|L_1||L_2|-|MI(L_1)|-|MI(L_2)|, \\] which exceeds $\\delta(L_1)+\\delta(L_2)$ by exactly $(|L_1|-1)(|L_2|-1)-1$, strictly unless both factors are the two-element lattice.",
+      "dependsOn": [
+        "D2-ideal",
+        "D3-state"
+      ],
+      "vectors": [
+        "samples/yes/prop-additive.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "thm-witness",
+      "kind": "theorem",
+      "statement": "The witness — Let $F$ be in conflict. Then $F$ is sound for every monotone valuation if and only if \\[ \\textrm{(W)}\\qquad u\\in A\\quadand\\quad \\exists\\,b\\in B:\\ u\\wedge b=m . \\]",
+      "dependsOn": [
+        "D2-ideal",
+        "D3-state"
+      ],
+      "vectors": [
+        "samples/yes/thm-witness.json",
+        "samples/no/thm-witness.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "T8-exact-withdrawal",
+      "kind": "corollary",
+      "statement": "a withdrawal is exact iff the scale is distributive",
+      "dependsOn": [
+        "D2-ideal"
+      ],
+      "vectors": [
+        "vectors/coherence.json"
+      ],
+      "view": "complement"
+    },
+    {
+      "id": "T1-only-verdict-bits-travel",
+      "kind": "theorem",
+      "statement": "an origin that moves a verdict carries at least the bits by which it reduces the cell's debit, and exactly those suffice",
+      "dependsOn": [
+        "D4-debit-in-bits",
+        "A2-meet"
+      ],
+      "vectors": [
+        "samples/yes/T1-only-verdict-bits-travel.json",
+        "samples/no/T1-only-verdict-bits-travel.json"
+      ],
+      "view": "chain"
+    },
+    {
+      "id": "T2-coordinate-where-disagree",
+      "kind": "theorem",
+      "statement": "a new coordinate appears exactly where two origins disagree at the same resolution",
+      "dependsOn": [
+        "A1-encounter",
+        "D0-coordinate"
+      ],
+      "vectors": [
+        "samples/yes/T2-coordinate-where-disagree.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T3-fixed-point",
+      "kind": "theorem",
+      "statement": "two heads folding the same claims converge to one fold; the fixed point is unique",
+      "dependsOn": [
+        "A2-meet",
+        "A1-encounter"
+      ],
+      "vectors": [
+        "vectors/region.json",
+        "vectors/atom/formula.json"
+      ],
+      "view": "product"
+    },
+    {
+      "id": "T4-composition",
+      "kind": "remark",
+      "statement": "receipts compose in any order; the fold of a union is the meet of the folds",
+      "dependsOn": [
+        "A2-meet"
+      ],
+      "vectors": [
+        "vectors/effective.json",
+        "vectors/reach.json",
+        "vectors/atom/locks-are-targets.json"
+      ],
+      "view": "product"
+    },
+    {
+      "id": "T5-coarsen-widens",
+      "kind": "theorem",
+      "statement": "a claim coarsened to a lower resolution fits at least as many regions",
+      "dependsOn": [
+        "A3-resolution",
+        "A6-vacuity"
+      ],
+      "vectors": [
+        "samples/yes/T5-coarsen-widens.json",
+        "samples/no/T5-coarsen-widens.json",
+        "vectors/info/coarsen-fit.json"
+      ],
+      "view": "chain"
+    },
+    {
+      "id": "T6-present-converges",
+      "kind": "theorem",
+      "statement": "the width of the present is maturation rate minus forgetting rate; a system with only past or only future has no present",
+      "dependsOn": [
+        "D8-present",
+        "A6-vacuity"
+      ],
+      "vectors": [
+        "samples/yes/T6-present-converges.json",
+        "samples/no/T6-present-converges.json",
+        "vectors/info/present-convergence.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T7-sufficient-resolution",
+      "kind": "conjecture",
+      "statement": "Research status: open beyond the supplied sufficient-resolution fixtures. In a finite declared chain of resolutions, a coarsest resolution preserving the finest verdict exists because the finest itself qualifies; it need not be strictly coarser than the finest. The historical unconditional strict-coarsening claim is not a theorem.",
+      "dependsOn": [
+        "A3-resolution"
+      ],
+      "vectors": [
+        "samples/yes/T7-sufficient-resolution.json",
+        "samples/no/A3-resolution.json",
+        "vectors/info/sufficient-resolution.json"
+      ],
+      "view": "chain"
+    },
+    {
+      "id": "T9-self-application-converges",
+      "kind": "conjecture",
+      "statement": "Research status: experiment for the supplied finite interval self-application fixture. It does not prove convergence or a unique residue for arbitrary operators. Finite comparable monotone iteration needs its explicit hypotheses; an incomparable seed may enter a two-cycle. General self-application convergence remains open.",
+      "dependsOn": [
+        "A6-vacuity",
+        "A1-encounter",
+        "A9-everything-is-a-bound"
+      ],
+      "vectors": [
+        "samples/yes/T9-self-application.json",
+        "vectors/atom/verdict.json",
+        "vectors/laws-as-folds.json",
+        "test/fold-boundaries-042.test.ts",
+        "vectors/laws/a9-t99.json"
+      ],
+      "view": "quotient"
+    },
+    {
+      "id": "T10-drift",
+      "kind": "corollary",
+      "statement": "two definitions of one question diverge without either failing; the divergence is invisible until an encounter joins them",
+      "dependsOn": [
+        "A5-origin-is-extension"
+      ],
+      "vectors": [
+        "samples/yes/T10-drift.json",
+        "samples/no/T10-drift.json",
+        "vectors/drift.json"
+      ],
+      "view": "quotient"
+    },
+    {
+      "id": "T11-size-is-questions",
+      "kind": "theorem",
+      "statement": "the size of a body of knowledge is its count of distinct questions with an encounter; the rest is drift",
+      "dependsOn": [
+        "T10-drift",
+        "A6-vacuity"
+      ],
+      "vectors": [
+        "samples/yes/T11-size-is-questions.json",
+        "samples/no/T11-size-is-questions.json",
+        "vectors/questions.json"
+      ],
+      "view": "quotient"
+    },
+    {
+      "id": "T12-reliability-is-encounter-rate",
+      "kind": "theorem",
+      "statement": "Under uniform truth and an independent covering-cause indicator of mass c, active observations copy one n-ary symmetric channel of accuracy q; I(truth;observations) <= log2(n)-c*(h(q)+(1-q)*log2(n-1)); copies add no information. Historical alias: reliability-is-encounter-rate. No achievability or partial governance claim.",
+      "dependsOn": [],
+      "vectors": [
+        "samples/measures/t12/common-cause.json",
+        "vectors/measures/t12/expected.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "T16-encounter-inequality",
+      "kind": "theorem",
+      "statement": "an independent second origin never raises a cell's debit: it falls by log2 of the states it leaves standing, a full bit exactly when it admits at most half of them, and nothing exactly when it narrows nothing",
+      "dependsOn": [
+        "A1-encounter",
+        "D4-debit-in-bits",
+        "T14-supermodular-degeneration"
+      ],
+      "vectors": [
+        "samples/yes/T16-encounter-inequality.json",
+        "samples/no/T16-encounter-inequality.json"
+      ],
+      "view": "chain"
+    },
+    {
+      "id": "T17-coding-of-verdicts",
+      "kind": "theorem",
+      "statement": "no claim shorter than the debit reduction moves a verdict; none longer is needed",
+      "dependsOn": [
+        "T1-only-verdict-bits-travel",
+        "D4-debit-in-bits"
+      ],
+      "vectors": [
+        "vectors/complexity.json"
+      ],
+      "view": "chain"
+    },
+    {
+      "id": "T18-freedom-is-a-currency",
+      "kind": "theorem",
+      "statement": "In a common probability space with justified declared failure upper bounds p_i, the probability of all declared events succeeding is at least max(0,1-sum(p_i)); sum(p_i)>=1 is trivial. Agreement and copy counts do not estimate probabilities. Historical alias: freedom-is-a-currency; no transferability or unforgeability claim.",
+      "dependsOn": [],
+      "vectors": [
+        "samples/measures/confidence/union-bound.json",
+        "vectors/measures/confidence/expected.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "T19-signatures-fold",
+      "kind": "theorem",
+      "statement": "For a fixed supplied collection of signed bounds with declared polarity and lattice form, foldSigned retains the extensional classes and evaluates their form operations; meet of fixed permit values is associative and commutative. This static fold is not a claim that chronological withdrawal, replacement or witnessed widening can never occur.",
+      "dependsOn": [
+        "A2-meet",
+        "D7-fork"
+      ],
+      "vectors": [
+        "samples/yes/T19-signatures-fold.json",
+        "vectors/signatures.json"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "T20-age-is-encounters",
+      "kind": "theorem",
+      "statement": "a region's age is the encounters since its last observation, not elapsed clock; the width of its present is the inverse of its encounter rate",
+      "dependsOn": [
+        "A4-epoch",
+        "A1-encounter",
+        "D8-present"
+      ],
+      "vectors": [
+        "samples/yes/T20-age-is-encounters.json",
+        "samples/no/T20-age-is-encounters.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T21-reading-is-an-origin",
+      "kind": "theorem",
+      "statement": "a reading is a claim by the reader on the cell at its resolution — a weak encounter; undisputed density is agreement",
+      "dependsOn": [
+        "A5-origin-is-extension",
+        "A1-encounter"
+      ],
+      "vectors": [
+        "samples/yes/T21-reading-is-an-origin.json",
+        "vectors/atom/derived.json"
+      ],
+      "view": "galois"
+    },
+    {
+      "id": "T22-fold-is-superposition",
+      "kind": "theorem",
+      "statement": "two claims fold when their epochs meet and their intervals meet; epochs that meet with intervals that do not are a fork, and epochs that do not meet are no encounter at all",
+      "dependsOn": [
+        "A2-meet",
+        "A4-epoch",
+        "A1-encounter"
+      ],
+      "vectors": [
+        "samples/yes/T22-fold-is-superposition.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T23-domain-has-a-spectrum",
+      "kind": "theorem",
+      "statement": "two origins meet at the common multiple of their periods, so a domain has a spectrum of resolutions where encounters happen; read coarser, a claim recovers the fine cells that lay under it",
+      "dependsOn": [
+        "T22-fold-is-superposition",
+        "T20-age-is-encounters",
+        "A3-resolution"
+      ],
+      "vectors": [
+        "samples/yes/T23-domain-has-a-spectrum.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T24-ignorance-has-coordinates",
+      "kind": "theorem",
+      "statement": "what is not known has coordinates: the open questions rank by premium against dependents and cost, and a small head of that order holds most of the value",
+      "dependsOn": [
+        "D10-open-question",
+        "A7-freedom-conserved"
+      ],
+      "vectors": [
+        "samples/yes/T24-ignorance-has-coordinates.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "T25-rules-earn-their-place",
+      "kind": "theorem",
+      "statement": "counted by mentions, a corpus of rules grows vacuous without bound; counted by the verdicts they move, vacuity converges: a rule earns its place by moving a verdict",
+      "dependsOn": [
+        "A6-vacuity",
+        "T1-only-verdict-bits-travel",
+        "T2-coordinate-where-disagree"
+      ],
+      "vectors": [
+        "samples/yes/T25-rules-earn-their-place.json"
+      ],
+      "view": "quotient"
+    },
+    {
+      "id": "T26-knowing-has-four-states",
+      "kind": "theorem",
+      "statement": "knowing grows by disagreement: most cells are born where two origins split, and what stays grey is a small remainder",
+      "dependsOn": [
+        "A9-everything-is-a-bound",
+        "A8-four-states",
+        "A1-encounter"
+      ],
+      "vectors": [
+        "samples/yes/T26-knowing-has-four-states.json"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "T27-disagreement-can-be-provoked",
+      "kind": "conjecture",
+      "statement": "Research status: experiment in the explicitly supplied finite sample. The historical descriptive text below is not a universal or physical theorem; general extrapolation remains open. spending a budget where the premium is highest closes more than spending it blindly, and provoking the disagreement closes more still and names coordinates that were not there",
+      "dependsOn": [
+        "T2-coordinate-where-disagree",
+        "A7-freedom-conserved",
+        "A5-origin-is-extension"
+      ],
+      "vectors": [
+        "samples/yes/T27-disagreement-can-be-provoked.json",
+        "test/laws.test.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "H1-uncertainty",
+      "kind": "conjecture",
+      "statement": "resolution times independent encounters per cell stays above a floor c; the sufficient resolution is where the product saturates",
+      "dependsOn": [
+        "A3-resolution",
+        "A1-encounter"
+      ],
+      "vectors": [
+        "samples/yes/H1-uncertainty.json",
+        "samples/no/H1-uncertainty.json"
+      ],
+      "view": "chain"
+    },
+    {
+      "id": "T36-agreement-has-a-resolution",
+      "kind": "conjecture",
+      "statement": "Research status: experiment in the explicitly supplied finite sample. The historical descriptive text below is not a universal or physical theorem; general extrapolation remains open. n origins on a cell agree at a resolution; raising it opens agreements into forks, each a coordinate the coarser scale hid; the sufficient resolution of a region is where its residual figure stops changing",
+      "dependsOn": [
+        "A3-resolution",
+        "T2-coordinate-where-disagree",
+        "T7-sufficient-resolution"
+      ],
+      "vectors": [
+        "samples/yes/T36-agreement-has-a-resolution.json",
+        "test/loom.test.ts"
+      ],
+      "view": "chain"
+    },
+    {
+      "id": "T37-a-lock-is-a-mould",
+      "kind": "theorem",
+      "statement": "For finite held real intervals and lock intervals with strictly positive finite width, stretching about each fixed midpoint eventually contains every bounded nonempty held interval; an empty held interval is never accepted by red. pour counts reached named lock places. tense interpolates touched inhabited endpoints toward their held endpoints at a handed rate in [0,1]; touching narrows width only when the held interval is no wider, and may widen it otherwise. Missing or empty observations use the specified widening rule. The historical seeded deformation counts are experiments, not a physical adaptation law.",
+      "dependsOn": [
+        "A0-carrier",
+        "A2-meet"
+      ],
+      "vectors": [
+        "samples/yes/T37-a-lock-is-a-mould.json",
+        "src/views/product/mould.ts",
+        "test/loom.test.ts"
+      ],
+      "view": "dual"
+    },
+    {
+      "id": "T38-origins-are-a-polygon",
+      "kind": "theorem",
+      "statement": "For a finite nonempty family of nonempty closed real intervals, pairwise nonempty intersection implies a nonempty total intersection. The lattice interval form supplies this finite Helly-2 case; no polygon/consensus claim for arbitrary forms. Convex families in R^d require Helly hypotheses and d+1 witnesses; discrete circle and halfplane fixtures distinguish pairs from triples. Historical alias: origins-are-a-polygon.",
+      "dependsOn": [
+        "A2-meet"
+      ],
+      "vectors": [
+        "samples/laws/t38/intervals.json",
+        "vectors/laws/t38/circle12.json",
+        "vectors/laws/t38/halfplanes.json",
+        "test/t38-forms.test.ts"
+      ],
+      "view": "product"
+    },
+    {
+      "id": "C1-independence-is-distance",
+      "kind": "corollary",
+      "statement": "distance compares declared extensions; equal or disjoint extensions neither merge historical authors nor prove probabilistic factorization",
+      "dependsOn": [
+        "A5-origin-is-extension"
+      ],
+      "vectors": [
+        "samples/yes/C1-independence-is-distance.json"
+      ],
+      "view": "galois"
+    },
+    {
+      "id": "C3-bootstrap-once",
+      "kind": "corollary",
+      "statement": "one claim per generation is admitted without a second origin; a second such claim is a fork",
+      "dependsOn": [
+        "A1-encounter",
+        "A4-epoch"
+      ],
+      "vectors": [
+        "samples/yes/C3-bootstrap-once.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "C4-dpi-subadditive",
+      "kind": "corollary",
+      "statement": "Data processing forces submodularity — Every valuation with the data-processing property is submodular. Among such valuations, $g\\equiv0$ if and only if $f$ is modular.",
+      "dependsOn": [
+        "thm-collapse",
+        "thm-modular"
+      ],
+      "vectors": [
+        "vectors/hypothesis.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "H2-density-attracts",
+      "kind": "conjecture",
+      "statement": "where reading already is, the next reading lands: over eight epochs of placement in proportion to the origins a cell already carries, the ratio between the densest tenth and the sparsest rises at every epoch and the deserts stay empty, while the same budget placed blind to density holds that ratio near two and touches three times as many cells",
+      "dependsOn": [
+        "A1-encounter",
+        "A6-vacuity"
+      ],
+      "vectors": [
+        "samples/yes/H2-density-attracts.json",
+        "samples/no/H2-density-attracts.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T39-cells-grow-until-stopped",
+      "kind": "theorem",
+      "statement": "For finite distinct real walls and finite distinct sites strictly inside their bounding consecutive-wall intervals, grow assigns each site the interval between its wall or nearest-site midpoints. Adding another distinct interior site while retaining the walls cannot increase an existing site width: its left endpoint can only increase and its right endpoint can only decrease. No encounter, sufficient-resolution or general-form growth law follows; wall-coincident, duplicate, nonfinite and out-of-domain sites are outside this claim.",
+      "dependsOn": [
+        "A0-carrier"
+      ],
+      "vectors": [
+        "samples/yes/T39-cells-grow-until-stopped.json",
+        "src/views/product/reach.ts",
+        "test/wave.test.ts"
+      ],
+      "view": "product"
+    },
+    {
+      "id": "T40-cost-by-density",
+      "kind": "conjecture",
+      "statement": "Research status: experiment in the declared finite graph/placement fixtures; general placement/valuation interpretation open. T18 now states a conditional union bound and supplies no currency or placement proof. what knowing costs is not set by how many origins look but by where they land: one budget of two hundred gives a ratio near two placed blind and above twenty placed where reading already is, so the shape of what is known is a fact about placement, and it leaves cities and deserts in one field",
+      "dependsOn": [
+        "T38-origins-are-a-polygon",
+        "T27-disagreement-can-be-provoked",
+        "T18-freedom-is-a-currency"
+      ],
+      "vectors": [
+        "samples/yes/T40-cost-by-density.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T41-distance-is-the-walk-between-lookings",
+      "kind": "theorem",
+      "statement": "For a fixed nonempty finite world with unique coordinates, neighbours forms the undirected graph of shared supplied origins, excluding explicitly named bounds. On each connected component distance is shortest-path length: reversing paths proves symmetry, concatenating paths proves the triangle inequality, and zero length identifies one vertex. Breadth-first layers return the minimum path length. The implementation returns world.length as the top sentinel for an unreachable pair; it is not an observed travel length. Sample means and any physical interpretation remain experiments.",
+      "dependsOn": [
+        "A0-carrier",
+        "A5-origin-is-extension"
+      ],
+      "vectors": [
+        "samples/yes/T41-distance-is-the-walk-between-lookings.json",
+        "src/views/product/reach.ts",
+        "test/wave.test.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T42-no-privileged-observer",
+      "kind": "theorem",
+      "statement": "Two readings with identical complete live claims, values, form, resolution, epoch/effective ordering and required world/mark context return the same deterministic meet and verdict. For the published point fixture, identical full seen records give identical potential/disagreement verdicts. Equal origin names alone do not ensure equal readings; claims and context may differ. The seeded observer counts are finite experiments; no universal horizon-only explanation of disagreement is asserted.",
+      "dependsOn": [
+        "A0-carrier",
+        "A2-meet",
+        "A4-epoch"
+      ],
+      "vectors": [
+        "samples/yes/T42-no-privileged-observer.json",
+        "src/field/encounter.ts",
+        "src/field/meet.ts",
+        "src/lattice/obligatory.ts",
+        "test/wave.test.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T43-each-origin-gives-one-fact-and-one-distance",
+      "kind": "theorem",
+      "statement": "information and distance are two readings of one thing: with no origin there is neither a fact nor a finite distance, and each origin that lands gives exactly one of each",
+      "dependsOn": [
+        "A1-encounter",
+        "A9-everything-is-a-bound",
+        "T41-distance-is-the-walk-between-lookings",
+        "A6-vacuity"
+      ],
+      "vectors": [
+        "samples/yes/T43-each-origin-gives-one-fact-and-one-distance.json"
+      ],
+      "view": "galois"
+    },
+    {
+      "id": "T44-an-origin-is-worth-its-reach",
+      "kind": "conjecture",
+      "statement": "Research status: experiment in the declared finite graph/placement fixtures; general placement/valuation interpretation open. T18 now states a conditional union bound and supplies no currency or placement proof. one claim of one width is worth what it connects: nothing inside a city where every pair already had a walk, one pair between two lone cells, and the product of two components when it lands across a desert, so where to look is a question with an answer and the answer is read before the claim lands",
+      "dependsOn": [
+        "T41-distance-is-the-walk-between-lookings",
+        "T27-disagreement-can-be-provoked",
+        "T18-freedom-is-a-currency",
+        "A5-origin-is-extension"
+      ],
+      "vectors": [
+        "samples/yes/T44-an-origin-is-worth-its-reach.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T45-cells-that-rest-on-one-bound-are-entangled",
+      "kind": "conjecture",
+      "statement": "Research status: experiment in the explicitly supplied finite sample. The historical descriptive text below is not a universal or physical theorem; general extrapolation remains open. cells that rest on one bound move together when it moves: narrowing a ceiling turns cells red with nobody looking at them, some past the horizon of whoever signed it, and the effect is the bound's and not the order's, since the same narrowing taken in two steps names exactly the cells it names in one",
+      "dependsOn": [
+        "A0-carrier",
+        "A9-everything-is-a-bound",
+        "T19-signatures-fold",
+        "T41-distance-is-the-walk-between-lookings"
+      ],
+      "vectors": [
+        "samples/yes/T45-cells-that-rest-on-one-bound-are-entangled.json",
+        "test/wave.test.ts"
+      ],
+      "view": "product"
+    },
+    {
+      "id": "T46-a-bound-moves-cells-no-walk-reaches",
+      "kind": "conjecture",
+      "statement": "Research status: experiment in the explicitly supplied finite sample. The historical descriptive text below is not a universal or physical theorem; general extrapolation remains open. a world changes in two ways at once: looking travels and stops at the horizon, a bound does not travel and carries no step, so moving it changes cells no walk reaches; counting the bound as if it were a looking would make the whole world one neighbourhood, which is how the two are told apart",
+      "dependsOn": [
+        "A0-carrier",
+        "T41-distance-is-the-walk-between-lookings",
+        "T45-cells-that-rest-on-one-bound-are-entangled"
+      ],
+      "vectors": [
+        "samples/yes/T46-a-bound-moves-cells-no-walk-reaches.json",
+        "test/wave.test.ts"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "T47-a-two-pole-object",
+      "kind": "conjecture",
+      "statement": "Research status: experiment in the explicitly supplied finite sample. The historical descriptive text below is not a universal or physical theorem; general extrapolation remains open. one coordinate on a scale of a hundred and five levels is superposed at six point seven bits, definite when two claims meet at one level, and forbidden rather than narrow when a ceiling falls under that floor, while a second coordinate resting on the bound that moved narrows to five point four bits with nobody measuring it",
+      "dependsOn": [
+        "A0-carrier",
+        "A7-freedom-conserved",
+        "D4-debit-in-bits",
+        "T45-cells-that-rest-on-one-bound-are-entangled",
+        "T46-a-bound-moves-cells-no-walk-reaches"
+      ],
+      "vectors": [
+        "samples/yes/T47-a-two-pole-object.json",
+        "test/obligatory.test.ts"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "T48-epoch-is-phase",
+      "kind": "conjecture",
+      "statement": "Research status: experiment in the explicitly supplied finite sample. The historical descriptive text below is not a universal or physical theorem; general extrapolation remains open. an epoch is a phase: claims arriving at one turn of a period reinforce and claims half a period apart cancel, so sweeping the delay of half of them draws the period's own shape, and observing one route, which is fixing when those claims arrived, moves the pattern to its complement",
+      "dependsOn": [
+        "A4-epoch",
+        "T22-fold-is-superposition",
+        "T45-cells-that-rest-on-one-bound-are-entangled"
+      ],
+      "vectors": [
+        "samples/yes/T48-epoch-is-phase.json",
+        "test/wave.test.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T49-amplitude-has-sign-and-phase",
+      "kind": "conjecture",
+      "statement": "Research status: experiment in the explicitly supplied finite sample. The historical descriptive text below is not a universal or physical theorem; general extrapolation remains open. a claim carries a size and a direction, how much it narrows and the turn it landed on, and a withdrawal is the same size the other way: two hundred claims in phase make the square of their number and the same two hundred strewn make its order, while a write and its withdrawal at one epoch leave nothing and at different epochs do not cancel",
+      "dependsOn": [
+        "T48-epoch-is-phase",
+        "T19-signatures-fold",
+        "A4-epoch",
+        "A1-encounter"
+      ],
+      "vectors": [
+        "samples/yes/T49-amplitude-has-sign-and-phase.json",
+        "samples/no/T49-amplitude-has-sign-and-phase.json",
+        "test/wave.test.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "H3-a-distant-signature-moves-a-cell-that-did-not-move",
+      "kind": "conjecture",
+      "statement": "Research status: experiment, one-origin structural interpretation; general/physical-law reading open. stated as a hint and never as a claim about the world: if what is is a field of floors and ceilings, a distant signature changes a cell whose own record never moved, and in two hundred trials of one cell holding one value the verdict came out both ways, so nothing stored at the cell explains the difference and what explains it is the bound the cell rests on; the resemblance is structural and never arithmetic, with no continuous amplitudes and no inequality violated by number; structural resemblance, one origin, not a claim about the world",
+      "dependsOn": [
+        "T46-a-bound-moves-cells-no-walk-reaches",
+        "T47-a-two-pole-object"
+      ],
+      "vectors": [
+        "samples/yes/H3-a-distant-signature-moves-a-cell-that-did-not-move.json",
+        "samples/no/H3-a-distant-signature-moves-a-cell-that-did-not-move.json"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "D11-the-obligatory",
+      "kind": "definition",
+      "statement": "the object is c = ⟨⊥, ⊤, O, ⊑⟩ over L at r: four parts in two pairs, the value (⊥, ⊤) and the relations (O, ⊑), with the lattice L it is given and the resolution r it is read at belonging to the reading and the sign to the act; an origin is (o, φ), and the poles are read, never stored: ⊥ is what is required joined with what its live claims hold, ⊤ what is signed met with what they allow; eight acts in four pairs and seven names answer for it: meet and join on the ceiling, local, a join only with a witness; observe and withdraw on the floor, local, a withdrawal being an observation at −1 that restores exactly; sign and require on both poles, travelling by rest, commuting and both closing freedom; encounter and refine with no pole; and no widening travels",
+      "dependsOn": [
+        "A0-carrier",
+        "A1-encounter",
+        "A2-meet",
+        "A4-epoch",
+        "A5-origin-is-extension",
+        "A7-freedom-conserved",
+        "A9-everything-is-a-bound"
+      ],
+      "vectors": [
+        "samples/yes/obligatory.json",
+        "samples/no/obligatory.json",
+        "vectors/moves.json"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "T50-signatures-are-meets",
+      "kind": "theorem",
+      "statement": "a signature narrows a ceiling and travels to every cell that rests on it as a meet, and meets do not remember the order they were taken in, so no order of any number of signatures ever shows in the field they leave; widening is not a meet and does not travel, which is why a narrowing costs one signature and an error costs one at every cell, and folding the field and signing it commute even with a withdrawal present",
+      "dependsOn": [
+        "A2-meet",
+        "A9-everything-is-a-bound",
+        "T19-signatures-fold"
+      ],
+      "vectors": [
+        "samples/yes/T50-signatures-are-meets.json"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "T51-the-shape-of-knowing-can-be-designed",
+      "kind": "theorem",
+      "statement": "In a finite undirected graph with distinct named vertices, positive component sizes and unrestricted unit-cost fresh bridges that join only their two chosen components, a nonnegative integer budget b minimises unreachable unordered pairs by connecting the min(b+1,k) largest of k components into one. The objective is (N^2-sum(componentSize^2))/2; arbitrary site restrictions, nonuniform costs and origin-name collisions are outside this theorem. design returns a star on representatives of those components. Historical comparisons against particular blind seeds remain experiments, not universal superiority over every competing draw.",
+      "dependsOn": [
+        "A0-carrier",
+        "A5-origin-is-extension"
+      ],
+      "vectors": [
+        "samples/yes/T51-the-shape-of-knowing-can-be-designed.json",
+        "src/views/product/design.ts",
+        "src/views/product/reach.ts",
+        "test/obligatory.test.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T52-directing-where-origins-land-closes-the-horizon",
+      "kind": "conjecture",
+      "statement": "Research status: experiment in the declared finite cities/lone-cell fixtures, budgets, epochs and random seeds. evolve uses the handed attachment sampling rule; loom repeatedly uses the graph design over the resulting field. The recorded undirected runs leave a horizon after sixty epochs and the recorded directed run closes it at the specified step. General autonomous concentration, universal convergence under arbitrary policies and resource costs remain open; no vacuity dynamics or assertion about a self-governing machine follows from these observations.",
+      "dependsOn": [
+        "T51-the-shape-of-knowing-can-be-designed"
+      ],
+      "vectors": [
+        "samples/yes/T52-directing-where-origins-land-closes-the-horizon.json",
+        "src/views/field/physics.ts",
+        "src/views/product/design.ts",
+        "test/obligatory.test.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "H4-enriched-semilattice",
+      "kind": "conjecture",
+      "statement": "the cells under the order of rest, with signatures as meets and the phase each origin carries as what they are enriched over, look like an enriched meet-semilattice, and what this library proves would be its representation theory; identity, composition, associativity, commuting and naturality hold for the operations as vectors, while observation is not one of them — it moves the metric and can split a cell no signature could, so it is a functor out of the category and not an arrow inside it, and the join, which does not travel, is a second kind of arrow this conjecture does not name",
+      "dependsOn": [
+        "T50-signatures-are-meets",
+        "T49-amplitude-has-sign-and-phase",
+        "T41-distance-is-the-walk-between-lookings"
+      ],
+      "vectors": [
+        "samples/yes/H4-enriched-semilattice.json",
+        "samples/no/H4-enriched-semilattice.json"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "H5-hilbert-is-the-obligatory-without-four-fields",
+      "kind": "conjecture",
+      "statement": "Research status: experiment, one-origin structural interpretation; general/physical-law reading open. amplitudes with a phase and no origin, no signed ceiling, no resolution and no epoch band are what is left of a cell when those four fields are dropped, so the measurement problem is the absence of who, imposed symmetries the absence of a signed ceiling, the classical limit the absence of resolution and universal interference the absence of bands; restored, four claims in phase keep exactly the share of the whole their number leaves them against an environment spread over the period, and six origins around one value are six objects read finely and one read coarsely, so how many things there are is a reading; structural resemblance, one origin, not a claim about the world",
+      "dependsOn": [
+        "H3-a-distant-signature-moves-a-cell-that-did-not-move",
+        "T49-amplitude-has-sign-and-phase",
+        "T36-agreement-has-a-resolution",
+        "T45-cells-that-rest-on-one-bound-are-entangled"
+      ],
+      "vectors": [
+        "samples/yes/H5-hilbert-is-the-obligatory-without-four-fields.json",
+        "samples/no/H5-hilbert-is-the-obligatory-without-four-fields.json"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "T53-a-decision-is-what-the-form-leaves-open",
+      "kind": "theorem",
+      "statement": "a lock is mostly settled: the form of most claims leaves them one legal state and they are applied, what the form leaves wider splits into those a reading has closed and those standing in force with nothing read against them, and the few that say of themselves that they are decisions are the only ones open; the four classes are a partition, every claim in exactly one, and a decision is not a claim with a wide ceiling but a claim that declares itself unanswered",
+      "dependsOn": [
+        "A0-carrier",
+        "A8-four-states",
+        "D3-state",
+        "T26-knowing-has-four-states"
+      ],
+      "vectors": [
+        "samples/yes/T53-a-decision-is-what-the-form-leaves-open.json"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "T58-observation-is-over-regions-by-reach",
+      "kind": "conjecture",
+      "statement": "Research status: experiment for the named historical tree: 2453 leaves and 309 declared regions. Region membership is prefix containment and may have zero, one or many observed leaves. There is no universal leaves-greater-than-regions inequality or cost-independent-of-atom-count conclusion: an observed region plus an empty region with only one observed leaf falsifies that cardinality implication. Reading-cost scaling requires a separate declared reader/work model and remains open.",
+      "dependsOn": [
+        "A3-resolution",
+        "D1-region"
+      ],
+      "vectors": [
+        "samples/yes/T58-observation-is-over-regions-by-reach.json",
+        "src/field/field.ts",
+        "test/obligatory.test.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T55-a-policy-is-four-weights",
+      "kind": "conjecture",
+      "statement": "Research status: experiment for the declared finite field, weights, seed, draw, spread and look budget. choose scores current reach, coherence at period 8, graph degree and log2(1+held width) under the handed four weights; play counts its specified closing/fork/coverage events. The recorded mixed weights outperform the recorded specialist weights on that fixture. Universal dominance for all fields, weights, draws or objectives is open and is not implied by component-bridge optimisation.",
+      "dependsOn": [
+        "A1-encounter",
+        "D11-the-obligatory",
+        "T41-distance-is-the-walk-between-lookings",
+        "T49-amplitude-has-sign-and-phase"
+      ],
+      "vectors": [
+        "samples/yes/T55-a-policy-is-four-weights.json",
+        "src/views/field/policy.ts",
+        "src/views/field/wave.ts",
+        "src/views/product/reach.ts",
+        "test/obligatory.test.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T56-forks-over-closes-separates-regimes",
+      "kind": "conjecture",
+      "statement": "Research status: experiment for the three declared spread regimes under the same finite seeded play procedure and mixed weights. The test compares forks/max(1,closed), including a denominator guard, and obtains distinct recorded ratios. This is a descriptive fixture statistic, not a universal regime classifier or a finite forks/closed ratio when closed=0. General interpretation, objective and uncertainty remain open.",
+      "dependsOn": [
+        "T55-a-policy-is-four-weights"
+      ],
+      "vectors": [
+        "samples/yes/T56-forks-over-closes-separates-regimes.json",
+        "src/views/field/policy.ts",
+        "test/obligatory.test.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T57-a-refereed-game-governs-itself",
+      "kind": "theorem",
+      "statement": "For the existing object state reading with fewer than two distinct live origin names, the cell cannot be FREE: incompatible required/signed constraints give CONFLICT first, otherwise the origin-count branch gives REQUIRED. Further claims of the same origin do not increase that distinct-name count. The seeded twenty-cell play results are experiments; player permissions, identity authenticity, independence, asymmetric economic value and an unsuspendable referee are not consequences of this state rule and remain open.",
+      "dependsOn": [
+        "A8-four-states",
+        "D11-the-obligatory"
+      ],
+      "vectors": [
+        "samples/yes/T57-a-refereed-game-governs-itself.json",
+        "src/lattice/obligatory.ts",
+        "src/field/encounter.ts",
+        "src/views/field/policy.ts",
+        "test/obligatory.test.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T63-author-time-memory-are-relative",
+      "kind": "theorem",
+      "statement": "who said it, when they said it and what is remembered are three coordinates of one claim and none of them is the claim: two origins saying one span are two claims and one origin saying it twice is one, so what a cell holds together depends on the spans alone while what it is depends on all three",
+      "dependsOn": [
+        "A4-epoch",
+        "A5-origin-is-extension",
+        "D0-coordinate",
+        "T2-coordinate-where-disagree"
+      ],
+      "vectors": [
+        "samples/yes/T63-author-time-memory-are-relative.json"
+      ],
+      "view": "galois"
+    },
+    {
+      "id": "T65-ownership-is-being-an-origin",
+      "kind": "theorem",
+      "statement": "to own a claim is to be the origin of it and nothing else: a cell holds what each origin said, taking an origin away takes exactly what it said and no more, and no narrowing survives the origin that made it",
+      "dependsOn": [
+        "A5-origin-is-extension",
+        "A1-encounter",
+        "D5-declaration",
+        "T8-exact-withdrawal"
+      ],
+      "vectors": [
+        "samples/yes/T65-ownership-is-being-an-origin.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T66-there-is-no-after",
+      "kind": "theorem",
+      "statement": "there is no after: what stands at a cell is what the latest epoch says and the order the claims arrived in never decides, so every order of one set of claims leaves one reading and a clock is not a fact about the field",
+      "dependsOn": [
+        "A4-epoch",
+        "T22-fold-is-superposition",
+        "T50-signatures-are-meets",
+        "D8-present"
+      ],
+      "vectors": [
+        "samples/yes/T66-there-is-no-after.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T67-withdrawal-is-reinterpretation",
+      "kind": "theorem",
+      "statement": "a withdrawal takes back what a claim did and never that it was made: the claim stays on the cell, the origin still spoke, and what changed is what the cell now means, which is why a withdrawal is a reinterpretation and not an erasure",
+      "dependsOn": [
+        "T8-exact-withdrawal",
+        "A4-epoch",
+        "A1-encounter",
+        "T19-signatures-fold"
+      ],
+      "vectors": [
+        "samples/yes/T67-withdrawal-is-reinterpretation.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T70-a-gap-is-a-coarse-claim",
+      "kind": "theorem",
+      "statement": "a gap is not the absence of a claim but a claim at the coarsest resolution: a cell nobody has narrowed holds the whole scale, which is exactly what saying nothing says, so a reading that is missing and a reading that allows everything are one line and a tree with gaps is a tree read coarsely",
+      "dependsOn": [
+        "A6-vacuity",
+        "A3-resolution",
+        "D1-region",
+        "T5-coarsen-widens"
+      ],
+      "vectors": [
+        "samples/yes/T70-a-gap-is-a-coarse-claim.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "H6-structure-of-measurement",
+      "kind": "conjecture",
+      "statement": "four instruments that share no mechanism fold the same way because a measurement is a cell: for a thermometer, a survey, an interferometer and a headcount the five fields are named without strain and the same five operations answer for all four; no number is claimed, only that the table can be filled in every row",
+      "dependsOn": [
+        "D11-the-obligatory",
+        "A0-carrier",
+        "A1-encounter",
+        "A3-resolution"
+      ],
+      "vectors": [
+        "samples/yes/H6-structure-of-measurement.json",
+        "samples/no/H6-structure-of-measurement.json"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "H7-the-medium-of-encounters",
+      "kind": "conjecture",
+      "statement": "what carries an encounter is a medium, and a medium is what two origins can both reach: in each instrument the medium can be named and the encounter happens where two origins touch it and nowhere else, so two origins at one cell make information and the same two at two cells make none; structural resemblance, one origin, not a claim about the world",
+      "dependsOn": [
+        "A1-encounter",
+        "T41-distance-is-the-walk-between-lookings",
+        "D1-region"
+      ],
+      "vectors": [
+        "samples/yes/H7-the-medium-of-encounters.json",
+        "samples/no/H7-the-medium-of-encounters.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "H8-refereed-game",
+      "kind": "conjecture",
+      "statement": "a field of cells with origins and signatures is a game whose referee is inside it: a move is a claim, a claim alone is potential, two that meet are information, a signature moves every cell that rests on it, and no player may suspend the rule that makes the first four; the claim is that each of five readings of the field matches all five properties; structural resemblance, one origin, not a claim about the world",
+      "dependsOn": [
+        "T57-a-refereed-game-governs-itself",
+        "A1-encounter",
+        "T50-signatures-are-meets"
+      ],
+      "vectors": [
+        "samples/yes/H8-refereed-game.json",
+        "samples/no/H8-refereed-game.json"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "T73-a-cell-that-folds-itself-converges",
+      "kind": "theorem",
+      "statement": "a cell that folds itself converges: observing each epoch a claim of width ten centred on its own meet and off by at most s, it narrows only when the offset cuts inside what it holds, so its freedom settles toward log2(11 − 2s) from above and it never conflicts; at s = 3, sixty epochs leave it between 2.38 and 2.43 bits on three seeds",
+      "dependsOn": [
+        "A9-everything-is-a-bound",
+        "A7-freedom-conserved",
+        "A1-encounter"
+      ],
+      "vectors": [
+        "samples/yes/T73-a-cell-that-folds-itself-converges.json"
+      ],
+      "view": "galois"
+    },
+    {
+      "id": "H9-the-obligatory-is-maximal",
+      "kind": "conjecture",
+      "statement": "the obligatory is maximal: take away any one of its seven parts and what is left is an object already known, and anything added to it is either already inside it or breaks the four states",
+      "dependsOn": [
+        "A8-four-states",
+        "A9-everything-is-a-bound",
+        "D11-the-obligatory"
+      ],
+      "vectors": [
+        "samples/yes/H9-the-obligatory-is-maximal.json",
+        "samples/no/H9-the-obligatory-is-maximal.json"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "A2-meet/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "A1-encounter/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "D4-debit-in-bits/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "T50-signatures-are-meets/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "D11-the-obligatory/floor",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "D11-the-obligatory/ceiling",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "A8-four-states/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "A0-carrier/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "A4-epoch/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "A5-origin-is-extension/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "A9-everything-is-a-bound/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "A7-freedom-conserved/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "T49-amplitude-has-sign-and-phase/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "T95-signatures-live-where-they-are-signed/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "T87-the-quarter-turn/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "D3-state/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "T85-withdrawal-is-an-anti-claim",
+      "kind": "theorem",
+      "statement": "Bounded object contract: with an unchanged acyclic world, well-formed unique claim ids and a withdrawal naming only the newly appended claim, observe followed by that named withdrawal restores the earlier live claims and hence its poles. The earlier state is restored, not necessarily grey. Separately, equal-magnitude opposite-signed phasors at the same phase modulo a declared positive period cancel. Epoch or causal labels alone are not phase equality. Historical alias: withdrawal-is-an-anti-claim.",
+      "dependsOn": [
+        "A2-meet"
+      ],
+      "vectors": [
+        "samples/yes/T85-withdrawal-is-an-anti-claim.json",
+        "samples/no/T85-withdrawal-is-an-anti-claim.json",
+        "src/field/observe.ts",
+        "src/lattice/obligatory.ts",
+        "src/views/field/wave.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T87-the-quarter-turn",
+      "kind": "theorem",
+      "statement": "For two unit complex amplitudes with real phases, let delta=acos(cos(a-b)) in [0,pi]. Then |exp(ia)+exp(ib)|^2=2+2*cos(delta), and it is below 2 iff delta>pi/2. Raw absolute phase difference is not invariant under full turns. Laminarity, fork/close ratios and the F4 worst-case objective are not conclusions of this identity. Historical alias: the-quarter-turn.",
+      "dependsOn": [],
+      "vectors": [
+        "samples/yes/T87-the-quarter-turn.json",
+        "samples/no/T87-the-quarter-turn.json",
+        "test/measures/t87-phase.test.ts",
+        "src/views/field/wave.ts",
+        "src/field/encounter.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T88-turbulence-is-factions",
+      "kind": "conjecture",
+      "statement": "Open research interpretation; not a consequence of T87. Evenly spaced phases do not always give a forks/closes ratio of one: phases 0, 2pi/3, 4pi/3 give three cancelling pairs and zero closing pairs. General faction interpretation remains open. Historical alias: turbulence-is-factions.",
+      "dependsOn": [
+        "T87-the-quarter-turn"
+      ],
+      "vectors": [
+        "samples/yes/T88-turbulence-is-factions.json",
+        "samples/no/T88-turbulence-is-factions.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T89-disagreement-is-where-to-look",
+      "kind": "conjecture",
+      "statement": "Open research hypothesis; the unit-amplitude identity in T87 proves no policy advantage. Comparing disagreement-weighted and blind policies requires a declared objective, population and sampling model. Historical alias: disagreement-is-where-to-look.",
+      "dependsOn": [
+        "T87-the-quarter-turn"
+      ],
+      "vectors": [
+        "samples/yes/T89-disagreement-is-where-to-look.json",
+        "samples/no/T89-disagreement-is-where-to-look.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T90-freedom-is-entropy",
+      "kind": "theorem",
+      "statement": "For a finite nonempty set of uniformly weighted admissible states at a fixed resolution, freedom is log2 of its cardinality, equal to its Shannon entropy. A narrowing act cannot increase this quantity. Withdrawal and witnessed local join can increase it on an existing object; phase and vacuity experiments do not establish that these are the only possible changes. Historical alias: freedom-is-entropy.",
+      "dependsOn": [
+        "D4-debit-in-bits",
+        "A7-freedom-conserved"
+      ],
+      "vectors": [
+        "samples/yes/T90-freedom-is-entropy.json",
+        "samples/no/T90-freedom-is-entropy.json",
+        "test/laws-boundaries-042.test.ts",
+        "vectors/laws/a7-t90.json"
+      ],
+      "view": "chain"
+    },
+    {
+      "id": "T91-many-objects-make-a-field",
+      "kind": "corollary",
+      "statement": "many objects make a field: cells read pairwise meet or fork, the meets join them into components, and the whole can have no meet although most of its pairs do",
+      "dependsOn": [
+        "T92-a-cell-is-made-of-cells"
+      ],
+      "vectors": [
+        "samples/yes/T91-many-objects-make-a-field.json",
+        "samples/no/T91-many-objects-make-a-field.json"
+      ],
+      "view": "product"
+    },
+    {
+      "id": "T92-a-cell-is-made-of-cells",
+      "kind": "theorem",
+      "statement": "origins, bounds, claims and rests are cells, and the state a cell shows is the meet of its parts' states; reading deeper is reading at a finer resolution, and it converges",
+      "dependsOn": [
+        "A9-everything-is-a-bound",
+        "A3-resolution",
+        "A2-meet"
+      ],
+      "vectors": [
+        "samples/yes/T92-a-cell-is-made-of-cells.json",
+        "samples/no/T92-a-cell-is-made-of-cells.json"
+      ],
+      "view": "product"
+    },
+    {
+      "id": "T93-every-act-is-paid-by-its-origin",
+      "kind": "theorem",
+      "statement": "Bounded interval-budget contract: in a finite acyclic world with inhabited poles, finite ceiling/floor endpoints and no local widening, pay explicitly appends a travelling ceiling mark at hi-1. It refuses if hi-1<floor.lo; otherwise looksLeft decreases by one with the rest of the snapshot unchanged. The caller must explicitly charge a look; sign, observe and refine are not thereby charged automatically. Region membership is computed by the existing region predicate. No universal physical price, policy optimality or third-object claim follows. Historical alias: every-act-is-paid-by-its-origin.",
+      "dependsOn": [
+        "A2-meet"
+      ],
+      "vectors": [
+        "samples/yes/T93-every-act-is-paid-by-its-origin.json",
+        "samples/no/T93-every-act-is-paid-by-its-origin.json",
+        "src/debit/observer.ts",
+        "src/field/sign.ts",
+        "src/lattice/obligatory.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T94-a-signature-stops-where-the-meet-is-identity",
+      "kind": "theorem",
+      "statement": "Bounded diagnostic contract: on a finite acyclic rest graph with its exact reverse-edge index, bites traverses travelling non-widening ceiling marks and stops below an envelope a when meet(a,new)=a. Descendant travelling envelopes contain that ancestor meet and are also absorbed. Its cells and visits describe this diagnostic traversal. With no local widening, local-only ceiling constraints or claim spans masking these envelopes, the fixture matches changed ceilings. It proves neither actual propagation cost nor a general region-summary interval. Historical alias: a-signature-stops-where-the-meet-is-identity.",
+      "dependsOn": [
+        "A2-meet"
+      ],
+      "vectors": [
+        "samples/yes/T94-a-signature-stops-where-the-meet-is-identity.json",
+        "samples/no/T94-a-signature-stops-where-the-meet-is-identity.json",
+        "src/field/sign.ts",
+        "src/lattice/obligatory.ts"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "T95-signatures-live-where-they-are-signed",
+      "kind": "theorem",
+      "statement": "Bounded storage/read contract: sign and require append one mark at the named cell and retain ancestor records. On finite acyclic snapshots with unique ids and no widening, poles fold applicable live local and travelling-ancestor marks and live local claims by meets; the result is independent of replay order of the same records. Withdrawing a uniquely named tighter mark exposes the meet of the remaining marks, which may include an absorbed earlier signature. One appended record is not a runtime-cost theorem: map copying and ancestry traversal are separate, and a DAG read is not bounded by depth alone. Historical alias: signatures-live-where-they-are-signed.",
+      "dependsOn": [
+        "A2-meet"
+      ],
+      "vectors": [
+        "samples/yes/T95-signatures-live-where-they-are-signed.json",
+        "samples/no/T95-signatures-live-where-they-are-signed.json",
+        "src/field/sign.ts",
+        "src/field/require.ts",
+        "src/lattice/obligatory.ts"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "T99-the-fold-is-total",
+      "kind": "theorem",
+      "statement": "For a finite world with finite records, an acyclic dependency order and total supplied lattice operations, ancestry expansion visits each reachable name once and parts/meet perform finitely many operations. This is finite evaluation, not convergence of an arbitrary monotone-map iteration. Monotonicity alone allows a two-cycle from incomparable seeds. Every reachable dependency cycle is rejected; unreachable cycles do not affect the query. Arbitrary iterative convergence remains open without operator, seed and progress hypotheses. Historical alias: the-fold-is-total.",
+      "dependsOn": [
+        "A2-meet"
+      ],
+      "vectors": [
+        "samples/yes/T99-the-fold-is-total.json",
+        "samples/no/T99-the-fold-is-total.json",
+        "test/fold-boundaries-042.test.ts",
+        "vectors/laws/a9-t99.json",
+        "src/lattice/obligatory.ts"
+      ],
+      "view": "lattice"
+    },
+    {
+      "id": "T100-an-act-is-paid-with-attention",
+      "kind": "conjecture",
+      "statement": "Named experiment: object.test.ts simulates300 independent finite interval cells,20 explicit looks per epoch,64 states per initial cell, expiry after10 epochs and200 epochs. A running signed price ledger telescopes so freedom left plus the ledger equals its initial value; the captured fixture reports steady1200 under this scheduler. That bookkeeping identity is not Shannon entropy conservation, and the finite fixture does not prove general convergence, physical attention cost or an entropy-flow claim. Historical alias: an-act-is-paid-with-attention.",
+      "dependsOn": [],
+      "vectors": [
+        "samples/yes/T100-an-act-is-paid-with-attention.json",
+        "samples/no/T100-an-act-is-paid-with-attention.json",
+        "src/debit/observer.ts",
+        "test/object.test.ts"
+      ],
+      "view": "chain"
+    },
+    {
+      "id": "T101-fragility-is-the-fewest-withdrawals",
+      "kind": "theorem",
+      "statement": "Bounded enumeration contract: for a finite cell history and fixed finite acyclic world with total lattice operations, fragility enumerates subsets of distinct live origin names in increasing size. For each subset it removes all history records by those names and compares both poles. It returns the smallest size changing a pole, or sentinel0 if no tested subset does. This is history-record deletion, not automatic phased cancellation; cross-origin takes can expose old records. Simultaneous-support intuition additionally assumes no cross-origin withdrawal dependencies and no masking marks. Historical alias: fragility-is-the-fewest-withdrawals.",
+      "dependsOn": [
+        "A2-meet"
+      ],
+      "vectors": [
+        "samples/yes/T101-fragility-is-the-fewest-withdrawals.json",
+        "samples/no/T101-fragility-is-the-fewest-withdrawals.json",
+        "src/field/fragility.ts",
+        "src/lattice/obligatory.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T101-fragility-is-the-fewest-withdrawals/formula",
+      "kind": "statement",
+      "dependsOn": [],
+      "vectors": [],
+      "view": null
+    },
+    {
+      "id": "T102-a-combine-meets-one-cell-and-coarsens-many",
+      "kind": "corollary",
+      "statement": "a combine of bounds meets them where they land on one cell and coarsens them where they land on many: two readers of one field fold to their meet, which neither stands beside nor forks from, and readers of several fields keep their own cells and are read together only at the region they share",
+      "dependsOn": [
+        "A2-meet",
+        "T5-coarsen-widens"
+      ],
+      "vectors": [
+        "samples/yes/T102-a-combine-meets-one-cell-and-coarsens-many.json",
+        "samples/no/T102-a-combine-meets-one-cell-and-coarsens-many.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T103-a-reading-holds-at-what-it-read",
+      "kind": "theorem",
+      "statement": "a reading holds at what it read, as it was when it was read: its epoch is the state of the atoms it touched, so once those atoms move the reading stays an origin of that past and says nothing of the present until it is read again; a text, a table, a schema and a tree hold their readings the same way",
+      "dependsOn": [
+        "A4-epoch",
+        "T21-reading-is-an-origin",
+        "D8-present"
+      ],
+      "vectors": [
+        "samples/yes/T103-a-reading-holds-at-what-it-read.json",
+        "samples/no/T103-a-reading-holds-at-what-it-read.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "T104-concurrent-withdrawal-cancels",
+      "kind": "conjecture",
+      "statement": "Named phase-assignment experiment: the existing fixture chooses the withdrawal epoch equal to the observation epoch when rests=false, and uses the declared withdrawal epoch when rests=true. That chosen convention yields its measured phasors, but neither-rests-on-the-other does not itself prove phase equality. A dependent withdrawal one full period later also cancels; unrelated claims assigned different phases need not. Any general concurrency-if-and-only-if-cancellation theorem requires a declared cross-clock phase-comparison rule and remains open. Historical alias: concurrent-withdrawal-cancels.",
+      "dependsOn": [],
+      "vectors": [
+        "samples/yes/T104-concurrent-withdrawal-cancels.json",
+        "samples/no/T104-concurrent-withdrawal-cancels.json",
+        "test/object.test.ts",
+        "src/views/field/wave.ts"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "H10-the-period-is-a-line-of-the-region",
+      "kind": "conjecture",
+      "statement": "the period a phase is read against, the one T48 and T87 turn on, is a line of the region and never a fact of the instrument: a concert, a match and a sensor-s cadence each define theirs, and two heads that read one region with its period agree on its coherence with no clock between them; structural resemblance, one origin, not a claim about the world",
+      "dependsOn": [
+        "T48-epoch-is-phase",
+        "T87-the-quarter-turn"
+      ],
+      "vectors": [
+        "samples/yes/H10-the-period-is-a-line-of-the-region.json",
+        "samples/no/H10-the-period-is-a-line-of-the-region.json"
+      ],
+      "view": "field"
+    },
+    {
+      "id": "L7-tolerant-k",
+      "kind": "definition",
+      "statement": "L7: conditional bound on one declared common probability space: P(N>k)<=min(1,sum over |S|=k+1 of min p_i), with rational declared marginal failure upper bounds and 0<=k<=m. Trivial iff computed upper bound is one. Counterexamples refute the former top-k+1 success guarantee. Joint-independent Bernoulli convolution is a separate declared hypothesis; rho=0 and pairwise independence do not supply it. Existing stronger 0.4.2 count bound is unchanged and needs no joint independence.",
+      "dependsOn": [
+        "T18-freedom-is-a-currency"
+      ],
+      "vectors": [
+        "samples/measures/l7-tolerant-k.json",
+        "vectors/laws/l7-tolerant-k.json",
+        "vectors/laws/policy.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "L8-F4-integer-phase-defect",
+      "kind": "definition",
+      "statement": "L8: law by enumeration only for 3<=n<=64, positive integer divisors p|n and integer 0<=s<p. D=log2(n/p)-h(s/p), explicit binary64-log2 approximation. Odd-period minimum uses h(floor(p/2)/p), even-period minimum uses one. Complete maximum at zero; nonzero domain has endpoints 1,p-1, empty when p=1. No information or worst-case interpretation follows from nonnegativity. T87 retains its separate wrapped-phase amplitude identity.",
+      "dependsOn": [],
+      "vectors": [
+        "samples/measures/l8-phase-defect.json",
+        "vectors/laws/l8-phase-defect.json",
+        "vectors/laws/policy.json"
+      ],
+      "view": "valuation"
+    },
+    {
+      "id": "L9-mix-projection-loss",
+      "kind": "definition",
+      "statement": "L9: law by counterexample of existence of noninjective weighted mix, and measure with a declared prior on a finite explicitly supplied set of named-factor configurations. Equal-weight ab and ba give the same bottom tie and different named forks. Loss is H(configuration | mix)=H(configuration)-H(mix); a uniform prior must be explicitly selected, absent prior is unmeasured. The four-state uniform example has mean loss 0.5 bits and one bit conditioned on tie; the injective named fork has zero loss. Defines no new algebraic act, governance selection, M/3 or M/4 law, or destroyed field.",
+      "dependsOn": [],
+      "vectors": [
+        "samples/measures/l9-mix-loss.json",
+        "vectors/laws/l9-mix-loss.json",
+        "vectors/laws/policy.json"
+      ],
+      "view": "valuation"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 <p align="center"><img src="../img/thermometer.svg" alt="Four origins on one scale: a claims 19.8 to 20.2, b claims 19.9 to 20.3, c claims 19.7 to 20.1 and d claims 24 to 24.4; their claims do not meet." width="640"></p>
 
-A claim from one origin is potential; a cell is information only where two independent origins touch it and their intervals meet.
+A claim from one origin is potential; a cell is information only where two named extensional origins touch it and their intervals meet. Named origins do not establish authentication or joint probabilistic independence.
 
 ## Run it
 

@@ -1,0 +1,301 @@
+{
+  "profile": "decision-refinements@1",
+  "modelFamily": "declared-loss-and-decoder-boundaries@1",
+  "place": "shipping",
+  "request": "conditional-refinements",
+  "loss": {
+    "place": "shipping",
+    "states": [
+      "absent",
+      "present"
+    ],
+    "actions": [
+      "hold",
+      "act"
+    ],
+    "prior": [
+      "3/5",
+      "2/5"
+    ],
+    "estimateUnit": "declared quantity",
+    "lossUnit": "declared penalty",
+    "tie": "all-minimizers",
+    "losses": [
+      [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "2",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1/2",
+          "0"
+        ]
+      ],
+      [
+        [
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1"
+        ]
+      ]
+    ]
+  },
+  "threshold": {
+    "place": "shipping",
+    "p": "2/3",
+    "c": "1/8",
+    "cases": [
+      {
+        "K": 2,
+        "p": "2/3",
+        "weights": [
+          "1/2",
+          "1/2"
+        ],
+        "jointLaw": "product-bernoulli@1",
+        "tie": "fair",
+        "atoms": [
+          {
+            "bits": [
+              0,
+              0
+            ],
+            "p": "1/9"
+          },
+          {
+            "bits": [
+              0,
+              1
+            ],
+            "p": "2/9"
+          },
+          {
+            "bits": [
+              1,
+              0
+            ],
+            "p": "2/9"
+          },
+          {
+            "bits": [
+              1,
+              1
+            ],
+            "p": "4/9"
+          }
+        ]
+      },
+      {
+        "K": 3,
+        "p": "2/3",
+        "weights": [
+          "1/3",
+          "1/3",
+          "1/3"
+        ],
+        "jointLaw": "product-bernoulli@1",
+        "tie": "fair",
+        "atoms": [
+          {
+            "bits": [
+              0,
+              0,
+              0
+            ],
+            "p": "1/27"
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1
+            ],
+            "p": "2/27"
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0
+            ],
+            "p": "2/27"
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1
+            ],
+            "p": "4/27"
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0
+            ],
+            "p": "2/27"
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1
+            ],
+            "p": "4/27"
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0
+            ],
+            "p": "4/27"
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1
+            ],
+            "p": "8/27"
+          }
+        ]
+      },
+      {
+        "K": 3,
+        "p": "2/3",
+        "weights": [
+          "3/4",
+          "1/8",
+          "1/8"
+        ],
+        "jointLaw": "product-bernoulli@1",
+        "tie": "fair",
+        "atoms": [
+          {
+            "bits": [
+              0,
+              0,
+              0
+            ],
+            "p": "1/27"
+          },
+          {
+            "bits": [
+              0,
+              0,
+              1
+            ],
+            "p": "2/27"
+          },
+          {
+            "bits": [
+              0,
+              1,
+              0
+            ],
+            "p": "2/27"
+          },
+          {
+            "bits": [
+              0,
+              1,
+              1
+            ],
+            "p": "4/27"
+          },
+          {
+            "bits": [
+              1,
+              0,
+              0
+            ],
+            "p": "2/27"
+          },
+          {
+            "bits": [
+              1,
+              0,
+              1
+            ],
+            "p": "4/27"
+          },
+          {
+            "bits": [
+              1,
+              1,
+              0
+            ],
+            "p": "4/27"
+          },
+          {
+            "bits": [
+              1,
+              1,
+              1
+            ],
+            "p": "8/27"
+          }
+        ]
+      }
+    ],
+    "uniformBoundStatus": "Lean-open"
+  },
+  "capacity": {
+    "model": "single-dominant-factor@1",
+    "loss": "zero-one",
+    "prior": "uniform-truth",
+    "rules": [
+      "plurality-uniform-ties@1",
+      "posterior-map-uniform-ties@1"
+    ],
+    "tie": "uniform-over-maximizers",
+    "policy": {
+      "logarithm": "binary64-log2",
+      "budget": "100000"
+    },
+    "cases": [
+      {
+        "id": "shipping/invertible-wrong-channel",
+        "k": 1,
+        "model": {
+          "n": 2,
+          "c": "1/5",
+          "p": "1"
+        }
+      },
+      {
+        "id": "shipping/nondegenerate-channel",
+        "k": 4,
+        "model": {
+          "n": 4,
+          "c": "1/5",
+          "p": "3/10"
+        }
+      }
+    ]
+  },
+  "concentration": "Lean-open",
+  "asymptoticClaim": "not-inferred-from-finite-cases",
+  "evidence": "fixed-analytic-model",
+  "numericReporting": {
+    "rendering": "binary64-toFixed",
+    "digits": 12,
+    "tolerance": "1e-12",
+    "meaning": "Declared decimal reporting of approximate logarithms; not exact equality of real information"
+  }
+}

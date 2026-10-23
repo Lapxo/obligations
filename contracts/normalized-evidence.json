@@ -1,0 +1,42 @@
+{
+  "id": "normalized-evidence@1",
+  "statement": "N is KL(P(X|positive)||P(X|negative)) divided by the same oriented KL of a named source marginal under those same conditional laws.",
+  "api": "normalizedEvidence",
+  "domain": [
+    "two named truth conditions",
+    "complete rational normalized laws on named configurations",
+    "distinct source and configuration ids",
+    "named reference source in the population",
+    "binary64 log policy, declared resolution floor and support budget"
+  ],
+  "result": [
+    "group and reference divergences in bits",
+    "dimensionless reference-source-equivalent ratio",
+    "complete unchanged attributed model parameters",
+    "explicit orientation and numerical approximation"
+  ],
+  "unmeasured": [
+    "evidence/conditional-laws-required",
+    "evidence/reference-required",
+    "evidence/incompatible-support",
+    "evidence/zero-reference-divergence",
+    "evidence/numeric-range",
+    "evidence/numerically-unresolved",
+    "evidence/budget"
+  ],
+  "doesNotEstablish": [
+    "truth labels inferred from pairs",
+    "joint independence from lineage labels",
+    "universal N <= source count",
+    "probability of correct decision",
+    "admissibility as a valuation in the lattice paper",
+    "D_max approximates N outside a declared model",
+    "admission authority"
+  ],
+  "proof": "proofs/normalized-evidence.md",
+  "copyRule": "An injective duplication of coordinates preserves the two masses per joint state and the named reference marginal, hence the KL ratio. Conditional independent blocks make unnormalized group KL additive; ratios are additive only with a compatible common denominator.",
+  "status": {
+    "scientific": "definition and conditioned mathematical properties; deterministic finite acceptance"
+  },
+  "primitive": "A reading over attributed declarations, not a second cell or stored authority"
+}

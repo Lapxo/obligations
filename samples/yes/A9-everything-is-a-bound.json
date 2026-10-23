@@ -47,7 +47,7 @@
    ]
   },
   {
-   "coordinate": "lock/TARGET.bound",
+   "coordinate": "rules/constraints.json",
    "origins": [
     [
      "x",

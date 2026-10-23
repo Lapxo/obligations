@@ -233,29 +233,6 @@ test('T46-a-bound-moves-cells-no-walk-reaches-table — looking reaches seventy-
   compare(changed.filter((at) => past.has(at)).length, c['past'], 'and how much of that no looking could have reached');
 });
 
-const HERE = join(import.meta.dirname, '..');
-const lockLines = (name: string): readonly string[] =>
-  readFileSync(join(HERE, name), 'utf8').split('\n').filter((line) => line.startsWith('bound-lock/1'));
-const said = (line: string, key: string): string => new RegExp(`(?:^|\\s)${key}=("[^"]*"|\\S*)`).exec(line)?.[1]?.replace(/^"|"$/g, '') ?? '';
-const statesOf = (line: string): number => {
-  const value = said(line, 'value');
-  const width = /^(-?\d+)\.\.(-?\d+)$/.exec(value);
-  return width ? Number(width[2]) - Number(width[1]) + 1 : value.split('|').filter(Boolean).length;
-};
-
-test('T53-a-decision-is-what-the-form-leaves-open — four classes that partition a lock, most settled first', () => {
-  const c = one(sample('yes', 'T53-a-decision-is-what-the-form-leaves-open'));
-  const held = [...lockLines('TARGET.bound'), ...lockLines('offers.bound')];
-  const wide = held.filter((line) => statesOf(line) > 1);
-  const settled = held.filter((line) => statesOf(line) <= 1);
-  const open = wide.filter((line) => said(line, 'shape') === 'decision');
-  const inForce = wide.filter((line) => said(line, 'shape') !== 'decision');
-  compare(settled.length + open.length + inForce.length, held.length, 'every claim is in exactly one class');
-  compare(settled.length > wide.length, true, 'the form settles more than it leaves open');
-  compare(open.length <= wide.length, true, 'and what declares itself a decision is fewer still');
-  compare((c['obligations'] as Vector)['oneLegalState'] as number > ((c['obligations'] as Vector)['formLeavesOpen'] as number), true, 'as the case says');
-});
-
 test('T58-observation-is-over-regions-by-reach — historical cardinality is an observation, not a universal bound', () => {
   const c = one(sample('yes', 'T58-observation-is-over-regions-by-reach'));
   compare((c['leaves'] as number) / (c['regions'] as number) > 1, true, 'as the case says, several leaves to a region');

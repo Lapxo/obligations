@@ -1,0 +1,754 @@
+{
+  "profile": "shared-cause-boundaries@1",
+  "request": "infer-from-count-only",
+  "modelFamily": "declared-M3-and-finite-countermodels@1",
+  "policy": {
+    "budget": "10000"
+  },
+  "known": {
+    "witnesses": [
+      {
+        "id": "spring/a",
+        "correct": "4/5"
+      },
+      {
+        "id": "spring/b",
+        "correct": "3/5"
+      },
+      {
+        "id": "spring/c",
+        "correct": "3/4"
+      }
+    ],
+    "factors": [
+      {
+        "id": "spring/ab",
+        "members": [
+          "spring/a",
+          "spring/b"
+        ]
+      },
+      {
+        "id": "spring/bc",
+        "members": [
+          "spring/b",
+          "spring/c"
+        ]
+      }
+    ],
+    "pairs": [
+      {
+        "a": "spring/a",
+        "b": "spring/b",
+        "correctTogether": "3/5"
+      },
+      {
+        "a": "spring/b",
+        "b": "spring/c",
+        "correctTogether": "3/5"
+      },
+      {
+        "a": "spring/a",
+        "b": "spring/c",
+        "correctTogether": "3/5"
+      }
+    ]
+  },
+  "rankDeficient": {
+    "witnesses": [
+      {
+        "id": "spring/u",
+        "correct": "1/4"
+      },
+      {
+        "id": "spring/v",
+        "correct": "1/4"
+      },
+      {
+        "id": "spring/w",
+        "correct": "1/4"
+      },
+      {
+        "id": "spring/z",
+        "correct": "1/4"
+      }
+    ],
+    "factors": [
+      {
+        "id": "spring/factor-1",
+        "members": [
+          "spring/u",
+          "spring/v",
+          "spring/w",
+          "spring/z"
+        ]
+      },
+      {
+        "id": "spring/factor-2",
+        "members": [
+          "spring/u",
+          "spring/v",
+          "spring/w",
+          "spring/z"
+        ]
+      }
+    ],
+    "pairs": [
+      {
+        "a": "spring/u",
+        "b": "spring/v",
+        "correctTogether": "1/4"
+      },
+      {
+        "a": "spring/u",
+        "b": "spring/w",
+        "correctTogether": "1/4"
+      },
+      {
+        "a": "spring/u",
+        "b": "spring/z",
+        "correctTogether": "1/4"
+      },
+      {
+        "a": "spring/v",
+        "b": "spring/w",
+        "correctTogether": "1/4"
+      },
+      {
+        "a": "spring/v",
+        "b": "spring/z",
+        "correctTogether": "1/4"
+      },
+      {
+        "a": "spring/w",
+        "b": "spring/z",
+        "correctTogether": "1/4"
+      }
+    ]
+  },
+  "samePairs": {
+    "laws": [
+      {
+        "model": "finite-declared-joint@1",
+        "truthValues": [
+          "0",
+          "1"
+        ],
+        "sources": [
+          {
+            "id": "spring/a",
+            "lineage": "spring/declared-provenance",
+            "values": [
+              "0",
+              "1"
+            ]
+          },
+          {
+            "id": "spring/b",
+            "lineage": "spring/declared-provenance",
+            "values": [
+              "0",
+              "1"
+            ]
+          },
+          {
+            "id": "spring/c",
+            "lineage": "spring/declared-provenance",
+            "values": [
+              "0",
+              "1"
+            ]
+          }
+        ],
+        "atoms": [
+          {
+            "id": "spring/0/000",
+            "truth": "0",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "0",
+              "spring/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/0/001",
+            "truth": "0",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "0",
+              "spring/c": "1"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/0/010",
+            "truth": "0",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "1",
+              "spring/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/0/011",
+            "truth": "0",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "1",
+              "spring/c": "1"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/0/100",
+            "truth": "0",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "0",
+              "spring/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/0/101",
+            "truth": "0",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "0",
+              "spring/c": "1"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/0/110",
+            "truth": "0",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "1",
+              "spring/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/0/111",
+            "truth": "0",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "1",
+              "spring/c": "1"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/1/000",
+            "truth": "1",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "0",
+              "spring/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/1/001",
+            "truth": "1",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "0",
+              "spring/c": "1"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/1/010",
+            "truth": "1",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "1",
+              "spring/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/1/011",
+            "truth": "1",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "1",
+              "spring/c": "1"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/1/100",
+            "truth": "1",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "0",
+              "spring/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/1/101",
+            "truth": "1",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "0",
+              "spring/c": "1"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/1/110",
+            "truth": "1",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "1",
+              "spring/c": "0"
+            },
+            "p": "1/16"
+          },
+          {
+            "id": "spring/1/111",
+            "truth": "1",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "1",
+              "spring/c": "1"
+            },
+            "p": "1/16"
+          }
+        ]
+      },
+      {
+        "model": "finite-declared-joint@1",
+        "truthValues": [
+          "0",
+          "1"
+        ],
+        "sources": [
+          {
+            "id": "spring/a",
+            "lineage": "spring/declared-provenance",
+            "values": [
+              "0",
+              "1"
+            ]
+          },
+          {
+            "id": "spring/b",
+            "lineage": "spring/declared-provenance",
+            "values": [
+              "0",
+              "1"
+            ]
+          },
+          {
+            "id": "spring/c",
+            "lineage": "spring/declared-provenance",
+            "values": [
+              "0",
+              "1"
+            ]
+          }
+        ],
+        "atoms": [
+          {
+            "id": "spring/0/000",
+            "truth": "0",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "0",
+              "spring/c": "0"
+            },
+            "p": "1/8"
+          },
+          {
+            "id": "spring/0/001",
+            "truth": "0",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "0",
+              "spring/c": "1"
+            },
+            "p": "0"
+          },
+          {
+            "id": "spring/0/010",
+            "truth": "0",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "1",
+              "spring/c": "0"
+            },
+            "p": "0"
+          },
+          {
+            "id": "spring/0/011",
+            "truth": "0",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "1",
+              "spring/c": "1"
+            },
+            "p": "1/8"
+          },
+          {
+            "id": "spring/0/100",
+            "truth": "0",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "0",
+              "spring/c": "0"
+            },
+            "p": "0"
+          },
+          {
+            "id": "spring/0/101",
+            "truth": "0",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "0",
+              "spring/c": "1"
+            },
+            "p": "1/8"
+          },
+          {
+            "id": "spring/0/110",
+            "truth": "0",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "1",
+              "spring/c": "0"
+            },
+            "p": "1/8"
+          },
+          {
+            "id": "spring/0/111",
+            "truth": "0",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "1",
+              "spring/c": "1"
+            },
+            "p": "0"
+          },
+          {
+            "id": "spring/1/000",
+            "truth": "1",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "0",
+              "spring/c": "0"
+            },
+            "p": "0"
+          },
+          {
+            "id": "spring/1/001",
+            "truth": "1",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "0",
+              "spring/c": "1"
+            },
+            "p": "1/8"
+          },
+          {
+            "id": "spring/1/010",
+            "truth": "1",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "1",
+              "spring/c": "0"
+            },
+            "p": "1/8"
+          },
+          {
+            "id": "spring/1/011",
+            "truth": "1",
+            "values": {
+              "spring/a": "0",
+              "spring/b": "1",
+              "spring/c": "1"
+            },
+            "p": "0"
+          },
+          {
+            "id": "spring/1/100",
+            "truth": "1",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "0",
+              "spring/c": "0"
+            },
+            "p": "1/8"
+          },
+          {
+            "id": "spring/1/101",
+            "truth": "1",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "0",
+              "spring/c": "1"
+            },
+            "p": "0"
+          },
+          {
+            "id": "spring/1/110",
+            "truth": "1",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "1",
+              "spring/c": "0"
+            },
+            "p": "0"
+          },
+          {
+            "id": "spring/1/111",
+            "truth": "1",
+            "values": {
+              "spring/a": "1",
+              "spring/b": "1",
+              "spring/c": "1"
+            },
+            "p": "1/8"
+          }
+        ]
+      }
+    ],
+    "policy": {
+      "logarithm": "binary64-log2",
+      "budget": "100000"
+    }
+  },
+  "privateSingleton": {
+    "withoutSingletons": {
+      "witnesses": [
+        {
+          "id": "spring/a",
+          "correct": "3/4"
+        },
+        {
+          "id": "spring/b",
+          "correct": "3/4"
+        }
+      ],
+      "factors": [],
+      "pairs": [
+        {
+          "a": "spring/a",
+          "b": "spring/b",
+          "correctTogether": "9/16"
+        }
+      ]
+    },
+    "withSingletons": {
+      "witnesses": [
+        {
+          "id": "spring/a",
+          "correct": "3/4"
+        },
+        {
+          "id": "spring/b",
+          "correct": "3/4"
+        }
+      ],
+      "factors": [
+        {
+          "id": "spring/singleton-0",
+          "members": [
+            "spring/a"
+          ]
+        },
+        {
+          "id": "spring/singleton-1",
+          "members": [
+            "spring/b"
+          ]
+        }
+      ],
+      "pairs": [
+        {
+          "a": "spring/a",
+          "b": "spring/b",
+          "correctTogether": "9/16"
+        }
+      ]
+    }
+  },
+  "sharedChannel": {
+    "model": "binary-shared-channel@1",
+    "sources": [
+      "spring/a",
+      "spring/b"
+    ],
+    "signals": [
+      {
+        "id": "spring/shared-signal",
+        "members": [
+          "spring/a",
+          "spring/b"
+        ]
+      }
+    ],
+    "truthPrior": "1/2",
+    "latentAccuracy": "3/4",
+    "noiseFlip": "1/4",
+    "similarityConversion": "unconditional-centered-fair-sign-correlation@1",
+    "atoms": [
+      {
+        "truth": 0,
+        "signal": 0,
+        "values": [
+          0,
+          0
+        ],
+        "p": "27/128"
+      },
+      {
+        "truth": 0,
+        "signal": 0,
+        "values": [
+          0,
+          1
+        ],
+        "p": "9/128"
+      },
+      {
+        "truth": 0,
+        "signal": 0,
+        "values": [
+          1,
+          0
+        ],
+        "p": "9/128"
+      },
+      {
+        "truth": 0,
+        "signal": 0,
+        "values": [
+          1,
+          1
+        ],
+        "p": "3/128"
+      },
+      {
+        "truth": 0,
+        "signal": 1,
+        "values": [
+          0,
+          0
+        ],
+        "p": "1/128"
+      },
+      {
+        "truth": 0,
+        "signal": 1,
+        "values": [
+          0,
+          1
+        ],
+        "p": "3/128"
+      },
+      {
+        "truth": 0,
+        "signal": 1,
+        "values": [
+          1,
+          0
+        ],
+        "p": "3/128"
+      },
+      {
+        "truth": 0,
+        "signal": 1,
+        "values": [
+          1,
+          1
+        ],
+        "p": "9/128"
+      },
+      {
+        "truth": 1,
+        "signal": 0,
+        "values": [
+          0,
+          0
+        ],
+        "p": "9/128"
+      },
+      {
+        "truth": 1,
+        "signal": 0,
+        "values": [
+          0,
+          1
+        ],
+        "p": "3/128"
+      },
+      {
+        "truth": 1,
+        "signal": 0,
+        "values": [
+          1,
+          0
+        ],
+        "p": "3/128"
+      },
+      {
+        "truth": 1,
+        "signal": 0,
+        "values": [
+          1,
+          1
+        ],
+        "p": "1/128"
+      },
+      {
+        "truth": 1,
+        "signal": 1,
+        "values": [
+          0,
+          0
+        ],
+        "p": "3/128"
+      },
+      {
+        "truth": 1,
+        "signal": 1,
+        "values": [
+          0,
+          1
+        ],
+        "p": "9/128"
+      },
+      {
+        "truth": 1,
+        "signal": 1,
+        "values": [
+          1,
+          0
+        ],
+        "p": "9/128"
+      },
+      {
+        "truth": 1,
+        "signal": 1,
+        "values": [
+          1,
+          1
+        ],
+        "p": "27/128"
+      }
+    ],
+    "diversityPolicy": {
+      "budget": "10000"
+    }
+  },
+  "scope": {
+    "unknownIncidenceIdentification": "open"
+  }
+}

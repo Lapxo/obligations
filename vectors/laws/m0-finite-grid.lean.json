@@ -118,7 +118,7 @@
   },
   "limits": [
     "The reader candidate reuses executeLean, auditLeanAxioms and judgeLeanNegative from the existing instrument; only declaration-based selection is extended.",
-    "No Bound source, authority, signed file or wire is modified.",
+    "No a constraint evaluator source, authority, signed file or wire is modified.",
     "Three original demand cards remain open; no root TARGET or release receipt is regenerated."
   ],
   "revision": "v2-offdiag-explicit-diagonal-vector",

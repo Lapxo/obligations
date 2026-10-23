@@ -1,9 +1,7 @@
 import {fitUnanimityModel} from '@lapxo/obligations/measures';
 import {add,sub,mul,div,pow,q,rational,probability,pack,equal,one,zero,type Q} from '../../src/measures/rational.ts';
-import {createHash} from 'node:crypto';
 const fail=(name:string):never=>{throw Error('REFUSE·linage-rest '+name);};
 const check=(ok:unknown,name:string):void=>{if(!ok)fail(name);};
-const sha=(x:string)=>'sha256:'+createHash('sha256').update(x).digest('hex');
 const compare=(a:Q,b:Q)=>a[0]*b[1]<b[0]*a[1]?-1:a[0]*b[1]>b[0]*a[1]?1:0;
 const product=(r:number[],e:string[])=>r.map((v,i)=>mul(q(BigInt(v)),rational(e[i]!)));
 export function rejectClaim(region:string,sample:any){
@@ -64,24 +62,3 @@ export function evaluate(sample:any){
   interpretation:'compatible f on the handed p slice only; no causal mechanism, intention, continuous identification or sampling guarantee',headInference:false};
  return {'helly-comb':helly,'resolution-encounters':resolution,coordination};
 }
-export const vectorIds=['helly-comb','resolution-encounters','coordination'] as const;
-export const coordinates=['proofs/helly-comb.json','proofs/resolution-encounters.json','proofs/coordination.json','proofs/lean/Obligations/HellyComb.lean','vectors/laws/helly-comb.lean.json','samples/laws/linage-rest/yes.json','samples/laws/linage-rest/no.json','samples/yes/H1-uncertainty.json','samples/no/H1-uncertainty.json','vectors/laws/policy.json','src/measures/unanimity-fit.ts','src/measures/rational.ts','test/support/linage-rest-reader.ts',...vectorIds.map(id=>'vectors/laws/'+id+'.json')];
-const scope='publication/evidence/linage-rest';
-export function inspect(inputs:readonly (readonly [string,string])[]){
- const files=new Map(inputs);check(files.size===inputs.length,'duplicate-input');const read=(p:string)=>files.get(p)??fail('missing-input '+p);
- for(const p of coordinates)read(p);
- const result=evaluate(JSON.parse(read('samples/laws/linage-rest/yes.json')));
- const sourcePaths=coordinates.filter(p=>!vectorIds.some(id=>p==='vectors/laws/'+id+'.json'));
- for(const id of vectorIds){const v=JSON.parse(read('vectors/laws/'+id+'.json'));check(v.id===id+'@1','vector-id');check(JSON.stringify(v.anchors.map((a:any)=>a.path))===JSON.stringify(sourcePaths),'anchor-inventory');for(const a of v.anchors)check(sha(read(a.path))===a.sha256,'anchor-digest '+a.path);check(JSON.stringify(v.result)===JSON.stringify(result[id]),'captured-result-differs '+id);}
- const historical=JSON.parse(read('samples/yes/H1-uncertainty.json')).cases[0],positive=JSON.parse(read('samples/laws/linage-rest/yes.json')).resolution;
- check(JSON.stringify(historical.resolution)===JSON.stringify(positive.resolutions)&&historical.origins.every((v:number,i:number)=>String(v)===positive.encounters[i]),'historical-source-mismatch');
- const historicalNo=JSON.parse(read('samples/no/H1-uncertainty.json')).cases[0];
- check(JSON.stringify(historicalNo.resolution)==='[1,2,3,4]'&&JSON.stringify(historicalNo.origins)==='[4,1,1,1]'&&historicalNo.expect===4.8,'historical-negative-source-mismatch');
- const proof=JSON.parse(read('vectors/laws/helly-comb.lean.json'));
- check(proof.sourceSha256===sha(read(proof.source))&&proof.events.length===4&&proof.events.every((e:any)=>e.sourceSha256===proof.sourceSha256&&e.exitCode===(e.operation==='positive'?0:1)&&sha(e.stdout)===e.stdoutSha256&&sha(e.stderr)===e.stderrSha256&&!e.stdout.includes('sorryAx')),'lean-capture-identity');
- const no=JSON.parse(read('samples/laws/linage-rest/no.json'));check(no.cases.length===3,'negative-inventory');
- for(const c of no.cases){let why='';try{rejectClaim(c.region,JSON.parse(read('samples/laws/linage-rest/yes.json')));}catch(e){why=String(e);}check(why.includes(c.expectedRefusal),'named-negative-missing');}
- return [{scope,role:'writes' as const,measure:'count',bound:{kind:'interval' as const,lo:0,hi:0}}];
-}
-type Asked={lines:readonly {scope:string;measure:string;about?:string}[]};
-export function receipt(asked:Asked){return inspect(asked.lines.filter(l=>l.measure==='text'&&l.about!==undefined).map(l=>[l.scope,l.about!] as const));}

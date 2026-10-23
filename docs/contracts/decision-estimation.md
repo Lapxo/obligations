@@ -8,6 +8,6 @@ Declared conditions:
 - Return every minimizing action; do not break an undeclared tie
 - Estimation units and decision loss units remain distinct
 
-Boundary: These are conditional finite decision tables, not a universal product law. The estimation-to-decision bridge remains open outside a declared operation.
+a constraint evaluatorary: These are conditional finite decision tables, not a universal product law. The estimation-to-decision bridge remains open outside a declared operation.
 
 Evidence status: definition and exact countermodels; no new runtime estimator or decision authority. T2 remains pending approval.

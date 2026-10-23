@@ -1,7 +1,6 @@
 {
   "scope": "m0-moment-identification",
   "form": "statement",
-  "status": "unsigned-preparation",
   "classification": "conditional Lean theorem plus exact counterexample",
   "model": {
     "id": "binary-M0-uniform-population@1",

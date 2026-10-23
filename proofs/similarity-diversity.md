@@ -1,0 +1,11 @@
+# Exact maximum over positive support weightings
+
+Let Z be a finite symmetric matrix with entries in [0,1] and diagonal 1. For p in the simplex, order-2 similarity diversity is 1/(p^T Z p). Compactness gives a minimizer of the positive quadratic denominator. On its positive support B, first-order variations within that face give Z_B p_B = beta 1, where beta=p^T Z p>0. Thus w=p_B/beta is a strictly positive weighting with Z_B w=1 and sum(w)=1/beta.
+
+Choose a minimizing p with the smallest support. If Z_B were singular, let h be a nonzero null vector. Symmetry and Z_B p_B=beta 1 imply 1^T h=0. Moving p_B along h preserves its sum, stationarity and quadratic value. One can move to a boundary while staying nonnegative, contradicting minimal support. Hence a minimizer exists on an invertible principal submatrix with strictly positive weighting. Conversely, every positive weighting w on an invertible principal submatrix gives the feasible p=w/sum(w) and denominator 1/sum(w). Enumerating every nonempty support and taking the largest positive weighting sum therefore gives the global order-2 maximum, including non-PSD similarities. Singular faces need not be approximated by a pseudoinverse.
+
+The reducer is the exact rational elimination already used by identification, extracted once into a shared internal helper. All rational operations reuse the existing module. Five fixed identification vectors retain byte-identical outputs after that extraction in Node22/24. No additional solver is introduced.
+
+The returned optimizer representative need not be unique. Source-order support enumeration supplies a declared deterministic representative, retaining all zero-weight source identities. On the twin rows [a,a-copy], redistributing their total mass preserves p^T Z p; neither source is deleted. The normalized domain gives Z_ii=1 and Z_ij>=0, so p^T Z p>=sum p_i^2>=1/n and the maximum is at most n; a singleton gives at least 1.
+
+Leinster-Meckes, Maximizing Diversity in Biology and Beyond, Entropy 18(3):88 (2016), doi:10.3390/e18030088, is the cited common-maximum-across-orders result recorded in the received context. The executable certificate here directly checks order 2; it is not a new proof audit of that paper, a new numerical campaign, or evidence that the optimum minimizes decision error. No approximation D_max -> N is claimed.
