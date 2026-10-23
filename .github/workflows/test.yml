@@ -41,12 +41,13 @@ jobs:
           elan toolchain install "$(cat lean-toolchain)"
           lean --version
           lake exe cache get
+          lake build @Cli
           mkdir -p .lake/build/lib/lean
           printf 'OBLIGATIONS_LEAN=%s/bin/lean\n' "$(lean --print-prefix)" >> "$GITHUB_ENV"
           IFS=: read -ra dependencies <<< "$(lake env printenv LEAN_PATH)"
           proof_path=
           for dependency in "${dependencies[@]}"; do
-            test -d "$dependency"
+            test -d "$dependency" || { printf 'Missing proof dependency directory: %s\n' "$dependency" >&2; exit 1; }
             resolved="$(cd "$dependency" && pwd -P)"
             proof_path="${proof_path:+$proof_path:}$resolved"
           done
