@@ -7,11 +7,11 @@ Floors, ceilings, origins and epochs — so disagreement, withdrawal and
 "how many independent sources" are operations, not afterthoughts.</p>
 
 <p align="center">
-<img src="https://img.shields.io/badge/version-0.5.1-" alt="">
+<a href="https://www.npmjs.com/package/@lapxo/obligations/v/0.5.2"><img src="https://img.shields.io/badge/version-0.5.2-blue" alt="Version 0.5.2"></a>
 <img src="https://img.shields.io/badge/dependencies-0-brightgreen" alt="">
 <img src="https://img.shields.io/badge/Lean-sorry--free-blue" alt="">
-<a href="https://doi.org/10.5281/zenodo.21858428"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-" alt=""></a>
-<img src="https://img.shields.io/badge/license-MIT-" alt="">
+<a href="https://doi.org/10.5281/zenodo.21858428"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21858428-blue" alt="DOI 10.5281/zenodo.21858428"></a>
+<img src="https://img.shields.io/badge/license-MIT-green" alt="MIT license">
 </p>
 
 ---
@@ -33,7 +33,7 @@ for what is proven, countermodels for what is refuted.
 ## Quick start
 
 ```sh
-npm install @lapxo/obligations
+npm install @lapxo/obligations@0.5.2
 ```
 
 ```js
